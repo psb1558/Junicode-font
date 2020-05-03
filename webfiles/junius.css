@@ -1,0 +1,196 @@
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-Regular.woff2');
+  font-weight: 400;
+  font-stretch: 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-Condensed.woff2');
+  font-weight: 400;
+  font-stretch: 60%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-SemiCondensed.woff2');
+  font-weight: 400;
+  font-stretch: 80%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-Light.woff2');
+  font-weight: 200;
+  font-stretch: 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-CondensedLight.woff2');
+  font-weight: 200;
+  font-stretch: 60%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-SemiCondensedLight.woff2');
+  font-weight: 200;
+  font-stretch: 80%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-Medium.woff2');
+  font-weight: 500;
+  font-stretch: 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-CondensedMedium.woff2');
+  font-weight: 500;
+  font-stretch: 60%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-SemiCondensedMedium.woff2');
+  font-weight: 500;
+  font-stretch: 80%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-Semibold.woff2');
+  font-weight: 600;
+  font-stretch: 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-CondensedSemibold.woff2');
+  font-weight: 600;
+  font-stretch: 60%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-SemiCondensedSemibold.woff2');
+  font-weight: 600;
+  font-stretch: 80%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-Bold.woff2');
+  font-weight: 700;
+  font-stretch: 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-CondensedBold.woff2');
+  font-weight: 700;
+  font-stretch: 60%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JuniusX;
+  src: url('../fonts/JuniusX-SemiCondensedBold.woff2');
+  font-weight: 700;
+  font-stretch: 80%;
+  font-style: normal;
+}
+
+body {
+    width: 95%;
+    padding: 20px;
+}
+
+.headerbox {
+    background-color: lightgray;
+    padding: 50px;
+}
+
+.controlbox {
+    width: 48%;
+    float: left;
+    border: 1px;
+    font-family: JuniusX;
+    font-weight: 400;
+    font-stretch: 100%;
+    padding: 10px;
+}
+
+.dropdown {
+    padding-bottom: 10px;
+}
+
+.textbox {
+    width: 48%;
+    float: right;
+    border: 1px solid black;
+    font-family: JuniusX;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.check {
+    line-height: 2.5em;
+    white-space: nowrap;
+    background-color: lightgray;
+    padding: 5px 8px 5px 5px;
+    margin: 5px;
+    font-family: JuniusX;
+    font-weight: 400;
+    font-stretch: 100%;
+}
+
+.smcp {
+    font-feature-settings: "smcp" on;
+}
+
+.light {
+    font-weight: 200;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+h1 {
+    font-family: JuniusX;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-size: 3em;
+}
+
+p {
+    font-family: JuniusX;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-size: 1.5em;
+}

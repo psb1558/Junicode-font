@@ -1,4 +1,20 @@
 $(document).ready(function(){
+	var modtext = "The Junius group of font families (including Junius, Junicode, and JuniusX) \
+      is loosely based on the Pica font commissioned by Bishop John \
+      Fell (1625–1686) for the use of the Oxford Press and cut by the Dutch \
+      designer Peter De Walpergen, together with the “Saxon” \
+      types commissioned by the philologist Franciscus \
+      Junius (1591–1677) and used by him in several editions of Old English \
+      texts. The JuniusX character set is much larger than in \
+      Fell’s typefonts, covering a large number of languages that \
+      use the Latin script, but an effort has been made to conform newly \
+      added characters to the style of the Fell Pica. In addition to \
+      the large Latin character set, JuniusX includes the Gothic \
+      alphabet (also based on the Fell types) and the full Unicode \
+      Runic range (covering the Early English futhorc, the Elder \
+      futhark, and the Younger futhark (both short twig and long \
+      branch). JuniusX gives users an easy way to sort out these \
+      different runic sets.";
     var gothictext = "Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, \
 gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais \
 raginondin Saurim Kwreinaiau. jah iddjedun allai, ei melidai weseina, ƕarjizuh in seinai baurg. \
@@ -75,8 +91,12 @@ meast þet ich write, bute i þe frumðe of þis boc ant i þe leaste ende.";
 
     $("#languages").change(function() {
 	var l = "en";
-	var t = oldenglishtext;
+	var t = modtext;
 	switch ( $("#languages option:selected").attr("value") ) {
+		case "OldEnglish":
+			l = "en";
+			t = "oldenglishtext";
+			break;
 	case "MiddleEnglish":
 	    l = "en";
 	    t = middleenglishtext;

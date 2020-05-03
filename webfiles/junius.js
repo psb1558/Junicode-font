@@ -15,6 +15,13 @@ $(document).ready(function(){
       futhark, and the Younger futhark (both short twig and long \
       branch). JuniusX gives users an easy way to sort out these \
       different runic sets.";
+	var germantext = "Es hat ſich vil volcks geſamlet / alſo / das ſy ſich vnder einandern \
+trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch voꝛ dē ſurteig ꝺ̕ \
+phariſeern / welches iſt die glychßnery. Es iſt aber nichts verboꝛgens / das nitt offenbar werde: \
+noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nuß geſagt habēd / das \
+wirt man am liecht hoͤren: was jr habend geredt ins oꝛ in der kam̄er / das wirt man predigen vff den \
+taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit voꝛ denen die den lyb toͤdend / vnd \
+darnach nichts habennd das ſy mer thuͤgind.";
     var gothictext = "Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, \
 gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais \
 raginondin Saurim Kwreinaiau. jah iddjedun allai, ei melidai weseina, ƕarjizuh in seinai baurg. \
@@ -114,6 +121,10 @@ meast þet ich write, bute i þe frumðe of þis boc ant i þe leaste ende.";
 	case "OldIcelandic":
 	    l = "is";
 	    t = norsetext;
+	    break;
+	case "German":
+	    l = "de";
+	    t = germantext;
 	}
 	$(".textbox").attr("lang",l);
 	$(".textbox").text(t);

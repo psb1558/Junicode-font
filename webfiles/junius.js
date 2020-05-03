@@ -95,7 +95,7 @@ meast þet ich write, bute i þe frumðe of þis boc ant i þe leaste ende.";
 	switch ( $("#languages option:selected").attr("value") ) {
 		case "OldEnglish":
 			l = "en";
-			t = "oldenglishtext";
+			t = oldenglishtext;
 			break;
 	case "MiddleEnglish":
 	    l = "en";

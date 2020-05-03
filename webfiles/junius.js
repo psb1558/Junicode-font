@@ -89,6 +89,8 @@ riwle þet mon stalde, ah beoð Godes heastes. Ant forþi euch mon mot ham nede 
 halden, ant ȝe ouer alle, for þeos riwleð þe heorte. Of hire riwlunge is al \
 meast þet ich write, bute i þe frumðe of þis boc ant i þe leaste ende.";
 
+	$(".textbox").text(modtext);
+
     $("#languages").change(function() {
 	var l = "en";
 	var t = modtext;

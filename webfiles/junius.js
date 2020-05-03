@@ -26,7 +26,7 @@ faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var ful
 hans ok kona hans. Af henni gerði hann inn fyrsta soninn, en þat er Ása-Þórr. Honum fylgði afl ok \
 sterkleikr. Þar af sigrar hann ǫll kvikvendi.";
 
-    var latintext = "Beatꝰ uir qui non abiit in ꝯſilio impioꝝ et in uia peccatoꝛum nō ſedit. \
+    var latintext = "Beatꝰ uir qͥ non abiit in ꝯſilio impioꝝ et in uia peccatoꝛum nō ſedit. \
 Sed in lege dn̄i uoluntaſ eiꝰ⹎ et in lege eiꝰ meditabitur die ac nocte. Et erit tanquā lignū \
 quod plantatum eſt ſecuſ decurſuſ aquarum⹎ quod fructum ſuum dabit in tempoꝛe ſuo. \
 Et foliū eiuſ non defluet⹎ et omnia quaecumq: faciet proſperabunt᷑. Non ſic impii non ſic⹎ ſed \

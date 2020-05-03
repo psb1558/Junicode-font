@@ -1,0 +1,183 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>New Junius font specimen page</title>
+<!--    <script src="js/jquery-3.5.0.min.js" type="text/javascript"/>
+    <script src="js/junius.js" type="text/javascript"/> -->
+    <link rel="stylesheet" href="css/junius.css"/>
+  </head>
+  <body>
+    <div class="headerbox">
+      <h1><span class="smcp">JuniusX</span> (the new Junicode font)</h1>
+    </div>
+    <p>
+      <span class="smcp semibold">JuniusX</span> is a completely
+      rebuilt version of <a
+      href="https://junicode.sourceforge.io/">Junicode</a>, the font
+      for medievalists. When complete, it will offer the full MUFI (<a
+      href="https://skaldic.abdn.ac.uk/m.php?p=mufi">Medieval Unicode
+      Font Initiative</a>) character set in all faces, which will
+      include Light, Regular, Medium, Semibold and Bold weights,
+      Condensed, Semicondensed and Regular widths, and (of course)
+      roman and italic styles. All fonts will include an expanded
+      set of OpenType features—for
+      example, automated transliteration of Latin text to runic or
+      Gothic, mirrored runes, historical ligatures (easing access to
+      MUFI’s specialized ligatures), old-style figures, and many
+      variant letter-shapes.
+    </p>
+    <p>
+      As of May 2020, the roman style is about 93% complete and the
+      italic about 43% complete, and development is proceeding
+      briskly. The project is hosted on <a
+      href="https://github.com/psb1558/Junicode-New">Github</a>, where
+      beta versions of the font can be downloaded.
+    </p>
+    <p>
+      Play with the many features of JuniusX by selecting a style for
+      the box below from the drop-down menu and by selecting features.
+      The text box is editable: type or paste in some text of your
+      choosing to see how it will look in JuniusX.
+    </p>
+    <div class="controlbox">
+      <div class="dropdown">
+	<label for="faces">Choose a style: </label>
+	<select id="faces" name="faces">
+	  <option value="Light">Light</option>
+	  <option value="Regular" selected="selected">Regular</option>
+	  <option value="Medium">Medium</option>
+	  <option value="Semibold">Semibold</option>
+	  <option value="Bold">Bold</option>
+	  <option value="SemicompressedLight">Semicompressed Light</option>
+	  <option value="Semicompressed">Semicompressed</option>
+	  <option value="SemicompressedMedium">Semicompressed Medium</option>
+	  <option value="SemicompressedSemibold">Semicompressed Semibold</option>
+	  <option value="SemicompressedBold">Semicompressed Bold</option>
+	  <option value="CompressedLight">Compressed Light</option>
+	  <option value="Compressed">Compressed</option>
+	  <option value="CompressedMedium">Compressed Medium</option>
+	  <option value="CompressedSemibold">Compressed Semibold</option>
+	  <option value="CompressedBold">Compressed Bold</option>
+	</select>
+      </div>
+      <div class="dropdown">
+	<label for="languages">Choose a language:</label>
+	<select id="languages" name="languages">
+	  <option value="OldEnglish" selected="selected">Old English</option>
+	  <option value="MiddleEnglish">Middle English</option>
+	  <option value="Latin">Latin</option>
+	  <option value="Gothic">Gothic</option>
+	  <option value="OldIcelandic">Old Icelandic</option>
+	</select>
+      </div>
+      <div class="checkboxes">
+	<span class="check"><input type="checkbox" id="smcp"
+	name="smcp"/><label for="smcp"> Small caps</label></span>
+	<span class="check"><input type="checkbox" id="c2sc"
+	name="c2sc"/><label for="c2sc"> Small caps from
+	capitals</label></span>
+	<span class="check"><input type="checkbox" id="onum"
+	name="onum"/><label for="onum"> Old-style
+	figures</label></span>
+	<span class="check"><input type="checkbox" id="zero"
+	name="zero"/><label for="zero"> Slashed zero</label></span>
+	<span class="check"><input type="checkbox" id="sups"
+	name="sups"/><label for="sups"> Superscripts</label></span>
+	<span class="check"><input type="checkbox" id="subs"
+	name="subs"/><label for="subs"> Subscripts</label></span>
+	<span class="check"><input type="checkbox" id="ss01"
+	name="ss01"/><label for="ss01"> Nordic
+	letter-forms</label></span>
+	<span class="check"><input type="checkbox" id="ss02"
+	name="ss02"/><label for="ss02"> Insular
+	letter-forms</label></span>
+	<span class="check"><input type="checkbox" id="cv01"
+	name="cv01"/><label for="cv01"> Alternate round d
+	(U+A77A)</label></span>
+	<span class="check"><input type="checkbox" id="hist"
+	name="hist"/><label for="hist"> Long s</label></span>
+	<span class="check"><input type="checkbox" id="ss04"
+	name="ss04"/><label for="ss04"> Enlarged
+	minuscules</label></span>
+	<span class="check"><input type="checkbox" id="ss05"
+	name="ss05"/><label for="ss05"> Medium-high
+	overline</label></span>
+	<span class="check"><input type="checkbox" id="ss07"
+	name="ss07"/><label for="ss07"> Underdotted
+	text</label></span>
+	<span class="check"><input type="checkbox" id="ss08"
+	name="ss08"/><label for="ss08"> Flat-top yogh</label></span>
+	<span class="check"><input type="checkbox" id="ss09"
+	name="ss09"/><label for="ss09"> Alternate
+	capitals</label></span>
+	<span class="check"><input type="checkbox" id="ss11"
+	name="ss11"/><label for="ss11"> Early English
+	futhorc</label></span>
+	<span class="check"><input type="checkbox" id="ss12"
+	name="ss12"/><label for="ss12"> Elder futhark</label></span>
+	<span class="check"><input type="checkbox" id="ss13"
+	name="ss13"/><label for="ss13"> Younger futhark</label></span>
+	<span class="check"><input type="checkbox" id="ss14"
+	name="ss14"/><label for="ss14"> Long branch to short
+	twig</label></span>
+	<span class="check"><input type="checkbox" id="rtlm"
+	name="rtlm"/><label for="rtlm"> Mirrored runes</label></span>
+	<span class="check"><input type="checkbox" id="ss18"
+	name="ss18"/><label for="ss18"> Old-Style punctuation
+	spacing</label></span>
+	<span class="check"><input type="checkbox" id="ss19"
+	name="ss19"/><label for="ss19"> Latin to Gothic</label></span>
+	<span class="check"><input type="checkbox" id="ss20"
+	name="ss20"/><label for="ss20"> Fleurons</label></span>
+	<span class="check"><input type="checkbox" id="cv02"
+	name="cv02"/><label for="cv02"> Alternate e+ogonek
+	(U+0119)</label></span>
+	<span class="check"><input type="checkbox" id="hlig"
+	name="hlig"/><label for="hlig"> Historical
+	ligatures</label></span>
+	<span class="check"><input type="checkbox" id="dlig"
+	name="dlig"/><label for="dlig"> Discretionary
+	ligatures</label></span>
+    </div>
+  </div>
+    <div class="textbox" contenteditable="true">
+      Her on ðisum geare forðferde
+      Ælfgiue Ymma Eadwardes cynges modor ⁊ Hardacnutes cynges. ⁊ on
+      þam sylfan geare gerædde se cyng ⁊ his witan þæt mann sceolde
+      forðian ut to Sandwic scipu. ⁊ setton Raulf eorl ⁊ Oddan eorl to
+      heafodmannum þærto. Ða gewende Godwine eorl ut fram Brycge mid
+      his scypum to Yseran. and let ut ane dæge ær midsumeres
+      mæsseæfene þæt he com to Næsse. þe is besuðan Rumenea. Þa com
+      hit to witenne þam eorlum ut to Sandwic. ⁊ hi þa gewendon ut
+      æfter þam oðrum scipum. ⁊ bead man landfyrde ut ongean þa
+      scipu. Þa amang þison þa wearð Godwine eorl gewarnod. ⁊ gewende
+      him þa into Pefenesea. ⁊ wearð þæt wæder swiðe strang. þæt þa
+      eorlas ne mihton gewitan hwet Godwine eorl gefaren hæfde. ⁊
+      gewende þa Godwine eorl ut agean þæt he com eft to Brycge. ⁊ ða
+      oðra scipu gewenden heom eft ongean to Sandwic. ⁊ gerædde man þa
+      þæt þa scipu gewendan eft ongean to Lundene. ⁊ sceolde man
+      setton oðre eorlas ⁊ oðre hasæton to þam scipum. ða lengde hit
+      man swa lange þæt seo scipfyrd eall belaf. ⁊ gewendon ealle heom
+      ham. Ða geaxode Godwine eorl þet. ⁊ teah þa up his segl ⁊ his
+      lið. ⁊ gewendon heom þa west on an to Wiht. ⁊ eodon þær up. ⁊
+      hergodon swa lange þær þæt þæt folc geald heom swa mycel swa hi
+      heom on legden.
+    </div>
+    <div style="clear: both; padding: 20px; background-color:
+		lightgray">
+    <p>
+      Junicode/JuniusX font copyright © 1998–2020 by Peter
+      S. Baker.
+    </p>
+    <p>
+      Licensed under the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License, v. 1.1</a>.
+    </p>
+    <p>
+      Development site: <a href="https://github.com/psb1558/Junicode-New">https://github.com/psb1558/Junicode-New</a>.
+    </p>
+    </div>
+    <script src="js/jquery-3.5.0.min.js" type="text/javascript"></script>
+    <script src="js/junius.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -15,6 +15,7 @@ $(document).ready(function(){
       futhark, and the Younger futhark (both short twig and long \
       branch). JuniusX gives users an easy way to sort out these \
       different runic sets.";
+
 	var germantext = "Es hat ſich vil volcks geſamlet / alſo / das ſy ſich vnder einandern \
 trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch voꝛ dē ſurteig ꝺ̕ \
 phariſeern / welches iſt die heuchley. Es iſt aber nichts verboꝛgens / das nitt offenbar werde: \
@@ -22,6 +23,7 @@ noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nu�
 wirt man am liecht hoͤren: was jr habend geredt ins oꝛ in der kam̄er / das wirt man predigen vff den \
 taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit voꝛ denen die den lyb toͤdend / vnd \
 darnach nichts habennd das ſy mer thuͤgind.";
+
     var gothictext = "Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, \
 gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais \
 raginondin Saurim Kwreinaiau. jah iddjedun allai, ei melidai weseina, ƕarjizuh in seinai baurg. \
@@ -88,8 +90,6 @@ haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche o�
 riwle þet mon stalde, ah beoð Godes heastes.";
 
 	$(".textbox").text(modtext);
-//	$(".check").prop("checked", false);
-//	$(".check").prop({ checked: false});
 	$( "input[type='checkbox']" ).prop("checked", false);
 	
 	function selectElement(id, valueToSelect) {    

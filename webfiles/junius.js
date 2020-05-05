@@ -209,10 +209,19 @@ meast þet ich write, bute i þe frumðe of þis boc ant i þe leaste ende.";
 	var fstring = "";
 	$("input").each(function() {
 	    if ($( this ).is(":checked")) {
-		fstring = featureString(fstring, $(this).attr("id"), "on");
+		    var tag = $(this).attr("id");
+		    switch ( tag ) {
+			    case "cv021":
+				    fstring = featureString(fstring, "cv02", "1");
+				    break;
+			    case "cv022":
+				    fstring = featureString(fstring, "cv02", "2");
+				    break;
+			    default:
+				    fstring = featureString(fstring, tag, "on");
+		    }
 	    }
 	});
-//	alert(fstring);
 	$(".textbox").css("font-feature-settings", fstring);
     });
 });

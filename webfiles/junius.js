@@ -77,7 +77,7 @@ chastete, ant stude steaðeluestnesse, þet ha ne schal þet stude neauer \
 mare changin bute for nede ane, as strengðe ant deaðes dred, obedience of \
 hire bischop oðer of his herre. For hwa se nimeð þing on hond ant bihat hit \
 Godd as heast forte don hit, ha bint hire þerto, ant sunegeð deadliche i þe \
-bruche, ȝef ha hit brekeð willes. ȝef ha hit ne bihat nawt, ha hit mei do þah \
+bruche, ȝef ha hit brekeð willes. Ȝef ha hit ne bihat nawt, ha hit mei do þah \
 ant leauen hwen ha wel wule, as of mete, of drunch, flesch forgan oðer fisch, \
 alle oþer swucche þinges, of werunge, of liggunge, of ures, of oþre beoden, \
 segge swa monie oðer o swucche wise. Þeos ant þulliche oþre beoð alle i freo \

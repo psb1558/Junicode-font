@@ -17,7 +17,7 @@ $(document).ready(function(){
       different runic sets.";
 	var germantext = "Es hat ſich vil volcks geſamlet / alſo / das ſy ſich vnder einandern \
 trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch voꝛ dē ſurteig ꝺ̕ \
-phariſeern / welches iſt die glychßnery. Es iſt aber nichts verboꝛgens / das nitt offenbar werde: \
+phariſeern / welches iſt die heuchley. Es iſt aber nichts verboꝛgens / das nitt offenbar werde: \
 noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nuß geſagt habēd / das \
 wirt man am liecht hoͤren: was jr habend geredt ins oꝛ in der kam̄er / das wirt man predigen vff den \
 taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit voꝛ denen die den lyb toͤdend / vnd \

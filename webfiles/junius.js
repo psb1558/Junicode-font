@@ -45,9 +45,7 @@ er einn staðr, er Hliðskjálf heitir, ok þá er Óðinn settist þar í hás�
 heima ok hvers manns athæfi ok vissi alla hluti, þá er hann sá. Kona hans hét Frigg Fjǫrgvinsdóttir, \
 ok af þeira ætt er sú kynslóð komin, er vér kǫllum ása ættir, er byggt hafa Ásgarð inn forna ok þau \
 ríki, er þar liggja til, ok er þat allt goðkunnug ætt. Ok fyrir því má hann heita Alfǫðr, at hann er \
-faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert. Jǫrðin var dóttir \
-hans ok kona hans. Af henni gerði hann inn fyrsta soninn, en þat er Ása-Þórr. Honum fylgði afl ok \
-sterkleikr. Þar af sigrar hann ǫll kvikvendi.";
+faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert.";
 
     var latintext = "Beatꝰ uir qͥ non abiit in ꝯſilio impioꝝ et in uia peccatoꝛum nō ſedit. \
 Sed in lege dn̄i uoluntaſ eiꝰ⹎ et in lege eiꝰ meditabitur die ac nocte. Et erit tanquā lignū \
@@ -71,12 +69,7 @@ iuſtoꝛum. Qm̄ nouit dn̄ſ uiam iuſtoꝝ⹎ et iter impioꝛum ꝑibit.";
       gewende þa Godwine eorl ut agean þæt he com eft to Brycge. ⁊ ða \
       oðra scipu gewenden heom eft ongean to Sandwic. ⁊ gerædde man þa \
       þæt þa scipu gewendan eft ongean to Lundene. ⁊ sceolde man \
-      setton oðre eorlas ⁊ oðre hasæton to þam scipum. ða lengde hit \
-      man swa lange þæt seo scipfyrd eall belaf. ⁊ gewendon ealle heom \
-      ham. Ða geaxode Godwine eorl þet. ⁊ teah þa up his segl ⁊ his \
-      lið. ⁊ gewendon heom þa west on an to Wiht. ⁊ eodon þær up. ⁊ \
-      hergodon swa lange þær þæt þæt folc geald heom swa mycel swa hi \
-      heom on legden.";
+      setton oðre eorlas ⁊ oðre hasæton to þam scipum.";
 
     var middleenglishtext = "Nan ancre, bi mi read, ne schal makien \
 professiun—þet is, bihaten ase heast—but þreo þinges: þet beoð obedience, \
@@ -92,9 +85,7 @@ wil to don oðer to leten hwil me wule ant hwen me wule, bute ha beon bihaten. \
 Ah chearite—þet is, luue—ant eadmodnesse ant þolemodnesse, treoweschipe ant \
 haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche oþre, \
 þe beoð summe of þe alde lahe, summe of þe neowe, ne beoð nawt monnes fundles, ne \
-riwle þet mon stalde, ah beoð Godes heastes. Ant forþi euch mon mot ham nede \
-halden, ant ȝe ouer alle, for þeos riwleð þe heorte. Of hire riwlunge is al \
-meast þet ich write, bute i þe frumðe of þis boc ant i þe leaste ende.";
+riwle þet mon stalde, ah beoð Godes heastes.";
 
 	$(".textbox").text(modtext);
 

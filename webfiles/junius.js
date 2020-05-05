@@ -88,6 +88,15 @@ haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche o�
 riwle þet mon stalde, ah beoð Godes heastes.";
 
 	$(".textbox").text(modtext);
+	$(".check").prop("checked", false);
+	
+	function selectElement(id, valueToSelect) {    
+    		let element = document.getElementById(id);
+    		element.value = valueToSelect;
+	}
+	
+	selectElement("languages","ModEnglish");
+	selectElement("faces","Regular");
 
     $("#languages").change(function() {
 	var l = "en";

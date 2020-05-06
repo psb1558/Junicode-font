@@ -164,7 +164,7 @@ bari an is briostun."
 		}
 
 		$(".textbox").attr("lang",l);
-		$(".textbox").css({"white-space: whitespace, "font-feature-settings": fstring});
+		$(".textbox").css({"white-space": whitespace, "font-feature-settings": fstring});
 		// $(".textbox").css("white-space", whitespace);
 		// $(".textbox").css("font-feature-settings", fstring);
 		$(".textbox").text(t);

@@ -89,6 +89,23 @@ Ah chearite—þet is, luue—ant eadmodnesse ant þolemodnesse, treoweschipe an
 haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche oþre, \
 þe beoð summe of þe alde lahe, summe of þe neowe, ne beoð nawt monnes fundles, ne \
 riwle þet mon stalde, ah beoð Godes heastes.";
+	
+	var oldsaxontext = "Thuo uuard that heƀancuningas bodon harm an is muode, \
+the hie is giuuerkes so uundran scolda \
+endi that ni uuelda gihuggean, that ina mahti helag god \
+so alaiungan so hie fan erist uuas \
+selƀo giuuirkean, ef hie so uueldi. \
+Scerida im thuo te uuitie that hie ni mohta enig uuord gisprekean, \
+gimahlean mid is muđu, ‘er than thu magu uuirđit \
+fan thinero aldero idis erl afuodit, \
+kindiung giboran kunneas guodes, \
+uuanom te thesaro uueroldi. Than skalt thu eft uuord sprekan, \
+hebbean thinera stemna giuuald: ni tharft thu stum uuesan \
+langron huila.’ Thuo uuarth it san gilestid so, \
+giuuorđan te uuaron so thar on them uuihe gisprak \
+engil thes alouualdon: uuart ald gumo \
+spraka bilosid, thuo hie spahan hugi \
+bari an is briostun."
 
 	// Clear the menus and boxes (in case the page is being reloaded) and
 	// display the default (modern English) text.
@@ -112,14 +129,13 @@ riwle þet mon stalde, ah beoð Godes heastes.";
 
 		var l = "en";
 		var t = modtext;
+		var f = "white-space: normal";
 
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "OldEnglish":
-				l = "en";
 				t = oldenglishtext;
 				break;
 			case "MiddleEnglish":
-				l = "en";
 				t = middleenglishtext;
 				break;
 			case "Latin":
@@ -127,12 +143,16 @@ riwle þet mon stalde, ah beoð Godes heastes.";
 				t = latintext;
 				break;
 			case "Gothic":
-				l = "en";
 				t = gothictext;
 				break;
 			case "OldIcelandic":
 				l = "is";
 				t = norsetext;
+				break;
+			case "OldSaxon":
+				l = "de";
+				t = oldsaxontext;
+				f = "white-space: pre-line";
 				break;
 			case "German":
 				l = "de";
@@ -140,6 +160,7 @@ riwle þet mon stalde, ah beoð Godes heastes.";
 		}
 
 		$(".textbox").attr("lang",l);
+		$(".textbox").attr("style",f);
 		$(".textbox").text(t);
 	});
 

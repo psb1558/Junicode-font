@@ -90,6 +90,9 @@ haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche o�
 þe beoð summe of þe alde lahe, summe of þe neowe, ne beoð nawt monnes fundles, ne \
 riwle þet mon stalde, ah beoð Godes heastes.";
 
+	// Clear the menus and boxes (in case the page is being reloaded) and
+	// display the default (modern English) text.
+
 	$(".textbox").text(modtext);
 	$( "input[type='checkbox']" ).prop("checked", false);
 	
@@ -101,130 +104,150 @@ riwle þet mon stalde, ah beoð Godes heastes.";
 	selectElement("languages","ModEnglish");
 	selectElement("faces","Regular");
 
-    $("#languages").change(function() {
-	var l = "en";
-	var t = modtext;
-	switch ( $("#languages option:selected").attr("value") ) {
-		case "OldEnglish":
-			l = "en";
-			t = oldenglishtext;
-			break;
-	case "MiddleEnglish":
-	    l = "en";
-	    t = middleenglishtext;
-	    break;
-	case "Latin":
-	    l = "la"
-	    t = latintext;
-	    break
-	case "Gothic":
-	    l = "en";
-	    t = gothictext;
-	    break;
-	case "OldIcelandic":
-	    l = "is";
-	    t = norsetext;
-	    break;
-	case "German":
-	    l = "de";
-	    t = germantext;
-	}
-	$(".textbox").attr("lang",l);
-	$(".textbox").text(t);
-    });
+	
+	// The "languages" dropdown menu selects a text and also
+	// sets the "lang" attribute for the text box.
+	
+	$("#languages").change(function() {
 
-    $("#faces").change(function() {
-	var wght = "400";
-	var wdth = "100%";
-	switch ( $("#faces option:selected").attr("value") ) {
-	case "Light":
-	    wght = "200";
-	    wdth = "100%";
-	    break;
-	case "Medium":
-	    wght = "500";
-	    wdth = "100%";
-	    break;
-	case "Semibold":
-	    wght = "600";
-	    wdth = "100%";
-	    break;
-	case "Bold":
-	    wght = "700";
-	    wdth = "100%";
-	    break;
+		var l = "en";
+		var t = modtext;
 
-	case "SemicompressedLight":
-	    wght = "200";
-	    wdth = "80%";
-	    break;
-	case "Semicompressed":
-	    wght = "400";
-	    wdth = "80%";
-	    break;
-	case "SemicompressedMedium":
-	    wght = "500";
-	    wdth = "80%";
-	    break;
-	case "SemicompressedSemibold":
-	    wght = "600";
-	    wdth = "80%";
-	    break;
-	case "SemicompressedBold":
-	    wght = "700";
-	    wdth = "80%";
-	    break;
+		switch ( $("#languages option:selected").attr("value") ) {
+			case "OldEnglish":
+				l = "en";
+				t = oldenglishtext;
+				break;
+			case "MiddleEnglish":
+				l = "en";
+				t = middleenglishtext;
+				break;
+			case "Latin":
+				l = "la"
+				t = latintext;
+				break;
+			case "Gothic":
+				l = "en";
+				t = gothictext;
+				break;
+			case "OldIcelandic":
+				l = "is";
+				t = norsetext;
+				break;
+			case "German":
+				l = "de";
+				t = germantext;
+		}
 
-	case "CompressedLight":
-	    wght = "200";
-	    wdth = "60%";
-	    break;
-	case "Compressed":
-	    wght = "400";
-	    wdth = "60%";
-	    break;
-	case "CompressedMedium":
-	    wght = "500";
-	    wdth = "60%";
-	    break;
-	case "CompressedSemibold":
-	    wght = "600";
-	    wdth = "60%";
-	    break;
-	case "CompressedBold":
-	    wght = "700";
-	    wdth = "60%";
-	}
-
-	$(".textbox").css("font-weight",wght);
-	$(".textbox").css("font-stretch",wdth);
-    });
-
-    function featureString (s, tag, v) {
-	var ss = s;
-	if (ss.length > 0)
-	    ss += ", ";
-	ss += '"' + tag + '" ' + v;
-	return ss;
-    }
-
-    $(".check").change(function() {
-	var fstring = "";
-	$("input").each(function() {
-	    if ($( this ).is(":checked")) {
-		    var tag = $(this).attr("id");
-		    switch ( tag ) {
-			    case "cv021":
-				    fstring = featureString(fstring, "cv02", "1");
-				    break;
-			    case "cv022":
-				    fstring = featureString(fstring, "cv02", "2");
-				    break;
-			    default:
-				    fstring = featureString(fstring, tag, "on");
-		    }
-	    }
+		$(".textbox").attr("lang",l);
+		$(".textbox").text(t);
 	});
-	$(".textbox").css("font-feature-settings", fstring);
-    });
+
+	// For the "faces" box, select one of the fonts by setting
+	// the weight and stretch attributes for the textbox.
+
+	$("#faces").change(function() {
+
+		var wght = "400";
+		var wdth = "100%";
+
+		switch ( $("#faces option:selected").attr("value") ) {
+			case "Light":
+				wght = "200";
+				wdth = "100%";
+				break;
+			case "Medium":
+				wght = "500";
+				wdth = "100%";
+				break;
+			case "Semibold":
+				wght = "600";
+				wdth = "100%";
+				break;
+			case "Bold":
+				wght = "700";
+				wdth = "100%";
+				break;
+			case "SemicompressedLight":
+				wght = "200";
+				wdth = "80%";
+				break;
+			case "Semicompressed":
+				wght = "400";
+				wdth = "80%";
+				break;
+			case "SemicompressedMedium":
+				wght = "500";
+				wdth = "80%";
+				break;
+			case "SemicompressedSemibold":
+				wght = "600";
+				wdth = "80%";
+				break;
+			case "SemicompressedBold":
+				wght = "700";
+				wdth = "80%";
+				break;
+			case "CompressedLight":
+				wght = "200";
+				wdth = "60%";
+				break;
+			case "Compressed":
+				wght = "400";
+				wdth = "60%";
+				break;
+			case "CompressedMedium":
+				wght = "500";
+				wdth = "60%";
+				break;
+			case "CompressedSemibold":
+				wght = "600";
+				wdth = "60%";
+				break;
+			case "CompressedBold":
+				wght = "700";
+				wdth = "60%";
+		}
+
+		$(".textbox").css("font-weight",wght);
+		$(".textbox").css("font-stretch",wdth);
+	});
+
+	// Adds one tag/value pair to the feature string, adding punctuation
+	// as needed.
+
+	function featureString (s, tag, v) {
+		var ss = s;
+		if (ss.length > 0)
+			ss += ", ";
+		ss += '"' + tag + '" ' + v;
+		return ss;
+	}
+
+	// Cycle through all the checkboxes, building the feature string. This is necessary
+	// because in CSS all features besides the ones you set explicitly are set to their
+	// default values. So we specify everything we want every time a box is checked or
+	// unchecked.
+
+	$(".check").change(function() {
+
+		var fstring = "";
+
+		$("input").each(function() {
+			if ($( this ).is(":checked")) {
+				var tag = $(this).attr("id");
+				switch ( tag ) {
+					case "cv021":
+						fstring = featureString(fstring, "cv02", "1");
+						break;
+					case "cv022":
+						fstring = featureString(fstring, "cv02", "2");
+						break;
+					default:
+						fstring = featureString(fstring, tag, "on");
+				}
+			}
+		});
+		$(".textbox").css("font-feature-settings", fstring);
+	});
 });

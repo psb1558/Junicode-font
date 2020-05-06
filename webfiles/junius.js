@@ -133,7 +133,7 @@ bari an is briostun."
 
 		var l = "en";
 		var t = modtext;
-		var f = "white-space: normal";
+		var whitespace = "normal";
 
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "OldEnglish":
@@ -156,7 +156,7 @@ bari an is briostun."
 			case "OldSaxon":
 				l = "de";
 				t = oldsaxontext;
-				f = "white-space: pre-wrap";
+				whitespace = "pre-wrap";
 				break;
 			case "German":
 				l = "de";
@@ -164,9 +164,10 @@ bari an is briostun."
 		}
 
 		$(".textbox").attr("lang",l);
-		$(".textbox").attr("style",f);
+		$(".textbox").css({"white-space: whitespace, "font-feature-settings": fstring});
+		// $(".textbox").css("white-space", whitespace);
+		// $(".textbox").css("font-feature-settings", fstring);
 		$(".textbox").text(t);
-		$(".textbox").css("font-feature-settings", fstring);
 	});
 
 	// For the "faces" box, select one of the fonts by setting

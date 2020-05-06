@@ -113,8 +113,7 @@ bari an is briostun."
 	// Clear the menus and boxes (in case the page is being reloaded) and
 	// display the default (modern English) text.
 
-	$(".textbox").text(modtext);
-	$(".textbox").css("font-feature-settings", fstring);
+	$(".textbox").css("font-feature-settings", fstring).text(modtext);
 	$( "input[type='checkbox']" ).prop("checked", false);
 	
 	function selectElement(id, valueToSelect) {    
@@ -124,7 +123,6 @@ bari an is briostun."
 	
 	selectElement("languages","ModEnglish");
 	selectElement("faces","Regular");
-
 	
 	// The "languages" dropdown menu selects a text and also
 	// sets the "lang" attribute for the text box.
@@ -166,9 +164,6 @@ bari an is briostun."
 		$(".textbox").attr("lang",l)
 			.css({"white-space": whitespace, "font-feature-settings": fstring})
 			.text(t);
-		// $(".textbox").css("white-space", whitespace);
-		// $(".textbox").css("font-feature-settings", fstring);
-		// $(".textbox").text(t);
 	});
 
 	// For the "faces" box, select one of the fonts by setting
@@ -239,8 +234,6 @@ bari an is briostun."
 
 		$(".textbox").css({"font-weight": wght, "font-stretch": wdth});
 
-		// $(".textbox").css("font-weight",wght);
-		// $(".textbox").css("font-stretch",wdth);
 	});
 
 	// Adds one tag/value pair to the feature string, adding punctuation

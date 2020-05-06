@@ -1,20 +1,21 @@
 $(document).ready(function(){
-	var modtext = "The Junius group of font families (including Junius, Junicode, and JuniusX) \
-      is loosely based on the Pica font commissioned by Bishop John \
-      Fell (1625–1686) for the use of the Oxford Press and cut by the Dutch \
-      designer Peter De Walpergen, together with the “Saxon” \
-      types commissioned by the philologist Franciscus \
-      Junius (1591–1677) and used by him in several editions of Old English \
-      texts. The JuniusX character set is much larger than in \
-      Fell’s typefonts, covering a large number of languages that \
-      use the Latin script, but an effort has been made to conform newly \
-      added characters to the style of the Fell Pica. In addition to \
-      the large Latin character set, JuniusX includes the Gothic \
-      alphabet (also based on the Fell types) and the full Unicode \
-      Runic range (covering the Early English futhorc, the Elder \
-      futhark, and the Younger futhark (both short twig and long \
-      branch). JuniusX gives users an easy way to sort out these \
-      different runic sets.";
+	var modtext = "When the right vertuous E.W. and I were at the Emperours Court togither, \
+wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation \
+had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did \
+not onely affoord us the demonstration of his practise, but sought to enrich our mindes with the \
+contemplations therein, which he thought most precious. But with none I remember mine eares were at \
+any time more loaden, then when (either angred with slow paiment, or mooved with our learnerlike \
+admiration) hee exercised his speech in the praise of his facultie. He said souldiers were the \
+noblest estate of mankind, and horsemen the noblest of souldiers. He said they were the maisters \
+of warre, and ornaments of peace, speedie goers, and strong abiders, triumphers both in Camps and \
+Courts: nay to so unbleeved a point he proceeded, as that no earthly thing bred such wonder to a \
+Prince, as to be a good horseman. Skill of government was but a Pedenteria in comparison, then \
+would he adde certaine praises by telling us what a peerless beast the horse was, the one \
+serviceable Courtier without flattery, the beast of most bewtie, faithfulnesse, courage, and such \
+more, that if I had not beene a peece of a Logician before I came to him, I thinke he would have \
+perswaded me to have wished myselfe a horse. But thus much at least, with his no few words he drave \
+into me, that selflove is better than any guilding, to make that seem gorgious wherein ourselves be \
+parties.";
 
 	var germantext = "Es hat ſich vil volcks geſamlet / alſo / das ſy ſich vnder einandern \
 trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch voꝛ dē ſurteig ꝺ̕ \

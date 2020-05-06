@@ -145,7 +145,8 @@ body {
 .textbox {
     width: 48%;
     height: 600px;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     float: right;
     border: 1px solid black;
     font-family: JuniusX;

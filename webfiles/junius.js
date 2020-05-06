@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	
+	var fstring = "";
+	
 	var modtext = "When the right vertuous E.W. and I were at the Emperours Court togither, \
 wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation \
 had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did \
@@ -111,6 +114,7 @@ bari an is briostun."
 	// display the default (modern English) text.
 
 	$(".textbox").text(modtext);
+	$(".textbox").css("font-feature-settings", fstring);
 	$( "input[type='checkbox']" ).prop("checked", false);
 	
 	function selectElement(id, valueToSelect) {    
@@ -162,6 +166,7 @@ bari an is briostun."
 		$(".textbox").attr("lang",l);
 		$(".textbox").attr("style",f);
 		$(".textbox").text(t);
+		$(".textbox").css("font-feature-settings", fstring);
 	});
 
 	// For the "faces" box, select one of the fonts by setting
@@ -252,7 +257,7 @@ bari an is briostun."
 
 	$(".check").change(function() {
 
-		var fstring = "";
+		fstring = "";
 
 		$("input").each(function() {
 			if ($( this ).is(":checked")) {

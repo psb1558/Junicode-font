@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	var fstring = "";
+	var fstring = "normal";
 	
 	var modtext = "When the right vertuous E.W. and I were at the Emperours Court togither, \
 wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation \
@@ -274,6 +274,10 @@ bari an is briostun."
 				}
 			}
 		});
+		
+		if (fstring.length == 0)
+			fstring = "normal";
+		
 		$(".textbox").css("font-feature-settings", fstring);
 	});
 });

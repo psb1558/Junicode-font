@@ -164,6 +164,7 @@ bari an is briostun."
 		$(".textbox").attr("lang",l)
 			.css({"white-space": whitespace, "font-feature-settings": fstring})
 			.text(t);
+
 	});
 
 	// For the "faces" box, select one of the fonts by setting
@@ -276,5 +277,6 @@ bari an is briostun."
 			fstring = "normal";
 		
 		$(".textbox").css("font-feature-settings", fstring);
+
 	});
 });

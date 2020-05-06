@@ -163,11 +163,12 @@ bari an is briostun."
 				t = germantext;
 		}
 
-		$(".textbox").attr("lang",l);
-		$(".textbox").css({"white-space": whitespace, "font-feature-settings": fstring});
+		$(".textbox").attr("lang",l)
+			.css({"white-space": whitespace, "font-feature-settings": fstring})
+			.text(t);
 		// $(".textbox").css("white-space", whitespace);
 		// $(".textbox").css("font-feature-settings", fstring);
-		$(".textbox").text(t);
+		// $(".textbox").text(t);
 	});
 
 	// For the "faces" box, select one of the fonts by setting
@@ -236,8 +237,10 @@ bari an is briostun."
 				wdth = "60%";
 		}
 
-		$(".textbox").css("font-weight",wght);
-		$(".textbox").css("font-stretch",wdth);
+		$(".textbox").css({"font-weight": wght, "font-stretch": wdth});
+
+		// $(".textbox").css("font-weight",wght);
+		// $(".textbox").css("font-stretch",wdth);
 	});
 
 	// Adds one tag/value pair to the feature string, adding punctuation

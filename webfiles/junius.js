@@ -90,21 +90,21 @@ haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche o�
 þe beoð summe of þe alde lahe, summe of þe neowe, ne beoð nawt monnes fundles, ne \
 riwle þet mon stalde, ah beoð Godes heastes.";
 	
-	var oldsaxontext = "Thuo uuard that heƀancuningas bodon harm an is muode, \
-the hie is giuuerkes so uundran scolda \
-endi that ni uuelda gihuggean, that ina mahti helag god \
-so alaiungan so hie fan erist uuas \
-selƀo giuuirkean, ef hie so uueldi. \
-Scerida im thuo te uuitie that hie ni mohta enig uuord gisprekean, \
-gimahlean mid is muđu, ‘er than thu magu uuirđit \
-fan thinero aldero idis erl afuodit, \
-kindiung giboran kunneas guodes, \
-uuanom te thesaro uueroldi. Than skalt thu eft uuord sprekan, \
-hebbean thinera stemna giuuald: ni tharft thu stum uuesan \
-langron huila.’ Thuo uuarth it san gilestid so, \
-giuuorđan te uuaron so thar on them uuihe gisprak \
-engil thes alouualdon: uuart ald gumo \
-spraka bilosid, thuo hie spahan hugi \
+	var oldsaxontext = "Thuo uuard that heƀancuningas bodon harm an is muode,\n\
+the hie is giuuerkes so uundran scolda\n\
+endi that ni uuelda gihuggean, that ina mahti helag god\n\
+so alaiungan so hie fan erist uuas\n\
+selƀo giuuirkean, ef hie so uueldi.\n\
+Scerida im thuo te uuitie that hie ni mohta enig uuord gisprekean,\n\
+gimahlean mid is muđu, ‘er than thu magu uuirđit\n\
+fan thinero aldero idis erl afuodit,\n\
+kindiung giboran kunneas guodes,\n\
+uuanom te thesaro uueroldi. Than skalt thu eft uuord sprekan,\n\
+hebbean thinera stemna giuuald: ni tharft thu stum uuesan\n\
+langron huila.’ Thuo uuarth it san gilestid so,\n\
+giuuorđan te uuaron so thar on them uuihe gisprak\n\
+engil thes alouualdon: uuart ald gumo\n\
+spraka bilosid, thuo hie spahan hugi\n\
 bari an is briostun."
 
 	// Clear the menus and boxes (in case the page is being reloaded) and

@@ -26,7 +26,9 @@ phariſeern / welches iſt die heuchley. Es iſt aber nichts verboꝛgens / das 
 noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nuß geſagt habēd / das \
 wirt man am liecht hoͤren: was jr habend geredt ins oꝛ in der kam̄er / das wirt man predigen vff den \
 taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit voꝛ denen die den lyb toͤdend / vnd \
-darnach nichts habennd das ſy mer thuͤgind.";
+darnach nichts habennd das ſy mer thuͤgind. Ich wil üch aber zeigē voꝛ welchem jr üch fꝛchten \
+ſollend. Foͤꝛchtend üch voꝛ dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die \
+hell: ja ich sag üch / voꝛ dem ſelben foͤꝛchtēd üch."
 
     var gothictext = "Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, \
 gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais \

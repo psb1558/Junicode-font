@@ -80,20 +80,20 @@ iuſtoꝛum. Qm̄ nouit dn̄ſ uiam iuſtoꝝ⹎ et iter impioꝛum ꝑibit.";
       setton oðre eorlas ⁊ oðre hasæton to þam scipum.";
 
     var middleenglishtext = "Nan ancre, bi mi read, ne schal makien \
-professiun—þet is, bihaten ase heast—but þreo þinges: þet beoð obedience, \
-chastete, ant stude steaðeluestnesse, þet ha ne schal þet stude neauer \
-mare changin bute for nede ane, as strengðe ant deaðes dred, obedience of \
-hire bischop oðer of his herre. For hwa se nimeð þing on hond ant bihat hit \
-Godd as heast forte don hit, ha bint hire þerto, ant sunegeð deadliche i þe \
-bruche, ȝef ha hit brekeð willes. Ȝef ha hit ne bihat nawt, ha hit mei do þah \
-ant leauen hwen ha wel wule, as of mete, of drunch, flesch forgan oðer fisch, \
-alle oþer swucche þinges, of werunge, of liggunge, of ures, of oþre beoden, \
-segge swa monie oðer o swucche wise. Þeos ant þulliche oþre beoð alle i freo \
-wil to don oðer to leten hwil me wule ant hwen me wule, bute ha beon bihaten. \
-Ah chearite—þet is, luue—ant eadmodnesse ant þolemodnesse, treoweschipe ant \
-haldunge of þe alde ten heastes, schrift ant penitence—þeos ant þulliche oþre, \
-þe beoð summe of þe alde lahe, summe of þe neowe, ne beoð nawt monnes fundles, ne \
-riwle þet mon stalde, ah beoð Godes heastes.";
+ꝓfessiun—ꝥ is, bihaten ase heast—but þreo þinges: ꝥ beoð obedience, \
+chastete, ⁊ stude steaðeluestnesse, ꝥ ha ne schal ꝥ stude neau͛ \
+mare changin bute for nede ane, as strengðe ⁊ deaðes dred, obedience of \
+hire bischop oðer of his herre. For hƿa se nimeð þing on hond ⁊ bihat hit \
+Godd as heast forte don hit, ha bint hire þerto, ⁊ sunegeð deadliche i þe \
+bruche, ȝef ha hit brekeð ƿilles. Ȝef ha hit ne bihat naƿt, ha hit mei do þah \
+⁊ leauen hƿen ha ƿel ƿule, as of mete, of drunch, flesch forgan oðer fisch, \
+alle oþer sƿucche þinges, of ƿerunge, of liggunge, of ures, of oþre beoden, \
+segge sƿa monie oðer o sƿucche ƿise. Þeos ⁊ þulliche oþre beoð alle i freo \
+ƿil to don oðer to leten hƿil me ƿule ant hƿen me ƿule, bute ha beon bihaten. \
+Ah chearite—ꝥ is, luue—⁊ eadmodnesse ⁊ þolemodnesse, treoƿeschipe ⁊ \
+haldunge of þe alde ten heastes, Schrift ⁊ penitence. þeos ⁊ þulliche oþre \
+þe beoð summe of þe alde lahe summe of þe neoƿe⹎ ne beoð naƿt monnes fundles ne \
+riƿle ꝥ mon stalde⹎ ah beoð Godes heastes.";
 	
 	var oldsaxontext = "Thuo uuard that heƀancuningas bodon   harm an is muode,\n\
 that hie is giuuerkes so   uundran scolda\n\

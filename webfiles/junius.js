@@ -139,7 +139,7 @@ bari an is briostun."
 
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "ModEnglish":
-				$( "input[type='checkbox']" ).prop("checked", false);
+				$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
 				$("#hist").prop("checked",true).change();
 				break;
 			case "OldEnglish":
@@ -150,7 +150,7 @@ bari an is briostun."
 			case "MiddleEnglish":
 				t = middleenglishtext;
 				// r rotunda with rules; always long s; crossed Tironian nota
-				$( "input[type='checkbox']" ).prop("checked", false);
+				$( "input[type='checkbox']" ).not("#ss08, #ss11, #cv022").prop("checked", false);
 				$("#ss08, #ss11, #cv022").prop("checked",true).change();
 				break;
 			case "Latin":
@@ -180,14 +180,10 @@ bari an is briostun."
 				l = "de";
 				t = germantext;
 				// Long s is done manually for German. Use r rotunda with rules.
-				$( "input[type='checkbox']" ).prop("checked", false);
+				$( "input[type='checkbox']" ).not("#ss11").prop("checked", false);
 				$("#ss11").prop("checked",true).change();
 
 		}
-
-//		$(".textbox").attr("lang",l)
-//			.css({"white-space": whitespace, "font-feature-settings": fstring})
-//			.text(t);
 
 		$(".textbox").attr("lang",l)
 			.css({"white-space": whitespace})

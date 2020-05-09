@@ -1,7 +1,5 @@
 $(document).ready(function(){
 	
-	var fstring = "normal";
-	
 	var modtext = "When the right vertuous E.W. and I were at the Emperours Court togither, \
 wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation \
 had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did \
@@ -116,8 +114,10 @@ bari an is briostun."
 	// Clear the menus and boxes (in case the page is being reloaded) and
 	// display the default (modern English) text.
 
+	var fstring = "\"hist\" on";
 	$(".textbox").css("font-feature-settings", fstring).text(modtext);
-	$( "input[type='checkbox']" ).prop("checked", false);
+	$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
+	$( "#hist" ).prop("checked", true);
 	
 	function selectElement(id, valueToSelect) {    
     		let element = document.getElementById(id);

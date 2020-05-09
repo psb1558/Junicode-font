@@ -135,6 +135,7 @@ bari an is briostun."
 		var l = "en";
 		var t = modtext;
 		var whitespace = "normal";
+		var currentfstring = fstring;
 
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "OldEnglish":
@@ -142,6 +143,7 @@ bari an is briostun."
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;
+				$("#ss08, #ss11").prop("checked",true).change();
 				break;
 			case "Latin":
 				l = "la"
@@ -149,6 +151,7 @@ bari an is briostun."
 				break;
 			case "Gothic":
 				t = gothictext;
+				$( "#ss01" ).prop("checked", true).change();
 				break;
 			case "OldIcelandic":
 				l = "is";

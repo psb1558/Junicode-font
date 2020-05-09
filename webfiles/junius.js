@@ -138,6 +138,9 @@ bari an is briostun."
 		var currentfstring = fstring;
 
 		switch ( $("#languages option:selected").attr("value") ) {
+			case "ModEnglish":
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
+				break;
 			case "OldEnglish":
 				t = oldenglishtext;
 				$( "input[type='checkbox']" ).prop("checked", false).first().change();

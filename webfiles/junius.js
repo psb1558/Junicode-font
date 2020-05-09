@@ -143,7 +143,7 @@ bari an is briostun."
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;
-				$("#ss08, #ss11").prop("checked",true).change();
+				$("#ss08, #ss11, #cv022").prop("checked",true).change();
 				break;
 			case "Latin":
 				l = "la"

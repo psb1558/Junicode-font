@@ -149,6 +149,7 @@ bari an is briostun."
 			case "Latin":
 				l = "la"
 				t = latintext;
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "Gothic":
 				t = gothictext;
@@ -157,15 +158,18 @@ bari an is briostun."
 			case "OldIcelandic":
 				l = "is";
 				t = norsetext;
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "OldSaxon":
 				l = "de";
 				t = oldsaxontext;
 				whitespace = "pre-wrap";
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "German":
 				l = "de";
 				t = germantext;
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 		}
 
 		$(".textbox").attr("lang",l)

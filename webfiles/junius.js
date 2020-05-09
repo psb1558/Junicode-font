@@ -79,21 +79,22 @@ iuſtoꝛum. Qm̄ nouit dn̄ſ uiam iuſtoꝝ⹎ et iter impioꝛum ꝑibit.";
       þæt þa scipu gewendan eft ongean to Lundene. ⁊ sceolde man \
       setton oðre eorlas ⁊ oðre hasæton to þam scipum.";
 
-    var middleenglishtext = "Nan ancre, bi mi read, ne schal makien \
-ꝓfessiun—ꝥ is, bihaten ase heast—but þreo þinges: ꝥ beoð obedience, \
-chastete, ⁊ stude steaðeluestnesse, ꝥ ha ne schal ꝥ stude neau͛ \
-mare changin bute for nede ane, as strengðe ⁊ deaðes dred, obedience of \
-hire bischop oðer of his herre. For hƿa se nimeð þing on hond ⁊ bihat hit \
-Godd as heast forte don hit, ha bint hire þerto, ⁊ sunegeð deadliche i þe \
-bruche, ȝef ha hit brekeð ƿilles. Ȝef ha hit ne bihat naƿt, ha hit mei do þah \
-⁊ leauen hƿen ha ƿel ƿule, as of mete, of drunch, flesch forgan oðer fisch, \
-alle oþer sƿucche þinges, of ƿerunge, of liggunge, of ures, of oþre beoden, \
-segge sƿa monie oðer o sƿucche ƿise. Þeos ⁊ þulliche oþre beoð alle i freo \
-ƿil to don oðer to leten hƿil me ƿule ant hƿen me ƿule, bute ha beon bihaten. \
-Ah chearite—ꝥ is, luue—⁊ eadmodnesse ⁊ þolemodnesse, treoƿeschipe ⁊ \
-haldunge of þe alde ten heastes, Schrift ⁊ penitence. þeos ⁊ þulliche oþre \
+    var middleenglishtext = "Nan ancre bi mi read ne schal makien \
+ꝓfessiun. ꝥ is bihaten ase heast⹎ but þreo þinges. ꝥ beoð obedience. \
+chastete. ⁊ stude steaðeluestnesse. ꝥ ha ne schal ꝥ stude neau͛ \
+mare changin bute for nede ane. as strengðe ⁊ deaðes dred. obedience of \
+hire bischop oðer of his herre. for hƿa se nimeð þing on hond ⁊ bihat hit \
+Godd as heast forte don hit⹎ ha bint hire þerto. ⁊ sunegeð deadliche i þe \
+bruche. ȝef ha hit brekeð ƿilles. ȝef ha hit ne bihat naƿt. ha hit mei do þah \
+⁊ leauen hƿen ha ƿel ƿule. as of mete. of drunch. flesch forgan oðer fisch. \
+alle oþer sƿucche þinges. of ƿerunge. of liggunge. of ures. of oþre beoden. \
+segge sƿa monie oðer o sƿucche ƿise. þeos ⁊ þulliche oþre beoð alle i freo \
+ƿil to don oðer to leten hƿil me ƿule ant hƿen me ƿule bute ha beon bihaten. \
+ah chearite ꝥ is luue. ⁊ eadmodnesse ⁊ þolemodnesse. treoƿeschipe ⁊ \
+haldunge of þe alde ten heastes. Schrift ⁊ penitence. þeos ⁊ þulliche oþre \
 þe beoð summe of þe alde lahe summe of þe neoƿe⹎ ne beoð naƿt monnes fundles ne \
-riƿle ꝥ mon stalde⹎ ah beoð Godes heastes.";
+riƿle ꝥ mon stalde⹎ ah beoð Godes heastes. ant for þi euch mon mot ham nede \
+	halden.";
 	
 	var oldsaxontext = "Thuo uuard that heƀancuningas bodon   harm an is muode,\n\
 that hie is giuuerkes so   uundran scolda\n\

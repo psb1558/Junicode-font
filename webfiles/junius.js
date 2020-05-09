@@ -140,6 +140,7 @@ bari an is briostun."
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "OldEnglish":
 				t = oldenglishtext;
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;

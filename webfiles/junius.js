@@ -21,14 +21,14 @@ into me, that selflove is better than any guilding, to make that seem gorgious w
 parties.";
 
 	var germantext = "Es hat ſich vil volcks geſamlet / alſo / das ſy ſich vnder einandern \
-trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch voꝛ dē ſurteig ꝺ̕ \
-phariſeern / welches iſt die heuchley. Es iſt aber nichts verboꝛgens / das nitt offenbar werde: \
+trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch vor dē ſurteig ꝺ̕ \
+phariſeern / welches iſt die heuchley. Es iſt aber nichts verborgens / das nitt offenbar werde: \
 noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nuß geſagt habēd / das \
-wirt man am liecht hoͤren: was jr habend geredt ins oꝛ in der kam̄er / das wirt man predigen vff den \
-taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit voꝛ denen die den lyb toͤdend / vnd \
-darnach nichts habennd das ſy mer thuͤgind. Ich wil üch aber zeigē voꝛ welchem jr üch fꝛchten \
-ſollend. Foͤꝛchtend üch voꝛ dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die \
-hell: ja ich sag üch / voꝛ dem ſelben foͤꝛchtēd üch."
+wirt man am liecht hoͤren: was jr habend geredt ins or in der kam̄er / das wirt man predigen vff den \
+taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit vor denen die den lyb toͤdend / vnd \
+darnach nichts habennd das ſy mer thuͤgind. Ich wil üch aber zeigē vor welchem jr üch frchten \
+ſollend. Foͤrchtend üch vor dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die \
+hell: ja ich sag üch / vor dem ſelben foͤrchtēd üch."
 
     var gothictext = "Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, \
 gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais \
@@ -169,11 +169,16 @@ bari an is briostun."
 			case "German":
 				l = "de";
 				t = germantext;
-				$( "input[type='checkbox']" ).prop("checked", false).first().change();
+				$("#ss11").prop("checked",true).change();
+
 		}
 
+//		$(".textbox").attr("lang",l)
+//			.css({"white-space": whitespace, "font-feature-settings": fstring})
+//			.text(t);
+
 		$(".textbox").attr("lang",l)
-			.css({"white-space": whitespace, "font-feature-settings": fstring})
+			.css({"white-space": whitespace})
 			.text(t);
 
 	});

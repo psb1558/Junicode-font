@@ -142,13 +142,14 @@ bari an is briostun."
 				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "OldEnglish":
-				// lang code is ang.
+				// lang code is ang, but we use en to trigger English thorn and eth.
 				t = oldenglishtext;
 				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;
 				$( "input[type='checkbox']" ).prop("checked", false);
+				// r rotunda with rules; always long s; crossed Tironian nota
 				$("#ss08, #ss11, #cv022").prop("checked",true).change();
 				break;
 			case "Latin":
@@ -157,10 +158,12 @@ bari an is briostun."
 				$( "input[type='checkbox']" ).prop("checked", false).first().change();
 				break;
 			case "Gothic":
-				// lang code for Gothic is got.
+				// lang code for Gothic is got. Here it simply means "not English."
 				t = gothictext;
-				$( "input[type='checkbox']" ).prop("checked", false);
-				$( "#ss01" ).prop("checked", true).change();
+				l = "got";
+				$( "input[type='checkbox']" ).prop("checked", false).first().change();
+				// $( "input[type='checkbox']" ).prop("checked", false);
+				// $( "#ss01" ).prop("checked", true).change();
 				break;
 			case "OldIcelandic":
 				l = "is";
@@ -169,7 +172,7 @@ bari an is briostun."
 				break;
 			case "OldSaxon":
 				// lang code is osx.
-				l = "de";
+				l = "osx";
 				t = oldsaxontext;
 				whitespace = "pre-wrap";
 				$( "input[type='checkbox']" ).prop("checked", false).first().change();
@@ -177,6 +180,7 @@ bari an is briostun."
 			case "German":
 				l = "de";
 				t = germantext;
+				// Long s is done manually for German. Use r rotunda with rules.
 				$( "input[type='checkbox']" ).prop("checked", false);
 				$("#ss11").prop("checked",true).change();
 

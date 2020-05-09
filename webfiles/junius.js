@@ -139,7 +139,8 @@ bari an is briostun."
 
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "ModEnglish":
-				$( "input[type='checkbox']" ).prop("checked", false).first().change();
+				$( "input[type='checkbox']" ).prop("checked", false);
+				$("#hist").prop("checked",true).change();
 				break;
 			case "OldEnglish":
 				// lang code is ang, but we use en to trigger English thorn and eth.
@@ -148,8 +149,8 @@ bari an is briostun."
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;
-				$( "input[type='checkbox']" ).prop("checked", false);
 				// r rotunda with rules; always long s; crossed Tironian nota
+				$( "input[type='checkbox']" ).prop("checked", false);
 				$("#ss08, #ss11, #cv022").prop("checked",true).change();
 				break;
 			case "Latin":
@@ -162,8 +163,6 @@ bari an is briostun."
 				t = gothictext;
 				l = "got";
 				$( "input[type='checkbox']" ).prop("checked", false).first().change();
-				// $( "input[type='checkbox']" ).prop("checked", false);
-				// $( "#ss01" ).prop("checked", true).change();
 				break;
 			case "OldIcelandic":
 				l = "is";

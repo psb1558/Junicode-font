@@ -144,6 +144,7 @@ bari an is briostun."
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;
+				$( "input[type='checkbox']" ).prop("checked", false);
 				$("#ss08, #ss11, #cv022").prop("checked",true).change();
 				break;
 			case "Latin":
@@ -153,6 +154,7 @@ bari an is briostun."
 				break;
 			case "Gothic":
 				t = gothictext;
+				$( "input[type='checkbox']" ).prop("checked", false);
 				$( "#ss01" ).prop("checked", true).change();
 				break;
 			case "OldIcelandic":
@@ -169,6 +171,7 @@ bari an is briostun."
 			case "German":
 				l = "de";
 				t = germantext;
+				$( "input[type='checkbox']" ).prop("checked", false);
 				$("#ss11").prop("checked",true).change();
 
 		}

@@ -10,7 +10,7 @@ added to Unicode since MUFI 4.0. The font:
 - a more comprehensive set of anchors for mark positioning,
 - and additional OpenType features—automatic runic transcription, access to fleurons, and more.
 
-![Sample Image](sample-image-half.jpg)
+![Sample Image](sample-image.jpg)
 
 For a specimen of the roman face and a demonstration of the font’s many OpenType features, visit
 [this page](https://psb1558.github.io/Junicode-New/).

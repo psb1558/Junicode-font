@@ -280,20 +280,40 @@ bari an is briostun."
 	$(".check").change(function() {
 
 		fstring = "";
+		
+//		if (!($("#morefeat).is(":checked"))) {
+//			$(".hid").css("display", "none");
+//		      }
 
 		$("input").each(function() {
+			var tag = $(this).attr("id");
 			if ($( this ).is(":checked")) {
-				var tag = $(this).attr("id");
-				switch ( tag ) {
-					case "cv021":
-						fstring = featureString(fstring, "cv02", "1");
-						break;
-					case "cv022":
-						fstring = featureString(fstring, "cv02", "2");
-						break;
-					default:
-						fstring = featureString(fstring, tag, "on");
+				// var tag = $(this).attr("id");
+				if ( tag == "morefeat" ) {
+					$(".hid").css("display", "inline");
 				}
+				else if ( tag.length == 5 ) {
+					var basetag = tag.substring(0,4);
+					var tagindex = tag.substring(4);
+					fstring = featureString(fstring, basetag, tagindex);
+				}
+				else {
+					fstring = featureString(fstring, tag, "on");
+				}
+
+//				switch ( tag ) {
+//					case "cv021":
+//						fstring = featureString(fstring, "cv02", "1");
+//						break;
+//					case "cv022":
+//						fstring = featureString(fstring, "cv02", "2");
+//						break;
+//					default:
+//						fstring = featureString(fstring, tag, "on");
+//				}
+			}
+			else if ( tag == "morefeat" ) {
+				$(".hid").css("display", "none");
 			}
 		});
 		

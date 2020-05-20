@@ -289,7 +289,7 @@ bari an is briostun."
 			var tag = $(this).attr("id");
 			if ($( this ).is(":checked")) {
 				// var tag = $(this).attr("id");
-				if ( tag == "morefeat" ) {
+				if ( tag === "morefeat" ) {
 					$(".hid").css("display", "inline");
 				}
 				else if ( tag.length == 5 ) {
@@ -312,7 +312,7 @@ bari an is briostun."
 //						fstring = featureString(fstring, tag, "on");
 //				}
 			}
-			else if ( tag == "morefeat" ) {
+			else if ( tag === "morefeat" ) {
 				$(".hid").css("display", "none");
 			}
 		});

@@ -204,14 +204,14 @@ p {
 
 /* Tooltip stuff from https://chrisbracco.com/a-simple-css-tooltip/ */
 
-/* Add this attribute to the element that needs a tooltip */
+/* Add this attribute to the element that needs a tooltip
 [data-tooltip] {
   position: relative;
   z-index: 2;
   cursor: pointer;
-}
+} */
 
-/* Hide the tooltip content by default */
+/* Hide the tooltip content by default
 [data-tooltip]:before,
 [data-tooltip]:after {
   visibility: hidden;
@@ -219,9 +219,9 @@ p {
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   pointer-events: none;
-}
+} */
 
-/* Position tooltip above the element */
+/* Position tooltip above the element
 [data-tooltip]:before {
   position: absolute;
   bottom: 150%;
@@ -241,9 +241,9 @@ p {
   text-align: center;
   font-size: 14px;
   line-height: 1.2;
-}
+} */
 
-/* Triangle hack to make tooltip look like a speech bubble */
+/* Triangle hack to make tooltip look like a speech bubble
 [data-tooltip]:after {
   position: absolute;
   bottom: 150%;
@@ -257,17 +257,13 @@ p {
   content: " ";
   font-size: 0;
   line-height: 0;
-}
+} */
 
-/* Show tooltip content on hover */
+/* Show tooltip content on hover
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
   visibility: visible;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-}
-
-/* Hide current */
-
-.tooltiptext { visibility: none; }
+} */

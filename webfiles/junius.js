@@ -280,10 +280,6 @@ bari an is briostun."
 	$(".check").change(function() {
 
 		fstring = "";
-		
-//		if (!($("#morefeat).is(":checked"))) {
-//			$(".hid").css("display", "none");
-//		      }
 
 		$("input").each(function() {
 			var tag = $(this).attr("id");
@@ -300,17 +296,6 @@ bari an is briostun."
 				else {
 					fstring = featureString(fstring, tag, "on");
 				}
-
-//				switch ( tag ) {
-//					case "cv021":
-//						fstring = featureString(fstring, "cv02", "1");
-//						break;
-//					case "cv022":
-//						fstring = featureString(fstring, "cv02", "2");
-//						break;
-//					default:
-//						fstring = featureString(fstring, tag, "on");
-//				}
 			}
 			else if ( tag === "morefeat" ) {
 				$(".hid").css("display", "none");

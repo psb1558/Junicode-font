@@ -7,6 +7,7 @@ added to Unicode since MUFI 4.0. The font:
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and three widths (Regular, SemiCondensed, Condensed);
 - has improved outlines,
+- an expanded collection of small caps (covering all case-paired characters),
 - a more comprehensive set of anchors for mark positioning,
 - and additional OpenType features—automatic runic transcription, access to fleurons, and more.
 

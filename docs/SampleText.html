@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+<style>
+
+/*
+  This demo uses the method devised by Roel Nieskens for accessing
+  OpenType features. See
+  https://pixelambacht.nl/2019/fixing-variable-font-inheritance/.
+  Make sure the variable font JuniusVF.woff2 is in the same directory
+  as this file, then drag this file into any browser window.
+*/
+
+/*
+  font-family names this family and associates this declaration with
+    other possible declarations for JuniusVF.
+  src:url() points to the font file.
+  font-weight in a declaration for a variable font defines the range
+    of available weights.
+  font-stretch defines the range of available widths.
+  font-style: normal indicates that this declaration is for an upright
+    or roman font.
+*/
+
+@font-face {
+ font-family: 'JuniusVF';
+ src:url("./JuniusVF.woff2");
+ font-weight: 300 700;
+ font-stretch: 60% 100%;
+ font-style: normal;
+}
+
+/*
+  In the :root declaration we define a number of variables, including
+  all the font-variation and OpenType tags we'll be using, together
+  with their default values. We define them here because :root is as
+  far up the document tree as you can go.
+
+  To use this model for your document, identify all the feature tags
+  you'll be using in your text and set the defaults here.
+*/
+
+:root {
+  /*
+    variation settings: weight and width
+  */
+  --jvf-wght: "wght" 400;
+  --jvf-wdth: "wdth" 100;
+  /*
+    OpenType features
+  */
+  --jvf-ss08: "ss08" on;
+  --jvf-ss09: "ss09" off;
+  --jvf-ss11: "ss11" on;
+  --jvf-cv05: "cv05" 1;
+  --jvf-cv09: "cv09" 1;
+  --jvf-cv13: "cv13" off;
+}
+
+/*
+  Set the font for the body. Make it big so everybody can see what's
+  going on.
+*/
+
+body {
+  font-family: 'JuniusVF';
+  font-size: 28px;
+  line-height: 150%;
+  margin-left: 20px;
+}
+
+/*
+  An asterisk selects any element. Every time we hit an element, we'll
+  call font-variation-settings and font-feature-settings to explicitly
+  set all the OpenType features we're using in this text. The fun part
+  of this is that the variables we use in calling this rule may have
+  been altered by a class attribute.
+*/
+
+* {
+    font-variation-settings: var(--jvf-wght), var(--jvf-wdth);
+    font-feature-settings:   var(--jvf-ss08),
+                             var(--jvf-ss09),
+                             var(--jvf-ss11),
+                             var(--jvf-cv05),
+                             var(--jvf-cv09),
+                             var(--jvf-cv13);
+}
+
+/*
+ Define classes. We only need to change the variable that's relevant
+ to each class: the others will remain at their current values.
+*/
+
+.xscap {
+  --jvf-ss09: "ss09" on;
+}
+
+.norrotunda {
+  --jvf-ss11: "ss11" off;
+}
+
+/*
+  N.B. the cv13 feature has a list of two lowercase substitutions;
+  the dotless i is the second of these.
+*/
+
+.dotlessi {
+  --jvf-cv13: "cv13" 2;
+}
+
+.initcap {
+  color: red;
+  font-size: 150%;
+}
+
+</style>
+</head>
+<body lang="is">
+<p>
+  <span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
+    kindir meiri oc mi<span class="xscap">n</span>i maugo<br/>
+  heimdalar uilðo at ec ualfꜹþ<span class="norrotunda">r</span> uel
+    fyr telia forn<br/>
+  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  nío iviþi[vr] miot uið mę́ran fyr mold neðan.
+<p>
+</body>
+</html>

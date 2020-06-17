@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+<style>
+
+/*
+  This demo uses the method devised by Roel Nieskens for accessing
+  OpenType features. See
+  https://pixelambacht.nl/2019/fixing-variable-font-inheritance/.
+*/
+
+/*
+  font-family names this family and associates this declaration with
+    other possible declarations for JuniusVF.
+  src:url() points to the font file.
+  font-weight in a declaration for a variable font defines the range
+    of available weights.
+  font-stretch defines the range of available widths.
+  font-style: normal indicates that this declaration is for an upright
+    or roman font.
+*/
+
+@font-face {
+ font-family: 'JuniusVF';
+ src:url("./webfiles/JuniusVF.woff2");
+ font-weight: 300 700;
+ font-stretch: 60% 100%;
+ font-style: normal;
+}
+
+/*
+  In the :root declaration we define a number of variables, including
+  all the font-variation and OpenType tags we'll be using, together
+  with their default values. We define them here because :root is as
+  far up the document tree as you can go.
+
+  To use this model for your document, identify all the feature tags
+  you'll be using in your text and set the defaults here.
+*/
+
+:root {
+  /*
+    variation settings: weight and width
+  */
+  --jvf-wght: "wght" 400;
+  --jvf-wdth: "wdth" 100;
+  /*
+    OpenType features
+  */
+  --jvf-ss08: "ss08" off;
+  --jvf-ss09: "ss09" off;
+  --jvf-ss11: "ss11" off;
+  --jvf-cv05: "cv05" off;
+  --jvf-cv09: "cv09" off;
+  --jvf-cv13: "cv13" off;
+  --jvf-smcp: "smcp" off;
+}
+
+/*
+  Style the body. Make the font big so everybody can see what's
+  going on.
+*/
+
+body {
+  font-family: 'JuniusVF';
+  font-size: 28px;
+  line-height: 150%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*
+  An asterisk selects any element. Every time we hit an element, we'll
+  call font-variation-settings and font-feature-settings to explicitly
+  set all the OpenType features we're using in this text. The fun part
+  of this is that the variables we use in calling this rule may have
+  been altered by a class attribute.
+*/
+
+* {
+    font-variation-settings: var(--jvf-wght), var(--jvf-wdth);
+    font-feature-settings:   var(--jvf-ss08),
+                             var(--jvf-ss09),
+                             var(--jvf-ss11),
+                             var(--jvf-cv05),
+                             var(--jvf-cv09),
+                             var(--jvf-cv13),
+                             var(--jvf-smcp);
+}
+
+/*
+  Define the elements we'll be using. Notice how we change the style
+  by setting the value of the variables in :root
+*/
+
+h1 {
+  font-size: 110%;
+  font-style: normal;
+  --jvf-smcp: "smcp" on;
+}
+
+b {
+  --jvf-wght: "wght" 700;
+  font-style: normal;
+}
+
+/*
+  pre will automatically use a fixed-width font. We won't mess with
+  whatever the standard is, except to make the type a bit smaller.
+*/
+
+pre {
+  font-size: 85%;
+}
+
+/*
+ Define classes. We only need to change the variable that's relevant
+ to each class: the others will remain at their current values.
+*/
+
+.mufitext {
+  margin-left: 40px;
+}
+
+/*
+  Note: the cvNN values are indexes into the list of values they
+  contain. However, "off" will also work to turn the features off.
+*/
+
+.medtext {
+  margin-left: 40px;
+  --jvf-ss08: "ss08" on;
+  --jvf-ss11: "ss11" on;
+  --jvf-cv05: "cv05" 1;
+  --jvf-cv09: "cv09" 1;
+}
+
+.longs {
+  --jvf-ss08: "ss08" on;
+}
+
+.xscap {
+  --jvf-ss09: "ss09" on;
+}
+
+.norrotunda {
+  --jvf-ss11: "ss11" off;
+}
+
+.dotlessi {
+  --jvf-cv13: "cv13" 2;
+}
+
+/* No OpenType features for this one, but just a big red letter. */
+
+.initcap {
+  color: red;
+  font-size: 150%;
+}
+
+</style>
+</head>
+<body lang="en">
+<h1>Searchable web pages with MUFI and JuniusX</h1>
+<p>
+JuniusX fully implements the recommendations of the Medieval Unicode
+Font Initiative (MUFI), which offers an encoding scheme for medieval
+texts based on Unicode, the worldwide standard for text
+exchange. You probably know that a computer text is a string of
+numbers, each representing a character: using Unicode, you employ a
+standard mapping of numbers to characters, ensuring that a text typed
+by your friend in Thailand and sent to you as an email attachment will
+look the same when it gets to you as it did when it left your friend’s
+computer. MUFI does a similar job for medieval characters. For
+example, if you need a Dutch libra sign, you won’t find it in Unicode;
+but MUFI has it at code point U+F1EA (), and it will be recognizable
+to anyone with a MUFI-compliant font (like JuniusX).
+</p>
+<p>
+To work its magic, MUFI selects characters of interest to medievalists
+from the Unicode standard, and when a medieval character is missing
+from Unicode it assigns a code point from a block of numbers set aside
+for individuals and groups to use in any way they like: the
+<b>Private Use Area</b>. MUFI-compliant fonts like JuniusX must all
+agree on the mappings of code point to character defined by MUFI so
+that texts can be exchanged reliably.
+</p>
+<p>
+For example, here is the beginning of a diplomatic text of the Old
+Norse <i>Vǫluspá</i>, copied and pasted from the
+Medieval Nordic Text Archive (because JuniusX Italic is not yet
+ready, the text is presented only in roman type):
+</p>
+<p class="mufitext" lang="is">
+<span class="initcap">H</span>lıoðſ bið ec allar kinꝺir meiri oc miɴi maugo<br/>
+heimꝺalar uilðo at ec ualꝼꜹþr uel ꝼyr telia ꝼoꝛn<br/>
+ſpioll ꝼíra þꜹ er ꝼremſt um man. Ec mán iǫtna<br/>
+ar um boꝛna þ⸠ꜹ̣⸡a er ꝼoꝛꝺom mic ꝼǫꝺꝺa hoꝼꝺo. nio man ec heima<br/>
+nío iviþi[vr] miot uið mran ꝼyr molꝺ neðan.<br/>
+</p>
+<p>
+Looks great, right? And it will read the same way whether it’s set in
+JuniusX, Andron Scriptor, Cardo, or Palemonas MUFI. There’s just one
+problem—but it’s a significant one. To illustrate, look at the last
+word in the second line:
+  <b>ꝼoꝛn</b>. That’s an <b>insular f</b> in the first position and an
+  <b>r rotunda</b> in the third; but try searching
+this text for the word “forn” using your browser’s search function
+(Ctrl-F or Cmd-F). What happened? Your search skipped right over
+<b>ꝼoꝛn</b> in the medieval text and landed on “forn” in this
+  paragraph. The fact that <b>f</b> and <b>r</b> are encoded differently
+  in this text from the way they’re encoded in plain text means that
+this text can’t be searched the way most webpages can. (To be a little
+  more precise, some browsers will find the <b>f</b>, but none of them
+  will find the <b>r</b>).
+</p>
+<p>
+This is not to criticise MENOTA, which has its own powerful
+search tools; but not every website is so ambitious and
+sophisticated—and sometimes a reader wants to do a quick and dirty search.
+  Given that one of the principal advantages of an etext is
+searchability, is it possible to create a MUFI-compliant webpage, rich
+with medieval characters, that
+can easily be searched?
+</p>
+<p>
+Turns out that it is both possible and easy to create such a page
+using JuniusX. We’ll take it in two steps. The first will be to create
+as plain an etext as we can get away with, and the second will be to
+style this text using CSS (“Cascading Style Sheets,” the standard for
+styling web pages) and the features
+of JuniusX.
+</p>
+<p>
+For the text, we want to convert as many of those exotic characters as
+possible into their plain-text equivalents. Here’s my attempt:
+</p>
+<p class="mufitext" lang="is">
+<span class="initcap">H</span>lioðs bið ec allar
+    kindir meiri oc mini maugo<br/>
+  heimdalar uilðo at ec ualfꜹþr uel
+    fyr telia forn<br/>
+  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  nío iviþi[vr] miot uið mę́ran fyr mold neðan.
+</p>
+<p>
+If “plain text” is what you can type on a typical keyboard, we haven’t
+quite made it: we still have the exotic character <b>ꜹ</b>,
+several accented characters, and the Icelandic thorn and eth, not to
+mention the strange brackets in line 4 (U+2DE20 and U+2E21). The dot
+under the <b>ꜹ</b> between those brackets is a <b>combining
+diacritical mark</b>: you type it right after the base character, and
+your software takes care of positioning it correctly. The accented
+<b>ę́</b> was a character in the Private Use Area, but I
+have changed it to <b>ę</b> (U+0119, common in modern Polish) plus
+another combining mark, U+0301, the acute accent. That makes it
+standard Unicode, like the other accented characters. As browsers will
+ignore the marks when searching, the only characters that make this
+text hard to search are the brackets and <b>ꜹ</b>, and we can’t do
+anything about those. So this is our base text—the text that will be
+searched.
+</p>
+<p>
+The next step is to select what we need from among the OpenType
+features of JuniusX. OpenType is a standard for font construction that
+allows fonts to do all kinds of clever things. To cite one common
+example, when you type the letters “f‌ind” and the <b>f</b> and the <b>i</b> come out
+joined in a ligature (“find”), an OpenType feature did that. But
+JuniusX has a lot of OpenType features (seventy-six of them, to be
+precise) that do a lot of things.
+</p>
+<p>
+Here are the ones we’ll want to apply to the whole text:
+</p>
+<ul>
+  <li>All instances of <b>s</b> in this text are long <span class="longs">(s)</span>: the “Sticky long
+  s” feature (ss08) does that.</li>
+  <li>All instances of <b>d</b> are also round: we accomplish that with
+  Character Variant 5 (cv05).</li>
+  <li>All instances of <b>f</b> are insular (ꝼ): for that we need Character
+  Variant 9 (cv09).</li>
+  <li>Instances of <b>r</b> are round after rounded characters like <b>o</b> and <b>ꝺ</b>;
+  we get that effect with the “r rotunda” feature (ss11).</li>
+</ul>
+<p>
+The features whose four-letter tags begin with <b>ss</b> are Stylistic
+Sets, and they are either on or off. The Character Variant features
+contain a list of variants of a particular character; we select from
+this list with a numerical index (starting with 1).
+To turn on these OpenType features, then, we need the following CSS rule:
+</p>
+<pre><code>font-feature-settings: "ss08" on, "cv05" 1, "cv09" 1, "ss11" on;</code></pre>
+<p>
+When we apply that to our fragment of <i>Vǫluspá</i>, here’s what we get:
+</p>
+<p class="medtext" lang="is">
+<span class="initcap">H</span>lioðs bið ec allar
+    kindir meiri oc mini maugo<br/>
+  heimdalar uilðo at ec ualfꜹþr uel
+    fyr telia forn<br/>
+  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  nío iviþi[vr] miot uið mę́ran fyr mold neðan.
+</p>
+<p>
+One line of CSS, and already we’re almost home! But there are several
+special cases to attend to. There’s the dotless <b>i</b> in <b>Hlioðs</b>, the small
+capital <b><span class="xscap">n</span></b> in <b>mi<span
+  class="xscap">n</span>i</b>, and the <b>r rotunda</b> that should be a regular
+<b>r</b> at the end of <b>ualfꜹþr</b>. For those, we devise CSS classes that turn
+OpenType features on or off, and we apply these classes to individual
+words or letters:
+</p>
+<ul>
+  <li>For dotless <b>i</b>, the style “dotlessi” selects the second variant
+  of <b>i</b> in Character Variant 13 (cv13 2).</li>
+  <li>For <b><span class="xscap">n</span></b>,
+  we need the “xscap” style, which turns on
+  the “x-height small caps”
+  feature (ss09). (x-height small caps are different from regular small
+  caps in that they’re sized to be mixed with regular lowercase
+  letters.)</li>
+  <li>For the <b>r</b> that shouldn’t be rotunda, we use the “norrotunda”
+  style, which temporarily turns off the “r rotunda” feature (ss11).</li>
+</ul>
+<p>
+As an example of what the HTML will look like, here’s the first line
+of our text:
+</p>
+<pre><code>&lt;span class="initcap"&gt;H&lt;/span&gt;l&lt;span class="dotlessi"&gt;i&lt;/span&gt;oðs bið
+    ec allar kindir meiri oc mi&lt;span class="xscap"&gt;n&lt;/span&gt;i maugo</code></pre>
+<p>
+Of course it looks horrible, but no one but you will ever see the ugly
+HTML code or the CSS. Your readers will see this:
+</p>
+<p class="medtext" lang="is">
+<span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
+    kindir meiri oc mi<span class="xscap">n</span>i maugo<br/>
+  heimdalar uilðo at ec ualfꜹþ<span class="norrotunda">r</span> uel
+    fyr telia forn<br/>
+  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  nío iviþi[vr] miot uið mę́ran fyr mold neðan.
+</p>
+<p>
+and if any of them should happen to hit Ctrl-F and perform a
+quick-and-dirty search for “kindir” or “forn”
+or “mini” or “fodda” or “meran,” they’ll find what they’re looking for.
+</p>
+<p>
+This document is not only a demonstration, but also a how-to for
+producing a searchable online document. For detailed instructions,
+view the source for this page. The CSS is thoroughly commented so you
+can tell exactly what each bit does.
+</p>
+  <p>
+    Go to the JuniusX <a href="https://psb1558.github.io/Junicode-New/">specimen page</a>.
+  </p>
+</body>
+</html>

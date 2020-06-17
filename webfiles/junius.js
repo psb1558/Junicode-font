@@ -202,62 +202,63 @@ bari an is briostun."
 		switch ( $("#faces option:selected").attr("value") ) {
 			case "Light":
 				wght = "200";
-				wdth = "100%";
+				wdth = "100"";
 				break;
 			case "Medium":
 				wght = "500";
-				wdth = "100%";
+				wdth = "100";
 				break;
 			case "Semibold":
 				wght = "600";
-				wdth = "100%";
+				wdth = "100";
 				break;
 			case "Bold":
 				wght = "700";
-				wdth = "100%";
+				wdth = "100";
 				break;
 			case "SemicompressedLight":
 				wght = "200";
-				wdth = "80%";
+				wdth = "80";
 				break;
 			case "Semicompressed":
 				wght = "400";
-				wdth = "80%";
+				wdth = "80";
 				break;
 			case "SemicompressedMedium":
 				wght = "500";
-				wdth = "80%";
+				wdth = "80";
 				break;
 			case "SemicompressedSemibold":
 				wght = "600";
-				wdth = "80%";
+				wdth = "80";
 				break;
 			case "SemicompressedBold":
 				wght = "700";
-				wdth = "80%";
+				wdth = "80";
 				break;
 			case "CompressedLight":
 				wght = "200";
-				wdth = "60%";
+				wdth = "60";
 				break;
 			case "Compressed":
 				wght = "400";
-				wdth = "60%";
+				wdth = "60";
 				break;
 			case "CompressedMedium":
 				wght = "500";
-				wdth = "60%";
+				wdth = "60";
 				break;
 			case "CompressedSemibold":
 				wght = "600";
-				wdth = "60%";
+				wdth = "60";
 				break;
 			case "CompressedBold":
 				wght = "700";
-				wdth = "60%";
+				wdth = "60";
 		}
 
-		$(".textbox").css({"font-weight": wght, "font-stretch": wdth});
+		$(".textbox").css({"font-variation-settings: 'wght' wght, 'wdth' wdth"});
+		// $(".textbox").css({"font-weight": wght, "font-stretch": wdth});
 
 	});
 

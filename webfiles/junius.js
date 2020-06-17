@@ -115,7 +115,7 @@ bari an is briostun."
 	// display the default (modern English) text.
 
 	var fstring = "\"hist\" on";
-	$(".textbox").css("font-feature-settings", fstring).text(modtext);
+	$("#textbox").css("font-feature-settings", fstring).text(modtext);
 	$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
 	$( "#hist" ).prop("checked", true);
 
@@ -185,7 +185,7 @@ bari an is briostun."
 
 		}
 
-		$(".textbox").attr("lang",l)
+		$("#textbox").attr("lang",l)
 			.css({"white-space": whitespace})
 			.text(t);
 
@@ -198,66 +198,54 @@ bari an is briostun."
 
 		var wght = "400";
 		var wdth = "100%";
+		var newClass = "tbc-regular";
 
 		switch ( $("#faces option:selected").attr("value") ) {
 			case "Light":
-				wght = "200";
-				wdth = "100";
+				newClass = "tbc-light";
 				break;
 			case "Medium":
-				wght = "500";
-				wdth = "100";
+				newClass = "tbc-medium";
 				break;
 			case "Semibold":
-				wght = "600";
-				wdth = "100";
+				newClass = "tbc-semibold";
 				break;
 			case "Bold":
-				wght = "700";
-				wdth = "100";
+				newClass = "tbc-bold";
 				break;
 			case "SemicompressedLight":
-				wght = "200";
-				wdth = "80";
+				newClass = "tbc-light-semicompressed";
 				break;
 			case "Semicompressed":
-				wght = "400";
-				wdth = "80";
+				newClass = "tbc-regular-semicompressed";
 				break;
 			case "SemicompressedMedium":
-				wght = "500";
-				wdth = "80";
+				newClass = "tbc-medium-semicompressed";
 				break;
 			case "SemicompressedSemibold":
-				wght = "600";
-				wdth = "80";
+				newClass = "tbc-semibold-semicompressed";
 				break;
 			case "SemicompressedBold":
-				wght = "700";
-				wdth = "80";
+				newClass = "tbc-bold-semicompressed";
 				break;
 			case "CompressedLight":
-				wght = "200";
-				wdth = "60";
+				newClass = "tbc-light-compressed";
 				break;
 			case "Compressed":
-				wght = "400";
-				wdth = "60";
+				newClass = "tbc-regular-compressed";
 				break;
 			case "CompressedMedium":
-				wght = "500";
-				wdth = "60";
+				newClass = "tbc-medium-compressed";
 				break;
 			case "CompressedSemibold":
-				wght = "600";
-				wdth = "60";
+				newClass = "tbc-semibold-compressed";
 				break;
 			case "CompressedBold":
-				wght = "700";
-				wdth = "60";
+				newClass = "tbc-bold-compressed";
 		}
 
-		$(".textbox").css("font-variation-settings", "'wght' wght, 'wdth' wdth");
+    $("#textbox").removeClass().addClass(newClass);
+		// $(".textbox").css("font-variation-settings", "'wght' wght, 'wdth' wdth");
 		// $(".textbox").css({"font-weight": wght, "font-stretch": wdth});
 
 	});
@@ -306,7 +294,7 @@ bari an is briostun."
 		if (fstring.length == 0)
 			fstring = "normal";
 
-		$(".textbox").css("font-feature-settings", fstring);
+		$("#textbox").css("font-feature-settings", fstring);
 
 	});
 });

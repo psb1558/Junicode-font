@@ -31,7 +31,7 @@ body {
     padding-bottom: 10px;
 }
 
-.textbox {
+#textbox {
     width: 48%;
     height: 500px;
     overflow-x: hidden;
@@ -40,8 +40,6 @@ body {
     border: 1px solid black;
     font-family: JuniusVF;
     font-variation-settings: "wght" 400, "wdth" 100;
-/*    font-weight: 400;
-    font-stretch: 100%; */
     font-size: 1.5em;
     padding: 10px;
     margin-bottom: 20px;
@@ -67,19 +65,64 @@ body {
     font-feature-settings: "smcp" on;
 }
 
-.light {
+.tbc-light {
     font-variation-settings: "wght" 200;
-/*    font-weight: 200; */
 }
 
-.medium {
+.tbc-regular {
+  font-variation-settings: "wght" 400;
+}
+
+.tbc-medium {
     font-variation-settings: "wght" 500;
-/*    font-weight: 500; */
 }
 
-.semibold {
+.tbc-semibold {
     font-variation-settings: "wght" 600;
-/*    font-weight: 600; */
+}
+
+.tbc-bold {
+    font-variation-settings: "wght" 700;
+}
+
+.tbc-light-compressed {
+    font-variation-settings: "wght" 200, "wdth" 60;
+}
+
+.tbc-regular-compressed {
+  font-variation-settings: "wght" 400, "wdth" 60;
+}
+
+.tbc-medium-compressed {
+    font-variation-settings: "wght" 500, "wdth" 60;
+}
+
+.tbc-semibold-compressed {
+    font-variation-settings: "wght" 600, "wdth" 60;
+}
+
+.tbc-bold-compressed {
+    font-variation-settings: "wght" 700, "wdth" 60;
+}
+
+.tbc-light- semicompressed {
+    font-variation-settings: "wght" 200, "wdth" 80;
+}
+
+.tbc-regular-semicompressed {
+  font-variation-settings: "wght" 400, "wdth" 80;
+}
+
+.tbc-medium-semicompressed {
+    font-variation-settings: "wght" 500, "wdth" 80;
+}
+
+.tbc-semibold-semicompressed {
+    font-variation-settings: "wght" 600, "wdth" 80;
+}
+
+.tbc-bold-semicompressed {
+    font-variation-settings: "wght" 700, "wdth" 80;
 }
 
 h1 {

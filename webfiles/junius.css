@@ -1,120 +1,8 @@
 @font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-Regular.woff2');
-  font-weight: 400;
-  font-stretch: 100%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-Condensed.woff2');
-  font-weight: 400;
-  font-stretch: 60%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-SemiCondensed.woff2');
-  font-weight: 400;
-  font-stretch: 80%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-Light.woff2');
-  font-weight: 200;
-  font-stretch: 100%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-CondensedLight.woff2');
-  font-weight: 200;
-  font-stretch: 60%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-SemiCondensedLight.woff2');
-  font-weight: 200;
-  font-stretch: 80%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-Medium.woff2');
-  font-weight: 500;
-  font-stretch: 100%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-CondensedMedium.woff2');
-  font-weight: 500;
-  font-stretch: 60%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-SemiCondensedMedium.woff2');
-  font-weight: 500;
-  font-stretch: 80%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-Semibold.woff2');
-  font-weight: 600;
-  font-stretch: 100%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-CondensedSemibold.woff2');
-  font-weight: 600;
-  font-stretch: 60%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-SemiCondensedSemibold.woff2');
-  font-weight: 600;
-  font-stretch: 80%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-Bold.woff2');
-  font-weight: 700;
-  font-stretch: 100%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-CondensedBold.woff2');
-  font-weight: 700;
-  font-stretch: 60%;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: JuniusX;
-  src: url('./JuniusX-SemiCondensedBold.woff2');
-  font-weight: 700;
-  font-stretch: 80%;
+  font-family: JuniusVF;
+  src: url('./JuniusVF.woff2');
+  font-weight: 300 700;
+  font-stretch: 60% 100%;
   font-style: normal;
 }
 
@@ -132,9 +20,10 @@ body {
     width: 48%;
     float: left;
     border: 1px;
-    font-family: JuniusX;
-    font-weight: 400;
-    font-stretch: 100%;
+    font-family: JuniusVF;
+    font-variation-settings: "wght" 400, "wdth" 100;
+#    font-weight: 400;
+#    font-stretch: 100%;
     padding: 10px;
 }
 
@@ -149,9 +38,10 @@ body {
     overflow-y: auto;
     float: right;
     border: 1px solid black;
-    font-family: JuniusX;
-    font-weight: 400;
-    font-stretch: 100%;
+    font-family: JuniusVF;
+    font-variation-settings: "wght" 400, "wdth" 100;
+#    font-weight: 400;
+#    font-stretch: 100%;
     font-size: 1.5em;
     padding: 10px;
     margin-bottom: 20px;
@@ -163,9 +53,10 @@ body {
     background-color: lightgray;
     padding: 5px 8px 5px 5px;
     margin: 5px;
-    font-family: JuniusX;
-    font-weight: 400;
-    font-stretch: 100%;
+    font-family: JuniusVF;
+    font-variation-settings: "wght" 400, "wdth" 100;
+#    font-weight: 400;
+#    font-stretch: 100%;
 }
 
 .hid {
@@ -177,28 +68,33 @@ body {
 }
 
 .light {
-    font-weight: 200;
+    font-variation-settings: "wght" 200;
+#    font-weight: 200;
 }
 
 .medium {
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
+#    font-weight: 500;
 }
 
 .semibold {
-    font-weight: 600;
+    font-variation-settings: "wght" 600;
+#    font-weight: 600;
 }
 
 h1 {
-    font-family: JuniusX;
-    font-weight: 600;
-    font-stretch: 100%;
+    font-family: JuniusVF;
+    font-variation-settings: "wght" 600, "wdth" 100;
+#    font-weight: 600;
+#    font-stretch: 100%;
     font-size: 3em;
 }
 
 p {
-    font-family: JuniusX;
-    font-weight: 400;
-    font-stretch: 100%;
+    font-family: JuniusVF;
+    font-variation-settings: "wght" 400, "wdth" 100;
+#    font-weight: 400;
+#    font-stretch: 100%;
     font-size: 1.5em;
 }
 

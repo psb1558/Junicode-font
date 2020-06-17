@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 	var modtext = "When the right vertuous E.W. and I were at the Emperours Court togither, \
 wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation \
 had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did \
@@ -93,7 +93,7 @@ haldunge of þe alde ten heastes. Schrift ⁊ penitence. þeos ⁊ þulliche oþ
 þe beoð summe of þe alde lahe summe of þe neoƿe⹎ ne beoð naƿt monnes fundles ne \
 riƿle ꝥ mon stalde⹎ ah beoð Godes heastes. ant for þi euch mon mot ham nede \
 	halden.";
-	
+
 	var oldsaxontext = "Thuo uuard that heƀancuningas bodon   harm an is muode,\n\
 that hie is giuuerkes so   uundran scolda\n\
 endi that ni uuelda gihuggean,   that ina mahti helag god\n\
@@ -118,18 +118,18 @@ bari an is briostun."
 	$(".textbox").css("font-feature-settings", fstring).text(modtext);
 	$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
 	$( "#hist" ).prop("checked", true);
-	
-	function selectElement(id, valueToSelect) {    
+
+	function selectElement(id, valueToSelect) {
     		let element = document.getElementById(id);
     		element.value = valueToSelect;
 	}
-	
+
 	selectElement("languages","ModEnglish");
 	selectElement("faces","Regular");
-	
+
 	// The "languages" dropdown menu selects a text and also
 	// sets the "lang" attribute for the text box.
-	
+
 	$("#languages").change(function() {
 
 		var l = "en";
@@ -150,8 +150,8 @@ bari an is briostun."
 			case "MiddleEnglish":
 				t = middleenglishtext;
 				// r rotunda with rules; always long s; crossed Tironian nota
-				$( "input[type='checkbox']" ).not("#ss08, #ss11, #cv022").prop("checked", false);
-				$("#ss08, #ss11, #cv022").prop("checked",true).change();
+				$( "input[type='checkbox']" ).not("#ss08, #ss11, #cv402").prop("checked", false);
+				$("#ss08, #ss11, #cv402").prop("checked",true).change();
 				break;
 			case "Latin":
 				l = "la"
@@ -301,10 +301,10 @@ bari an is briostun."
 				$(".hid").css("display", "none");
 			}
 		});
-		
+
 		if (fstring.length == 0)
 			fstring = "normal";
-		
+
 		$(".textbox").css("font-feature-settings", fstring);
 
 	});

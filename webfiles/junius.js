@@ -257,7 +257,7 @@ bari an is briostun."
 				wdth = "60";
 		}
 
-		$(".textbox").css("font-variation-settings", "'wght' wght, 'wdth' wdth"});
+		$(".textbox").css("font-variation-settings", "'wght' wght, 'wdth' wdth");
 		// $(".textbox").css({"font-weight": wght, "font-stretch": wdth});
 
 	});

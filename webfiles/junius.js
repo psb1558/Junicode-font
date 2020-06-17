@@ -202,7 +202,7 @@ bari an is briostun."
 		switch ( $("#faces option:selected").attr("value") ) {
 			case "Light":
 				wght = "200";
-				wdth = "100"";
+				wdth = "100";
 				break;
 			case "Medium":
 				wght = "500";

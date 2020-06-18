@@ -245,8 +245,6 @@ bari an is briostun."
 		}
 
     $("#textbox").removeClass().addClass(newClass);
-		// $(".textbox").css("font-variation-settings", "'wght' wght, 'wdth' wdth");
-		// $(".textbox").css({"font-weight": wght, "font-stretch": wdth});
 
 	});
 
@@ -273,7 +271,6 @@ bari an is briostun."
 		$("input").each(function() {
 			var tag = $(this).attr("id");
 			if ($( this ).is(":checked")) {
-				// var tag = $(this).attr("id");
 				if ( tag === "morefeat" ) {
 					$(".hid").css("display", "inline");
 				}

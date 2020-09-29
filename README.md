@@ -6,6 +6,7 @@ added to Unicode since MUFI 4.0. The font:
 - has the same character set in all faces;
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and three widths (Regular, SemiCondensed, Condensed);
+- includes a variable font version;
 - has improved outlines,
 - an expanded collection of small caps (covering all case-paired characters),
 - a more comprehensive set of anchors for mark positioning,

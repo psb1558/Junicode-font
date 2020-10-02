@@ -50,7 +50,7 @@
     OpenType features
   */
   --jvf-ss08: "ss08" off;
-  --jvf-ss09: "ss09" off;
+  --jvf-pcap: "pcap" off;
   --jvf-ss11: "ss11" off;
   --jvf-cv05: "cv05" off;
   --jvf-cv09: "cv09" off;
@@ -82,7 +82,7 @@ body {
 * {
     font-variation-settings: var(--jvf-wght), var(--jvf-wdth);
     font-feature-settings:   var(--jvf-ss08),
-                             var(--jvf-ss09),
+                             var(--jvf-pcap),
                              var(--jvf-ss11),
                              var(--jvf-cv05),
                              var(--jvf-cv09),
@@ -141,8 +141,8 @@ pre {
   --jvf-ss08: "ss08" on;
 }
 
-.xscap {
-  --jvf-ss09: "ss09" on;
+.pcap {
+  --jvf-pcap: "pcap" on;
 }
 
 .norrotunda {
@@ -308,8 +308,8 @@ When we apply that to our fragment of <i>Vǫluspá</i>, here’s what we get:
 <p>
 One line of CSS, and already we’re almost home! But there are several
 special cases to attend to. There’s the dotless <b>i</b> in <b>Hlioðs</b>, the small
-capital <b><span class="xscap">n</span></b> in <b>mi<span
-  class="xscap">n</span>i</b>, and the <b>r rotunda</b> that should be a regular
+capital <b><span class="pcap">n</span></b> in <b>mi<span
+  class="pcap">n</span>i</b>, and the <b>r rotunda</b> that should be a regular
 <b>r</b> at the end of <b>ualfꜹþr</b>. For those, we devise CSS classes that turn
 OpenType features on or off, and we apply these classes to individual
 words or letters:
@@ -317,11 +317,11 @@ words or letters:
 <ul>
   <li>For dotless <b>i</b>, the style “dotlessi” selects the second variant
   of <b>i</b> in Character Variant 13 (cv13 2).</li>
-  <li>For <b><span class="xscap">n</span></b>,
-  we need the “xscap” style, which turns on
-  the “x-height small caps”
-  feature (ss09). (x-height small caps are different from regular small
-  caps in that they’re sized to be mixed with regular lowercase
+  <li>For <b><span class="pcap">n</span></b>,
+  we need the “pcap” style, which turns on
+  the “petite capitals”
+  feature (pcap). (Petite capitals are different from regular small
+  caps in that they’re sized to be mixed with lowercase
   letters.)</li>
   <li>For the <b>r</b> that shouldn’t be rotunda, we use the “norrotunda”
   style, which temporarily turns off the “r rotunda” feature (ss11).</li>
@@ -331,14 +331,14 @@ As an example of what the HTML will look like, here’s the first line
 of our text:
 </p>
 <pre><code>&lt;span class="initcap"&gt;H&lt;/span&gt;l&lt;span class="dotlessi"&gt;i&lt;/span&gt;oðs bið
-    ec allar kindir meiri oc mi&lt;span class="xscap"&gt;n&lt;/span&gt;i maugo</code></pre>
+    ec allar kindir meiri oc mi&lt;span class="pcap"&gt;n&lt;/span&gt;i maugo</code></pre>
 <p>
 Of course it looks horrible, but no one but you will ever see the ugly
 HTML code or the CSS. Your readers will see this:
 </p>
 <p class="medtext" lang="is">
 <span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
-    kindir meiri oc mi<span class="xscap">n</span>i maugo<br/>
+    kindir meiri oc mi<span class="pcap">n</span>i maugo<br/>
   heimdalar uilðo at ec ualfꜹþ<span class="norrotunda">r</span> uel
     fyr telia forn<br/>
   spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>

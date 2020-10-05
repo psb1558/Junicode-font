@@ -39,10 +39,12 @@ format2RomanAxes = [
 
 ttfont = ttLib.TTFont(inRomanFont)
 builder.buildStatTable(ttfont,format2RomanAxes)
-ttfont['name'].setName("ElstobRoman", 25, 1, 0, 0)
-ttfont['name'].setName("ElstobRoman", 25, 3, 1, 0x409)
+# ttfont['name'].setName("JuniusVFRoman", 25, 1, 0, 0)
+ttfont['name'].setName("JuniusVFRoman", 25, 3, 1, 0x409)
 for inst in ttfont['fvar'].instances:
     subfamilyName = ttfont['name'].getName(
-        inst.subfamilyNameID,1,0,0).toUnicode().replace(" ","")
-    inst.postscriptNameID = ttfont['name'].addName("ElstobRoman" + "-" + subfamilyName)
+        inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
+    inst.postscriptNameID = ttfont['name'].addName("JuniusVFRoman" + "-" + subfamilyName,
+                                                   platforms=((3,1,0x409),))
+ttfont['name'].removeNames(platformID=1)
 ttfont.save(outRomanFont)

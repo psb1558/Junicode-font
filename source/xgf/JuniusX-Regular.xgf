@@ -5,6 +5,8 @@
 <xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
 	  xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <!-- Next: uni01E4 LATIN CAPITAL LETTER G WITH STROKE -->
+
   <inputfont>JuniusVF.ttf</inputfont>
   <outputfont>JuniusVF-hinted.ttf</outputfont>
 
@@ -66,6 +68,7 @@
   <alias nm="lcbu" target="lc-baseline-undershoot"/>
 
   <prep>
+    <!-- assuming we follow ttfautohint's prep -->
     <enable-instructions/>
     <if test="pixels-per-em &gt; 300">
       <disable-instructions/>
@@ -105,6 +108,21 @@
 	<mv r="base" p="pt-a" di="cup-cv"/>
 	<command nm="RTG"/>
       </else>
+    </if>
+  </fn>
+
+  <fn nm="fix-near-curve" stack-safe="yes">
+    <pm nm="base"/>
+    <pm nm="pt-a"/>
+    <pm nm="pt-b" val="-1"/>
+    <pm nm="ppem" val="250"/>
+    <if test="pixels-per-em &lt; ppem">
+      <if test="pt-b != -1">
+	<al r="base" p="pt-a pt-b"/>
+	<else>
+	  <al r="base" p="pt-a"/>
+	</else>
+      </if>
     </if>
   </fn>
 
@@ -267,6 +285,17 @@
 	<command nm="SHP" modifier="0"/>
       </else>
     </compile-if>
+  </mo>
+
+  <mo nm="cap-insular-serif">
+    <pm nm="top"/>
+    <pm nm="serif-a"/>
+    <pm nm="serif-b"/>
+    <mv di="cpho" p="top">
+      <mv min-distance="no" p="serif-a">
+	<mv di="cap-serif" p="serif-b"/>
+      </mv>
+    </mv>
   </mo>
 
   <gl pnm="A">
@@ -844,6 +873,88 @@
     </callm>
   </gl>
 
+  <gl pnm="uni018E"> <!-- flipped E -->
+    <callm nm="cap-serif">
+      <pmset>
+	base: 67,
+	pt-a: 70,
+	pt-a-sh: 64,
+	pt-b: 74,
+	pt-b-sh: 53,
+	base-cv: cap-height,
+	cup-cv: cap-serif-overshoot,
+	ppem: 250
+      </pmset>
+      <pmset>
+	base: 3,
+	pt-a: 0,
+	pt-a-sh: 6,
+	pt-b: 79,
+	pt-b-sh: 17
+      </pmset>
+    </callm>
+    <callm nm="mid-stem-serif">
+      ref1: 67, ref2: 3, pt1: 24, pt2: 46, sh1: 28, sh2: 42
+    </callm>
+  </gl>
+
+  <gl pnm="uni01A9"> <!-- Sigma -->
+    <mv di="baseline" p="62">
+      <mv p="48"/>
+    </mv>
+    <mv di="cap-height" p="18">
+      <mv p="33"/>
+    </mv>
+    <callf nm="fix-near-curve">
+      base: 62, pt-a: 0, pt-b: 59
+    </callf>
+    <callf nm="fix-near-curve">
+      base: 18, pt-a: 15, pt-b: 21
+    </callf>
+    <ip r="62 18" p="7 41"/>
+  </gl>
+
+  <gl pnm="uni01B8"> <!-- Reversed Ezh -->
+    <mv di="cap-height" p="23">
+      <mv p="34"/>
+    </mv>
+    <mv di="cpbu" p="0">
+      <mv p="55"/>
+    </mv>
+    <callf nm="fix-near-curve">
+      base: 23, pt-a: 17
+    </callf>
+    <ip r="23 0" p="48"/>
+    <mv p="48">
+      <sh p="45"/>
+      <mv di="cprs" p="7"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA76A">
+    <mv di="cpho" p="32">
+      <mv p="22"/>
+    </mv>
+    <mv p="0">
+      <sh p="4"/>
+    </mv>
+    <ip r="32 0" p="12 40"/>
+  </gl>
+
+  <gl pnm="uni01B7"> <!-- Ezh -->
+    <mv di="cap-height" p="43">
+      <mv p="32"/>
+    </mv>
+    <mv di="cpbu" p="0">
+      <mv di="cprs" p="11"/>
+    </mv>
+    <ip r="0 43" p="18"/>
+    <mv p="18">
+      <sh p="21"/>
+      <mv di="cprs" p="59"/>
+    </mv>
+  </gl>
+
   <gl pnm="F">
     <callm nm="cap-serif">
       <pmset>
@@ -851,7 +962,7 @@
 	pt-a: 0,
 	pt-a-sh: 77,
 	pt-b: 4,
-	pt-b-sh: 73
+	pt-b-sh: 73,
       </pmset>
       <pmset>
 	base: 18,
@@ -866,6 +977,40 @@
     </callm>
     <callm nm="mid-stem-serif">
       ref1: 80, ref2: 18, pt1: 67, pt2: 43, sh1: 61, sh2: 49
+    </callm>
+  </gl>
+
+  <gl pnm="uni0191"> <!-- F with hook -->
+    <callm nm="cap-serif">
+      base: 26,
+      pt-a: 23,
+      pt-a-sh: 29,
+      pt-b: 19,
+      pt-b-sh: 42,
+      base-cv: cap-height,
+      cup-cv: cap-serif-overshoot,
+      ppem: 250
+    </callm>
+    <callm nm="hook">
+      pt1: 0, pt2: 9, pt3: 6
+    </callm>
+    <callm nm="mid-stem-serif">
+      ref1: 26, ref2: 0, pt1: 71, pt2: 49, sh1: 67, sh2: 53
+    </callm>
+  </gl>
+
+  <gl pnm="uniA77B"> <!-- insular F -->
+    <callm nm="cap-insular-serif">
+      top: 21, serif-a: 16, serif-b: 12
+    </callm>
+    <mv r="21" min-distance="no" p="34">
+      <mv p="46"/>
+    </mv>
+    <mv p="0">
+      <sh p="5"/>
+    </mv>
+    <callm nm="mid-stem">
+      ref1: 21, ref2: 0, pt1: 61, pt2: 55
     </callm>
   </gl>
 
@@ -887,6 +1032,45 @@
       base-cv: G-serif,
       cup-cv: cap-serif-overshoot
     </callm>
+  </gl>
+
+  <gl pnm="uni0193"> <!-- G with hook -->
+    <callm nm="cap-round-stem">
+      <pmset>
+	pt-a: 0, pt-b: 58, stem-cv: cprs
+      </pmset>
+      <pmset>
+	pt-a: 10, pt-b: 48, cv: cpho, stem-cv: cprs
+      </pmset>
+    </callm>
+    <callm nm="cap-serif">
+      base: 72,
+      pt-a: 70,
+      pt-a-sh: 74,
+      pt-b: 66,
+      pt-b-sh: 78,
+      base-cv: G-serif,
+      cup-cv: cap-serif-overshoot
+    </callm>
+    <callm nm="hook">
+      pt1: 21, pt2: 34, pt3: 28
+    </callm>
+  </gl>
+
+  <gl pnm="uniA77D"> <!-- insular G -->
+    <mv di="cap-height" p="45">
+      <sh p="34"/>
+      <mv p="54">
+	<sh p="24"/>
+      </mv>
+    </mv>
+    <mv p="0">
+      <mv di="cprs" p="73"/>
+    </mv>
+    <ip r="45 0" p="82"/>
+    <mv p="82">
+      <mv di="cprs" p="10"/>
+    </mv>
   </gl>
 
   <gl pnm="H">
@@ -1492,6 +1676,35 @@
     <mv di="baseline" p="6">
       <mv p="52"/>
     </mv>
+  </gl>
+
+  <gl pnm="a">
+    <mv di="xho" p="27">
+      <mv p="12"/>
+    </mv>
+    <mv di="lcbu" p="0">
+      <sh p="44"/>
+      <mv p="53"/>
+    </mv>
+    <mv r="44" p="36" col="b"/>
+    <ip r="0 27" p="59 7"/>
+  </gl>
+
+  <gl pnm="uniA733">
+    <mv di="xho" p="27">
+      <sh p="33"/>
+      <mv p="12">
+	<sh p="72"/>
+      </mv>
+    </mv>
+    <mv di="lcbu" p="0">
+      <sh p="58 50"/>
+      <mv p="78">
+	<sh p="93"/>
+      </mv>
+    </mv>
+    <mv r="50" p="42"/>
+    <ip r="27 0" p=" 84 7 99 67"/>
   </gl>
 
   <gl pnm="f">

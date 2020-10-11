@@ -114,10 +114,10 @@ bari an is briostun."
 	// Clear the menus and boxes (in case the page is being reloaded) and
 	// display the default (modern English) text.
 
-	var fstring = "\"hist\" on";
+	var fstring = "\"ss08\" on";
 	$("#textbox").css("font-feature-settings", fstring).text(modtext);
-	$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
-	$( "#hist" ).prop("checked", true);
+	$( "input[type='checkbox']" ).not("#ss08").prop("checked", false);
+	$( "#ss08" ).prop("checked", true);
 
 	function selectElement(id, valueToSelect) {
     		let element = document.getElementById(id);
@@ -139,8 +139,8 @@ bari an is briostun."
 
 		switch ( $("#languages option:selected").attr("value") ) {
 			case "ModEnglish":
-				$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
-				$("#hist").prop("checked",true).change();
+				$( "input[type='checkbox']" ).not("#ss08").prop("checked", false);
+				$("#ss08").prop("checked",true).change();
 				break;
 			case "OldEnglish":
 				// lang code is ang, but we use en to trigger English thorn and eth.
@@ -150,8 +150,8 @@ bari an is briostun."
 			case "MiddleEnglish":
 				t = middleenglishtext;
 				// r rotunda with rules; always long s; crossed Tironian nota
-				$( "input[type='checkbox']" ).not("#ss08, #ss11, #cv402").prop("checked", false);
-				$("#ss08, #ss11, #cv402").prop("checked",true).change();
+				$( "input[type='checkbox']" ).not("#ss08, #ss16, #cv402").prop("checked", false);
+				$("#ss08, #ss16, #cv402").prop("checked",true).change();
 				break;
 			case "Latin":
 				l = "la"
@@ -180,8 +180,8 @@ bari an is briostun."
 				l = "de";
 				t = germantext;
 				// Long s is done manually for German. Use r rotunda with rules.
-				$( "input[type='checkbox']" ).not("#ss11").prop("checked", false);
-				$("#ss11").prop("checked",true).change();
+				$( "input[type='checkbox']" ).not("#ss16").prop("checked", false);
+				$("#ss16").prop("checked",true).change();
 
 		}
 

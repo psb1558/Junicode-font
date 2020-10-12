@@ -49,9 +49,9 @@
   /*
     OpenType features
   */
-  --jvf-ss08: "ss08" off;
+  --jvf-ss03: "ss03" off;
   --jvf-pcap: "pcap" off;
-  --jvf-ss11: "ss11" off;
+  --jvf-ss16: "ss16" off;
   --jvf-cv05: "cv05" off;
   --jvf-cv09: "cv09" off;
   --jvf-cv13: "cv13" off;
@@ -81,9 +81,9 @@ body {
 
 * {
     font-variation-settings: var(--jvf-wght), var(--jvf-wdth);
-    font-feature-settings:   var(--jvf-ss08),
+    font-feature-settings:   var(--jvf-ss03),
                              var(--jvf-pcap),
-                             var(--jvf-ss11),
+                             var(--jvf-ss16),
                              var(--jvf-cv05),
                              var(--jvf-cv09),
                              var(--jvf-cv13),
@@ -131,14 +131,14 @@ pre {
 
 .medtext {
   margin-left: 40px;
-  --jvf-ss08: "ss08" on;
-  --jvf-ss11: "ss11" on;
+  --jvf-ss03: "ss03" on;
+  --jvf-ss16: "ss16" on;
   --jvf-cv05: "cv05" 1;
   --jvf-cv09: "cv09" 1;
 }
 
 .longs {
-  --jvf-ss08: "ss08" on;
+  --jvf-ss03: "ss03" on;
 }
 
 .pcap {
@@ -146,7 +146,7 @@ pre {
 }
 
 .norrotunda {
-  --jvf-ss11: "ss11" off;
+  --jvf-ss16: "ss16" off;
 }
 
 .dotlessi {
@@ -276,14 +276,14 @@ precise) that do a lot of things.
 Here are the ones we’ll want to apply to the whole text:
 </p>
 <ul>
-  <li>All instances of <b>s</b> in this text are long <span class="longs">(s)</span>: the “Sticky long
-  s” feature (ss08) does that.</li>
+  <li>All instances of <b>s</b> in this text are long <span class="longs">(s)</span>: the “Long
+  s” feature (hist or ss03) does that.</li>
   <li>All instances of <b>d</b> are also round: we accomplish that with
   Character Variant 5 (cv05).</li>
   <li>All instances of <b>f</b> are insular (ꝼ): for that we need Character
   Variant 9 (cv09).</li>
   <li>Instances of <b>r</b> are round after rounded characters like <b>o</b> and <b>ꝺ</b>;
-  we get that effect with the “r rotunda” feature (ss11).</li>
+  we get that effect with the “Variable r rotunda” feature (ss16).</li>
 </ul>
 <p>
 The features whose four-letter tags begin with <b>ss</b> are Stylistic
@@ -292,7 +292,7 @@ contain a list of variants of a particular character; we select from
 this list with a numerical index (starting with 1).
 To turn on these OpenType features, then, we need the following CSS rule:
 </p>
-<pre><code>font-feature-settings: "ss08" on, "cv05" 1, "cv09" 1, "ss11" on;</code></pre>
+<pre><code>font-feature-settings: "ss03" on, "cv05" 1, "cv09" 1, "ss16" on;</code></pre>
 <p>
 When we apply that to our fragment of <i>Vǫluspá</i>, here’s what we get:
 </p>
@@ -324,7 +324,7 @@ words or letters:
   caps in that they’re sized to be mixed with lowercase
   letters.)</li>
   <li>For the <b>r</b> that shouldn’t be rotunda, we use the “norrotunda”
-  style, which temporarily turns off the “r rotunda” feature (ss11).</li>
+  style, which temporarily turns off the “Variable r rotunda” feature (ss16).</li>
 </ul>
 <p>
 As an example of what the HTML will look like, here’s the first line

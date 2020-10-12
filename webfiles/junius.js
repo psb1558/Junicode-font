@@ -114,7 +114,7 @@ bari an is briostun."
 	// Clear the menus and boxes (in case the page is being reloaded) and
 	// display the default (modern English) text.
 
-	var fstring = "\"ss08\" on";
+	var fstring = "\"ss08\" on, \"dlig\" on";
 	$("#textbox").css("font-feature-settings", fstring).text(modtext);
 	$( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
 	$( "#ss08, #dlig" ).prop("checked", true);

@@ -116,8 +116,8 @@ bari an is briostun."
 
 	var fstring = "\"ss08\" on";
 	$("#textbox").css("font-feature-settings", fstring).text(modtext);
-	$( "input[type='checkbox']" ).not("#ss08").prop("checked", false);
-	$( "#ss08" ).prop("checked", true);
+	$( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
+	$( "#ss08, #dlig" ).prop("checked", true);
 
 	function selectElement(id, valueToSelect) {
     		let element = document.getElementById(id);

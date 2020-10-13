@@ -150,8 +150,8 @@ bari an is briostun."
 			case "MiddleEnglish":
 				t = middleenglishtext;
 				// r rotunda with rules; always long s; crossed Tironian nota
-				$( "input[type='checkbox']" ).not("#ss08, #ss16, #cv402").prop("checked", false);
-				$("#ss08, #ss16, #cv402").prop("checked",true).change();
+				$( "input[type='checkbox']" ).not("#hist, #ss16, #cv402").prop("checked", false);
+				$("#hist, #ss16, #cv402").prop("checked",true).change();
 				break;
 			case "Latin":
 				l = "la"

@@ -1073,6 +1073,57 @@
     </mv>
   </gl>
 
+  <gl pnm="uni01E4"> <!-- G with stroke -->
+    <callm nm="cap-round-stem">
+      <pmset>
+	pt-a: 0, pt-b: 36, stem-cv: cprs
+      </pmset>
+      <pmset>
+	pt-a: 10, pt-b: 26, cv: cpho, stem-cv: cprs
+      </pmset>
+    </callm>
+    <callm nm="cap-serif">
+      base: 50,
+      pt-a: 48,
+      pt-a-sh: 52,
+      pt-b: 44,
+      pt-b-sh: 56,
+      cup-cv: cap-serif-overshoot
+    </callm>
+    <callm nm="mid-stem">
+      ref1: 50, ref2: 0, pt1: 73, pt2: 77
+    </callm>
+  </gl>
+
+  <gl pnm="uniA77E"> <!-- turned insular G -->
+    <callm nm="cap-round-stem">
+      pt-a: 38, pt-b: 81, cv: cpho, stem-cv: cprs
+    </callm>
+    <mv p="10">
+      <sh p="0"/>
+      <mv p="62">
+	<sh p="19"/>
+      </mv>
+    </mv>
+    <ip r="38 10" p="72"/>
+    <mv p="72">
+      <mv p="48"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni021C"> <!-- Yogh -->
+    <callm nm="cap-round-stem">
+      pt-a: 48, pt-b: 27, cv: cpho
+    </callm>
+    <mv p="0">
+      <mv p="4"/>
+    </mv>
+    <ip r="48 0" p="12 59"/>
+    <mv p="12">
+      <sh p="15"/>
+    </mv>
+  </gl>
+
   <gl pnm="H">
     <set nm="top-a" p="21 42 48"/>
     <set nm="top-b" p="25 38 52"/>

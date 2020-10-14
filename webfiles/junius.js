@@ -180,7 +180,9 @@ bari an is briostun."
 			case "Latin":
 				l = "la"
 				t = latintext;
-				$( "input[type='checkbox']" ).prop("checked", false).first().change();
+				// $( "input[type='checkbox']" ).prop("checked", false).first().change();
+				$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
+				$("#hist").prop("checked",true).change();
 				break;
 			case "Gothic":
 				// lang code for Gothic is got. Here it simply means "not English."

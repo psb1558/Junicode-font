@@ -58,21 +58,21 @@ faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var ful
 conscrıptas· aut auro radıantıb: \
 lıtterıs· ad posterıtatıs memorıam cōmendatas· Et ısta \
 attendentes mıror quare non erubescım{(US)} \
-mılıtum xpı uıctorıas sılentıo tégere &amp; n̄ \
+mılıtum xpı uıctorıas sılentıo tégere & n̄ \
 ad laudem ımperatorıs eo{(ru)} qualıt̄ \
-pugnauerınt contra hostes &amp; uıcerınt· sedulıs \
-saltım uılıbus tradere &amp; ad ıncıtandos \
+pugnauerınt contra hostes & uıcerınt· sedulıs \
+saltım uılıbus tradere & ad ıncıtandos \
 anımos bellato{(ru)} dılıgentıus explıcare· \
 Multa bona talıū narratıonū scrıpta conuertant; \
 Laus deı est cum ısta leguntur· \
 memorıa scō{(ru)} excolıtur⹎ aedıfıcacıo m̄tıb: \
-tradıtur. honor martırıbus exhıb&amp;ur· \
+tradıtur. honor martırıbus exhıb&ur· \
 Hınc ınfıdelıbus nascıtur meror. ıncredulıs \
-lıuor⹎ ındıscıplınatıs angustıa· &amp; scı̄s om̅ıb: \
+lıuor⹎ ındıscıplınatıs angustıa· & scı̄s om̅ıb: \
 cum xpō gaudentıb: solus dıabolus \
-ıngemıscıt. quı uıd&amp; pugnā suā eo usq: armıs \
+ıngemıscıt. quı uıd& pugnā suā eo usq: armıs \
 celestıbus debellatā· ut ex ıpsa pugna ılle \
-melıus uıctor exıster&amp; quı putat{(US)} ÷ uıct{(US)}; \
+melıus uıctor exıster& quı putat{(US)} ÷ uıct{(US)}; \
 Denıq: putabat se tunc hostıs scōs deı \
 occıdendo uıncere· ıllı autē melıus occısı \
 uıncebant· Int̄rogatı ılıco confıtebantur· \
@@ -81,8 +81,8 @@ antıquas dn̄ı uıctorıas celebratas· q{^oa}ndo \
 dıx̄ ınımıcus {(pr)}sequens comp̄hendā· \
 partıbor spolıa· replebo anımā meā· Int̄fıcıā \
 gladıo meo· domınabıt{^2} man{(US)} mea· Sed \
-extendıt dexterā suā &amp; deuorauıt eos  t̄ra· \
-&amp; popꝉm suum sanguınıs suı pr&amp;ıo lıƀerauıt;";
+extendıt dexterā suā & deuorauıt eos  t̄ra· \
+& popꝉm suum sanguınıs suı pr&ıo lıƀerauıt;";
 
     var oldenglishtext = "Her on ðisum geare forðferde \
       Ælfgiue Ymma Eadwardes cynges modor ⁊ Hardacnutes cynges. ⁊ on \

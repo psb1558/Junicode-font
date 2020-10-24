@@ -17,5 +17,5 @@ added to Unicode since MUFI 4.0. The font:
 For a specimen of the roman face and a demonstration of the font’s many OpenType features, visit
 [this page](https://psb1558.github.io/Junicode-New/).
 
-All this is very much in progress. As of 7 October 2020, the roman face is complete (though metrics, anchors, and some
-features still need work), and work on the italic is about 56% complete.
+All this is very much in progress. As of 24 October 2020, the roman face is complete (though metrics, anchors, and some
+features still need work), and work on the italic is about 63% complete.

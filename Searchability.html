@@ -50,6 +50,7 @@
     OpenType features
   */
   --jvf-ss03: "ss03" off;
+  --jvf-ss17: "ss17" off;
   --jvf-pcap: "pcap" off;
   --jvf-ss16: "ss16" off;
   --jvf-cv05: "cv05" off;
@@ -82,6 +83,7 @@ body {
 * {
     font-variation-settings: var(--jvf-wght), var(--jvf-wdth);
     font-feature-settings:   var(--jvf-ss03),
+                             var(--jvf-ss17),
                              var(--jvf-pcap),
                              var(--jvf-ss16),
                              var(--jvf-cv05),
@@ -135,6 +137,10 @@ pre {
   --jvf-ss16: "ss16" on;
   --jvf-cv05: "cv05" 1;
   --jvf-cv09: "cv09" 1;
+}
+
+.avlig {
+  --jvf-ss17: "ss17" on;
 }
 
 .longs {
@@ -243,28 +249,28 @@ possible into their plain-text equivalents. Here’s my attempt:
 <p class="mufitext" lang="is">
 <span class="initcap">H</span>lioðs bið ec allar
     kindir meiri oc mini maugo<br/>
-  heimdalar uilðo at ec ualfꜹþr uel
+  heimdalar uilðo at ec ualfavþr uel
     fyr telia forn<br/>
-  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
-  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  spioll fíra þav er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠aṿ⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
   nío iviþi[vr] miot uið mę́ran fyr mold neðan.
 </p>
 <p>
-If “plain text” is what you can type on a typical keyboard, we haven’t
-quite made it: we still have the exotic character <b>ꜹ</b>,
-several accented characters, and the Icelandic thorn and eth, not to
-mention the strange brackets in line 4 (U+2DE20 and U+2E21). The dot
-under the <b>ꜹ</b> between those brackets is a <b>combining
+If “plain text” is what you can type on a U.S. keyboard, we haven’t
+quite made it: we still have
+several accented characters and the Icelandic thorn and eth, not to
+mention the strange brackets in line 4 (U+2DE20 and U+2E21). There's
+nothing we can do about the brackets, but the Icelandic
+characters are familiar enough to medievalists that we needn’t worry
+about them. The dot under the <b>v</b> in what was an av ligature (we’ll)
+put it back together later) is a <b>combining
 diacritical mark</b>: you type it right after the base character, and
 your software takes care of positioning it correctly. The accented
 <b>ę́</b> was a character in the Private Use Area, but I
 have changed it to <b>ę</b> (U+0119, common in modern Polish) plus
 another combining mark, U+0301, the acute accent. That makes it
-standard Unicode, like the other accented characters. As browsers will
-ignore the marks when searching, the only characters that make this
-text hard to search are the brackets and <b>ꜹ</b>, and we can’t do
-anything about those. So this is our base text—the text that will be
-searched.
+standard Unicode, like the other accented characters. Browsers will
+ignore the marks when searching.
 </p>
 <p>
 The next step is to select what we need from among the OpenType
@@ -302,17 +308,18 @@ When we apply that to our fragment of <i>Vǫluspá</i>, here’s what we get:
 <p class="medtext" lang="is">
 <span class="initcap">H</span>lioðs bið ec allar
     kindir meiri oc mini maugo<br/>
-  heimdalar uilðo at ec ualfꜹþr uel
+  heimdalar uilðo at ec ualfavþr uel
     fyr telia forn<br/>
-  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
-  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  spioll fíra þav er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠aṿ⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
   nío iviþi[vr] miot uið mę́ran fyr mold neðan.
 </p>
 <p>
 One line of CSS, and already we’re almost home! But there are several
 special cases to attend to. There’s the dotless <b>i</b> in <b>Hlioðs</b>, the small
 capital <b><span class="pcap">n</span></b> in <b>mi<span
-  class="pcap">n</span>i</b>, and the <b>r rotunda</b> that should be a regular
+  class="pcap">n</span>i</b>, the av ligature that has to be reassembled into
+  ꜹ, and the <b>r rotunda</b> that should be a regular
 <b>r</b> at the end of <b>ualfꜹþr</b>. For those, we devise CSS classes that turn
 OpenType features on or off, and we apply these classes to individual
 words or letters:
@@ -326,6 +333,11 @@ words or letters:
   feature (pcap). (Petite capitals are different from regular small
   caps in that they’re sized to be mixed with lowercase
   letters.)</li>
+  <li>For ꜹ, a ligature with a phonetic value (like æ), distinct from other
+    ligatures, we use the “avlig” style, which turns on “Structural Ligatures”
+    (ss17). (Decomposing and recomposing this ligature makes it searchable as
+    "av.")
+  </li>
   <li>For the <b>r</b> that shouldn’t be rotunda, we use the “norrotunda”
   style, which temporarily turns off the “Variable r rotunda” feature (ss16).</li>
 </ul>
@@ -342,10 +354,10 @@ HTML code or the CSS. Your readers will see this:
 <p class="medtext" lang="is">
 <span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
     kindir meiri oc mi<span class="pcap">n</span>i maugo<br/>
-  heimdalar uilðo at ec ualfꜹþ<span class="norrotunda">r</span> uel
+  heimdalar uilðo at ec ualf<span class="ss17">av</span>þ<span class="norrotunda">r</span> uel
     fyr telia forn<br/>
-  spioll fíra þꜹ er fremst um man. Ec mán iǫtna<br/>
-  ar um borna þ⸠ꜹ̣⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  spioll fíra þ<span class="ss17">av</span> er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠<span class="ss17">aṿ</span>⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
   nío iviþi[vr] miot uið mę́ran fyr mold neðan.
 </p>
 <p>

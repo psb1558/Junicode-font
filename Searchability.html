@@ -281,7 +281,7 @@ features of JuniusX. OpenType is a standard for font construction that
 allows fonts to do all kinds of clever things. To cite one common
 example, when you type the letters “f‌ind” and the <b>f</b> and the <b>i</b> come out
 joined in a ligature (“find”), an OpenType feature did that. But
-JuniusX has a lot of OpenType features (seventy-six of them, to be
+JuniusX has a lot of OpenType features (eighty of them, to be
 precise) that do a lot of things.
 </p>
 <p>
@@ -295,7 +295,7 @@ Here are the ones we’ll want to apply to the whole text:
   <li>All instances of <b>f</b> are insular (ꝼ): for that we need Character
   Variant 9 (cv09).</li>
   <li>Instances of <b>r</b> are round after rounded characters like <b>o</b> and <b>ꝺ</b>;
-  we get that effect with the “Variable r rotunda” feature (ss16).</li>
+  we get that effect with the “Contextual r rotunda” feature (ss16).</li>
 </ul>
 <p>
 The features whose four-letter tags begin with <b>ss</b> are Stylistic
@@ -321,8 +321,8 @@ When we apply that to our fragment of <i>Vǫluspá</i>, here’s what we get:
 One line of CSS, and already we’re almost home! But there are several
 special cases to attend to. There’s the dotless <b>i</b> in <b>Hlioðs</b>, the small
 capital <b><span class="pcap">n</span></b> in <b>mi<span
-  class="pcap">n</span>i</b>, the av ligature that has to be reassembled into
-  ꜹ, and the <b>r rotunda</b> that should be a regular
+  class="pcap">n</span>i</b>, the <b class="avlig">av</b> ligature that has to be
+  reassembled, and the <b>r rotunda</b> that should be a regular
 <b>r</b> at the end of <b>ualfꜹþr</b>. For those, we devise CSS classes that turn
 OpenType features on or off, and we apply these classes to individual
 words or letters:
@@ -338,11 +338,10 @@ words or letters:
   letters.)</li>
   <li>For ꜹ, a ligature with a phonetic value (like æ), distinct from other
     ligatures, we use the “avlig” style, which turns on “Structural Ligatures”
-    (ss17). (Decomposing and recomposing this ligature makes it searchable as
-    "av.")
+    (ss17).
   </li>
   <li>For the <b>r</b> that shouldn’t be rotunda, we use the “norrotunda”
-  style, which temporarily turns off the “Variable r rotunda” feature (ss16).</li>
+  style, which temporarily turns off the “Contextual r rotunda” feature (ss16).</li>
 </ul>
 <p>
 As an example of what the HTML will look like, here’s the first line

@@ -259,18 +259,20 @@ possible into their plain-text equivalents. Here’s my attempt:
 If “plain text” is what you can type on a U.S. keyboard, we haven’t
 quite made it: we still have
 several accented characters and the Icelandic thorn and eth, not to
-mention the strange brackets in line 4 (U+2DE20 and U+2E21). There's
+mention the strange brackets in line 4 (U+2DE20 and U+2E21). There’s
 nothing we can do about the brackets, but the Icelandic
 characters are familiar enough to medievalists that we needn’t worry
-about them. The dot under the <b>v</b> in what was an av ligature (we took
-it apart to make it searchable as <b>av</b>, but we’ll
+about them. The dot under the <b>v</b> in what was an
+<b class="avlig">av</b> ligature (which we took
+apart to make it searchable as <b>av</b>, but we’ll
 put it back together later) is a <b>combining
 diacritical mark</b>: you type it right after the base character, and
 your software takes care of positioning it correctly. The accented
 <b>ę́</b> was a character in the Private Use Area, but I
 have changed it to <b>ę</b> (U+0119, common in modern Polish) plus
 another combining mark, U+0301, the acute accent. That makes it
-standard Unicode, like the other accented characters. Browsers will
+standard Unicode, like the other accented characters. The <b>ę</b>
+is searchable as <b>e</b>, and Browsers will
 ignore the marks when searching.
 </p>
 <p>

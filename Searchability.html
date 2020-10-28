@@ -166,8 +166,11 @@ pre {
   font-size: 150%;
 }
 
-.charcode:before { content: "{("; }
-.charcode:after { content: ")}"; }
+.restoration:before { content: "["; }
+.restoration:after { content: "]"; }
+
+.deletion:before { content: "⸠"; }
+.deletion:after { content: "⸡"; }
 
 </style>
 </head>
@@ -259,11 +262,11 @@ possible into their plain-text equivalents. Here’s my attempt:
 If “plain text” is what you can type on a U.S. keyboard, we haven’t
 quite made it: we still have
 several accented characters and the Icelandic thorn and eth, not to
-mention the strange brackets in line 4 (U+2DE20 and U+2E21). There’s
+mention the strange brackets in line 4 (U+2E20 and U+2E21). There’s
 nothing we can do about the brackets, but the Icelandic
 characters are familiar enough to medievalists that we needn’t worry
 about them. The dot under the <b>v</b> in what was an
-<b class="avlig">av</b> ligature (which we took
+<b class="avlig">av</b> digraph (which we took
 apart to make it searchable as <b>av</b>, but we’ll
 put it back together later) is a <b>combining
 diacritical mark</b>: you type it right after the base character, and
@@ -272,7 +275,7 @@ your software takes care of positioning it correctly. The accented
 have changed it to <b>ę</b> (U+0119, common in modern Polish) plus
 another combining mark, U+0301, the acute accent. That makes it
 standard Unicode, like the other accented characters. The <b>ę</b>
-is searchable as <b>e</b>, and Browsers will
+is searchable as <b>e</b>, and browsers will
 ignore the marks when searching.
 </p>
 <p>
@@ -321,7 +324,7 @@ When we apply that to our fragment of <i>Vǫluspá</i>, here’s what we get:
 One line of CSS, and already we’re almost home! But there are several
 special cases to attend to. There’s the dotless <b>i</b> in <b>Hlioðs</b>, the small
 capital <b><span class="pcap">n</span></b> in <b>mi<span
-  class="pcap">n</span>i</b>, the <b class="avlig">av</b> ligature that has to be
+  class="pcap">n</span>i</b>, the <b class="avlig">av</b> digraph that has to be
   reassembled, and the <b>r rotunda</b> that should be a regular
 <b>r</b> at the end of <b lang="is">ualfꜹþr</b>. For those, we devise CSS classes that turn
 OpenType features on or off, and we apply these classes to individual
@@ -365,6 +368,15 @@ HTML code or the CSS. Your readers will see this:
 and if any of them should happen to hit Ctrl-F and perform a
 quick-and-dirty search for “kindir” or “forn”
 or “mini” or “<span lang="is">ualfavþr</span>” or “meran,” they’ll find what they’re looking for.
+</p>
+<p class="medtext" lang="is">
+<span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
+    kindir meiri oc mi<span class="pcap">n</span>i maugo<br/>
+  heimdalar uilðo at ec ualf<span class="avlig">av</span>þ<span class="norrotunda">r</span> uel
+    fyr telia forn<br/>
+  spioll fíra þ<span class="avlig">av</span> er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ<span class="avlig deletion">aṿ</span>a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  nío iviþi<span class="restoration">vr</span> miot uið mę́ran fyr mold neðan.
 </p>
 <p>
 This document is not only a demonstration, but also a how-to for

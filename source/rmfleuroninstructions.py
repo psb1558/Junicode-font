@@ -23,7 +23,7 @@ if not outputfile:
     outputfile = inputfile
 
 thisFont = ttLib.TTFont(inputfile)
-
+print("Processing " + inputfile)
 altered = False
 
 for f in fleurons:

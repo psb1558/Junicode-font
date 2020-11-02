@@ -13,7 +13,8 @@
 
 /*
   font-family names this family and associates this declaration with
-    other possible declarations for JuniusVF.
+    other possible declarations for JuniusVF (the variable version of
+    JuniusX).
   src:url() points to the font file.
   font-weight in a declaration for a variable font defines the range
     of available weights.
@@ -75,9 +76,9 @@ body {
 /*
   An asterisk selects any element. Every time we hit an element, we'll
   call font-variation-settings and font-feature-settings to explicitly
-  set all the OpenType features we're using in this text. The fun part
-  of this is that the variables we use in calling this rule may have
-  been altered by a class attribute.
+  set all the OpenType features we're using in this text. This block is
+  called after the more specific ones, so the variables we use in this
+  rule may will have been set in a class definition.
 */
 
 * {
@@ -94,7 +95,7 @@ body {
 
 /*
   Define the elements we'll be using. Notice how we change the style
-  by setting the value of the variables in :root
+  by setting the value of the variables in :root.
 */
 
 h1 {
@@ -139,7 +140,7 @@ pre {
   --jvf-cv09: "cv09" 1;
 }
 
-.avlig {
+.dgrph {
   --jvf-ss17: "ss17" on;
 }
 
@@ -270,7 +271,7 @@ pre {
   with these later). The Icelandic
   characters are familiar enough to medievalists that we needn’t worry
   about them. The dot under the <b>v</b> in what was an
-  <b class="avlig">av</b> digraph (which we took
+  <b class="dgrph">av</b> digraph (which we took
   apart to make it searchable as <b>av</b>, but we’ll
   put it back together later) is a <b>combining
   diacritical mark</b>: you type it right after the base character, and
@@ -328,7 +329,7 @@ pre {
   One line of CSS, and already we’re almost home! But there are several
   special cases to attend to. There’s the dotless <b>i</b> in <b>Hlioðs</b>, the small
   capital <b><span class="pcap">n</span></b> in <b>mi<span
-  class="pcap">n</span>i</b>, the <b class="avlig">av</b> digraph that has to be
+  class="pcap">n</span>i</b>, the <b class="dgrph">av</b> digraph that has to be
   reassembled, and the <b>r rotunda</b> that should be a regular
   <b>r</b> at the end of <b lang="is">ualfꜹþr</b>. For those, we devise CSS classes that turn
   OpenType features on or off, and we apply these classes to individual
@@ -344,7 +345,7 @@ pre {
   caps in that they’re sized to be mixed with lowercase
   letters.)</li>
   <li>For ꜹ, a ligature with a phonetic value (like æ), distinct from other
-    ligatures, we use the “avlig” style, which turns on “Rare Digraphs” (ss17).
+    ligatures, we use the “dgrph” style, which turns on “Rare Digraphs” (ss17).
   </li>
   <li>For the <b>r</b> that shouldn’t be rotunda, we use the “norrotunda”
   style, which temporarily turns off the “Contextual r rotunda” feature (ss16).</li>
@@ -356,16 +357,17 @@ pre {
 <pre><code>&lt;span class="initcap"&gt;H&lt;/span&gt;l&lt;span class="dotlessi"&gt;i&lt;/span&gt;oðs bið
     ec allar kindir meiri oc mi&lt;span class="pcap"&gt;n&lt;/span&gt;i maugo</code></pre>
 <p>
-  Of course it looks horrible, but only you will ever see the ugly
-  HTML code or the CSS. Your readers will see this:
+  Of course it looks illegible and hard to write, but for most projects it will
+  be generated automatically from an underlying text; and of course your readers
+  will not see the ugly HTML code or the CSS, but rather this:
 </p>
 <p class="medtext" lang="is">
 <span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
     kindir meiri oc mi<span class="pcap">n</span>i maugo<br/>
-  heimdalar uilðo at ec ualf<span class="avlig">av</span>þ<span class="norrotunda">r</span> uel
+  heimdalar uilðo at ec ualf<span class="dgrph">av</span>þ<span class="norrotunda">r</span> uel
     fyr telia forn<br/>
-  spioll fíra þ<span class="avlig">av</span> er fremst um man. Ec mán iǫtna<br/>
-  ar um borna þ⸠<span class="avlig">aṿ</span>⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  spioll fíra þ<span class="dgrph">av</span> er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ⸠<span class="dgrph">aṿ</span>⸡a er fordom mic fǫdda hofdo. nio man ec heima<br/>
   nío iviþi[vr] miot uið mę́ran fyr mold neðan.
 </p>
 <p>
@@ -385,10 +387,10 @@ pre {
 <p class="medtext" lang="is">
   <span class="initcap">H</span>l<span class="dotlessi">i</span>oðs bið ec allar
     kindir meiri oc mi<span class="pcap">n</span>i maugo<br/>
-  heimdalar uilðo at ec ualf<span class="avlig">av</span>þ<span class="norrotunda">r</span> uel
+  heimdalar uilðo at ec ualf<span class="dgrph">av</span>þ<span class="norrotunda">r</span> uel
     fyr telia forn<br/>
-  spioll fíra þ<span class="avlig">av</span> er fremst um man. Ec mán iǫtna<br/>
-  ar um borna þ<span class="avlig deletion">aṿ</span>a er fordom mic fǫdda hofdo. nio man ec heima<br/>
+  spioll fíra þ<span class="dgrph">av</span> er fremst um man. Ec mán iǫtna<br/>
+  ar um borna þ<span class="dgrph deletion">aṿ</span>a er fordom mic fǫdda hofdo. nio man ec heima<br/>
   nío iviþi<span class="restoration">vr</span> miot uið mę́ran fyr mold neðan.
 </p>
 <p>

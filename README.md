@@ -10,7 +10,8 @@ added to Unicode since MUFI 4.0. The font:
 - has improved outlines,
 - an expanded collection of small caps (covering all case-paired characters),
 - a more comprehensive set of anchors for mark positioning,
-- and additional OpenType features—automatic runic transcription, access to fleurons, and more.
+- and many OpenType features—carefully chosen and organized so as to promote
+the display of accessible text.
 
 ![Sample Image](sample-image.jpg)
 

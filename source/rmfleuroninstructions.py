@@ -10,7 +10,9 @@ fleurons = ["uniE270", "uniE27D", "uniE670", "uniE67D", "uniE68A", "uniE736",
             "uniE8B0", "uniE8B1", "uniEF90", "uniEF91", "uniEF92", "uniEF93",
             "uniEF98", "uniEF99", "uniEF94", "uniEF95", "uniEF96", "uniEF97",
             "uniEF9A", "uniEF9B", "uniEF9C", "uniF018", "uniF019", "uniF014",
-            "uniEF9F", "uniF011", "uniF01D", "uniF01E", "uniF01B"]
+            "uniEF9F", "uniF011", "uniF01D", "uniF01E", "uniF01B", "uni2619",
+            "uni261A", "uni261B", "uni261C", "uni261D", "uni261E", "uni261F",
+            "uni2740", "uni2766", "uni2767", "uniF19F" ]
 
 argparser = argparse.ArgumentParser(prog='xgridfit',
                                     description='Remove instructions for fleurons in a font.')

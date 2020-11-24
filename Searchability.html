@@ -186,14 +186,16 @@ pre {
 <body lang="en">
 <h1>Searchable web pages with MUFI and JuniusX</h1>
 <p>
-  JuniusX fully implements the recommendations of the Medieval Unicode
-  Font Initiative (MUFI), which offers an encoding scheme for medieval
-  texts based on Unicode, the worldwide standard for text
+  JuniusX fully implements the recommendations of the
+  <a href="https://mufi.info/m.php?p=mufi">Medieval Unicode
+  Font Initiative</a> (MUFI), which offers an encoding scheme for medieval
+  texts based on <a href="https://home.unicode.org/">Unicode</a>,
+  the worldwide standard for text
   exchange. You probably know that a computer text is a string of
   numbers, each representing a character: using Unicode, you employ a
-  standard mapping of numbers to characters, ensuring that a text typed
-  by your friend in Thailand and sent to you as an email attachment will
-  look the same when it gets to you as it did when it left your friend’s
+  standard mapping of numbers to characters, ensuring that a text sent to you
+  by (say) your friend in Thailand will
+  look the same when it reaches you as it did when it left your friend’s
   computer. MUFI does a similar job for medieval characters. For
   example, if you need a Dutch libra sign, you won’t find it in Unicode;
   but MUFI has it at code point U+F1EA (), and it will be recognizable
@@ -227,7 +229,8 @@ pre {
   problem—but it’s a significant one. To illustrate, look at the last
   word in the second line:
   <b>ꝼoꝛn</b>. That’s an <b>insular f</b> in the first position and an
-  <b>r rotunda</b> in the third; but try searching
+  <b>r rotunda</b> in the third—different flavors of <b>f</b> and <b>r</b>.
+  Now try searching
   this text for the word “forn” using your browser’s search function
   (Ctrl-F or Cmd-F). What happened? Your search skipped right over
   <b>ꝼoꝛn</b> in the medieval text and landed on “forn” in this
@@ -249,12 +252,13 @@ pre {
   Turns out that it is both possible and easy to create such a page
   using JuniusX. We’ll take it in two steps. The first will be to create
   as plain an etext as we can get away with, and the second will be to
-  style this text using CSS (“Cascading Style Sheets,” the standard for
+  style this text using
+  <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
+  (“Cascading Style Sheets,” the standard for
   styling web pages) and the features of JuniusX.
 </p>
 <p>
-  For the text, we want to convert as many of those exotic characters as
-  possible into their plain-text equivalents. Here’s my attempt:
+  Here’s my attempt to convert the passage to plain text:
 </p>
 <p class="mufitext" lang="is">
   <span class="initcap">H</span>lioðs bið ec allar kindir meiri oc mini maugo<br/>
@@ -285,7 +289,9 @@ pre {
 </p>
 <p>
   The next step is to select what we need from among the OpenType
-  features of JuniusX. OpenType is a standard for font construction that
+  features of JuniusX.
+  <a href="https://docs.microsoft.com/en-us/typography/opentype/spec/">OpenType</a>
+  is a standard for font construction that
   allows fonts to do all kinds of clever things. To cite one common
   example, when you type the letters “f‌ind” and the <b>f</b> and the <b>i</b> come out
   joined in a ligature (“find”), an OpenType feature did that. But
@@ -296,14 +302,15 @@ pre {
   Here are the features we’ll want to apply to the whole text:
 </p>
 <ul>
-  <li>All instances of <b>s</b> in this text are long <span class="longs">(s)</span>: the “Long
-  s” feature (hist or ss03) does that.</li>
-  <li>All instances of <b>d</b> are also round: we accomplish that with
+  <li>All instances of <b>s</b> in this text are long
+  <span class="longs">(s)</span>: use the “Long
+  s” feature (hist or ss03) for that.</li>
+  <li>All instances of <b>d</b> are round: use
   Character Variant 5 (cv05).</li>
-  <li>All instances of <b>f</b> are insular (ꝼ): for that we need Character
+  <li>All instances of <b>f</b> are insular (ꝼ): use Character
   Variant 9 (cv09).</li>
   <li>Instances of <b>r</b> are round after rounded characters like <b>o</b> and <b>ꝺ</b>;
-  we get that effect with the “Contextual r rotunda” feature (ss16).</li>
+  use “Contextual r rotunda” (ss16).</li>
 </ul>
 <p>
   The features whose four-letter tags begin with <b>ss</b> are Stylistic

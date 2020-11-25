@@ -13,7 +13,7 @@
 
 /*
   font-family names this family and associates this declaration with
-    other possible declarations for JuniusVF (the variable version of
+    other possible declarations for JuniusX (the variable version of
     JuniusX).
   src:url() points to the font file.
   font-weight in a declaration for a variable font defines the range
@@ -21,6 +21,9 @@
   font-stretch defines the range of available widths.
   font-style: normal indicates that this declaration is for an upright
     or roman font.
+
+  Alternatively, you could use JuniusVF, the variable version of JuniusX.
+  In that case, you'd only need one file instead of two.
 
 @font-face {
  font-family: 'JuniusVF';
@@ -56,10 +59,12 @@
 
 :root {
   /*
-    variation settings: weight and width
-  */
+    variation settings: weight and width.
+    Don't need these, since we're using the static font.
+
   --jvf-wght: "wght" 400;
   --jvf-wdth: "wdth" 100;
+  */
   /*
     OpenType features
   */
@@ -92,10 +97,11 @@ body {
   set all the OpenType features we're using in this text. This block is
   called after the more specific ones, so the variables we use in this
   rule may will have been set in a class definition.
+  (Uncomment font-variation-settings if using the variable version.)
 */
 
 * {
-    font-variation-settings: var(--jvf-wght), var(--jvf-wdth);
+    /* font-variation-settings: var(--jvf-wght), var(--jvf-wdth); */
     font-feature-settings:   var(--jvf-ss03),
                              var(--jvf-ss17),
                              var(--jvf-pcap),
@@ -117,10 +123,13 @@ h1 {
   --jvf-smcp: "smcp" on;
 }
 
+/*
+  Uncomment if using the variable font JuniusVF.
 b {
   --jvf-wght: "wght" 700;
   font-style: normal;
 }
+*/
 
 /*
   pre will automatically use a fixed-width font. We won't mess with

@@ -21,7 +21,6 @@
   font-stretch defines the range of available widths.
   font-style: normal indicates that this declaration is for an upright
     or roman font.
-*/
 
 @font-face {
  font-family: 'JuniusVF';
@@ -29,6 +28,20 @@
  font-weight: 300 700;
  font-stretch: 60% 100%;
  font-style: normal;
+}
+*/
+
+@font-face {
+  font-family: 'JuniusX';
+  src:url("./webfiles/JuniusX-Regular.woff2");
+  font-weight: normal;
+  font-style:normal;
+}
+@font-face {
+  font-family: 'JuniusX';
+  src:url("./webfiles/JuniusX-Bold.woff2");
+  font-weight: bold;
+  font-style:normal;
 }
 
 /*
@@ -66,7 +79,7 @@
 */
 
 body {
-  font-family: 'JuniusVF';
+  font-family: 'JuniusX';
   font-size: 28px;
   line-height: 150%;
   margin-left: 10%;

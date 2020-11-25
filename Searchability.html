@@ -13,25 +13,13 @@
 
 /*
   font-family names this family and associates this declaration with
-    other possible declarations for JuniusX (the variable version of
-    JuniusX).
+    other possible declarations for JuniusX.
   src:url() points to the font file.
-  font-weight in a declaration for a variable font defines the range
-    of available weights.
-  font-stretch defines the range of available widths.
+  font-weight is either normal (400) or bold (700).
   font-style: normal indicates that this declaration is for an upright
     or roman font.
-
-  Alternatively, you could use JuniusVF, the variable version of JuniusX.
-  In that case, you'd only need one file instead of two.
-
-@font-face {
- font-family: 'JuniusVF';
- src:url("./webfiles/JuniusVF.woff2");
- font-weight: 300 700;
- font-stretch: 60% 100%;
- font-style: normal;
-}
+  These fonts have been subsetted, so they're a fraction of their
+    original size.
 */
 
 @font-face {
@@ -48,26 +36,16 @@
 }
 
 /*
-  In the :root declaration we define a number of variables, including
-  all the font-variation and OpenType tags we'll be using, together
-  with their default values. We define them here because :root is as
-  far up the document tree as you can go.
+  In the :root declaration we define variablesa for the OpenType
+  tags we'll be using, together with their default values. We define
+  them here because :root is as far up the document tree as you can
+  go.
 
   To use this model for your document, identify all the feature tags
   you'll be using in your text and set the defaults here.
 */
 
 :root {
-  /*
-    variation settings: weight and width.
-    Don't need these, since we're using the static font.
-
-  --jvf-wght: "wght" 400;
-  --jvf-wdth: "wdth" 100;
-  */
-  /*
-    OpenType features
-  */
   --jvf-ss03: "ss03" off;
   --jvf-ss17: "ss17" off;
   --jvf-pcap: "pcap" off;
@@ -93,15 +71,13 @@ body {
 
 /*
   An asterisk selects any element. Every time we hit an element, we'll
-  call font-variation-settings and font-feature-settings to explicitly
-  set all the OpenType features we're using in this text. This block is
-  called after the more specific ones, so the variables we use in this
-  rule may will have been set in a class definition.
-  (Uncomment font-variation-settings if using the variable version.)
+  call font-feature-settings to explicitly set all the OpenType features
+  we're using in this text. This block is called after the more specific
+  ones, so the variables we use in this rule will have been set in a
+  class definition.
 */
 
 * {
-    /* font-variation-settings: var(--jvf-wght), var(--jvf-wdth); */
     font-feature-settings:   var(--jvf-ss03),
                              var(--jvf-ss17),
                              var(--jvf-pcap),
@@ -119,17 +95,10 @@ body {
 
 h1 {
   font-size: 110%;
+  font-weight: normal;
   font-style: normal;
   --jvf-smcp: "smcp" on;
 }
-
-/*
-  Uncomment if using the variable font JuniusVF.
-b {
-  --jvf-wght: "wght" 700;
-  font-style: normal;
-}
-*/
 
 /*
   pre will automatically use a fixed-width font. We won't mess with

@@ -218,6 +218,7 @@ bari an is briostun."
 
 	$("#fontsizes").change(function() {
 		var sz = $("#fontsizes").attr("value");
+		alert(sz)
 		$("#textbox").css({"font-size": sz});
 	});
 

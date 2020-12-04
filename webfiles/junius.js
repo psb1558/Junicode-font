@@ -217,7 +217,7 @@ bari an is briostun."
 	});
 
 	$("#fontsizes").change(function() {
-		$("#textbox").css({font-size: this.attr("value")});
+		$("#textbox").css({"font-size": this.attr("value")});
 	});
 
 	// For the "faces" box, select one of the fonts by setting

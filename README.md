@@ -18,5 +18,5 @@ the display of accessible text.
 For a specimen of the roman face and a demonstration of the font’s many OpenType features, visit
 [this page](https://psb1558.github.io/Junicode-New/).
 
-All this is very much in progress. As of 24 October 2020, the roman face is complete (though metrics, anchors, and some
-features still need work), and work on the italic is about 63% complete.
+All this is very much in progress. As of 5 December 2020, the roman face is complete (though metrics, anchors, and some
+features still need work), and work on the italic is about 66% complete.

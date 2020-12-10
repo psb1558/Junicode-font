@@ -1,3 +1,5 @@
+**New!** If you've got a question, please visit the new [discussion forum](https://github.com/psb1558/Junicode-New/discussions).
+
 A new version of the Junicode font (previously hosted on Sourceforge) featuring full compliance with
 the [Medieval Unicode Font Initiative](https://skaldic.abdn.ac.uk/m.php?p=mufi) specification (version 4.0) and including all medieval characters
 added to Unicode since MUFI 4.0. The font:

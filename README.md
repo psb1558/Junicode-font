@@ -1,3 +1,5 @@
+**New!** I'll share new developments on [Twitter](https://twitter.com/InPbaker) from time to time and will welcome your feedback there.
+
 **New!** If you've got a question, please visit the new [discussion forum](https://github.com/psb1558/Junicode-New/discussions).
 
 A new version of the Junicode font (previously hosted on Sourceforge) featuring full compliance with

@@ -308,7 +308,7 @@
       </else>
     </compile-if>
   </mo>
-    
+
   <mo nm="mid-stem">
     <pm nm="ref1"/>
     <pm nm="ref2"/>
@@ -380,22 +380,22 @@
 
   <gl pnm="A" assume-y="no">
     <pm nm="iup" val="1"/>
-    <set nm="bot-b" p="53 44 30"/>
-    <set nm="bot-a" p="57 40 34"/>
+    <set nm="bot-b" p="54 45 31"/>
+    <set nm="bot-a" p="58 41 35"/>
     <setvs axis="y"/>
-    <mv di="cap-height-overshoot" p="21">
-      <mv p="66"/>
+    <mv di="cap-height-overshoot" p="22">
+      <mv p="67"/>
     </mv>
     <callm nm="cap-serif">
-      base: 60,
+      base: 61,
       pt-a: 0,
       pt-b: 4,
-      base-sh: 37,
+      base-sh: 38,
       pt-a-sh: bot-a,
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 60, ref2: 21, pt1: 49, pt2: 63
+      ref1: 61, ref2: 22, pt1: 50, pt2: 64
     </callm>
     <compile-if test="iup != 0">
       <iup axis="y"/>
@@ -416,24 +416,24 @@
   </gl>
 
   <gl pnm="Aring">
-    <set nm="bot-b" p="48 39 25"/>
-    <set nm="bot-a" p="52 35 29"/>
-    <mv p="15">
+    <set nm="bot-b" p="49 40 26"/>
+    <set nm="bot-a" p="53 36 30"/>
+    <mv p="16">
       <mv p="9">
-	<sh p="21"/>
-	<ip p="68 62"/>
+	<sh p="22"/>
+	<ip p="69 63"/>
       </mv>
     </mv>
     <callm nm="cap-serif">
-      base: 55,
+      base: 56,
       pt-a: 0,
       pt-b: 4,
-      base-sh: 32,
+      base-sh: 33,
       pt-a-sh: bot-a,
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 55, ref2: 15, pt1: 44, pt2: 58
+      ref1: 56, ref2: 16, pt1: 45, pt2: 59
     </callm>
   </gl>
 
@@ -521,7 +521,7 @@
     </callm>
     <callm nm="cap-round-stem">
       pt-a: 0, pt-b: 73, stem-cv: cprs
-    </callm>    
+    </callm>
   </gl>
 
   <gl pnm="uniA738">
@@ -581,6 +581,8 @@
     </callm>
     <mv di="cpbu" p="0"/>
   </gl>
+
+  <!-- checked to here -->
 
   <gl pnm="uniA73C">
     <!-- AY -->
@@ -1957,7 +1959,7 @@
     </callm>
     <callm nm="cap-round-stem">
       pt-a: 0, pt-b: 34, stem-cv: cprs
-    </callm>    
+    </callm>
   </gl>
 
   <gl pnm="V">
@@ -2542,7 +2544,7 @@
 	<mv p="10"/>
     </mv></mv>
   </gl>
-    
+
   <gl pnm="dotlessi">
     <callm nm="lc-serif">
       base: 46,
@@ -2640,7 +2642,7 @@
     </mv>
   </gl>
 
-  
+
 
   <gl pnm="kgreenlandic">
     <callm nm="lc-serif">

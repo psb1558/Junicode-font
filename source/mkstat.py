@@ -27,7 +27,7 @@ widthDict = dict(
 #       dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=90, rangeMaxValue=110),
 #       dict(nominalValue=120, name="SemiExpanded", rangeMinValue=110, rangeMaxValue=125),
 #       dict(nominalValue=140, name="Expanded", rangeMinValue=125, rangeMaxValue=140),
-# Recalculated, since fontmake changes scale to 75-125 with 100 default
+# Recalculated, since glyphslib changes scale to 75-125 with 100 default
         dict(nominalValue=75, name="Condensed", rangeMinValue=75, rangeMaxValue=81),
         dict(nominalValue=87.5, name="SemiCondensed", rangeMinValue=81, rangeMaxValue=94),
         dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=94, rangeMaxValue=106),

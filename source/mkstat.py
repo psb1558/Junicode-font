@@ -48,11 +48,16 @@ format2RomanAxes = [
 ttfont = ttLib.TTFont(inRomanFont)
 builder.buildStatTable(ttfont,format2RomanAxes)
 # ttfont['name'].setName("JuniusVFRoman", 25, 1, 0, 0)
+# Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).
 ttfont['name'].setName("JuniusVFRoman", 25, 3, 1, 0x409)
+# Cycle through fvar, getting instance names, building a correct postscriptNameID,
+# recording that in the name table, and adding the ID to the postscriptNameID field
+# of the fvar instance. Whew!
 for inst in ttfont['fvar'].instances:
     subfamilyName = ttfont['name'].getName(
         inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
     inst.postscriptNameID = ttfont['name'].addName("JuniusVFRoman" + "-" + subfamilyName,
                                                    platforms=((3,1,0x409),))
+# We don't need platoform 1 names. If there are any, remove them.
 ttfont['name'].removeNames(platformID=1)
 ttfont.save(outRomanFont)

@@ -1,3 +1,5 @@
+# JuniusX and JuniusVF
+
 **New!** I'll share new developments on [Twitter](https://twitter.com/InPbaker) from time to time and will welcome your feedback there.
 
 **New!** If you've got a question, please visit the new [discussion forum](https://github.com/psb1558/Junicode-New/discussions).
@@ -19,8 +21,21 @@ the display of accessible text.
 
 ![Sample Image](sample-image.jpg)
 
-For a specimen of the roman face and a demonstration of the font’s many OpenType features, visit
-[this page](https://psb1558.github.io/Junicode-New/).
 
 All this is very much in progress. As of 5 December 2020, the roman face is complete (though metrics, anchors, and some
 features still need work), and work on the italic is about 66% complete.
+
+# Resources
+
+A [specimen](https://psb1558.github.io/Junicode-New/) page.
+
+My [Twitter](https://twitter.com/InPbaker) feed, where I'll share new developments from time to time.
+
+A [discussion forum](https://github.com/psb1558/Junicode-New/discussions) where you can post queries about the fonts and how to use them.
+
+An [essay](https://psb1558.github.io/Junicode-New/Searchability.html) on making Searchable and accessible texts with JuniusX/JuniusVF.
+
+**New!** An [introduction](https://psb1558.github.io/Junicode-New/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
+
+
+

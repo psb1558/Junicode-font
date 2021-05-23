@@ -2,7 +2,7 @@ from fontTools.otlLib import builder
 from fontTools import ttLib
 import sys
 
-inRomanFont =   "./variable_ttf/JuniusX-VF.ttf"
+inRomanFont =   "./variable_ttf/JuniusVF-VF.ttf"
 outRomanFont =  "JuniusVF.ttf"
 
 weightDict = dict(
@@ -36,8 +36,17 @@ widthDict = dict(
     ]
 )
 
+enlargeDict = dict(
+    tag="ENLA",
+    name="Enlarge",
+    values=[
+        dict(nominalValue=0, name="Normal", flags=0x2, rangeMinValue=0, rangeMaxValue=0.5),
+        dict(nominalValue=1, name="Enlarged", rangeMinValue=0.5, rangeMaxValue=1)
+    ]
+)
+
 format2RomanAxes = [
-    weightDict, widthDict,
+    weightDict, widthDict, enlargeDict,
     dict(
         tag="ital",
         name="Italic",

@@ -8,7 +8,7 @@ added to Unicode since MUFI 4.0. The font:
 - has the same character set in all faces;
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and five widths (Regular, SemiCondensed, Condensed, SemiExpanded, Expanded);
-- includes a variable font version;
+- includes a variable font version with three axes (width, weight, and the custom Enlarge axis;
 - has improved outlines,
 - an expanded collection of small caps (covering all case-paired characters),
 - a more comprehensive set of anchors for mark positioning,
@@ -16,7 +16,6 @@ added to Unicode since MUFI 4.0. The font:
 the display of accessible text.
 
 ![Sample Image](sample-image.jpg)
-
 
 All this is very much in progress. As of 5 December 2020, the roman face is complete (though metrics, anchors, and some
 features still need work), and work on the italic is about 66% complete.

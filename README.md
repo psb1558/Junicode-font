@@ -8,7 +8,7 @@ added to Unicode since MUFI 4.0. The font:
 - has the same character set in all faces;
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and five widths (Regular, SemiCondensed, Condensed, SemiExpanded, Expanded);
-- includes a variable font version with three axes (width, weight, and the custom Enlarge axis;
+- includes a variable font version with three axes (width, weight, and the custom [Enlarge](https://psb1558.github.io/Junicode-New/EnlargedAxis.html) axis;
 - has improved outlines,
 - an expanded collection of small caps (covering all case-paired characters),
 - a more comprehensive set of anchors for mark positioning,

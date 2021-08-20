@@ -65,6 +65,12 @@
       <cvv nm="lc-serif" val="68"/>
       <cvv nm="num-circle" val="104"/>
     </tuple>
+    <tuple>
+      <region tag="ENLA" bot="0.0" peak="1.0" top="1.0"/>
+      <cvv nm="xheight-overshoot" val="1035"/>
+      <cvv nm="xheight" val="1012"/>
+      <cvv nm="lc-baseline-undershoot" val="-27"/>
+    </tuple>
   </cvar>
 
   <alias nm="cps" target="cap-serif"/>
@@ -2143,7 +2149,7 @@
     </mv>
   </gl>
 
-  <gl pnm="a">
+  <gl pnm="a"> <!-- back to here -->
     <mv di="xho" p="25">
       <mv p="10"/>
     </mv>

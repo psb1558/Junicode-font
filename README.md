@@ -17,8 +17,8 @@ the display of accessible text.
 
 ![Sample Image](sample-image.jpg)
 
-All this is very much in progress. As of 28 August 2021, the roman face is complete (though metrics, anchors, and some
-features still need work), and work on the italic is about 72% complete.
+All this is very much in progress. As of 4 September 2021, the roman face is complete (though metrics, anchors, and some
+features still need work), and work on the italic is about 73% complete.
 
 # Resources
 

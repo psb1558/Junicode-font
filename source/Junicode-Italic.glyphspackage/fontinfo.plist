@@ -1,0 +1,2293 @@
+{
+.appVersion = "3095";
+.formatVersion = 3;
+axes = (
+{
+name = Weight;
+tag = wght;
+},
+{
+name = Width;
+tag = wdth;
+},
+{
+name = Enlarge;
+tag = ENLA;
+},
+{
+hidden = 1;
+name = Italic;
+tag = ital;
+}
+);
+classes = (
+{
+code = "acutecomb.case caroncomb.case circumflexcomb.case dieresiscomb.case hungarumlautcomb.case dblgravecomb.case gravecomb.case macroncomb.case tildecomb.case acutecomb acutecomb.sc gravecomb gravecomb.sc hookabovecomb tildecomb tildecomb.sc circumflexcomb circumflexcomb.sc macroncomb macroncomb.sc uni0305 brevecomb dotaccentcomb dieresiscomb dieresiscomb.sc ringcomb hungarumlautcomb caroncomb uni030D uni030E dblgravecomb uni0310 uni0311 uni0312 uni0313 uni0314 uni0315 uni031A uni033D uni033E uni033F uni0346 uni034A uni034B uni034C uni0350 uni0351 uni0352 uni0357 uni035B uni0363 uni0364 uni0365 uni0366 uni0367 uni0368 uni0369 uni036A uni036B uni036C uni036D uni036E uni036F uni1DD1 uni1DD2 uni1DD3 uni1DD4 uni1DD5 uni1DD6 uni1DD7 uni1DD8 uni1DD9 uni1DDA uni1DDB uni1DDC uni1DDD uni1DDE uni1DDF uni1DE0 uni1DE1 uni1DE2 uni1DE3 uni1DE4 uni1DE5 uni1DE6 uniF012 uniF013 uniF016 uniF017 uniF01C uniF025 uniF02A uniF02B uniF02E uniF02F uniF030 uniF031 uniF032 uniF033 uniF036 uniF038 uniF03A uniF03B uniF03C uniF03D uniF03E uniF03F uniF040 uniF130 uniF135 uniF136 uniF13E uniF13F uniF153 uniF1C0 uniF1C1 uniF1C2 uniF1C7 uniF1C8 uniF1CC ";
+disabled = 1;
+name = MarkClass1;
+},
+{
+code = " dotbelowcomb uni0316 uni0317 uni0318 uni0319 uni031C uni031D uni031E uni031F uni0320 uni0324 uni0325 uni0326 uni0329 uni032A uni032B uni032C uni032D uni032E uni032F uni0330 uni0331 uni0332 uni0333 uni0339 uni033A uni033B uni033C uni0347 uni0348 uni0349 uni034D uni034E uni0353 uni0354 uni0355 uni0356 uni0359 uni1DCF ";
+disabled = 1;
+name = MarkClass2;
+},
+{
+code = "zero one two three four five six seven eight nine";
+name = FIGURES_LINING_TABULAR;
+},
+{
+code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf";
+name = FIGURES_OLDSTYLE_TABULAR;
+},
+{
+code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf";
+name = FIGURES_LINING;
+},
+{
+code = "zero.osf one.osf two.osf three.osf four.osf five.osf six.osf seven.osf eight.osf nine.osf";
+name = FIGURES_OLDSTYLE;
+}
+);
+customParameters = (
+{
+name = fsType;
+value = (
+);
+},
+{
+name = "Enforce Compatibility Check";
+value = 1;
+}
+);
+date = "2020-10-05 13:39:53 +0000";
+familyName = JuniusX;
+featurePrefixes = (
+{
+automatic = 1;
+code = "languagesystem DFLT dflt;
+
+languagesystem latn dflt;
+languagesystem latn ROM;
+languagesystem latn MOL;
+languagesystem latn ENG;
+languagesystem latn CAT;
+";
+name = Languagesystems;
+}
+);
+features = (
+{
+automatic = 1;
+code = "feature locl;
+feature c2sc;
+feature case;
+feature ordn;
+feature tnum;
+feature onum;
+feature pnum;
+feature lnum;
+feature sups;
+feature subs;
+feature zero;
+feature smcp;
+feature cv02;
+feature cv16;
+feature cv59;
+feature cv60;
+feature sinf;
+feature frac;
+";
+tag = aalt;
+},
+{
+automatic = 1;
+code = "lookup locl_latn_0 {
+	script latn;
+	language ROM;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+	language MOL;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_0;
+
+lookup locl_latn_1 {
+	script latn;
+	language ENG;
+	sub Thorn by Thorn.loclENG;
+	sub Thornstroke by Thornstroke.loclENG;
+	sub eth by eth.loclENG;
+	sub thorn by thorn.loclENG;
+	sub uniE48F by uniE48F.loclENG;
+} locl_latn_1;
+
+lookup locl_latn_2 {
+	script latn;
+	language CAT;
+	sub  l' periodcentered' l by ldot;
+	sub  L' periodcentered' L by Ldot;
+} locl_latn_2;
+";
+tag = locl;
+},
+{
+automatic = 1;
+code = "sub A by a.sc;
+sub Aacute by aacute.sc;
+sub Abreve by abreve.sc;
+sub Abreveacute by abreveacute.sc;
+sub Abrevedotbelow by abrevedotbelow.sc;
+sub Abrevegrave by abrevegrave.sc;
+sub Abrevehookabove by abrevehookabove.sc;
+sub Abrevetilde by abrevetilde.sc;
+sub Acaron by acaron.sc;
+sub Acircumflex by acircumflex.sc;
+sub Acircumflexacute by acircumflexacute.sc;
+sub Acircumflexdotbelow by acircumflexdotbelow.sc;
+sub Acircumflexgrave by acircumflexgrave.sc;
+sub Acircumflexhookabove by acircumflexhookabove.sc;
+sub Acircumflextilde by acircumflextilde.sc;
+sub Adblgrave by adblgrave.sc;
+sub Adieresis by adieresis.sc;
+sub Adieresismacron by adieresismacron.sc;
+sub Adotaccent by adotaccent.sc;
+sub Adotbelow by adotbelow.sc;
+sub Adotmacron by adotmacron.sc;
+sub Agrave by agrave.sc;
+sub Ahookabove by ahookabove.sc;
+sub Ainvertedbreve by ainvertedbreve.sc;
+sub Amacron by amacron.sc;
+sub Aogonek by aogonek.sc;
+sub Aring by aring.sc;
+sub Aringacute by aringacute.sc;
+sub Aringbelow by aringbelow.sc;
+sub Atilde by atilde.sc;
+sub AE by ae.sc;
+sub B by b.sc;
+sub C by c.sc;
+sub Cacute by cacute.sc;
+sub Ccaron by ccaron.sc;
+sub Ccedilla by ccedilla.sc;
+sub Ccircumflex by ccircumflex.sc;
+sub Cdotaccent by cdotaccent.sc;
+sub D by d.sc;
+sub Eth by eth.sc;
+sub Dcaron by dcaron.sc;
+sub Dcircumflexbelow by dcircumflexbelow.sc;
+sub Ddotaccent by ddotaccent.sc;
+sub Ddotbelow by ddotbelow.sc;
+sub E by e.sc;
+sub Eacute by eacute.sc;
+sub Ebreve by ebreve.sc;
+sub Ecaron by ecaron.sc;
+sub Ecedillabreve by ecedillabreve.sc;
+sub Ecircumflex by ecircumflex.sc;
+sub Ecircumflexacute by ecircumflexacute.sc;
+sub Ecircumflexbelow by ecircumflexbelow.sc;
+sub Ecircumflexdotbelow by ecircumflexdotbelow.sc;
+sub Ecircumflexgrave by ecircumflexgrave.sc;
+sub Ecircumflexhookabove by ecircumflexhookabove.sc;
+sub Ecircumflextilde by ecircumflextilde.sc;
+sub Edieresis by edieresis.sc;
+sub Edotaccent by edotaccent.sc;
+sub Edotbelow by edotbelow.sc;
+sub Egrave by egrave.sc;
+sub Ehookabove by ehookabove.sc;
+sub Einvertedbreve by einvertedbreve.sc;
+sub Emacron by emacron.sc;
+sub Emacronacute by emacronacute.sc;
+sub Emacrongrave by emacrongrave.sc;
+sub Eogonek by eogonek.sc;
+sub F by f.sc;
+sub G by g.sc;
+sub Gbreve by gbreve.sc;
+sub Gcaron by gcaron.sc;
+sub Gcircumflex by gcircumflex.sc;
+sub Gcommaaccent by gcommaaccent.sc;
+sub Gdotaccent by gdotaccent.sc;
+sub Gmacron by gmacron.sc;
+sub H by h.sc;
+sub Hcaron by hcaron.sc;
+sub Hcircumflex by hcircumflex.sc;
+sub Hdieresis by hdieresis.sc;
+sub Hdotaccent by hdotaccent.sc;
+sub Hdotbelow by hdotbelow.sc;
+sub I by i.sc;
+sub Iacute by iacute.sc;
+sub Ibreve by ibreve.sc;
+sub Icaron by icaron.sc;
+sub Icircumflex by icircumflex.sc;
+sub Idblgrave by idblgrave.sc;
+sub Idieresis by idieresis.sc;
+sub Idotaccent by idotaccent.sc;
+sub Igrave by igrave.sc;
+sub Iinvertedbreve by iinvertedbreve.sc;
+sub Imacron by imacron.sc;
+sub Itilde by itilde.sc;
+sub J by j.sc;
+sub Jcircumflex by jcircumflex.sc;
+sub K by k.sc;
+sub Kacute by kacute.sc;
+sub Kcaron by kcaron.sc;
+sub Kdotbelow by kdotbelow.sc;
+sub Klinebelow by klinebelow.sc;
+sub L by l.sc;
+sub Lacute by lacute.sc;
+sub Lcircumflexbelow by lcircumflexbelow.sc;
+sub Ldotbelow by ldotbelow.sc;
+sub Ldotbelowmacron by ldotbelowmacron.sc;
+sub Llinebelow by llinebelow.sc;
+sub Lslash by lslash.sc;
+sub M by m.sc;
+sub Macute by macute.sc;
+sub Mdotaccent by mdotaccent.sc;
+sub Mdotbelow by mdotbelow.sc;
+sub N by n.sc;
+sub Nacute by nacute.sc;
+sub Ncaron by ncaron.sc;
+sub Ncircumflexbelow by ncircumflexbelow.sc;
+sub Ndotaccent by ndotaccent.sc;
+sub Ndotbelow by ndotbelow.sc;
+sub Ngrave by ngrave.sc;
+sub Ntilde by ntilde.sc;
+sub O by o.sc;
+sub Oacute by oacute.sc;
+sub Obreve by obreve.sc;
+sub Ocircumflex by ocircumflex.sc;
+sub Ocircumflexacute by ocircumflexacute.sc;
+sub Ocircumflexdotbelow by ocircumflexdotbelow.sc;
+sub Ocircumflexgrave by ocircumflexgrave.sc;
+sub Ocircumflexhookabove by ocircumflexhookabove.sc;
+sub Odieresis by odieresis.sc;
+sub Odieresismacron by odieresismacron.sc;
+sub Odotaccent by odotaccent.sc;
+sub Odotbelow by odotbelow.sc;
+sub Ograve by ograve.sc;
+sub Oinvertedbreve by oinvertedbreve.sc;
+sub Omacron by omacron.sc;
+sub Omacronacute by omacronacute.sc;
+sub Omacrongrave by omacrongrave.sc;
+sub Oogonek by oogonek.sc;
+sub Oslash by oslash.sc;
+sub Otilde by otilde.sc;
+sub Otildeacute by otildeacute.sc;
+sub Otildedieresis by otildedieresis.sc;
+sub Otildemacron by otildemacron.sc;
+sub OE by oe.sc;
+sub P by p.sc;
+sub Pacute by pacute.sc;
+sub Pdotaccent by pdotaccent.sc;
+sub Thorn by thorn.sc;
+sub Q by q.sc;
+sub Qdiagonalstroke by qdiagonalstroke.sc;
+sub R by r.sc;
+sub Racute by racute.sc;
+sub Rcaron by rcaron.sc;
+sub Rdotaccent by rdotaccent.sc;
+sub Rdotbelow by rdotbelow.sc;
+sub Rdotbelowmacron by rdotbelowmacron.sc;
+sub Rlinebelow by rlinebelow.sc;
+sub S by s.sc;
+sub Sacute by sacute.sc;
+sub Scaron by scaron.sc;
+sub Scarondotaccent by scarondotaccent.sc;
+sub Scedilla by scedilla.sc;
+sub Scircumflex by scircumflex.sc;
+sub Scommaaccent by scommaaccent.sc;
+sub Sdotaccent by sdotaccent.sc;
+sub Sdotbelow by sdotbelow.sc;
+sub Sdotbelowdotaccent by sdotbelowdotaccent.sc;
+sub Germandbls by germandbls.sc;
+sub T by t.sc;
+sub Tcaron by tcaron.sc;
+sub Tcircumflexbelow by tcircumflexbelow.sc;
+sub Tcommaaccent by tcommaaccent.sc;
+sub Tcommaaccent by tcommaaccent.sc;
+sub Tdotaccent by tdotaccent.sc;
+sub Tdotbelow by tdotbelow.sc;
+sub U by u.sc;
+sub Uacute by uacute.sc;
+sub Ubreve by ubreve.sc;
+sub Ucircumflex by ucircumflex.sc;
+sub Ucircumflexbelow by ucircumflexbelow.sc;
+sub Udblgrave by udblgrave.sc;
+sub Udieresis by udieresis.sc;
+sub Udieresisacute by udieresisacute.sc;
+sub Udieresisbelow by udieresisbelow.sc;
+sub Udieresiscaron by udieresiscaron.sc;
+sub Udieresisgrave by udieresisgrave.sc;
+sub Udieresismacron by udieresismacron.sc;
+sub Udotbelow by udotbelow.sc;
+sub Ugrave by ugrave.sc;
+sub Uhookabove by uhookabove.sc;
+sub Uhungarumlaut by uhungarumlaut.sc;
+sub Uinvertedbreve by uinvertedbreve.sc;
+sub Umacron by umacron.sc;
+sub Umacrondieresis by umacrondieresis.sc;
+sub Uogonek by uogonek.sc;
+sub Uring by uring.sc;
+sub V by v.sc;
+sub W by w.sc;
+sub Wacute by wacute.sc;
+sub Wcircumflex by wcircumflex.sc;
+sub Wdieresis by wdieresis.sc;
+sub Wdotaccent by wdotaccent.sc;
+sub Wdotbelow by wdotbelow.sc;
+sub Wgrave by wgrave.sc;
+sub X by x.sc;
+sub Xdotaccent by xdotaccent.sc;
+sub Y by y.sc;
+sub Yacute by yacute.sc;
+sub Ycircumflex by ycircumflex.sc;
+sub Ydieresis by ydieresis.sc;
+sub Ydotaccent by ydotaccent.sc;
+sub Ydotbelow by ydotbelow.sc;
+sub Ygrave by ygrave.sc;
+sub Ytilde by ytilde.sc;
+sub Z by z.sc;
+sub Zacute by zacute.sc;
+sub Zcaron by zcaron.sc;
+sub Zcircumflex by zcircumflex.sc;
+sub Zdotaccent by zdotaccent.sc;
+sub Zdotbelow by zdotbelow.sc;
+sub Zlinebelow by zlinebelow.sc;
+sub Thorn.loclENG by thorn.loclENG.sc;
+sub carondotcomb by carondotcomb.sc;
+sub dieresiscomb by dieresiscomb.sc;
+sub dotaccentcomb by dotaccentcomb.sc;
+sub gravecomb by gravecomb.sc;
+sub acutecomb by acutecomb.sc;
+sub hungarumlautcomb by hungarumlautcomb.sc;
+sub circumflexcomb by circumflexcomb.sc;
+sub caroncomb by caroncomb.sc;
+sub brevecomb by brevecomb.sc;
+sub tildecomb by tildecomb.sc;
+sub macroncomb by macroncomb.sc;
+sub hookabovecomb by hookabovecomb.sc;
+sub dblgravecomb by dblgravecomb.sc;
+sub breveinvertedcomb by breveinvertedcomb.sc;
+sub ogonekcomb by ogonekcomb.sc;
+sub caron by caron.sc;
+sub dotacutecomb by dotacutecomb.sc;
+";
+tag = c2sc;
+},
+{
+code = "sub carondotcomb by carondotcomb.case;
+sub dieresiscomb by dieresiscomb.case;
+sub dotaccentcomb by dotaccentcomb.case;
+sub gravecomb by gravecomb.case;
+sub acutecomb by acutecomb.case;
+sub hungarumlautcomb by hungarumlautcomb.case;
+sub circumflexcomb by circumflexcomb.case;
+sub caroncomb by caroncomb.case;
+sub brevecomb by brevecomb.case;
+sub tildecomb by tildecomb.case;
+sub macroncomb by macroncomb.case;
+sub dblgravecomb by dblgravecomb.case;
+sub uni0335 by uni0335.case;
+sub dieresis by dieresis.case;
+sub acute by acute.case;
+sub hungarumlaut by hungarumlaut.case;
+sub circumflex by circumflex.case;
+sub caron by caron.case;
+sub tilde by tilde.case;
+sub macron by macron.case;
+sub ogonekabovecomb by ogonekabovecomb.case;
+sub brevehook by brevehook.case;
+sub circumacute.viet by circumacute.viet.case;
+sub circumgrave.viet by circumgrave.viet.case;
+sub circumhook.viet by circumhook.viet.case;
+sub dotacutecomb by dotacutecomb.case;
+sub zero by zero.lf;
+sub one by one.lf;
+sub two by two.lf;
+sub three by three.lf;
+sub four by four.lf;
+sub five by five.lf;
+sub six by six.lf;
+sub seven by seven.lf;
+sub eight by eight.lf;
+sub nine by nine.lf;
+sub zero.osf by zero.lf;
+sub one.osf by one.lf;
+sub two.osf by two.lf;
+sub three.osf by three.lf;
+sub four.osf by four.lf;
+sub five.osf by five.lf;
+sub six.osf by six.lf;
+sub seven.osf by seven.lf;
+sub eight.osf by eight.lf;
+sub nine.osf by nine.lf;
+sub zero.tosf by zero.lf;
+sub one.tosf by one.lf;
+sub two.tosf by two.lf;
+sub three.tosf by three.lf;
+sub four.tosf by four.lf;
+sub five.tosf by five.lf;
+sub six.tosf by six.lf;
+sub seven.tosf by seven.lf;
+sub eight.tosf by eight.lf;
+sub nine.tosf by nine.lf;
+";
+tag = case;
+},
+{
+automatic = 1;
+code = "sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
+sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+";
+tag = ordn;
+},
+{
+code = "sub @FIGURES_LINING by @FIGURES_LINING_TABULAR;
+sub @FIGURES_OLDSTYLE by @FIGURES_OLDSTYLE_TABULAR;";
+tag = tnum;
+},
+{
+code = "sub @FIGURES_LINING by @FIGURES_OLDSTYLE;
+sub @FIGURES_LINING_TABULAR by @FIGURES_OLDSTYLE_TABULAR;";
+tag = onum;
+},
+{
+code = "sub @FIGURES_LINING_TABULAR by @FIGURES_LINING;
+sub @FIGURES_OLDSTYLE_TABULAR by @FIGURES_OLDSTYLE;
+";
+tag = pnum;
+},
+{
+code = "sub @FIGURES_OLDSTYLE by @FIGURES_LINING;
+sub @FIGURES_OLDSTYLE_TABULAR by @FIGURES_LINING_TABULAR;";
+tag = lnum;
+},
+{
+code = "    sub zero by zerosuperior ;
+    sub zero.zero by zerosuperior.zero ;
+    sub one by onesuperior ;
+    sub two by twosuperior ;
+    sub three by threesuperior ;
+    sub four by foursuperior ;
+    sub five by fivesuperior ;
+    sub six by sixsuperior ;
+    sub seven by sevensuperior ;
+    sub eight by eightsuperior ;
+    sub nine by ninesuperior ;
+    sub zero.lf by zerosuperior ;
+    sub zero.lf.zero by zerosuperior.zero ;
+    sub one.lf by onesuperior ;
+    sub two.lf by twosuperior ;
+    sub three.lf by threesuperior ;
+    sub four.lf by foursuperior ;
+    sub five.lf by fivesuperior ;
+    sub six.lf by sixsuperior ;
+    sub seven.lf by sevensuperior ;
+    sub eight.lf by eightsuperior ;
+    sub nine.lf by ninesuperior ;
+    sub zero.osf by zerosuperior.osf ;
+    sub zero.osf.zero by zerosuperior.osf.zero ;
+    sub one.osf by onesuperior.osf ;
+    sub two.osf by twosuperior.osf ;
+    sub three.osf by threesuperior.osf ;
+    sub four.osf by foursuperior.osf ;
+    sub five.osf by fivesuperior.osf ;
+    sub six.osf by sixsuperior.osf ;
+    sub seven.osf by sevensuperior.osf ;
+    sub eight.osf by eightsuperior.osf ;
+    sub nine.osf by ninesuperior.osf ;
+    sub zero.tosf by zerosuperior.osf ;
+    sub zero.tosf.zero by zerosuperior.osf.zero ;
+    sub one.tosf by onesuperior.osf ;
+    sub two.tosf by twosuperior.osf ;
+    sub three.tosf by threesuperior.osf ;
+    sub four.tosf by foursuperior.osf ;
+    sub five.tosf by fivesuperior.osf ;
+    sub six.tosf by sixsuperior.osf ;
+    sub seven.tosf by sevensuperior.osf ;
+    sub eight.tosf by eightsuperior.osf ;
+    sub nine.tosf by ninesuperior.osf ;
+    ";
+tag = sups;
+},
+{
+code = "sub zero by zeroinferior ;
+sub zero.zero by zeroinferior.zero ;
+sub one by oneinferior ;
+sub two by twoinferior ;
+sub three by threeinferior ;
+sub four by fourinferior ;
+sub five by fiveinferior ;
+sub six by sixinferior ;
+sub seven by seveninferior ;
+sub eight by eightinferior ;
+sub nine by nineinferior ;
+sub zero.lf by zeroinferior ;
+sub zero.lf.zero by zeroinferior.zero ;
+sub one.lf by oneinferior ;
+sub two.lf by twoinferior ;
+sub three.lf by threeinferior ;
+sub four.lf by fourinferior ;
+sub five.lf by fiveinferior ;
+sub six.lf by sixinferior ;
+sub seven.lf by seveninferior ;
+sub eight.lf by eightinferior ;
+sub nine.lf by nineinferior ;
+sub zero.osf by zeroinferior.osf ;
+sub zero.osf.zero by zeroinferior.osf.zero ;
+sub one.osf by oneinferior.osf ;
+sub two.osf by twoinferior.osf ;
+sub three.osf by threeinferior.osf ;
+sub four.osf by fourinferior.osf ;
+sub five.osf by fiveinferior.osf ;
+sub six.osf by sixinferior.osf ;
+sub seven.osf by seveninferior.osf ;
+sub eight.osf by eightinferior.osf ;
+sub nine.osf by nineinferior.osf ;
+sub zero.tosf by zeroinferior.osf ;
+sub zero.tosf.zero by zeroinferior.osf.zero ;
+sub one.tosf by oneinferior.osf ;
+sub two.tosf by twoinferior.osf ;
+sub three.tosf by threeinferior.osf ;
+sub four.tosf by fourinferior.osf ;
+sub five.tosf by fiveinferior.osf ;
+sub six.tosf by sixinferior.osf ;
+sub seven.tosf by seveninferior.osf ;
+sub eight.tosf by eightinferior.osf ;
+sub nine.tosf by nineinferior.osf ;
+";
+tag = subs;
+},
+{
+code = "  sub zero by zero.zero;
+  sub zero.lf by zero.lf.zero;
+  sub zero.osf by zero.osf.zero;
+  sub zeroinferior.osf by zeroinferior.osf.zero;
+  sub zerosuperior.osf by zerosuperior.osf.zero;
+  sub zero.tosf by zero.tosf.zero;
+  sub zerosuperior by zerosuperior.zero;
+  sub zeroinferior by zeroinferior.zero;
+";
+tag = zero;
+},
+{
+automatic = 1;
+code = "sub a by a.sc;
+sub aacute by aacute.sc;
+sub abreve by abreve.sc;
+sub abreveacute by abreveacute.sc;
+sub abrevedotbelow by abrevedotbelow.sc;
+sub abrevegrave by abrevegrave.sc;
+sub abrevehookabove by abrevehookabove.sc;
+sub abrevetilde by abrevetilde.sc;
+sub acaron by acaron.sc;
+sub acircumflex by acircumflex.sc;
+sub acircumflexacute by acircumflexacute.sc;
+sub acircumflexdotbelow by acircumflexdotbelow.sc;
+sub acircumflexgrave by acircumflexgrave.sc;
+sub acircumflexhookabove by acircumflexhookabove.sc;
+sub acircumflextilde by acircumflextilde.sc;
+sub adblgrave by adblgrave.sc;
+sub adieresis by adieresis.sc;
+sub adieresismacron by adieresismacron.sc;
+sub adotaccent by adotaccent.sc;
+sub adotbelow by adotbelow.sc;
+sub adotmacron by adotmacron.sc;
+sub agrave by agrave.sc;
+sub ahookabove by ahookabove.sc;
+sub ainvertedbreve by ainvertedbreve.sc;
+sub amacron by amacron.sc;
+sub aogonek by aogonek.sc;
+sub aring by aring.sc;
+sub aringacute by aringacute.sc;
+sub aringbelow by aringbelow.sc;
+sub atilde by atilde.sc;
+sub ae by ae.sc;
+sub uni01E3 by uni01E3.sc;
+sub b by b.sc;
+sub c by c.sc;
+sub cacute by cacute.sc;
+sub ccaron by ccaron.sc;
+sub ccedilla by ccedilla.sc;
+sub ccircumflex by ccircumflex.sc;
+sub cdotaccent by cdotaccent.sc;
+sub d by d.sc;
+sub eth by eth.sc;
+sub dcaron by dcaron.sc;
+sub dcircumflexbelow by dcircumflexbelow.sc;
+sub ddotaccent by ddotaccent.sc;
+sub ddotbelow by ddotbelow.sc;
+sub e by e.sc;
+sub eacute by eacute.sc;
+sub ebreve by ebreve.sc;
+sub ecaron by ecaron.sc;
+sub ecedillabreve by ecedillabreve.sc;
+sub ecircumflex by ecircumflex.sc;
+sub ecircumflexacute by ecircumflexacute.sc;
+sub ecircumflexbelow by ecircumflexbelow.sc;
+sub ecircumflexdotbelow by ecircumflexdotbelow.sc;
+sub ecircumflexgrave by ecircumflexgrave.sc;
+sub ecircumflexhookabove by ecircumflexhookabove.sc;
+sub ecircumflextilde by ecircumflextilde.sc;
+sub edieresis by edieresis.sc;
+sub edotaccent by edotaccent.sc;
+sub edotbelow by edotbelow.sc;
+sub egrave by egrave.sc;
+sub ehookabove by ehookabove.sc;
+sub einvertedbreve by einvertedbreve.sc;
+sub emacron by emacron.sc;
+sub emacronacute by emacronacute.sc;
+sub emacrongrave by emacrongrave.sc;
+sub eogonek by eogonek.sc;
+sub f by f.sc;
+sub g by g.sc;
+sub gbreve by gbreve.sc;
+sub gcaron by gcaron.sc;
+sub gcircumflex by gcircumflex.sc;
+sub gcommaaccent by gcommaaccent.sc;
+sub gdotaccent by gdotaccent.sc;
+sub gmacron by gmacron.sc;
+sub h by h.sc;
+sub hcaron by hcaron.sc;
+sub hcircumflex by hcircumflex.sc;
+sub hdieresis by hdieresis.sc;
+sub hdotaccent by hdotaccent.sc;
+sub hdotbelow by hdotbelow.sc;
+sub i by i.sc;
+sub iacute by iacute.sc;
+sub ibreve by ibreve.sc;
+sub icaron by icaron.sc;
+sub icircumflex by icircumflex.sc;
+sub idblgrave by idblgrave.sc;
+sub idieresis by idieresis.sc;
+sub igrave by igrave.sc;
+sub iinvertedbreve by iinvertedbreve.sc;
+sub imacron by imacron.sc;
+sub itilde by itilde.sc;
+sub j by j.sc;
+sub jcircumflex by jcircumflex.sc;
+sub k by k.sc;
+sub kacute by kacute.sc;
+sub kcaron by kcaron.sc;
+sub kdotbelow by kdotbelow.sc;
+sub l by l.sc;
+sub lacute by lacute.sc;
+sub lcircumflexbelow by lcircumflexbelow.sc;
+sub ldotbelow by ldotbelow.sc;
+sub ldotbelowmacron by ldotbelowmacron.sc;
+sub lslash by lslash.sc;
+sub m by m.sc;
+sub macute by macute.sc;
+sub mdotaccent by mdotaccent.sc;
+sub mdotbelow by mdotbelow.sc;
+sub n by n.sc;
+sub nacute by nacute.sc;
+sub ncaron by ncaron.sc;
+sub ncircumflexbelow by ncircumflexbelow.sc;
+sub ndotaccent by ndotaccent.sc;
+sub ndotbelow by ndotbelow.sc;
+sub ngrave by ngrave.sc;
+sub ntilde by ntilde.sc;
+sub o by o.sc;
+sub oacute by oacute.sc;
+sub obreve by obreve.sc;
+sub ocircumflex by ocircumflex.sc;
+sub ocircumflexacute by ocircumflexacute.sc;
+sub ocircumflexdotbelow by ocircumflexdotbelow.sc;
+sub ocircumflexgrave by ocircumflexgrave.sc;
+sub ocircumflexhookabove by ocircumflexhookabove.sc;
+sub odieresis by odieresis.sc;
+sub odieresismacron by odieresismacron.sc;
+sub odotaccent by odotaccent.sc;
+sub odotbelow by odotbelow.sc;
+sub ograve by ograve.sc;
+sub oinvertedbreve by oinvertedbreve.sc;
+sub omacron by omacron.sc;
+sub omacronacute by omacronacute.sc;
+sub omacrongrave by omacrongrave.sc;
+sub oogonek by oogonek.sc;
+sub oslash by oslash.sc;
+sub otilde by otilde.sc;
+sub otildeacute by otildeacute.sc;
+sub otildedieresis by otildedieresis.sc;
+sub otildemacron by otildemacron.sc;
+sub oe by oe.sc;
+sub p by p.sc;
+sub pacute by pacute.sc;
+sub pdotaccent by pdotaccent.sc;
+sub thorn by thorn.sc;
+sub q by q.sc;
+sub qdiagonalstroke by qdiagonalstroke.sc;
+sub r by r.sc;
+sub racute by racute.sc;
+sub rcaron by rcaron.sc;
+sub rdotaccent by rdotaccent.sc;
+sub rdotbelow by rdotbelow.sc;
+sub rdotbelowmacron by rdotbelowmacron.sc;
+sub s by s.sc;
+sub sacute by sacute.sc;
+sub scaron by scaron.sc;
+sub scarondotaccent by scarondotaccent.sc;
+sub scedilla by scedilla.sc;
+sub scircumflex by scircumflex.sc;
+sub scommaaccent by scommaaccent.sc;
+sub sdotaccent by sdotaccent.sc;
+sub sdotbelow by sdotbelow.sc;
+sub sdotbelowdotaccent by sdotbelowdotaccent.sc;
+sub germandbls by germandbls.sc;
+sub t by t.sc;
+sub tcaron by tcaron.sc;
+sub tcircumflexbelow by tcircumflexbelow.sc;
+sub tcommaaccent by tcommaaccent.sc;
+sub tdotaccent by tdotaccent.sc;
+sub tdotbelow by tdotbelow.sc;
+sub u by u.sc;
+sub uacute by uacute.sc;
+sub ubreve by ubreve.sc;
+sub ucircumflex by ucircumflex.sc;
+sub ucircumflexbelow by ucircumflexbelow.sc;
+sub udblgrave by udblgrave.sc;
+sub udieresis by udieresis.sc;
+sub udieresisacute by udieresisacute.sc;
+sub udieresisbelow by udieresisbelow.sc;
+sub udieresiscaron by udieresiscaron.sc;
+sub udieresisgrave by udieresisgrave.sc;
+sub udieresismacron by udieresismacron.sc;
+sub udotbelow by udotbelow.sc;
+sub ugrave by ugrave.sc;
+sub uhookabove by uhookabove.sc;
+sub uhungarumlaut by uhungarumlaut.sc;
+sub uinvertedbreve by uinvertedbreve.sc;
+sub umacron by umacron.sc;
+sub umacrondieresis by umacrondieresis.sc;
+sub uogonek by uogonek.sc;
+sub uring by uring.sc;
+sub v by v.sc;
+sub w by w.sc;
+sub wacute by wacute.sc;
+sub wcircumflex by wcircumflex.sc;
+sub wdieresis by wdieresis.sc;
+sub wdotaccent by wdotaccent.sc;
+sub wdotbelow by wdotbelow.sc;
+sub wgrave by wgrave.sc;
+sub x by x.sc;
+sub xdotaccent by xdotaccent.sc;
+sub y by y.sc;
+sub yacute by yacute.sc;
+sub ycircumflex by ycircumflex.sc;
+sub ydieresis by ydieresis.sc;
+sub ydotaccent by ydotaccent.sc;
+sub ydotbelow by ydotbelow.sc;
+sub ygrave by ygrave.sc;
+sub ymacron by ymacron.sc;
+sub ytilde by ytilde.sc;
+sub z by z.sc;
+sub zacute by zacute.sc;
+sub zcaron by zcaron.sc;
+sub zcircumflex by zcircumflex.sc;
+sub zdotaccent by zdotaccent.sc;
+sub zdotbelow by zdotbelow.sc;
+sub eth.loclENG by eth.sc;
+sub thorn.loclENG by thorn.loclENG.sc;
+sub uniE404 by uniE404.sc;
+sub uniE40A by uniE40A.sc;
+sub uniE410 by uniE410.sc;
+sub uniE425 by uniE425.sc;
+sub uniE42C by uniE42C.sc;
+sub uniE433 by uniE433.sc;
+sub uniE436 by uniE436.sc;
+sub uniE43A by uniE43A.sc;
+sub uniE43D by uniE43D.sc;
+sub uniE43F by uniE43F.sc;
+sub uniE440 by uniE440.sc;
+sub uniE441 by uniE441.sc;
+sub uniE442 by uniE442.sc;
+sub uniE443 by uniE443.sc;
+sub uniE444 by uniE444.sc;
+sub uniE466 by uniE466.sc;
+sub uniE476 by uniE476.sc;
+sub uniE477 by uniE477.sc;
+sub uniE48F by uniE48F.sc;
+sub uniE499 by uniE499.sc;
+sub uniE4B7 by uniE4B7.sc;
+sub uniE4BC by uniE4BC.sc;
+sub uniE4C8 by uniE4C8.sc;
+sub uniE4D1 by uniE4D1.sc;
+sub uniE4E1 by uniE4E1.sc;
+sub uniE4E8 by uniE4E8.sc;
+sub uniE4E9 by uniE4E9.sc;
+sub uniE4EA by uniE4EA.sc;
+sub uniE4EB by uniE4EB.sc;
+sub uniE4EC by uniE4EC.sc;
+sub uniE4EE by uniE4EE.sc;
+sub uniE4F0 by uniE4F0.sc;
+sub uniE501 by uniE501.sc;
+sub uniE516 by uniE516.sc;
+sub uniE52A by uniE52A.sc;
+sub uniE535 by uniE535.sc;
+sub uniE537 by uniE537.sc;
+sub uniE543 by uniE543.sc;
+sub uniE551 by uniE551.sc;
+sub uniE552 by uniE552.sc;
+sub uniE553 by uniE553.sc;
+sub uniE562 by uniE562.sc;
+sub uniE563 by uniE563.sc;
+sub uniE5DC by uniE5DC.sc;
+sub uniE608 by uniE608.sc;
+sub uniE60C by uniE60C.sc;
+sub uniE61B by uniE61B.sc;
+sub uniE62D by uniE62D.sc;
+sub uniE644 by uniE644.sc;
+sub uniE646 by uniE646.sc;
+sub uniE64F by uniE64F.sc;
+sub uniE652 by uniE652.sc;
+sub uniE653 by uniE653.sc;
+sub uniE655 by uniE655.sc;
+sub uniE657 by uniE657.sc;
+sub uniE659 by uniE659.sc;
+sub uniE65D by uniE65D.sc;
+sub uniE660 by uniE660.sc;
+sub uniE662 by uniE662.sc;
+sub uniE668 by uniE668.sc;
+sub uniE66D by uniE66D.sc;
+sub uniE682 by uniE682.sc;
+sub uniE688 by uniE688.sc;
+sub uniE6E2 by uniE6E2.sc;
+sub uniE6EE by uniE6EE.sc;
+sub uniE709 by uniE709.sc;
+sub uniE70B by uniE70B.sc;
+sub uniE715 by uniE715.sc;
+sub uniE717 by uniE717.sc;
+sub uniE724 by uniE724.sc;
+sub uniE72B by uniE72B.sc;
+sub uniE72D by uniE72D.sc;
+sub uniE731 by uniE731.sc;
+sub uniE73A by uniE73A.sc;
+sub uniE73B by uniE73B.sc;
+sub uniE742 by uniE742.sc;
+sub uniE74B by uniE74B.sc;
+sub uniE74C by uniE74C.sc;
+sub uniE74D by uniE74D.sc;
+sub uniE74F by uniE74F.sc;
+sub uniE750 by uniE750.sc;
+sub uniE753 by uniE753.sc;
+sub uniE757 by uniE757.sc;
+sub uniE773 by uniE773.sc;
+sub uniE775 by uniE775.sc;
+sub uniE776 by uniE776.sc;
+sub uniE77C by uniE77C.sc;
+sub uniE784 by uniE784.sc;
+sub uniE785 by uniE785.sc;
+sub uniE79F by uniE79F.sc;
+sub uniE7D3 by uniE7D3.sc;
+sub uniE7D4 by uniE7D4.sc;
+sub uniE8D1 by uniE8D1.sc;
+sub uniEBB8 by uniEBB8.sc;
+sub uniEBC5 by uniEBC5.sc;
+sub uniEBC7 by uniEBC7.sc;
+sub uniEBC9 by uniEBC9.sc;
+sub uniEBCE by uniEBCE.sc;
+sub uniEBDF by uniEBDF.sc;
+sub uniEBE1 by uniEBE1.sc;
+sub uniEBF5 by uniEBF5.sc;
+sub uniEBF7 by uniEBF7.sc;
+sub uniEBF9 by uniEBF9.sc;
+sub uniEBFB by uniEBFB.sc;
+sub uniEBFD by uniEBFD.sc;
+sub uniEBFF by uniEBFF.sc;
+sub uniEFDC by uniEFDC.sc;
+sub uniF183 by uniF183.sc;
+sub uniE4E8.alt by uniE4E8.alt.sc;
+sub uniE4EA.alt by uniE4EA.alt.sc;
+sub uniE4EB.alt by uniE4EB.alt.sc;
+sub uniE4EC.alt by uniE4EC.alt.sc;
+sub uniEBF3.alt by uniEBF3.alt.sc;
+sub oogonekaboveacute by oogonekaboveacute.sc;
+sub dotacutecomb by dotacutecomb.sc;
+sub dieresiscomb by dieresiscomb.sc;
+sub dotaccentcomb by dotaccentcomb.sc;
+sub gravecomb by gravecomb.sc;
+sub acutecomb by acutecomb.sc;
+sub hungarumlautcomb by hungarumlautcomb.sc;
+sub circumflexcomb by circumflexcomb.sc;
+sub caroncomb by caroncomb.sc;
+sub brevecomb by brevecomb.sc;
+sub tildecomb by tildecomb.sc;
+sub macroncomb by macroncomb.sc;
+sub hookabovecomb by hookabovecomb.sc;
+sub dblgravecomb by dblgravecomb.sc;
+sub caron by caron.sc;
+sub carondotcomb by carondotcomb.sc;
+sub breveinvertedcomb by breveinvertedcomb.sc;
+sub ogonekcomb by ogonekcomb.sc;
+";
+tag = smcp;
+},
+{
+code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 aogonek.alt3 ] ;
+sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
+";
+labels = (
+{
+language = dflt;
+value = "Alternate a + ogonek";
+}
+);
+tag = cv02;
+},
+{
+code = "sub eogonek from [ eogonek.alt eogonek.alt2 ] ;
+sub eogonekenlarged by eogonekenlarged.alt ;
+sub uniF135 by uniF135.alt ;
+sub uniE499 by uniE499.alt ;
+sub uniE49F by uniE49F.alt ;
+sub uniE4BC by uniE4BC.alt ;
+sub uniE4E8 by uniE4E8.alt ;
+sub uniE4EA by uniE4EA.alt ;
+sub uniE4EB by uniE4EB.alt ;
+sub uniE4EC by uniE4EC.alt ;
+sub uniEBF3 by uniEBF3.alt ;
+sub Eogonek by Eogonek.alt ;
+";
+disabled = 1;
+labels = (
+{
+language = dflt;
+value = "Alternate e + ogonek";
+}
+);
+tag = cv08;
+},
+{
+code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ] ;
+";
+labels = (
+{
+language = dflt;
+value = "Alternate o";
+}
+);
+tag = cv16;
+},
+{
+code = "sub lhighstroke by lhighstroke.alt ;
+";
+tag = cv59;
+},
+{
+code = "sub rumrotunda by rumrotunda.alt ;";
+tag = cv60;
+},
+{
+code = "sub f f t by f_f_t ;
+sub f f udieresis by f_f_udieresis ;
+sub f f i by uniFB03 ;
+sub f f l by uniFB04 ;
+sub f f y by f_f_y ;
+sub f t y by f_t_y ;
+sub Q u by Q_u ;
+sub f j by f_j ;
+sub f eth by f_eth ;
+sub f eth.loclENG by f_eth.loclENG ;
+sub f thorn by f_thorn ;
+sub f thorn.loclENG by f_thorn.loclENG ;
+sub f f by uniFB00 ;
+sub f f.alt by f_f.alt ;
+sub f i by uniFB01 ;
+sub f l by uniFB02 ;
+sub f odieresis by f_odieresis ;
+sub f r by f_r ;
+sub f t by f_t ;
+sub f udieresis by f_udieresis ;
+sub f y by f_y ;
+sub longs longs by longs_longs ;
+";
+tag = liga;
+},
+{
+automatic = 1;
+code = "sub zero by zeroinferior;
+sub one by oneinferior;
+sub two by twoinferior;
+sub three by threeinferior;
+sub four by fourinferior;
+sub five by fiveinferior;
+sub six by sixinferior;
+sub seven by seveninferior;
+sub eight by eightinferior;
+sub nine by nineinferior;
+";
+tag = sinf;
+},
+{
+automatic = 1;
+code = "sub one slash eight by oneeighth;
+sub one slash four by onequarter;
+sub three slash eight by threeeighths;
+sub one slash two by onehalf;
+sub five slash eight by fiveeighths;
+sub three slash four by threequarters;
+sub seven slash eight by seveneighths;
+sub one slash three by onethird;
+sub two slash three by twothirds;
+sub one slash five by onefifth;
+sub two slash five by twofifths;
+sub three slash five by threefifths;
+sub four slash five by fourfifths;
+sub one slash six by onesixth;
+sub five slash six by fivesixths;
+sub one slash by onefraction;
+";
+tag = frac;
+},
+{
+automatic = 1;
+code = "lookupflag IgnoreMarks;
+sub f f t by f_f_t;
+sub f f udieresis by f_f_udieresis;
+sub Q u by Q_u;
+sub f eth.loclENG by f_eth.loclENG;
+sub f.alt f.alt by f_f.alt;
+sub f t by f_t;
+sub f udieresis by f_udieresis;
+sub longs longs by longs_longs;
+sub o rrotunda by o_rrotunda;
+sub f f by uniFB00;
+sub f i by uniFB01;
+sub f l by uniFB02;
+sub f f i by uniFB03;
+sub f f l by uniFB04;
+";
+tag = dlig;
+}
+);
+fontMaster = (
+{
+axesValues = (
+400,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = typoAscender;
+value = 1485;
+},
+{
+name = typoDescender;
+value = -563;
+},
+{
+name = typoLineGap;
+value = 900;
+},
+{
+name = hheaAscender;
+value = 1485;
+},
+{
+name = hheaDescender;
+value = -563;
+},
+{
+name = hheaLineGap;
+value = 900;
+},
+{
+name = winAscent;
+value = 2070;
+},
+{
+name = winDescent;
+value = 880;
+},
+{
+name = underlineThickness;
+value = 70;
+},
+{
+name = underlinePosition;
+value = -170;
+},
+{
+name = "Alignment Zones";
+value = (
+{
+pos = 930;
+size = 22;
+}
+);
+}
+);
+id = master01;
+metricValues = (
+{
+over = 16;
+pos = 1485;
+},
+{
+over = 23;
+pos = 1363;
+},
+{
+over = 31;
+pos = 852;
+},
+{
+over = -28;
+},
+{
+over = -31;
+pos = -563;
+},
+{
+pos = 937;
+},
+{
+pos = 16;
+}
+);
+name = Italic;
+userData = {
+GSCornerRadius = 189;
+};
+},
+{
+axesValues = (
+700,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = typoAscender;
+value = 1485;
+},
+{
+name = typoDescender;
+value = -563;
+},
+{
+name = typoLineGap;
+value = 900;
+},
+{
+name = hheaAscender;
+value = 1485;
+},
+{
+name = hheaDescender;
+value = -563;
+},
+{
+name = hheaLineGap;
+value = 900;
+},
+{
+name = winAscent;
+value = 2070;
+},
+{
+name = winDescent;
+value = 880;
+},
+{
+name = underlineThickness;
+value = 69;
+},
+{
+name = underlinePosition;
+value = -235;
+},
+{
+name = "Alignment Zones";
+value = (
+{
+pos = 930;
+size = 21;
+}
+);
+}
+);
+iconName = Bold;
+id = "2438E31C-45B5-47A7-9B3D-1A0FEFB47671";
+metricValues = (
+{
+over = 16;
+pos = 1485;
+},
+{
+over = 22;
+pos = 1363;
+},
+{
+over = 31;
+pos = 852;
+},
+{
+over = -28;
+},
+{
+over = -31;
+pos = -563;
+},
+{
+pos = 937;
+},
+{
+pos = 16;
+}
+);
+name = "Bold Italic";
+userData = {
+GSCornerRadius = 165;
+};
+},
+{
+axesValues = (
+300,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = typoAscender;
+value = 1485;
+},
+{
+name = typoDescender;
+value = -563;
+},
+{
+name = typoLineGap;
+value = 900;
+},
+{
+name = hheaAscender;
+value = 1485;
+},
+{
+name = hheaDescender;
+value = -563;
+},
+{
+name = hheaLineGap;
+value = 900;
+},
+{
+name = winAscent;
+value = 2070;
+},
+{
+name = winDescent;
+value = 880;
+},
+{
+name = underlineThickness;
+value = 70;
+},
+{
+name = underlinePosition;
+value = -148;
+},
+{
+name = "Alignment Zones";
+value = (
+{
+pos = 930;
+size = 23;
+}
+);
+}
+);
+iconName = Light;
+id = "7904EAEE-2B64-409E-B923-0048172372BE";
+metricValues = (
+{
+over = 16;
+pos = 1485;
+},
+{
+over = 23;
+pos = 1363;
+},
+{
+over = 31;
+pos = 852;
+},
+{
+over = -28;
+},
+{
+over = -31;
+pos = -563;
+},
+{
+pos = 937;
+},
+{
+pos = 16;
+}
+);
+name = "Light Italic";
+userData = {
+GSCornerRadius = 30;
+};
+},
+{
+axesValues = (
+400,
+60,
+0,
+1
+);
+customParameters = (
+{
+name = typoAscender;
+value = 1485;
+},
+{
+name = typoDescender;
+value = -563;
+},
+{
+name = typoLineGap;
+value = 900;
+},
+{
+name = hheaAscender;
+value = 1485;
+},
+{
+name = hheaDescender;
+value = -563;
+},
+{
+name = hheaLineGap;
+value = 900;
+},
+{
+name = winAscent;
+value = 2070;
+},
+{
+name = winDescent;
+value = 880;
+},
+{
+name = underlineThickness;
+value = 70;
+},
+{
+name = underlinePosition;
+value = -170;
+},
+{
+name = "Alignment Zones";
+value = (
+{
+pos = 930;
+size = 22;
+}
+);
+}
+);
+id = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
+metricValues = (
+{
+over = 16;
+pos = 1485;
+},
+{
+over = 23;
+pos = 1363;
+},
+{
+over = 31;
+pos = 852;
+},
+{
+over = -28;
+},
+{
+over = -31;
+pos = -563;
+},
+{
+pos = 937;
+},
+{
+pos = 13;
+}
+);
+name = "Narrow Italic";
+userData = {
+GSCornerRadius = 19;
+};
+},
+{
+axesValues = (
+400,
+140,
+0,
+1
+);
+customParameters = (
+{
+name = typoAscender;
+value = 1485;
+},
+{
+name = typoDescender;
+value = -563;
+},
+{
+name = typoLineGap;
+value = 900;
+},
+{
+name = hheaAscender;
+value = 1485;
+},
+{
+name = hheaDescender;
+value = -563;
+},
+{
+name = hheaLineGap;
+value = 900;
+},
+{
+name = winAscent;
+value = 2070;
+},
+{
+name = winDescent;
+value = 880;
+},
+{
+name = underlineThickness;
+value = 70;
+},
+{
+name = underlinePosition;
+value = -170;
+},
+{
+name = "Alignment Zones";
+value = (
+{
+pos = 930;
+size = 22;
+}
+);
+}
+);
+id = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
+metricValues = (
+{
+over = 16;
+pos = 1485;
+},
+{
+over = 23;
+pos = 1363;
+},
+{
+over = 31;
+pos = 852;
+},
+{
+over = -28;
+},
+{
+over = -31;
+pos = -563;
+},
+{
+pos = 937;
+},
+{
+pos = 16;
+}
+);
+name = "Expanded Italic";
+userData = {
+GSCornerRadius = 19;
+};
+},
+{
+axesValues = (
+400,
+100,
+1,
+1
+);
+customParameters = (
+{
+name = typoAscender;
+value = 1485;
+},
+{
+name = typoDescender;
+value = -563;
+},
+{
+name = typoLineGap;
+value = 900;
+},
+{
+name = hheaAscender;
+value = 1485;
+},
+{
+name = hheaDescender;
+value = -563;
+},
+{
+name = hheaLineGap;
+value = 900;
+},
+{
+name = winAscent;
+value = 2070;
+},
+{
+name = winDescent;
+value = 880;
+},
+{
+name = underlineThickness;
+value = 70;
+},
+{
+name = underlinePosition;
+value = -170;
+},
+{
+name = "Alignment Zones";
+value = (
+{
+pos = 930;
+size = 22;
+}
+);
+}
+);
+id = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
+metricValues = (
+{
+over = 16;
+pos = 1485;
+},
+{
+over = 23;
+pos = 1363;
+},
+{
+over = 31;
+pos = 852;
+},
+{
+over = -28;
+},
+{
+over = -31;
+pos = -563;
+},
+{
+pos = 937;
+},
+{
+pos = 16;
+}
+);
+name = Enlarged;
+userData = {
+GSCornerRadius = 30;
+};
+}
+);
+instances = (
+{
+axesValues = (
+300,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wght;
+},
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Style Name as STAT entry";
+value = wght;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"7904EAEE-2B64-409E-B923-0048172372BE" = 1;
+};
+isItalic = 1;
+linkStyle = Light;
+name = "Light Italic";
+weightClass = 300;
+},
+{
+axesValues = (
+400,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = "Elidable STAT Axis Value Name";
+value = ital;
+},
+{
+name = "Style Name as STAT entry";
+value = wght;
+},
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+master01 = 1;
+};
+isItalic = 1;
+name = Italic;
+},
+{
+axesValues = (
+500,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wght;
+},
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
+master01 = 0.66667;
+};
+isItalic = 1;
+linkStyle = Medium;
+name = "Medium Italic";
+weightClass = 500;
+},
+{
+axesValues = (
+600,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wght;
+},
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
+master01 = 0.33333;
+};
+isItalic = 1;
+linkStyle = Semibold;
+name = "Semibold Italic";
+weightClass = 600;
+},
+{
+axesValues = (
+700,
+100,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wght;
+},
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1;
+};
+isBold = 1;
+isItalic = 1;
+name = "Bold Italic";
+weightClass = 700;
+},
+{
+axesValues = (
+300,
+60,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.08333;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 1.25;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.5;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.5;
+master01 = -0.33333;
+};
+isItalic = 1;
+linkStyle = "Condensed Light";
+name = "Condensed Light Italic";
+weightClass = 300;
+widthClass = 3;
+},
+{
+axesValues = (
+400,
+60,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 1;
+};
+isItalic = 1;
+linkStyle = Condensed;
+name = "Condensed Italic";
+widthClass = 3;
+},
+{
+axesValues = (
+500,
+60,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.08333;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.91667;
+master01 = -0.16667;
+};
+isItalic = 1;
+linkStyle = "Condensed Medium";
+name = "Condensed Medium Italic";
+weightClass = 500;
+widthClass = 3;
+},
+{
+axesValues = (
+600,
+60,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.16667;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.83333;
+master01 = -0.33333;
+};
+isItalic = 1;
+linkStyle = "Condensed Semibold";
+name = "Condensed Semibold Italic";
+weightClass = 600;
+widthClass = 3;
+},
+{
+axesValues = (
+700,
+60,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.0625;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.1875;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.625;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.375;
+};
+isBold = 1;
+isItalic = 1;
+linkStyle = Condensed;
+name = "Condensed Bold Italic";
+weightClass = 700;
+widthClass = 3;
+},
+{
+axesValues = (
+300,
+80,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = -0.04167;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.875;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.19444;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.30556;
+master01 = 0.05556;
+};
+isItalic = 1;
+linkStyle = "SemiCondensed Light";
+name = "SemiCondensed Light Italic";
+weightClass = 300;
+widthClass = 4;
+},
+{
+axesValues = (
+400,
+80,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.5;
+master01 = 0.5;
+};
+isItalic = 1;
+linkStyle = SemiCondensed;
+name = "SemiCondensed Italic";
+widthClass = 4;
+},
+{
+axesValues = (
+500,
+80,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.5;
+master01 = 0.16667;
+};
+isItalic = 1;
+linkStyle = "SemiCondensed Medium";
+name = "SemiCondensed Medium Italic";
+weightClass = 500;
+widthClass = 4;
+},
+{
+axesValues = (
+600,
+80,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.65278;
+"7904EAEE-2B64-409E-B923-0048172372BE" = -0.04167;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.02778;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.47222;
+master01 = -0.05556;
+};
+isItalic = 1;
+linkStyle = "SemiCondensed Semibold";
+name = "SemiCondensed Semibold Italic";
+weightClass = 600;
+widthClass = 4;
+},
+{
+axesValues = (
+700,
+80,
+0,
+1
+);
+customParameters = (
+{
+name = "Export STAT Table";
+value = 0;
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.01667;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.05;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.31111;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.18889;
+master01 = 0.05556;
+};
+isBold = 1;
+isItalic = 1;
+linkStyle = SemiCondensed;
+name = "SemiCondensed Bold Italic";
+weightClass = 700;
+widthClass = 4;
+},
+{
+axesValues = (
+400,
+140,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 1;
+};
+isItalic = 1;
+linkStyle = Expanded;
+name = "Expanded Italic";
+widthClass = 7;
+},
+{
+axesValues = (
+300,
+140,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.08333;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 1.25;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.5;
+master01 = -0.33333;
+};
+isItalic = 1;
+linkStyle = "Expanded Light";
+name = "Expanded Light Italic";
+widthClass = 7;
+},
+{
+axesValues = (
+400,
+120,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
+master01 = 0.5;
+};
+isItalic = 1;
+linkStyle = SemiExpanded;
+name = "SemiExpanded Italic";
+widthClass = 7;
+},
+{
+axesValues = (
+300,
+120,
+0,
+1
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = -0.04167;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.875;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.30556;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.19444;
+master01 = 0.05556;
+};
+isItalic = 1;
+linkStyle = "SemiExpanded Light";
+name = "SemiExpanded Light Italic";
+widthClass = 7;
+},
+{
+axesValues = (
+400,
+100,
+1,
+1
+);
+customParameters = (
+{
+name = "Keep Overlapping Components";
+value = 1;
+}
+);
+instanceInterpolations = {
+"997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 1;
+};
+name = Enlarged;
+}
+);
+kerningLTR = {
+master01 = {
+"@MMK_L_glotttalstopsmall" = {
+"@MMK_R_a" = -40;
+};
+};
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = {
+"@MMK_L_g" = {
+"@MMK_R_glottalstopsmall" = 90;
+};
+"@MMK_L_glotttalstopsmall" = {
+"@MMK_R_a" = -40;
+};
+};
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = {
+"@MMK_L_glotttalstopsmall" = {
+"@MMK_R_a" = -50;
+};
+};
+};
+metrics = (
+{
+type = ascender;
+},
+{
+type = "cap height";
+},
+{
+type = "x-height";
+},
+{
+type = baseline;
+},
+{
+type = descender;
+},
+{
+filter = "case == 3";
+name = smallCapHeight;
+type = "x-height";
+},
+{
+type = "italic angle";
+}
+);
+properties = (
+{
+key = copyrights;
+values = (
+{
+language = dflt;
+value = "Copyright (c) 1998-2020 by Peter S. Baker";
+}
+);
+},
+{
+key = licenses;
+values = (
+{
+language = dflt;
+value = "Licensed under the SIL Open Font License, version 1.1";
+}
+);
+},
+{
+key = licenseURL;
+value = "http://scripts.sil.org/OFL";
+},
+{
+key = vendorID;
+value = psbk;
+}
+);
+unitsPerEm = 2048;
+userData = {
+UFOFormat = 2;
+};
+versionMajor = 1;
+versionMinor = 3;
+}

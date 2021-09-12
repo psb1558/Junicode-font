@@ -709,6 +709,7 @@ sub omacronacute by omacronacute.sc;
 sub omacrongrave by omacrongrave.sc;
 sub oogonek by oogonek.sc;
 sub oslash by oslash.sc;
+sub oslashacute by oslashacute.sc;
 sub otilde by otilde.sc;
 sub otildeacute by otildeacute.sc;
 sub otildedieresis by otildedieresis.sc;
@@ -789,6 +790,7 @@ sub zcaron by zcaron.sc;
 sub zcircumflex by zcircumflex.sc;
 sub zdotaccent by zdotaccent.sc;
 sub zdotbelow by zdotbelow.sc;
+sub n.alt2 by n.alt2.sc;
 sub eth.loclENG by eth.sc;
 sub thorn.loclENG by thorn.loclENG.sc;
 sub uniE404 by uniE404.sc;
@@ -809,7 +811,6 @@ sub uniE444 by uniE444.sc;
 sub uniE466 by uniE466.sc;
 sub uniE476 by uniE476.sc;
 sub uniE477 by uniE477.sc;
-sub uniE48F by uniE48F.sc;
 sub uniE499 by uniE499.sc;
 sub uniE4B7 by uniE4B7.sc;
 sub uniE4BC by uniE4BC.sc;
@@ -891,6 +892,8 @@ sub uniEBC9 by uniEBC9.sc;
 sub uniEBCE by uniEBCE.sc;
 sub uniEBDF by uniEBDF.sc;
 sub uniEBE1 by uniEBE1.sc;
+sub uniEBED by uniEBED.sc;
+sub uniEBEF by uniEBEF.sc;
 sub uniEBF5 by uniEBF5.sc;
 sub uniEBF7 by uniEBF7.sc;
 sub uniEBF9 by uniEBF9.sc;
@@ -1152,7 +1155,7 @@ pos = 16;
 );
 name = Italic;
 userData = {
-GSCornerRadius = 35;
+GSCornerRadius = 25;
 };
 },
 {
@@ -1244,7 +1247,7 @@ pos = 16;
 );
 name = "Bold Italic";
 userData = {
-GSCornerRadius = 165;
+GSCornerRadius = 25;
 };
 },
 {
@@ -1336,7 +1339,7 @@ pos = 16;
 );
 name = "Light Italic";
 userData = {
-GSCornerRadius = 30;
+GSCornerRadius = 25;
 };
 },
 {
@@ -1427,7 +1430,7 @@ pos = 13;
 );
 name = "Narrow Italic";
 userData = {
-GSCornerRadius = 19;
+GSCornerRadius = 25;
 };
 },
 {
@@ -1518,7 +1521,7 @@ pos = 16;
 );
 name = "Expanded Italic";
 userData = {
-GSCornerRadius = 19;
+GSCornerRadius = 25;
 };
 },
 {
@@ -1609,7 +1612,7 @@ pos = 16;
 );
 name = Enlarged;
 userData = {
-GSCornerRadius = 30;
+GSCornerRadius = 25;
 };
 }
 );

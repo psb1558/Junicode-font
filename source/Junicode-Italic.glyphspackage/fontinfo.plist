@@ -13,11 +13,6 @@ tag = wdth;
 {
 name = Enlarge;
 tag = ENLA;
-},
-{
-hidden = 1;
-name = Italic;
-tag = ital;
 }
 );
 classes = (
@@ -57,10 +52,14 @@ value = (
 {
 name = "Enforce Compatibility Check";
 value = 1;
+},
+{
+name = versionString;
+value = "Version %d.%03d alpha";
 }
 );
 date = "2020-10-05 13:39:53 +0000";
-familyName = JuniusX;
+familyName = Junicode;
 featurePrefixes = (
 {
 automatic = 1;
@@ -575,6 +574,7 @@ tag = zero;
 {
 automatic = 1;
 code = "sub a by a.sc;
+sub aa by aa.sc;
 sub aacute by aacute.sc;
 sub abreve by abreve.sc;
 sub abreveacute by abreveacute.sc;
@@ -599,12 +599,14 @@ sub agrave by agrave.sc;
 sub ahookabove by ahookabove.sc;
 sub ainvertedbreve by ainvertedbreve.sc;
 sub amacron by amacron.sc;
+sub ao by ao.sc;
 sub aogonek by aogonek.sc;
 sub aring by aring.sc;
 sub aringacute by aringacute.sc;
 sub aringbelow by aringbelow.sc;
 sub atilde by atilde.sc;
 sub ae by ae.sc;
+sub aeacute by aeacute.sc;
 sub uni01E3 by uni01E3.sc;
 sub b by b.sc;
 sub c by c.sc;
@@ -790,123 +792,10 @@ sub zcaron by zcaron.sc;
 sub zcircumflex by zcircumflex.sc;
 sub zdotaccent by zdotaccent.sc;
 sub zdotbelow by zdotbelow.sc;
+sub a.alt1 by a.alt1.sc;
 sub n.alt2 by n.alt2.sc;
 sub eth.loclENG by eth.sc;
 sub thorn.loclENG by thorn.loclENG.sc;
-sub uniE404 by uniE404.sc;
-sub uniE40A by uniE40A.sc;
-sub uniE410 by uniE410.sc;
-sub uniE425 by uniE425.sc;
-sub uniE42C by uniE42C.sc;
-sub uniE433 by uniE433.sc;
-sub uniE436 by uniE436.sc;
-sub uniE43A by uniE43A.sc;
-sub uniE43D by uniE43D.sc;
-sub uniE43F by uniE43F.sc;
-sub uniE440 by uniE440.sc;
-sub uniE441 by uniE441.sc;
-sub uniE442 by uniE442.sc;
-sub uniE443 by uniE443.sc;
-sub uniE444 by uniE444.sc;
-sub uniE466 by uniE466.sc;
-sub uniE476 by uniE476.sc;
-sub uniE477 by uniE477.sc;
-sub uniE499 by uniE499.sc;
-sub uniE4B7 by uniE4B7.sc;
-sub uniE4BC by uniE4BC.sc;
-sub uniE4C8 by uniE4C8.sc;
-sub uniE4D1 by uniE4D1.sc;
-sub uniE4E1 by uniE4E1.sc;
-sub uniE4E8 by uniE4E8.sc;
-sub uniE4E9 by uniE4E9.sc;
-sub uniE4EA by uniE4EA.sc;
-sub uniE4EB by uniE4EB.sc;
-sub uniE4EC by uniE4EC.sc;
-sub uniE4EE by uniE4EE.sc;
-sub uniE4F0 by uniE4F0.sc;
-sub uniE501 by uniE501.sc;
-sub uniE516 by uniE516.sc;
-sub uniE52A by uniE52A.sc;
-sub uniE535 by uniE535.sc;
-sub uniE537 by uniE537.sc;
-sub uniE543 by uniE543.sc;
-sub uniE551 by uniE551.sc;
-sub uniE552 by uniE552.sc;
-sub uniE553 by uniE553.sc;
-sub uniE562 by uniE562.sc;
-sub uniE563 by uniE563.sc;
-sub uniE5DC by uniE5DC.sc;
-sub uniE608 by uniE608.sc;
-sub uniE60C by uniE60C.sc;
-sub uniE61B by uniE61B.sc;
-sub uniE62D by uniE62D.sc;
-sub uniE644 by uniE644.sc;
-sub uniE646 by uniE646.sc;
-sub uniE64F by uniE64F.sc;
-sub uniE652 by uniE652.sc;
-sub uniE653 by uniE653.sc;
-sub uniE655 by uniE655.sc;
-sub uniE657 by uniE657.sc;
-sub uniE659 by uniE659.sc;
-sub uniE65D by uniE65D.sc;
-sub uniE660 by uniE660.sc;
-sub uniE662 by uniE662.sc;
-sub uniE668 by uniE668.sc;
-sub uniE66D by uniE66D.sc;
-sub uniE682 by uniE682.sc;
-sub uniE688 by uniE688.sc;
-sub uniE6E2 by uniE6E2.sc;
-sub uniE6EE by uniE6EE.sc;
-sub uniE709 by uniE709.sc;
-sub uniE70B by uniE70B.sc;
-sub uniE715 by uniE715.sc;
-sub uniE717 by uniE717.sc;
-sub uniE724 by uniE724.sc;
-sub uniE72B by uniE72B.sc;
-sub uniE72D by uniE72D.sc;
-sub uniE731 by uniE731.sc;
-sub uniE73A by uniE73A.sc;
-sub uniE73B by uniE73B.sc;
-sub uniE742 by uniE742.sc;
-sub uniE74B by uniE74B.sc;
-sub uniE74C by uniE74C.sc;
-sub uniE74D by uniE74D.sc;
-sub uniE74F by uniE74F.sc;
-sub uniE750 by uniE750.sc;
-sub uniE753 by uniE753.sc;
-sub uniE757 by uniE757.sc;
-sub uniE773 by uniE773.sc;
-sub uniE775 by uniE775.sc;
-sub uniE776 by uniE776.sc;
-sub uniE77C by uniE77C.sc;
-sub uniE784 by uniE784.sc;
-sub uniE785 by uniE785.sc;
-sub uniE79F by uniE79F.sc;
-sub uniE7D3 by uniE7D3.sc;
-sub uniE7D4 by uniE7D4.sc;
-sub uniE8D1 by uniE8D1.sc;
-sub uniEBB8 by uniEBB8.sc;
-sub uniEBC5 by uniEBC5.sc;
-sub uniEBC7 by uniEBC7.sc;
-sub uniEBC9 by uniEBC9.sc;
-sub uniEBCE by uniEBCE.sc;
-sub uniEBDF by uniEBDF.sc;
-sub uniEBE1 by uniEBE1.sc;
-sub uniEBED by uniEBED.sc;
-sub uniEBEF by uniEBEF.sc;
-sub uniEBF5 by uniEBF5.sc;
-sub uniEBF7 by uniEBF7.sc;
-sub uniEBF9 by uniEBF9.sc;
-sub uniEBFB by uniEBFB.sc;
-sub uniEBFD by uniEBFD.sc;
-sub uniEBFF by uniEBFF.sc;
-sub uniEFDC by uniEFDC.sc;
-sub uniF183 by uniF183.sc;
-sub uniE4E8.alt by uniE4E8.alt.sc;
-sub uniE4EA.alt by uniE4EA.alt.sc;
-sub uniE4EB.alt by uniE4EB.alt.sc;
-sub uniE4EC.alt by uniE4EC.alt.sc;
-sub uniEBF3.alt by uniEBF3.alt.sc;
 sub oogonekaboveacute by oogonekaboveacute.sc;
 sub dotacutecomb by dotacutecomb.sc;
 sub dieresiscomb by dieresiscomb.sc;
@@ -1071,8 +960,7 @@ fontMaster = (
 axesValues = (
 400,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1155,15 +1043,14 @@ pos = 16;
 );
 name = Italic;
 userData = {
-GSCornerRadius = 25;
+GSCornerRadius = 15;
 };
 },
 {
 axesValues = (
 700,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1247,15 +1134,14 @@ pos = 16;
 );
 name = "Bold Italic";
 userData = {
-GSCornerRadius = 25;
+GSCornerRadius = 39;
 };
 },
 {
 axesValues = (
 300,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1346,8 +1232,7 @@ GSCornerRadius = 25;
 axesValues = (
 400,
 60,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1437,8 +1322,7 @@ GSCornerRadius = 25;
 axesValues = (
 400,
 140,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1528,7 +1412,6 @@ GSCornerRadius = 25;
 axesValues = (
 400,
 100,
-1,
 1
 );
 customParameters = (
@@ -1621,8 +1504,7 @@ instances = (
 axesValues = (
 300,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1654,8 +1536,7 @@ weightClass = 300;
 axesValues = (
 400,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1693,8 +1574,7 @@ name = Italic;
 axesValues = (
 500,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1723,8 +1603,7 @@ weightClass = 500;
 axesValues = (
 600,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1753,8 +1632,7 @@ weightClass = 600;
 axesValues = (
 700,
 100,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1782,8 +1660,7 @@ weightClass = 700;
 axesValues = (
 300,
 60,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1812,8 +1689,7 @@ widthClass = 3;
 axesValues = (
 400,
 60,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1841,8 +1717,7 @@ widthClass = 3;
 axesValues = (
 500,
 60,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1870,8 +1745,7 @@ widthClass = 3;
 axesValues = (
 600,
 60,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1899,8 +1773,7 @@ widthClass = 3;
 axesValues = (
 700,
 60,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1929,8 +1802,7 @@ widthClass = 3;
 axesValues = (
 300,
 80,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1959,8 +1831,7 @@ widthClass = 4;
 axesValues = (
 400,
 80,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -1985,8 +1856,7 @@ widthClass = 4;
 axesValues = (
 500,
 80,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2013,8 +1883,7 @@ widthClass = 4;
 axesValues = (
 600,
 80,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2043,8 +1912,7 @@ widthClass = 4;
 axesValues = (
 700,
 80,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2074,8 +1942,7 @@ widthClass = 4;
 axesValues = (
 400,
 140,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2103,8 +1970,7 @@ widthClass = 7;
 axesValues = (
 300,
 140,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2136,8 +2002,7 @@ widthClass = 7;
 axesValues = (
 400,
 120,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2166,8 +2031,7 @@ widthClass = 7;
 axesValues = (
 300,
 120,
-0,
-1
+0
 );
 customParameters = (
 {
@@ -2199,7 +2063,6 @@ widthClass = 7;
 axesValues = (
 400,
 100,
-1,
 1
 );
 customParameters = (
@@ -2291,6 +2154,6 @@ unitsPerEm = 2048;
 userData = {
 UFOFormat = 2;
 };
-versionMajor = 1;
-versionMinor = 3;
+versionMajor = 2;
+versionMinor = 0;
 }

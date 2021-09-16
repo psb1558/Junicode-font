@@ -47,6 +47,6 @@ My [Twitter](https://twitter.com/InPbaker) feed, where I'll share new developmen
 
 A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where you can post queries about the fonts and how to use them.
 
-An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with JuniusX/JuniusVF.
+An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with Junicode and JunicodeVF.
 
 **New!** An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.

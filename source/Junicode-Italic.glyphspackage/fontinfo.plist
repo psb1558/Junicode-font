@@ -821,6 +821,7 @@ tag = smcp;
 code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 aogonek.alt3 ] ;
 sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
 ";
+disabled = 1;
 labels = (
 {
 language = dflt;
@@ -1045,7 +1046,6 @@ name = Italic;
 userData = {
 GSCornerRadius = 15;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -1569,6 +1569,7 @@ instanceInterpolations = {
 master01 = 1;
 };
 isItalic = 1;
+linkStyle = Regular;
 name = Italic;
 },
 {
@@ -1654,6 +1655,7 @@ instanceInterpolations = {
 };
 isBold = 1;
 isItalic = 1;
+linkStyle = Regular;
 name = "Bold Italic";
 weightClass = 700;
 },
@@ -2001,6 +2003,103 @@ widthClass = 7;
 },
 {
 axesValues = (
+500,
+140,
+0
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.91667;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.08333;
+master01 = -0.16667;
+};
+isItalic = 1;
+linkStyle = "Expanded Medium";
+name = "Expanded Medium Italic";
+weightClass = 500;
+widthClass = 7;
+},
+{
+axesValues = (
+600,
+140,
+0
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.83333;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.16667;
+master01 = -0.33333;
+};
+isItalic = 1;
+linkStyle = "Expanded Semibold";
+name = "Expanded Semibold Italic";
+weightClass = 600;
+widthClass = 7;
+},
+{
+axesValues = (
+700,
+140,
+0
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.0625;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.1875;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.375;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.625;
+};
+isBold = 1;
+isItalic = 1;
+linkStyle = Expanded;
+name = "Expanded Bold Italic";
+weightClass = 700;
+widthClass = 7;
+},
+{
+axesValues = (
 400,
 120,
 0
@@ -2058,6 +2157,105 @@ master01 = 0.05556;
 isItalic = 1;
 linkStyle = "SemiExpanded Light";
 name = "SemiExpanded Light Italic";
+weightClass = 300;
+widthClass = 7;
+},
+{
+axesValues = (
+500,
+120,
+0
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
+master01 = 0.16667;
+};
+isItalic = 1;
+linkStyle = "SemiExpanded Medium";
+name = "SemiExpanded Medium Italic";
+weightClass = 500;
+widthClass = 7;
+},
+{
+axesValues = (
+600,
+120,
+0
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.65278;
+"7904EAEE-2B64-409E-B923-0048172372BE" = -0.04167;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.47222;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.02778;
+master01 = -0.05556;
+};
+isItalic = 1;
+linkStyle = "SemiExpanded Semibold";
+name = "SemiExpanded Semibold Italic";
+weightClass = 600;
+widthClass = 7;
+},
+{
+axesValues = (
+700,
+120,
+0
+);
+customParameters = (
+{
+name = "Style Name as STAT entry";
+value = wdth;
+},
+{
+name = "Style Name as STAT entry";
+value = ital;
+},
+{
+name = "Export STAT Table";
+value = 0;
+}
+);
+instanceInterpolations = {
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.01667;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.05;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.18889;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.31111;
+master01 = 0.05556;
+};
+isBold = 1;
+isItalic = 1;
+linkStyle = SemiExpanded;
+name = "SemiExpanded Bold Italic";
+weightClass = 700;
 widthClass = 7;
 },
 {
@@ -2075,7 +2273,7 @@ value = 1;
 instanceInterpolations = {
 "997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 1;
 };
-name = Enlarged;
+name = "Enlarged Italic";
 }
 );
 kerningLTR = {

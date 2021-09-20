@@ -134,6 +134,58 @@ lookup locl_latn_2 {
 tag = locl;
 },
 {
+code = "sub a by a.enlarged ;
+sub aa by aa.enlarged ;
+sub eogonek.alt by eogonek.enlarged.alt ;
+sub ao by ao.enlarged ;
+sub ae by ae.enlarged ;
+sub b by b.enlarged ;
+sub c by c.enlarged ;
+sub d by d.enlarged ;
+sub eth by eth.enlarged ;
+sub dinsular by dinsular.enlarged ;
+sub e by e.enlarged ;
+sub eogonek by eogonek.enlarged ;
+sub f by f.enlarged ;
+sub finsular by finsular.enlarged ;
+sub g by g.enlarged ;
+sub h by h.enlarged ;
+sub i by i.enlarged ;
+sub dotlessi by idotless.enlarged ;
+sub j by j.enlarged ;
+sub jdotless by jdotless.enlarged ;
+sub k by k.enlarged ;
+sub l by l.enlarged ;
+sub m by m.enlarged ;
+sub n by n.enlarged ;
+sub eth.loclENG by eth.enlarged.loclENG ;
+sub thorn by thorn.enlarged ;
+sub o by o.enlarged ;
+sub oe by oe.enlarged ;
+sub p by p.enlarged ;
+sub thorn.loclENG by thorn.enlarged.loclENG ;
+sub q by q.enlarged ;
+sub r by r.enlarged ;
+sub s by s.enlarged ;
+sub longs by longs.enlarged ;
+sub t by t.enlarged ;
+sub u by u.enlarged ;
+sub v by v.enlarged ;
+sub w by w.enlarged ;
+sub x by x.enlarged ;
+sub y by y.enlarged ;
+sub z by z.enlarged ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Enlarged minuscules";
+}
+);
+tag = ss06;
+},
+{
 automatic = 1;
 code = "sub A by a.sc;
 sub Aacute by aacute.sc;
@@ -1046,7 +1098,6 @@ name = Italic;
 userData = {
 GSCornerRadius = 15;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -1479,7 +1530,7 @@ pos = 1363;
 },
 {
 over = 31;
-pos = 852;
+pos = 1051;
 },
 {
 over = -28;

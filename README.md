@@ -36,7 +36,7 @@ fixed when necessary.
 
 The roman face of Junicode 2 is in beta testing. Interested users are encouraged
 to try it out and report bugs by opening issues on this site. The italic face is
-about 74% complete, and no compiled version will be available will be available
+about 68% complete, and no compiled version will be available
 until the character set is complete—probably some time in 2022.
 
 # Resources

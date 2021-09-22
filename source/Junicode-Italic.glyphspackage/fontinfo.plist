@@ -59,7 +59,7 @@ value = "Version %d.%03d alpha";
 }
 );
 date = "2020-10-05 13:39:53 +0000";
-familyName = Junicode;
+familyName = JunicodeTwoBeta;
 featurePrefixes = (
 {
 automatic = 1;
@@ -77,26 +77,321 @@ name = Languagesystems;
 features = (
 {
 automatic = 1;
-code = "feature locl;
-feature c2sc;
+code = "feature ss10;
+feature locl;
 feature case;
-feature ordn;
+feature nalt;
+feature sinf;
+feature frac;
 feature tnum;
 feature onum;
 feature pnum;
 feature lnum;
+feature zero;
 feature sups;
 feature subs;
-feature zero;
-feature smcp;
-feature cv02;
+feature ss01;
+feature ss02;
+feature hist;
+feature ss03;
+feature ss04;
+feature ss05;
+feature ss06;
+feature ss08;
+feature ss11;
+feature ss12;
+feature ss13;
+feature ss14;
+feature ss15;
+feature ss16;
+feature ss18;
+feature ss19;
+feature ss20;
+feature ordn;
+feature cv01;
+feature cv06;
+feature cv07;
+feature cv08;
+feature cv10;
+feature cv11;
+feature cv12;
 feature cv16;
+feature cv18;
+feature cv24;
+feature cv26;
+feature cv28;
+feature cv34;
+feature cv35;
+feature cv36;
+feature cv39;
+feature cv40;
+feature cv44;
+feature cv48;
+feature cv50;
+feature cv51;
+feature cv53;
+feature cv54;
+feature cv55;
+feature cv57;
+feature cv58;
 feature cv59;
 feature cv60;
-feature sinf;
-feature frac;
+feature cv61;
+feature cv62;
+feature cv63;
+feature cv64;
+feature cv65;
+feature cv67;
+feature cv80;
+feature cv81;
+feature cv88;
+feature c2sc;
+feature smcp;
+feature cv99;
+feature ss07;
+feature ss17;
 ";
 tag = aalt;
+},
+{
+code = "# lookup i_dot {
+#   sub [ i j ]' @combining_above by [ dotlessi jdotless ] ;
+# } i_dot ;
+
+lookup ogonekdot {
+# 4-part
+# eogonek + dotaccent + acute
+ sub e ogonekcomb dotaccentcomb acutecomb by eogonekdotacute ;
+ sub E ogonekcomb dotaccentcomb acutecomb by Eogonekdotacute ;
+# 3-part
+# eogonek + dotaccent + acute
+ sub eogonek dotaccentcomb acutecomb by eogonekdotacute ;
+ sub Eogonek dotaccentcomb acutecomb by Eogonekdotacute ;
+ # dotaccent + acute:
+ sub a dotaccentcomb acutecomb by adotaccentacute ;
+ sub A dotaccentcomb acutecomb by Adotaccentacute ;
+ sub ae dotaccentcomb acutecomb by aedotaccentacute ;
+ sub AE dotaccentcomb acutecomb by AEdotaccentacute ;
+ sub e dotaccentcomb acutecomb by edotaccentacute ;
+ sub E dotaccentcomb acutecomb by Edotaccentacute ;
+ sub i dotaccentcomb acutecomb by idotaccentacute ;
+ sub I dotaccentcomb acutecomb by Idotaccentacute ;
+ sub o dotaccentcomb acutecomb by odotaccentacute ;
+ sub O dotaccentcomb acutecomb by Odotaccentacute ;
+ sub oslash dotaccentcomb acutecomb by oslashdotaccentacute ;
+ sub Oslash dotaccentcomb acutecomb by Oslashdotaccentacute ;
+ sub u dotaccentcomb acutecomb by udotaccentacute ;
+ sub U dotaccentcomb acutecomb by Udotaccentacute ;
+ sub y dotaccentcomb acutecomb by ydotaccentacute ;
+ sub Y dotaccentcomb acutecomb by Ydotaccentacute ;
+ # ogonek above + acute
+ sub o ogonekabovecomb acutecomb by oogonekaboveacute ;
+ sub O ogonekabovecomb acutecomb by Oogonekaboveacute ;
+ sub e ogonekcomb dotbelowcomb by eogonekdotbelow ;
+ sub o ogonekcomb dotbelowcomb by oogonekdotbelow ;
+ sub E ogonekcomb dotbelowcomb by Eogonekdotbelow ;
+ sub O ogonekcomb dotbelowcomb by Oogonekdotbelow ;
+ sub e dotbelowcomb ogonekcomb by eogonekdotbelow ;
+ sub o dotbelowcomb ogonekcomb by oogonekdotbelow ;
+ sub E dotbelowcomb ogonekcomb by Eogonekdotbelow ;
+ sub O dotbelowcomb ogonekcomb by Oogonekdotbelow ;
+ # 2-part
+ # dotaccent combo + acute:
+ sub adotaccent acutecomb by adotaccentacute ;
+ sub Adotaccent acutecomb by Adotaccentacute ;
+ # no Unicode for ae + dotaccent
+ sub edotaccent acutecomb by edotaccentacute ;
+ sub Edotaccent acutecomb by Edotaccentacute ;
+ sub idotaccent acutecomb by idotaccentacute ;
+ sub Idotaccent acutecomb by Idotaccentacute ;
+ sub odotaccent acutecomb by odotaccentacute ;
+ sub Odotaccent acutecomb by Odotaccentacute ;
+ # no Unicode for oslash or u + dotaccent
+ sub ydotaccent acutecomb by ydotaccentacute ;
+ sub Ydotaccent acutecomb by Ydotaccentacute ;
+ # eogonek + dotbelow
+ sub eogonek dotbelowcomb by eogonekdotbelow ;
+ sub oogonek dotbelowcomb by oogonekdotbelow ;
+ sub Eogonek dotbelowcomb by Eogonekdotbelow ;
+ sub Oogonek dotbelowcomb by Oogonekdotbelow ;
+} ogonekdot ;
+
+lookup underdots {
+  sub g dotbelowcomb by uni00670323 ;
+  sub ezh dotbelowcomb by yoghflatdot ;
+} underdots ;
+
+# lookup diacritics {
+# But we don't really want to produce PUA characters here. Use rlig instead?
+# sub b uni0364 by uniF056 ;
+# sub b dotlessicomb by uniF057 ;
+# sub b uni0366 by uniF059 ;
+# sub b uni036C by uniF05A ;
+# sub b uni036E by uniF05D ;
+# sub h uni0363 by uniF065 ;
+# sub h uni0364 by uniF066 ;
+# sub h dotlessicomb by uniF067 ;
+# Forms with muncialcomb require special handling
+# sub h muncialcomb by hmuncial ;
+# sub h uni0366 by uniF069 ;
+# sub h uni036C by uniF06A ;
+# sub h uni036E by uniF06D ;
+# sub h uni036D by uniF06E ;
+# sub k uni0363 by uniF075 ;
+# sub k uni0364 by uniF076 ;
+# sub k dotlessicomb by uniF077 ;
+# sub k uni0366 by uniF079 ;
+# sub k uni036C by uniF07A ;
+# sub k Rcomb by uniF07B ;
+# sub k uni036E by uniF07D ;
+# sub k uni1DE6 by uniF07F ;
+# sub thorn uni0364 by uniF086 ;
+# sub thorn dotlessicomb by uniF087 ;
+# sub thorn uni0366 by uniF089 ;
+# sub thorn uni036C by uniF08A ;
+# sub thorn uni036D by uniF08E ;
+# sub dinsular uni0364 by dinsulare ;
+# sub dinsular dotlessicomb by uniF097 ;
+# sub dinsular uni0366 by dinsularo ;
+# sub dinsular uni036C by dinsularr ;
+# sub dinsular Rcomb by dinsularR ;
+# sub dinsular uni1DE6 by dinsularz ;
+#sub eth dotlessicomb by ethdotlessicomb ;
+# sub eth muncialcomb by ethmuncial ;
+# sub eth uni036C by uniF0AA ;
+# sub eth Rcomb by uniF0AB ;
+# sub eth uni036D by uniF0AE ;
+# } diacritics ;
+";
+tag = ccmp;
+},
+{
+code = "  # Nine-character codes
+  sub ampersand underscore c c e d i l semicolon by ccedillacomb ;
+#  sub ampersand underscore o s l a s h semicolon by oslashcomb ;
+  # Eight-character codes
+  sub ampersand underscore a e l i g semicolon by aecomb ;
+#  sub ampersand underscore j d o t l semicolon by jdotlesscomb ;
+  sub ampersand underscore i d o t l semicolon by dotlessicomb ;
+  sub ampersand underscore l o n g s semicolon by longscomb ;
+  sub ampersand underscore t h o r n semicolon by thorncomb ;
+  # Seven-character codes
+  sub ampersand t h o r n semicolon by thorn ;
+  sub ampersand T H O R N semicolon by Thorn ;
+  sub ampersand A E l i g semicolon by AE ;
+  sub ampersand a e l i g semicolon by ae ;
+#  sub ampersand underscore a n s c semicolon by ansmcpcomb ;
+#  sub ampersand underscore a r s c semicolon by arsmcpcomb ;
+  sub ampersand underscore m u n c semicolon by muncialcomb ;
+  sub ampersand underscore d i n s semicolon by insulardcomb ;
+#  sub ampersand underscore e o g o semicolon by eogonekcomb ;
+#  sub ampersand underscore o o g o semicolon by oogonekcomb ;
+#  sub ampersand underscore e m a c semicolon by emacroncomb ;
+#  sub ampersand underscore o m a c semicolon by omacroncomb ;
+  sub ampersand underscore t i n s semicolon by tinsularcomb ;
+  # Six-character codes
+#  sub ampersand underscore b s c semicolon by bsmcpcomb ;
+#  sub ampersand underscore d s c semicolon by dsmcpcomb ;
+#  sub ampersand underscore t s c semicolon by tsmcpcomb ;
+#  sub ampersand underscore k s c semicolon by ksmcpcomb ;
+  sub ampersand underscore e t h semicolon by ethcomb ;
+  # In Unicode
+  sub ampersand underscore g s c semicolon by Gcomb ;
+  sub ampersand underscore l s c semicolon by Lcomb ;
+  sub ampersand underscore m s c semicolon by Mcomb ;
+  sub ampersand underscore n s c semicolon by Ncomb ;
+  sub ampersand underscore r s c semicolon by Rcomb ;
+#  sub ampersand underscore o r r semicolon by orrotcomb ;
+#  sub ampersand underscore o r u semicolon by orumcomb ;
+  # Five-character codes
+#  sub ampersand underscore u r semicolon by urabovecomb ;
+  sub ampersand underscore Z Z semicolon by zigzagbelowcomb ;
+  sub ampersand underscore o a semicolon by flattenedopenaabovecomb ;
+#  sub ampersand underscore a n semicolon by ancomb ;
+#  sub ampersand underscore a r semicolon by arcomb ;
+  # In Unicode
+  sub ampersand underscore u s semicolon by usabovecomb ;
+  sub ampersand underscore z z semicolon by zigzagabovecomb ;
+  sub ampersand underscore o l semicolon by overlinecomb ;
+#  sub ampersand underscore r u semicolon by rumrotundacomb ;
+  sub ampersand underscore r r semicolon by rrotundacomb ;
+  # In Unicode
+  sub ampersand underscore a o semicolon by aocomb ;
+  sub ampersand underscore a v semicolon by avcomb ;
+  sub ampersand underscore p e semicolon by uni2E4E ;
+  sub ampersand E T H semicolon  by Eth ;
+  sub ampersand e t h semicolon  by eth ;
+  # Four-letter spacing codes:
+#  sub ampersand U S semicolon by usmod ;
+  sub ampersand e t semicolon by et ;
+  sub ampersand y o semicolon by yogh ;
+  sub ampersand Y O semicolon by Yogh ;
+#  sub ampersand t i semicolon by tironiansignet ;
+  sub ampersand c t semicolon by thornstroke ;
+  sub ampersand c o semicolon by con ;
+  sub ampersand a a semicolon by aa ;
+  sub ampersand A A semicolon by AA ;
+  sub ampersand a o semicolon by ao ;
+  sub ampersand A O semicolon by Ao ;
+  sub ampersand a u semicolon by au ;
+  sub ampersand A U semicolon by Au ;
+  sub ampersand a v semicolon by av ;
+  sub ampersand A V semicolon by Av ;
+  sub ampersand a y semicolon by ay ;
+  sub ampersand A Y semicolon by AY ;
+  sub ampersand v y semicolon by vy ;
+  sub ampersand V Y semicolon by VY ;
+  sub ampersand w n semicolon by wynn ;
+  sub ampersand W N semicolon by Wynn ;
+  sub ampersand r u semicolon by rumrotunda ;
+  sub ampersand p r semicolon by pstrokethroughdescender ;
+  sub ampersand p o semicolon by pflourish ;
+  sub ampersand q one semicolon by qstrokethroughdescender ;
+  sub ampersand q two semicolon by qdiagonalstroke ;
+  sub ampersand o b semicolon by olongstroke ;
+  sub ampersand O B semicolon by Olongstroke ;
+  sub ampersand s d semicolon by longsdiagonalstroke ;
+  sub ampersand k l semicolon by kstroke ;
+  sub ampersand O O semicolon by OO ;
+  sub ampersand o o semicolon by oo ;
+  sub ampersand r r semicolon by rrotunda ;
+#  sub ampersand i s semicolon by uniA76D ;
+  # Four-character codes -- Alternates to PUA
+#  sub ampersand underscore b semicolon by bcomb ;
+#  sub ampersand underscore f semicolon by fcomb ;
+#  sub ampersand underscore j semicolon by jcomb ;
+#  sub ampersand underscore p semicolon by pcomb ;
+#  sub ampersand underscore q semicolon by qcomb ;
+  sub ampersand underscore w semicolon by wcomb ;
+#  sub ampersand underscore y semicolon by ycomb ;
+  # In Unicode
+  sub ampersand underscore a semicolon by acomb ;
+  sub ampersand underscore e semicolon by ecomb ;
+  sub ampersand underscore i semicolon by icomb ;
+  sub ampersand underscore o semicolon by ocomb ;
+  sub ampersand underscore u semicolon by ucomb ;
+  sub ampersand underscore c semicolon by ccomb ;
+  sub ampersand underscore d semicolon by dcomb ;
+  sub ampersand underscore h semicolon by hcomb ;
+  sub ampersand underscore m semicolon by mcomb ;
+  sub ampersand underscore r semicolon by rcomb ;
+  sub ampersand underscore t semicolon by tcomb ;
+  sub ampersand underscore v semicolon by vcomb ;
+  sub ampersand underscore x semicolon by xcomb ;
+  sub ampersand underscore g semicolon by gcomb ;
+  sub ampersand underscore k semicolon by kcomb ;
+  sub ampersand underscore l semicolon by lcomb ;
+  sub ampersand underscore n semicolon by ncomb ;
+  sub ampersand underscore s semicolon by scomb ;
+  sub ampersand underscore z semicolon by zcomb ;
+";
+labels = (
+{
+language = default;
+value = Entities;
+}
+);
+tag = ss10;
 },
 {
 automatic = 1;
@@ -132,299 +427,6 @@ lookup locl_latn_2 {
 } locl_latn_2;
 ";
 tag = locl;
-},
-{
-code = "sub a by a.enlarged ;
-sub aa by aa.enlarged ;
-sub eogonek.alt by eogonek.enlarged.alt ;
-sub ao by ao.enlarged ;
-sub ae by ae.enlarged ;
-sub b by b.enlarged ;
-sub c by c.enlarged ;
-sub d by d.enlarged ;
-sub eth by eth.enlarged ;
-sub dinsular by dinsular.enlarged ;
-sub e by e.enlarged ;
-sub eogonek by eogonek.enlarged ;
-sub f by f.enlarged ;
-sub finsular by finsular.enlarged ;
-sub g by g.enlarged ;
-sub h by h.enlarged ;
-sub i by i.enlarged ;
-sub dotlessi by idotless.enlarged ;
-sub j by j.enlarged ;
-sub jdotless by jdotless.enlarged ;
-sub k by k.enlarged ;
-sub l by l.enlarged ;
-sub m by m.enlarged ;
-sub n by n.enlarged ;
-sub eth.loclENG by eth.enlarged.loclENG ;
-sub thorn by thorn.enlarged ;
-sub o by o.enlarged ;
-sub oe by oe.enlarged ;
-sub p by p.enlarged ;
-sub thorn.loclENG by thorn.enlarged.loclENG ;
-sub q by q.enlarged ;
-sub r by r.enlarged ;
-sub s by s.enlarged ;
-sub longs by longs.enlarged ;
-sub t by t.enlarged ;
-sub u by u.enlarged ;
-sub v by v.enlarged ;
-sub w by w.enlarged ;
-sub x by x.enlarged ;
-sub y by y.enlarged ;
-sub z by z.enlarged ;
-";
-labels = (
-{
-language = default;
-value = "Enlarged minuscules";
-}
-);
-tag = ss06;
-},
-{
-automatic = 1;
-code = "sub A by a.sc;
-sub Aacute by aacute.sc;
-sub Abreve by abreve.sc;
-sub Abreveacute by abreveacute.sc;
-sub Abrevedotbelow by abrevedotbelow.sc;
-sub Abrevegrave by abrevegrave.sc;
-sub Abrevehookabove by abrevehookabove.sc;
-sub Abrevetilde by abrevetilde.sc;
-sub Acaron by acaron.sc;
-sub Acircumflex by acircumflex.sc;
-sub Acircumflexacute by acircumflexacute.sc;
-sub Acircumflexdotbelow by acircumflexdotbelow.sc;
-sub Acircumflexgrave by acircumflexgrave.sc;
-sub Acircumflexhookabove by acircumflexhookabove.sc;
-sub Acircumflextilde by acircumflextilde.sc;
-sub Adblgrave by adblgrave.sc;
-sub Adieresis by adieresis.sc;
-sub Adieresismacron by adieresismacron.sc;
-sub Adotaccent by adotaccent.sc;
-sub Adotbelow by adotbelow.sc;
-sub Adotmacron by adotmacron.sc;
-sub Agrave by agrave.sc;
-sub Ahookabove by ahookabove.sc;
-sub Ainvertedbreve by ainvertedbreve.sc;
-sub Amacron by amacron.sc;
-sub Aogonek by aogonek.sc;
-sub Aring by aring.sc;
-sub Aringacute by aringacute.sc;
-sub Aringbelow by aringbelow.sc;
-sub Atilde by atilde.sc;
-sub AE by ae.sc;
-sub B by b.sc;
-sub C by c.sc;
-sub Cacute by cacute.sc;
-sub Ccaron by ccaron.sc;
-sub Ccedilla by ccedilla.sc;
-sub Ccircumflex by ccircumflex.sc;
-sub Cdotaccent by cdotaccent.sc;
-sub D by d.sc;
-sub Eth by eth.sc;
-sub Dcaron by dcaron.sc;
-sub Dcircumflexbelow by dcircumflexbelow.sc;
-sub Ddotaccent by ddotaccent.sc;
-sub Ddotbelow by ddotbelow.sc;
-sub E by e.sc;
-sub Eacute by eacute.sc;
-sub Ebreve by ebreve.sc;
-sub Ecaron by ecaron.sc;
-sub Ecedillabreve by ecedillabreve.sc;
-sub Ecircumflex by ecircumflex.sc;
-sub Ecircumflexacute by ecircumflexacute.sc;
-sub Ecircumflexbelow by ecircumflexbelow.sc;
-sub Ecircumflexdotbelow by ecircumflexdotbelow.sc;
-sub Ecircumflexgrave by ecircumflexgrave.sc;
-sub Ecircumflexhookabove by ecircumflexhookabove.sc;
-sub Ecircumflextilde by ecircumflextilde.sc;
-sub Edieresis by edieresis.sc;
-sub Edotaccent by edotaccent.sc;
-sub Edotbelow by edotbelow.sc;
-sub Egrave by egrave.sc;
-sub Ehookabove by ehookabove.sc;
-sub Einvertedbreve by einvertedbreve.sc;
-sub Emacron by emacron.sc;
-sub Emacronacute by emacronacute.sc;
-sub Emacrongrave by emacrongrave.sc;
-sub Eogonek by eogonek.sc;
-sub F by f.sc;
-sub G by g.sc;
-sub Gbreve by gbreve.sc;
-sub Gcaron by gcaron.sc;
-sub Gcircumflex by gcircumflex.sc;
-sub Gcommaaccent by gcommaaccent.sc;
-sub Gdotaccent by gdotaccent.sc;
-sub Gmacron by gmacron.sc;
-sub H by h.sc;
-sub Hcaron by hcaron.sc;
-sub Hcircumflex by hcircumflex.sc;
-sub Hdieresis by hdieresis.sc;
-sub Hdotaccent by hdotaccent.sc;
-sub Hdotbelow by hdotbelow.sc;
-sub I by i.sc;
-sub Iacute by iacute.sc;
-sub Ibreve by ibreve.sc;
-sub Icaron by icaron.sc;
-sub Icircumflex by icircumflex.sc;
-sub Idblgrave by idblgrave.sc;
-sub Idieresis by idieresis.sc;
-sub Idotaccent by idotaccent.sc;
-sub Igrave by igrave.sc;
-sub Iinvertedbreve by iinvertedbreve.sc;
-sub Imacron by imacron.sc;
-sub Itilde by itilde.sc;
-sub J by j.sc;
-sub Jcircumflex by jcircumflex.sc;
-sub K by k.sc;
-sub Kacute by kacute.sc;
-sub Kcaron by kcaron.sc;
-sub Kdotbelow by kdotbelow.sc;
-sub Klinebelow by klinebelow.sc;
-sub L by l.sc;
-sub Lacute by lacute.sc;
-sub Lcircumflexbelow by lcircumflexbelow.sc;
-sub Ldotbelow by ldotbelow.sc;
-sub Ldotbelowmacron by ldotbelowmacron.sc;
-sub Llinebelow by llinebelow.sc;
-sub Lslash by lslash.sc;
-sub M by m.sc;
-sub Macute by macute.sc;
-sub Mdotaccent by mdotaccent.sc;
-sub Mdotbelow by mdotbelow.sc;
-sub N by n.sc;
-sub Nacute by nacute.sc;
-sub Ncaron by ncaron.sc;
-sub Ncircumflexbelow by ncircumflexbelow.sc;
-sub Ndotaccent by ndotaccent.sc;
-sub Ndotbelow by ndotbelow.sc;
-sub Ngrave by ngrave.sc;
-sub Ntilde by ntilde.sc;
-sub O by o.sc;
-sub Oacute by oacute.sc;
-sub Obreve by obreve.sc;
-sub Ocircumflex by ocircumflex.sc;
-sub Ocircumflexacute by ocircumflexacute.sc;
-sub Ocircumflexdotbelow by ocircumflexdotbelow.sc;
-sub Ocircumflexgrave by ocircumflexgrave.sc;
-sub Ocircumflexhookabove by ocircumflexhookabove.sc;
-sub Odieresis by odieresis.sc;
-sub Odieresismacron by odieresismacron.sc;
-sub Odotaccent by odotaccent.sc;
-sub Odotbelow by odotbelow.sc;
-sub Ograve by ograve.sc;
-sub Oinvertedbreve by oinvertedbreve.sc;
-sub Omacron by omacron.sc;
-sub Omacronacute by omacronacute.sc;
-sub Omacrongrave by omacrongrave.sc;
-sub Oogonek by oogonek.sc;
-sub Oslash by oslash.sc;
-sub Otilde by otilde.sc;
-sub Otildeacute by otildeacute.sc;
-sub Otildedieresis by otildedieresis.sc;
-sub Otildemacron by otildemacron.sc;
-sub OE by oe.sc;
-sub P by p.sc;
-sub Pacute by pacute.sc;
-sub Pdotaccent by pdotaccent.sc;
-sub Thorn by thorn.sc;
-sub Q by q.sc;
-sub Qdiagonalstroke by qdiagonalstroke.sc;
-sub R by r.sc;
-sub Racute by racute.sc;
-sub Rcaron by rcaron.sc;
-sub Rdotaccent by rdotaccent.sc;
-sub Rdotbelow by rdotbelow.sc;
-sub Rdotbelowmacron by rdotbelowmacron.sc;
-sub Rlinebelow by rlinebelow.sc;
-sub S by s.sc;
-sub Sacute by sacute.sc;
-sub Scaron by scaron.sc;
-sub Scarondotaccent by scarondotaccent.sc;
-sub Scedilla by scedilla.sc;
-sub Scircumflex by scircumflex.sc;
-sub Scommaaccent by scommaaccent.sc;
-sub Sdotaccent by sdotaccent.sc;
-sub Sdotbelow by sdotbelow.sc;
-sub Sdotbelowdotaccent by sdotbelowdotaccent.sc;
-sub Germandbls by germandbls.sc;
-sub T by t.sc;
-sub Tcaron by tcaron.sc;
-sub Tcircumflexbelow by tcircumflexbelow.sc;
-sub Tcommaaccent by tcommaaccent.sc;
-sub Tcommaaccent by tcommaaccent.sc;
-sub Tdotaccent by tdotaccent.sc;
-sub Tdotbelow by tdotbelow.sc;
-sub U by u.sc;
-sub Uacute by uacute.sc;
-sub Ubreve by ubreve.sc;
-sub Ucircumflex by ucircumflex.sc;
-sub Ucircumflexbelow by ucircumflexbelow.sc;
-sub Udblgrave by udblgrave.sc;
-sub Udieresis by udieresis.sc;
-sub Udieresisacute by udieresisacute.sc;
-sub Udieresisbelow by udieresisbelow.sc;
-sub Udieresiscaron by udieresiscaron.sc;
-sub Udieresisgrave by udieresisgrave.sc;
-sub Udieresismacron by udieresismacron.sc;
-sub Udotbelow by udotbelow.sc;
-sub Ugrave by ugrave.sc;
-sub Uhookabove by uhookabove.sc;
-sub Uhungarumlaut by uhungarumlaut.sc;
-sub Uinvertedbreve by uinvertedbreve.sc;
-sub Umacron by umacron.sc;
-sub Umacrondieresis by umacrondieresis.sc;
-sub Uogonek by uogonek.sc;
-sub Uring by uring.sc;
-sub V by v.sc;
-sub W by w.sc;
-sub Wacute by wacute.sc;
-sub Wcircumflex by wcircumflex.sc;
-sub Wdieresis by wdieresis.sc;
-sub Wdotaccent by wdotaccent.sc;
-sub Wdotbelow by wdotbelow.sc;
-sub Wgrave by wgrave.sc;
-sub X by x.sc;
-sub Xdotaccent by xdotaccent.sc;
-sub Y by y.sc;
-sub Yacute by yacute.sc;
-sub Ycircumflex by ycircumflex.sc;
-sub Ydieresis by ydieresis.sc;
-sub Ydotaccent by ydotaccent.sc;
-sub Ydotbelow by ydotbelow.sc;
-sub Ygrave by ygrave.sc;
-sub Ytilde by ytilde.sc;
-sub Z by z.sc;
-sub Zacute by zacute.sc;
-sub Zcaron by zcaron.sc;
-sub Zcircumflex by zcircumflex.sc;
-sub Zdotaccent by zdotaccent.sc;
-sub Zdotbelow by zdotbelow.sc;
-sub Zlinebelow by zlinebelow.sc;
-sub Thorn.loclENG by thorn.loclENG.sc;
-sub carondotcomb by carondotcomb.sc;
-sub dieresiscomb by dieresiscomb.sc;
-sub dotaccentcomb by dotaccentcomb.sc;
-sub gravecomb by gravecomb.sc;
-sub acutecomb by acutecomb.sc;
-sub hungarumlautcomb by hungarumlautcomb.sc;
-sub circumflexcomb by circumflexcomb.sc;
-sub caroncomb by caroncomb.sc;
-sub brevecomb by brevecomb.sc;
-sub tildecomb by tildecomb.sc;
-sub macroncomb by macroncomb.sc;
-sub hookabovecomb by hookabovecomb.sc;
-sub dblgravecomb by dblgravecomb.sc;
-sub breveinvertedcomb by breveinvertedcomb.sc;
-sub ogonekcomb by ogonekcomb.sc;
-sub caron by caron.sc;
-sub dotacutecomb by dotacutecomb.sc;
-";
-tag = c2sc;
 },
 {
 code = "sub carondotcomb by carondotcomb.case;
@@ -487,11 +489,106 @@ sub nine.tosf by nine.lf;
 tag = case;
 },
 {
-automatic = 1;
-code = "sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
-sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+code = "  sub zero from [ zero.circled zero.paren zero.doubleCircled zero.blackCircled zero_period ] ;
+  sub one from [ one.circled one.paren one.doubleCircled one.blackCircled one_period ] ;
+  sub two from [ two.circled two.paren two.doubleCircled two.blackCircled two_period ] ;
+  sub three from [ three.circled three.paren three.doubleCircled three.blackCircled three_period ] ;
+  sub four from [ four.circled four.paren four.doubleCircled four.blackCircled four_period ] ;
+  sub five from [ five.circled five.paren five.doubleCircled five.blackCircled five_period ] ;
+  sub six from [ six.circled six.paren six.doubleCircled six.blackCircled six_period ] ;
+  sub seven from [ seven.circled seven.paren seven.doubleCircled seven.blackCircled seven_period ] ;
+  sub eight from [ eight.circled eight.paren eight.doubleCircled eight.blackCircled eight_period ] ;
+  sub nine from [ nine.circled nine.paren nine.doubleCircled nine.blackCircled nine_period ] ;
+  sub a from [ a.circled a.paren ] ;
+  sub b from [ b.circled b.paren ] ;
+  sub c from [ c.circled c.paren ] ;
+  sub d from [ d.circled d.paren ] ;
+  sub e from [ e.circled e.paren ] ;
+  sub f from [ f.circled f.paren ] ;
+  sub g from [ g.circled g.paren ] ;
+  sub h from [ h.circled h.paren ] ;
+  sub i from [ i.circled i.paren ] ;
+  sub j from [ j.circled j.paren ] ;
+  sub k from [ k.circled k.paren ] ;
+  sub l from [ l.circled l.paren ] ;
+  sub m from [ m.circled m.paren ] ;
+  sub n from [ n.circled n.paren ] ;
+  sub o from [ o.circled o.paren ] ;
+  sub p from [ p.circled p.paren ] ;
+  sub q from [ q.circled q.paren ] ;
+  sub r from [ r.circled r.paren ] ;
+  sub s from [ s.circled s.paren ] ;
+  sub t from [ t.circled t.paren ] ;
+  sub u from [ u.circled u.paren ] ;
+  sub v from [ v.circled v.paren ] ;
+  sub w from [ w.circled w.paren ] ;
+  sub x from [ x.circled x.paren ] ;
+  sub y from [ y.circled y.paren ] ;
+  sub z from [ z.circled z.paren ] ;
+  sub A from [ A.circled A.paren ] ;
+  sub B from [ B.circled B.paren ] ;
+  sub C from [ C.circled C.paren ] ;
+  sub D from [ D.circled D.paren ] ;
+  sub E from [ E.circled E.paren ] ;
+  sub F from [ F.circled F.paren ] ;
+  sub G from [ G.circled G.paren ] ;
+  sub H from [ H.circled H.paren ] ;
+  sub I from [ I.circled I.paren ] ;
+  sub J from [ J.circled J.paren ] ;
+  sub K from [ K.circled K.paren ] ;
+  sub L from [ L.circled L.paren ] ;
+  sub M from [ M.circled M.paren ] ;
+  sub N from [ N.circled N.paren ] ;
+  sub O from [ O.circled O.paren ] ;
+  sub P from [ P.circled P.paren ] ;
+  sub Q from [ Q.circled Q.paren ] ;
+  sub R from [ R.circled R.paren ] ;
+  sub S from [ S.circled S.paren ] ;
+  sub T from [ T.circled T.paren ] ;
+  sub U from [ U.circled U.paren ] ;
+  sub V from [ V.circled V.paren ] ;
+  sub W from [ W.circled W.paren ] ;
+  sub X from [ X.circled X.paren ] ;
+  sub Y from [ Y.circled Y.paren ] ;
+  sub Z from [ Z.circled Z.paren ] ;
 ";
-tag = ordn;
+tag = nalt;
+},
+{
+automatic = 1;
+code = "sub zero by zeroinferior;
+sub one by oneinferior;
+sub two by twoinferior;
+sub three by threeinferior;
+sub four by fourinferior;
+sub five by fiveinferior;
+sub six by sixinferior;
+sub seven by seveninferior;
+sub eight by eightinferior;
+sub nine by nineinferior;
+";
+tag = sinf;
+},
+{
+automatic = 1;
+code = "sub one slash eight by oneeighth;
+sub one slash four by onequarter;
+sub three slash eight by threeeighths;
+sub one slash two by onehalf;
+sub five slash eight by fiveeighths;
+sub three slash four by threequarters;
+sub seven slash eight by seveneighths;
+sub one slash three by onethird;
+sub two slash three by twothirds;
+sub one slash five by onefifth;
+sub two slash five by twofifths;
+sub three slash five by threefifths;
+sub four slash five by fourfifths;
+sub one slash six by onesixth;
+sub five slash six by fivesixths;
+sub one slash by onefraction;
+";
+tag = frac;
 },
 {
 code = "sub @FIGURES_LINING by @FIGURES_LINING_TABULAR;
@@ -513,6 +610,18 @@ tag = pnum;
 code = "sub @FIGURES_OLDSTYLE by @FIGURES_LINING;
 sub @FIGURES_OLDSTYLE_TABULAR by @FIGURES_LINING_TABULAR;";
 tag = lnum;
+},
+{
+code = "  sub zero by zero.zero;
+  sub zero.lf by zero.lf.zero;
+  sub zero.osf by zero.osf.zero;
+  sub zeroinferior.osf by zeroinferior.osf.zero;
+  sub zerosuperior.osf by zerosuperior.osf.zero;
+  sub zero.tosf by zero.tosf.zero;
+  sub zerosuperior by zerosuperior.zero;
+  sub zeroinferior by zeroinferior.zero;
+";
+tag = zero;
 },
 {
 code = "    sub zero by zerosuperior ;
@@ -611,16 +720,1669 @@ sub nine.tosf by nineinferior.osf ;
 tag = subs;
 },
 {
-code = "  sub zero by zero.zero;
-  sub zero.lf by zero.lf.zero;
-  sub zero.osf by zero.osf.zero;
-  sub zeroinferior.osf by zeroinferior.osf.zero;
-  sub zerosuperior.osf by zerosuperior.osf.zero;
-  sub zero.tosf by zero.tosf.zero;
-  sub zerosuperior by zerosuperior.zero;
-  sub zeroinferior by zeroinferior.zero;
+code = "lookup bullet_method {
+  sub bullet from [ uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92
+    uniEF93 uniEF98 uniEF99 uniEF94 uniEF95 uniEF96 uniEF97 uniEF9A uniEF9B uniEF9C uniF018 uniF019 uniF014
+    uniEF9F uniF011 uniF01D uniF01E uniF01B ] ;
+} bullet_method ;
+
+lookup alpha_method {
+  sub a by uniE270;
+  sub b by uniE27D;
+  sub c by uniE670;
+  sub d by uniE67D;
+  sub e by uniE68A;
+  sub f by uniE736;
+  sub g by uniE8B0;
+  sub h by uniE8B1;
+  sub i by uniEF90;
+  sub j by uniEF91;
+  sub k by uniEF92;
+  sub l by uniEF93;
+  sub m by uniEF98;
+  sub n by uniEF99;
+  sub o by uniEF94;
+  sub p by uniEF95;
+  sub q by uniEF96;
+  sub r by uniEF97;
+  sub s by uniEF9A;
+  sub t by uniEF9B;
+  sub u by uniEF9C;
+  sub v by uniF018;
+  sub w by uniF019;
+  sub x by uniF014;
+  sub y by uniEF9F;
+  sub z by uniF011;
+  sub A by uniF01D;
+  sub B by uniF01E;
+  sub C by uniF01B;
+} alpha_method ;";
+disabled = 1;
+labels = (
+{
+language = default;
+value = Fleurons;
+}
+);
+tag = ornm;
+},
+{
+code = "  sub thornstroke by thornstroke.loclENG;
+  sub thorn by thorn.loclENG;
+  sub Thorn by Thorn.loclENG;
+  sub thorncomb by thorncomb.loclENG ;
+  sub eth by eth.loclENG;
+  sub thorn.sc by thorn.loclENG.sc ;
+  sub thornstroke.sc by thornstroke.loclENG.sc ;
+#  sub ethcomb by ethcomb.loclENG;
+  sub eth.enlarged by eth.enlarged.loclENG ;
+  sub thorn.enlarged by thorn.enlarged.loclENG ;
+script latn;
+language ENG;
+  sub Thorn.loclENG by Thorn ;
+  sub eth.loclENG by eth ;
+  sub thorn.loclENG by thorn ;
+  sub eth.enlarged.loclENG by eth.enlarged ;
+  sub thorn.enlarged.loclENG by thorn.enlarged ;
+  sub thorn.loclENG.sc by thorn.sc ;
+  sub thorncomb.loclENG by thorncomb ;
+#  sub ethcomb.loclENG by ethcomb ;
+  sub thornstroke.loclENG by thornstroke ;
+  sub thornstroke.loclENG.sc by thornstroke.sc ;
 ";
-tag = zero;
+labels = (
+{
+language = default;
+value = "Alternate thorn and eth";
+}
+);
+tag = ss01;
+},
+{
+code = "    sub ampersand by etTironian ;
+    sub W by Wynn ;
+    sub d by dinsular ;
+    sub f by finsular ;
+    sub g by ginsular ;
+    sub i by dotlessi ;
+    sub r by rinsular ;
+    sub s by sinsular ;
+    sub t by tinsular ;
+    sub w by wynn ;
+    sub y by ydotaccent ;
+    sub thornstroke by thornstroke.loclENG;
+    sub thorn by thorn.loclENG;
+    sub Thorn by Thorn.loclENG;
+    sub thorncomb by thorncomb.loclENG;
+    sub thorn.enlarged by thorn.enlarged.loclENG;
+    sub eth by eth.loclENG;
+    sub eth.enlarged by eth.enlarged.loclENG;
+#    sub ethcomb by ethcomb.loclENG;
+#    sub f.sc by finsular.sc ;
+#    sub s.sc by sinsular.sc ;
+#    sub g.sc by ginsular.sc ;
+#    sub w.sc by wynn.sc ;
+    sub thorn.sc by thorn.loclENG.sc ;
+#    sub t.sc by tinsular.sc ;
+#    sub r.sc by rinsular.sc ;
+    sub thornstroke.sc by thornstroke.loclENG.sc ;
+    
+";
+labels = (
+{
+language = default;
+value = "Insular letter-forms";
+}
+);
+tag = ss02;
+},
+{
+code = "sub s by longs;";
+tag = hist;
+},
+{
+code = "sub s by longs;";
+labels = (
+{
+language = default;
+value = "Long s";
+}
+);
+tag = ss03;
+},
+{
+code = "  sub C by C.highoverline ;
+  sub D by D.highoverline ;
+  sub I by I.highoverline ;
+  sub J by J.highoverline ;
+  sub L by L.highoverline ;
+  sub M by M.highoverline ;
+  sub V by V.highoverline ;
+  sub X by X.highoverline ;
+  sub c by c.highoverline ;
+  sub d by d.highoverline ;
+  sub i by i.highoverline ;
+  sub j by j.highoverline ;
+  sub l by l.highoverline ;
+  sub m by m.highoverline ;
+  sub v by v.highoverline ;
+  sub x by x.highoverline ;
+#  sub Onehundredreversed-roman by Onehundredreversed-roman.highoverline ;
+";
+labels = (
+{
+language = default;
+value = "High Overline";
+}
+);
+tag = ss04;
+},
+{
+code = "sub b by b.medhighoverline ;
+sub c by c.medhighoverline ;
+sub d by d.medhighoverline ;
+sub h by h.medhighoverline ;
+sub i by i.medhighoverline ;
+sub j by j.medhighoverline ;
+sub k by k.medhighoverline ;
+sub l by l.medhighoverline ;
+sub m by m.medhighoverline ;
+sub longs by longs.medhighoverline ;
+sub v by v.medhighoverline ;
+sub x by x.medhighoverline ;
+sub thorn by thorn.medhighoverline ;
+sub thorn.loclENG by thorn.medhighoverline.loclENG ;
+";
+labels = (
+{
+language = default;
+value = "Medium-high Overline";
+}
+);
+tag = ss05;
+},
+{
+code = "sub a by a.enlarged ;
+sub aa by aa.enlarged ;
+sub eogonek.alt by eogonek.enlarged.alt ;
+sub ao by ao.enlarged ;
+sub ae by ae.enlarged ;
+sub b by b.enlarged ;
+sub c by c.enlarged ;
+sub d by d.enlarged ;
+sub eth by eth.enlarged ;
+sub dinsular by dinsular.enlarged ;
+sub e by e.enlarged ;
+sub eogonek by eogonek.enlarged ;
+sub f by f.enlarged ;
+sub finsular by finsular.enlarged ;
+sub g by g.enlarged ;
+sub h by h.enlarged ;
+sub i by i.enlarged ;
+sub dotlessi by idotless.enlarged ;
+sub j by j.enlarged ;
+sub jdotless by jdotless.enlarged ;
+sub k by k.enlarged ;
+sub l by l.enlarged ;
+sub m by m.enlarged ;
+sub n by n.enlarged ;
+sub eth.loclENG by eth.enlarged.loclENG ;
+sub thorn by thorn.enlarged ;
+sub o by o.enlarged ;
+sub oe by oe.enlarged ;
+sub p by p.enlarged ;
+sub thorn.loclENG by thorn.enlarged.loclENG ;
+sub q by q.enlarged ;
+sub r by r.enlarged ;
+sub s by s.enlarged ;
+sub longs by longs.enlarged ;
+sub t by t.enlarged ;
+sub u by u.enlarged ;
+sub v by v.enlarged ;
+sub w by w.enlarged ;
+sub x by x.enlarged ;
+sub y by y.enlarged ;
+sub z by z.enlarged ;
+";
+labels = (
+{
+language = default;
+value = "Enlarged minuscules";
+}
+);
+tag = ss06;
+},
+{
+code = "# sub s by longs.alt1 ;
+# sub longs by longs.alt1 ;
+sub longs.enlarged by longs.enlarged.alt ;
+";
+labels = (
+{
+language = default;
+value = "Contextual long s";
+}
+);
+tag = ss08;
+},
+{
+code = "sub r by rrotunda ;
+# sub r.sc by rrotunda.sc;
+";
+labels = (
+{
+language = default;
+value = "r rotunda";
+}
+);
+tag = ss11;
+},
+{
+code = "lookup ss12_01 {
+  sub e o by uni16C7 ;
+#  sub e a by uni16E0 ;
+} ss12_01 ;
+lookup ss12_02 {
+#  sub f by Feoh ;
+#  sub F by Feoh ;
+#  sub v by Feoh ;
+#  sub V by Feoh ;
+  sub u by uni16A2 ;
+  sub U by uni16A2 ;
+  sub thorn by uni16A6 ;
+  sub Thorn by uni16A6 ;
+  sub thorn.loclENG by uni16A6 ;
+  sub Thorn.loclENG by uni16A6 ;
+  sub eth by uni16A6 ;
+  sub eth.loclENG by uni16A6 ;
+  sub Eth by uni16A6 ;
+#  sub o by uni16A9 ;
+#  sub O by uni16A9 ;
+#  sub r by uni16B1 ;
+#  sub R by uni16B1 ;
+  sub c by uni16B3 ;
+  sub C by uni16B3 ;
+  sub k by uni16B3 ;
+  sub K by uni16B3 ;
+  sub g by uni16B7 ;
+  sub G by uni16B7 ;
+#  sub uni01BF by uni16B9 ;
+#  sub uni01F7 by uni16B9 ;
+  sub h by uni16BB ;
+  sub H by uni16BB ;
+  sub n by uni16BE ;
+  sub N by uni16BE ;
+  sub i by uni16C1 ;
+  sub I by uni16C1 ;
+  sub gdotaccent by uni16C4 ;
+  sub Gdotaccent by uni16C4 ;
+  sub p by uni16C8 ;
+  sub P by uni16C8 ;
+  sub s by uni16CB ;
+  sub S by uni16CB ;
+  sub z by uni16CB ;
+  sub Z by uni16CB ;
+  sub t by uni16CF ;
+  sub T by uni16CF ;
+#  sub b by uni16D2 ;
+#  sub B by uni16D2 ;
+  sub e by uni16D6 ;
+  sub E by uni16D6 ;
+#  sub m by uni16D7 ;
+#  sub M by uni16D7 ;
+  sub oe by uni16DF ;
+  sub OE by uni16DF ;
+#  sub l by uni16DA ;
+#  sub L by uni16DA ;
+#  sub d by uni16E5 ;
+#  sub D by uni16E5 ;
+#  sub a by uni16AA ;
+#  sub A by uni16AA ;
+#  sub ae by uni16A8 ;
+#  sub AE by uni16A8 ;
+  sub y by uni16A3 ;
+  sub Y by uni16A3 ;
+  sub j by uni16C4 ;
+  sub J by uni16C4 ;
+  sub x by uni16C9 ;
+  sub X by uni16C9 ;
+  sub eng by uni16DD ;
+  sub Eng by uni16DD ;
+#  sub w by uni16B9 ;
+#  sub W by uni16B9 ;
+} ss12_02 ;
+";
+labels = (
+{
+language = default;
+value = "Early English Futhorc";
+}
+);
+tag = ss12;
+},
+{
+code = "#  sub f by Feoh ;
+#  sub F by Feoh ;
+  sub u by uni16A2 ;
+  sub U by uni16A2 ;
+  sub thorn by uni16A6 ;
+  sub Thorn by uni16A6 ;
+  sub thorn.loclENG by uni16A6 ;
+  sub Thorn.loclENG by uni16A6 ;
+  sub eth by uni16A6 ;
+  sub eth.loclENG by uni16A6 ;
+#  sub a by uni16A8 ;
+#  sub A by uni16A8 ;
+#  sub r by uni16B1 ;
+#  sub R by uni16B1 ;
+  sub k by uni16B2 ;
+  sub K by uni16B2 ;
+  sub c by uni16B2 ;
+  sub C by uni16B2 ;
+  sub g by uni16B7;
+  sub G by uni16B7;
+#  sub w by uni16B9 ;
+#  sub W by uni16B9 ;
+#  sub v by uni16B9 ;
+#  sub V by uni16B9 ;
+  sub h by uni16BA ;
+  sub H by uni16BA ;
+  sub n by uni16BE ;
+  sub N by uni16BE ;
+  sub j by uni16C3 ;
+  sub J by uni16C3 ;
+  sub ae by uni16C7 ;
+  sub AE by uni16C7 ;
+  sub z by uni16C9 ;
+  sub Z by uni16C9 ;
+  sub p by uni16C8 ;
+  sub P by uni16C8 ;
+  sub s by uni16CA ;
+  sub S by uni16CA ;
+  sub t by uni16CF ;
+  sub T by uni16CF ;
+#  sub b by uni16D2 ;
+#  sub B by uni16D2 ;
+  sub e by uni16D6 ;
+  sub E by uni16D6 ;
+#  sub m by uni16D7 ;
+#  sub M by uni16D7 ;
+#  sub l by uni16DA ;
+#  sub L by uni16DA ;
+#  sub eng by uni16DC ;
+#  sub Eng by uni16DC ;
+  sub o by uni16DF ;
+  sub O by uni16DF ;
+#  sub d by uni16DE ;
+#  sub D by uni16DE ;
+  sub i by uni16C1 ;
+  sub I by uni16C1 ;
+";
+labels = (
+{
+language = default;
+value = "Elder Futhark";
+}
+);
+tag = ss13;
+},
+{
+code = "# sub f by Feoh ;
+# sub F by Feoh ;
+# sub v by Feoh ;
+# sub V by Feoh ;
+sub u by uni16A2 ;
+sub U by uni16A2 ;
+sub uacute by uni16A2 ;
+sub Uacute by uni16A2 ;
+sub w by uni16A2 ;
+sub W by uni16A2 ;
+sub y by uni16A2 ;
+sub Y by uni16A2 ;
+sub oslash by uni16A2 ;
+sub Oslash by uni16A2 ;
+sub oogonek by uni16C5 ;
+sub Oogonek by uni16C5 ;
+sub odieresis by uni16C5 ;
+sub Odieresis by uni16C5 ;
+sub thorn by uni16A6 ;
+sub thorn.loclENG by uni16A6 ;
+sub Thorn by uni16A6 ;
+sub Thorn.loclENG by uni16A6 ;
+sub eth by uni16A6 ;
+sub eth.loclENG by uni16A6 ;
+sub Eth by uni16A6 ;
+sub aogonek by uni16AC ;
+sub Aogonek by uni16AC ;
+sub o by uni16AC ;
+sub O by uni16AC ;
+# sub r by uni16B1 ;
+# sub R by uni16B1 ;
+sub k by uni16B4 ;
+sub K by uni16B4 ;
+sub c by uni16B4 ;
+sub C by uni16B4 ;
+sub g by uni16B4 ;
+sub G by uni16B4 ;
+sub h by uni16BC ;
+sub H by uni16BC ;
+sub n by uni16BE ;
+sub N by uni16BE ;
+sub e by uni16C1 ;
+sub E by uni16C1 ;
+sub i by uni16C1 ;
+sub I by uni16C1 ;
+sub j by uni16C1 ;
+sub J by uni16C1 ;
+sub a by uni16C5 ;
+sub A by uni16C5 ;
+sub ae by uni16C5 ;
+sub AE by uni16C5 ;
+# sub uni0280 by uni16E6 ;
+sub s by uni16CB ;
+sub S by uni16CB ;
+sub t by uni16CF ;
+sub T by uni16CF ;
+sub d by uni16CF ;
+sub D by uni16CF ;
+# sub b by uni16D2 ;
+# sub B by uni16D2 ;
+# sub p by uni16D2 ;
+# sub P by uni16D2 ;
+# sub m by uni16D8 ;
+# sub M by uni16D8 ;
+# sub l by uni16DA ;
+# sub L by uni16DA ;
+";
+labels = (
+{
+language = default;
+value = "Younger Futhark";
+}
+);
+tag = ss14;
+},
+{
+code = "sub uni16AC by uni16AD ;
+# sub uni16BC by uni16BD ;
+sub uni16BE by uni16BF ;
+sub uni16C5 by uni16C6 ;
+sub uni16CB by uni16CC ;
+# sub uni16CF by uni16D0 ;
+# sub uni16D2 by uni16D3 ;
+# sub uni16D8 by uni16D9 ;
+# sub uni16E6 by uni16E7 ;
+";
+labels = (
+{
+language = default;
+value = "Long Branch to Short Twig";
+}
+);
+tag = ss15;
+},
+{
+code = "sub r by rrotunda.alt ;
+sub rrotunda by rrotunda.alt ;
+# sub r.sc by rrotunda.alt.sc;
+# sub rrotunda.sc by rrotunda.alt.sc;
+";
+labels = (
+{
+language = default;
+value = "Contextual r rotunda";
+}
+);
+tag = ss16;
+},
+{
+code = "    sub exclam by exclam.alt ;
+    sub parenleft by parenleft.alt ;
+    sub parenright by parenright.alt ;
+#     sub colon by colon.alt ;
+#     sub semicolon by semicolon.alt ;
+#     sub question by question.alt ;
+    sub quoteleft by quoteleft.alt ;
+    sub quoteright by quoteright.alt ;
+    sub quotedblleft by quotedblleft.alt ;
+    sub quotedblright by quotedblright.alt ;
+    
+";
+labels = (
+{
+language = default;
+value = "Old-style punctuation spacing";
+}
+);
+tag = ss18;
+},
+{
+code = "    sub A by u10330 ;
+    sub B by u10331 ;
+#    sub D by u10333 ;
+#    sub E by u10334 ;
+#    sub F by u10346 ;
+#    sub G by u10332 ;
+#    sub H by u10337 ;
+#    sub I by u10339 ;
+#    sub J by u1033E ;
+#    sub K by u1033A ;
+#    sub L by u1033B ;
+#    sub M by u1033C ;
+#    sub N by u1033D ;
+#    sub O by u10349 ;
+#    sub P by u10340 ;
+#    sub Q by u10335 ;
+#    sub R by u10342 ;
+#    sub S by u10343 ;
+#    sub T by u10344 ;
+#    sub U by u1033F ;
+#    sub W by u10345 ;
+#    sub X by u10347 ;
+#    sub Z by u10336 ;
+    sub a by u10330 ;
+    sub b by u10331 ;
+#    sub d by u10333 ;
+#    sub e by u10334 ;
+#    sub f by u10346 ;
+#    sub g by u10332 ;
+#    sub h by u10337 ;
+#    sub i by u10339 ;
+#    sub j by u1033E ;
+#    sub k by u1033A ;
+#    sub l by u1033B ;
+#    sub m by u1033C ;
+#    sub n by u1033D ;
+#    sub o by u10349 ;
+#    sub p by u10340 ;
+#    sub q by u10335 ;
+#    sub r by u10342 ;
+#    sub s by u10343 ;
+#    sub t by u10344 ;
+#    sub u by u1033F ;
+#    sub w by u10345 ;
+#    sub x by u10347 ;
+#    sub z by u10336 ;
+#    sub Thorn by u10338 ;
+#    sub thorn by u10338 ;
+#    sub Thorn.loclENG by u10338 ;
+#    sub thorn.loclENG by u10338 ;
+#    sub hv by u10348 ;
+#    sub Hwair by u10348 ;
+";
+labels = (
+{
+language = default;
+value = "Latin to Gothic";
+}
+);
+tag = ss19;
+},
+{
+code = "sub muncialcomb by muncialcomb.low ;
+# sub dotlessicomb by dotlessicomb.low ;
+# sub Rcomb by Rcomb.low ;
+# sub acomb by acomb.low ;
+# sub ecomb by ecomb.low ;
+# sub ocomb by ocomb.low ;
+# sub rcomb by rcomb.low ;
+# sub tcomb by tcomb.low ;
+# sub vcomb by vcomb.low ;
+# sub zcomb by zcomb.low ;
+";
+labels = (
+{
+language = default;
+value = "Low Diacritics";
+}
+);
+tag = ss20;
+},
+{
+automatic = 1;
+code = "sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
+sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+";
+tag = ordn;
+},
+{
+code = "# sub A from [ A.alt1 A.alt2 A.alt3 ];
+sub A from [ A.alt1 A.alt2 ];
+";
+labels = (
+{
+language = default;
+value = "alternate a";
+}
+);
+tag = cv01;
+},
+{
+code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 ] ;
+";
+disabled = 1;
+tag = cv02;
+},
+{
+code = "sub C from [ C.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate C";
+}
+);
+tag = cv05;
+},
+{
+code = "sub c from [ c.mecurl ] ;
+";
+tag = cv06;
+},
+{
+code = "sub D from [ Dinsular ] ;
+
+";
+labels = (
+{
+language = default;
+value = "Round form of d";
+}
+);
+tag = cv07;
+},
+{
+code = "sub d from [ dinsular dinsular.alt d.mecurl ] ;
+";
+tag = cv08;
+},
+{
+code = "sub E from [ E.alt1 E.alt2 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate e";
+}
+);
+tag = cv09;
+},
+{
+code = "sub e from [ e.alt1 e.alt2 e.alt3 ] ;
+";
+tag = cv10;
+},
+{
+code = "sub F         from [ Finsular         ] ;
+# sub Fdotbelow from [ Finsulardotbelow ] ;
+
+";
+labels = (
+{
+language = default;
+value = "Alternate f";
+}
+);
+tag = cv11;
+},
+{
+code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl ] ;
+
+
+# do something about underdotted form (supply for all?)
+# sub fdotbelow    from [ finsulardotbelow    ] ;
+
+
+";
+tag = cv12;
+},
+{
+code = "sub G from [ Ginsular G.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate g";
+}
+);
+tag = cv13;
+},
+{
+code = "sub g from [ ginsular uni0261 g.alt1 g.alt2 g.alt3 g.mecurl ] ;
+";
+disabled = 1;
+tag = cv14;
+},
+{
+code = "sub H from [ H.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate h";
+}
+);
+tag = cv15;
+},
+{
+code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ] ;
+";
+labels = (
+{
+language = dflt;
+value = "Alternate o";
+}
+);
+tag = cv16;
+},
+{
+code = "sub I from [ Idotaccent uniA7FE ] ;
+# figure this out
+# sub Idotaccent    from [ I                                  ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate i";
+}
+);
+tag = cv17;
+},
+{
+code = "sub i from [ dotlessi i.alt i.alt1 ] ;
+# figure this out
+# sub dotlessi      from [ i                                  ] ;
+";
+tag = cv18;
+},
+{
+code = "sub J from [ Jdotaccent ] ;
+";
+disabled = 1;
+tag = cv19;
+},
+{
+code = "sub j from [ jdotless j.alt2 jdotaccent ] ;
+";
+disabled = 1;
+tag = cv20;
+},
+{
+code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate k";
+}
+);
+tag = cv22;
+},
+{
+code = "sub l by l.alt ;
+";
+labels = (
+{
+language = default;
+value = "Alternate l";
+}
+);
+tag = cv24;
+},
+{
+code = "sub M from [ M.alt1 M.alt2 uniA7FF ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate m";
+}
+);
+tag = cv25;
+},
+{
+code = "sub m from [ m.alt1 m.alt2 m.alt3  ] ;
+";
+tag = cv26;
+},
+{
+code = "sub N from [ N.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate n";
+}
+);
+tag = cv27;
+},
+{
+code = "sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl ] ;
+";
+tag = cv28;
+},
+{
+code = "sub O from [ Ooldpolish ] ;";
+disabled = 1;
+tag = cv29;
+},
+{
+code = "sub o from [ ooldpolish] ;
+";
+disabled = 1;
+tag = cv30;
+},
+{
+code = "sub P from [ uniA7FC ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate P";
+}
+);
+tag = cv31;
+},
+{
+code = "sub Q from [ Q.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate Q";
+}
+);
+tag = cv33;
+},
+{
+code = "sub q from [ q.alt ] ;
+";
+tag = cv34;
+},
+{
+code = "sub R from [ Rinsular ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate r";
+}
+);
+tag = cv35;
+},
+{
+code = "sub r from [ rinsular r.mecurl ] ;
+";
+tag = cv36;
+},
+{
+code = "sub S from [ Sinsular Ssigmoid    ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate s";
+}
+);
+tag = cv37;
+},
+{
+code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 ] ;
+";
+disabled = 1;
+tag = cv38;
+},
+{
+code = "sub T from [ Tinsular ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate t";
+}
+);
+tag = cv39;
+},
+{
+code = "sub t from [ tinsular t.mecurl ] ;
+";
+tag = cv40;
+},
+{
+code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 ];
+";
+labels = (
+{
+language = default;
+value = "Alternate v";
+}
+);
+tag = cv44;
+},
+{
+code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate x";
+}
+);
+tag = cv48;
+},
+{
+code = "sub Y from [ Y.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate y";
+}
+);
+tag = cv49;
+},
+{
+code = "sub y from [ y.alt y.alt2 ] ;
+";
+tag = cv50;
+},
+{
+code = "sub Z from [ Zvisigothic ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate Z";
+}
+);
+tag = cv51;
+},
+{
+code = "sub z from [ zvisigothic z.alt1 ] ;
+";
+disabled = 1;
+tag = cv52;
+},
+{
+code = "sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
+
+";
+labels = (
+{
+language = default;
+value = "Alternate a + ogonek";
+}
+);
+tag = cv53;
+},
+{
+code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
+";
+tag = cv54;
+},
+{
+code = "sub aa from [ aa.alt2 aa.alt ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate aa";
+}
+);
+tag = cv55;
+},
+{
+code = "sub AE from [ AE.alt1 ] ;
+";
+disabled = 1;
+tag = cv56;
+},
+{
+code = "sub ae from [ ae.alt1 ae.alt2 ae.alt3 ] ;
+";
+tag = cv57;
+},
+{
+code = "sub Ao from [ Ao.alt ] ;
+";
+tag = cv58;
+},
+{
+code = "sub lhighstroke by lhighstroke.alt ;
+";
+tag = cv59;
+},
+{
+code = "sub rumrotunda by rumrotunda.alt ;";
+tag = cv60;
+},
+{
+code = "sub dcroat from [ dcroat.alt ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate round d";
+}
+);
+tag = cv61;
+},
+{
+code = "sub eogonek            from [ eogonek.alt            ] ;
+# sub Eogonek            from [ Eogonek.alt1           ] ;
+sub eogonekdotbelow    from [ eogonekdotbelow.alt    ] ;
+sub Eogonekdotbelow    from [ Eogonekdotbelow.alt    ] ;
+sub eogonekdotacute    from [ eogonekdotacute.alt    ] ;
+sub Eogonekdotacute    from [ Eogonekdotacute.alt    ] ;
+sub eogonek.enlarged   from [ eogonek.enlarged.alt   ] ;
+# sub eogonekcomb        from [ eogonekcomb.alt        ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate e + ogonek";
+}
+);
+tag = cv62;
+},
+{
+code = "sub eogonek from [ eogonek.alt2 ] ;
+sub Eogonek from [ Eogonek.alt  ] ;
+";
+tag = cv63;
+},
+{
+code = "    sub Yogh       from [ Ezh         ] ;
+    sub yogh       from [ ezh         ] ;
+";
+labels = (
+{
+language = default;
+value = "Flat-top yogh";
+}
+);
+tag = cv64;
+},
+{
+code = "sub lhighstroke from [ lhighstroke.alt ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate l with high stroke";
+}
+);
+tag = cv65;
+},
+{
+code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate o";
+}
+);
+tag = cv66;
+},
+{
+code = "sub thornstroke         from [ thornstroke.alt         ] ;
+sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
+";
+tag = cv67;
+},
+{
+code = "sub uni0294 from [ uni0294.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate glottal stop";
+}
+);
+tag = cv68;
+},
+{
+code = "sub tironiansignet from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
+sub uni2E52        from [ uni2E52.alt1        uni2E52.alt2        ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate Tironian nota";
+}
+);
+tag = cv69;
+},
+{
+code = "sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5
+                  uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2 question.alt3 question.alt4 asciitilde.alt
+                  asterisk.alt dottedsolidus slash.alt ] ;
+";
+disabled = 1;
+tag = cv70;
+},
+{
+code = "sub periodcentered from [ periodcentered.alt ] ;
+";
+disabled = 1;
+tag = cv71;
+},
+{
+code = "sub comma from [ comma.alt1 comma.alt2 ] ;
+";
+disabled = 1;
+tag = cv72;
+},
+{
+code = "sub semicolon from [ semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 ] ;
+";
+disabled = 1;
+tag = cv73;
+},
+{
+code = "sub uni2E4E from [ uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 ] ;
+";
+disabled = 1;
+tag = cv74;
+},
+{
+code = "sub exclam from [ exclam.alt2 ] ;
+";
+disabled = 1;
+tag = cv75;
+},
+{
+code = "sub question from [ question.alt2 question.alt3 question.alt4 ] ;
+";
+disabled = 1;
+tag = cv76;
+},
+{
+code = "sub asciitilde from [ asciitilde.alt ] ;
+";
+disabled = 1;
+tag = cv77;
+},
+{
+code = "sub asterisk from [ asterisk.alt ] ;
+";
+disabled = 1;
+tag = cv78;
+},
+{
+code = "sub slash from [ dottedsolidus slash.alt ] ;
+";
+disabled = 1;
+tag = cv79;
+},
+{
+code = "sub rumrotunda from [ rumrotunda.alt ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate -rum sign";
+}
+);
+tag = cv80;
+},
+{
+code = "# sub zigzagabovecomb      from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2      zigzagabovecomb.alt3      ] ;
+# sub zigzagabovecomb.case from [ zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case zigzagabovecomb.alt3.case ] ;
+# sub zigzagabovecomb.sc   from [ zigzagabovecomb.alt1.sc   zigzagabovecomb.alt2.sc   zigzagabovecomb.alt3.sc   ] ;
+sub zigzagabovecomb      from [ zigzagabovecomb.alt1 ] ;
+";
+labels = (
+{
+language = default;
+value = "Alternate zigzags";
+}
+);
+tag = cv81;
+},
+{
+code = "sub usmod from [ usmod.alt1 usmod.alt2 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Variants of spacing us";
+}
+);
+tag = cv82;
+},
+{
+code = "sub et from [ et.alt ];
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "et sign";
+}
+);
+tag = cv83;
+},
+{
+code = "sub flattenedopenaabovecomb from [ flattenedopenaabovecomb.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate flattenedopenaabovecomb";
+}
+);
+tag = cv85;
+},
+{
+code = "sub insulardcomb by insulardcomb.alt ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alt insular d";
+}
+);
+tag = cv86;
+},
+{
+code = "sub rrotundacomb from [ rrotundacomb.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate combining r rotunda";
+}
+);
+tag = cv87;
+},
+{
+code = "# sub adieresis    from [ adieresis.alt        ] ;
+# sub odieresis    from [ odieresis.alt        ] ;
+sub dieresiscomb from [ diagonaldieresiscomb ] ;
+";
+tag = cv88;
+},
+{
+code = "sub overlinecomb from [ overlinecomb.alt ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Alternate combining bar";
+}
+);
+tag = cv89;
+},
+{
+code = "# Probably wrong. The target should be a standalone.
+sub tildecomb from [ tildecomb.alt ] ;
+";
+disabled = 1;
+tag = cv90;
+},
+{
+code = "sub strokeshortcomb from [ strokeshortcomb.wide strokeshortcomb.wideright strokeshortcomb.wideleft ] ;
+";
+disabled = 1;
+tag = cv91;
+},
+{
+code = "sub brevebelowcomb from [ triplebrevebelowcomb ] ;
+";
+disabled = 1;
+tag = cv92;
+},
+{
+code = "sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 currency.alt05 currency.alt06 currency.alt07
+                    currency.alt08 currency.alt09 currency.alt10 currency.alt11 currency.alt12 currency.alt13 currency.alt14
+                    currency.alt15 currency.alt16 currency.alt17 currency.alt18 currency.alt19 currency.alt20 
+                    currency.alt21 currency.alt22 currency.alt23 currency.alt24 currency.alt25 currency.alt26 currency.alt27 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "currency signs";
+}
+);
+tag = cv93;
+},
+{
+code = "sub lbbarsymbol from [ currency.alt12 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "French Libra Sign";
+}
+);
+tag = cv94;
+},
+{
+code = "sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Variants of Sterling";
+}
+);
+tag = cv95;
+},
+{
+code = "sub uni20B0 from [ currency.alt22 ] ;
+";
+disabled = 1;
+tag = cv96;
+},
+{
+code = "sub florin from [ currency.alt07 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Variants of florin";
+}
+);
+tag = cv97;
+},
+{
+code = "sub uni2125 from [ currency.alt27 ] ;
+";
+disabled = 1;
+labels = (
+{
+language = default;
+value = "Variant of ounce sign";
+}
+);
+tag = cv98;
+},
+{
+automatic = 1;
+code = "sub A by a.sc;
+sub AA by aa.sc;
+sub Aacute by aacute.sc;
+sub Abreve by abreve.sc;
+sub Abreveacute by abreveacute.sc;
+sub Abrevedotbelow by abrevedotbelow.sc;
+sub Abrevegrave by abrevegrave.sc;
+sub Abrevehookabove by abrevehookabove.sc;
+sub Abrevetilde by abrevetilde.sc;
+sub Acaron by acaron.sc;
+sub Acircumflex by acircumflex.sc;
+sub Acircumflexacute by acircumflexacute.sc;
+sub Acircumflexdotbelow by acircumflexdotbelow.sc;
+sub Acircumflexgrave by acircumflexgrave.sc;
+sub Acircumflexhookabove by acircumflexhookabove.sc;
+sub Acircumflextilde by acircumflextilde.sc;
+sub Adblgrave by adblgrave.sc;
+sub Adieresis by adieresis.sc;
+sub Adieresismacron by adieresismacron.sc;
+sub Adotaccent by adotaccent.sc;
+sub Adotbelow by adotbelow.sc;
+sub Adotmacron by adotmacron.sc;
+sub Agrave by agrave.sc;
+sub Ahookabove by ahookabove.sc;
+sub Ainvertedbreve by ainvertedbreve.sc;
+sub Amacron by amacron.sc;
+sub Ao by ao.sc;
+sub Aogonek by aogonek.sc;
+sub Aring by aring.sc;
+sub Aringacute by aringacute.sc;
+sub Aringbelow by aringbelow.sc;
+sub Atilde by atilde.sc;
+sub AE by ae.sc;
+sub AEacute by aeacute.sc;
+sub B by b.sc;
+sub C by c.sc;
+sub Cacute by cacute.sc;
+sub Ccaron by ccaron.sc;
+sub Ccedilla by ccedilla.sc;
+sub Ccircumflex by ccircumflex.sc;
+sub Cdotaccent by cdotaccent.sc;
+sub D by d.sc;
+sub Eth by eth.sc;
+sub Dcaron by dcaron.sc;
+sub Dcircumflexbelow by dcircumflexbelow.sc;
+sub Ddotaccent by ddotaccent.sc;
+sub Ddotbelow by ddotbelow.sc;
+sub E by e.sc;
+sub Eacute by eacute.sc;
+sub Ebreve by ebreve.sc;
+sub Ecaron by ecaron.sc;
+sub Ecedillabreve by ecedillabreve.sc;
+sub Ecircumflex by ecircumflex.sc;
+sub Ecircumflexacute by ecircumflexacute.sc;
+sub Ecircumflexbelow by ecircumflexbelow.sc;
+sub Ecircumflexdotbelow by ecircumflexdotbelow.sc;
+sub Ecircumflexgrave by ecircumflexgrave.sc;
+sub Ecircumflexhookabove by ecircumflexhookabove.sc;
+sub Ecircumflextilde by ecircumflextilde.sc;
+sub Edieresis by edieresis.sc;
+sub Edotaccent by edotaccent.sc;
+sub Edotbelow by edotbelow.sc;
+sub Egrave by egrave.sc;
+sub Ehookabove by ehookabove.sc;
+sub Einvertedbreve by einvertedbreve.sc;
+sub Emacron by emacron.sc;
+sub Emacronacute by emacronacute.sc;
+sub Emacrongrave by emacrongrave.sc;
+sub Eogonek by eogonek.sc;
+sub F by f.sc;
+sub G by g.sc;
+sub Gbreve by gbreve.sc;
+sub Gcaron by gcaron.sc;
+sub Gcircumflex by gcircumflex.sc;
+sub Gcommaaccent by gcommaaccent.sc;
+sub Gdotaccent by gdotaccent.sc;
+sub Gmacron by gmacron.sc;
+sub H by h.sc;
+sub Hcaron by hcaron.sc;
+sub Hcircumflex by hcircumflex.sc;
+sub Hdieresis by hdieresis.sc;
+sub Hdotaccent by hdotaccent.sc;
+sub Hdotbelow by hdotbelow.sc;
+sub I by i.sc;
+sub Iacute by iacute.sc;
+sub Ibreve by ibreve.sc;
+sub Icaron by icaron.sc;
+sub Icircumflex by icircumflex.sc;
+sub Idblgrave by idblgrave.sc;
+sub Idieresis by idieresis.sc;
+sub Idotaccent by idotaccent.sc;
+sub Igrave by igrave.sc;
+sub Iinvertedbreve by iinvertedbreve.sc;
+sub Imacron by imacron.sc;
+sub Itilde by itilde.sc;
+sub J by j.sc;
+sub Jcircumflex by jcircumflex.sc;
+sub K by k.sc;
+sub Kacute by kacute.sc;
+sub Kcaron by kcaron.sc;
+sub Kdotbelow by kdotbelow.sc;
+sub L by l.sc;
+sub Lacute by lacute.sc;
+sub Lcircumflexbelow by lcircumflexbelow.sc;
+sub Ldotbelow by ldotbelow.sc;
+sub Ldotbelowmacron by ldotbelowmacron.sc;
+sub Lslash by lslash.sc;
+sub M by m.sc;
+sub Macute by macute.sc;
+sub Mdotaccent by mdotaccent.sc;
+sub Mdotbelow by mdotbelow.sc;
+sub N by n.sc;
+sub Nacute by nacute.sc;
+sub Ncaron by ncaron.sc;
+sub Ncircumflexbelow by ncircumflexbelow.sc;
+sub Ndotaccent by ndotaccent.sc;
+sub Ndotbelow by ndotbelow.sc;
+sub Ngrave by ngrave.sc;
+sub Ntilde by ntilde.sc;
+sub O by o.sc;
+sub Oacute by oacute.sc;
+sub Obreve by obreve.sc;
+sub Ocircumflex by ocircumflex.sc;
+sub Ocircumflexacute by ocircumflexacute.sc;
+sub Ocircumflexdotbelow by ocircumflexdotbelow.sc;
+sub Ocircumflexgrave by ocircumflexgrave.sc;
+sub Ocircumflexhookabove by ocircumflexhookabove.sc;
+sub Odieresis by odieresis.sc;
+sub Odieresismacron by odieresismacron.sc;
+sub Odotaccent by odotaccent.sc;
+sub Odotbelow by odotbelow.sc;
+sub Ograve by ograve.sc;
+sub Oinvertedbreve by oinvertedbreve.sc;
+sub Omacron by omacron.sc;
+sub Omacronacute by omacronacute.sc;
+sub Omacrongrave by omacrongrave.sc;
+sub Oogonek by oogonek.sc;
+sub Oslash by oslash.sc;
+sub Oslashacute by oslashacute.sc;
+sub Otilde by otilde.sc;
+sub Otildeacute by otildeacute.sc;
+sub Otildedieresis by otildedieresis.sc;
+sub Otildemacron by otildemacron.sc;
+sub OE by oe.sc;
+sub P by p.sc;
+sub Pacute by pacute.sc;
+sub Pdotaccent by pdotaccent.sc;
+sub Thorn by thorn.sc;
+sub Q by q.sc;
+sub Qdiagonalstroke by qdiagonalstroke.sc;
+sub R by r.sc;
+sub Racute by racute.sc;
+sub Rcaron by rcaron.sc;
+sub Rdotaccent by rdotaccent.sc;
+sub Rdotbelow by rdotbelow.sc;
+sub Rdotbelowmacron by rdotbelowmacron.sc;
+sub S by s.sc;
+sub Sacute by sacute.sc;
+sub Scaron by scaron.sc;
+sub Scarondotaccent by scarondotaccent.sc;
+sub Scedilla by scedilla.sc;
+sub Scircumflex by scircumflex.sc;
+sub Scommaaccent by scommaaccent.sc;
+sub Sdotaccent by sdotaccent.sc;
+sub Sdotbelow by sdotbelow.sc;
+sub Sdotbelowdotaccent by sdotbelowdotaccent.sc;
+sub Germandbls by germandbls.sc;
+sub T by t.sc;
+sub Tcaron by tcaron.sc;
+sub Tcircumflexbelow by tcircumflexbelow.sc;
+sub Tcommaaccent by tcommaaccent.sc;
+sub Tdotaccent by tdotaccent.sc;
+sub Tdotbelow by tdotbelow.sc;
+sub Thornstroke by thornstroke.sc;
+sub Thornstrokethroughdescender by thornstrokethroughdescender.sc;
+sub U by u.sc;
+sub Uacute by uacute.sc;
+sub Ubreve by ubreve.sc;
+sub Ucircumflex by ucircumflex.sc;
+sub Ucircumflexbelow by ucircumflexbelow.sc;
+sub Udblgrave by udblgrave.sc;
+sub Udieresis by udieresis.sc;
+sub Udieresisacute by udieresisacute.sc;
+sub Udieresisbelow by udieresisbelow.sc;
+sub Udieresiscaron by udieresiscaron.sc;
+sub Udieresisgrave by udieresisgrave.sc;
+sub Udieresismacron by udieresismacron.sc;
+sub Udotbelow by udotbelow.sc;
+sub Ugrave by ugrave.sc;
+sub Uhookabove by uhookabove.sc;
+sub Uhungarumlaut by uhungarumlaut.sc;
+sub Uinvertedbreve by uinvertedbreve.sc;
+sub Umacron by umacron.sc;
+sub Umacrondieresis by umacrondieresis.sc;
+sub Uogonek by uogonek.sc;
+sub Uring by uring.sc;
+sub V by v.sc;
+sub W by w.sc;
+sub Wacute by wacute.sc;
+sub Wcircumflex by wcircumflex.sc;
+sub Wdieresis by wdieresis.sc;
+sub Wdotaccent by wdotaccent.sc;
+sub Wdotbelow by wdotbelow.sc;
+sub Wgrave by wgrave.sc;
+sub X by x.sc;
+sub Xdotaccent by xdotaccent.sc;
+sub Y by y.sc;
+sub Yacute by yacute.sc;
+sub Ycircumflex by ycircumflex.sc;
+sub Ydieresis by ydieresis.sc;
+sub Ydotaccent by ydotaccent.sc;
+sub Ydotbelow by ydotbelow.sc;
+sub Ygrave by ygrave.sc;
+sub Ymacron by ymacron.sc;
+sub Ytilde by ytilde.sc;
+sub Z by z.sc;
+sub Zacute by zacute.sc;
+sub Zcaron by zcaron.sc;
+sub Zcircumflex by zcircumflex.sc;
+sub Zdotaccent by zdotaccent.sc;
+sub Zdotbelow by zdotbelow.sc;
+sub Ao.alt by ao.alt.sc;
+sub A.alt1 by a.alt1.sc;
+sub Aogonek.alt1 by aogonek.alt1.sc;
+sub Aogonek.alt2 by aogonek.alt2.sc;
+sub Thorn.loclENG by thorn.loclENG.sc;
+sub Thornstroke.loclENG by thornstroke.loclENG.sc;
+sub dotacutecomb by dotacutecomb.sc;
+sub carondotcomb by carondotcomb.sc;
+sub dieresiscomb by dieresiscomb.sc;
+sub dotaccentcomb by dotaccentcomb.sc;
+sub gravecomb by gravecomb.sc;
+sub acutecomb by acutecomb.sc;
+sub hungarumlautcomb by hungarumlautcomb.sc;
+sub circumflexcomb by circumflexcomb.sc;
+sub caroncomb by caroncomb.sc;
+sub brevecomb by brevecomb.sc;
+sub tildecomb by tildecomb.sc;
+sub macroncomb by macroncomb.sc;
+sub hookabovecomb by hookabovecomb.sc;
+sub dblgravecomb by dblgravecomb.sc;
+sub breveinvertedcomb by breveinvertedcomb.sc;
+sub ogonekcomb by ogonekcomb.sc;
+sub caron by caron.sc;
+sub adotaccentacute by adotaccentacute.sc;
+sub aedotaccentacute by aedotaccentacute.sc;
+sub edotaccentacute by edotaccentacute.sc;
+sub eogonekdotacute by eogonekdotacute.sc;
+sub eogonekdotbelow by eogonekdotbelow.sc;
+sub idotaccentacute by idotaccentacute.sc;
+sub odotaccentacute by odotaccentacute.sc;
+sub oslashdotaccentacute by oslashdotaccentacute.sc;
+sub udotaccentacute by udotaccentacute.sc;
+sub ydotaccentacute by ydotaccentacute.sc;
+sub eogonekdotacute.alt by eogonekdotacute.alt.sc;
+sub eogonekdotbelow.alt by eogonekdotbelow.alt.sc;
+";
+tag = c2sc;
 },
 {
 automatic = 1;
@@ -715,11 +2477,13 @@ sub icaron by icaron.sc;
 sub icircumflex by icircumflex.sc;
 sub idblgrave by idblgrave.sc;
 sub idieresis by idieresis.sc;
+sub idotaccent by idotaccent.sc;
 sub igrave by igrave.sc;
 sub iinvertedbreve by iinvertedbreve.sc;
 sub imacron by imacron.sc;
 sub itilde by itilde.sc;
 sub j by j.sc;
+sub jdotless by j.sc;
 sub jcircumflex by jcircumflex.sc;
 sub k by k.sc;
 sub kacute by kacute.sc;
@@ -797,6 +2561,8 @@ sub tcircumflexbelow by tcircumflexbelow.sc;
 sub tcommaaccent by tcommaaccent.sc;
 sub tdotaccent by tdotaccent.sc;
 sub tdotbelow by tdotbelow.sc;
+sub thornstroke by thornstroke.sc;
+sub thornstrokethroughdescender by thornstrokethroughdescender.sc;
 sub u by u.sc;
 sub uacute by uacute.sc;
 sub ubreve by ubreve.sc;
@@ -843,11 +2609,17 @@ sub zcaron by zcaron.sc;
 sub zcircumflex by zcircumflex.sc;
 sub zdotaccent by zdotaccent.sc;
 sub zdotbelow by zdotbelow.sc;
+sub ao.alt by ao.alt.sc;
 sub a.alt1 by a.alt1.sc;
+sub aogonek.alt1 by aogonek.alt1.sc;
+sub aogonek.alt2 by aogonek.alt2.sc;
 sub n.alt2 by n.alt2.sc;
 sub eth.loclENG by eth.sc;
 sub thorn.loclENG by thorn.loclENG.sc;
+sub thornstroke.loclENG by thornstroke.loclENG.sc;
 sub oogonekaboveacute by oogonekaboveacute.sc;
+sub thorndotbelow by thorndotbelow.sc;
+sub thorndotbelow.loclENG by thorndotbelow.loclENG.sc;
 sub dotacutecomb by dotacutecomb.sc;
 sub dieresiscomb by dieresiscomb.sc;
 sub dotaccentcomb by dotaccentcomb.sc;
@@ -865,64 +2637,497 @@ sub caron by caron.sc;
 sub carondotcomb by carondotcomb.sc;
 sub breveinvertedcomb by breveinvertedcomb.sc;
 sub ogonekcomb by ogonekcomb.sc;
+sub adotaccentacute by adotaccentacute.sc;
+sub aedotaccentacute by aedotaccentacute.sc;
+sub edotaccentacute by edotaccentacute.sc;
+sub eogonekdotacute by eogonekdotacute.sc;
+sub eogonekdotbelow by eogonekdotbelow.sc;
+sub idotaccentacute by idotaccentacute.sc;
+sub odotaccentacute by odotaccentacute.sc;
+sub oslashdotaccentacute by oslashdotaccentacute.sc;
+sub udotaccentacute by udotaccentacute.sc;
+sub ydotaccentacute by ydotaccentacute.sc;
+sub eogonekdotacute.alt by eogonekdotacute.alt.sc;
+sub eogonekdotbelow.alt by eogonekdotbelow.alt.sc;
 ";
 tag = smcp;
 },
 {
-code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 aogonek.alt3 ] ;
-sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
+code = "sub a.sc by a ;
+";
+tag = cv99;
+},
+{
+code = "# should be moved to after the cvXX features to take in variants produced by those?
+    sub A by Adotbelow ;
+    sub B by Bdotbelow ;
+#    sub C by Cdotbelow ;
+    sub D by Ddotbelow ;
+    sub E by Edotbelow ;
+#    sub F by Fdotbelow ;
+#    sub Finsular by Finsulardotbelow ;
+#    sub G by Gdotbelow ;
+    sub H by Hdotbelow ;
+    sub I by Idotbelow ;
+#    sub J by Jdotbelow ;
+    sub K by Kdotbelow ;
+    sub L by Ldotbelow ;
+    sub M by Mdotbelow ;
+    sub N by Ndotbelow ;
+    sub O by Odotbelow ;
+#    sub P by Pdotbelow ;
+#    sub Q by Qdotbelow ;
+    sub R by Rdotbelow ;
+    sub S by Sdotbelow ;
+    sub T by Tdotbelow ;
+    sub U by Udotbelow ;
+    sub V by Vdotbelow ;
+    sub W by Wdotbelow ;
+    sub X by Xdotsub ;
+    sub Y by Ydotbelow ;
+    sub Z by Zdotbelow ;
+    sub a by adotbelow ;
+    sub b by bdotbelow ;
+#    sub c by cdotbelow ;
+    sub d by ddotbelow ;
+    sub e by edotbelow ;
+#    sub f by fdotbelow ;
+#    sub finsular by finsulardotbelow ;
+#    sub g by gdotbelow ;
+    sub h by hdotbelow ;
+    sub i by idotbelow ;
+#    sub j by jdotbelow ;
+    sub k by kdotbelow ;
+    sub l by ldotbelow ;
+    sub m by mdotbelow ;
+    sub n by ndotbelow ;
+    sub o by odotbelow ;
+#    sub p by pdotbelow ;
+#    sub q by qdotbelow ;
+    sub r by rdotbelow ;
+#    sub rrotunda by rrotundadotbelow ;
+    sub s by sdotbelow ;
+    sub t by tdotbelow ;
+    sub u by udotbelow ;
+    sub v by vdotbelow ;
+    sub w by wdotbelow ;
+    sub x by xdotsub ;
+    sub y by ydotbelow ;
+    sub z by zdotbelow ;
+#    sub AE by AEdotbelow ;
+#    sub Eth by Ethdotbelow ;
+#    sub Oslash by Oslashdotbelow ;
+    sub Thorn by Thorndotbelow ;
+    sub thorn by thorndotbelow ;
+    sub Thorn.loclENG by Thorndotbelow.loclENG ;
+    sub thorn.loclENG by thorndotbelow.loclENG ;
+#    sub ae by aedotbelow ;
+#    sub eth by ethdotbelow ;
+#    sub oslash by oslashdotbelow ;
+#    sub longs by longsdotbelow ;
+    sub wynn by wynndotsub ;
+    sub Eogonek by Eogonekdotbelow ;
+    sub eogonek by eogonekdotbelow ;
+    sub Oogonek by Oogonekdotbelow ;
+    sub oogonek by oogonekdotbelow ;
+    sub Wynn by Wynndotsub ;
+    sub Yogh by Yoghdotsub ;
+    sub yogh by yoghdotsub ;
+    sub Ezh by Yoghflatdot ;
+    sub ezh by yoghflatdot ;
+#   sub yogh.sc by yoghdotsub.sc ;
+    sub AA by uniEFF2 ;
+    sub aa by uniEFF3 ;
+    sub Ao by uniEFF4 ;
+    sub ao by uniEFF5 ;
+    sub Au by uniEFF6 ;
+    sub au by uniEFF7 ;
+    sub Av by uniEFF8 ;
+    sub av by uniEFF9 ;
+    sub AY by uniEFFA ;
+    sub ay by uniEFFB ;
+    sub eth.loclENG by uniE48F.loclENG ;
+    sub a.sc by adotbelow.sc ;
+#    sub b.sc by bdotbelow.sc ;
+#    sub c.sc by cdotbelow.sc ;
+    sub d.sc by ddotbelow.sc ;
+    sub e.sc by edotbelow.sc ;
+    sub eogonek.sc by eogonekdotbelow.sc ;
+#    sub f.sc by fdotbelow.sc ;
+#    sub finsular.sc by finsulardotbelow.sc ;
+#    sub g.sc by gdotbelow.sc ;
+    sub h.sc by hdotbelow.sc ;
+#    sub i.sc by idotbelow.sc ;
+#    sub j.sc by jdotbelow.sc ;
+    sub k.sc by kdotbelow.sc ;
+    sub l.sc by ldotbelow.sc ;
+    sub m.sc by mdotbelow.sc ;
+    sub n.sc by ndotbelow.sc ;
+    sub o.sc by odotbelow.sc ;
+#    sub p.sc by pdotbelow.sc ;
+    sub r.sc by rdotbelow.sc ;
+    sub s.sc by sdotbelow.sc ;
+    sub t.sc by tdotbelow.sc ;
+    sub u.sc by udotbelow.sc ;
+#    sub v.sc by vdotbelow.sc ;
+    sub w.sc by wdotbelow.sc ;
+#    sub x.sc by xdotsub.sc ;
+    sub y.sc by ydotbelow.sc ;
+    sub z.sc by zdotbelow.sc ;
+#    sub ohorn.sc by ohorndotbelow.sc ;
+#    sub uhorn.sc by uhorndotbelow.sc ;
+#    sub ae.sc by aedotbelow.sc ;
+#    sub eth.sc by ethdotbelow.sc ;
+    sub thorn.sc by thorndotbelow.sc ;
+    sub thorn.loclENG.sc by thorndotbelow.loclENG.sc ;
+#    sub yogh.sc by yoghdotsub.sc ;
+#    sub ezh.sc by yoghflatdot.sc ;
+    ";
+labels = (
+{
+language = default;
+value = Underdotted;
+}
+);
+tag = ss07;
+},
+{
+code = "    sub Feoh by Feoh.rtl ;
+    sub uni16A1 by uni16A1.rtl ;
+    sub uni16A2 by uni16A2.rtl ;
+    sub uni16A3 by uni16A3.rtl ;
+    sub uni16A4 by uni16A4.rtl ;
+    sub uni16A5 by uni16A5.rtl ;
+    sub uni16A6 by uni16A6.rtl ;
+    sub uni16A7 by uni16A7.rtl ;
+    sub uni16A8 by uni16A8.rtl ;
+    sub uni16A9 by uni16A9.rtl ;
+    sub uni16AA by uni16AA.rtl ;
+    sub uni16AB by uni16AB.rtl ;
+    sub uni16AC by uni16AC.rtl ;
+    sub uni16AD by uni16AD.rtl ;
+    sub uni16AE by uni16AE.rtl ;
+    sub uni16AF by uni16AF.rtl ;
+    sub uni16B0 by uni16B0.rtl ;
+    sub uni16B1 by uni16B1.rtl ;
+    sub uni16B2 by uni16B2.rtl ;
+    sub uni16B3 by uni16B3.rtl ;
+    sub uni16B4 by uni16B4.rtl ;
+    sub uni16B5 by uni16B5.rtl ;
+    sub uni16B6 by uni16B6.rtl ;
+    sub uni16B9 by uni16B9.rtl ;
+    sub uni16BA by uni16BA.rtl ;
+    sub uni16BB by uni16BB.rtl ;
+    sub uni16BE by uni16BE.rtl ;
+    sub uni16BF by uni16BF.rtl ;
+    sub uni16C0 by uni16C0.rtl ;
+    sub uni16C3 by uni16C3.rtl ;
+    sub uni16C5 by uni16C5.rtl ;
+    sub uni16C6 by uni16C6.rtl ;
+    sub uni16C7 by uni16C7.rtl ;
+    sub uni16C8 by uni16C8.rtl ;
+    sub uni16CA by uni16CA.rtl ;
+    sub uni16CB by uni16CB.rtl ;
+    sub uni16D0 by uni16D0.rtl ;
+    sub uni16D1 by uni16D1.rtl ;
+    sub uni16D2 by uni16D2.rtl ;
+    sub uni16D3 by uni16D3.rtl ;
+    sub uni16D4 by uni16D4.rtl ;
+    sub uni16D5 by uni16D5.rtl ;
+    sub uni16DA by uni16DA.rtl ;
+    sub uni16DB by uni16DB.rtl ;
+    sub uni16E2 by uni16E2.rtl ;
+    sub uni16E9 by uni16E9.rtl ;
+    sub uni16EA by uni16EA.rtl ;
+    sub uni16EE by uni16EE.rtl ;";
+disabled = 1;
+tag = rtlm;
+},
+{
+code = "lookup zigzag {
+  sub d zigzagabovecomb.alt2' by zigzagabovecomb.alt4 ;
+  sub [ b h k l thorn thorn.loclENG uniF208 uniF221 uniF23A uniF209 h.alt k.alt1 k.alt2 k.alt3 ] zigzagabovecomb.alt2' by zigzagabovecomb.alt6 ;
+  sub [f f.alt] zigzagabovecomb.alt2' by zigzagabovecomb.alt5 ;
+} zigzag ;
+
+lookup ethdiacritic {
+ sub eth' @lowdiacritics by eth.withdiacritic ;
+ sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
+ sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
+} ethdiacritic ;
+
+lookup shortstroke {
+  sub [ b h k thorn thorn.loclENG uniF208 uniF221 uniF23A uniF209 h.alt k.alt1 k.alt2 k.alt3 ] strokeshortcomb.wide' by strokeshortcomb.wideright ;
+  sub [ d dinsular ] strokeshortcomb.wide' by strokeshortcomb.wideleft ;
+} shortstroke ;
+
+lookup f_alt {
+  sub f' @lc_with_diacritics_above by f.alt;
+} f_alt;
+
+lookup j_alt {
+  @g_and_ogonek = [ g Eogonek eogonek Aogonek aogonek uogonek ] ;
+  @jay = [ j ] ;
+  sub @g_and_ogonek @jay' by [ j.alt ] ;
+} j_alt;
+
+lookup alt_eth {
+  sub @lc_with_diacritics_above eth.loclENG' by eth.loclENG.alt;
+} alt_eth;
+
+lookup calt_rrotunda {
+  lookupflag UseMarkFilteringSet @combining_above;
+  ignore sub @RoundOnRight [rrotunda.alt rrotunda.alt.sc]' ;
+  ignore sub @RoundOnRight @combining_above [rrotunda.alt rrotunda.alt.sc]' ;
+  sub [rrotunda.alt rrotunda.alt.sc]' by [r r.sc] ;
+} calt_rrotunda;
+
+lookup calt_insular {
+  sub sinsular' tinsular by longs;
+} calt_insular;
+
+script latn;
+
+lookup calt_01_1 {
+  language ENG;
+  # English rules for handling longs: substitute the round form before or after f.
+  lookupflag UseMarkFilteringSet @combining_above;
+  sub @LowerCase_f [ longs.alt1 longs.enlarged.alt ]' by [ s s.enlarged ] ;
+  # sub @LowerCase_f longs' by s ;
+  # sub @LowerCase_f longs.enlarged' by s.enlarged ;
+  sub @LowerCase_f @combining_above [ longs.alt1 longs.enlarged.alt ]' by [ s s.enlarged ] ;
+  ignore sub [ longs.alt1 longs.enlarged.alt ]' @AllLowerCaseexclf ;
+  ignore sub [ longs.alt1 longs.enlarged.alt ]' @combining_above @AllLowerCaseexclf ;
+  sub [ longs.alt1 longs.enlarged.alt ]' by [ s s.enlarged ] ;
+  # sub longs' by s ;
+} calt_01_1;
+
+lookup calt_01_2 {
+  language FRA;
+  # French rules for long s
+  sub @LowerCase_f [ longs.alt1 longs.enlarged.alt ]' by [ s s.enlarged ] ;
+  ignore sub [ longs.alt1 longs.enlarged.alt ]' @AllLowerCaseexclfbh ;
+  sub [ longs.alt1 longs.enlarged.alt ]' by [ s s.enlarged ] ;
+} calt_01_2 ;
 ";
 disabled = 1;
 labels = (
 {
-language = dflt;
-value = "Alternate a + ogonek";
+language = default;
+value = "Alternate v";
 }
 );
-tag = cv02;
+tag = calt;
 },
 {
-code = "sub eogonek from [ eogonek.alt eogonek.alt2 ] ;
-sub eogonekenlarged by eogonekenlarged.alt ;
-sub uniF135 by uniF135.alt ;
-sub uniE499 by uniE499.alt ;
-sub uniE49F by uniE49F.alt ;
-sub uniE4BC by uniE4BC.alt ;
-sub uniE4E8 by uniE4E8.alt ;
-sub uniE4EA by uniE4EA.alt ;
-sub uniE4EB by uniE4EB.alt ;
-sub uniE4EC by uniE4EC.alt ;
-sub uniEBF3 by uniEBF3.alt ;
-sub Eogonek by Eogonek.alt ;
+code = "sub one.circled zero.circled by one_zero.circled ;
+sub one.circled one.circled by one_one.circled ;
+sub one.circled two.circled by one_two.circled ;
+sub one.circled three.circled by one_three.circled ;
+sub one.circled four.circled by one_four.circled ;
+sub one.circled five.circled by one_five.circled ;
+sub one.circled six.circled by one_six.circled ;
+sub one.circled seven.circled by one_seven.circled ;
+sub one.circled eight.circled by one_eight.circled ;
+sub one.circled nine.circled by one_nine.circled ;
+sub two.circled zero.circled by two_zero.circled ;
+sub one.blackCircled zero.blackCircled by one_zero.blackCircled ;
+sub one.blackCircled one.blackCircled by one_one.blackCircled ;
+sub one.blackCircled two.blackCircled by one_two.blackCircled ;
+sub one.blackCircled three.blackCircled by one_three.blackCircled ;
+sub one.blackCircled four.blackCircled by one_four.blackCircled ;
+sub one.blackCircled five.blackCircled by one_five.blackCircled ;
+sub one.blackCircled six.blackCircled by one_six.blackCircled ;
+sub one.blackCircled seven.blackCircled by one_seven.blackCircled ;
+sub one.blackCircled eight.blackCircled by one_eight.blackCircled ;
+sub one.blackCircled nine.blackCircled by one_nine.blackCircled ;
+sub two.blackCircled zero.blackCircled by two_zero.blackCircled ;
+sub one.doubleCircled zero.doubleCircled by one_zero.doubleCircled ;
+sub one_period zero_period by one_zero_period ;
+sub one_period one_period by one_one_period ;
+sub one_period two_period by one_two_period ;
+sub one_period three_period by one_three_period ;
+sub one_period four_period by one_four_period ;
+sub one_period five_period by one_five_period ;
+sub one_period six_period by one_six_period ;
+sub one_period seven_period by one_seven_period ;
+sub one_period eight_period by one_eight_period ;
+sub one_period nine_period by one_nine_period ;
+sub two_period zero_period by two_zero_period ;
+sub one.paren zero.paren by one_zero.paren ;
+sub one.paren one.paren by one_one.paren ;
+sub one.paren two.paren by one_two.paren ;
+sub one.paren three.paren by one_three.paren ;
+sub one.paren four.paren by one_four.paren ;
+sub one.paren five.paren by one_five.paren ;
+sub one.paren six.paren by one_six.paren ;
+sub one.paren seven.paren by one_seven.paren ;
+sub one.paren eight.paren by one_eight.paren ;
+sub one.paren nine.paren by one_nine.paren ;
+sub two.paren zero.paren by two_zero.paren ;
+";
+tag = rlig;
+},
+{
+code = "lookupflag IgnoreMarks;
+
+sub p s i by p_s_i ;
+sub P s i by P_s_i ;
+sub longs t r by longs_t_r ;
+sub longs.alt1 t r by longs_t_r ;
+sub o rrotunda by o_rrotunda ;
+sub o rrotunda.alt by o_rrotunda ;
+sub o rumrotunda by o_rumrotunda ;
+sub O Rrotunda by O_Rrotunda ;
+sub o.sc rrotunda.sc by o_rrotunda.sc ;
+sub o.sc rrotunda.alt.sc by o_rrotunda.sc ;
+sub o.sc rumrotunda.sc by o_rumrotunda.sc ;
+sub O RumRotunda by O_RumRotunda ;
+sub U E by U_E.hlig ;
+sub U U by U_U.hlig ;
+sub U cross D by U_cross_D ;
+sub a f by a_f.hlig ;
+sub a finsular by a_finsular.hlig ;
+sub a g by a_g.hlig ;
+sub a l by a_l.hlig ;
+sub a n by a_n.hlig ;
+sub a p by a_p.hlig ;
+sub a thorn by a_thorn.hlig ;
+sub a r by a_r.hlig ;
+sub b b by b_b ;
+sub c h by c_h.hlig ;
+sub c k by c_k.hlig ;
+sub dinsular dinsular by dinsular_dinsular.hlig ;
+sub e y by e_y.hlig ;
+sub f adieresis by f_adieresis.hlig ;
+sub f.alt adieresis by f_adieresis.hlig ;
+sub g d by g_d.hlig ;
+sub g eth by g_eth.hlig ;
+sub g dinsular by g_uniA77A.hlig ;
+sub g g by g_g.hlig ;
+sub uni0261 uni0261 by g_g.hlig ;
+sub g o by g_o.hlig ;
+sub g p by g_p.hlig ;
+sub g r by g_r.hlig ;
+sub h r by h_r ;
+sub H r by H_r ;
+sub k r by k_r ;
+sub l l by l_l ;
+sub o c by o_c.hlig ;
+sub p p by p_p.hlig ;
+sub P P by P_P.hlig ;
+sub p s by p_s ;
+sub P s by P_s ;
+sub pflourish p by uniA753_p.hlig ;
+sub q et by q_et ;
+sub q rrotunda by q_rrotunda ;
+sub q.sc rrotunda.sc by q_rrotunda.sc ;
+sub Q Rrotunda by Q_Rrotunda ;
+sub q vend by q_vend.hlig ;
+sub a n.sc by a_n.sc.hlig ;
+sub a r.sc by a_r.sc.hlig ;
+sub n.sc longs.sc by n_longs.sc.hlig ;
+sub longs adieresis by longs_adieresis.hlig ;
+sub longs.alt1 adieresis by longs_adieresis.hlig ;
+sub h longs by h_longs ;
+sub h longshighstroke by h_longshighstroke ;
+sub k longs by k_longs ;
+sub k longshighstroke by k_longshighstroke ;
+sub longs vend by longs_vend ;
+sub tinsular tinsular by tinsular_tinsular.hlig ;
+sub u e by u_e.hlig ;
+sub u u by u_u.hlig ;
+sub b g by b_g.hlig ;
+sub thorn r by thorn_r ;
+sub thorn longs by thorn_longs ;
+sub thorn longshighstroke by thorn_longshighstroke ;
 ";
 disabled = 1;
-labels = (
-{
-language = dflt;
-value = "Alternate e + ogonek";
-}
-);
-tag = cv08;
+tag = hlig;
 },
 {
-code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ] ;
+automatic = 1;
+code = "lookupflag IgnoreMarks;
+sub f f t by f_f_t;
+sub f f udieresis by f_f_udieresis;
+sub Q u by Q_u;
+sub f eth.loclENG by f_eth.loclENG;
+sub f.alt f.alt by f_f.alt;
+sub f t by f_t;
+sub f udieresis by f_udieresis;
+sub longs longs by longs_longs;
+sub o rrotunda by o_rrotunda;
+sub f f by uniFB00;
+sub f i by uniFB01;
+sub f l by uniFB02;
+sub f f i by uniFB03;
+sub f f l by uniFB04;
+";
+tag = dlig;
+},
+{
+code = "sub A A by AA ;
+# sub A Aacute by AAacute ;
+# sub A Adotaccent by AAdotaccent ;
+# sub A Adotbelow by AAdotbelow ;
+# sub A Adieresis by AAdieresis ;
+sub A O by Ao ;
+# sub A Oacute by Aoacute ;
+# sub A Odotbelow by Aodotbelow ;
+sub A U by Au ;
+sub A Uacute by uniEFE4 ;
+sub A Udotbelow by uniEFF6 ;
+sub A V by Av ;
+sub A Vdotbelow by uniEFF8 ;
+sub A Y by AY ;
+sub A Ydotaccent by uniEFF0 ;
+sub A Ydotbelow by uniEFFA ;
+sub O O by OO ;
+sub O Odieresis by uniEBE4 ;
+sub O Oacute by uniEFE8 ;
+sub O Ohungarumlaut by uniEFEC ;
+sub O Odotbelow by uniEFFC ;
+sub V Y by VY ;
+sub V Ydieresis by uniEBE8 ;
+sub a a by aa ;
+sub a aacute by uniEFE1 ;
+sub a adotaccent by uniEFEF ;
+sub a adotbelow by uniEFF3 ;
+sub a adieresis by uniEFFF ;
+sub a o by ao ;
+sub a ohungarumlaut by uniEBC1 ;
+sub a oacute by uniEFE3 ;
+sub a odotbelow by uniEFF5 ;
+sub a u by au ;
+sub a uacute by uniEFE5 ;
+sub a udotbelow by uniEFF7 ;
+sub a v by av ;
+sub a vdotbelow by uniEFF9 ;
+sub a y by ay ;
+sub a ydotaccent by uniEFF1 ;
+sub a ydotbelow by uniEFFB ;
+sub o o by oo ;
+sub o odieresis by uniEBE5 ;
+sub o oacute by uniEFE9 ;
+sub o ohungarumlaut by uniEFED ;
+sub o odotbelow by uniEFFD ;
+sub v y by vy ;
+sub v ydieresis by uniEBE9 ;
+sub a.sc a.sc by aa.sc ;
+sub a.sc o.sc by ao.sc ;
+# sub a.sc u.sc by au.sc ;
+# sub a.sc v.sc by av.sc ;
+# sub a.sc y.sc by ay.sc ;
+# sub o.sc o.sc by oo.sc ;
+# sub v.sc y.sc by vy.sc ;
 ";
 labels = (
 {
-language = dflt;
-value = "Alternate o";
+language = default;
+value = "Rare Digraphs";
 }
 );
-tag = cv16;
-},
-{
-code = "sub lhighstroke by lhighstroke.alt ;
-";
-tag = cv59;
-},
-{
-code = "sub rumrotunda by rumrotunda.alt ;";
-tag = cv60;
+tag = ss17;
 },
 {
 code = "sub f f t by f_f_t ;
@@ -949,62 +3154,6 @@ sub f y by f_y ;
 sub longs longs by longs_longs ;
 ";
 tag = liga;
-},
-{
-automatic = 1;
-code = "sub zero by zeroinferior;
-sub one by oneinferior;
-sub two by twoinferior;
-sub three by threeinferior;
-sub four by fourinferior;
-sub five by fiveinferior;
-sub six by sixinferior;
-sub seven by seveninferior;
-sub eight by eightinferior;
-sub nine by nineinferior;
-";
-tag = sinf;
-},
-{
-automatic = 1;
-code = "sub one slash eight by oneeighth;
-sub one slash four by onequarter;
-sub three slash eight by threeeighths;
-sub one slash two by onehalf;
-sub five slash eight by fiveeighths;
-sub three slash four by threequarters;
-sub seven slash eight by seveneighths;
-sub one slash three by onethird;
-sub two slash three by twothirds;
-sub one slash five by onefifth;
-sub two slash five by twofifths;
-sub three slash five by threefifths;
-sub four slash five by fourfifths;
-sub one slash six by onesixth;
-sub five slash six by fivesixths;
-sub one slash by onefraction;
-";
-tag = frac;
-},
-{
-automatic = 1;
-code = "lookupflag IgnoreMarks;
-sub f f t by f_f_t;
-sub f f udieresis by f_f_udieresis;
-sub Q u by Q_u;
-sub f eth.loclENG by f_eth.loclENG;
-sub f.alt f.alt by f_f.alt;
-sub f t by f_t;
-sub f udieresis by f_udieresis;
-sub longs longs by longs_longs;
-sub o rrotunda by o_rrotunda;
-sub f f by uniFB00;
-sub f i by uniFB01;
-sub f l by uniFB02;
-sub f f i by uniFB03;
-sub f f l by uniFB04;
-";
-tag = dlig;
 }
 );
 fontMaster = (
@@ -1548,6 +3697,8 @@ pos = 16;
 name = Enlarged;
 userData = {
 GSCornerRadius = 25;
+GSExtrudeAngle = 30;
+GSExtrudeOffset = 15;
 };
 }
 );

@@ -27,19 +27,23 @@ disabled = 1;
 name = MarkClass2;
 },
 {
-code = "zero one two three four five six seven eight nine";
+code = "zero one two three four five six seven eight nine dollar
+";
 name = FIGURES_LINING_TABULAR;
 },
 {
-code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf";
+code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf dollar.tosf
+";
 name = FIGURES_OLDSTYLE_TABULAR;
 },
 {
-code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf";
+code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf dollar.lf
+";
 name = FIGURES_LINING;
 },
 {
-code = "zero.osf one.osf two.osf three.osf four.osf five.osf six.osf seven.osf eight.osf nine.osf";
+code = "zero.osf one.osf two.osf three.osf four.osf five.osf six.osf seven.osf eight.osf nine.osf dollar.osf
+";
 name = FIGURES_OLDSTYLE;
 }
 );
@@ -3239,7 +3243,7 @@ pos = 16;
 );
 name = Italic;
 userData = {
-GSCornerRadius = 15;
+GSCornerRadius = 35;
 };
 },
 {
@@ -3330,7 +3334,7 @@ pos = 16;
 );
 name = "Bold Italic";
 userData = {
-GSCornerRadius = 39;
+GSCornerRadius = 45;
 };
 },
 {
@@ -3421,7 +3425,7 @@ pos = 16;
 );
 name = "Light Italic";
 userData = {
-GSCornerRadius = 25;
+GSCornerRadius = 35;
 };
 },
 {
@@ -3673,7 +3677,7 @@ pos = 1363;
 },
 {
 over = 31;
-pos = 1051;
+pos = 852;
 },
 {
 over = -28;
@@ -3683,6 +3687,7 @@ over = -31;
 pos = -563;
 },
 {
+over = 1;
 pos = 937;
 },
 {
@@ -3699,6 +3704,11 @@ GSExtrudeOffset = 15;
 );
 instances = (
 {
+axesValues = (
+400,
+100,
+0
+);
 instanceInterpolations = {
 master01 = 1;
 };
@@ -3738,6 +3748,10 @@ value = wght;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -3778,6 +3792,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -3805,6 +3823,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -3834,6 +3856,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -3863,6 +3889,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -3888,6 +3918,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "13";
 }
 );
 instanceInterpolations = {
@@ -3921,6 +3955,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "13";
 }
 );
 instanceInterpolations = {
@@ -3945,6 +3983,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "13";
 }
 );
 instanceInterpolations = {
@@ -3973,6 +4015,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "13";
 }
 );
 instanceInterpolations = {
@@ -4001,6 +4047,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "13";
 }
 );
 instanceInterpolations = {
@@ -4030,6 +4080,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "14.5";
 }
 );
 instanceInterpolations = {
@@ -4059,6 +4113,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "14.5";
 }
 );
 instanceInterpolations = {
@@ -4084,6 +4142,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "14.5";
 }
 );
 instanceInterpolations = {
@@ -4111,6 +4173,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "14.5";
 }
 );
 instanceInterpolations = {
@@ -4140,6 +4206,10 @@ value = 0;
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "14.5";
 }
 );
 instanceInterpolations = {
@@ -4174,6 +4244,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4202,6 +4276,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4234,6 +4312,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4266,6 +4348,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4298,6 +4384,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4331,6 +4421,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4360,6 +4454,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4393,6 +4491,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4424,6 +4526,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4457,6 +4563,10 @@ value = ital;
 {
 name = "Export STAT Table";
 value = 0;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4483,6 +4593,10 @@ customParameters = (
 {
 name = "Keep Overlapping Components";
 value = 1;
+},
+{
+name = italicAngle;
+value = "16";
 }
 );
 instanceInterpolations = {
@@ -4493,11 +4607,123 @@ name = "Enlarged Italic";
 );
 kerningLTR = {
 master01 = {
+"@MMK_L_A" = {
+"@MMK_R_C" = -40;
+"@MMK_R_O" = -40;
+"@MMK_R_T" = -100;
+"@MMK_R_U" = -50;
+"@MMK_R_V" = -40;
+"@MMK_R_Y" = -90;
+};
+"@MMK_L_G" = {
+"@MMK_R_A" = 40;
+};
+"@MMK_L_L" = {
+"@MMK_R_A" = 60;
+};
+"@MMK_L_P" = {
+"@MMK_R_A" = -110;
+};
+"@MMK_L_R" = {
+"@MMK_R_A" = 60;
+"@MMK_R_C" = -70;
+};
+"@MMK_L_T" = {
+"@MMK_R_A" = -120;
+};
+"@MMK_L_V" = {
+"@MMK_R_A" = -190;
+};
 "@MMK_L_glotttalstopsmall" = {
 "@MMK_R_a" = -40;
 };
 };
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = {
+"@MMK_L_A" = {
+"@MMK_R_C" = -46;
+"@MMK_R_O" = -30;
+"@MMK_R_T" = -80;
+"@MMK_R_U" = -50;
+"@MMK_R_V" = -30;
+"@MMK_R_Y" = -90;
+};
+"@MMK_L_G" = {
+"@MMK_R_A" = 40;
+};
+"@MMK_L_L" = {
+"@MMK_R_A" = 60;
+};
+"@MMK_L_P" = {
+"@MMK_R_A" = -110;
+};
+"@MMK_L_R" = {
+"@MMK_R_A" = 60;
+"@MMK_R_C" = -60;
+};
+"@MMK_L_T" = {
+"@MMK_R_A" = -120;
+};
+"@MMK_L_V" = {
+"@MMK_R_A" = -190;
+};
+};
+"7904EAEE-2B64-409E-B923-0048172372BE" = {
+"@MMK_L_A" = {
+"@MMK_R_C" = -40;
+"@MMK_R_O" = -40;
+"@MMK_R_T" = -110;
+"@MMK_R_U" = -55;
+"@MMK_R_V" = -60;
+"@MMK_R_Y" = -90;
+};
+"@MMK_L_G" = {
+"@MMK_R_A" = 40;
+};
+"@MMK_L_L" = {
+"@MMK_R_A" = 60;
+};
+"@MMK_L_P" = {
+"@MMK_R_A" = -110;
+};
+"@MMK_L_R" = {
+"@MMK_R_A" = 60;
+"@MMK_R_C" = -75;
+};
+"@MMK_L_T" = {
+"@MMK_R_A" = -120;
+};
+"@MMK_L_V" = {
+"@MMK_R_A" = -190;
+};
+};
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = {
+"@MMK_L_A" = {
+"@MMK_R_C" = -20;
+"@MMK_R_O" = -30;
+"@MMK_R_T" = -80;
+"@MMK_R_U" = -45;
+"@MMK_R_V" = -50;
+"@MMK_R_Y" = -70;
+};
+"@MMK_L_G" = {
+"@MMK_R_A" = 40;
+};
+"@MMK_L_L" = {
+"@MMK_R_A" = 60;
+};
+"@MMK_L_P" = {
+"@MMK_R_A" = -80;
+};
+"@MMK_L_R" = {
+"@MMK_R_A" = 60;
+"@MMK_R_C" = -60;
+};
+"@MMK_L_T" = {
+"@MMK_R_A" = -110;
+};
+"@MMK_L_V" = {
+"@MMK_R_A" = -150;
+};
 "@MMK_L_g" = {
 "@MMK_R_glottalstopsmall" = 90;
 };
@@ -4506,8 +4732,64 @@ master01 = {
 };
 };
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = {
+"@MMK_L_A" = {
+"@MMK_R_C" = -40;
+"@MMK_R_O" = -40;
+"@MMK_R_T" = -120;
+"@MMK_R_U" = -70;
+"@MMK_R_V" = -70;
+"@MMK_R_Y" = -100;
+};
+"@MMK_L_G" = {
+"@MMK_R_A" = 40;
+};
+"@MMK_L_L" = {
+"@MMK_R_A" = 60;
+};
+"@MMK_L_P" = {
+"@MMK_R_A" = -130;
+};
+"@MMK_L_R" = {
+"@MMK_R_A" = 60;
+"@MMK_R_C" = -80;
+};
+"@MMK_L_T" = {
+"@MMK_R_A" = -150;
+};
+"@MMK_L_V" = {
+"@MMK_R_A" = -210;
+};
 "@MMK_L_glotttalstopsmall" = {
 "@MMK_R_a" = -50;
+};
+};
+"997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = {
+"@MMK_L_A" = {
+"@MMK_R_C" = -40;
+"@MMK_R_O" = -40;
+"@MMK_R_T" = -100;
+"@MMK_R_U" = -50;
+"@MMK_R_V" = -60;
+"@MMK_R_Y" = -90;
+};
+"@MMK_L_G" = {
+"@MMK_R_A" = 40;
+};
+"@MMK_L_L" = {
+"@MMK_R_A" = 60;
+};
+"@MMK_L_P" = {
+"@MMK_R_A" = -110;
+};
+"@MMK_L_R" = {
+"@MMK_R_A" = 60;
+"@MMK_R_C" = -70;
+};
+"@MMK_L_T" = {
+"@MMK_R_A" = -120;
+};
+"@MMK_L_V" = {
+"@MMK_R_A" = -190;
 };
 };
 };

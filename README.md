@@ -11,7 +11,7 @@ and other electronic document formats.
 
 The Junicode 2 font
 
-- has the same character set in all faces;
+- will, when complete, have the same character set in all faces;
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and five widths (Regular, SemiCondensed, Condensed, SemiExpanded, Expanded);
 - includes a variable font version with three axes (width, weight, and the custom
@@ -36,8 +36,9 @@ fixed when necessary.
 
 The roman face of Junicode 2 is in beta testing. Interested users are encouraged
 to try it out and report bugs by opening issues on this site. The italic face is
-about 68% complete, and no compiled version will be available
-until the character set is complete—probably some time in 2022.
+about 75% complete and still in a rough condition. It should not be relied upon
+for production work until the character set is complete (probably some time in
+2022).
 
 # Resources
 

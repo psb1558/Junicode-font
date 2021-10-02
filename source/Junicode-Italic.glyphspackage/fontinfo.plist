@@ -2442,6 +2442,12 @@ sub Utildeacute by utildeacute.sc;
 sub Utildebelow by utildebelow.sc;
 sub V by v.sc;
 sub V-middleWelsh by v-middleWelsh.sc;
+sub VY by vy.sc;
+sub Vdiagonalstroke by vdiagonalstroke.sc;
+sub Vdotbelow by vdotbelow.sc;
+sub Vend by vend.sc;
+sub Vhook by vhook.sc;
+sub Vtilde by vtilde.sc;
 sub W by w.sc;
 sub Wacute by wacute.sc;
 sub Wcircumflex by wcircumflex.sc;
@@ -2449,7 +2455,10 @@ sub Wdieresis by wdieresis.sc;
 sub Wdotaccent by wdotaccent.sc;
 sub Wdotbelow by wdotbelow.sc;
 sub Wgrave by wgrave.sc;
+sub Whook by whook.sc;
+sub Wynn by wynn.sc;
 sub X by x.sc;
+sub Xdieresis by xdieresis.sc;
 sub Xdotaccent by xdotaccent.sc;
 sub Y by y.sc;
 sub Yacute by yacute.sc;
@@ -2458,6 +2467,8 @@ sub Ydieresis by ydieresis.sc;
 sub Ydotaccent by ydotaccent.sc;
 sub Ydotbelow by ydotbelow.sc;
 sub Ygrave by ygrave.sc;
+sub Yhook by yhook.sc;
+sub Yhookabove by yhookabove.sc;
 sub Ymacron by ymacron.sc;
 sub Ytilde by ytilde.sc;
 sub Z by z.sc;
@@ -2823,6 +2834,12 @@ sub utildeacute by utildeacute.sc;
 sub utildebelow by utildebelow.sc;
 sub v by v.sc;
 sub v-middleWelsh by v-middleWelsh.sc;
+sub vdiagonalstroke by vdiagonalstroke.sc;
+sub vdotbelow by vdotbelow.sc;
+sub vend by vend.sc;
+sub vhook by vhook.sc;
+sub vtilde by vtilde.sc;
+sub vy by vy.sc;
 sub w by w.sc;
 sub wacute by wacute.sc;
 sub wcircumflex by wcircumflex.sc;
@@ -2830,7 +2847,10 @@ sub wdieresis by wdieresis.sc;
 sub wdotaccent by wdotaccent.sc;
 sub wdotbelow by wdotbelow.sc;
 sub wgrave by wgrave.sc;
+sub whook by whook.sc;
+sub wynn by wynn.sc;
 sub x by x.sc;
+sub xdieresis by xdieresis.sc;
 sub xdotaccent by xdotaccent.sc;
 sub y by y.sc;
 sub yacute by yacute.sc;
@@ -2839,6 +2859,8 @@ sub ydieresis by ydieresis.sc;
 sub ydotaccent by ydotaccent.sc;
 sub ydotbelow by ydotbelow.sc;
 sub ygrave by ygrave.sc;
+sub yhook by yhook.sc;
+sub yhookabove by yhookabove.sc;
 sub ymacron by ymacron.sc;
 sub ytilde by ytilde.sc;
 sub z by z.sc;
@@ -3488,6 +3510,7 @@ name = Italic;
 userData = {
 GSCornerRadius = 50;
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -5079,7 +5102,17 @@ note = "Small cap scaler values:
     100,
     68.599999999999994
   ]
-}";
+}
+
+From at diff of small cpas in the roman and the italic, there are three that haven’t yet been roughed in here:
+
+> e.alt2.sc
+> uniEBF1.sc
+> zvisigothic.sc
+
+As the second of these has as its base a PUA code point, it should perhaps be removed from the roman rather than
+included here. (Study this further.)
+";
 properties = (
 {
 key = copyrights;

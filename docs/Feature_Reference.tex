@@ -1,6 +1,9 @@
 % This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
 % see http://writer2latex.sourceforge.net for more info
 \documentclass[letterpaper,12pt]{article}
+\title{Junicode 2 Feature Reference}
+\author{Peter S. Baker}
+\usepackage{fancyhdr}
 \usepackage[ascii]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb,amsfonts,textcomp}
@@ -20,15 +23,15 @@
 \renewcommand\thefootnote{\arabic{footnote}}
 \makeatother
 % Text styles
-%\newcommand\textstyleletterexample[1]{\textrm{\textbf{#1}}}
-%\newcommand\textstyleUName[1]{\textrm{#1}}
-%\newcommand\textstyleSourceText[1]{\texttt{#1}}
+%\newcommand\textLetterExample[1]{\textrm{\textbf{#1}}}
+%\newcommand\textUName[1]{\textrm{#1}}
+%\newcommand\textSourceText[1]{\texttt{#1}}
 %\newcommand\textstyleEmphasis[1]{\textit{#1}}
 %\newcommand\textstyleEntityRef[1]{\textrm{#1}}
 
-\newcommand\textstyleletterexample[1]{\textrm{\textbf{#1}}}
-\newcommand\textstyleUName[1]{\textsc{#1}}
-\newcommand\textstyleSourceText[1]{\texttt{#1}}
+\newcommand\textLetterExample[1]{\textrm{\textbf{#1}}}
+\newcommand\textUName[1]{\textsc{#1}}
+\newcommand\textSourceText[1]{\texttt{#1}}
 \newcommand\textstyleEmphasis[1]{\textit{#1}}
 \newcommand\textstyleEntityRef[1]{\textrm{#1}}
 \newcommand{\cv}[3]{{\addfontfeature{CharacterVariant=#1:#2}#3}}
@@ -65,16 +68,26 @@
 \setlength{\skip\footins}{0.0469in}
 \renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
 % Pages styles
-\makeatletter
-\newcommand\ps@Standard{
-  \renewcommand\@oddhead{\hfill Junicode 2 Feature Reference, p. \thepage{}/?}
-  \renewcommand\@evenhead{Junicode 2 Feature Reference, p. \thepage{}/?}
-  \renewcommand\@oddfoot{}
-  \renewcommand\@evenfoot{}
-  \renewcommand\thepage{\arabic{page}}
-}
-\makeatother
-\pagestyle{Standard}
+\pagestyle{fancy}
+\footskip = 30pt
+\headsep = 30pt
+\renewcommand{\headrule}{}
+\lhead{}
+\chead{\textsc{Junicode 2 Feature Reference}}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+%\makeatletter
+%\newcommand\ps@Standard{
+%  \renewcommand\@oddhead{\hfill Junicode 2 Feature Reference, p. \thepage{}}
+%  \renewcommand\@evenhead{Junicode 2 Feature Reference, p. \thepage{}}
+%  \renewcommand\@oddfoot{}
+%  \renewcommand\@evenfoot{}
+%  \renewcommand\thepage{\arabic{page}}
+%}
+%\makeatother
+%\pagestyle{Standard}
 \setlength\tabcolsep{1mm}
 \renewcommand\arraystretch{1.3}
 % List styles
@@ -94,16 +107,19 @@
 \renewcommand\theFeature{\arabic{Feature}}
 \tolerance=1500
 \frenchspacing
-\title{}
-\author{}
-\date{2021-10-08}
+%\title{}
+%\author{}
+%\date{2021-10-08}
 \begin{document}
-{\mdseries\color[rgb]{0.47058824,0.011764706,0.4509804}
-\Large OpenType Features in Junicode 2}\\[1ex]
+\maketitle
+%{\mdseries\color[rgb]{0.47058824,0.011764706,0.4509804}
+%\Large OpenType Features in Junicode 2}\\[1ex]
+\thispagestyle{plain}
 
 \hyperlink{intro}{Introduction}
 
 \begin{itemize}
+\setlength\itemsep{0em}
 \item[A] \hyperlink{SectionA}{Case-}\hyperlink{SectionA}{R}\hyperlink{SectionA}{elated
 }\hyperlink{SectionA}{F}\hyperlink{SectionA}{eatures}
 
@@ -150,29 +166,29 @@ Multilingual Plane, a block of codes, running from U+E000 to U+F8FF, that are as
 are available for font designers to use in any way they please.
 
 The problem with PUA code points is precisely their lack of any value. Consider, as a point of comparison, the letter
-\textstyleletterexample{a} (U+0061). Your computer, your phone, and probably a good many other devices around the house
-store a good bit of information about this \textstyleletterexample{a}: that it's a letter in the Latin script, that
-it's lowercase, and that the uppercase equivalent is \textstyleletterexample{A} (U+0041). All this information is
+\textLetterExample{a} (U+0061). Your computer, your phone, and probably a good many other devices around the house
+store a good bit of information about this \textLetterExample{a}: that it's a letter in the Latin script, that
+it's lowercase, and that the uppercase equivalent is \textLetterExample{A} (U+0041). All this information is
 available to word processors, browsers, and other applications running on your computer.
 
-Now suppose you're preparing an electronic text containing what MUFI calls \textstyleUName{latin small letter neckless
-a} (\textstyleletterexample{}). It is assigned to code point U+F215, which belongs to the PUA. Beyond that, your
-computer knows nothing about it: not that it is a variant of \textstyleletterexample{a}, or that it is lowercase, or a letter in the Latin
+Now suppose you're preparing an electronic text containing what MUFI calls \textUName{latin small letter neckless
+a} (\textLetterExample{}). It is assigned to code point U+F215, which belongs to the PUA. Beyond that, your
+computer knows nothing about it: not that it is a variant of \textLetterExample{a}, or that it is lowercase, or a letter in the Latin
 alphabet, or even a character in a language system. A screen reader cannot read, or even spell out, a word with U+F215
-in it; a search engine will not recognize the word as containing the letter \textstyleletterexample{a}.
+in it; a search engine will not recognize the word as containing the letter \textLetterExample{a}.
 
 Junicode offers the full range of MUFI characters---you can enter the PUA code points---but also a solution to the
 problems posed by those code points. Think of an electronic text (a web page, perhaps, or a PDF) as having two layers:
 an underlying text, stable and unchanging, and the displayed text, generated by software at the instant it is needed
 and discarded when it is no longer on the screen. For greatest accessibility the underlying text should contain the
-plain letter \textstyleletterexample{a} (U+0061) along with markup indicating how it should be displayed. To generate
+plain letter \textLetterExample{a} (U+0061) along with markup indicating how it should be displayed. To generate
 the displayed text, a program called a ``layout engine'' will (simplifying a bit here) read the markup and apply the
-OpenType feature \textstyleSourceText{cv02[5]}\footnote{Many OpenType features produce different outcomes depending on
+OpenType feature \textSourceText{cv02[5]}\footnote{Many OpenType features produce different outcomes depending on
 an index passed to an application's layout engine along with the feature tag. Different applications have different
 ways of entering this index: consult your application's documentation. Here, the index is recorded in brackets after
-the feature tag.\par } to the underlying \textstyleletterexample{a}, bypassing the PUA code point, with the result that
-readers see \textstyleletterexample{\cvd[4]{2}{a}}{}---the ``neckless a.'' And yet the letter will still register as
-\textstyleletterexample{a} with search engines, screen readers, and so on.
+the feature tag.\par } to the underlying \textLetterExample{a}, bypassing the PUA code point, with the result that
+readers see \textLetterExample{\cvd[4]{2}{a}}{}---the ``neckless a.'' And yet the letter will still register as
+\textLetterExample{a} with search engines, screen readers, and so on.
 
 This is the Junicode model for text display, but it is not peculiar to Junicode: it is widely considered to be the best
 practice for displaying text using current font technology.
@@ -190,35 +206,35 @@ categories:
 \liststyleLi
 \begin{itemize}
 \item Those with non-PUA code points. MUFI has done valuable work obtaining Unicode code points for medieval characters.
-All such characters (those with hexadecimal codes that \textstyleEmphasis{do not} begin with \textstyleletterexample{E}
-or \textstyleletterexample{F}) are presumed safe to use in accessible and searchable text. However, some of these are
+All such characters (those with hexadecimal codes that \textstyleEmphasis{do not} begin with \textLetterExample{E}
+or \textLetterExample{F}) are presumed safe to use in accessible and searchable text. However, some of these are
 covered by Junicode OpenType features for particular reasons.
 \item Precomposed characters---those consisting of base character + one or more diacritics. For greatest accessibility,
 these should be entered not as PUA code points, but rather as sequences consisting of base character + one or more
-diacritics. For example, instead of MUFI U+E498 \textstyleUName{latin small letter e with dot below and acute}, use
-\textstyleletterexample{e} + U+0323 \textstyleUName{combining dot below} + U+0301 \textstyleUName{combining acute accent}:
-\textstyleletterexample{ẹ́} (when applying combining marks, start with any marks below the character and work
+diacritics. For example, instead of MUFI U+E498 \textUName{latin small letter e with dot below and acute}, use
+\textLetterExample{e} + U+0323 \textUName{combining dot below} + U+0301 \textUName{combining acute accent}:
+\textLetterExample{ẹ́} (when applying combining marks, start with any marks below the character and work
 downwards, then continue with any marks above the character and work upwards. For example, to make
-\textstyleletterexample{ǭ̣́}, place characters in this order: \textstyleletterexample{o},
-\textstyleUName{combining ogonek} U+0328, \textstyleUName{combining dot below} U+0323, \textstyleUName{combining
-macron} U+0304, \textstyleUName{combining acute} U+0301). Some MUFI characters have marks in unconventional locations,
-e.g. \textstyleletterexample{ȯ́} \textstyleUName{latin small letter o with dot above and acute}, where the
+\textLetterExample{ǭ̣́}, place characters in this order: \textLetterExample{o},
+\textUName{combining ogonek} U+0328, \textUName{combining dot below} U+0323, \textUName{combining
+macron} U+0304, \textUName{combining acute} U+0301). Some MUFI characters have marks in unconventional locations,
+e.g. \textLetterExample{ȯ́} \textUName{latin small letter o with dot above and acute}, where the
 acute appears beside the dot instead of above. This and other characters like it should still be entered as a sequence
-of base character + marks (here \textstyleletterexample{o}, \textstyleUName{combining dot above} U+0307,
-\textstyleUName{combining acute} U+0301). Junicode will position the marks correctly.
+of base character + marks (here \textLetterExample{o}, \textUName{combining dot above} U+0307,
+\textUName{combining acute} U+0301). Junicode will position the marks correctly.
 \item Characters for which a base character (a Unicode character to which it can be linked) cannot be identified, or for
 which there may be an inconsistency in the MUFI recommendation. These include:
 
 \begin{itemize}
-\item  U+E8AF. This is a ligature of long \textstyleletterexample{s} and \textstyleletterexample{l} with stroke,
+\item  U+E8AF. This is a ligature of long \textLetterExample{s} and \textLetterExample{l} with stroke,
 but there are no base characters with this style of stroke.
-\item \textstyleletterexample{} U+EFD8 and U+EFD9. MUFI lists these as ligatures (corresponding to the
-historic ligatures \textstyleletterexample{\hlig{uuUU}}, but they cannot be treated as ligatures in the
+\item \textLetterExample{} U+EFD8 and U+EFD9. MUFI lists these as ligatures (corresponding to the
+historic ligatures \textLetterExample{\hlig{uuUU}}, but they cannot be treated as ligatures in the
 font because a single diacritic is positioned over the glyphs as if they were digraphs like
-\textstyleletterexample{ꜳꜲ}.
-\item \textstyleletterexample{} U+EBE7 and U+EBE6, for the same reason.
-\item \textstyleletterexample{} U+F159 \textstyleUName{latin abbreviation sign small de}. Neither a variant of
-\textstyleletterexample{d} nor an eth (\textstyleletterexample{ð}), this character may be a candidate for Unicode
+\textLetterExample{ꜳꜲ}.
+\item \textLetterExample{} U+EBE7 and U+EBE6, for the same reason.
+\item \textLetterExample{} U+F159 \textUName{latin abbreviation sign small de}. Neither a variant of
+\textLetterExample{d} nor an eth (\textLetterExample{ð}), this character may be a candidate for Unicode
 encoding.
 \end{itemize}
 \item Characters for which OpenType programming is not yet available. These will be added as they are located and
@@ -228,102 +244,102 @@ These characters should be avoided, even if you are otherwise using MUFI's PUA c
 
 \liststyleLii
 \begin{itemize}
-\item U+F1C5 \textstyleUName{combining curl high position}. Use U+1DCE \textstyleUName{combining ogonek above}. The
+\item U+F1C5 \textUName{combining curl high position}. Use U+1DCE \textUName{combining ogonek above}. The
 positioning problem mentioned in the MUFI recommendation is solved in Junicode (and, to be fair, many other fonts with
 OpenType programming).
-\item U+F1CA \textstyleUName{combining dot above high position}. Use U+0307 \textstyleUName{combining dot above}. It
+\item U+F1CA \textUName{combining dot above high position}. Use U+0307 \textUName{combining dot above}. It
 will be positioned correctly on any character.
 \end{itemize}
 \section{A. Case-Related Features}
 \hypertarget{SectionA}{}\subsection[1. smcp {}-- Small Capitals]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{smcp} -- Small Capitals}
+\textSourceText{smcp} -- Small Capitals}
 Converts lowercase letters to small caps; also several symbols and combining marks. All lower- and uppercase pairs (with
 exceptions noted below) have a small cap equivalent. Lowercase letters without matching caps may lack matching small
 caps. fghij $\rightarrow $ \textsc{fghij}.
 
 Note: Precomposed characters defined by MUFI in the Private Use Area have no small cap equivalents. Instead, compose
-characters using combining diacritics, as outlined in the introduction. For example, \textstyleSourceText{smcp} applied
-to the sequence \textstyleletterexample{t} + \textstyleUName{combining ogonek} (U+0328) + \textstyleUName{combining
-acute} (U+0301) will change \textstyleletterexample{t̨́} to \textstyleletterexample{\textsc{t̨́}}.
+characters using combining diacritics, as outlined in the introduction. For example, \textSourceText{smcp} applied
+to the sequence \textLetterExample{t} + \textUName{combining ogonek} (U+0328) + \textUName{combining
+acute} (U+0301) will change \textLetterExample{t̨́} to \textLetterExample{\textsc{t̨́}}.
 
-\subsection[2. c2sc {}-- Small Capitals from Capitals]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{c2sc} --
+\subsection[2. c2sc {}-- Small Capitals from Capitals]{\stepcounter{Feature}{\theFeature}. \textSourceText{c2sc} --
 Small Capitals from Capitals}
-Use with \textstyleSourceText{smcp} for all-small-cap text. ABCDE $\rightarrow $ {\addfontfeature{Letters = UppercaseSmallCaps}ABCDE}.
+Use with \textSourceText{smcp} for all-small-cap text. ABCDE $\rightarrow $ {\addfontfeature{Letters = UppercaseSmallCaps}ABCDE}.
 
-\subsection[3. pcap {}-- Petite Capitals]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{pcap} -- Petite
+\subsection[3. pcap {}-- Petite Capitals]{\stepcounter{Feature}{\theFeature}. \textSourceText{pcap} -- Petite
 Capitals}
-Produces small caps in a smaller size than \textstyleSourceText{smcp}. Use these when small caps have to be mixed with
+Produces small caps in a smaller size than \textSourceText{smcp}. Use these when small caps have to be mixed with
 lowercase letters. The whole of the basic Latin alphabet is covered, plus several other letters. klmno{\th}
 $\rightarrow $ {\addfontfeature{Letters = PetiteCaps}klmno\th}.
 
-\subsection[4. case {}-- Case{}-Sensitive Forms]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{case} --
+\subsection[4. case {}-- Case{}-Sensitive Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{case} --
 Case-Sensitive Forms}
 Produces combining marks that harmonize with capital letters: {\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
 likelihood that a combining mark will collide with a glyph in the line above.
 
 \section{B. Numbers and Sequencing}
 \hypertarget{SectionB}{}\subsection[5. nalt {}-- Alternate Annotation Forms]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{nalt} -- Alternate Annotation Forms}
+\textSourceText{nalt} -- Alternate Annotation Forms}
 Produces letters and numbers circled, in parenthesis, or followed by periods, as follows:
 
-\textstyleSourceText{nalt[1]}, circled letters or numbers: {\addfontfeature{Annotation=0}a b .~.~. z; 0 1 2 .~.~. 20}.
+\textSourceText{nalt[1]}, circled letters or numbers: {\addfontfeature{Annotation=0}a b .~.~. z; 0 1 2 .~.~. 20}.
 
-\textstyleSourceText{nalt[2]}, letter or numbers in parentheses: {\addfontfeature{Annotation=1}a .~.~. z; 0 1 .~.~. 20}.
+\textSourceText{nalt[2]}, letter or numbers in parentheses: {\addfontfeature{Annotation=1}a .~.~. z; 0 1 .~.~. 20}.
 
-\textstyleSourceText{nalt[3]}, double-circled numbers: {\addfontfeature{Annotation=2}0 1 .~.~. 10}.
+\textSourceText{nalt[3]}, double-circled numbers: {\addfontfeature{Annotation=2}0 1 .~.~. 10}.
 
-\textstyleSourceText{nalt[4]}, white numbers in black circles: {\addfontfeature{Annotation=3}0 1 2 3 . . . 20}.
+\textSourceText{nalt[4]}, white numbers in black circles: {\addfontfeature{Annotation=3}0 1 2 3 . . . 20}.
 
-\textstyleSourceText{nalt[5]}, numbers followed by period: {\addfontfeature{Annotation=0}0 1 . . . 20}.
+\textSourceText{nalt[5]}, numbers followed by period: {\addfontfeature{Annotation=0}0 1 . . . 20}.
 
-\noindent For enclosed figures 10 and higher, \textstyleSourceText{rlig} (Required Ligatures) must also be enabled (as it should
+\noindent For enclosed figures 10 and higher, \textSourceText{rlig} (Required Ligatures) must also be enabled (as it should
 be by default: see \hyperlink{req}{Required Features} below).
 
-\subsection[6. tnum {}-- Tabular Figures]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{tnum} -- Tabular
+\subsection[6. tnum {}-- Tabular Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{tnum} -- Tabular
 Figures}
-Fixed-width figures: 0123456789 (default or with \textstyleSourceText{lnum}), {\addfontfeature{Numbers=OldStyle}0123456789} (with
-\textstyleSourceText{onum}).
+Fixed-width figures: 0123456789 (default or with \textSourceText{lnum}), {\addfontfeature{Numbers=OldStyle}0123456789} (with
+\textSourceText{onum}).
 
-\subsection[7. onum {}-- Oldstyle Figures]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{onum} -- Oldstyle
+\subsection[7. onum {}-- Oldstyle Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{onum} -- Oldstyle
 Figures}
 Figures that harmonize with lowercase characters: {\addfontfeature{Numbers=OldStyle}0123456789} (default or with
-\textstyleSourceText{tnum}), {\addfontfeature{Numbers={Proportional,OldStyle}}0123456789}
-(with \textstyleSourceText{pnum}). When combined with \textstyleSourceText{pnum}, this feature also affects subscripts
+\textSourceText{tnum}), {\addfontfeature{Numbers={Proportional,OldStyle}}0123456789}
+(with \textSourceText{pnum}). When combined with \textSourceText{pnum}, this feature also affects subscripts
 and superscripts.
 
-\subsection[8. pnum {}-- Proportional Figures]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{pnum} --
+\subsection[8. pnum {}-- Proportional Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{pnum} --
 Proportional Figures}
-Proportionally spaced figures: {\addfontfeature{Numbers=Proportional}0123456789} (default or with \textstyleSourceText{lnum}),
+Proportionally spaced figures: {\addfontfeature{Numbers=Proportional}0123456789} (default or with \textSourceText{lnum}),
 {\addfontfeature{Numbers={Lowercase,Proportional}}0123456789} (with
-\textstyleSourceText{onum}). When combined with \textstyleSourceText{onum}, this feature also affects subscripts and
+\textSourceText{onum}). When combined with \textSourceText{onum}, this feature also affects subscripts and
 superscripts. Most applications (including MS Word) with any support of OpenType features will support this feature and
-\textstyleSourceText{lnum} in such a way that you don't have to enter them manually.
+\textSourceText{lnum} in such a way that you don't have to enter them manually.
 
-\subsection[9. lnum {}-- Lining Figures]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{lnum} -- Lining
+\subsection[9. lnum {}-- Lining Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{lnum} -- Lining
 Figures}
 Figures in a uniform height, harmonizing with uppercase letters: 0123456789 (default or with
-\textstyleSourceText{tnum}), {\addfontfeature{Numbers=Proportional}0123456789} (with \textstyleSourceText{pnum}).
+\textSourceText{tnum}), {\addfontfeature{Numbers=Proportional}0123456789} (with \textSourceText{pnum}).
 
-\subsection[10. zero {}-- Slashed Zero]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{zero} -- Slashed Zero}
+\subsection[10. zero {}-- Slashed Zero]{\stepcounter{Feature}{\theFeature}. \textSourceText{zero} -- Slashed Zero}
 Produces slashed zero in all number styles:
 {\addfontfeature{Numbers=SlashedZero}0 \otab{0} \lprop{0} \oprop{0}. Includes superscripts and subscripts:
 \sups{0~\oprop{0}}~\subs{0~\oprop{0}}}.
 
 \section{C. Superscripts and Subscripts}
 \hypertarget{SectionC}{}\subsection[11. sups {}-- Superscripts]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{sups} -- Superscripts}
+\textSourceText{sups} -- Superscripts}
 Produces superscript numbers and letters. Only affects lining tabular and oldstyle proportional figures. All lowercase
 letters of the basic Latin alphabet are covered, and most uppercase letters: \sups{0123 \oprop{4567} abcde ABDEG}. Wherever
-superscripts are needed (e.g. for footnote numbers), use \textstyleSourceText{sups} instead of the raised and scaled
+superscripts are needed (e.g. for footnote numbers), use \textSourceText{sups} instead of the raised and scaled
 characters generated by some programs. With sups: \sups{4567}. Scaled: \textsuperscript{4567}.
 
-\subsection[12. subs {}-- Subscripts]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{subs} -- Subscripts}
+\subsection[12. subs {}-- Subscripts]{\stepcounter{Feature}{\theFeature}. \textSourceText{subs} -- Subscripts}
 Produces subscript numbers. Only affects lining tabular (the default numbers) and oldstyle proportional figures (use
-\textstyleSourceText{pnum} and \textstyleSourceText{onum}): \subs{8901 \oprop{2345}}.
+\textSourceText{pnum} and \textSourceText{onum}): \subs{8901 \oprop{2345}}.
 
 \section{D. Ornaments}
 \hypertarget{SectionD}{}\subsection[13. ornm {}-- Ornaments]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{ornm} -- Ornaments}
+\textSourceText{ornm} -- Ornaments}
 Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (U+2022) or as
 variants of a-z, A-C (all fleurons are available by either method):
 
@@ -332,27 +348,35 @@ As a variant of {\textbullet}: 1=\ornm{\textbullet}, 2=\ornm[1]{\textbullet}, 3=
 As a variant of a-z, A-C: e=\ornm{e}, f=\ornm{f}, g=\ornm{g}, h=\ornm{h}, etc.
 
 \noindent The method with letters of the alphabet is easier, but the method with bullets will produce a more satisfactory result
-when text is displayed in an environment where Junicode is not available or \textstyleSourceText{ornm} is not
+when text is displayed in an environment where Junicode is not available or \textSourceText{ornm} is not
 implemented.
 
 \section{E. Alphabetic Variants}
 \hypertarget{SectionE}{}\subsection[14. cv01{}--cv52 {}-- Basic Latin Variants]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv01-cv52} -- Basic Latin Variants}
-These features also affect small cap (\textstyleSourceText{smcp}) and underdotted (\textstyleSourceText{ss07}) forms,
-where available. Where Junicode has no variant for a Basic Latin letter, the expected \textstyleSourceText{cvNN}
+\textSourceText{cv01-cv52} -- Basic Latin Variants}
+These features also affect small cap (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms,
+where available. Where Junicode has no variant for a Basic Latin letter, the expected \textSourceText{cvNN}
 feature is skipped, being reserved for future development. These features also affect small cap
-(\textstyleSourceText{smcp}) and underdotted (\textstyleSourceText{ss07}) forms, where available.
+(\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms, where available.
 
 \begin{center}
-\tablefirsthead{}
-\tablehead{}
+%\tablefirsthead{}
+\tablefirsthead{\hline
+\centering{\bfseries Variant of} &
+\centering{\bfseries cvNN} &
+\centering\arraybslash{\bfseries Variants}\\}
+%\tablehead{}
+\tablehead{\hline
+\centering{\bfseries Variant of} &
+\centering{\bfseries cvNN} &
+\centering\arraybslash{\bfseries Variants}\\}
 \tabletail{\hline}
 \tablelasttail{}
 \begin{supertabular}{|m{0.79135984in}|m{0.79135984in}|m{2.9212599in}|}
 \hline
-\centering{\bfseries Variant of} &
-\centering{\bfseries cvNN} &
-\centering\arraybslash{\bfseries Variants}\\\hline
+%\centering{\bfseries Variant of} &
+%\centering{\bfseries cvNN} &
+%\centering\arraybslash{\bfseries Variants}\\\hline
 \centering{A} &
 \centering{cv01} &
 1=\cv{1}{0}{A}, 2=\cv{1}{1}{A}, 3=\cv{1}{2}{A}\\\hline
@@ -370,7 +394,7 @@ feature is skipped, being reserved for future development. These features also a
 {1=\cv{5}{0}{C}}\\\hline
 \centering{c} &
 \centering{cv06} &
-{1=c}\\\hline
+{1=\cvd{6}{c}}\\\hline
 \centering{D} &
 \centering{cv07} &
 {1=\cv{7}{0}{D}}\\\hline
@@ -513,11 +537,11 @@ feature is skipped, being reserved for future development. These features also a
 \end{supertabular}
 \end{center}
 \subsection[15. cv53{}-cv67 {}-- Other Latin Letters]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv53-cv67} -- Other Latin Letters}
-\hypertarget{OtherLatin}{}Some features affect both upper- and lowercase forms. \textstyleSourceText{cv62} also affects
-combining \textstyleletterexample{e} with ogonek, accessible via \hyperlink{ss10}{\textstyleSourceText{ss10}} with the
-entity reference \textstyleSourceText{\&\_eogo;}. In this range, \textstyleSourceText{cvNN} features are not reserved
-for future development, since Junicode already uses or reserves all of the available \textstyleSourceText{cvNN}
+\textSourceText{cv53-cv67} -- Other Latin Letters}
+\hypertarget{OtherLatin}{}Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
+combining \textLetterExample{e} with ogonek, accessible via \hyperlink{ss10}{\textSourceText{ss10}} with the
+entity reference \textSourceText{\&\_eogo;}. In this range, \textSourceText{cvNN} features are not reserved
+for future development, since Junicode already uses or reserves all of the available \textSourceText{cvNN}
 features.
 
 \begin{center}
@@ -541,7 +565,7 @@ features.
 \centering\arraybslash 1=\cvd{54}{ą}, 2=\cvd[1]{54}{ą}\\\hline
 \centering ꜳ (U+A733) &
 \centering cv55 &
-\centering\arraybslash{\mdseries 1=\cvd{55}{ꜳ}, 2=\cvd{55}{ꜳ}}\\\hline
+\centering\arraybslash{\mdseries 1=\cvd{55}{ꜳ}, 2=\cvd[1]{55}{ꜳ}}\\\hline
 \centering{\mdseries {\AE} (U+00C6)} &
 \centering cv56 &
 \centering\arraybslash{\mdseries 1=\cvd{56}{\AE}}\\\hline
@@ -575,45 +599,45 @@ features.
 \centering {\o} (U+00F8) &
 \centering cv66 &
 \centering\arraybslash 1=\cvd{66}{\o}, 2=\cvd[1]{66}{\o}, 3=\cvd[2]{66}{\o}, 4=\cvd[3]{66}{\o}\\\hline
-\centering ꝥ, {\addfontfeature{StylisticSet=1}ꝥ} (U+A765) &
+\centering ꝥ, \revthorn{ꝥ} (U+A765) &
 \centering cv67 &
-\centering\arraybslash 1=\cvd{67}{ꝥ, {\addfontfeature{StylisticSet=1}ꝥ}}\\\hline
+\centering\arraybslash 1=\cvd{67}{ꝥ, \revthorn{ꝥ}}\\\hline
 \end{supertabular}
 \end{center}
-\subsection[16. ss01 {}-- Alternate thorn and eth]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss01} --
+\subsection[16. ss01 {}-- Alternate thorn and eth]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss01} --
 Alternate thorn and eth}
 Produces Nordic thorn and eth (\revthorn{{\th}{\dh}{\TH}}) when the language is English, and English thorn and eth
 ({\th}{\dh}{\TH}) with any other language, reversing the font's usual usage. This also affects small caps, crossed
 thorn (ꝥ \revthorn{ꝥ}---see also
-\hyperlink{OtherLatin}{\textstyleSourceText{cv67}}), combining mark eth
-(U+1DD9, ◌ᷙ \revthorn{◌ᷙ}), and enlarged thorn and eth (see \hyperlink{ss06}{\textstyleSourceText{ss06}}).
-This feature depends on \hyperlink{req}{\textstyleSourceText{loca}} (Localized Forms), which in most applications will
+\hyperlink{OtherLatin}{\textSourceText{cv67}}), combining mark eth
+(U+1DD9, ◌ᷙ \revthorn{◌ᷙ}), and enlarged thorn and eth (see \hyperlink{ss06}{\textSourceText{ss06}}).
+This feature depends on \hyperlink{req}{\textSourceText{loca}} (Localized Forms), which in most applications will
 always be enabled.
 
-\subsection[17. ss02 {}-- Insular Letter{}-Forms]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss02} --
+\subsection[17. ss02 {}-- Insular Letter{}-Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss02} --
 Insular Letter-Forms}
 Produces insular letter-forms, e.g. {\addfontfeature{StylisticSet=2}dfgrsw}. Does not affect capitals (except W), as these do not not commonly have
 insular shapes in early manuscripts. For these, enter the Unicode code points or use the Character Variant
-(\textstyleSourceText{cvNN}) features.
+(\textSourceText{cvNN}) features.
 
-\subsection[18. hist {}-- Historical Forms]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{hist} -- Historical
+\subsection[18. hist {}-- Historical Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{hist} -- Historical
 Forms}
-Changes \textstyleletterexample{s} to \textstyleletterexample{\addfontfeature{Style=Historic}s} (longs).
+Changes \textLetterExample{s} to \textLetterExample{\addfontfeature{Style=Historic}s} (longs).
 
-\subsection[19. ss03 {}-- Long s]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss03} -- Long s}
-Changes \textstyleletterexample{s} to \textstyleletterexample{\addfontfeature{StylisticSet=3}s} (duplicating \textstyleSourceText{hist}). see also
-\textstyleSourceText{ss08}.
+\subsection[19. ss03 {}-- Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss03} -- Long s}
+Changes \textLetterExample{s} to \textLetterExample{\addfontfeature{StylisticSet=3}s} (duplicating \textSourceText{hist}). see also
+\textSourceText{ss08}.
 
-\subsection[20. ss04 {}-- High Overline]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss04} -- High
+\subsection[20. ss04 {}-- High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss04} -- High
 Overline}
 Produces a high overline over letters used as roman numbers: {\addfontfeature{StylisticSet=4}cdijlmvx CDIJLMVXↃ}.
 
-\subsection[21. ss05 {}-- Medium{}-High Overline]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss05} --
+\subsection[21. ss05 {}-- Medium{}-High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss05} --
 Medium-High Overline}
 Produces a medium-high overline over (or through the ascenders of) letters used as roman numbers, and some others as
 well: {\addfontfeature{StylisticSet=5,Style=Historic}bcdhijklmsvx{\th}}.
 
-\subsection[22. ss06 {}-- Enlarged Minuscules]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss06} --
+\subsection[22. ss06 {}-- Enlarged Minuscules]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss06} --
 Enlarged Minuscules}
 \hypertarget{ss06}{}Lowercase letters that match the height of normal ones, but with a higher x-height, e.g.
 {\addfontfeature{StylisticSet=6}abcdefg}.
@@ -622,7 +646,7 @@ and if you are using the variable version of the font (JunicodeVF), consider usi
 \href{https://psb1558.github.io/Junicode-New/EnlargedAxis.html}{Enlarged axis} instead, for reasons of flexibility and
 accessibility.
 
-\subsection[23. ss07 {}-- Underdotted Text]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss07} --
+\subsection[23. ss07 {}-- Underdotted Text]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss07} --
 Underdotted Text}
 Produces underdotted text (indicating deletion in medieval manuscripts) for many
 letters (including
@@ -632,42 +656,42 @@ caps, e.g. \textsc{abcdef} $\rightarrow $ {\addfontfeature{StylisticSet=7}\texts
 For letters without corresponding underdotted forms (e.g. U+A751, ꝑ),
 use U+0323, combining dot below (\hspace{0.2em}ꝑ̣).
 
-\subsection[24. ss08 {}-- Contextual Long s]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss08} --
+\subsection[24. ss08 {}-- Contextual Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss08} --
 Contextual Long s}
-In English and French text only, varies \textstyleletterexample{s} and \textstyleletterexample{\addfontfeature{Style=Historic}s} according to rules
+In English and French text only, varies \textLetterExample{s} and \textLetterExample{\addfontfeature{Style=Historic}s} according to rules
 followed by many early printers: {\addfontfeature{StylisticSet=8}sports, essence, stormy, disheveled, transfusions, slyness, cliffside}. For this
-feature to work properly, \textstyleSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by
+feature to work properly, \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by
 default: see \hyperlink{req}{Required Features} below).
 
-\subsection[25. ss11 {}-- r Rotunda]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss11} -- r Rotunda}
-\hypertarget{ss11}{}In lowercase and small caps, substitutes r rotunda (\textstyleletterexample{ꝛ}) for
-\textstyleletterexample{r}. This features does not affect capital \textstyleletterexample{R}: the uncommon
-\textstyleletterexample{Ꝛ} (U+A75A) must be entered manually. See also
-\hyperlink{ss16}{\textstyleSourceText{ss16}}.
+\subsection[25. ss11 {}-- r Rotunda]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss11} -- r Rotunda}
+\hypertarget{ss11}{}In lowercase and small caps, substitutes r rotunda (\textLetterExample{ꝛ}) for
+\textLetterExample{r}. This features does not affect capital \textLetterExample{R}: the uncommon
+\textLetterExample{Ꝛ} (U+A75A) must be entered manually. See also
+\hyperlink{ss16}{\textSourceText{ss16}}.
 
-\subsection[26. ss16 {}-- Contextual r Rotunda]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss16} --
+\subsection[26. ss16 {}-- Contextual r Rotunda]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss16} --
 Contextual r Rotunda}
-\hypertarget{ss16}{}Converts \textstyleletterexample{r} to \textstyleletterexample{ꝛ} (lowercase only) following the
+\hypertarget{ss16}{}Converts \textLetterExample{r} to \textLetterExample{ꝛ} (lowercase only) following the
 most common rules of medieval manuscripts: {\addfontfeature{StylisticSet=16}priest, firmer, frost, ornament}. For this feature to work properly,
-\textstyleSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by default: see
-\hyperlink{req}{Required Features} below). See also \hyperlink{ss11}{\textstyleSourceText{ss11}}.
+\textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by default: see
+\hyperlink{req}{Required Features} below). See also \hyperlink{ss11}{\textSourceText{ss11}}.
 
 \subsection[27. cv68 {}-- Variant of ʔ (U+0294, glottal stop)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv68} -- Variant of ʔ (U+0294, glottal stop)}
+\textSourceText{cv68} -- Variant of ʔ (U+0294, glottal stop)}
 1=\cvd{68}{ʔ}.
 
 \subsection[28. cv99 {}-- revert small cap a to lowercase a]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv}\textstyleSourceText{99} -- revert small cap a to lowercase a}
+\textSourceText{cv}\textSourceText{99} -- revert small cap a to lowercase a}
 \hypertarget{RevertSmallCapA}{}1=a. This features reverts small cap
-\textstyleletterexample{\textsc{a}} to \textstyleletterexample{a}, enabling it to
-ligature with small cap \textstyleletterexample{\textsc{n}} or
-\textstyleletterexample{\textsc{r}} via \textstyleSourceText{hlig}: \textsc{\cvd{99}{\hlig{an, ar}}}.
-Be sure to apply \textstyleSourceText{smcp}, \textstyleSourceText{cv99} and
-\textstyleSourceText{hlig} to both components of the ligature.
+\textLetterExample{\textsc{a}} to \textLetterExample{a}, enabling it to
+ligature with small cap \textLetterExample{\textsc{n}} or
+\textLetterExample{\textsc{r}} via \textSourceText{hlig}: \textsc{\cvd{99}{\hlig{an, ar}}}.
+Be sure to apply \textSourceText{smcp}, \textSourceText{cv99} and
+\textSourceText{hlig} to both components of the ligature.
 
 \section{F. Punctuation}
 \hypertarget{SectionF}{}MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
-either of two ways: all are indexed variants of \textstyleletterexample{.} (period), and all are associated with the Unicode marks of
+either of two ways: all are indexed variants of \textLetterExample{.} (period), and all are associated with the Unicode marks of
 punctuation they most resemble (but it should not be inferred that the medieval marks are semantically identical with
 the Unicode marks, or that there is an etymological relationship between them). The first method will be easier for
 most to use, but the second is more likely to yield acceptable fallbacks in environments where Junicode is not
@@ -679,15 +703,15 @@ U+2E4D), medieval comma (⹌~U+2E4C), \textit{punctus elevatus} (⹎ U+2E4E), \t
 (⹊ U+2E4A), triple dagger (⹋ U+2E4B).
 
 \subsection[29. ss18 {}-- Old{}-Style Punctuation Spacing]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{ss18} -- Old-Style Punctuation Spacing}
+\textSourceText{ss18} -- Old-Style Punctuation Spacing}
 Colons, semicolons, parentheses, quotation marks and several other glyphs are spaced as in early printed books.
 
 \subsection[30. cv69 {}-- Variants of ⁊⹒ (U+204A / U+2E52, Tironian
-nota)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv69} -- Variants of ⁊⹒
+nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of ⁊⹒
 (U+204A / U+2E52, Tironian nota)}
 1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}.
 
-\subsection[31. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv70} --
+\subsection[31. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv70} --
   Variants of . (period)}
 1=\cvd{70}{.}, 2=\cvd[1]{70}{.}, 3=\cvd[2]{70}{.}, 4=\cvd[3]{70}{.}, 5=\cvd[4]{70}{.}, 6=\cvd[5]{70}{.},
 7=\cvd[6]{70}{.}, 8=\cvd[7]{70}{.}, 9=\cvd[8]{70}{.}, 10=\cvd[9]{70}{.}, 11=\cvd[10]{70}{.}, 12=\cvd[11]{70}{.},
@@ -697,91 +721,91 @@ feature provides access to all non-Unicode MUFI punctuation marks. Some of them 
 below).
 
 \subsection[32. cv71 {}-- Variant of {\textperiodcentered} (U+00B7, middle dot)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv71} -- Variant of {\textperiodcentered} (U+00B7, middle dot)}
+\textSourceText{cv71} -- Variant of {\textperiodcentered} (U+00B7, middle dot)}
 1=\cvd{71}{\textperiodcentered} (\textit{distinctio}).
 
-\subsection[33. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv72} --
+\subsection[33. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv72} --
 Variants of , (comma)}
 1=\cvd{72}{,}, 2=\cvd[1]{72}{,}.
 
-\subsection[34. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv73} --
+\subsection[34. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv73} --
 Variants of ; (semicolon)}
 1=\cvd{73}{;} (\textit{punctus versus}), 2=\cvd[1]{73}{;}, 3=\cvd[2]{73}{;}, 4=\cvd[3]{73}{;}, 5=\cvd[4]{73}{;}.
 
 \subsection[35. cv74 {}-- Variants of ⹎ (U+2E4E, punctus elevatus)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv74} -- Variants of ⹎ (U+2E4E, \textit{punctus elevatus})}
+\textSourceText{cv74} -- Variants of ⹎ (U+2E4E, \textit{punctus elevatus})}
 1=\cvd{74}{⹎}, 2=\cvd[1]{74}{⹎}, 3=\cvd[2]{74}{⹎}, 4=\cvd[3]{74}{⹎} (\textit{punctus flexus}).
 
 \subsection[36. cv75 {}-- Variant of ! (exclamation mark)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv7}\textstyleSourceText{5} -- Variant of ! (exclamation mark)}
+\textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
 1=\cvd{75}{!} (\textit{punctus exclamativus}).
 
-\subsection[37. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv76}
+\subsection[37. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv76}
 -- Variants of ? (question mark)}
 1=\cvd{76}{?}, 2=\cvd[1]{76}{?}, 3=\cvd[2]{76}{?}. Shapes of the \textit{punctus interrogativus}.
 
-\subsection[38. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv77}
+\subsection[38. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv77}
 -- Variant of \~{} (ASCII tilde)}
 1=\cvd{77}{\~{}} (same as MUFI U+F1F9, ``wavy line'').
 
-\subsection[39. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv78} --
+\subsection[39. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv78} --
 Variant of * (asterisk)}
 1=\cvd{78}{*}. MUFI defines U+F1EC as a \textit{signe de renvoi}. Manuscripts employ a number of shapes (of which this is one) for
 this purpose. Junicode defines it as a variant of the asterisk---the most common modern \textit{signe de renvoi}.
 
 \subsection[40. cv79 {}-- Variants of / (slash)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv7}\textstyleSourceText{9} -- Variants of / (slash)}
+\textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
 1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, U+2E4E.
 
 \section{G. Abbreviations}
 \hypertarget{SectionG}{}\subsection[41. cv80 {}-- Variant of ꝝ (U+A75D, rum
-abbreviation)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv80} -- Variant of ꝝ (U+A75D, rum
+abbreviation)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv80} -- Variant of ꝝ (U+A75D, rum
 abbreviation)}
 1=\cvd{80}{ꝝ}.
 
 \subsection[42. cv81 {}-- Variants of ◌͛ (U+035B, combining zigzag
-above)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv81} -- Variants of ◌͛ (U+035B, combining
+above)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv81} -- Variants of ◌͛ (U+035B, combining
 zigzag above)}
 1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
-marks, e.g. b͛, f͛, d͛. If \textstyleSourceText{calt} ``Contextual Alternates'' is enabled (as it is by
-default in most apps), variant forms of \textstyleSourceText{cv81[2]} will be used with several letters, e.g. \cvd[1]{81}{d͛,
-  f͛, k͛}. Enable \textstyleSourceText{case} for forms that harmonize with capitals
-({\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}), \textstyleSourceText{smcp} for forms that harmonize with small caps
+marks, e.g. b͛, f͛, d͛. If \textSourceText{calt} ``Contextual Alternates'' is enabled (as it is by
+default in most apps), variant forms of \textSourceText{cv81[2]} will be used with several letters, e.g. \cvd[1]{81}{d͛,
+  f͛, k͛}. Enable \textSourceText{case} for forms that harmonize with capitals
+({\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}), \textSourceText{smcp} for forms that harmonize with small caps
   (\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}).
 
 \subsection[43. cv82 {}-- Variants of spacing ꝰ (U+A770)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv82} -- Variants of spacing ꝰ (U+A770)}
-1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textstyleSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
+\textSourceText{cv82} -- Variants of spacing ꝰ (U+A770)}
+1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
 U+F1A6). MUFI also has an uppercase baseline \textit{{}-us} abbreviation (U+F1A5), but as there is no uppercase version
 of U+A770 to pair it with, it is indexed separately here.
 
 \subsection[44. cv83 {}-- Variant of ꝫ (U+A76B, {}``et{}'' abbreviation)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv83} -- Variant of ꝫ (U+A76B, ``et'' abbreviation)}
+\textSourceText{cv83} -- Variant of ꝫ (U+A76B, ``et'' abbreviation)}
 1=\cvd{83}{ꝫ}. Identical in shape to a semicolon, but as it is semantically the same as U+A76B, it is preferable to use that
 character with this feature.
 
 \section{H. Combining Marks}
 \hypertarget{SectionH}{}\subsection[45. cv84 {}-- MUFI combining marks (variants of ◌᷑
-U+1DD1)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv84} -- MUFI combining marks (variants of U+1DD1)}
+U+1DD1)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of U+1DD1)}
 MUFI encodes a number of combining marks in the PUA (with code points between E000 and F8FF), but when these characters
 are entered directly, they can interfere with searching and accessibility, and some important applications fail to
-position them correctly over their base characters. To avoid these problems, enter U+1DD1 (◌᷑, \textstyleUName{combining ur
-above}) and apply \textstyleSourceText{cv84}, with the appropriate index, to both mark and base character. This
+position them correctly over their base characters. To avoid these problems, enter U+1DD1 (◌᷑, \textUName{combining ur
+above}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character. This
 collection of marks does not include any Unicode-encoded marks (from the ``Combining Diacritical Marks'' ranges), as
-these can safely be entered directly. It does include three marks (\textstyleSourceText{cv84[35]},
-\textstyleSourceText{[36]} and \textstyleSourceText{[37]}) that lack MUFI code points but are used to form MUFI
+these can safely be entered directly. It does include three marks (\textSourceText{cv84[35]},
+\textSourceText{[36]} and \textSourceText{[37]}) that lack MUFI code points but are used to form MUFI
 characters.
 
-These marks can sometimes be produced by other \textstyleSourceText{cvNN} features, which may be preferable to
-\textstyleSourceText{cv84} as providing fallbacks for applications that do not support Character Variant
-(\textstyleSourceText{cvNN}) features.
+These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
+\textSourceText{cv84} as providing fallbacks for applications that do not support Character Variant
+(\textSourceText{cvNN}) features.
 
 For some marks with PUA code points, users may find it easier to use \hyperlink{SectionN}{entities} than this feature.
 Note that entities beginning \&\_ (ampersand + underscore) are for combining diacritics.
 
 These marks are not affected by most other features. This is to preserve flexibility, given the rule that the feature
-that produces them must be applied to both the mark and the base character. For example, if \textstyleSourceText{smcp}
-``Small Caps'' changed \textstyleSourceText{cv84[11]} \cvd[10]{84}{◌᷑} to \textstyleSourceText{[12]} \cvd[11]{84}{◌᷑}, it
+that produces them must be applied to both the mark and the base character. For example, if \textSourceText{smcp}
+``Small Caps'' changed \textSourceText{cv84[11]} \cvd[10]{84}{◌᷑} to \textSourceText{[12]} \cvd[11]{84}{◌᷑}, it
 would be impossible to produce the sequence \cvd[10]{84}{\textsc{na᷑a}} with the diacritic properly positioned.
 
 1=\cvd{84}{◌᷑}, 2=\cvd[1]{84}{◌᷑◌}, 3=\cvd[2]{84}{◌᷑}, 4=\cvd[3]{84}{◌᷑}, 5=\cvd[4]{84}{◌᷑}, 6=\cvd[5]{84}{◌᷑},
@@ -795,65 +819,65 @@ would be impossible to produce the sequence \cvd[10]{84}{\textsc{na᷑a}} with t
 \subsection[46. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}
 and combining marks ◌ͣ (U+0363), ◌ͤ (U+0364), \cvd[16]{84}{◌᷑}
-(U+1DD1\slash\textstyleSourceText{cv84[17]}), ◌ͦ (U+0366), ◌ͬ (U+036C), ◌ᷢ (U+1DE2),
+(U+1DD1\slash\textSourceText{cv84[17]}), ◌ͦ (U+0366), ◌ͬ (U+036C), ◌ᷢ (U+1DE2),
 ◌ͭ (U+036D), ◌ͮ (U+036E), ◌ᷦ (U+1DE6) and \cvd[20]{84}{◌᷑}
-(U+1DD1/\textstyleSourceText{cv84[21]}). Instead of being positioned above ascender height as usual (e.g.
-\textstyleletterexample{hͣ}), the MUFI glyphs have the marks positioned above the x-height
-(e.g. \textstyleletterexample{\addfontfeature{StylisticSet=20}hͣ}).
+(U+1DD1/\textSourceText{cv84[21]}). Instead of being positioned above ascender height as usual (e.g.
+\textLetterExample{hͣ}), the MUFI glyphs have the marks positioned above the x-height
+(e.g. \textLetterExample{\addfontfeature{StylisticSet=20}hͣ}).
 Using the MUFI code points for these precomposed glyphs can interfere with searching
 and drastically reduce accessibility. Users of Junicode should instead use a sequence of base character + combining
-mark, and apply \textstyleSourceText{ss20} to the two glyphs. A variant shape of eth (\textstyleletterexample{{\dh}})
+mark, and apply \textSourceText{ss20} to the two glyphs. A variant shape of eth (\textLetterExample{{\dh}})
 that accommodates the combining mark will be substituted for the normal base character (but this is not necessary for
 the other base characters). Examples:
 {\addfontfeature{StylisticSet=20}bͦ, ꝺᷦ, \cvd[16]{84}{h᷑}, kͤ, {\th}ͭ, {\dh}ᷢ}.
 
-\textstyleSourceText{ss20} affects only the diacritics and base characters listed here; other combinations (e.g.
-\textstyleletterexample{m\&\_e;}, \textstyleletterexample{\'{h}}) are not affected. It will therefore probably be safe
+\textSourceText{ss20} affects only the diacritics and base characters listed here; other combinations (e.g.
+\textLetterExample{m\&\_e;}, \textLetterExample{\'{h}}) are not affected. It will therefore probably be safe
 to apply this feature to the whole text if it is needed anywhere.
 
 \subsection[47. cv85 {}-- Variant of ◌ᷓ (U+1DD3, combining open a)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
+\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.
 
 \subsection[48. cv86 {}-- Variant of ◌ᷘ U(U+1DD8, combining insular d)]{%
-\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv86} -- Variant of ◌ᷘ (U+1DD8, combining insular
+\stepcounter{Feature}{\theFeature}. \textSourceText{cv86} -- Variant of ◌ᷘ (U+1DD8, combining insular
 d)}
 1=\cvd{86}{◌ᷘ}.
 
 \subsection[49. cv87 {}-- Variant of ◌ᷣ (U+1DE3, combining r rotunda)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv87} -- Variant of ◌ᷣ (U+1DE3, combining r rotunda)}
+\textSourceText{cv87} -- Variant of ◌ᷣ (U+1DE3, combining r rotunda)}
 1=\cvd{87}{◌ᷣ}.
 
 \subsection[50. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv8}\textstyleSourceText{8} -- Variant of combining dieresis (U+0308)}
+\textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (U+0308)}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
-\textstyleletterexample{\"a}.
+\textLetterExample{\"a}.
 
 \subsection[51. cv89 {}-- Variant of ◌̅◌ (U+0305, two{}-letter
-overline)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv89} -- Variant of ◌̅◌ (U+0305,
+overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅◌ (U+0305,
 two-letter overline)}
 1=\cvd{89}{◌̅◌}.
 
 \subsection[52. cv90 {}-- Variant of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv}\textstyleSourceText{90} -- Variant of ◌̄ (U+0304, combining macron)}
+\textSourceText{cv}\textSourceText{90} -- Variant of ◌̄ (U+0304, combining macron)}
 1=\cvd{90}{◌̄}.
 
 \subsection[53. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv91} -- Variants of short horizontal stroke (U+0335)}
+\textSourceText{cv91} -- Variants of short horizontal stroke (U+0335)}
 1=\cvd{91}{◌̵}, 2=\cvd[1]{91}{◌̵}, 3=\cvd[2]{91}{◌̵}. This character can be used with letters with ascenders or
-descenders, e.g. \textstyleletterexample{\cvd{91}{d̵ b̵ {\th}̵ p̵}}. \textstyleSourceText{cv91[1]} widens the
-stroke, and \textstyleSourceText{cv91[2]} and \textstyleSourceText{[3]} offset the stroke to the right or left. Via
-\textstyleSourceText{calt} ``Contextual Alternates,'' this offset is performed automatically for many characters
-with ascenders and descenders, and so it should rarely be necessary to use an index with \textstyleSourceText{cv91}.
+descenders, e.g. \textLetterExample{\cvd{91}{d̵ b̵ {\th}̵ p̵}}. \textSourceText{cv91[1]} widens the
+stroke, and \textSourceText{cv91[2]} and \textSourceText{[3]} offset the stroke to the right or left. Via
+\textSourceText{calt} ``Contextual Alternates,'' this offset is performed automatically for many characters
+with ascenders and descenders, and so it should rarely be necessary to use an index with \textSourceText{cv91}.
 
 \subsection[54. cv92 {}-- Variant of breve below (U+032E)]{\stepcounter{Feature}{\theFeature}. cv92 -- Variant of breve
 below (U+032E)}
-1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textstyleSourceText{cv92}
-to both the mark and (at least) the middle glyph. This mark is not available via \textstyleSourceText{cv84}.
+1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
+to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
 
 \section{I. Currency and Weights}
 \hypertarget{SectionI}{}\subsection[55. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
-sign)]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{cv93} -- Variants of {\textcurrency} (U+0044, generic
+sign)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv93} -- Variants of {\textcurrency} (U+0044, generic
 currency sign)}
 1=\cvd{93}{\textcurrency}, 2=\cvd[1]{93}{\textcurrency},
 3=\cvd[2]{93}{\textcurrency}, 4=\cvd[3]{93}{\textcurrency},
@@ -873,67 +897,67 @@ All of MUFI's currency and weight symbols (those that do
 not have Unicode code points) are gathered here, but some are also variants of other currency signs (see below).
 
 \subsection[56. cv94 {}-- Variant of ℔ (U+2114)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv9}\textstyleSourceText{4} -- Variant of ℔ (U+2114)}
+\textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (U+2114)}
 1=\cvd{94}{℔}. Same as MUFI U+F2EB (French Libra sign).
 
 \subsection[57. cv95 {}-- Variants of {\pounds} (U+00A3, British pound sign)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv95} -- Variants of {\pounds} (U+00A3, British pound sign)}
+\textSourceText{cv95} -- Variants of {\pounds} (U+00A3, British pound sign)}
 1=\cvd{95}{\pounds}, 2=\cvd[1]{95}{\pounds}, 3=\cvd[2]{95}{\pounds}, 4=\cvd[3]{95}{\pounds},
 5=\cvd[4]{95}{\pounds}, 6=\cvd[5]{95}{\pounds}. Same as MUFI U+F2EA, F2EB, F2EC, F2ED,
 F2EE, F2EF, pound signs from various locales.
 
 \subsection[58. cv96 {}-- Variant of ₰ (U+20B0, German penny sign)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv96} -- Variant of ₰ (U+20B0, German penny sign)}
+\textSourceText{cv96} -- Variant of ₰ (U+20B0, German penny sign)}
 1=\cvd{96}{₰}. Same as MUFI U+F2F5.
 
 \subsection[59. cv97 {}-- Variant of ƒ (U+0192, florin)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv97} -- Variant of ƒ (U+0192, florin)}
+\textSourceText{cv97} -- Variant of ƒ (U+0192, florin)}
 1=\cvd{97}{ƒ}. Same as MUFI U+F2E8.
 
 \subsection[60. cv98 {}-- Variant of ℥ (U+2125, Ounce sign)]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{cv98} -- Variant of ℥ (U+2125, Ounce sign)}
+\textSourceText{cv98} -- Variant of ℥ (U+2125, Ounce sign)}
 1=\cvd{98}{℥}. Same as MUFI U+F2FD, Script ounce sign.
 
 \section{J. Gothic}
 \hypertarget{SectionJ}{}\subsection[61. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{ss19} -- Latin to Gothic Transliteration}
-Produces Gothic letters from Latin: {\addfontfeature{StylisticSet=1}War{\th} {\th}an in dagans jainans} $\rightarrow $
-{\addfontfeature{StylisticSet=19}War{\th} {\th}an in dagans
+\textSourceText{ss19} -- Latin to Gothic Transliteration}
+Produces Gothic letters from Latin: \revthorn{Warþ þan in dagans jainans} $\rightarrow $
+{\addfontfeature{StylisticSet=19}Warþ þan in dagans
 jainans}. In web pages, the letters will be searchable as their Latin equivalents.
 
 \section[K. Runic]{K. Runic}
 \hypertarget{SectionK}{}\subsection[62. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{ss12} -- Early English Futhorc}
+\textSourceText{ss12} -- Early English Futhorc}
 Changes Latin letters to their equivalents in the early English futhorc. Because of the variability of the runic
 alphabet, this method of transliteration may not produce the result you want. In that case, it may be necessary to
 manually edit the result. fisc flodu ahof $\rightarrow $ {\addfontfeature{StylisticSet=12}fisc flodu ahof}.
 
-\subsection[63. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss13} -- Elder
+\subsection[63. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss13} -- Elder
 Futhark}
 Changes Latin letters to their equivalents in the Elder Futhark. Because of the variability of the runic alphabet, this
 method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit the
 result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=13}ABCDEFG}.
 
-\subsection[64. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss14} -- Younger
+\subsection[64. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss14} -- Younger
 Futhark}
 Changes Latin letters to their equivalents in the Younger Futhark. Because of the variability of the runic alphabet,
 this method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit
 the result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=14}ABCDEFG}.
 
-\subsection[65. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss15} --
+\subsection[65. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss15} --
 Long Branch to Short Twig}
-In combination with \textstyleSourceText{ss14}, converts long branch to short twig runes:
-{\addfontfeature{StylisticSet=12}{ABCDEFG $\rightarrow $
+In combination with \textSourceText{ss14}, converts long branch (the default for the Younger Futhark) to short twig runes:
+{\addfontfeature{StylisticSet=14}{ABCDEFG $\rightarrow $
 \addfontfeature{StylisticSet=15}ABCDEFG}}.
 
-\subsection[66. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{rtlm}
+\subsection[66. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{rtlm}
 -- Right to Left Mirrored Forms}
 Produces mirrored runes, e.g. {\addfontfeature{StylisticSet=12}ABCDEFG $\rightarrow $ \addfontfeature{Style=mirrored}GFEDCBA}.
 This feature cannot change the direction of text.
 
 \section[L. Ligatures and Digraphs]{L. Ligatures and Digraphs}
 \hypertarget{SectionL}{}\subsection[67. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{hlig} -- Historic Ligatures}
+\textSourceText{hlig} -- Historic Ligatures}
 
 Produces ligatures for combinations that should not ordinarily be rendered as
 ligatures in modern text.\footnote{Some
@@ -1000,13 +1024,13 @@ c{\textcompwordmark}k$\rightarrow $ck}
 e{\textcompwordmark}y$\rightarrow $ey}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
-f{\textcompwordmark}\"a$\rightarrow $f\"a}
+f{\textcompwordmark}ä$\rightarrow $fä}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 g{\textcompwordmark}d$\rightarrow $gd}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
-g{\textcompwordmark}{\dh}$\rightarrow $\addfontfeature{StylisticSet=1}gð}
+g{\textcompwordmark}\revthorn{ð}$\rightarrow $\revthorn{gð}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 g{\textcompwordmark}ꝺ$\rightarrow $gꝺ}
@@ -1145,49 +1169,49 @@ u{\textcompwordmark}u$\rightarrow $uu}
 \end{multicols}
 
 \noindent\addfontfeatures{Ligatures=histoff}
-Notes: For \textstyleletterexample{\textsc{\cvd{99}{\hlig{an}}}} and
-\textstyleletterexample{\textsc{\cvd{99}{\hlig{an}}}} see
-\hyperlink{RevertSmallCapA}{\textstyleSourceText{cv99}} above. For the ligature \textstyleletterexample{\textsc{\hlig{nſ}}} to
-work properly, U+017F \textstyleletterexample{ſ} must be entered directly, not by applying an OpenType feature to
-\textstyleletterexample{s}.
+Notes: For \textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} and
+\textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} see
+\hyperlink{RevertSmallCapA}{\textSourceText{cv99}} above. For the ligature \textLetterExample{\textsc{\hlig{nſ}}} to
+work properly, U+017F \textLetterExample{ſ} must be entered directly, not by applying an OpenType feature to
+\textLetterExample{s}.
 
-\subsection[68. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{dlig} --
+\subsection[68. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textSourceText{dlig} --
 Discretionary Ligatures}
 Produces lesser-used ligatures, but also roman numbers, e.g.
 {\addfontfeature{Ligatures=Rare}ii, II, xi, XI}. The lesser-used ligatures:
-\textstyleletterexample{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, sp, str, st, tr, tt, ty}}.
+\textLetterExample{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, sp, str, st, tr, tt, ty}}.
 
-\subsection[69. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textstyleSourceText{ss17} -- Rare
+\subsection[69. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss17} -- Rare
 Digraphs}
 \hypertarget{ss17}{}By ``digraph'' we mean conjoined letters that represent a phonetic value: the most common examples
-for western languages are \textstyleletterexample{{\ae}} and \textstyleletterexample{{\oe}} (though these, because they
+for western languages are \textLetterExample{{\ae}} and \textLetterExample{{\oe}} (though these, because they
 are so common, are not included in this feature). Use of this feature in web pages enables easier searches: for
-example, producing \textstyleletterexample{\addfontfeature{StylisticSet=17}{\th}au} from
-\textstyleletterexample{{\th}au} allows the word to be
+example, producing \textLetterExample{\addfontfeature{StylisticSet=17}{\th}au} from
+\textLetterExample{{\th}au} allows the word to be
 searched as ``{\th}au.'' The digraphs covered by this feature are \textcolor[rgb]{0.5529412,0.15686275,0.11764706}{%
 \addfontfeature{StylisticSet=17}aa, ao, au, av, ay, oo, vy,} plus capital and small cap equivalents and digraph + diacritic combinations anticipated in the
 MUFI recommendation. To produce such a digraph + diacritic combination, either type a letter + diacritic combination as
 the second element of the digraph or type the diacritic after the second element. For example,
-\textstyleletterexample{a} + \textstyleletterexample{\'u} yields \textstyleletterexample{\addfontfeature{StylisticSet=17}a\'u}, and so does
-\textstyleletterexample{a} + \textstyleletterexample{u} + U+0301 (combining acute accent). To produce a digraph +
-diacritic combination not covered by MUFI (e.g. \textstyleletterexample{ꜵ̀}), you may have to enter the digraph
-directly and not via \textstyleSourceText{ss17} (rare diacritics, however, are usually safe to use with this
-feature---e.g. \textstyleletterexample{\addfontfeature{StylisticSet=17}aaᷘ}). Note that \textstyleSourceText{ss17} must be applied to the two
+\textLetterExample{a} + \textLetterExample{\'u} yields \textLetterExample{\addfontfeature{StylisticSet=17}a\'u}, and so does
+\textLetterExample{a} + \textLetterExample{u} + U+0301 (combining acute accent). To produce a digraph +
+diacritic combination not covered by MUFI (e.g. \textLetterExample{ꜵ̀}), you may have to enter the digraph
+directly and not via \textSourceText{ss17} (rare diacritics, however, are usually safe to use with this
+feature---e.g. \textLetterExample{\addfontfeature{StylisticSet=17}aaᷘ}). Note that \textSourceText{ss17} must be applied to the two
 elements of the digraph and any following diacritic.
 
 \section{M. Required Features}
 \hypertarget{req}{}Required features, which provide some of the font's most basic functionality---ligatures, support for
-other features, kerning, and more---include \textstyleSourceText{ccmp} (Glyph Composition/Decomposition),
-\textstyleSourceText{calt} (Contextual Alternates), \textstyleSourceText{liga} (Standard Ligatures),
-\textstyleSourceText{loca} (Localized Forms), \textstyleSourceText{rlig} (Required Ligatures),
-\textstyleSourceText{kern} (Horizontal Kerning), and \textstyleSourceText{mark}/\textstyleSourceText{mkmk} (Mark
+other features, kerning, and more---include \textSourceText{ccmp} (Glyph Composition/Decomposition),
+\textSourceText{calt} (Contextual Alternates), \textSourceText{liga} (Standard Ligatures),
+\textSourceText{loca} (Localized Forms), \textSourceText{rlig} (Required Ligatures),
+\textSourceText{kern} (Horizontal Kerning), and \textSourceText{mark}/\textSourceText{mkmk} (Mark
 Positioning). In MS Word these features have to be explicitly enabled on the Advanced tab of the Font dialog (Ctrl-D or
 Cmd-D: enable Kerning, Standard Ligatures, and Contextual Alternates, and the others will be enabled automatically),
 but in most other applications they are enabled by default.
 
 \section{N. Entities}
 \hypertarget{SectionN}{}\subsection[70. ss10 {}-- Character Entity References]{\stepcounter{Feature}{\theFeature}.
-\textstyleSourceText{ss10} -- Character Entity References}
+\textSourceText{ss10} -- Character Entity References}
 \hypertarget{ss10}{}In XML and HTML, characters that can't easily be typed on a keyboard can be expressed as entity
 references consisting of an ampersand, a name, and a semicolon. The XML standard defines a few entities and HTML many
 more, but document authors can define as many as they like in a DTD. Junicode anticipates the need of medievalists for
@@ -1196,7 +1220,7 @@ with the collection of HTML entities, but most are peculiar to Junicode, emphasi
 medieval texts and those that have only PUA code points (especially combining marks, which present special technical
 difficulties).
 
-In applications that support Stylistic Sets, \textstyleSourceText{ss10} makes these entities appear as the characters
+In applications that support Stylistic Sets, \textSourceText{ss10} makes these entities appear as the characters
 they represent. But as such entities can interfere with searching and accessibility when embedded in a web page, you
 should think of them as a convenient set of mnemonics to be used when typing, to be replaced by their Unicode
 equivalents before publication. If you use any non-Unicode characters (highlighted in the list below), you should call

@@ -11,7 +11,10 @@
 \usepackage[quiet]{fontspec}
 \setmainfont{Junicode Two Beta SemiExpanded}[Language=English,StylisticSet=10]
 \usepackage[english]{babel}
-\usepackage{color}
+\usepackage{xcolor,colortbl}
+\definecolor{BrickRed}{RGB}{146,18,6}
+\definecolor{SlateGray}{RGB}{112,128,144}
+\definecolor{GGOrange}{RGB}{240,74,6}
 \usepackage{multicol}
 \usepackage{array}
 \usepackage{supertabular}
@@ -23,15 +26,9 @@
 \renewcommand\thefootnote{\arabic{footnote}}
 \makeatother
 % Text styles
-%\newcommand\textLetterExample[1]{\textrm{\textbf{#1}}}
-%\newcommand\textUName[1]{\textrm{#1}}
-%\newcommand\textSourceText[1]{\texttt{#1}}
-%\newcommand\textstyleEmphasis[1]{\textit{#1}}
-%\newcommand\textstyleEntityRef[1]{\textrm{#1}}
-
-\newcommand\textLetterExample[1]{\textrm{\textbf{#1}}}
+\newcommand\textLetterExample[1]{\textrm{\textbf{\color{BrickRed}#1}}}
 \newcommand\textUName[1]{\textsc{#1}}
-\newcommand\textSourceText[1]{\texttt{#1}}
+\newcommand\textSourceText[1]{{\color{GGOrange}\texttt{#1}}}
 \newcommand\textstyleEmphasis[1]{\textit{#1}}
 \newcommand\textstyleEntityRef[1]{\textrm{#1}}
 \newcommand{\cv}[3]{{\addfontfeature{CharacterVariant=#1:#2}#3}}
@@ -59,7 +56,7 @@
 \setlength\hoffset{-0.75in}
 \setlength\topmargin{1in}
 \setlength\oddsidemargin{1in}
-\setlength\textheight{8.400001in}
+\setlength\textheight{8.000001in}
 \setlength\textwidth{6in}
 \setlength\footskip{0.0cm}
 \setlength\headheight{0.4in}
@@ -78,18 +75,12 @@
 \lfoot{}
 \cfoot{\thepage}
 \rfoot{}
-%\makeatletter
-%\newcommand\ps@Standard{
-%  \renewcommand\@oddhead{\hfill Junicode 2 Feature Reference, p. \thepage{}}
-%  \renewcommand\@evenhead{Junicode 2 Feature Reference, p. \thepage{}}
-%  \renewcommand\@oddfoot{}
-%  \renewcommand\@evenfoot{}
-%  \renewcommand\thepage{\arabic{page}}
-%}
-%\makeatother
-%\pagestyle{Standard}
 \setlength\tabcolsep{1mm}
 \renewcommand\arraystretch{1.3}
+% Headers
+\usepackage{sectsty}
+\subsectionfont{\color{BrickRed}}
+\sectionfont{\color{SlateGray}}
 % List styles
 \newcommand\liststyleLi{%
 \renewcommand\labelitemi{{\textbullet}}
@@ -107,9 +98,9 @@
 \renewcommand\theFeature{\arabic{Feature}}
 \tolerance=1500
 \frenchspacing
-%\title{}
-%\author{}
-%\date{2021-10-08}
+%
+%
+%
 \begin{document}
 \maketitle
 %{\mdseries\color[rgb]{0.47058824,0.011764706,0.4509804}
@@ -359,14 +350,17 @@ where available. Where Junicode has no variant for a Basic Latin letter, the exp
 feature is skipped, being reserved for future development. These features also affect small cap
 (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms, where available.
 
+\definecolor{LightBlueGray}{RGB}{212,218,218}
 \begin{center}
 %\tablefirsthead{}
 \tablefirsthead{\hline
-\centering{\bfseries Variant of} &
+\rowcolor{LightBlueGray}
+\centering{\bfseries Variant of} &\
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
 %\tablehead{}
 \tablehead{\hline
+\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
@@ -377,7 +371,7 @@ feature is skipped, being reserved for future development. These features also a
 %\centering{\bfseries Variant of} &
 %\centering{\bfseries cvNN} &
 %\centering\arraybslash{\bfseries Variants}\\\hline
-\centering{A} &
+\color{black}\centering{A} &
 \centering{cv01} &
 1=\cv{1}{0}{A}, 2=\cv{1}{1}{A}, 3=\cv{1}{2}{A}\\\hline
 \centering{a} &
@@ -546,10 +540,12 @@ features.
 
 \begin{center}
 \tablefirsthead{\hline
+\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
 \tablehead{\hline
+\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}

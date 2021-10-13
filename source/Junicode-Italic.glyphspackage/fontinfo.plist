@@ -1,5 +1,5 @@
 {
-.appVersion = "3098";
+.appVersion = "3099";
 .formatVersion = 3;
 axes = (
 {
@@ -70,7 +70,7 @@ name = vendorID;
 value = " ";
 }
 );
-date = "2021-10-10 22:58:51 +0000";
+date = "2021-10-13 03:10:30 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -850,10 +850,12 @@ tag = ss02;
 },
 {
 code = "sub s by longs;";
+disabled = 1;
 tag = hist;
 },
 {
 code = "sub s by longs;";
+disabled = 1;
 labels = (
 {
 language = default;
@@ -981,6 +983,7 @@ tag = ss08;
 code = "sub r by rrotunda ;
 # sub r.sc by rrotunda.sc;
 ";
+disabled = 1;
 labels = (
 {
 language = default;
@@ -1978,9 +1981,8 @@ value = "Variants of spacing us";
 tag = cv82;
 },
 {
-code = "sub et from [ et.alt ];
+code = "sub et from [ et.alt et.alt1 ];
 ";
-disabled = 1;
 labels = (
 {
 language = default;
@@ -3364,6 +3366,7 @@ sub a thorn by a_thorn.hlig ;
 # sub P s by P_s ;
 # sub pflourish p by uniA753_p.hlig ;
 sub q et by q_et ;
+sub q et.alt1 by q_et.alt1 ;
 sub q rrotunda by q_rrotunda ;
 # sub q.sc rrotunda.sc by q_rrotunda.sc ;
 # sub Q Rrotunda by Q_Rrotunda ;
@@ -3585,9 +3588,8 @@ pos = 16;
 );
 name = Italic;
 userData = {
-GSCornerRadius = 50;
+GSCornerRadius = 30;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -3677,7 +3679,7 @@ pos = 16;
 );
 name = "Bold Italic";
 userData = {
-GSCornerRadius = 30;
+GSCornerRadius = 38;
 };
 },
 {
@@ -3768,7 +3770,7 @@ pos = 16;
 );
 name = "Light Italic";
 userData = {
-GSCornerRadius = 35;
+GSCornerRadius = 28;
 };
 },
 {
@@ -5240,5 +5242,5 @@ userData = {
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 21;
+versionMinor = 22;
 }

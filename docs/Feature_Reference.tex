@@ -13,25 +13,30 @@
 \usepackage[english]{babel}
 \usepackage{xcolor,colortbl}
 \definecolor{BrickRed}{RGB}{146,18,6}
+%\definecolor{LightGray}{RGB}{205,205,205}
 \definecolor{SlateGray}{RGB}{112,128,144}
 \definecolor{GGOrange}{RGB}{240,74,6}
+\definecolor{RViolet}{RGB}{70,18,87}
 \usepackage{multicol}
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{hhline}
 \usepackage{hyperref}
+\usepackage{metalogo}
 \hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
 % footnotes configuration
 \makeatletter
 \renewcommand\thefootnote{\arabic{footnote}}
 \makeatother
+% \setlength{\skip\footins}{20pt}
 % Text styles
+\linespread{1.1}
 \newcommand\textLetterExample[1]{\textrm{\textbf{\color{BrickRed}#1}}}
 \newcommand\textUName[1]{\textsc{#1}}
 \newcommand\textSourceText[1]{{\color{GGOrange}\texttt{#1}}}
 \newcommand\textstyleEmphasis[1]{\textit{#1}}
 \newcommand\textstyleEntityRef[1]{\textrm{#1}}
-\newcommand{\cv}[3]{{\addfontfeature{CharacterVariant=#1:#2}#3}}
+% \newcommand{\cv}[3]{{\addfontfeature{CharacterVariant=#1:#2}#3}}
 \newcommand{\cvd}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
 \newcommand{\hlig}[1]{{\addfontfeature{Ligatures=Historic}#1}}
 \newcommand{\sups}[1]{{\addfontfeature{VerticalPosition = Superior}#1}}
@@ -43,6 +48,7 @@
 \newcommand{\ornm}[2][0]{{\addfontfeature{Ornament=#1}#2}}
 \newcommand{\revthorn}[1]{{\addfontfeature{StylisticSet=1}#1}}
 \newfontface\narrow{Junicode Two Beta Condensed}
+\newfontface\stditalic{Junicode Two Beta Italic}
 \newopentypefeature{Style}{mirrored}{+rtlm}
 %\newopentypefeature{Ligatures}{histon}{+hlig}
 \newopentypefeature{Ligatures}{histoff}{-hlig}
@@ -62,7 +68,7 @@
 \setlength\headheight{0.4in}
 \setlength\headsep{0.2in}
 % Footnote rule
-\setlength{\skip\footins}{0.0469in}
+\setlength{\skip\footins}{14pt}
 \renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
 % Pages styles
 \pagestyle{fancy}
@@ -111,10 +117,9 @@
 
 \begin{itemize}
 \setlength\itemsep{0em}
-\item[A] \hyperlink{SectionA}{Case-}\hyperlink{SectionA}{R}\hyperlink{SectionA}{elated
-}\hyperlink{SectionA}{F}\hyperlink{SectionA}{eatures}
+\item[A] \hyperlink{SectionA}{Case-Related Features}
 
-\item[B] \hyperlink{SectionB}{Numbers and }\hyperlink{SectionB}{S}\hyperlink{SectionB}{equencing}
+\item[B] \hyperlink{SectionB}{Numbers and Sequencing}
 
 \item[C] \hyperlink{SectionC}{Superscripts and Subscripts}
 
@@ -128,7 +133,7 @@
 
 \item[H] \hyperlink{SectionH}{Combining Marks}
 
-\item[I] \hyperlink{SectionI}{Currency }\hyperlink{SectionI}{and Weights}
+\item[I] \hyperlink{SectionI}{Currency and Weights}
 
 \item[J] \hyperlink{SectionJ}{Gothic}
 
@@ -138,19 +143,18 @@
 
 \item[M] \hyperlink{req}{Required Features}
 
-\item[N] \hyperlink{SectionN}{Entities}
-
-\item[O] \hyperlink{nonmufi}{Non-MUFI Code }\hyperlink{nonmufi}{Points}
+\item[N] \hyperlink{nonmufi}{Non-MUFI Code Points}
 \end{itemize}
 
-\section{Introduction}
-\hypertarget{intro}{}The OpenType features of Junicode version 2 and its variable counterpart JunicodeVF (hereafter
+\hypertarget{intro}{}\section{Introduction}
+The OpenType features of Junicode version 2 and its variable counterpart (hereafter referred to together as
 ``Junicode'') have two purposes. One is to provide convenient access to the rich character set of the Medieval Unicode
 Font Initiative (MUFI) recommendation. The other is to enable best practices in the presentation of medieval text,
 promoting accessibility in electronic texts from PDFs to e-books to web pages.
+\thispagestyle{plain}
 
 Each character in the MUFI recommendation has a code point\footnote{A Unicode code point is generally expressed as a
-four-digit hexadecimal (or base-16) number with a prefix of `U+'. The letter capital ``A,'' for example, is U+0041 (65
+four-digit hexadecimal (or base-16) number with a prefix of ``U+''. The letter capital ``A,'' for example, is U+0041 (65
 in decimal notation), and lowercase ``ȝ'' (Middle English yogh) is U+021D.} associated with it: either the one
 assigned by Unicode or, where the character is not recognized by Unicode, in the Private Use Area (PUA) of the Basic
 Multilingual Plane, a block of codes, running from U+E000 to U+F8FF, that are assigned no value by Unicode but instead
@@ -158,8 +162,8 @@ are available for font designers to use in any way they please.
 
 The problem with PUA code points is precisely their lack of any value. Consider, as a point of comparison, the letter
 \textLetterExample{a} (U+0061). Your computer, your phone, and probably a good many other devices around the house
-store a good bit of information about this \textLetterExample{a}: that it's a letter in the Latin script, that
-it's lowercase, and that the uppercase equivalent is \textLetterExample{A} (U+0041). All this information is
+store a good bit of information about this \textLetterExample{a}: that it’s a letter in the Latin script, that
+it’s lowercase, and that the uppercase equivalent is \textLetterExample{A} (U+0041). All this information is
 available to word processors, browsers, and other applications running on your computer.
 
 Now suppose you're preparing an electronic text containing what MUFI calls \textUName{latin small letter neckless
@@ -175,9 +179,11 @@ and discarded when it is no longer on the screen. For greatest accessibility the
 plain letter \textLetterExample{a} (U+0061) along with markup indicating how it should be displayed. To generate
 the displayed text, a program called a ``layout engine'' will (simplifying a bit here) read the markup and apply the
 OpenType feature \textSourceText{cv02[5]}\footnote{Many OpenType features produce different outcomes depending on
-an index passed to an application's layout engine along with the feature tag. Different applications have different
-ways of entering this index: consult your application's documentation. Here, the index is recorded in brackets after
-the feature tag.\par } to the underlying \textLetterExample{a}, bypassing the PUA code point, with the result that
+an index passed to an application’s layout engine along with the feature tag. Different applications have different
+ways of entering this index: consult your application’s documentation. Here, the index is recorded in brackets after
+the feature tag. Users of fontspec (with {\XeLaTeX} or {\LuaTeX}) should also be aware that fontspec indexes start at zero
+while OpenType indexes start at one. Therefore all index numbers listed in this document must be reduced by one for
+use with fontspec.\par } to the underlying \textLetterExample{a}, bypassing the PUA code point, with the result that
 readers see \textLetterExample{\cvd[4]{2}{a}}{}---the ``neckless a.'' And yet the letter will still register as
 \textLetterExample{a} with search engines, screen readers, and so on.
 
@@ -188,7 +194,7 @@ The full range of OpenType features listed in this document is supported by all 
 LuaTeX, and (presumably) other document processing applications. All characters listed here are available in Adobe
 InDesign, though that program supports only a selection of OpenType features. Microsoft Word, unfortunately, supports
 only Stylistic Sets, ligatures (all but the standard ones in peculiar and probably useless combinations), number
-variants, and the \hyperlink{req}{R}\hyperlink{req}{equired }\hyperlink{req}{F}\hyperlink{req}{eatures}. In terms of
+variants, and the \hyperlink{req}{Required Features}. In terms of
 OpenType support, Word is the most primitive of the major text processing applications.
 
 Many MUFI characters cannot be produced by using the OpenType variants of Junicode. These characters fall into three
@@ -196,7 +202,7 @@ categories:
 
 \liststyleLi
 \begin{itemize}
-\item Those with non-PUA code points. MUFI has done valuable work obtaining Unicode code points for medieval characters.
+\item Those with Unicode (non-PUA) code points. MUFI has done valuable work obtaining Unicode code points for medieval characters.
 All such characters (those with hexadecimal codes that \textstyleEmphasis{do not} begin with \textLetterExample{E}
 or \textLetterExample{F}) are presumed safe to use in accessible and searchable text. However, some of these are
 covered by Junicode OpenType features for particular reasons.
@@ -217,7 +223,7 @@ of base character + marks (here \textLetterExample{o}, \textUName{combining dot 
 which there may be an inconsistency in the MUFI recommendation. These include:
 
 \begin{itemize}
-\item  U+E8AF. This is a ligature of long \textLetterExample{s} and \textLetterExample{l} with stroke,
+\item \textLetterExample{} U+E8AF. This is a ligature of long \textLetterExample{s} and \textLetterExample{l} with stroke,
 but there are no base characters with this style of stroke.
 \item \textLetterExample{} U+EFD8 and U+EFD9. MUFI lists these as ligatures (corresponding to the
 historic ligatures \textLetterExample{\hlig{uuUU}}, but they cannot be treated as ligatures in the
@@ -231,7 +237,7 @@ encoding.
 \item Characters for which OpenType programming is not yet available. These will be added as they are located and
 studied. [Check: U+EBF1, and smcp version.]
 \end{itemize}
-These characters should be avoided, even if you are otherwise using MUFI's PUA characters:
+These characters should be avoided, even if you are otherwise using MUFI’s PUA characters:
 
 \liststyleLii
 \begin{itemize}
@@ -241,8 +247,9 @@ OpenType programming).
 \item U+F1CA \textUName{combining dot above high position}. Use U+0307 \textUName{combining dot above}. It
 will be positioned correctly on any character.
 \end{itemize}
-\section{A. Case-Related Features}
-\hypertarget{SectionA}{}\subsection[1. smcp {}-- Small Capitals]{\stepcounter{Feature}{\theFeature}.
+\pagebreak
+\hypertarget{SectionA}{}\section{A. Case-Related Features}
+\subsection[1. smcp {}-- Small Capitals]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{smcp} -- Small Capitals}
 Converts lowercase letters to small caps; also several symbols and combining marks. All lower- and uppercase pairs (with
 exceptions noted below) have a small cap equivalent. Lowercase letters without matching caps may lack matching small
@@ -268,8 +275,8 @@ Case-Sensitive Forms}
 Produces combining marks that harmonize with capital letters: {\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
 likelihood that a combining mark will collide with a glyph in the line above.
 
-\section{B. Numbers and Sequencing}
-\hypertarget{SectionB}{}\subsection[5. nalt {}-- Alternate Annotation Forms]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionB}{}\section{B. Numbers and Sequencing}
+\subsection[5. nalt {}-- Alternate Annotation Forms]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{nalt} -- Alternate Annotation Forms}
 Produces letters and numbers circled, in parenthesis, or followed by periods, as follows:
 
@@ -316,8 +323,8 @@ Produces slashed zero in all number styles:
 {\addfontfeature{Numbers=SlashedZero}0 \otab{0} \lprop{0} \oprop{0}. Includes superscripts and subscripts:
 \sups{0~\oprop{0}}~\subs{0~\oprop{0}}}.
 
-\section{C. Superscripts and Subscripts}
-\hypertarget{SectionC}{}\subsection[11. sups {}-- Superscripts]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionC}{}\section{C. Superscripts and Subscripts}
+\subsection[11. sups {}-- Superscripts]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{sups} -- Superscripts}
 Produces superscript numbers and letters. Only affects lining tabular and oldstyle proportional figures. All lowercase
 letters of the basic Latin alphabet are covered, and most uppercase letters: \sups{0123 \oprop{4567} abcde ABDEG}. Wherever
@@ -328,8 +335,8 @@ characters generated by some programs. With sups: \sups{4567}. Scaled: \textsupe
 Produces subscript numbers. Only affects lining tabular (the default numbers) and oldstyle proportional figures (use
 \textSourceText{pnum} and \textSourceText{onum}): \subs{8901 \oprop{2345}}.
 
-\section{D. Ornaments}
-\hypertarget{SectionD}{}\subsection[13. ornm {}-- Ornaments]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionD}{}\section{D. Ornaments}
+\subsection[13. ornm {}-- Ornaments]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ornm} -- Ornaments}
 Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (U+2022) or as
 variants of a-z, A-C (all fleurons are available by either method):
@@ -342,25 +349,25 @@ As a variant of a-z, A-C: e=\ornm{e}, f=\ornm{f}, g=\ornm{g}, h=\ornm{h}, etc.
 when text is displayed in an environment where Junicode is not available or \textSourceText{ornm} is not
 implemented.
 
-\section{E. Alphabetic Variants}
-\hypertarget{SectionE}{}\subsection[14. cv01{}--cv52 {}-- Basic Latin Variants]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionE}{}\section{E. Alphabetic Variants}
+\subsection[14. cv01{}--cv52 {}-- Basic Latin Variants]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv01-cv52} -- Basic Latin Variants}
 These features also affect small cap (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms,
 where available. Where Junicode has no variant for a Basic Latin letter, the expected \textSourceText{cvNN}
 feature is skipped, being reserved for future development. These features also affect small cap
 (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms, where available.
 
-\definecolor{LightBlueGray}{RGB}{212,218,218}
+%\definecolor{LightBlueGray}{RGB}{212,218,218}
 \begin{center}
 %\tablefirsthead{}
 \tablefirsthead{\hline
-\rowcolor{LightBlueGray}
+%\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &\
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
 %\tablehead{}
 \tablehead{\hline
-\rowcolor{LightBlueGray}
+%\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
@@ -373,10 +380,10 @@ feature is skipped, being reserved for future development. These features also a
 %\centering\arraybslash{\bfseries Variants}\\\hline
 \color{black}\centering{A} &
 \centering{cv01} &
-1=\cv{1}{0}{A}, 2=\cv{1}{1}{A}, 3=\cv{1}{2}{A}\\\hline
+1=\cvd{1}{A}, 2=\cvd[1]{1}{A}, 3=\cvd[2]{1}{A}\\\hline
 \centering{a} &
 \centering{cv02} &
-{1=\cv{2}{0}{a}, 2=\cv{2}{1}{a}, 3=\cv{2}{2}{a}, 4=\cv{2}{3}{a}, 5=\cv{2}{4}{a}}\\\hline
+{1=\cvd{2}{a}, 2=\cvd[1]{2}{a}, 3=\cvd[2]{2}{a}, 4=\cvd[3]{2}{a}, 5=\cvd[4]{2}{a}}\\\hline
 \centering{B} &
 \centering{cv03} &
 {No variants available}\\\hline
@@ -385,19 +392,19 @@ feature is skipped, being reserved for future development. These features also a
 {No variants available}\\\hline
 \centering{C} &
 \centering{cv05} &
-{1=\cv{5}{0}{C}}\\\hline
+{1=\cvd{5}{C}}\\\hline
 \centering{c} &
 \centering{cv06} &
 {1=\cvd{6}{c}}\\\hline
 \centering{D} &
 \centering{cv07} &
-{1=\cv{7}{0}{D}}\\\hline
+{1=\cvd{7}{D}}\\\hline
 \centering{d} &
 \centering{cv08} &
-{1=\cv{8}{0}{d}, 2=\cv{8}{1}{d}, 3=\cv{8}{2}{d} (for 1, see also ss02)}\\\hline
+{1=\cvd{8}{d}, 2=\cvd[1]{8}{d}, 3=\cvd[2]{8}{d} (for 1, see also ss02)}\\\hline
 \centering{E} &
 \centering{cv09} &
-{1=\cv{9}{0}{E}, 2=\cv{9}{1}{E}}\\\hline
+{1=\cvd{9}{E}, 2=\cvd[1]{9}{E}}\\\hline
 \centering{e} &
 \centering{cv10} &
 {1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}}\\\hline
@@ -530,22 +537,22 @@ feature is skipped, being reserved for future development. These features also a
 {1=\cvd{52}{z}, 2=\cvd[1]{52}{z}}\\\hline
 \end{supertabular}
 \end{center}
-\subsection[15. cv53{}-cv67 {}-- Other Latin Letters]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{OtherLatin}{}\subsection[15. cv53{}-cv67 {}-- Other Latin Letters]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv53-cv67} -- Other Latin Letters}
-\hypertarget{OtherLatin}{}Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
-combining \textLetterExample{e} with ogonek, accessible via \hyperlink{ss10}{\textSourceText{ss10}} with the
+Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
+combining \textLetterExample{e} with ogonek, accessible via \textSourceText{\hyperlink{ss10}{ss10}} with the
 entity reference \textSourceText{\&\_eogo;}. In this range, \textSourceText{cvNN} features are not reserved
 for future development, since Junicode already uses or reserves all of the available \textSourceText{cvNN}
 features.
 
 \begin{center}
 \tablefirsthead{\hline
-\rowcolor{LightBlueGray}
+%\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
 \tablehead{\hline
-\rowcolor{LightBlueGray}
+%\rowcolor{LightBlueGray}
 \centering{\bfseries Variant of} &
 \centering{\bfseries cvNN} &
 \centering\arraybslash{\bfseries Variants}\\}
@@ -555,59 +562,58 @@ features.
 \hline
 \centering \k{A} (U+0104) &
 \centering cv53 &
-\centering\arraybslash{\mdseries 1=\cvd{53}{Ą}, 2=\cvd[1]{53}{Ą}, 3=\cvd[2]{53}{Ą}}\\\hline
+{1=\cvd{53}{Ą}, 2=\cvd[1]{53}{Ą}, 3=\cvd[2]{53}{Ą}}\\\hline
 \centering \k{a} (U+0105) &
 \centering cv54 &
-\centering\arraybslash 1=\cvd{54}{ą}, 2=\cvd[1]{54}{ą}\\\hline
+{1=\cvd{54}{ą}, 2=\cvd[1]{54}{ą}}\\\hline
 \centering ꜳ (U+A733) &
 \centering cv55 &
-\centering\arraybslash{\mdseries 1=\cvd{55}{ꜳ}, 2=\cvd[1]{55}{ꜳ}}\\\hline
-\centering{\mdseries {\AE} (U+00C6)} &
+{1=\cvd{55}{ꜳ}, 2=\cvd[1]{55}{ꜳ}}\\\hline
+\centering  {\AE} (U+00C6) &
 \centering cv56 &
-\centering\arraybslash{\mdseries 1=\cvd{56}{\AE}}\\\hline
+{1=\cvd{56}{\AE}}\\\hline
 \centering {\ae} (U+00E6) &
 \centering cv57 &
-\centering\arraybslash 1=\cvd{57}{\ae}, 2=\cvd[1]{57}{\ae}, 3=\cvd[2]{57}{\ae}\\\hline
+{1=\cvd{57}{\ae}, 2=\cvd[1]{57}{\ae}, 3=\cvd[2]{57}{\ae}}\\\hline
 \centering Ꜵ (U+A734) &
 \centering cv58 &
-\centering\arraybslash 1=\cvd{58}Ꜵ\\\hline
+{1=\cvd{58}{Ꜵ}}\\\hline
 \centering ꜵ (U+A735) &
 \centering cv59 &
-\centering\arraybslash 1=\cvd{59}{ꜵ}, 2=\cvd[1]{59}{ꜵ}, 3=\cvd[2]{59}{ꜵ}\\\hline
-\centering{\mdseries ꜹ (U+A739)} &
+{1=\cvd{59}{ꜵ}, 2=\cvd[1]{59}{ꜵ}, 3=\cvd[2]{59}{ꜵ}}\\\hline
+\centering ꜹ (U+A739) &
 \centering cv60 &
-\centering\arraybslash 1=\cvd{60}{ꜹ}\\\hline
+{1=\cvd{60}{ꜹ}}\\\hline
 \centering {\dj} (U+0111) &
 \centering cv61 &
-\centering\arraybslash 1=\cvd{61}{\dj}\\\hline
-\centering Ę, ę, ◌\&\_eogo; (U+0118, U+0119) &
+{1=\cvd{61}{\dj}}\\\hline
+\centering {\narrow Ę, ę ... (U+0118, U+0119)} &
 \centering cv62 &
-\centering\arraybslash 1=\cvd{62}{Ę, ę, ◌\&\_eogo;}\\\hline
-\centering Ę, ę (U+0118, U+0119) &
+{1=\cvd{62}{Ę, ę ...}; 2=\cvd[1]{62}{Ę, ę ...}}\\\hline
+\centering {\narrow Ȝ, ȝ (U+021C, U+021D)} &
 \centering cv63 &
-\centering\arraybslash 1=\cvd{63}{Ę, ę}\\\hline
-\centering Ȝ, ȝ (U+021C, U+021D) &
-\centering cv64 &
-\centering\arraybslash{\mdseries 1=\cvd{64}{Ȝ, ȝ}}\\\hline
+{1=\cvd{63}{Ȝ, ȝ}}\\\hline
 \centering ꝉ (U+A749) &
-\centering cv65 &
-\centering\arraybslash 1=\cvd{65}{ꝉ}\\\hline
+\centering cv64 &
+{1=\cvd{64}{ꝉ}}\\\hline
 \centering {\o} (U+00F8) &
-\centering cv66 &
-\centering\arraybslash 1=\cvd{66}{\o}, 2=\cvd[1]{66}{\o}, 3=\cvd[2]{66}{\o}, 4=\cvd[3]{66}{\o}\\\hline
+\centering cv65 &
+{1=\cvd{65}{\o}, 2=\cvd[1]{65}{\o}, 3=\cvd[2]{65}{\o}, 4=\cvd[3]{65}{\o}}\\\hline
 \centering ꝥ, \revthorn{ꝥ} (U+A765) &
-\centering cv67 &
-\centering\arraybslash 1=\cvd{67}{ꝥ, \revthorn{ꝥ}}\\\hline
+\centering cv66 &
+{1=\cvd{66}{ꝥ, \revthorn{ꝥ}}}\\\hline
+\centering ? &
+\centering cv67 & Reserved for future use\\\hline
 \end{supertabular}
 \end{center}
 \subsection[16. ss01 {}-- Alternate thorn and eth]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss01} --
 Alternate thorn and eth}
 Produces Nordic thorn and eth (\revthorn{{\th}{\dh}{\TH}}) when the language is English, and English thorn and eth
-({\th}{\dh}{\TH}) with any other language, reversing the font's usual usage. This also affects small caps, crossed
+({\th}{\dh}{\TH}) with any other language, reversing the font’s usual usage. This also affects small caps, crossed
 thorn (ꝥ \revthorn{ꝥ}---see also
 \hyperlink{OtherLatin}{\textSourceText{cv67}}), combining mark eth
-(U+1DD9, ◌ᷙ \revthorn{◌ᷙ}), and enlarged thorn and eth (see \hyperlink{ss06}{\textSourceText{ss06}}).
-This feature depends on \hyperlink{req}{\textSourceText{loca}} (Localized Forms), which in most applications will
+(U+1DD9, ◌ᷙ \revthorn{◌ᷙ}), and enlarged thorn and eth (see \textSourceText{\hyperlink{ss06}{ss06}}).
+This feature depends on \textSourceText{\hyperlink{req}{loca}} (Localized Forms), which in most applications will
 always be enabled.
 
 \subsection[17. ss02 {}-- Insular Letter{}-Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss02} --
@@ -616,33 +622,25 @@ Produces insular letter-forms, e.g. {\addfontfeature{StylisticSet=2}dfgrsw}. Doe
 insular shapes in early manuscripts. For these, enter the Unicode code points or use the Character Variant
 (\textSourceText{cvNN}) features.
 
-\subsection[18. hist {}-- Historical Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{hist} -- Historical
-Forms}
-Changes \textLetterExample{s} to \textLetterExample{\addfontfeature{Style=Historic}s} (longs).
-
-\subsection[19. ss03 {}-- Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss03} -- Long s}
-Changes \textLetterExample{s} to \textLetterExample{\addfontfeature{StylisticSet=3}s} (duplicating \textSourceText{hist}). see also
-\textSourceText{ss08}.
-
-\subsection[20. ss04 {}-- High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss04} -- High
+\subsection[18. ss04 {}-- High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss04} -- High
 Overline}
 Produces a high overline over letters used as roman numbers: {\addfontfeature{StylisticSet=4}cdijlmvx CDIJLMVXↃ}.
 
-\subsection[21. ss05 {}-- Medium{}-High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss05} --
+\subsection[19. ss05 {}-- Medium{}-High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss05} --
 Medium-High Overline}
 Produces a medium-high overline over (or through the ascenders of) letters used as roman numbers, and some others as
 well: {\addfontfeature{StylisticSet=5,Style=Historic}bcdhijklmsvx{\th}}.
 
-\subsection[22. ss06 {}-- Enlarged Minuscules]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss06} --
+\hypertarget{ss06}{}\subsection[20. ss06 {}-- Enlarged Minuscules]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss06} --
 Enlarged Minuscules}
-\hypertarget{ss06}{}Lowercase letters that match the height of normal ones, but with a higher x-height, e.g.
+Lowercase letters that match the height of normal ones, but with a higher x-height, e.g.
 {\addfontfeature{StylisticSet=6}abcdefg}.
 Covers the whole of the basic Latin alphabet and several other letters: consult the MUFI recommendation for details,
 and if you are using the variable version of the font (JunicodeVF), consider using the
 \href{https://psb1558.github.io/Junicode-New/EnlargedAxis.html}{Enlarged axis} instead, for reasons of flexibility and
 accessibility.
 
-\subsection[23. ss07 {}-- Underdotted Text]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss07} --
+\subsection[21. ss07 {}-- Underdotted Text]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss07} --
 Underdotted Text}
 Produces underdotted text (indicating deletion in medieval manuscripts) for many
 letters (including
@@ -652,41 +650,35 @@ caps, e.g. \textsc{abcdef} $\rightarrow $ {\addfontfeature{StylisticSet=7}\texts
 For letters without corresponding underdotted forms (e.g. U+A751, ꝑ),
 use U+0323, combining dot below (\hspace{0.2em}ꝑ̣).
 
-\subsection[24. ss08 {}-- Contextual Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss08} --
+\subsection[22. ss08 {}-- Contextual Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss08} --
 Contextual Long s}
 In English and French text only, varies \textLetterExample{s} and \textLetterExample{\addfontfeature{Style=Historic}s} according to rules
 followed by many early printers: {\addfontfeature{StylisticSet=8}sports, essence, stormy, disheveled, transfusions, slyness, cliffside}. For this
 feature to work properly, \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by
 default: see \hyperlink{req}{Required Features} below).
 
-\subsection[25. ss11 {}-- r Rotunda]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss11} -- r Rotunda}
-\hypertarget{ss11}{}In lowercase and small caps, substitutes r rotunda (\textLetterExample{ꝛ}) for
-\textLetterExample{r}. This features does not affect capital \textLetterExample{R}: the uncommon
-\textLetterExample{Ꝛ} (U+A75A) must be entered manually. See also
-\hyperlink{ss16}{\textSourceText{ss16}}.
-
-\subsection[26. ss16 {}-- Contextual r Rotunda]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss16} --
+\hypertarget{ss16}{}\subsection[23. ss16 {}-- Contextual r Rotunda]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss16} --
 Contextual r Rotunda}
-\hypertarget{ss16}{}Converts \textLetterExample{r} to \textLetterExample{ꝛ} (lowercase only) following the
+Converts \textLetterExample{r} to \textLetterExample{ꝛ} (lowercase only) following the
 most common rules of medieval manuscripts: {\addfontfeature{StylisticSet=16}priest, firmer, frost, ornament}. For this feature to work properly,
 \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by default: see
-\hyperlink{req}{Required Features} below). See also \hyperlink{ss11}{\textSourceText{ss11}}.
+\hyperlink{req}{Required Features} below).
 
-\subsection[27. cv68 {}-- Variant of ʔ (U+0294, glottal stop)]{\stepcounter{Feature}{\theFeature}.
+\subsection[24. cv68 {}-- Variant of ʔ (U+0294, glottal stop)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv68} -- Variant of ʔ (U+0294, glottal stop)}
 1=\cvd{68}{ʔ}.
 
-\subsection[28. cv99 {}-- revert small cap a to lowercase a]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{RevertSmallCapA}{}\subsection[25. cv99 {}-- revert small cap a to lowercase a]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv}\textSourceText{99} -- revert small cap a to lowercase a}
-\hypertarget{RevertSmallCapA}{}1=a. This features reverts small cap
+1=a. This features reverts small cap
 \textLetterExample{\textsc{a}} to \textLetterExample{a}, enabling it to
 ligature with small cap \textLetterExample{\textsc{n}} or
 \textLetterExample{\textsc{r}} via \textSourceText{hlig}: \textsc{\cvd{99}{\hlig{an, ar}}}.
 Be sure to apply \textSourceText{smcp}, \textSourceText{cv99} and
 \textSourceText{hlig} to both components of the ligature.
 
-\section{F. Punctuation}
-\hypertarget{SectionF}{}MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
+\hypertarget{SectionF}{}\section{F. Punctuation}
+MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
 either of two ways: all are indexed variants of \textLetterExample{.} (period), and all are associated with the Unicode marks of
 punctuation they most resemble (but it should not be inferred that the medieval marks are semantically identical with
 the Unicode marks, or that there is an etymological relationship between them). The first method will be easier for
@@ -698,16 +690,16 @@ have PUA encodings, but have since that release been assigned Unicode code point
 U+2E4D), medieval comma (⹌~U+2E4C), \textit{punctus elevatus} (⹎ U+2E4E), \textit{virgula suspensiva}
 (⹊ U+2E4A), triple dagger (⹋ U+2E4B).
 
-\subsection[29. ss18 {}-- Old{}-Style Punctuation Spacing]{\stepcounter{Feature}{\theFeature}.
+\subsection[26. ss18 {}-- Old{}-Style Punctuation Spacing]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss18} -- Old-Style Punctuation Spacing}
 Colons, semicolons, parentheses, quotation marks and several other glyphs are spaced as in early printed books.
 
-\subsection[30. cv69 {}-- Variants of ⁊⹒ (U+204A / U+2E52, Tironian
+\subsection[27. cv69 {}-- Variants of ⁊⹒ (U+204A / U+2E52, Tironian
 nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of ⁊⹒
 (U+204A / U+2E52, Tironian nota)}
 1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}.
 
-\subsection[31. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv70} --
+\subsection[28. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv70} --
   Variants of . (period)}
 1=\cvd{70}{.}, 2=\cvd[1]{70}{.}, 3=\cvd[2]{70}{.}, 4=\cvd[3]{70}{.}, 5=\cvd[4]{70}{.}, 6=\cvd[5]{70}{.},
 7=\cvd[6]{70}{.}, 8=\cvd[7]{70}{.}, 9=\cvd[8]{70}{.}, 10=\cvd[9]{70}{.}, 11=\cvd[10]{70}{.}, 12=\cvd[11]{70}{.},
@@ -716,50 +708,50 @@ nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of 
 feature provides access to all non-Unicode MUFI punctuation marks. Some of them are available via other features (see
 below).
 
-\subsection[32. cv71 {}-- Variant of {\textperiodcentered} (U+00B7, middle dot)]{\stepcounter{Feature}{\theFeature}.
+\subsection[29. cv71 {}-- Variant of {\textperiodcentered} (U+00B7, middle dot)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv71} -- Variant of {\textperiodcentered} (U+00B7, middle dot)}
 1=\cvd{71}{\textperiodcentered} (\textit{distinctio}).
 
-\subsection[33. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv72} --
+\subsection[30. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv72} --
 Variants of , (comma)}
 1=\cvd{72}{,}, 2=\cvd[1]{72}{,}.
 
-\subsection[34. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv73} --
+\subsection[31. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv73} --
 Variants of ; (semicolon)}
 1=\cvd{73}{;} (\textit{punctus versus}), 2=\cvd[1]{73}{;}, 3=\cvd[2]{73}{;}, 4=\cvd[3]{73}{;}, 5=\cvd[4]{73}{;}.
 
-\subsection[35. cv74 {}-- Variants of ⹎ (U+2E4E, punctus elevatus)]{\stepcounter{Feature}{\theFeature}.
+\subsection[32. cv74 {}-- Variants of ⹎ (U+2E4E, punctus elevatus)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv74} -- Variants of ⹎ (U+2E4E, \textit{punctus elevatus})}
 1=\cvd{74}{⹎}, 2=\cvd[1]{74}{⹎}, 3=\cvd[2]{74}{⹎}, 4=\cvd[3]{74}{⹎} (\textit{punctus flexus}).
 
-\subsection[36. cv75 {}-- Variant of ! (exclamation mark)]{\stepcounter{Feature}{\theFeature}.
+\subsection[33. cv75 {}-- Variant of ! (exclamation mark)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
 1=\cvd{75}{!} (\textit{punctus exclamativus}).
 
-\subsection[37. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv76}
+\subsection[34. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv76}
 -- Variants of ? (question mark)}
 1=\cvd{76}{?}, 2=\cvd[1]{76}{?}, 3=\cvd[2]{76}{?}. Shapes of the \textit{punctus interrogativus}.
 
-\subsection[38. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv77}
+\subsection[35. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv77}
 -- Variant of \~{} (ASCII tilde)}
 1=\cvd{77}{\~{}} (same as MUFI U+F1F9, ``wavy line'').
 
-\subsection[39. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv78} --
+\subsection[36. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv78} --
 Variant of * (asterisk)}
 1=\cvd{78}{*}. MUFI defines U+F1EC as a \textit{signe de renvoi}. Manuscripts employ a number of shapes (of which this is one) for
 this purpose. Junicode defines it as a variant of the asterisk---the most common modern \textit{signe de renvoi}.
 
-\subsection[40. cv79 {}-- Variants of / (slash)]{\stepcounter{Feature}{\theFeature}.
+\subsection[37. cv79 {}-- Variants of / (slash)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
 1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, U+2E4E.
 
-\section{G. Abbreviations}
-\hypertarget{SectionG}{}\subsection[41. cv80 {}-- Variant of ꝝ (U+A75D, rum
+\hypertarget{SectionG}{}\section{G. Abbreviations}
+\subsection[38. cv80 {}-- Variant of ꝝ (U+A75D, rum
 abbreviation)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv80} -- Variant of ꝝ (U+A75D, rum
 abbreviation)}
 1=\cvd{80}{ꝝ}.
 
-\subsection[42. cv81 {}-- Variants of ◌͛ (U+035B, combining zigzag
+\subsection[39. cv81 {}-- Variants of ◌͛ (U+035B, combining zigzag
 above)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv81} -- Variants of ◌͛ (U+035B, combining
 zigzag above)}
 1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
@@ -769,19 +761,21 @@ default in most apps), variant forms of \textSourceText{cv81[2]} will be used wi
 ({\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}), \textSourceText{smcp} for forms that harmonize with small caps
   (\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}).
 
-\subsection[43. cv82 {}-- Variants of spacing ꝰ (U+A770)]{\stepcounter{Feature}{\theFeature}.
+\subsection[40. cv82 {}-- Variants of spacing ꝰ (U+A770)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv82} -- Variants of spacing ꝰ (U+A770)}
 1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
 U+F1A6). MUFI also has an uppercase baseline \textit{{}-us} abbreviation (U+F1A5), but as there is no uppercase version
 of U+A770 to pair it with, it is indexed separately here.
 
-\subsection[44. cv83 {}-- Variant of ꝫ (U+A76B, {}``et{}'' abbreviation)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv83} -- Variant of ꝫ (U+A76B, ``et'' abbreviation)}
-1=\cvd{83}{ꝫ}. Identical in shape to a semicolon, but as it is semantically the same as U+A76B, it is preferable to use that
-character with this feature.
+\subsection[41. cv83 {}-- Variants of ꝫ (U+A76B, {}``et{}'' abbreviation)]{\stepcounter{Feature}{\theFeature}.
+\textSourceText{cv83} -- Variants of ꝫ (U+A76B, ``et'' abbreviation)}
+1=\cvd{83}{ꝫ}, 2=\cvd[1]{83}{ꝫ}. \textSourceText{[1]} is identical in shape to a
+semicolon, but as it is semantically the same as U+A76B, it is preferable to use that
+character with this feature. \textSourceText{[2]} produces a subscript version of
+the character, a common variant in printed books.
 
-\section{H. Combining Marks}
-\hypertarget{SectionH}{}\subsection[45. cv84 {}-- MUFI combining marks (variants of ◌᷑
+\hypertarget{SectionH}{}\section{H. Combining Marks}
+\hypertarget{cv84}{}\subsection[42. cv84 {}-- MUFI combining marks (variants of ◌᷑
 U+1DD1)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of U+1DD1)}
 MUFI encodes a number of combining marks in the PUA (with code points between E000 and F8FF), but when these characters
 are entered directly, they can interfere with searching and accessibility, and some important applications fail to
@@ -796,23 +790,178 @@ These marks can sometimes be produced by other \textSourceText{cvNN} features, w
 \textSourceText{cv84} as providing fallbacks for applications that do not support Character Variant
 (\textSourceText{cvNN}) features.
 
-For some marks with PUA code points, users may find it easier to use \hyperlink{SectionN}{entities} than this feature.
-Note that entities beginning \&\_ (ampersand + underscore) are for combining diacritics.
+For some marks with PUA code points, users may find it easier to use \hyperlink{ss10}{entities} than this feature.
 
 These marks are not affected by most other features. This is to preserve flexibility, given the rule that the feature
 that produces them must be applied to both the mark and the base character. For example, if \textSourceText{smcp}
 ``Small Caps'' changed \textSourceText{cv84[11]} \cvd[10]{84}{◌᷑} to \textSourceText{[12]} \cvd[11]{84}{◌᷑}, it
 would be impossible to produce the sequence \cvd[10]{84}{\textsc{na᷑a}} with the diacritic properly positioned.
 
-1=\cvd{84}{◌᷑}, 2=\cvd[1]{84}{◌᷑◌}, 3=\cvd[2]{84}{◌᷑}, 4=\cvd[3]{84}{◌᷑}, 5=\cvd[4]{84}{◌᷑}, 6=\cvd[5]{84}{◌᷑},
-7=\cvd[6]{84}{◌᷑}, 8=\cvd[7]{84}{◌᷑}, 9=\cvd[8]{84}{◌᷑}, 10=\cvd[9]{84}{◌᷑}, 11=\cvd[10]{84}{◌᷑}, 12=\cvd[11]{84}{◌᷑},
-13=\cvd[12]{84}{◌᷑}, 14=\cvd[13]{84}{◌᷑}, 15=\cvd[14]{84}{◌᷑}, 16=\cvd[15]{84}{◌᷑}, 17=\cvd[16]{84}{◌᷑}, 18=\cvd[17]{84}{◌᷑},
-19=\cvd[18]{84}{◌᷑}, 20=\cvd[19]{84}{◌᷑}, 21=\cvd[20]{84}{◌᷑}, 22=\cvd[21]{84}{◌᷑}, 23=\cvd[22]{84}{◌᷑}, 24=\cvd[23]{84}{◌᷑},
-25=\cvd[24]{84}{◌᷑}, 26=\cvd[25]{84}{◌᷑}, 27=\cvd[26]{84}{◌᷑}, 28=\cvd[27]{84}{◌᷑}, 29=\cvd[28]{84}{◌᷑}, 30=\cvd[29]{84}{◌᷑},
-31=\cvd[30]{84}{◌᷑}, 32=\cvd[31]{84}{◌᷑}, 33=\cvd[32]{84}{◌᷑}, 34=\cvd[33]{84}{◌᷑}, 35=\cvd[34]{84}{◌᷑}, 36=\cvd[35]{84}{◌᷑},
-37=\cvd[36]{84}{◌᷑}.
+\begin{multicols}{4}
+\color{BrickRed}1=\cvd{84}{◌᷑}
 
-\subsection[46. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
+2=\cvd[1]{84}{◌᷑◌}
+
+3=\cvd[2]{84}{◌᷑}
+
+4=\cvd[3]{84}{◌᷑}
+
+5=\cvd[4]{84}{◌᷑}
+
+6=\cvd[5]{84}{◌᷑}
+
+7=\cvd[6]{84}{◌᷑}
+
+8=\cvd[7]{84}{◌᷑}
+
+9=\cvd[8]{84}{◌᷑}
+
+10=\cvd[9]{84}{◌᷑}
+
+11=\cvd[10]{84}{◌᷑}
+
+12=\cvd[11]{84}{◌᷑}
+
+13=\cvd[12]{84}{◌᷑}
+
+14=\cvd[13]{84}{◌᷑}
+
+15=\cvd[14]{84}{◌᷑}
+
+16=\cvd[15]{84}{◌᷑}
+
+17=\cvd[16]{84}{◌᷑}
+
+18=\cvd[17]{84}{◌᷑}
+
+19=\cvd[18]{84}{◌᷑}
+
+20=\cvd[19]{84}{◌᷑}
+
+21=\cvd[20]{84}{◌᷑}
+
+22=\cvd[21]{84}{◌᷑}
+
+23=\cvd[22]{84}{◌᷑}
+
+24=\cvd[23]{84}{◌᷑}
+
+25=\cvd[24]{84}{◌᷑}
+
+26=\cvd[25]{84}{◌᷑}
+
+27=\cvd[26]{84}{◌᷑}
+
+28=\cvd[27]{84}{◌᷑}
+
+29=\cvd[28]{84}{◌᷑}
+
+30=\cvd[29]{84}{◌᷑}
+
+31=\cvd[30]{84}{◌᷑}
+
+32=\cvd[31]{84}{◌᷑}
+
+33=\cvd[32]{84}{◌᷑}
+
+34=\cvd[33]{84}{◌᷑}
+
+35=\cvd[34]{84}{◌᷑}
+
+36=\cvd[35]{84}{◌᷑}
+
+37=\cvd[36]{84}{◌᷑}
+\end{multicols}
+
+\hypertarget{ss10}{}\subsection[43. ss10 {}-- Entity References for Combining Marks]{\stepcounter{Feature}{\theFeature}.
+\textSourceText{ss10} -- Entity References for Combining Marks}
+Instead of \textSourceText{\hyperlink{cv84}{cv84}} for representing non-Unicode combining marks, some users may
+wish to use XML/HTML-style entities. When \textSourceText{ss10} is turned on (preferably for the entire
+text), these entities appear as combining marks and are correctly positioned over base characters.
+For example, the letter \textLetterExample{e} followed by
+\textLetterExample{\&{\textcompwordmark}\_eogo;} will yield \textLetterExample{e\&\_eogo;}. An advantage of entities is that
+they are (unlike the PUA code points or the indexes of \textSourceText{cv84}) mnemonic and thus easy to use.
+A disadvantage is that
+searches cannot ignore combining marks entered by this method as they can using the \textSourceText{cv84} method.
+(Every method of entering non-Unicode combining marks has disadvantages: users should weigh these, choose a method,
+and stick with it.)
+
+If you use any of these entities in a work intended for print publication, you should call your publisher’s
+attention to them, since they will likely have their own method of representing them.
+
+\begin{multicols}{3}
+\color{RViolet}
+\&{\textcompwordmark}\_ansc; $\rightarrow $
+\textstyleEntityRef{◌\&\_ansc;}
+
+\&{\textcompwordmark}\_an; $\rightarrow $
+\textstyleEntityRef{◌\&\_an;}
+
+\&{\textcompwordmark}\_ar; $\rightarrow $
+\textstyleEntityRef{◌\&\_ar;}
+
+\&{\textcompwordmark}\_arsc; $\rightarrow $
+\textstyleEntityRef{◌\&\_arsc;}
+
+\&{\textcompwordmark}\_bsc; $\rightarrow $
+\textstyleEntityRef{◌\&\_bsc;}
+
+\&{\textcompwordmark}\_dsc; $\rightarrow $
+\textstyleEntityRef{◌\&\_dsc;}
+
+\&{\textcompwordmark}\_eogo; $\rightarrow $
+\textstyleEntityRef{◌\&\_eogo;}
+
+\&{\textcompwordmark}\_emac; $\rightarrow $
+\textstyleEntityRef{◌\&\_emac;}
+
+\&\_{\textcompwordmark}idotl; $\rightarrow $
+\textstyleEntityRef{◌\&\_idotl;}
+
+\&\_{\textcompwordmark}j; $\rightarrow $
+\textstyleEntityRef{◌\&\_j;}
+
+\&\_{\textcompwordmark}jdotl; $\rightarrow $
+\textstyleEntityRef{◌\&\_jdotl;}
+
+\&\_{\textcompwordmark}ksc; $\rightarrow $
+\textstyleEntityRef{◌\&\_ksc;}
+
+{\narrow\&\_{\textcompwordmark}munc; $\rightarrow $
+\textstyleEntityRef{◌\&\_munc;}}
+
+\&\_{\textcompwordmark}oogo; $\rightarrow $
+\textstyleEntityRef{◌\&\_oogo;}
+
+{\narrow\&\_{\textcompwordmark}oslash; $\rightarrow $
+\textstyleEntityRef{◌\&\_oslash;}}
+
+\&\_{\textcompwordmark}omac; $\rightarrow $
+\textstyleEntityRef{◌\&\_omac;}
+
+\&\_{\textcompwordmark}orr; $\rightarrow $
+\textstyleEntityRef{◌\&\_orr;}
+
+\&\_{\textcompwordmark}oru; $\rightarrow $
+\textstyleEntityRef{◌\&\_oru;}
+
+\&\_{\textcompwordmark}q; $\rightarrow $
+\textstyleEntityRef{◌\&\_q;}
+
+\&\_{\textcompwordmark}ru; $\rightarrow $
+\textstyleEntityRef{◌\&\_ru;}
+
+\&\_{\textcompwordmark}tsc; $\rightarrow $
+\textstyleEntityRef{◌\&\_tsc;}
+
+\&\_{\textcompwordmark}y; $\rightarrow $
+\textstyleEntityRef{◌\&\_y;}
+
+{\narrow\&\_{\textcompwordmark}thorn; $\rightarrow $
+\textstyleEntityRef{◌\&\_thorn;}}
+\end{multicols}
+
+\subsection[44. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}
 and combining marks ◌ͣ (U+0363), ◌ͤ (U+0364), \cvd[16]{84}{◌᷑}
 (U+1DD1\slash\textSourceText{cv84[17]}), ◌ͦ (U+0366), ◌ͬ (U+036C), ◌ᷢ (U+1DE2),
@@ -831,34 +980,34 @@ the other base characters). Examples:
 \textLetterExample{m\&\_e;}, \textLetterExample{\'{h}}) are not affected. It will therefore probably be safe
 to apply this feature to the whole text if it is needed anywhere.
 
-\subsection[47. cv85 {}-- Variant of ◌ᷓ (U+1DD3, combining open a)]{\stepcounter{Feature}{\theFeature}.
+\subsection[45. cv85 {}-- Variant of ◌ᷓ (U+1DD3, combining open a)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.
 
-\subsection[48. cv86 {}-- Variant of ◌ᷘ U(U+1DD8, combining insular d)]{%
+\subsection[46. cv86 {}-- Variant of ◌ᷘ U(U+1DD8, combining insular d)]{%
 \stepcounter{Feature}{\theFeature}. \textSourceText{cv86} -- Variant of ◌ᷘ (U+1DD8, combining insular
 d)}
 1=\cvd{86}{◌ᷘ}.
 
-\subsection[49. cv87 {}-- Variant of ◌ᷣ (U+1DE3, combining r rotunda)]{\stepcounter{Feature}{\theFeature}.
+\subsection[47. cv87 {}-- Variant of ◌ᷣ (U+1DE3, combining r rotunda)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv87} -- Variant of ◌ᷣ (U+1DE3, combining r rotunda)}
 1=\cvd{87}{◌ᷣ}.
 
-\subsection[50. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
+\subsection[48. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (U+0308)}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
 \textLetterExample{\"a}.
 
-\subsection[51. cv89 {}-- Variant of ◌̅◌ (U+0305, two{}-letter
+\subsection[49. cv89 {}-- Variant of ◌̅◌ (U+0305, two{}-letter
 overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅◌ (U+0305,
 two-letter overline)}
 1=\cvd{89}{◌̅◌}.
 
-\subsection[52. cv90 {}-- Variant of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
+\subsection[50. cv90 {}-- Variant of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv}\textSourceText{90} -- Variant of ◌̄ (U+0304, combining macron)}
 1=\cvd{90}{◌̄}.
 
-\subsection[53. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
+\subsection[51. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv91} -- Variants of short horizontal stroke (U+0335)}
 1=\cvd{91}{◌̵}, 2=\cvd[1]{91}{◌̵}, 3=\cvd[2]{91}{◌̵}. This character can be used with letters with ascenders or
 descenders, e.g. \textLetterExample{\cvd{91}{d̵ b̵ {\th}̵ p̵}}. \textSourceText{cv91[1]} widens the
@@ -866,108 +1015,151 @@ stroke, and \textSourceText{cv91[2]} and \textSourceText{[3]} offset the stroke 
 \textSourceText{calt} ``Contextual Alternates,'' this offset is performed automatically for many characters
 with ascenders and descenders, and so it should rarely be necessary to use an index with \textSourceText{cv91}.
 
-\subsection[54. cv92 {}-- Variant of breve below (U+032E)]{\stepcounter{Feature}{\theFeature}. cv92 -- Variant of breve
+\subsection[52. cv92 {}-- Variant of breve below (U+032E)]{\stepcounter{Feature}{\theFeature}. cv92 -- Variant of breve
 below (U+032E)}
 1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
 to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
 
-\section{I. Currency and Weights}
-\hypertarget{SectionI}{}\subsection[55. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
+\hypertarget{SectionI}{}\section{I. Currency and Weights}
+\subsection[53. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
 sign)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv93} -- Variants of {\textcurrency} (U+0044, generic
 currency sign)}
-1=\cvd{93}{\textcurrency}, 2=\cvd[1]{93}{\textcurrency},
-3=\cvd[2]{93}{\textcurrency}, 4=\cvd[3]{93}{\textcurrency},
-5=\cvd[4]{93}{\textcurrency}, 6=\cvd[5]{93}{\textcurrency},
-7=\cvd[6]{93}{\textcurrency}, 8=\cvd[7]{93}{\textcurrency},
-9=\cvd[8]{93}{\textcurrency}, 10=\cvd[9]{93}{\textcurrency},
-11=\cvd[10]{93}{\textcurrency}, 12=\cvd[11]{93}{\textcurrency},
-13=\cvd[12]{93}{\textcurrency}, 14=\cvd[13]{93}{\textcurrency},
-15=\cvd[14]{93}{\textcurrency}, 16=\cvd[15]{93}{\textcurrency},
-17=\cvd[16]{93}{\textcurrency}, 18=\cvd[17]{93}{\textcurrency},
-19=\cvd[18]{93}{\textcurrency}, 20=\cvd[19]{93}{\textcurrency},
-21=\cvd[20]{93}{\textcurrency}, 22=\cvd[21]{93}{\textcurrency},
-23=\cvd[22]{93}{\textcurrency}, 24=\cvd[23]{93}{\textcurrency},
-25=\cvd[24]{93}{\textcurrency}, 26=\cvd[25]{93}{\textcurrency},
-27=\cvd[26]{93}{\textcurrency}.
-All of MUFI's currency and weight symbols (those that do
+
+\begin{multicols}{4}
+\color{RViolet}1=\cvd{93}{\textcurrency}
+
+2=\cvd[1]{93}{\textcurrency}
+
+3=\cvd[2]{93}{\textcurrency}
+
+4=\cvd[3]{93}{\textcurrency}
+
+5=\cvd[4]{93}{\textcurrency}
+
+6=\cvd[5]{93}{\textcurrency}
+
+7=\cvd[6]{93}{\textcurrency}
+
+8=\cvd[7]{93}{\textcurrency}
+
+9=\cvd[8]{93}{\textcurrency}
+
+10=\cvd[9]{93}{\textcurrency}
+
+11=\cvd[10]{93}{\textcurrency}
+
+12=\cvd[11]{93}{\textcurrency}
+
+13=\cvd[12]{93}{\textcurrency}
+
+14=\cvd[13]{93}{\textcurrency}
+
+15=\cvd[14]{93}{\textcurrency}
+
+16=\cvd[15]{93}{\textcurrency}
+
+17=\cvd[16]{93}{\textcurrency}
+
+18=\cvd[17]{93}{\textcurrency}
+
+19=\cvd[18]{93}{\textcurrency}
+
+20=\cvd[19]{93}{\textcurrency}
+
+21=\cvd[20]{93}{\textcurrency}
+
+22=\cvd[21]{93}{\textcurrency}
+
+23=\cvd[22]{93}{\textcurrency}
+
+24=\cvd[23]{93}{\textcurrency}
+
+25=\cvd[24]{93}{\textcurrency}
+
+26=\cvd[25]{93}{\textcurrency}
+
+27=\cvd[26]{93}{\textcurrency}
+\end{multicols}
+
+\noindent All of MUFI’s currency and weight symbols (those that do
 not have Unicode code points) are gathered here, but some are also variants of other currency signs (see below).
 
-\subsection[56. cv94 {}-- Variant of ℔ (U+2114)]{\stepcounter{Feature}{\theFeature}.
+\subsection[54. cv94 {}-- Variant of ℔ (U+2114)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (U+2114)}
 1=\cvd{94}{℔}. Same as MUFI U+F2EB (French Libra sign).
 
-\subsection[57. cv95 {}-- Variants of {\pounds} (U+00A3, British pound sign)]{\stepcounter{Feature}{\theFeature}.
+\subsection[55. cv95 {}-- Variants of {\pounds} (U+00A3, British pound sign)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv95} -- Variants of {\pounds} (U+00A3, British pound sign)}
 1=\cvd{95}{\pounds}, 2=\cvd[1]{95}{\pounds}, 3=\cvd[2]{95}{\pounds}, 4=\cvd[3]{95}{\pounds},
 5=\cvd[4]{95}{\pounds}, 6=\cvd[5]{95}{\pounds}. Same as MUFI U+F2EA, F2EB, F2EC, F2ED,
 F2EE, F2EF, pound signs from various locales.
 
-\subsection[58. cv96 {}-- Variant of ₰ (U+20B0, German penny sign)]{\stepcounter{Feature}{\theFeature}.
+\subsection[56. cv96 {}-- Variant of ₰ (U+20B0, German penny sign)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv96} -- Variant of ₰ (U+20B0, German penny sign)}
 1=\cvd{96}{₰}. Same as MUFI U+F2F5.
 
-\subsection[59. cv97 {}-- Variant of ƒ (U+0192, florin)]{\stepcounter{Feature}{\theFeature}.
+\subsection[57. cv97 {}-- Variant of ƒ (U+0192, florin)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv97} -- Variant of ƒ (U+0192, florin)}
 1=\cvd{97}{ƒ}. Same as MUFI U+F2E8.
 
-\subsection[60. cv98 {}-- Variant of ℥ (U+2125, Ounce sign)]{\stepcounter{Feature}{\theFeature}.
+\subsection[58. cv98 {}-- Variant of ℥ (U+2125, Ounce sign)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv98} -- Variant of ℥ (U+2125, Ounce sign)}
 1=\cvd{98}{℥}. Same as MUFI U+F2FD, Script ounce sign.
 
-\section{J. Gothic}
-\hypertarget{SectionJ}{}\subsection[61. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionJ}{}\section{J. Gothic}
+\subsection[59. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss19} -- Latin to Gothic Transliteration}
 Produces Gothic letters from Latin: \revthorn{Warþ þan in dagans jainans} $\rightarrow $
 {\addfontfeature{StylisticSet=19}Warþ þan in dagans
 jainans}. In web pages, the letters will be searchable as their Latin equivalents.
 
-\section[K. Runic]{K. Runic}
-\hypertarget{SectionK}{}\subsection[62. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionK}{}\section[K. Runic]{K. Runic}
+\subsection[60. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss12} -- Early English Futhorc}
 Changes Latin letters to their equivalents in the early English futhorc. Because of the variability of the runic
 alphabet, this method of transliteration may not produce the result you want. In that case, it may be necessary to
 manually edit the result. fisc flodu ahof $\rightarrow $ {\addfontfeature{StylisticSet=12}fisc flodu ahof}.
 
-\subsection[63. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss13} -- Elder
+\subsection[61. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss13} -- Elder
 Futhark}
 Changes Latin letters to their equivalents in the Elder Futhark. Because of the variability of the runic alphabet, this
 method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit the
 result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=13}ABCDEFG}.
 
-\subsection[64. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss14} -- Younger
+\subsection[62. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss14} -- Younger
 Futhark}
 Changes Latin letters to their equivalents in the Younger Futhark. Because of the variability of the runic alphabet,
 this method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit
 the result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=14}ABCDEFG}.
 
-\subsection[65. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss15} --
+\subsection[63. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss15} --
 Long Branch to Short Twig}
 In combination with \textSourceText{ss14}, converts long branch (the default for the Younger Futhark) to short twig runes:
 {\addfontfeature{StylisticSet=14}{ABCDEFG $\rightarrow $
 \addfontfeature{StylisticSet=15}ABCDEFG}}.
 
-\subsection[66. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{rtlm}
+\subsection[64. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{rtlm}
 -- Right to Left Mirrored Forms}
 Produces mirrored runes, e.g. {\addfontfeature{StylisticSet=12}ABCDEFG $\rightarrow $ \addfontfeature{Style=mirrored}GFEDCBA}.
 This feature cannot change the direction of text.
 
-\section[L. Ligatures and Digraphs]{L. Ligatures and Digraphs}
-\hypertarget{SectionL}{}\subsection[67. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{SectionL}{}\section[L. Ligatures and Digraphs]{L. Ligatures and Digraphs}
+\subsection[65. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{hlig} -- Historic Ligatures}
 
 Produces ligatures for combinations that should not ordinarily be rendered as
 ligatures in modern text.\footnote{Some
-fonts define hlig differently, as including all ligatures in which at least one
+fonts define \textSourceText{hlig} differently, as including all ligatures in which at least one
 element is an archaic character, e.g.
 those involving long s (\textrm{ſ\hspace{0.2em}}). In Junicode, however, a
 historic ligature is defined not by the characters it is composed of, but
-rather by the join between them. If two characters should not be joined except
+rather by the join between them. If two characters (though modern) should not be joined except
 in certain historic contexts, they form a historic ligature. If they should be
-joined in all contexts (though they may be archaic), the ligature is not historic
-and should be defined in liga.} Most of these are from the MUFI recommendation,
+joined in all contexts (even if archaic), the ligature is not historic
+and should be defined in \textSourceText{liga}.} Most of these are from the MUFI recommendation,
 ranges B.1.1(b) and B.1.4. This feature does
 not produce digraphs (which have a phonetic value), for which see
-\hyperlink{ss17}{ss17}. The ligatures:
+\textSourceText{\hyperlink{ss17}{ss17}}. The ligatures:
 \addfontfeatures{Ligatures=Historic}
 
 \begin{multicols}{5}
@@ -1113,7 +1305,7 @@ psi$\rightarrow $psi}
 q{\textcompwordmark}ꝩ$\rightarrow $qꝩ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
-q{\textcompwordmark}ꝫ$\rightarrow $qꝫ}
+q{\textcompwordmark}ꝫ/q\cvd[1]{83}{ꝫ}$\rightarrow $qꝫ/\cvd[1]{83}{qꝫ}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 Q{\textcompwordmark}Ꝛ$\rightarrow $QꝚ}
@@ -1167,19 +1359,19 @@ u{\textcompwordmark}u$\rightarrow $uu}
 \noindent\addfontfeatures{Ligatures=histoff}
 Notes: For \textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} and
 \textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} see
-\hyperlink{RevertSmallCapA}{\textSourceText{cv99}} above. For the ligature \textLetterExample{\textsc{\hlig{nſ}}} to
+\textSourceText{\hyperlink{RevertSmallCapA}{cv99}} above. For the ligature \textLetterExample{\textsc{\hlig{nſ}}} to
 work properly, U+017F \textLetterExample{ſ} must be entered directly, not by applying an OpenType feature to
 \textLetterExample{s}.
 
-\subsection[68. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textSourceText{dlig} --
+\subsection[66. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textSourceText{dlig} --
 Discretionary Ligatures}
 Produces lesser-used ligatures, but also roman numbers, e.g.
 {\addfontfeature{Ligatures=Rare}ii, II, xi, XI}. The lesser-used ligatures:
 \textLetterExample{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, sp, str, st, tr, tt, ty}}.
 
-\subsection[69. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss17} -- Rare
+\hypertarget{ss17}{}\subsection[67. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss17} -- Rare
 Digraphs}
-\hypertarget{ss17}{}By ``digraph'' we mean conjoined letters that represent a phonetic value: the most common examples
+By ``digraph'' we mean conjoined letters that represent a phonetic value: the most common examples
 for western languages are \textLetterExample{{\ae}} and \textLetterExample{{\oe}} (though these, because they
 are so common, are not included in this feature). Use of this feature in web pages enables easier searches: for
 example, producing \textLetterExample{\addfontfeature{StylisticSet=17}{\th}au} from
@@ -1195,8 +1387,8 @@ directly and not via \textSourceText{ss17} (rare diacritics, however, are usuall
 feature---e.g. \textLetterExample{\addfontfeature{StylisticSet=17}aaᷘ}). Note that \textSourceText{ss17} must be applied to the two
 elements of the digraph and any following diacritic.
 
-\section{M. Required Features}
-\hypertarget{req}{}Required features, which provide some of the font's most basic functionality---ligatures, support for
+\hypertarget{req}{}\section{M. Required Features}
+Required features, which provide some of the font’s most basic functionality---ligatures, support for
 other features, kerning, and more---include \textSourceText{ccmp} (Glyph Composition/Decomposition),
 \textSourceText{calt} (Contextual Alternates), \textSourceText{liga} (Standard Ligatures),
 \textSourceText{loca} (Localized Forms), \textSourceText{rlig} (Required Ligatures),
@@ -1205,344 +1397,9 @@ Positioning). In MS Word these features have to be explicitly enabled on the Adv
 Cmd-D: enable Kerning, Standard Ligatures, and Contextual Alternates, and the others will be enabled automatically),
 but in most other applications they are enabled by default.
 
-\section{N. Entities}
-\hypertarget{SectionN}{}\subsection[70. ss10 {}-- Character Entity References]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ss10} -- Character Entity References}
-\hypertarget{ss10}{}In XML and HTML, characters that can't easily be typed on a keyboard can be expressed as entity
-references consisting of an ampersand, a name, and a semicolon. The XML standard defines a few entities and HTML many
-more, but document authors can define as many as they like in a DTD. Junicode anticipates the need of medievalists for
-entities in addition to those defined in XML and HTML and defines more than a hundred of them. A few of these overlap
-with the collection of HTML entities, but most are peculiar to Junicode, emphasizing characters that are widely used in
-medieval texts and those that have only PUA code points (especially combining marks, which present special technical
-difficulties).
 
-In applications that support Stylistic Sets, \textSourceText{ss10} makes these entities appear as the characters
-they represent. But as such entities can interfere with searching and accessibility when embedded in a web page, you
-should think of them as a convenient set of mnemonics to be used when typing, to be replaced by their Unicode
-equivalents before publication. If you use any non-Unicode characters (highlighted in the list below), you should call
-your publisher's attention to them, since they will present difficulties to typesetters.
-
-\begin{multicols}{3}
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌aa; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&aa;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌AA; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&AA;}}
-
-{\color[rgb]{0.20392157,0.39607844,0.6431373}
-\&‌aelig; $\rightarrow $ \&aelig;}
-
-{\color[rgb]{0.20392157,0.39607844,0.6431373}
-\&‌AElig; $\rightarrow $ \&AElig;}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌ao; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ao;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌AO; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&AO;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌au; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&au;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌AU; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&AU;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌av; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&av;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌AV; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&AV;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌ay; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ay;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌AY; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&AY;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌co; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&co;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌eth; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&eth;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}ETH; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ETH;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}et; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&et;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}ti; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ti;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌yo; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&yo;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌YO; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&YO;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌kl; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&kl;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&‌ob; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ob;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}OB; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&OB;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}OO; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&OO;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}oo; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&oo;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}pr; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&pr;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}po; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&po;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}q1; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&q1;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}q2; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&q2;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}rr; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&rr;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}ru; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ru;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}is; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&is;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}sd; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&sd;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}US; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&US;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}vy; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&vy;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}VY; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&VY;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}wn; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&wn;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}WN; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&WN;}}
-
-{\color[rgb]{0.20392157,0.39607844,0.6431373}
-\&{\textcompwordmark}thorn; $\rightarrow $ \&thorn;}
-
-{\color[rgb]{0.20392157,0.39607844,0.6431373}
-\narrow{\&{\textcompwordmark}THORN;} $\rightarrow $ Þ}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}ct; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&ct;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}{\textcompwordmark}\_ZZ; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ZZ;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}{\textcompwordmark}zz; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_zz;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_us; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_us;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_ol; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ol;◌}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_a; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_a;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_oa; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_oa;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_ansc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ansc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_an; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_an;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_ar; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ar;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_arsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_arsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_ao; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ao;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_av; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_av;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_aelig; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_aelig;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_b; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_b;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_bsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_bsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_c; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_c;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\narrow\&{\textcompwordmark}\_ccedil; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ccedil;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_d; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_d;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_dsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_dsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_dins; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_dins;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_eth; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_eth;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_e; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_e;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_eogo; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_eogo;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_emac; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_emac;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_f; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_f;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_g; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_g;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&{\textcompwordmark}\_gsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_gsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}h; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_h;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}i; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_i;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}idotl; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_idotl;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}j; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_j;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}jdotl; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_jdotl;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}k; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_k;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}ksc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ksc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}l; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_l;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}lsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_lsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}m; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_m;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}msc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_msc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\narrow\&\_{\textcompwordmark}munc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_munc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}n; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_n;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}nsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_nsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}o; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_o;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}oogo; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_oogo;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\narrow\&\_{\textcompwordmark}oslash; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_oslash;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}omac; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_omac;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}orr; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_orr;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}oru; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_oru;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}p; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_p;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}q; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_q;}}
-
-\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}r; $\rightarrow $
-◌\&\_r;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}rr; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_rr;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}rsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_rsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}ur; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ur;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}ru; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_ru;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}s; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_s;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\narrow\&\_{\textcompwordmark}longs; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_longs;}}
-
-\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}t; $\rightarrow $
-◌\&\_t;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}tins; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_tins;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}tsc; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_tsc;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}u; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_u;}}
-
-\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}v; $\rightarrow $
-◌\&\_v;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}w; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_w;}}
-
-\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}x; $\rightarrow $
-◌\&\_x;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}y; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_y;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\narrow\&\_{\textcompwordmark}thorn; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_thorn;}}
-
-\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{\&\_{\textcompwordmark}z; $\rightarrow $
-}\textstyleEntityRef{\textcolor[rgb]{0.20392157,0.39607844,0.6431373}{◌\&\_z;}}
-\end{multicols}
-\section{O. Non-MUFI Code Points}
-\hypertarget{nonmufi}{}Characters in Junicode that do not have Unicode code points should be accessed via OpenType
+\hypertarget{nonmufi}{}\section{N. Non-MUFI Code Points}
+Characters in Junicode that do not have Unicode code points should be accessed via OpenType
 features whenever possible. MUFI/PUA code points should be used only in applications that do not support OpenType, or
 that support it only partially (for example, MS Word). For certain characters that lack either Unicode or MUFI code
 points, code points in the Supplementary Private Use Area-A (plane 15) are available.
@@ -1644,4 +1501,13 @@ U+F001E 󰀞}
 {\color[rgb]{0.13333334,0.29411766,0.07058824}
 U+F001F 󰀟}
 \end{multicols}
+
+\vspace*{\fill}
+\begin{center}
+{\stditalic{This document was set in 12pt Junicode SemiExpanded\\
+using the {\XeLaTeX} typesetting system with fontspec for font management.\\
+The source for the document, Feature\_Reference.tex, is available at}}\\
+{\color{BrickRed}https://github.com/psb1558/Junicode-font.}
+\end{center}
+\thispagestyle{plain}
 \end{document}

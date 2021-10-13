@@ -45,6 +45,26 @@ name = FIGURES_LINING;
 code = "zero.osf one.osf two.osf three.osf four.osf five.osf six.osf seven.osf eight.osf nine.osf dollar.osf
 ";
 name = FIGURES_OLDSTYLE;
+},
+{
+code = "dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case
+caroncomb.case brevecomb.case tildecomb.case macroncomb.case hookabovecomb.case dblgravecomb.case ogonekabovecomb.case ";
+name = UppercaseMarks;
+},
+{
+code = "dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb
+caroncomb brevecomb tildecomb macroncomb hookabovecomb dblgravecomb ogonekabovecomb 
+";
+name = LowercaseMarks;
+},
+{
+code = "A AA AVhorizontalbar AY Ao Aring Astroke Au Av AE B Btopbar C Chook D Dhook E Eopen Ereversed Estroke Ezh
+Ezhreversed F Finsular G Ghook Ginsular Gturnedinsular Yogh H Halfh Hbar Heng Hwair I Iotaafrican Is J K 
+Kdiagonalstroke Khook L Lbroken Lcaron Lslash M N Nhookleft Eng O OO Ohorn Olongstroke Oloop Oopen Oslash 
+OE P Pflourish Psquirreltail Q Qdiagonalstroke Qstrokethroughdescender R Rinsular Rrotunda RumRotunda S 
+Germandbls Sinsular Schwa T Thook Tinsular Tonefive Tretroflexhook U Uhorn Uogonek Upsilonafrican V VY 
+Gammaafrican Vend Vhook W Whook Wynn X Y Yhook Yr Z Zhook Gormulum uni1EFE ";
+name = UppercaseWithTopAnchor;
 }
 );
 customParameters = (
@@ -70,7 +90,7 @@ name = vendorID;
 value = " ";
 }
 );
-date = "2021-10-13 03:10:30 +0000";
+date = "2021-10-13 11:35:56 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -169,6 +189,10 @@ tag = aalt;
 code = "# lookup i_dot {
 #   sub [ i j ]' @combining_above by [ dotlessi jdotless ] ;
 # } i_dot ;
+
+lookup UpperCaseDiacritics {
+  sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
+} UpperCaseDiacritics ;
 
 lookup ogonekdot {
 # 4-part
@@ -5242,5 +5266,5 @@ userData = {
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 22;
+versionMinor = 23;
 }

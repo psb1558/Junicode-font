@@ -30,13 +30,13 @@ documents that use the OpenType features of Junicode 1 (aside from basics like
 kerning and standard ligatures) may not be displayed properly when changed over
 to Junicode 2.
 
-Junicode 1 is still (as of September 2021) the current stable version of the
+Junicode 1 is still (as of October 2021) the current stable version of the
 font. However, no new features will be added to Junicode 1, though bugs will be
 fixed when necessary.
 
 The roman face of Junicode 2 is in beta testing. Interested users are encouraged
 to try it out and report bugs by opening issues on this site. The italic face is
-about 75% complete and still in a rough condition. It should not be relied upon
+about 81% complete and still in a rough condition. It should not be relied upon
 for production work until the character set is complete (probably some time in
 2022).
 

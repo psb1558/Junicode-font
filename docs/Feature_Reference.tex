@@ -354,8 +354,7 @@ implemented.
 \textSourceText{cv01-cv52} -- Basic Latin Variants}
 These features also affect small cap (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms,
 where available. Where Junicode has no variant for a Basic Latin letter, the expected \textSourceText{cvNN}
-feature is skipped, being reserved for future development. These features also affect small cap
-(\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms, where available.
+feature is skipped, being reserved for future development.
 
 %\definecolor{LightBlueGray}{RGB}{212,218,218}
 \begin{center}
@@ -629,7 +628,7 @@ Produces a high overline over letters used as roman numbers: {\addfontfeature{St
 \subsection[19. ss05 {}-- Medium{}-High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss05} --
 Medium-High Overline}
 Produces a medium-high overline over (or through the ascenders of) letters used as roman numbers, and some others as
-well: {\addfontfeature{StylisticSet=5,Style=Historic}bcdhijklmsvx{\th}}.
+well: {\addfontfeature{StylisticSet=5,Style=Historic}bcdhijklmſvx{\th}}.
 
 \hypertarget{ss06}{}\subsection[20. ss06 {}-- Enlarged Minuscules]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss06} --
 Enlarged Minuscules}
@@ -652,7 +651,7 @@ use U+0323, combining dot below (\hspace{0.2em}ꝑ̣).
 
 \subsection[22. ss08 {}-- Contextual Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss08} --
 Contextual Long s}
-In English and French text only, varies \textLetterExample{s} and \textLetterExample{\addfontfeature{Style=Historic}s} according to rules
+In English and French text only, varies \textLetterExample{s} and \textLetterExample{ſ} according to rules
 followed by many early printers: {\addfontfeature{StylisticSet=8}sports, essence, stormy, disheveled, transfusions, slyness, cliffside}. For this
 feature to work properly, \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by
 default: see \hyperlink{req}{Required Features} below).
@@ -669,7 +668,7 @@ most common rules of medieval manuscripts: {\addfontfeature{StylisticSet=16}prie
 1=\cvd{68}{ʔ}.
 
 \hypertarget{RevertSmallCapA}{}\subsection[25. cv99 {}-- revert small cap a to lowercase a]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv}\textSourceText{99} -- revert small cap a to lowercase a}
+\textSourceText{cv}\textSourceText{99} -- revert small cap \textsc{a} to lowercase a}
 1=a. This features reverts small cap
 \textLetterExample{\textsc{a}} to \textLetterExample{a}, enabling it to
 ligature with small cap \textLetterExample{\textsc{n}} or
@@ -1003,9 +1002,10 @@ overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant 
 two-letter overline)}
 1=\cvd{89}{◌̅◌}.
 
-\subsection[50. cv90 {}-- Variant of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv}\textSourceText{90} -- Variant of ◌̄ (U+0304, combining macron)}
-1=\cvd{90}{◌̄}.
+\subsection[50. cv90 {}-- Variants of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
+\textSourceText{cv}\textSourceText{90} -- Variants of ◌̄ (U+0304, combining macron)}
+1=\cvd{90}{◌̄}, 2=\cvd[1]{90}{◌̄}. These are used for abbreviations in manuscripts and
+early printed books.
 
 \subsection[51. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv91} -- Variants of short horizontal stroke (U+0335)}

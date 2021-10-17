@@ -116,6 +116,58 @@ pos = (-110,155);
 showMeasurement = 1;
 }
 );
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,26);
+target = (2,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,26);
+target = (1,9);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,32);
+target = (1,18);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,32);
+target = (0,5);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,18);
+target = (0,14);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,26);
+other1 = (0,20);
+target = (0,32);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,20);
+target = (2,11);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {
@@ -713,11 +765,11 @@ pos = (909,10);
 },
 {
 name = top;
-pos = (821,1044);
+pos = (821,1034);
 },
 {
 name = zzcurlya;
-pos = (984,1051);
+pos = (984,1041);
 }
 );
 guides = (

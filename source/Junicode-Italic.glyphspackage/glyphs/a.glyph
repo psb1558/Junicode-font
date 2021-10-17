@@ -23,10 +23,34 @@ name = zzcurlya;
 pos = (652,852);
 }
 );
-guides = (
+hints = (
 {
-pos = (671,623);
-showMeasurement = 1;
+horizontal = 1;
+options = 4;
+origin = (1,5);
+target = (0,33);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,39);
+target = (1,15);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,39);
+target = (0,10);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,15);
+target = (0,19);
+type = TTStem;
 }
 );
 layerId = master01;

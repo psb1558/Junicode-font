@@ -1360,15 +1360,15 @@ tag = ss19;
 },
 {
 code = "sub muncialcomb by muncialcomb.low ;
-# sub dotlessicomb by dotlessicomb.low ;
-# sub Rcomb by Rcomb.low ;
-# sub acomb by acomb.low ;
-# sub ecomb by ecomb.low ;
-# sub ocomb by ocomb.low ;
-# sub rcomb by rcomb.low ;
-# sub tcomb by tcomb.low ;
-# sub vcomb by vcomb.low ;
-# sub zcomb by zcomb.low ;
+ sub dotlessicomb by dotlessicomb.low ;
+ sub Rcomb by Rcomb.low ;
+ sub acomb by acomb.low ;
+ sub ecomb by ecomb.low ;
+ sub ocomb by ocomb.low ;
+ sub rcomb by rcomb.low ;
+ sub tcomb by tcomb.low ;
+ sub vcomb by vcomb.low ;
+ sub zcomb by zcomb.low ;
 ";
 labels = (
 {
@@ -3633,6 +3633,48 @@ pos = 930;
 size = 22;
 }
 );
+},
+{
+name = TTFZones;
+value = (
+{
+name = "Cap Height";
+pos = 1363;
+size = 23;
+},
+{
+name = "x-height";
+pos = 852;
+size = 31;
+},
+{
+name = baseline;
+pos = 0;
+size = -28;
+},
+{
+name = descender;
+pos = -563;
+size = 0;
+},
+{
+filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+name = "small cap height";
+pos = 937;
+size = 20;
+},
+{
+filter = "category == \"Letter\" AND case == 2";
+name = "x-height-enlarged";
+pos = 852;
+size = 31;
+},
+{
+name = "lc-ascender";
+pos = 1485;
+size = 10;
+}
+);
 }
 );
 id = master01;
@@ -3667,7 +3709,6 @@ name = Italic;
 userData = {
 GSCornerRadius = 30;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -3722,6 +3763,47 @@ value = (
 {
 pos = 930;
 size = 21;
+}
+);
+},
+{
+name = TTFZones;
+value = (
+{
+name = "Cap Height";
+pos = 1363;
+size = 23;
+},
+{
+name = "x-height";
+pos = 852;
+size = 31;
+},
+{
+name = baseline;
+pos = 0;
+size = -28;
+},
+{
+name = descender;
+pos = -563;
+size = 0;
+},
+{
+filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+name = "small cap height";
+pos = 937;
+size = 20;
+},
+{
+name = "x-height-enlarged";
+pos = 852;
+size = 31;
+},
+{
+name = "lc-ascender";
+pos = 1485;
+size = 10;
 }
 );
 }
@@ -3815,6 +3897,47 @@ pos = 930;
 size = 23;
 }
 );
+},
+{
+name = TTFZones;
+value = (
+{
+name = "Cap Height";
+pos = 1363;
+size = 23;
+},
+{
+name = "x-height";
+pos = 852;
+size = 31;
+},
+{
+name = baseline;
+pos = 0;
+size = -28;
+},
+{
+name = descender;
+pos = -563;
+size = 0;
+},
+{
+filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+name = "small cap height";
+pos = 937;
+size = 20;
+},
+{
+name = "x-height-enlarged";
+pos = 852;
+size = 31;
+},
+{
+name = "lc-ascender";
+pos = 1485;
+size = 10;
+}
+);
 }
 );
 iconName = Light;
@@ -3904,6 +4027,47 @@ value = (
 {
 pos = 930;
 size = 22;
+}
+);
+},
+{
+name = TTFZones;
+value = (
+{
+name = "Cap Height";
+pos = 1363;
+size = 23;
+},
+{
+name = "x-height";
+pos = 852;
+size = 31;
+},
+{
+name = baseline;
+pos = 0;
+size = -28;
+},
+{
+name = descender;
+pos = -563;
+size = 0;
+},
+{
+filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+name = "small cap height";
+pos = 937;
+size = 20;
+},
+{
+name = "x-height-enlarged";
+pos = 852;
+size = 31;
+},
+{
+name = "lc-ascender";
+pos = 1485;
+size = 10;
 }
 );
 }
@@ -3996,6 +4160,47 @@ pos = 930;
 size = 22;
 }
 );
+},
+{
+name = TTFZones;
+value = (
+{
+name = "Cap Height";
+pos = 1363;
+size = 23;
+},
+{
+name = "x-height";
+pos = 852;
+size = 31;
+},
+{
+name = baseline;
+pos = 0;
+size = -28;
+},
+{
+name = descender;
+pos = -563;
+size = 0;
+},
+{
+filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+name = "small cap height";
+pos = 937;
+size = 20;
+},
+{
+name = "x-height-enlarged";
+pos = 852;
+size = 31;
+},
+{
+name = "lc-ascender";
+pos = 1485;
+size = 10;
+}
+);
 }
 );
 id = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -4084,6 +4289,47 @@ value = (
 {
 pos = 930;
 size = 22;
+}
+);
+},
+{
+name = TTFZones;
+value = (
+{
+name = "Cap Height";
+pos = 1363;
+size = 23;
+},
+{
+name = "x-height";
+pos = 852;
+size = 31;
+},
+{
+name = baseline;
+pos = 0;
+size = -28;
+},
+{
+name = descender;
+pos = -563;
+size = 0;
+},
+{
+filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+name = "small cap height";
+pos = 937;
+size = 20;
+},
+{
+name = "x-height-enlarged";
+pos = 1045;
+size = 0;
+},
+{
+name = "lc-ascender";
+pos = 1485;
+size = 10;
 }
 );
 }

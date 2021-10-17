@@ -23,6 +23,10 @@ pos = (662,1415);
 {
 name = top_dot;
 pos = (643,1320);
+},
+{
+name = top_xheight;
+pos = (729,852);
 }
 );
 background = {
@@ -127,6 +131,57 @@ nodes = (
 }
 );
 };
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,13);
+target = (0,22);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,13);
+target = (0,65);
+type = TTShift;
+},
+{
+horizontal = 1;
+origin = (0,46);
+type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,13);
+other1 = (0,35);
+target = (0,46);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,35);
+target = (1,12);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,13);
+other1 = (0,6);
+target = (0,46);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,6);
+target = (1,18);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {
@@ -248,6 +303,10 @@ pos = (678,1415);
 {
 name = top_dot;
 pos = (660,1320);
+},
+{
+name = top_xheight;
+pos = (769,852);
 }
 );
 background = {
@@ -489,6 +548,10 @@ pos = (653,1415);
 {
 name = top_dot;
 pos = (635,1320);
+},
+{
+name = top_xheight;
+pos = (719,852);
 }
 );
 guides = (
@@ -622,6 +685,10 @@ pos = (544,1415);
 {
 name = top_dot;
 pos = (528,1320);
+},
+{
+name = top_xheight;
+pos = (639,852);
 }
 );
 guides = (
@@ -755,6 +822,10 @@ pos = (730,1415);
 {
 name = top_dot;
 pos = (712,1320);
+},
+{
+name = top_xheight;
+pos = (759,852);
 }
 );
 background = {
@@ -996,6 +1067,10 @@ pos = (704,1415);
 {
 name = top_dot;
 pos = (685,1320);
+},
+{
+name = top_xheight;
+pos = (795,1045);
 }
 );
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";

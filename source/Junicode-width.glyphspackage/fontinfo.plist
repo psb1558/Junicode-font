@@ -256,7 +256,7 @@ name = blueShift;
 value = 9;
 }
 );
-date = "2021-10-14 04:13:13 +0000";
+date = "2021-10-18 01:55:22 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -318,8 +318,6 @@ automatic = 1;
 code = "feature ss10;
 feature cv84;
 feature locl;
-feature c2sc;
-feature pcap;
 feature case;
 feature nalt;
 feature tnum;
@@ -332,13 +330,10 @@ feature subs;
 feature ornm;
 feature ss01;
 feature ss02;
-feature hist;
-feature ss03;
 feature ss04;
 feature ss05;
 feature ss06;
 feature ss08;
-feature ss11;
 feature ss12;
 feature ss13;
 feature ss14;
@@ -402,7 +397,6 @@ feature cv63;
 feature cv64;
 feature cv65;
 feature cv66;
-feature cv67;
 feature cv68;
 feature cv69;
 feature cv70;
@@ -433,6 +427,8 @@ feature cv95;
 feature cv96;
 feature cv97;
 feature cv98;
+feature pcap;
+feature c2sc;
 feature smcp;
 feature cv99;
 feature ss07;
@@ -4093,12 +4089,15 @@ sub f thorn by f_thorn;
 sub f thorn.loclENG by f_thorn.loclENG;
 sub f adieresis by f_adieresis;
 sub Q u by Q_u;
+sub Q u.pcap by Q_u.pcap ;
+sub Q u.sc by Q_u.sc ;
 # pair:
 sub longs.alt2 t by longs_t.alt ;
 sub i z.alt1 by i_z.alt1 ;
 sub l z.alt1 by l_z.alt1 ;
 sub longs z.alt1 by longs_z.alt1 ;
-sub longs.alt1 z.alt1 by longs_z.alt1 ;";
+sub longs.alt1 z.alt1 by longs_z.alt1 ;
+";
 tag = liga;
 },
 {
@@ -13695,5 +13694,5 @@ type = unicode;
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 24;
+versionMinor = 25;
 }

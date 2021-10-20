@@ -261,19 +261,18 @@ familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
+
 languagesystem latn dflt;
-languagesystem cyrl dflt;
+languagesystem latn ENG;
 languagesystem latn ROM;
-languagesystem latn CRT;
 languagesystem latn MOL;
 languagesystem latn KAZ;
-languagesystem latn CAT;
-languagesystem latn AZE;
+languagesystem latn TAT;
 languagesystem latn TRK;
-languagesystem cyrl TAT;
-languagesystem latn ISL;
+languagesystem latn CRT;
+languagesystem latn AZE;
+languagesystem latn CAT;
 languagesystem latn FRA;
-languagesystem latn ENG;
 ";
 name = Languagesystems;
 },
@@ -692,45 +691,64 @@ code = "sub urabovecomb from [ macroncomb.alt1 overlinecomb.alt zigzagabovecomb.
 tag = cv84;
 },
 {
+automatic = 1;
 code = "lookup locl_latn_0 {
 	script latn;
-	language ENG;
-	sub Thorn by Thorn.loclENG;
-	sub thorn.enlarged by thorn.enlarged.loclENG;
-	sub eth.enlarged by eth.enlarged.loclENG;
-	sub eth by eth.loclENG;
-	sub ethcomb by ethcomb.loclENG;
-	sub thorn by thorn.loclENG;
-	sub thornstroke by thornstroke.loclENG;
-	sub Thornstroke by Thornstroke.loclENG;
-	sub thorncomb by thorncomb.loclENG ;
-	language ROM;
-	sub Scedilla by Scommaaccent;
-	sub scedilla by scommaaccent;
-	language MOL;
-	sub Scedilla by Scommaaccent;
-	sub scedilla by scommaaccent;
-} locl_latn_0;
-
-lookup locl_latn_3 {
+	language AZE;
+	sub i by idotaccent;
+	language CRT;
+	sub i by idotaccent;
 	language KAZ;
 	sub i by idotaccent;
 	language TAT;
 	sub i by idotaccent;
 	language TRK;
 	sub i by idotaccent;
-	language CRT;
-	sub i by idotaccent;
-	language AZE;
-	sub i by idotaccent;
-} locl_latn_3;
+} locl_latn_0;
 
 lookup locl_latn_1 {
+	script latn;
+	language ROM;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+	language MOL;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_1;
+
+lookup locl_latn_2 {
+	script latn;
+	language ENG;
+	sub Thorn by Thorn.loclENG;
+	sub Thornstroke by Thornstroke.loclENG;
+	sub eth by eth.loclENG;
+	sub thorn by thorn.loclENG;
+	sub thornstroke by thornstroke.loclENG;
+	sub Thorndotbelow by Thorndotbelow.loclENG;
+	sub thorndotbelow by thorndotbelow.loclENG;
+	sub ethcomb by ethcomb.loclENG;
+	sub thorncomb by thorncomb.loclENG;
+	sub uniE48F by uniE48F.loclENG;
+	sub uniF03D by uniF03D.loclENG;
+} locl_latn_2;
+
+lookup locl_latn_3 {
 	script latn;
 	language CAT;
 	sub  l' periodcentered' l by ldot;
 	sub  L' periodcentered' L by Ldot;
-} locl_latn_1;
+} locl_latn_3;
+
+lookup locl_grek_0 {
+	script grek;
+	language ELL;
+	sub gravecomb by gravecomb.loclELL;
+	sub acutecomb by acutecomb.loclELL;
+} locl_grek_0;
 ";
 tag = locl;
 },
@@ -4361,7 +4379,6 @@ GSOffsetHorizontal = 10;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 0;
 };
-visible = 1;
 },
 {
 axesValues = (

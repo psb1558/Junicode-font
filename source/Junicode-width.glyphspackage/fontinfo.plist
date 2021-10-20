@@ -1100,12 +1100,17 @@ disabled = 1;
 tag = hist;
 },
 {
-code = "sub s by longs;";
-disabled = 1;
+code = "sub beta by beta.alt ;
+sub gamma by gamma.alt ;
+sub theta by theta.alt ;
+sub psi by psi.alt ;
+
+
+";
 labels = (
 {
 language = dflt;
-value = "Long s";
+value = "Alternate Greek";
 }
 );
 tag = ss03;
@@ -6295,6 +6300,11 @@ instanceInterpolations = {
 name = Enlarged;
 },
 {
+axesValues = (
+400,
+100,
+0
+);
 instanceInterpolations = {
 master01 = 1;
 };

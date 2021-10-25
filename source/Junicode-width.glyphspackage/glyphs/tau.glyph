@@ -3,6 +3,29 @@ glyphname = tau;
 kernRight = tau;
 layers = (
 {
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,30);
+target = (0,15);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,15);
+target = (0,60);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,70);
+target = (0,5);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {

@@ -40,6 +40,37 @@ nodes = (
 }
 );
 };
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,18);
+target = (0,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,30);
+target = (1,23);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,18);
+other1 = (1,5);
+target = (1,30);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,5);
+target = (0,11);
+type = TTShift;
+}
+);
 layerId = master01;
 shapes = (
 {

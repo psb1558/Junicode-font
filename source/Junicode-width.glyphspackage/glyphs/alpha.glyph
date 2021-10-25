@@ -96,10 +96,41 @@ nodes = (
 }
 );
 };
-guides = (
+hints = (
 {
-pos = (20,370);
-showMeasurement = 1;
+horizontal = 1;
+options = 4;
+origin = (0,50);
+target = (0,20);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,50);
+target = (0,8);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,59);
+target = (0,14);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,59);
+target = (0,29);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,14);
+target = (0,41);
+type = TTShift;
 }
 );
 layerId = master01;
@@ -412,12 +443,6 @@ pos = (497,0);
 {
 name = top;
 pos = (504,850);
-}
-);
-guides = (
-{
-pos = (25,370);
-showMeasurement = 1;
 }
 );
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";

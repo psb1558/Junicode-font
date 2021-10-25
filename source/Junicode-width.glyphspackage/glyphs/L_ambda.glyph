@@ -196,31 +196,6 @@ nodes = (
 );
 }
 );
-userData = {
-assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
-PUSHB[ ]	/* 1 value pushed */
-43 
-LT[ ]	/* LessThan */
-IF[ ]	/* If */
-NPUSHB[ ]	/* 25 values pushed */
-0 0 0 4 97 0 4 4 30 77 7 5 3 3 1 1 2 95 6 1 2 2 25 2 78 
-ELSE[ ]	/* Else */
-MPPEM[ ]	/* MeasurePixelPerEm */
-PUSHB[ ]	/* 1 value pushed */
-52 
-LT[ ]	/* LessThan */
-IF[ ]	/* If */
-NPUSHB[ ]	/* 22 values pushed */
-7 5 3 3 1 6 1 2 1 2 99 0 0 0 4 97 0 4 4 30 0 78 
-ELSE[ ]	/* Else */
-NPUSHB[ ]	/* 31 values pushed */
-0 4 0 0 1 4 0 105 7 5 3 3 1 2 2 1 89 7 5 3 3 1 1 2 95 6 1 2 1 2 79 
-EIF[ ]	/* EndIf */
-EIF[ ]	/* EndIf */
-NPUSHB[ ]	/* 11 values pushed */
-34 34 19 20 34 34 21 17 8 7 30 
-CALL[ ]	/* CallFunction */";
-};
 width = 1338;
 },
 {

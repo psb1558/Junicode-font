@@ -3,6 +3,30 @@ glyphname = sigma;
 kernRight = sigma;
 layers = (
 {
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,31);
+target = (0,19);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,19);
+other1 = (0,5);
+target = (0,31);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,41);
+target = (0,12);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {
@@ -53,7 +77,7 @@ nodes = (
 );
 }
 );
-width = 930;
+width = 922;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -106,7 +130,7 @@ nodes = (
 );
 }
 );
-width = 916;
+width = 907;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -159,7 +183,7 @@ nodes = (
 );
 }
 );
-width = 935;
+width = 927;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -212,7 +236,7 @@ nodes = (
 );
 }
 );
-width = 880;
+width = 872;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -265,7 +289,7 @@ nodes = (
 );
 }
 );
-width = 980;
+width = 972;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -318,7 +342,7 @@ nodes = (
 );
 }
 );
-width = 930;
+width = 922;
 }
 );
 note = sigma;

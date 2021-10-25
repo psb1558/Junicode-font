@@ -4,6 +4,36 @@ kernLeft = Beta;
 kernRight = Gamma;
 layers = (
 {
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,29);
+target = (0,35);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,35);
+target = (0,15);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,2);
+target = (0,42);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,42);
+target = (0,8);
+type = TTShift;
+}
+);
 layerId = master01;
 shapes = (
 {
@@ -58,40 +88,6 @@ nodes = (
 );
 }
 );
-userData = {
-assembly = "MPPEM[ ]	/* MeasurePixelPerEm */
-PUSHB[ ]	/* 1 value pushed */
-43 
-LT[ ]	/* LessThan */
-IF[ ]	/* If */
-NPUSHB[ ]	/* 32 values pushed */
-0 1 0 4 0 1 4 128 3 7 2 0 0 2 95 0 2 2 24 77 6 1 4 4 5 95 0 5 5 25 5 78 
-ELSE[ ]	/* Else */
-MPPEM[ ]	/* MeasurePixelPerEm */
-PUSHB[ ]	/* 1 value pushed */
-68 
-LT[ ]	/* LessThan */
-IF[ ]	/* If */
-NPUSHB[ ]	/* 29 values pushed */
-0 1 0 4 0 1 4 128 6 1 4 0 5 4 5 99 3 7 2 0 0 2 95 0 2 2 24 0 78 
-ELSE[ ]	/* Else */
-MPPEM[ ]	/* MeasurePixelPerEm */
-PUSHB[ ]	/* 1 value pushed */
-78 
-LT[ ]	/* LessThan */
-IF[ ]	/* If */
-NPUSHB[ ]	/* 34 values pushed */
-0 3 0 1 0 3 114 0 1 4 0 1 4 126 6 1 4 0 5 4 5 99 7 1 0 0 2 95 0 2 2 24 0 78 
-ELSE[ ]	/* Else */
-NPUSHB[ ]	/* 41 values pushed */
-0 3 0 1 0 3 114 0 1 4 0 1 4 126 0 2 7 1 0 3 2 0 103 6 1 4 5 5 4 89 6 1 4 4 5 95 0 5 4 5 79 
-EIF[ ]	/* EndIf */
-EIF[ ]	/* EndIf */
-EIF[ ]	/* EndIf */
-NPUSHB[ ]	/* 21 values pushed */
-1 0 25 23 21 19 17 16 13 11 9 7 3 2 0 29 1 28 8 7 22 
-CALL[ ]	/* CallFunction */";
-};
 width = 1166;
 },
 {

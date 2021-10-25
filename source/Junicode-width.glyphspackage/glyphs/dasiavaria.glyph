@@ -60,17 +60,6 @@ nodes = (
 );
 }
 );
-userData = {
-assembly = "PUSHB[ ]	/* 2 values pushed */
-6 100 
-WCVTP[ ]	/* WriteCVTInPixels */
-NPUSHB[ ]	/* 40 values pushed */
-26 7 2 1 0 1 76 0 2 0 2 133 3 1 0 1 0 133 4 1 1 1 118 18 17 1 0 24 23 17 29 18 29 0 16 1 16 5 7 22 
-CALL[ ]	/* CallFunction */
-PUSHB[ ]	/* 2 values pushed */
-6 0 
-WCVTP[ ]	/* WriteCVTInPixels */";
-};
 width = 755;
 },
 {

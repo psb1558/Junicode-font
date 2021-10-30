@@ -1,5 +1,5 @@
 {
-.appVersion = "3099";
+.appVersion = "3100";
 .formatVersion = 3;
 axes = (
 {
@@ -469,6 +469,16 @@ lookup locl_latn_2 {
 } locl_latn_2;
 ";
 tag = locl;
+},
+{
+code = "sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 ];
+# overlinecomb.alt zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case
+#                       zigzagabovecomb.alt3.case flattenedopenaabovecomb.alt ancomb ansmcpcomb arcomb arsmcpcomb bcomb
+#                       bsmcpcomb dsmcpcomb emacroncomb eogonekcomb fcomb dotlessicomb jcomb
+#                       jdotlesscomb ksmcpcomb muncialcomb omacroncomb oogonekcomb oslashcomb pcomb qcomb rumrotundacomb tsmcpcomb
+#                       tinsularcomb wcomb ycomb thorncomb orrotcomb orumcomb diagonaldieresiscomb dotacutecomb ogonekdotcomb ] ;
+";
+tag = cv84;
 },
 {
 code = "sub carondotcomb by carondotcomb.case;
@@ -2078,40 +2088,41 @@ tag = cv89;
 {
 code = "sub macroncomb from [ macroncomb.alt1 macroncomb.alt2 ] ;
 sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 ] ;
-sub Amacron from [ Amacron.alt1 Amacron.alt2 ] ;
-sub AEmacron from [ AEmacron.alt1 AEmacron.alt2 ] ;
-sub Emacron from [ Emacron.alt1 Emacron.alt2 ] ;
-sub Gmacron from [ Gmacron.alt1 Gmacron.alt2 ] ;
-sub Imacron from [ Imacron.alt1 Imacron.alt2 ] ;
-sub Ldotbelowmacron from [ Ldotbelowmacron.alt1 Ldotbelowmacron.alt2 ] ;
-sub Omacron from [ Omacron.alt1 Omacron.alt2 ] ;
-sub Oogonekmacron from [ Oogonekmacron.alt1 Oogonekmacron.alt2 ] ;
-sub Rdotbelowmacron from [ Rdotbelowmacron.alt1 Rdotbelowmacron.alt2 ] ;
-sub Umacron from [ Umacron.alt1 Umacron.alt2 ] ;
-sub Ymacron from [ Ymacron.alt1 Ymacron.alt2 ] ;
-sub amacron from [ amacron.alt1 amacron.alt2 ] ;
-sub aemacron from [ aemacron.alt1 aemacron.alt2 ] ;
-sub emacron from [ emacron.alt1 emacron.alt2 ] ;
-sub emacron from [ emacron.alt1 emacron.alt2 ] ;
-sub emacron from [ emacron.alt1 emacron.alt2 ] ;
-sub ldotbelowmacron from [ ldotbelowmacron.alt1 ldotbelowmacron.alt2 ] ;
-sub omacron from [ omacron.alt1 omacron.alt2 ] ;
-sub oogonekmacron from [ oogonekmacron.alt1 oogonekmacron.alt2 ] ;
-sub rdotbelowmacron from [ rdotbelowmacron.alt1 rdotbelowmacron.alt2 ] ;
-sub umacron from [ umacron.alt1 umacron.alt2 ] ;
-sub ymacron from [ ymacron.alt1 ymacron.alt2 ] ;
-sub amacron.sc from [ amacron.alt1.sc amacron.alt2.sc ] ;
-sub aemacron.sc from [ aemacron.alt1.sc aemacron.alt2.sc ] ;
-sub emacron.sc from [ emacron.alt1.sc emacron.alt2.sc ] ;
-sub gmacron.sc from [ gmacron.alt1.sc gmacron.alt2.sc ] ;
-sub imacron.sc from [ imacron.alt1.sc imacron.alt2.sc ] ;
-sub ldotbelowmacron.sc from [ ldotbelowmacron.alt1.sc ldotbelowmacron.alt2.sc ] ;
-sub omacron.sc from [ omacron.alt1.sc omacron.alt2.sc ] ;
-sub oogonekmacron.sc from [ oogonekmacron.alt1.sc oogonekmacron.alt2.sc ] ;
-sub rdotbelowmacron.sc from [ rdotbelowmacron.alt1.sc rdotbelowmacron.alt2.sc ] ;
-sub umacron.sc from [ umacron.alt1.sc umacron.alt2.sc ] ;
-sub ymacron.sc from [ ymacron.alt1.sc ymacron.alt2.sc ] ;
+#sub Amacron from [ Amacron.alt1 Amacron.alt2 ] ;
+#sub AEmacron from [ AEmacron.alt1 AEmacron.alt2 ] ;
+#sub Emacron from [ Emacron.alt1 Emacron.alt2 ] ;
+#sub Gmacron from [ Gmacron.alt1 Gmacron.alt2 ] ;
+#sub Imacron from [ Imacron.alt1 Imacron.alt2 ] ;
+#sub Ldotbelowmacron from [ Ldotbelowmacron.alt1 Ldotbelowmacron.alt2 ] ;
+#sub Omacron from [ Omacron.alt1 Omacron.alt2 ] ;
+#sub Oogonekmacron from [ Oogonekmacron.alt1 Oogonekmacron.alt2 ] ;
+#sub Rdotbelowmacron from [ Rdotbelowmacron.alt1 Rdotbelowmacron.alt2 ] ;
+#sub Umacron from [ Umacron.alt1 Umacron.alt2 ] ;
+#sub Ymacron from [ Ymacron.alt1 Ymacron.alt2 ] ;
+#sub amacron from [ amacron.alt1 amacron.alt2 ] ;
+#sub aemacron from [ aemacron.alt1 aemacron.alt2 ] ;
+#sub emacron from [ emacron.alt1 emacron.alt2 ] ;
+#sub emacron from [ emacron.alt1 emacron.alt2 ] ;
+#sub emacron from [ emacron.alt1 emacron.alt2 ] ;
+#sub ldotbelowmacron from [ ldotbelowmacron.alt1 ldotbelowmacron.alt2 ] ;
+#sub omacron from [ omacron.alt1 omacron.alt2 ] ;
+#sub oogonekmacron from [ oogonekmacron.alt1 oogonekmacron.alt2 ] ;
+#sub rdotbelowmacron from [ rdotbelowmacron.alt1 rdotbelowmacron.alt2 ] ;
+#sub umacron from [ umacron.alt1 umacron.alt2 ] ;
+#sub ymacron from [ ymacron.alt1 ymacron.alt2 ] ;
+#sub amacron.sc from [ amacron.alt1.sc amacron.alt2.sc ] ;
+#sub aemacron.sc from [ aemacron.alt1.sc aemacron.alt2.sc ] ;
+#sub emacron.sc from [ emacron.alt1.sc emacron.alt2.sc ] ;
+#sub gmacron.sc from [ gmacron.alt1.sc gmacron.alt2.sc ] ;
+#sub imacron.sc from [ imacron.alt1.sc imacron.alt2.sc ] ;
+#sub ldotbelowmacron.sc from [ ldotbelowmacron.alt1.sc ldotbelowmacron.alt2.sc ] ;
+#sub omacron.sc from [ omacron.alt1.sc omacron.alt2.sc ] ;
+#sub oogonekmacron.sc from [ oogonekmacron.alt1.sc oogonekmacron.alt2.sc ] ;
+#sub rdotbelowmacron.sc from [ rdotbelowmacron.alt1.sc rdotbelowmacron.alt2.sc ] ;
+#sub umacron.sc from [ umacron.alt1.sc umacron.alt2.sc ] ;
+#sub ymacron.sc from [ ymacron.alt1.sc ymacron.alt2.sc ] ;
 ";
+disabled = 1;
 tag = cv90;
 },
 {
@@ -2965,6 +2976,7 @@ sub eogonek by eogonek.sc;
 sub eogonekdotacute by eogonekdotacute.sc;
 sub eogonekdotbelow by eogonekdotbelow.sc;
 sub eopen by eopen.sc;
+sub ereversed by ereversed.sc;
 sub estroke by estroke.sc;
 sub et by et.sc;
 sub etildebelow by etildebelow.sc;
@@ -3232,37 +3244,15 @@ sub ao.alt by ao.alt.sc;
 sub eogonek.alt by eogonek.alt.sc;
 sub rrotunda.alt by rrotunda.alt.sc;
 sub a.alt1 by a.alt1.sc;
-sub amacron.alt1 by amacron.alt1.sc;
 sub aogonek.alt1 by aogonek.alt1.sc;
 sub ae.alt1 by ae.alt1.sc;
-sub aemacron.alt1 by aemacron.alt1.sc;
 sub e.alt1 by e.alt1.sc;
-sub emacron.alt1 by emacron.alt1.sc;
 sub eogonek.alt1 by eogonek.alt1.sc;
-sub gmacron.alt1 by gmacron.alt1.sc;
-sub imacron.alt1 by imacron.alt1.sc;
-sub ldotbelowmacron.alt1 by ldotbelowmacron.alt1.sc;
 sub m.alt1 by m.alt1.sc;
 sub n.alt1 by n.alt1.sc;
-sub omacron.alt1 by omacron.alt1.sc;
-sub oogonekmacron.alt1 by oogonekmacron.alt1.sc;
-sub rdotbelowmacron.alt1 by rdotbelowmacron.alt1.sc;
-sub umacron.alt1 by umacron.alt1.sc;
-sub ymacron.alt1 by ymacron.alt1.sc;
-sub amacron.alt2 by amacron.alt2.sc;
 sub aogonek.alt2 by aogonek.alt2.sc;
-sub aemacron.alt2 by aemacron.alt2.sc;
-sub emacron.alt2 by emacron.alt2.sc;
-sub gmacron.alt2 by gmacron.alt2.sc;
-sub imacron.alt2 by imacron.alt2.sc;
-sub ldotbelowmacron.alt2 by ldotbelowmacron.alt2.sc;
 sub m.alt2 by m.alt2.sc;
 sub n.alt2 by n.alt2.sc;
-sub omacron.alt2 by omacron.alt2.sc;
-sub oogonekmacron.alt2 by oogonekmacron.alt2.sc;
-sub rdotbelowmacron.alt2 by rdotbelowmacron.alt2.sc;
-sub umacron.alt2 by umacron.alt2.sc;
-sub ymacron.alt2 by ymacron.alt2.sc;
 sub eogonekdotacute.alt by eogonekdotacute.alt.sc;
 sub eogonekdotbelow.alt by eogonekdotbelow.alt.sc;
 sub eth.loclENG by eth.sc;
@@ -3309,6 +3299,8 @@ sub hookabovecomb by hookabovecomb.sc;
 sub dblgravecomb by dblgravecomb.sc;
 sub caron by caron.sc;
 sub carondotcomb by carondotcomb.sc;
+sub gravecomb.loclELL by gravecomb.sc;
+sub acutecomb.loclELL by acutecomb.sc;
 sub breveinvertedcomb by breveinvertedcomb.sc;
 sub ogonekcomb by ogonekcomb.sc;
 ";

@@ -1,6 +1,5 @@
 % This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
-% see http://writer2latex.sourceforge.net for more info.
-% Adapted for use with fontspec and other packages by P. Baker.
+% see http://writer2latex.sourceforge.net for more info
 \documentclass[letterpaper,12pt]{article}
 \title{Junicode 2 Feature Reference}
 \author{Peter S. Baker}
@@ -775,102 +774,116 @@ character with this feature. \textSourceText{[2]} produces a subscript version o
 the character, a common variant in printed books.
 
 \hypertarget{SectionH}{}\section{H. Combining Marks}
-\hypertarget{cv84}{}\subsection[42. cv84 {}-- MUFI combining marks (variants of ◌᷑
-U+1DD1)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of U+1DD1)}
+\hypertarget{cv84}{}\subsection[42. cv84 {}-- MUFI combining marks (variants of ◌̄
+U+0304)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of U+0304)}
 MUFI encodes a number of combining marks in the PUA (with code points between E000 and F8FF), but when these characters
 are entered directly, they can interfere with searching and accessibility, and some important applications fail to
-position them correctly over their base characters. To avoid these problems, enter U+1DD1 (◌᷑, \textUName{combining ur
-above}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character. This
+position them correctly over their base characters. To avoid these problems, enter U+0304 (◌̄, \textUName{combining
+macron}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character. This
 collection of marks does not include any Unicode-encoded marks (from the ``Combining Diacritical Marks'' ranges), as
-these can safely be entered directly. It does include three marks (\textSourceText{cv84[35]},
-\textSourceText{[36]} and \textSourceText{[37]}) that lack MUFI code points but are used to form MUFI
+these can safely be entered directly. It does include three marks (\textSourceText{cv84[36]},
+\textSourceText{[37]} and \textSourceText{[38]}) that lack MUFI code points but are used to form MUFI
 characters.
 
+This feature may often appear to have no effect. When this happens it is because
+an application replaced a sequence like \textLetterExample{a U+0304} with a precomposed character
+like \textLetterExample{ā} (U+0101) before Junicode's OpenType programming had a chance to work.
+This process is called normalization, and it usually has the effect of simplifying
+text processing tasks, but can sometimes prevent the proper functioning of OpenType
+features. To disable it, place the character U+034F \textUName{combining
+grapheme joiner} (don't waste any time puzzling over the name) between the base
+character and the combining mark (or the first combining mark). For example, to produce
+the combination \textLetterExample{\cvd[1]{84}{u͏̄}}, enter \textLetterExample{u U+034F U+0304}.
+(Without U+034F, you would get \textLetterExample{\cvd[1]{84}{ū}}).
+
 These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
-\textSourceText{cv84} as providing fallbacks for applications that do not support Character Variant
+\textSourceText{cv84} as providing more suitable fallbacks for applications that do not support Character Variant
 (\textSourceText{cvNN}) features.
 
 For some marks with PUA code points, users may find it easier to use \hyperlink{ss10}{entities} than this feature.
 
 These marks are not affected by most other features. This is to preserve flexibility, given the rule that the feature
 that produces them must be applied to both the mark and the base character. For example, if \textSourceText{smcp}
-``Small Caps'' changed \textSourceText{cv84[11]} \cvd[10]{84}{◌᷑} to \textSourceText{[12]} \cvd[11]{84}{◌᷑}, it
-would be impossible to produce the sequence \cvd[10]{84}{\textsc{na᷑a}} with the diacritic properly positioned.
+``Small Caps'' changed \textSourceText{cv84[11]} \cvd[11]{84}{◌͏̄} to \textSourceText{[12]} \cvd[12]{84}{◌͏̄}, it
+would be impossible to produce the sequence
+\textLetterExample{\cvd[11]{84}{\textsc{na͏̄a}}} with the diacritic properly positioned.
 
 \begin{multicols}{4}
-\color{BrickRed}1=\cvd{84}{◌᷑}
+\color{BrickRed}1=\cvd{84}{◌͏̄}
 
-2=\cvd[1]{84}{◌᷑◌}
+2=\cvd[1]{84}{◌͏̄}
 
-3=\cvd[2]{84}{◌᷑}
+3=\cvd[2]{84}{◌͏̄}
 
-4=\cvd[3]{84}{◌᷑}
+4=\cvd[3]{84}{◌͏̄}
 
-5=\cvd[4]{84}{◌᷑}
+5=\cvd[4]{84}{◌͏̄}
 
-6=\cvd[5]{84}{◌᷑}
+6=\cvd[5]{84}{◌͏̄}
 
-7=\cvd[6]{84}{◌᷑}
+7=\cvd[6]{84}{◌͏̄}
 
-8=\cvd[7]{84}{◌᷑}
+8=\cvd[7]{84}{◌͏̄}
 
-9=\cvd[8]{84}{◌᷑}
+9=\cvd[8]{84}{◌͏̄}
 
-10=\cvd[9]{84}{◌᷑}
+10=\cvd[9]{84}{◌͏̄}
 
-11=\cvd[10]{84}{◌᷑}
+11=\cvd[10]{84}{◌͏̄}
 
-12=\cvd[11]{84}{◌᷑}
+12=\cvd[11]{84}{◌͏̄}
 
-13=\cvd[12]{84}{◌᷑}
+13=\cvd[12]{84}{◌͏̄}
 
-14=\cvd[13]{84}{◌᷑}
+14=\cvd[13]{84}{◌͏̄}
 
-15=\cvd[14]{84}{◌᷑}
+15=\cvd[14]{84}{◌͏̄}
 
-16=\cvd[15]{84}{◌᷑}
+16=\cvd[15]{84}{◌͏̄}
 
-17=\cvd[16]{84}{◌᷑}
+17=\cvd[16]{84}{◌͏̄}
 
-18=\cvd[17]{84}{◌᷑}
+18=\cvd[17]{84}{◌͏̄}
 
-19=\cvd[18]{84}{◌᷑}
+19=\cvd[18]{84}{◌͏̄}
 
-20=\cvd[19]{84}{◌᷑}
+20=\cvd[19]{84}{◌͏̄}
 
-21=\cvd[20]{84}{◌᷑}
+21=\cvd[20]{84}{◌͏̄}
 
-22=\cvd[21]{84}{◌᷑}
+22=\cvd[21]{84}{◌͏̄}
 
-23=\cvd[22]{84}{◌᷑}
+23=\cvd[22]{84}{◌͏̄}
 
-24=\cvd[23]{84}{◌᷑}
+24=\cvd[23]{84}{◌͏̄}
 
-25=\cvd[24]{84}{◌᷑}
+25=\cvd[24]{84}{◌͏̄}
 
-26=\cvd[25]{84}{◌᷑}
+26=\cvd[25]{84}{◌͏̄}
 
-27=\cvd[26]{84}{◌᷑}
+27=\cvd[26]{84}{◌͏̄}
 
-28=\cvd[27]{84}{◌᷑}
+28=\cvd[27]{84}{◌͏̄}
 
-29=\cvd[28]{84}{◌᷑}
+29=\cvd[28]{84}{◌͏̄}
 
-30=\cvd[29]{84}{◌᷑}
+30=\cvd[29]{84}{◌͏̄}
 
-31=\cvd[30]{84}{◌᷑}
+31=\cvd[30]{84}{◌͏̄}
 
-32=\cvd[31]{84}{◌᷑}
+32=\cvd[31]{84}{◌͏̄}
 
-33=\cvd[32]{84}{◌᷑}
+33=\cvd[32]{84}{◌͏̄}
 
-34=\cvd[33]{84}{◌᷑}
+34=\cvd[33]{84}{◌͏̄}
 
-35=\cvd[34]{84}{◌᷑}
+35=\cvd[34]{84}{◌͏̄}
 
-36=\cvd[35]{84}{◌᷑}
+36=\cvd[35]{84}{◌͏̄}
 
-37=\cvd[36]{84}{◌᷑}
+37=\cvd[36]{84}{◌͏̄}
+
+37=\cvd[37]{84}{◌͏̄}
 \end{multicols}
 
 \hypertarget{ss10}{}\subsection[43. ss10 {}-- Entity References for Combining Marks]{\stepcounter{Feature}{\theFeature}.
@@ -963,10 +976,10 @@ attention to them, since they will likely have their own method of representing 
 
 \subsection[44. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}
-and combining marks ◌ͣ (U+0363), ◌ͤ (U+0364), \cvd[16]{84}{◌᷑}
-(U+1DD1\slash\textSourceText{cv84[17]}), ◌ͦ (U+0366), ◌ͬ (U+036C), ◌ᷢ (U+1DE2),
-◌ͭ (U+036D), ◌ͮ (U+036E), ◌ᷦ (U+1DE6) and \cvd[20]{84}{◌᷑}
-(U+1DD1/\textSourceText{cv84[21]}). Instead of being positioned above ascender height as usual (e.g.
+and combining marks ◌ͣ (U+0363), ◌ͤ (U+0364), \cvd[17]{84}{◌͏̄}
+(U+0304\slash\textSourceText{cv84[18]}), ◌ͦ (U+0366), ◌ͬ (U+036C), ◌ᷢ (U+1DE2),
+◌ͭ (U+036D), ◌ͮ (U+036E), ◌ᷦ (U+1DE6) and \cvd[21]{84}{◌͏̄}
+(U+0304/\textSourceText{cv84[21]}). Instead of being positioned above ascender height as usual (e.g.
 \textLetterExample{hͣ}), the MUFI glyphs have the marks positioned above the x-height
 (e.g. \textLetterExample{\addfontfeature{StylisticSet=20}hͣ}).
 Using the MUFI code points for these precomposed glyphs can interfere with searching
@@ -974,7 +987,7 @@ and drastically reduce accessibility. Users of Junicode should instead use a seq
 mark, and apply \textSourceText{ss20} to the two glyphs. A variant shape of eth (\textLetterExample{{\dh}})
 that accommodates the combining mark will be substituted for the normal base character (but this is not necessary for
 the other base characters). Examples:
-{\addfontfeature{StylisticSet=20}bͦ, ꝺᷦ, \cvd[16]{84}{h᷑}, kͤ, {\th}ͭ, {\dh}ᷢ}.
+{\addfontfeature{StylisticSet=20}bͦ, ꝺᷦ, \cvd[17]{84}{h̄}, kͤ, {\th}ͭ, {\dh}ᷢ}.
 
 \textSourceText{ss20} affects only the diacritics and base characters listed here; other combinations (e.g.
 \textLetterExample{mͤ}, \textLetterExample{\'{h}}) are not affected. It will therefore probably be safe
@@ -998,16 +1011,16 @@ d)}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
 \textLetterExample{\"a}.
 
-\subsection[49. cv89 {}-- Variant of ◌̅◌ (U+0305, two{}-letter
-overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅◌ (U+0305,
-two-letter overline)}
-1=\cvd{89}{◌̅◌}.
+\subsection[49. cv89 {}-- Variant of ◌̅ (U+0305, combining
+overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅ (U+0305,
+combining overline)}
+1=\cvd{89}{◌̅}.
 
-\subsection[50. cv90 {}-- Variants of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv}\textSourceText{90} -- Variants of ◌̄ (U+0304, combining macron)}
-1=\cvd{90}{◌̄}, 2=\cvd[1]{90}{◌̄}. These are used for abbreviations in manuscripts and
-early printed books.
-
+%\subsection[50. cv90 {}-- Variants of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
+%\textSourceText{cv}\textSourceText{90} -- Variants of ◌̄ (U+0304, combining macron)}
+%1=\cvd{90}{◌̄}, 2=\cvd[1]{90}{◌̄}. These are used for abbreviations in manuscripts and
+%early printed books.
+%
 \subsection[51. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv91} -- Variants of short horizontal stroke (U+0335)}
 1=\cvd{91}{◌̵}, 2=\cvd[1]{91}{◌̵}, 3=\cvd[2]{91}{◌̵}. This character can be used with letters with ascenders or
@@ -1359,7 +1372,7 @@ u{\textcompwordmark}u$\rightarrow $uu}
 
 \noindent\addfontfeatures{Ligatures=histoff}
 Notes: For \textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} and
-\textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} see
+\textLetterExample{\textsc{\cvd{99}{\hlig{ar}}}} see
 \textSourceText{\hyperlink{RevertSmallCapA}{cv99}} above. For the ligature \textLetterExample{\textsc{\hlig{nſ}}} to
 work properly, U+017F \textLetterExample{ſ} must be entered directly, not by applying an OpenType feature to
 \textLetterExample{s}.
@@ -1383,10 +1396,10 @@ MUFI recommendation. To produce such a digraph + diacritic combination, either t
 the second element of the digraph or type the diacritic after the second element. For example,
 \textLetterExample{a} + \textLetterExample{\'u} yields \textLetterExample{\addfontfeature{StylisticSet=17}a\'u}, and so does
 \textLetterExample{a} + \textLetterExample{u} + U+0301 (combining acute accent). To produce a digraph +
-diacritic combination not covered by MUFI (e.g. \textLetterExample{ꜵ̀}), you may have to enter the digraph
-directly and not via \textSourceText{ss17} (rare diacritics, however, are usually safe to use with this
-feature---e.g. \textLetterExample{\addfontfeature{StylisticSet=17}aaᷘ}). Note that \textSourceText{ss17} must be applied to the two
-elements of the digraph and any following diacritic.
+diacritic combination not covered by MUFI (e.g. \textLetterExample{ꜵ̀}), you may have to place U+034F
+\textUName{combining grapheme joiner} (see \hyperlink{cv84}{cv84} above) between the second element of the digraph and the combining mark.
+Without U+034F: \textLetterExample{\addfontfeature{StylisticSet=17}aō}.
+With U+034F: \textLetterExample{\addfontfeature{StylisticSet=17}ao͏̄}.
 
 \hypertarget{req}{}\section{M. Required Features}
 Required features, which provide some of the font’s most basic functionality---ligatures, support for
@@ -1510,5 +1523,5 @@ using the {\XeLaTeX} typesetting system with fontspec for font management.\\
 The source for the document, Feature\_Reference.tex, is available at}}\\
 {\color{BrickRed}https://github.com/psb1558/Junicode-font.}
 \end{center}
-% \thispagestyle{plain}
+\thispagestyle{plain}
 \end{document}

@@ -50,4 +50,19 @@ A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where
 
 An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with Junicode and JunicodeVF.
 
-**New!** An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
+An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
+
+# Changes
+
+Junicode Two Beta (1.026):
+
+* Added Greek (mostly complete in roman), including small caps
+
+* Added U+034F COMBINING GRAPHEME JOINER
+
+* Changed cv84 from variants of U+1DD1 to variants of U+0304, added variant as
+cv84[2], so later indexes must be increased by one (see Feature Reference)
+
+* Disabled cv90, variants of U+0304. Use cv84[1] and cv84[2] for this.
+
+* Italic: more catching up

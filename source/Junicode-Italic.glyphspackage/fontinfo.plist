@@ -3942,6 +3942,7 @@ name = Italic;
 userData = {
 GSCornerRadius = 30;
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -4610,6 +4611,16 @@ axesValues = (
 400,
 100,
 0
+);
+customParameters = (
+{
+disabled = 1;
+name = "Remove Features";
+value = (
+mark,
+mkmk
+);
+}
 );
 instanceInterpolations = {
 master01 = 1;
@@ -5508,29 +5519,12 @@ name = "Enlarged Italic";
 }
 );
 kerningLTR = {
-master01 = {
-"@MMK_L_A" = {
-"@MMK_R_V" = -160;
-};
-};
-"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = {
-"@MMK_L_A" = {
-"@MMK_R_V" = -130;
-};
-};
-"7904EAEE-2B64-409E-B923-0048172372BE" = {
-"@MMK_L_A" = {
-"@MMK_R_V" = -170;
-};
-};
-"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = {
-"@MMK_L_A" = {
-"@MMK_R_V" = -110;
-};
-};
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = {
-"@MMK_L_A" = {
-"@MMK_R_V" = -230;
+"@MMK_L_h.sc" = {
+"@MMK_R_phi.sc" = -40;
+};
+"@MMK_L_phi.sc" = {
+"@MMK_R_b.sc" = -40;
 };
 };
 };

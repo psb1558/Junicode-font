@@ -1,0 +1,655 @@
+%&program=xelatex
+%&encoding=UTF-8 Unicode
+
+\documentclass[12pt,a4paper,openany]{book}
+
+\usepackage{fontspec}
+
+\usepackage{microtype}
+
+\setmainfont[Contextuals=Alternate]{Junicode}
+%\setmainfont[Contextuals=Alternate]{Junicode.ttf}[
+%  Path = /home/peter/.local/share/fonts/ ,
+%  BoldFont = Junicode-Bold.ttf ,
+%  ItalicFont = Junicode-Italic.ttf ,
+%  BoldItalicFont = Junicode-BoldItalic.ttf ]
+\newfontfamily\greekfont{FoulisGreek}
+
+\newICUfeature{StyleSet}{insular}{+ss02}
+\newICUfeature{StyleSet}{highline}{+ss04}
+\newICUfeature{StyleSet}{medline}{+ss05}
+\newICUfeature{StyleSet}{enlarged}{+ss06}
+\newICUfeature{StyleSet}{underdot}{+ss07}
+\newICUfeature{StyleSet}{altyogh}{+ss08}
+\newICUfeature{StyleSet}{altshapes}{+ss09}
+\newICUfeature{StyleSet}{longslash}{+ss10}
+\newICUfeature{StyleSet}{altae}{+ss11}
+\newICUfeature{StyleSet}{altogonek}{+ss15}
+\newICUfeature{StyleSet}{oldpunct}{+ss18}
+\newICUfeature{StyleSet}{gothic}{+ss19}
+\newICUfeature{StyleSet}{gothtolat}{+ss20}
+\newICUfeature{MirrorRunes}{on}{+rtlm}
+\newICUfeature{IPAMode}{on}{+mgrk,-liga}
+\newICUfeature{Fractions}{on}{+frac}
+\newICUfeature{Superscripts}{on}{+sups}
+\newICUfeature{Subscripts}{on}{+subs}
+\newcommand{\salt}[1]{{\addfontfeatures{Alternate=0}{#1}}}
+\newcommand{\saltb}[1]{{\addfontfeatures{Alternate=1}{#1}}}
+\usepackage{color}
+\definecolor{titlblue}{rgb}{0.34,0.33,0.63}
+\definecolor{titlred}{rgb}{0.75,0.29,0.31}
+\definecolor{titlbrown}{rgb}{0.41,0.34,0.30}
+\definecolor{myRed}{rgb}{0.5,0,0}
+\definecolor{myPink}{rgb}{1.0,0.7,0.7}
+\definecolor{myBlue}{rgb}{0,0,0.5}
+\definecolor{myLightBlue}{rgb}{0.7,0.7,1.0}
+\definecolor{myGreen}{rgb}{0,0.5,0}
+\definecolor{myMaroon}{rgb}{0.35,0,0.5}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%\newcommand{\sampletext}{Successit autem uiro Domini Cudbercto in exercenda uita solitaria, quam in insula Farne ante episcopatus sui. 12345 \addfontfeatures{Numbers=OldStyle}12345}
+%\newcommand{\sampletext}{Anno autem regni Aldfridi tertio, Caedualla, rex Occidentalium Saxonum, cum genti suae duobus annis strenuissime praeesset}
+\newcommand{\sampletext}{Opima frugibus atque arboribus insula, et alendis apta pecoribus ac iumentis; uineas etiam qui\-bus\-dam in locis germinans}
+\newcommand{\sctext}{Cum multa divinitus, pontifices, a
+ma\-ioribus nos\-tris in\-venta atque in\-sti\-tuta sunt}
+
+\linespread{1.1}
+\frenchspacing
+\setlength{\parskip}{0ex plus0ex minus0ex}
+\tolerance=1000
+
+\begin{document}
+\begin{titlepage}
+\huge\noindent
+{\color{myRed}}\\[5cm]
+\Huge \hfill {\color{myBlue}Junicode}\hfill \\[1cm]
+\huge \hfill the font for medievalists\hfill \\[1cm]
+ \Huge\hfill {\color{myRed}}\hfill \\[1cm]
+ \huge\hfill {\itshape specimens and user’s guide}\hfill \\
+\vfill
+{\color{myRed}}
+\end{titlepage}
+\mainmatter
+\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}junicode}
+\fancyhead[CO]{\scshape\color{myRed} {junicode}\hspace{10pt}{\addfontfeatures{Numbers=OldStyle}\thepage}}
+\chapter*{\color{myBlue}Junicode}
+\large
+
+\noindent The design of Junicode is based on scans of George Hickes,
+          {\itshape Linguarum vett. septentrionalium thesaurus
+            grammatico-criticus et archaeologicus} (Oxford, 1703–5). This massive two-volume folio is a fine
+          example of the work of the Oxford University Press at this
+          period: printed in multiple types (for every language had to
+          have its proper type) and lavishly
+          illustrated with engravings of manuscript pages, coins and
+          artifacts.
+
+The type used for Hickes’s {\itshape Thesaurus} resembles those assembled
+by John Fell (1625–86) and bequeathed by him to the University of
+Oxford. To my eye, however, it looks more like the “Pica Roman”
+purchased by the University in 1692 than like any of Fell’s. For printing in Old English, this type was
+supplemented by the “Pica Saxon” commissioned by the early
+Anglo-Saxonist Franciscus Junius (1591–1677) and bequeathed by him to
+the University. Specimens of both can be found in {\itshape A Specimen of the
+Several Sorts of Letter Given to the University by Dr. John Fell,
+Sometime Lord Bishop of Oxford. To Which Is Added the Letter Given by
+Mr. F. Junius} (Oxford, 1693). Junius’s Pica Saxon
+was mixed freely with Pica Roman in printing the {\itshape Thesaurus}.
+
+The Foulis Greek font has a different origin from Junicode’s Latin
+(though it harmonizes well), being based on type designed by Alexander
+Wilson (1714–86) of Glasgow and used in numerous books published by
+the Foulis Press, most notably the great Glasgow Homer.
+
+\begin{center}
+\Huge\color{myRed}
+\end{center}
+
+\chapter*{\color{myBlue}Specimens}
+
+\noindent {\tiny \sampletext} {\small \sampletext} {\large \sampletext}
+{\Large \sampletext} {\LARGE \sampletext} {\huge \sampletext}\\
+
+{\itshape\noindent {\tiny \sampletext} {\small \sampletext} {\large \sampletext}
+{\Large \sampletext} {\LARGE \sampletext} {\huge \sampletext}}\\
+
+{\bfseries\noindent {\tiny \sampletext} {\small \sampletext} {\large \sampletext}
+{\Large \sampletext} {\LARGE \sampletext} {\huge \sampletext}}\\
+
+{\bfseries\itshape\noindent {\tiny \sampletext} {\small \sampletext} {\large \sampletext}
+{\Large \sampletext} {\LARGE \sampletext} {\huge \sampletext}}\\
+
+\noindent {\scshape {\tiny \sctext} {\small \sctext} {\large \sctext}
+{\Large \sctext} {\LARGE \sctext}}\\
+
+\noindent\textit{\scshape {\tiny \sctext} {\small \sctext} {\large \sctext}
+  {\Large \sctext} {\LARGE \sctext}}\\
+
+\noindent {\scshape\bfseries {\tiny \sctext} {\small \sctext} {\large \sctext}
+{\Large \sctext} {\LARGE \sctext}}
+
+\subsection*{Old and Middle English}
+
+\noindent Wē æthrynon mid ūrum ārum þā ȳðan þæs dēopan wǣles; wē
+ġesāwon ēac þā muntas ymbe þǣre sealtan sǣ strande, and wē mid
+āðēnedum hræġle and ġesundfullum windum þǣr ġewīcodon on þām
+ġemǣrum þǣre fæġerestan þēode. Þā ȳðan ġetācniað þisne dēopan
+cræft, and þā muntas ġetācniað ēac þā miċelnyssa þisses cræftes.\\
+
+\noindent S{\scshape iþen} þe sege and þe assaut watz sesed at Troye,\\
+Þe borȝ brittened and brent to brondez and askez,\\
+Þe tulk þat þe trammes of tresoun þer wroȝt\\
+Watz tried for his tricherie, þe trewest on erthe:\\
+Hit watz Ennias þe athel, and his highe kynde,\\
+Þat siþen depreced prouinces, and patrounes bicome\\
+Welneȝe of al þe wele in þe west iles.\\
+
+\noindent{\small\itshape Apply the OpenType feature ss02 (Stylistic Set 2)
+for insular letter-forms.}\\[1ex]
+{\addfontfeature{StyleSet=insular,Ligatures=NoCommon,StyleSet=altogonek}
+Her cynewulf benam sigebryht his rices \& weſtſeaxna wiotan for
+un\-ryht\-um dędū buton hamtúnſcire \& he hæfde þa oþ he ofslog
+þone aldormon þe hī lengeſt wunode \& hiene þa cynewulf on
+andred adræfde \& ħ þær wunade oþ þæt hine án ſwán ofſtang
+æt pryfetesflodan \& he wręc þone aldormon cumbran \& se cynewulf
+oft miclum gefeohtum feaht uuiþ bretwalū.}
+
+
+
+\subsection*{Old Icelandic}
+{\small\itshape For Nordic shapes of þ and ð, specify the Icelandic
+language, if your application has good language support; or apply the OpenType
+ss01 (Stylistic Set 1) feature.}\\[1ex]
+{\addfontfeature{Language=Icelandic}Um haustit sendi Mǫrðr Valgarðsson orð at Gunnarr myndi vera einn heimi, en
+lið alt myndi vera niðri í eyjum at lúka heyverkum. Riðu þeir Gizurr Hvíti ok
+Geirr Goði austr yfir ár, þegar þeir spurðu þat, ok austr yfir sanda til Hofs.
+Þá sendu þeir orð Starkaði undir Þríhyrningi; ok fundusk þeir þar allir er at
+Gunnari skyldu fara, ok réðu hversu at skyldi fara.}
+
+\subsection*{Runic}
+ᚠᛁᛋᚳ ᚠᛚᚩᛞᚢ ᚪᚻᚩᚠ ᚩᚾ ᚠᛖᚱᚷᛖᚾᛒᛖᚱᛁᚷ ᚹᚪᚱᚦ ᚷᚪ᛬ᛇᚱᛁᚳ ᚷᚱᚩᚱᚾ ᚦᚨᚱ ᚻᛖ ᚩᚾ ᚷᚱᛖᚢᛏ ᚷᛁᛇᚹᚩᛗ
+ᚻᚱᚩᚾᚨᛇ ᛒᚪᚾ\\
+\textit{ᚱᚩᛗᚹᚪᛚᚢᛇ ᚪᚾᛞ ᚱᛖᚢᛗᚹᚪᛚᚢᛇ} {\bfseries ᛏᚹᛟᚷᛖᚾ ᚷᛁᛒᚱᚩᚦᚫᚱ ᚪᚠᛟᛞᛞᚫ ᛞᛁᚫ ᚹᚣᛚᛁᚠ \textit{ᚩᚾ ᚱᚩᛗᚫ\linebreak[0]ᚳᚫᛇᛏᛁ᛬
+ᚩᚦᛚᚫ ᚢᚾᚾᛖᚷ}}
+
+\subsection*{German}
+
+Ich ſag üch aber / minen fründen / Foͤꝛchtēd üch nit voꝛ denen die den
+lyb toͤdend / vnd darnach nichts habennd das ſy mer thuͤgind. Ich wil
+üch aber zeigē voꝛ welchem ir üch \saltb{f}oͤꝛchten ſollend. Foͤꝛchtend üch voꝛ
+dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die
+hell: ja ich ſag üch / voꝛ dem ſelben \saltb{f}oͤꝛchtēd üch. Koufft man nit
+fünff Sparen vm̄ zween pfennig\\[1ex]
+Die straße ist zu schmal für autos. Wohin fährt dieser Zug?\\
+DIE STRAẞE IST ZU SCHMAL FÜR AUTOS.
+{\itshape DIE STRAẞE IST ZU SCHMAL FÜR AUTOS.}
+{\bfseries DIE STRAẞE IST ZU SCHMAL FÜR AUTOS.}
+{\itshape\bfseries DIE STRAẞE IST ZU SCHMAL FÜR AUTOS.}\\[1ex]
+{\scshape Die straße ist zu schmal für autos.
+\bfseries Die straße ist zu schmal für autos.}
+{\itshape Use c2sc for small cap Eszett:}
+{\addfontfeature{Letters=UppercaseSmallCaps}DIE STRAẞE IST ZU SCHMAL FÜR AUTOS.
+\bfseries DIE STRAẞE IST ZU SCHMAL FÜR AUTOS.}
+
+
+
+\subsection*{Latin}
+
+{\small\itshape Junicode contains the most common Latin abbreviations,
+  making it suitable for diplomatic editions of Latin texts.}\\[1ex]
+{\addfontfeatures{StyleSet=altogonek}Adiuuanos dſ̄ ſalutariſ noſter \&
+ ꝓpt̄ głam nominiſ tui dnē liƀanoſ· \& ꝓpitiuſ eſto peccatiſ noſtriſ
+ ꝓpter nomen tuum· Ne forte dicant ingentib: ubi eſt dſ̄ eorum \&
+  innoteſcat innationib: corā oculiſ nr̄iſ· Poſuerunt moſticina
+  ſeruorū ruorū eſcaſ uolatilib: cęli carneſ ſcōꝝ tuoꝝ beſtiiſ tenice·
+  Facti ſumꝰ ob\kern+0.2ptꝓbrium uiciniſ nr̄iſ·}
+
+\subsection*{Gothic}
+
+jabai auk ƕas gasaiƕiþ þuk þana habandan kunþi in galiuge stada
+anakumbjandan, niu miþwissei is siukis wis\-an\-dins timrjada du
+galiugagudam gasaliþ matjan?  fraqistniþ auk sa unmahteiga ana
+þeinamma witubnja broþar in þize Xristus gaswalt.  swaþ~þan
+frawaurkjandans wiþra broþruns, slahandans ize gahugd siuka, du
+Xristau fra\-waur\-keiþ.\\
+
+{\noindent\small\itshape Use ss19 to produce Gothic letters
+  automatically from transliterated text and ss20 to produce Latin
+  letters from Gothic. Available in all four faces.}\\[1ex]
+{\addfontfeature{StyleSet=gothic}jabai auk ƕas gasaiƕiþ þuk þana
+  habandan kunþi in ga\-liuge stada anakumbjandan, niu miþwissei is
+  siukis wis\-an\-dins timrjada du galiugagudam gasaliþ matjan?
+  {\bfseries jabai auk ƕas gasaiƕiþ þuk þana habandan kunþi in
+    ga\-liuge stada anakumbjandan, niu miþwissei is siukis
+    wis\-an\-dins timrjada du galiugagudam gasaliþ matjan?}
+  \textit{abgdeqzh \bfseries abgdeqzh}}
+
+\subsection*{Sanskrit Transliteration}
+
+\noindent mānaṁ dvividhaṁ viṣayadvai vidyātśaktyaśaktitaḥ \\
+     arthakriyāyāṁ keśadirnārtho ’narthādhimokṣataḥ\\[1ex]
+sadr̥śāsadr̥śatvācca viṣayāviṣayatvataḥ \\
+     śabdasyānyanimittānāṁ bhāve dhīsadasattvataḥ
+
+\subsection*{International Phonetic Alphabet}
+%\fontspec[IPAMode=on]{Junicode}
+hwɑn θɑt ɑːprɪl wiθ is ʃuːrəs soːtə θə drʊxt ɔf mɑrʧ hɑθ peːrsəd toː
+θə roːte ɑnd bɑːðəd ɛvrɪ væɪn ɪn swɪʧ lɪkuːr ɔf hwɪʧ vɛrtɪu
+ɛnʤɛndrəd ɪs θə fluːr hwɑn zɛfɪrʊs eːk wɪθ hɪs sweːtə bræːθ
+
+\subsection*{Greek}
+
+{\small\itshape The Greek typeface packaged with Junicode is
+  Foulis Greek, named for the Foulis brothers, publishers of the famous
+  Glasgow Homer (1756--8), which used the Greek Double Pica cut by
+  Alexander Wilson. Those who want a more modern Greek face that
+  harmonizes well with Junicode should consider GFS Didot
+  Classic or GFS Porson.}\\[1ex]
+{\greekfont βίβλος
+γενέσεως ἰησοῦ χ\kern+1pt\salt{ρ}ιστοῦ υἱοῦ δαυὶδ
+υἱοῦ ἀβραάμ.
+ἀβραὰμ
+ἐγέννησεν τὸν ἰσαάκ, ἰσαὰκ δὲ ἐγέννησεν
+τὸν ἰακώβ, ἰακὼβ δὲ ἐγέννησεν τὸν
+ἰούδαν καὶ τοὺς ἀδελφοὺς αὐτοῦ,
+ἰούδας
+δὲ ἐγέννησεν τὸν φάρες καὶ τὸν ζάρα
+ἐκ τῆς θαμάρ, φάρες δὲ ἐγέννησεν τὸν
+ἑσρώμ, ἑσρὼμ δὲ ἐγέννησεν τὸν ἀράμ,
+ἀρὰμ
+δὲ ἐγέννησεν τὸν ἀμιναδάβ, ἀμιναδὰβ
+δὲ ἐγέννησεν τὸν ναασσών, ναασσὼν δὲ
+ἐγέννησεν τὸν σαλμών,
+σαλμὼν
+δὲ ἐγέννησεν τὸν βόες ἐκ τῆς ῥαχά}\\[1ex]
+%,
+%βόες δὲ ἐγέννησεν}\\[1ex]
+{\small\itshape Turn on Historic Ligatures and Stylistic Alternates for old-style ligatures
+and alternative letter-shapes:}\\[1ex]
+{\greekfont\addfontfeature{Ligatures=Historic}βί\salt{β}λος
+γενέσεως ἰησοῦ χ\kern+1pt\salt{ρ}ισ\salt{τ}οῦ υἱοῦ δαυὶδ
+υἱοῦ ἀ\salt{β}ραάμ.
+ἀ\salt{β}ραὰμ
+ἐγέννησεν τὸν ἰσαάκ, ἰσαὰκ δὲ ἐγέννησεν
+τὸν ἰακώ\salt{β}, ἰακὼ\salt{β} δὲ ἐγέννησεν τὸν
+ἰούδαν καὶ τοὺς ἀδελφοὺς αὐτοῦ,
+ἰούδας
+δὲ ἐγέννησεν τὸν \salt{φ}άρες καὶ τὸν ζάρα
+ἐκ τῆς \salt{θ}αμάρ, φάρες δὲ ἐγέννησεν τὸν
+ἑσρώμ, ἑσρὼμ δὲ ἐγέννησεν τὸν ἀράμ,
+ἀρὰμ
+δὲ ἐγέννησεν τὸν ἀμιναδά\salt{β}, ἀμιναδὰ\salt{β}
+δὲ ἐγέννησεν τὸν ναασσών, ναασσὼν δὲ
+ἐγέννησεν τὸν σαλμών,
+σαλμὼν
+δὲ ἐγέννησεν τὸν βόες ἐκ τῆς ῥαχά\salt{β},
+βόες δὲ ἐγέννησεν}\\[1ex]
+
+\subsection*{Lithuanian}
+
+{\small\itshape Lithuanian poses several typographical challenges. An
+  accented i retains its dot: i̇́; and certain characters with ogonek
+  must avoid colliding with a following j:
+  {\upshape\addfontfeatures{Contextuals=Alternate} ęj ųj}. Make sure
+  Contextual Alternates (calt) is turned on; for i̇́, use i followed
+  by combining dot accent (0307) and acute (0301).}\\[1ex]
+Visa žemė turėjo vieną kalbą ir tuos pačius žodžius.  Kai žmonės
+kėlėsi iš rytų, jie rado slėnį Šinaro krašte ir ten įsikūrė.  Vieni
+kitiems sakė: Eime, pasidirbkime plytų ir jas išdekime. – Vietoj
+akmens jie naudojo plytas, o vietoj kalkių – bitumą.  Eime, – jie
+sakė, – pasistatykime miestą ir bokštą su dangų siekiančia viršūne ir
+pasidarykime sau vardą, kad nebūtume išblaškyti po visą žemės veidą.
+
+\subsection*{Polish}
+{\small\itshape The default shape and position of ogonek in Junicode are suitable
+for modern Polish. For the medieval Latin e-caudata, consider using
+ss15.}\\[1ex]
+Mieszkańcy całej ziemi mieli jedną mowę, czyli jednakowe słowa.  A
+gdy wędrowali ze wschodu, napotkali równinę w kraju Szinear i tam
+zamieszkali.  I mówili jeden do drugiego: Chodźcie, wyrabiajmy cegłę
+i wypalmy ją w ogniu. A gdy już mieli cegłę zamiast kamieni i smołę
+zamiast zaprawy murarskiej, rzekli: Chodźcie, zbudujemy sobie miasto
+i wieżę, której wierzchołek będzie sięgał nieba, i w ten sposób
+uczynimy sobie znak, abyśmy się nie rozproszyli po całej ziemi.
+
+\subsection*{Czech}
+{\small\itshape Special care has been taken with the
+  handling
+of Eastern European languages. The developer solicits suggestions for
+further improvement.}\\[1ex]
+Pojďme do Betléma a přesvědčme
+se o tom, co nám anděl oznámil. Mojžíšův Zákon přikazoval, aby každá
+žena čtyřicátý den po narození chlapce přinesla oběť do chrámu.
+{\itshape Pojďme do Betléma a přesvědčme
+se o tom, co nám anděl oznámil. Mojžíšův Zákon přikazoval, aby každá
+žena čtyřicátý den po narození chlapce přinesla oběť do chrámu.}
+{\bfseries Pojďme do Betléma a přesvědčme
+se o tom, co nám anděl oznámil. Mojžíšův Zákon přikazoval, aby každá
+žena čtyřicátý den po narození chlapce přinesla oběť do chrámu.}
+{\scshape Pojďme do Betléma a přesvědčme
+se o tom, co nám anděl oznámil. Mojžíšův Zákon přikazoval, aby každá
+žena čtyřicátý den po narození chlapce přinesla oběť do chrámu.}
+
+\subsection*{Fleurons}
+
+{\small\itshape Junicode contains a number of fleurons (floral
+  ornaments) copied from a 1785 Caslon specimen book. This document
+  contains a number of examples. Fleurons may be found at these
+  code-points: E270, E27D, E670, E67D, E68A, E736, E8B0, E8B1,
+  EF90–EF9C, EF9F, F011, F014, F018, F019, F01B, F01D, F01E.}
+
+\begin{center}
+\huge    \\
+ \\[0.7ex]
+\\[0.7ex]
+\\
+ 
+\end{center}
+
+\chapter*{\color{myBlue}OpenType Features}
+
+{\itshape Following is a list of the OpenType features in
+  Junicode. For instructions on applying OpenType features, consult
+  the documentation for your preferred application. The first three of
+  these (Standard Ligatures, Contextual Alternates, Kerning) should
+  generally be on (they already are in most applications, but in
+  Microsoft Word you must turn them on yourself).}
+
+\subsection*{Standard Ligatures (liga)}
+
+Like many old-style fonts, Junicode contains the most common f-ligatures
+(first flight offer office afflict fjord) and some that are less common
+(e.g. thrift fifty afraid für fördern).  It
+also has long-s ligatures (e.g. aſſert ſtart ſlick omiſſion).
+
+\subsection*{Contextual Alternates (calt)}
+
+When this feature is on, Junicode
+will avoid unsightly collisions between neighboring characters such as
+f and vowels with diacritics, e.g. fêler fíf fŭl. If you find that f
+collides with some other character, you can select the narrow
+\saltb{f} via the OpenType {\scshape Stylistic Alternates} feature.
+
+\subsection*{Kerning (kern)}
+
+In most text-based applications, {\scshape Kerning} (which makes fine
+adjustments to the spacing
+between characters) is on by default, but in
+Microsoft Word it must be turned on explicitly. Turn it off for
+an antique look.
+
+\subsection*{Stylistic Alternates (salt)}
+
+This feature gives you direct access to a number of alternates that
+are available via other features. Some of these (for example the
+narrow \saltb{f}\kern+2pt) may be useful to avoid collisions that the font designer has
+not anticipated. In Foulis Greek, a number of alternative letter shapes
+can be accessed in this way: e.g. {\greekfont β\salt{β}γ\salt{γ}ρ\salt{ρ}τ\salt{τ}φ\salt{φ}.}
+
+\subsection*{Discretionary Ligatures (dlig)}
+
+This feature will give you fancy ligatures, e.g. %
+{\addfontfeature{Ligatures=Discretionary} act star track bitten
+  attract,} %
+and also connected Roman numbers (%
+{\addfontfeature{Ligatures=Discretionary} I II III IV V VI VII VIII IX X XI
+  XII}---regular and italic faces).
+Use it also for circled numbers and letters:
+[1] {\addfontfeature{Ligatures=Discretionary}= [1]};
+[A] {\addfontfeature{Ligatures=Discretionary}= [A]};
+[a] {\addfontfeature{Ligatures=Discretionary}= [a]};
+[[1]] {\addfontfeature{Ligatures=Discretionary}= [[1]]};
+<1> {\addfontfeature{Ligatures=Discretionary}= <1>}
+(regular and italic faces only).
+
+\subsection*{Historic Ligatures (hlig)}
+
+Nearly all of MUFI’s ``non-structural'' ligatures are
+accessible via {\scshape Historic Ligatures}.
+{\addfontfeature{Ligatures=Historic}Even if you are not a medievalist,
+  you may still be amused by the strange effects you can achieve by
+  turning on this feature: egg track fan sock aardvark.}
+  This feature will also permit you to access a number
+of historical ligatures in Foulis Greek, e.g.
+{\greekfont\addfontfeatures{Ligatures=Historic}ἰφθίμους
+  ἐτελείε\salt{τ}ο
+  διαστήτην μάχεσθαι χραίσμῃ.}
+
+\subsection*{Historic Forms (hist)}
+
+This feature provides long ſ. In keeping with the usage of early printers, round s is preserved
+at the ends of words: {\addfontfeature{Style=Historic}“When to the sessions of sweet silent thought.”}
+
+\subsection*{Mark Positioning (mark and mkmk)}
+
+Where no precomposed character is available, combining marks are
+still correctly positioned, and marks can be “stacked” via {\scshape Mark
+to Base} (mark) and {\scshape Mark to Mark} (mkmk): ŏ́ (o + U+306 + U+301);
+ī̆ (i + U+304 + U+306).  The dot of an i or j followed by a diacritic
+is removed: i̽. If your application supports these
+features, they are almost certainly on by default.
+
+\subsection*{Small Capitals (smcp and c2sc)}
+
+Use {\scshape Small Caps} to change lower-case letters to small caps;
+add {\scshape Caps to Small Caps} for text entirely in small
+caps. {\scshape Junicode has true small caps rather than scaled
+  capitals.} Special small cap versions of common combining diacritics
+are available, and these should be positioned correctly relative to
+the base characters: {\scshape äçé}. {\itshape Regular, Italic, and
+  Bold faces.}
+
+\subsection*{Old-Style Numbers (onum)}
+
+You have a choice of either standard “lining” figures or old-style
+figures, selected by {\scshape Old-Style Numbers}: 0123456789
+{\addfontfeature{Numbers=OldStyle}0123456789.}
+
+\subsection*{Slashed Zero (zero)}
+
+Turn on this feature for a slash through the digit zero (both lining and old-style):
+{\addfontfeature{Numbers=SlashedZero} 0 {\addfontfeature{Numbers=OldStyle} 0}}.
+
+\subsection*{Superscripts and Subscripts (sups, subs)}
+
+\noindent Superscript numbers are rendered with {\scshape Superscripts}:
+{\addfontfeature{Superscripts=on} 0123456789}.  Subscript numbers
+are rendered with {\scshape Subscripts}:
+{\addfontfeature{Subscripts=on} 0123456789}. In the regular and
+italic styles there is a complete alphabet of superscripts (e.g.
+{\addfontfeature{Superscripts=on}abcxyz}).
+
+\subsection*{Fractions (frac)}
+
+A sequence of number + slash + number is rendered by a fraction if the
+fraction has a Unicode encoding and this feature is on:
+{\addfontfeature{Fractions=on} 1/2 1/4 2/3 3/4} (complete set of Unicode
+fractions in regular and italic).
+
+\subsection*{Letters with flourishes (swsh)}
+For letters with flourishes (sometimes used for setting Middle English
+texts), use {\scshape Swash}:
+{\addfontfeature{Style=Swash}c d f g k n r}. Some capital swashes are also
+available in the italic face, based on those in Hickes's \textit{Thesaurus}:
+{\addfontfeature{Style=Swash}\textit{A D J Q Æ}}.
+
+\subsection*{Mirrored runes (rtlm)}
+
+In the regular and italic faces Junicode
+contains mirrored versions of runes. To access these, use
+{\scshape Right-to-Left Mirroring}: {\addfontfeatures{MirrorRunes=on}
+  ᚾᚪᛒᛋᚫᚾᚩᚱᚻ.} This feature will not reverse the order of the runes,
+but only the shapes of the characters.
+
+\subsection*{Greek letters in IPA}
+
+Earlier versions of Junicode contained an awkward workaround for the
+problem of IPA characters based on Greek together in a font with a
+complete Greek character set in a different style. Now that Junicode's
+Greek has been moved to the Foulis Greek font, IPA characters based on
+Greek have been moved to the Greek range, and no special coding is
+needed to access them.
+
+\subsection*{Nordic letter-shapes}
+
+The default shapes of ð and þ in Junicode are English: this is unusual in
+modern fonts. For the shapes used in Icelandic, specify the Icelandic
+language, if your application has good language support, or select
+{\scshape Stylistic Set 1}: {\addfontfeature{Language=Icelandic} ðþ}.
+
+\subsection*{Insular letter-shapes (ss02)}
+
+Use {\scshape Stylistic Set 2} for insular letter-forms:
+{\fontspec[StyleSet=insular]{Junicode} abcdefg.}
+
+\subsection*{Overlined characters (ss04, ss05)}
+
+Use {\scshape Stylistic Set 4} for roman numbers with high overline
+({\fontspec[StyleSet=highline]{Junicode} viii XCXV}) and {\scshape Stylistic Set 5}
+for lower-case roman numbers with medium-high overline
+({\fontspec[StyleSet=medline]{Junicode} viii dclx}). These Stylistic
+Sets will work only with letters used in Roman numbers.
+
+\subsection*{Enlarged minuscules (ss06)}
+
+{\scshape Stylistic Set 6} produces enlarged minuscules, thus:
+{\addfontfeature{StyleSet=enlarged} abcdefg.} Since the underlying
+text remains unchanged, enlarged text can be searched like normal
+text.
+
+\subsection*{Deleted text (ss07)}
+
+In medieval manuscripts, text is often deleted by placing a dot under each
+letter. Both Unicode and MUFI define many characters with dots below:
+{\addfontfeature{StyleSet=underdot} if possible, you should avoid
+hard-coding these and instead use} {\scshape Stylistic Set 7}.
+
+\subsection*{Alternate yogh (ss08)}
+
+For Middle English, always use the yogh at U+021C and U+021D (Ȝȝ).
+Unicode also has an alternative yogh, which in Junicode has a
+flat top. If you prefer this, leave the underlying text the same and
+specify {\scshape Stylistic Set 8}:
+{\addfontfeature{StyleSet=altyogh} Ȝȝ}.
+
+
+\subsection*{Retired letter-shapes (ss09)}
+
+The design of a few Junicode characters has changed since the font was
+introduced. The original designs, if you prefer them, will always be
+available via {\scshape Stylistic Set 9}. Currently there are just a few
+such alternates: {\fontspec[StyleSet=altshapes]{Junicode} ꝺ} for ꝺ,
+{\addfontfeature{StyleSet=altshapes} T} for T,
+{\scshape{\addfontfeature{StyleSet=altshapes} t} for t}.
+
+\subsection*{Long slashes (ss10)}
+
+Some users prefer slashes and backslashes that are longer than
+Junicode's default. Use {\scshape Stylistic Set 10} to access these:
+a/a, {\addfontfeatures{StyleSet=longslash}a/a}.
+
+\subsection*{Alternative italic æ (ss11)}
+
+In texts that contain both æ and œ, the two may be confused in the
+italic face: \textit{æ œ}. In this case, use {\scshape Stylistic Set 11} to
+substitute \textit{\addfontfeatures{StylisticSet=11}æ} for \textit{æ}.
+
+\subsection*{E caudata (ss15)}
+
+Medieval Latin texts often use an {\itshape e} with tail, called
+{\itshape e caudata}, to represent Latin {\itshape ae} or {\itshape
+  oe}. Polish, Lithuanian, and several other languages also use this
+letter. While in modern editions of medieval texts the {\itshape
+  cauda} (or in Polish, the {\itshape ogonek}) is often attached to
+the very bottom of the letter, in modern Polish and Lithuanian
+printing it is attached to the end of the bottom stroke: Polish ę,
+medieval Latin {\addfontfeatures{StyleSet=altogonek}ę}. The modern
+Polish version of the letter is acceptable for medieval Latin;
+however, if you prefer a centered {\itshape cauda}, use
+{\scshape Stylistic Set 15}.
+
+\subsection*{Linguistic alternates (ss17)}
+
+One character (ʔ, U+0294) has an alternate shape used in phonetic
+transcription. Access this with {\scshape Stylistic Set 17}.
+
+\subsection*{Old-Style Punctuation (ss18)}
+
+{\addfontfeature{StyleSet=oldpunct}Old books generally set
+extra space before the heavier punctuation marks (; : ! ?);
+they also leave extra space inside quotation marks and
+parentheses (e.g. “here”). For a similar effect, use {\scshape Stylistic Set 18}. Make sure
+that {\scshape Contextual Alternates} are also on so that Junicode can correct
+the spacing in certain environments.}
+
+\subsection*{Latin-to-Gothic Transliteration (ss19)}
+
+As transliteration of Latin to Gothic characters is straightforward,
+it can easily be handled with OpenType features. Note that the Gothic
+alphabet has no distinction between upper- and lower-case, so capitals
+and lower-case letters are transliterated the same way:
+{\addfontfeature{StyleSet=gothic} mahtedi sweþauh jah inu mans leik}.
+
+\subsection*{Gothic-to-Latin Transliteration (ss20)}
+
+The same as ss19, but in reverse. It produces all lower-case
+letters. Thus 𐌲𐌰𐌳𐍉𐌱 𐌽𐌿 𐍅𐌰𐍃 𐌼𐌰𐌹𐍃 𐌸𐌰𐌽𐍃 𐍃𐍅𐌴𐍃𐍅𐌰𐌼𐌼𐌰
+becomes ‘{\addfontfeature{StyleSet=gothtolat}𐌲𐌰𐌳𐍉𐌱 𐌽𐌿 𐍅𐌰𐍃 𐌼𐌰𐌹𐍃 𐌸𐌰𐌽𐍃 𐍃𐍅𐌴𐍃𐍅𐌰𐌼𐌼𐌰}’.
+
+\begin{center}
+\huge {\color{myRed}}
+\end{center}
+
+\chapter*{\color{myBlue}Other Features}
+
+\subsection*{Treatment of Obsolete Characters}
+
+A number of medieval characters originally assigned by MUFI to the
+Unicode Private Use Area have been accepted into the Unicode
+standard. For several years Junicode retained the obsolete
+characters, adding a mark to warn document maintainers to reencode
+their documents. Beginning with version 0.7.3 obsolete MUFI characters
+were removed from the font.
+
+\subsection*{Character Protrusion}
+
+For XeLaTeX users who use the Microtype package for character
+protrusion, a configuration file (mt-Junicode.cfg) is provided for
+Junicode. Users of XeLaTeX will need Microtype version 2.5 or
+higher. The configuration file is designed for XeLaTeX, but it can
+easily be edited to work with LuaTeX.
+
+\chapter*{\color{myBlue}Miscellanea}
+
+\noindent The Junicode font is available at
+https://github.com/psb1558/Junicode-New/tree/master/legacy. You can also find it in the
+repositories of many Linux distributions and via CTAN. Visit the
+Junicode Project Page at SourceForge to leave feature requests and bug
+reports. Suggestions and Contributions are welcome: if you wish to
+contribute to Junicode, leave a patch at the Project Page or contact
+the developer.  Feature requests and bug reports can be left in the
+same place.
+
+Junicode comes in Regular, Italic, Bold and Bold Italic faces, but the
+Regular and Italic faces have the fullest character set and are
+richest in OpenType features. The font implements the recommendation
+of the Medieval Unicode Font Initiative version 4.0. Download the
+complete recommendation at http://www.mufi.info/.
+
+Junicode is licensed under the SIL Open Font License: for the full
+text, go to http://scripts.sil.org/OFL. Briefly: You may use
+Junicode in any kind of publication, print or electronic, without fee
+or restriction. You may modify the font for your own use. You may
+distribute your modified version in accordance with the terms of the
+license.\\[1ex]
+
+\def\reflect#1{{\setbox0=\hbox{#1}\rlap{\kern0.5\wd0
+  \special{x:gsave}\special{x:scale -1 1}}\box0 \special{x:grestore}}}
+\def\XeTeX{\leavevmode
+  \setbox0=\hbox{X\lower.5ex\hbox{\kern-.15em\reflect{E}}\kern-.1667em \TeX}%
+  \dp0=0pt\ht0=0pt\box0 }
+
+\noindent This document was set with {\XeTeX}.
+\end{document}

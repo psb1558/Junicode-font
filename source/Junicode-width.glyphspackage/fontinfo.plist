@@ -254,6 +254,10 @@ value = (
 {
 name = blueShift;
 value = 9;
+},
+{
+name = "Propagate Anchors";
+value = 1;
 }
 );
 date = "2021-10-30 01:53:24 +0000";
@@ -5779,6 +5783,29 @@ GSOffsetVertical = 0;
 instances = (
 {
 axesValues = (
+400,
+100,
+0
+);
+instanceInterpolations = {
+master01 = 1;
+};
+name = Regular;
+properties = (
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Junicode Two Beta VF";
+}
+);
+}
+);
+type = variable;
+},
+{
+axesValues = (
 300,
 100,
 0
@@ -6579,29 +6606,6 @@ instanceInterpolations = {
 "00F4936D-6309-4DEC-83B3-42806ED1A477" = 1;
 };
 name = Enlarged;
-},
-{
-axesValues = (
-400,
-100,
-0
-);
-instanceInterpolations = {
-master01 = 1;
-};
-name = Roman;
-properties = (
-{
-key = familyNames;
-values = (
-{
-language = dflt;
-value = "Junicode Two Beta VF";
-}
-);
-}
-);
-type = variable;
 }
 );
 kerningLTR = {

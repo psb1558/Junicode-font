@@ -86,8 +86,13 @@ name = "Use Extension Kerning";
 value = 1;
 },
 {
+disabled = 1;
 name = vendorID;
 value = " ";
+},
+{
+name = "Propagate Anchors";
+value = 0;
 }
 );
 date = "2021-10-30 02:09:59 +0000";
@@ -3942,7 +3947,6 @@ name = Italic;
 userData = {
 GSCornerRadius = 30;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -4211,7 +4215,7 @@ GSCornerRadius = 28;
 {
 axesValues = (
 400,
-60,
+75,
 0
 );
 customParameters = (
@@ -4342,7 +4346,7 @@ GSCornerRadius = 35;
 {
 axesValues = (
 400,
-140,
+125,
 0
 );
 customParameters = (
@@ -4580,7 +4584,7 @@ pos = 1363;
 },
 {
 over = 31;
-pos = 852;
+pos = 1051;
 },
 {
 over = -28;
@@ -4820,7 +4824,7 @@ weightClass = 700;
 {
 axesValues = (
 300,
-60,
+75,
 0
 );
 customParameters = (
@@ -4853,7 +4857,7 @@ widthClass = 3;
 {
 axesValues = (
 400,
-60,
+75,
 0
 );
 customParameters = (
@@ -4885,7 +4889,7 @@ widthClass = 3;
 {
 axesValues = (
 500,
-60,
+75,
 0
 );
 customParameters = (
@@ -4917,7 +4921,7 @@ widthClass = 3;
 {
 axesValues = (
 600,
-60,
+75,
 0
 );
 customParameters = (
@@ -4949,7 +4953,7 @@ widthClass = 3;
 {
 axesValues = (
 700,
-60,
+75,
 0
 );
 customParameters = (
@@ -4982,7 +4986,7 @@ widthClass = 3;
 {
 axesValues = (
 300,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -5015,7 +5019,7 @@ widthClass = 4;
 {
 axesValues = (
 400,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -5044,7 +5048,7 @@ widthClass = 4;
 {
 axesValues = (
 500,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -5075,7 +5079,7 @@ widthClass = 4;
 {
 axesValues = (
 600,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -5108,7 +5112,7 @@ widthClass = 4;
 {
 axesValues = (
 700,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -5142,7 +5146,7 @@ widthClass = 4;
 {
 axesValues = (
 400,
-140,
+125,
 0
 );
 customParameters = (
@@ -5174,7 +5178,7 @@ widthClass = 7;
 {
 axesValues = (
 300,
-140,
+125,
 0
 );
 customParameters = (
@@ -5210,7 +5214,7 @@ widthClass = 7;
 {
 axesValues = (
 500,
-140,
+125,
 0
 );
 customParameters = (
@@ -5246,7 +5250,7 @@ widthClass = 7;
 {
 axesValues = (
 600,
-140,
+125,
 0
 );
 customParameters = (
@@ -5282,7 +5286,7 @@ widthClass = 7;
 {
 axesValues = (
 700,
-140,
+125,
 0
 );
 customParameters = (
@@ -5319,7 +5323,7 @@ widthClass = 7;
 {
 axesValues = (
 400,
-120,
+122.5,
 0
 );
 customParameters = (
@@ -5341,8 +5345,8 @@ value = "16";
 }
 );
 instanceInterpolations = {
-"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
-master01 = 0.5;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.9;
+master01 = 0.1;
 };
 isItalic = 1;
 linkStyle = SemiExpanded;
@@ -5352,7 +5356,7 @@ widthClass = 7;
 {
 axesValues = (
 300,
-120,
+122.5,
 0
 );
 customParameters = (
@@ -5374,11 +5378,10 @@ value = "16";
 }
 );
 instanceInterpolations = {
-"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = -0.04167;
-"7904EAEE-2B64-409E-B923-0048172372BE" = 0.875;
-"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.30556;
-"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.19444;
-master01 = 0.05556;
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = -0.17328;
+"7904EAEE-2B64-409E-B923-0048172372BE" = 0.48017;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.79655;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.10345;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Light";
@@ -5389,7 +5392,7 @@ widthClass = 7;
 {
 axesValues = (
 500,
-120,
+122.5,
 0
 );
 customParameters = (
@@ -5411,9 +5414,11 @@ value = "16";
 }
 );
 instanceInterpolations = {
-"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
-"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
-master01 = 0.16667;
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.32707;
+"7904EAEE-2B64-409E-B923-0048172372BE" = -0.01879;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.81095;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.08905;
+master01 = -0.03018;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Medium";
@@ -5424,7 +5429,7 @@ widthClass = 7;
 {
 axesValues = (
 600,
-120,
+122.5,
 0
 );
 customParameters = (
@@ -5446,11 +5451,11 @@ value = "16";
 }
 );
 instanceInterpolations = {
-"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.65278;
-"7904EAEE-2B64-409E-B923-0048172372BE" = -0.04167;
-"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.47222;
-"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.02778;
-master01 = -0.05556;
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.64259;
+"7904EAEE-2B64-409E-B923-0048172372BE" = -0.07224;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.715;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.185;
+master01 = -0.10035;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Semibold";
@@ -5461,7 +5466,7 @@ widthClass = 7;
 {
 axesValues = (
 700,
-120,
+122.5,
 0
 );
 customParameters = (
@@ -5483,11 +5488,11 @@ value = "16";
 }
 );
 instanceInterpolations = {
-"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.01667;
-"7904EAEE-2B64-409E-B923-0048172372BE" = 0.05;
-"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.18889;
-"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.31111;
-master01 = 0.05556;
+"2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.9581;
+"7904EAEE-2B64-409E-B923-0048172372BE" = -0.12569;
+"8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.61906;
+"E06D8587-1A71-4EC2-BD94-397D882F5FC1" = -0.28094;
+master01 = -0.17053;
 };
 isBold = 1;
 isItalic = 1;

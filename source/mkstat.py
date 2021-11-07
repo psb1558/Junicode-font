@@ -6,7 +6,7 @@ whichFont = "both"
 if len(sys.argv) > 1:
     whichFont = sys.argv[1]
 
-inRomanFont =   "JunicodeTwoBetaVF-RomanVF.ttf"
+inRomanFont =   "JunicodeTwoBetaVFVF.ttf"
 outRomanFont =  "JunicodeTwoBetaVF-Roman.ttf"
 inItalicFont =   "JunicodeTwoBetaVF-ItalicVF.ttf"
 outItalicFont =  "JunicodeTwoBetaVF-Italic.ttf"
@@ -56,7 +56,7 @@ format2RomanAxes = [
     dict(
         tag="ital",
         name="Italic",
-        values=[dict(value=0, name="Roman", linkedValue=1, flags=0x2)]
+        values=[dict(value=0, name="Italic", linkedValue=1, flags=0x2)]
     )
 ]
 
@@ -73,32 +73,33 @@ if whichFont == "italic" or whichFont == "both":
     ttfont = ttLib.TTFont(inItalicFont)
     builder.buildStatTable(ttfont,format2ItalicAxes)
     # Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).
-    ttfont['name'].setName("JunicodeTwoBetaVFItalic", 25, 3, 1, 0x409)
+#    ttfont['name'].setName("JunicodeTwoBetaVF", 25, 3, 1, 0x409)
+# Glyphs takes care of the naming table now.
     # Cycle through fvar, getting instance names, building a correct postscriptNameID,
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
-    for inst in ttfont['fvar'].instances:
-        subfamilyName = ttfont['name'].getName(
-            inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-        inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoVFBetaItalic" + "-" + subfamilyName,
-                                                   platforms=((3,1,0x409),))
+#    for inst in ttfont['fvar'].instances:
+#        subfamilyName = ttfont['name'].getName(
+#            inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
+#        inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoBetaVF" + "-" + subfamilyName,
+#                                                   platforms=((3,1,0x409),))
     # We don't need platform 1 names. If there are any, remove them.
-    ttfont['name'].removeNames(platformID=1)
+#    ttfont['name'].removeNames(platformID=1)
     ttfont.save(outItalicFont)
 
 if whichFont == "roman" or whichFont == "both":
     ttfont = ttLib.TTFont(inRomanFont)
     builder.buildStatTable(ttfont,format2RomanAxes)
     # Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).
-    ttfont['name'].setName("JunicodeTwoBetaVFRoman", 25, 3, 1, 0x409)
+#    ttfont['name'].setName("JunicodeTwoBetaVF", 25, 3, 1, 0x409)
     # Cycle through fvar, getting instance names, building a correct postscriptNameID,
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
-    for inst in ttfont['fvar'].instances:
-        subfamilyName = ttfont['name'].getName(
-            inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-        inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoVFBetaRoman" + "-" + subfamilyName,
-                                                           platforms=((3,1,0x409),))
+#    for inst in ttfont['fvar'].instances:
+#        subfamilyName = ttfont['name'].getName(
+#            inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
+#        inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoVFBeta" + "-" + subfamilyName,
+#                                                           platforms=((3,1,0x409),))
     # We don't need platform 1 names. If there are any, remove them.
-    ttfont['name'].removeNames(platformID=1)
+#    ttfont['name'].removeNames(platformID=1)
     ttfont.save(outRomanFont)

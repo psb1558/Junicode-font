@@ -444,6 +444,7 @@ tag = aalt;
 {
 code = "lookup i_dot {
   sub [ i j ]' @combining_above by [ dotlessi jdotless ] ;
+  sub @double_diacritics [ i j ]' by [ dotlessi jdotless ] ;
 } i_dot ;
 
 lookup UpperCaseDiacritics {
@@ -3172,7 +3173,6 @@ sub dotacutecomb by dotacutecomb.sc;
 sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.sc;
 sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.sc;
 sub dialytikatonoscomb by dialytikatonoscomb.sc;
-sub tonos by tonos.sc;
 sub dieresiscomb_perispomenicomb.loclELL by dieresiscomb_perispomenicomb.loclELL.sc;
 sub circumflexacutecomb by circumflexacutecomb.sc;
 sub circumflexgravecomb by circumflexgravecomb.sc;
@@ -3793,7 +3793,6 @@ sub dieresiscomb_perispomenicomb.loclELL by dieresiscomb_perispomenicomb.loclELL
 sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.sc;
 sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.sc;
 sub dialytikatonoscomb by dialytikatonoscomb.sc;
-sub tonos by tonos.sc;
 sub dieresiscomb by dieresiscomb.sc;
 sub dotaccentcomb by dotaccentcomb.sc;
 sub gravecomb by gravecomb.sc;
@@ -4420,10 +4419,10 @@ code = "lookup kern_Vertical_Kerning {
 
 lookup kern_Contextual_Kerning {
   lookupflag 0 ;
-    @enohu = [  n o u ] ;
-    @eye = [  dotlessi i ] ;
-    @ayee = [  a e ] ;
-    @essess = [  s ] ;
+    @enohu = [ n o u ] ;
+    @eye = [ dotlessi i ] ;
+    @ayee = [ a e ] ;
+    @essess = [ s ] ;
     pos @enohu @double_diacritics' <-100 0 0 0> @eye ;
     pos @ayee @double_diacritics' lookup Contextual_Kerning_01  @eye ;
     pos @enohu @double_diacritics' lookup Contextual_Kerning_02  @essess ;

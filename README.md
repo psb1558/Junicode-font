@@ -54,6 +54,14 @@ An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to 
 
 # Changes
 
+Junicode Two Beta (1.027):
+
+* Completed Greek Basic and Polytonic sets
+
+* Kerned capitals in italic face (discarding old kerning)
+
+* Corrected anchor problem preventing export of variable italic
+
 Junicode Two Beta (1.026):
 
 * Added Greek (mostly complete in roman), including small caps

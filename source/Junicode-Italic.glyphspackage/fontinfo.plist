@@ -111,7 +111,7 @@ name = "Propagate Anchors";
 value = 0;
 }
 );
-date = "2021-11-14 19:43:28 +0000";
+date = "2021-11-14 21:30:04 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -569,6 +569,10 @@ lookup grek_Composed {
   sub Upsilon brevecomb by Upsilonvrachy ;
   sub Upsilon macroncomb by Upsilonmacron ;
 
+# Rho:
+
+  sub Rho commareversedabovecomb.loclELL by Rhodasia ;
+
 # alpha:
 
   sub alpha commaabovecomb.loclELL ypogegrammenicomb by alphapsiliypogegrammeni ;
@@ -710,6 +714,11 @@ lookup grek_Composed {
   sub upsilon dialytikatonoscomb by upsilondialytikaoxia ;
   sub upsilon dieresiscomb_perispomenicomb.loclELL by upsilondialytikaperispomeni ;
   sub upsilon dieresiscomb.loclELL by upsilondieresis ;
+
+#rho:
+
+  sub rho commaabovecomb.loclELL by rhopsili ;
+  sub rho commareversedabovecomb.loclELL by rhodasia ;
 
 } grek_Composed ;
 ";
@@ -6716,5 +6725,5 @@ userData = {
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 29;
+versionMinor = 30;
 }

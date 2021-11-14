@@ -127,23 +127,25 @@
 
 \item[E] \hyperlink{SectionE}{Alphabetic Variants}
 
-\item[F] \hyperlink{SectionF}{Punctuation}
+\item[F] \hyperlink{SectionF}{Greek}
 
-\item[G] \hyperlink{SectionG}{Abbreviations}
+\item[G] \hyperlink{SectionG}{Punctuation}
 
-\item[H] \hyperlink{SectionH}{Combining Marks}
+\item[H] \hyperlink{SectionH}{Abbreviations}
 
-\item[I] \hyperlink{SectionI}{Currency and Weights}
+\item[I] \hyperlink{SectionI}{Combining Marks}
 
-\item[J] \hyperlink{SectionJ}{Gothic}
+\item[J] \hyperlink{SectionJ}{Currency and Weights}
 
-\item[K] \hyperlink{SectionK}{Runic}
+\item[K] \hyperlink{SectionK}{Gothic}
 
-\item[L] \hyperlink{SectionL}{Ligatures and Digraphs}
+\item[L] \hyperlink{SectionL}{Runic}
 
-\item[M] \hyperlink{req}{Required Features}
+\item[M] \hyperlink{SectionM}{Ligatures and Digraphs}
 
-\item[N] \hyperlink{nonmufi}{Non-MUFI Code Points}
+\item[N] \hyperlink{req}{Required Features}
+
+\item[O] \hyperlink{nonmufi}{Non-MUFI Code Points}
 \end{itemize}
 
 \hypertarget{intro}{}\section{Introduction}
@@ -676,7 +678,46 @@ ligature with small cap \textLetterExample{\textsc{n}} or
 Be sure to apply \textSourceText{smcp}, \textSourceText{cv99} and
 \textSourceText{hlig} to both components of the ligature.
 
-\hypertarget{SectionF}{}\section{F. Punctuation}
+\hypertarget{SectionF}{}\section{F. Greek}
+Junicode has two distinct styles of Greek. In the roman face, it is upright and
+modern, especially designed to harmonize with Junicode's Latin letters. In the
+italic, it is slanted and old-style, being based on the eighteenth-century
+Greek type designed by Alexander Wilson and used by the Foulis Press in
+Glasgow. Both Greek styles include the full polytonic and monotonic character
+sets: αβγδεζ \textit{αβγδεζ}.
+
+To set Greek properly (especially polytonic text) requires that both \textSourceText{locl}
+and \textSourceText{ccmp} be active, as they should be by default in most
+text processing applications (but in MS Word they must be explicitly enabled
+by checking the ``kerning'' box on the ``Advanced'' tab of the Font Dialog).
+
+Modern monotonic Greek should be set using characters from the Unicode “Greek
+and Coptic” range (U+0370–U+03FF). When text is set in all caps, Junicode
+will suppress accents automatically (except in single-letter words, for which
+you must substitute accentless forms manually). This does not happen with text
+using visually identical letters from the ``Greek Extended'' range (U+0F00–U+1FFF).
+Thus when setting polytonic Greek, one should use (for example) \textLetterExample{Ά}
+(U+1FBB), not \textLetterExample{Ά} (U+0386),
+though they look the same.
+
+One can set polytonic Greek either by entering code points from the Greek
+Extended range or by entering sequences of base characters and diacritics.
+When using the latter method, you must first make sure the language in your
+application is set to Greek, and then enter characters in canonical order
+(that is, the sequence defined by Unicode as equivalent to the composite
+character). The order is as follows: 1. base character; 2. diacritics
+positioned either above or in front of the base character, working from left
+to right or bottom to top; 3. the \textit{ypogegrammeni} (U+0345), or for
+capitals, if you prefer, the \textit{prosgegrammeni} (U+1FBE).
+
+For example, the sequence ω (U+03C9) ◌̓ (U+0313) ◌́ (U+0301) ◌ͅ (U+0345) will
+produce \textLetterExample{ᾤ}. Substitute capital Ω (U+03A9) and the result will
+be \textLetterExample{ᾬ}. If you
+prefer a different result, place U+034F \textUName{combining grapheme joiner} somewhere
+in the sequence of combining marks---for example, before the \textit{ypogegrammeni}
+to make \textLetterExample{Ὤ͏ͅ}.
+
+\hypertarget{SectionG}{}\section{G. Punctuation}
 MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
 either of two ways: all are indexed variants of \textLetterExample{.} (period), and all are associated with the Unicode marks of
 punctuation they most resemble (but it should not be inferred that the medieval marks are semantically identical with
@@ -744,7 +785,7 @@ this purpose. Junicode defines it as a variant of the asterisk---the most common
 \textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
 1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, U+2E4E.
 
-\hypertarget{SectionG}{}\section{G. Abbreviations}
+\hypertarget{SectionH}{}\section{H. Abbreviations}
 \subsection[38. cv80 {}-- Variant of ꝝ (U+A75D, rum
 abbreviation)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv80} -- Variant of ꝝ (U+A75D, rum
 abbreviation)}
@@ -773,7 +814,7 @@ semicolon, but as it is semantically the same as U+A76B, it is preferable to use
 character with this feature. \textSourceText{[2]} produces a subscript version of
 the character, a common variant in printed books.
 
-\hypertarget{SectionH}{}\section{H. Combining Marks}
+\hypertarget{SectionI}{}\section{I. Combining Marks}
 \hypertarget{cv84}{}\subsection[42. cv84 {}-- MUFI combining marks (variants of ◌̄
 U+0304)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of U+0304)}
 MUFI encodes a number of combining marks in the PUA (with code points between E000 and F8FF), but when these characters
@@ -1009,7 +1050,7 @@ d)}
 \subsection[48. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (U+0308)}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
-\textLetterExample{\"a}.
+\textLetterExample{\cvd{88}{\"a}}.
 
 \subsection[49. cv89 {}-- Variant of ◌̅ (U+0305, combining
 overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅ (U+0305,
@@ -1034,7 +1075,7 @@ below (U+032E)}
 1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
 to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
 
-\hypertarget{SectionI}{}\section{I. Currency and Weights}
+\hypertarget{SectionJ}{}\section{J. Currency and Weights}
 \subsection[53. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
 sign)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv93} -- Variants of {\textcurrency} (U+0044, generic
 currency sign)}
@@ -1120,14 +1161,14 @@ F2EE, F2EF, pound signs from various locales.
 \textSourceText{cv98} -- Variant of ℥ (U+2125, Ounce sign)}
 1=\cvd{98}{℥}. Same as MUFI U+F2FD, Script ounce sign.
 
-\hypertarget{SectionJ}{}\section{J. Gothic}
+\hypertarget{SectionK}{}\section{K. Gothic}
 \subsection[59. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss19} -- Latin to Gothic Transliteration}
 Produces Gothic letters from Latin: \revthorn{Warþ þan in dagans jainans} $\rightarrow $
 {\addfontfeature{StylisticSet=19}Warþ þan in dagans
 jainans}. In web pages, the letters will be searchable as their Latin equivalents.
 
-\hypertarget{SectionK}{}\section[K. Runic]{K. Runic}
+\hypertarget{SectionL}{}\section[L. Runic]{K. Runic}
 \subsection[60. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss12} -- Early English Futhorc}
 Changes Latin letters to their equivalents in the early English futhorc. Because of the variability of the runic
@@ -1157,7 +1198,7 @@ In combination with \textSourceText{ss14}, converts long branch (the default for
 Produces mirrored runes, e.g. {\addfontfeature{StylisticSet=12}ABCDEFG $\rightarrow $ \addfontfeature{Style=mirrored}GFEDCBA}.
 This feature cannot change the direction of text.
 
-\hypertarget{SectionL}{}\section[L. Ligatures and Digraphs]{L. Ligatures and Digraphs}
+\hypertarget{SectionM}{}\section[M. Ligatures and Digraphs]{L. Ligatures and Digraphs}
 \subsection[65. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{hlig} -- Historic Ligatures}
 
@@ -1401,7 +1442,7 @@ diacritic combination not covered by MUFI (e.g. \textLetterExample{ꜵ̀}), you 
 Without U+034F: \textLetterExample{\addfontfeature{StylisticSet=17}aō}.
 With U+034F: \textLetterExample{\addfontfeature{StylisticSet=17}ao͏̄}.
 
-\hypertarget{req}{}\section{M. Required Features}
+\hypertarget{req}{}\section{N. Required Features}
 Required features, which provide some of the font’s most basic functionality---ligatures, support for
 other features, kerning, and more---include \textSourceText{ccmp} (Glyph Composition/Decomposition),
 \textSourceText{calt} (Contextual Alternates), \textSourceText{liga} (Standard Ligatures),
@@ -1412,7 +1453,7 @@ Cmd-D: enable Kerning, Standard Ligatures, and Contextual Alternates, and the ot
 but in most other applications they are enabled by default.
 
 
-\hypertarget{nonmufi}{}\section{N. Non-MUFI Code Points}
+\hypertarget{nonmufi}{}\section{O. Non-MUFI Code Points}
 Characters in Junicode that do not have Unicode code points should be accessed via OpenType
 features whenever possible. MUFI/PUA code points should be used only in applications that do not support OpenType, or
 that support it only partially (for example, MS Word). For certain characters that lack either Unicode or MUFI code

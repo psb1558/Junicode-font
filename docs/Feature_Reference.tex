@@ -691,31 +691,38 @@ and \textSourceText{ccmp} be active, as they should be by default in most
 text processing applications (but in MS Word they must be explicitly enabled
 by checking the ``kerning'' box on the ``Advanced'' tab of the Font Dialog).
 
-Modern monotonic Greek should be set using characters from the Unicode “Greek
-and Coptic” range (U+0370–U+03FF). When text is set in all caps, Junicode
-will suppress accents automatically (except in single-letter words, for which
-you must substitute accentless forms manually). This does not happen with text
-using visually identical letters from the ``Greek Extended'' range (U+0F00–U+1FFF).
+Modern monotonic Greek should be set using only characters from the Unicode “Greek
+and Coptic” range (U+0370–U+03FF). When monotonic text is set in all caps, Junicode
+suppresses accents automatically (except in single-letter words, for which
+you must substitute unaccented forms manually). This substitution is not
+performed on text containing visually identical letters from the ``Greek Extended''
+range (U+0F00–U+1FFF).
 Thus when setting polytonic Greek, one should use (for example) \textLetterExample{Ά}
 (U+1FBB), not \textLetterExample{Ά} (U+0386),
 though they look the same.
 
-One can set polytonic Greek either by entering code points from the Greek
+You can set polytonic Greek either by entering code points from the Greek
 Extended range or by entering sequences of base characters and diacritics.
-When using the latter method, you must first make sure the language in your
-application is set to Greek, and then enter characters in canonical order
+When using the latter method, you must first make sure the language for the
+text in question (whether a single word, a short passage, or a complete
+document) is set to Greek, and then enter characters in canonical order
 (that is, the sequence defined by Unicode as equivalent to the composite
 character). The order is as follows: 1. base character; 2. diacritics
 positioned either above or in front of the base character, working from left
 to right or bottom to top; 3. the \textit{ypogegrammeni} (U+0345), or for
 capitals, if you prefer, the \textit{prosgegrammeni} (U+1FBE).
 
-For example, the sequence ω (U+03C9) ◌̓ (U+0313) ◌́ (U+0301) ◌ͅ (U+0345) will
-produce \textLetterExample{ᾤ}. Substitute capital Ω (U+03A9) and the result will
-be \textLetterExample{ᾬ}. If you
+For example, the sequence ω (U+03C9) ◌̓ (U+0313) ◌́ (U+0301) ◌ͅ (U+0345)
+produces \textLetterExample{ᾤ}. Substitute capital Ω (U+03A9) and the result is
+\textLetterExample{ᾬ}. If you
 prefer a different result, place U+034F \textUName{combining grapheme joiner} somewhere
 in the sequence of combining marks---for example, before the \textit{ypogegrammeni}
 to make \textLetterExample{Ὤ͏ͅ}.
+
+\subsection[26. ss03 {}-- Alternate Greek]{\stepcounter{Feature}{\theFeature}.
+\textSourceText{ss03} -- Alternate Greek}
+Provides alternate shapes of β γ θ π φ χ ω: {\addfontfeature{StylisticSet=3}β γ θ π φ χ ω}.
+These are chiefly useful in linguistics, as they harmonize with IPA characters.
 
 \hypertarget{SectionG}{}\section{G. Punctuation}
 MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
@@ -730,16 +737,16 @@ have PUA encodings, but have since that release been assigned Unicode code point
 U+2E4D), medieval comma (⹌~U+2E4C), \textit{punctus elevatus} (⹎ U+2E4E), \textit{virgula suspensiva}
 (⹊ U+2E4A), triple dagger (⹋ U+2E4B).
 
-\subsection[26. ss18 {}-- Old{}-Style Punctuation Spacing]{\stepcounter{Feature}{\theFeature}.
+\subsection[27. ss18 {}-- Old{}-Style Punctuation Spacing]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss18} -- Old-Style Punctuation Spacing}
 Colons, semicolons, parentheses, quotation marks and several other glyphs are spaced as in early printed books.
 
-\subsection[27. cv69 {}-- Variants of ⁊⹒ (U+204A / U+2E52, Tironian
+\subsection[28. cv69 {}-- Variants of ⁊⹒ (U+204A / U+2E52, Tironian
 nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of ⁊⹒
 (U+204A / U+2E52, Tironian nota)}
 1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}.
 
-\subsection[28. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv70} --
+\subsection[29. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv70} --
   Variants of . (period)}
 1=\cvd{70}{.}, 2=\cvd[1]{70}{.}, 3=\cvd[2]{70}{.}, 4=\cvd[3]{70}{.}, 5=\cvd[4]{70}{.}, 6=\cvd[5]{70}{.},
 7=\cvd[6]{70}{.}, 8=\cvd[7]{70}{.}, 9=\cvd[8]{70}{.}, 10=\cvd[9]{70}{.}, 11=\cvd[10]{70}{.}, 12=\cvd[11]{70}{.},
@@ -748,50 +755,50 @@ nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of 
 feature provides access to all non-Unicode MUFI punctuation marks. Some of them are available via other features (see
 below).
 
-\subsection[29. cv71 {}-- Variant of {\textperiodcentered} (U+00B7, middle dot)]{\stepcounter{Feature}{\theFeature}.
+\subsection[30. cv71 {}-- Variant of {\textperiodcentered} (U+00B7, middle dot)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv71} -- Variant of {\textperiodcentered} (U+00B7, middle dot)}
 1=\cvd{71}{\textperiodcentered} (\textit{distinctio}).
 
-\subsection[30. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv72} --
+\subsection[31. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv72} --
 Variants of , (comma)}
 1=\cvd{72}{,}, 2=\cvd[1]{72}{,}.
 
-\subsection[31. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv73} --
+\subsection[32. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv73} --
 Variants of ; (semicolon)}
 1=\cvd{73}{;} (\textit{punctus versus}), 2=\cvd[1]{73}{;}, 3=\cvd[2]{73}{;}, 4=\cvd[3]{73}{;}, 5=\cvd[4]{73}{;}.
 
-\subsection[32. cv74 {}-- Variants of ⹎ (U+2E4E, punctus elevatus)]{\stepcounter{Feature}{\theFeature}.
+\subsection[33. cv74 {}-- Variants of ⹎ (U+2E4E, punctus elevatus)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv74} -- Variants of ⹎ (U+2E4E, \textit{punctus elevatus})}
 1=\cvd{74}{⹎}, 2=\cvd[1]{74}{⹎}, 3=\cvd[2]{74}{⹎}, 4=\cvd[3]{74}{⹎} (\textit{punctus flexus}).
 
-\subsection[33. cv75 {}-- Variant of ! (exclamation mark)]{\stepcounter{Feature}{\theFeature}.
+\subsection[34. cv75 {}-- Variant of ! (exclamation mark)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
 1=\cvd{75}{!} (\textit{punctus exclamativus}).
 
-\subsection[34. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv76}
+\subsection[35. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv76}
 -- Variants of ? (question mark)}
 1=\cvd{76}{?}, 2=\cvd[1]{76}{?}, 3=\cvd[2]{76}{?}. Shapes of the \textit{punctus interrogativus}.
 
-\subsection[35. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv77}
+\subsection[36. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv77}
 -- Variant of \~{} (ASCII tilde)}
 1=\cvd{77}{\~{}} (same as MUFI U+F1F9, ``wavy line'').
 
-\subsection[36. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv78} --
+\subsection[37. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv78} --
 Variant of * (asterisk)}
 1=\cvd{78}{*}. MUFI defines U+F1EC as a \textit{signe de renvoi}. Manuscripts employ a number of shapes (of which this is one) for
 this purpose. Junicode defines it as a variant of the asterisk---the most common modern \textit{signe de renvoi}.
 
-\subsection[37. cv79 {}-- Variants of / (slash)]{\stepcounter{Feature}{\theFeature}.
+\subsection[38. cv79 {}-- Variants of / (slash)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
 1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, U+2E4E.
 
 \hypertarget{SectionH}{}\section{H. Abbreviations}
-\subsection[38. cv80 {}-- Variant of ꝝ (U+A75D, rum
+\subsection[39. cv80 {}-- Variant of ꝝ (U+A75D, rum
 abbreviation)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv80} -- Variant of ꝝ (U+A75D, rum
 abbreviation)}
 1=\cvd{80}{ꝝ}.
 
-\subsection[39. cv81 {}-- Variants of ◌͛ (U+035B, combining zigzag
+\subsection[40. cv81 {}-- Variants of ◌͛ (U+035B, combining zigzag
 above)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv81} -- Variants of ◌͛ (U+035B, combining
 zigzag above)}
 1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
@@ -801,13 +808,13 @@ default in most apps), variant forms of \textSourceText{cv81[2]} will be used wi
 ({\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}), \textSourceText{smcp} for forms that harmonize with small caps
   (\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}).
 
-\subsection[40. cv82 {}-- Variants of spacing ꝰ (U+A770)]{\stepcounter{Feature}{\theFeature}.
+\subsection[41. cv82 {}-- Variants of spacing ꝰ (U+A770)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv82} -- Variants of spacing ꝰ (U+A770)}
 1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
 U+F1A6). MUFI also has an uppercase baseline \textit{{}-us} abbreviation (U+F1A5), but as there is no uppercase version
 of U+A770 to pair it with, it is indexed separately here.
 
-\subsection[41. cv83 {}-- Variants of ꝫ (U+A76B, {}``et{}'' abbreviation)]{\stepcounter{Feature}{\theFeature}.
+\subsection[42. cv83 {}-- Variants of ꝫ (U+A76B, {}``et{}'' abbreviation)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv83} -- Variants of ꝫ (U+A76B, ``et'' abbreviation)}
 1=\cvd{83}{ꝫ}, 2=\cvd[1]{83}{ꝫ}. \textSourceText{[1]} is identical in shape to a
 semicolon, but as it is semantically the same as U+A76B, it is preferable to use that
@@ -815,7 +822,7 @@ character with this feature. \textSourceText{[2]} produces a subscript version o
 the character, a common variant in printed books.
 
 \hypertarget{SectionI}{}\section{I. Combining Marks}
-\hypertarget{cv84}{}\subsection[42. cv84 {}-- MUFI combining marks (variants of ◌̄
+\hypertarget{cv84}{}\subsection[43. cv84 {}-- MUFI combining marks (variants of ◌̄
 U+0304)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of U+0304)}
 MUFI encodes a number of combining marks in the PUA (with code points between E000 and F8FF), but when these characters
 are entered directly, they can interfere with searching and accessibility, and some important applications fail to
@@ -927,7 +934,7 @@ would be impossible to produce the sequence
 37=\cvd[37]{84}{◌͏̄}
 \end{multicols}
 
-\hypertarget{ss10}{}\subsection[43. ss10 {}-- Entity References for Combining Marks]{\stepcounter{Feature}{\theFeature}.
+\hypertarget{ss10}{}\subsection[44. ss10 {}-- Entity References for Combining Marks]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss10} -- Entity References for Combining Marks}
 Instead of \textSourceText{\hyperlink{cv84}{cv84}} for representing non-Unicode combining marks, some users may
 wish to use XML/HTML-style entities. When \textSourceText{ss10} is turned on (preferably for the entire
@@ -1015,7 +1022,7 @@ attention to them, since they will likely have their own method of representing 
 \textstyleEntityRef{◌\&\_thorn;}}
 \end{multicols}
 
-\subsection[44. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
+\subsection[45. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}
 and combining marks ◌ͣ (U+0363), ◌ͤ (U+0364), \cvd[17]{84}{◌͏̄}
 (U+0304\slash\textSourceText{cv84[18]}), ◌ͦ (U+0366), ◌ͬ (U+036C), ◌ᷢ (U+1DE2),
@@ -1034,35 +1041,35 @@ the other base characters). Examples:
 \textLetterExample{mͤ}, \textLetterExample{\'{h}}) are not affected. It will therefore probably be safe
 to apply this feature to the whole text if it is needed anywhere.
 
-\subsection[45. cv85 {}-- Variant of ◌ᷓ (U+1DD3, combining open a)]{\stepcounter{Feature}{\theFeature}.
+\subsection[46. cv85 {}-- Variant of ◌ᷓ (U+1DD3, combining open a)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.
 
-\subsection[46. cv86 {}-- Variant of ◌ᷘ U(U+1DD8, combining insular d)]{%
+\subsection[47. cv86 {}-- Variant of ◌ᷘ U(U+1DD8, combining insular d)]{%
 \stepcounter{Feature}{\theFeature}. \textSourceText{cv86} -- Variant of ◌ᷘ (U+1DD8, combining insular
 d)}
 1=\cvd{86}{◌ᷘ}.
 
-\subsection[47. cv87 {}-- Variant of ◌ᷣ (U+1DE3, combining r rotunda)]{\stepcounter{Feature}{\theFeature}.
+\subsection[48. cv87 {}-- Variant of ◌ᷣ (U+1DE3, combining r rotunda)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv87} -- Variant of ◌ᷣ (U+1DE3, combining r rotunda)}
 1=\cvd{87}{◌ᷣ}.
 
-\subsection[48. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
+\subsection[49. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (U+0308)}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
 \textLetterExample{\cvd{88}{\"a}}.
 
-\subsection[49. cv89 {}-- Variant of ◌̅ (U+0305, combining
+\subsection[50. cv89 {}-- Variant of ◌̅ (U+0305, combining
 overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅ (U+0305,
 combining overline)}
 1=\cvd{89}{◌̅}.
 
-%\subsection[50. cv90 {}-- Variants of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
+%\subsection[51. cv90 {}-- Variants of ◌̄  (U+0304, combining macron)]{\stepcounter{Feature}{\theFeature}.
 %\textSourceText{cv}\textSourceText{90} -- Variants of ◌̄ (U+0304, combining macron)}
 %1=\cvd{90}{◌̄}, 2=\cvd[1]{90}{◌̄}. These are used for abbreviations in manuscripts and
 %early printed books.
 %
-\subsection[51. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
+\subsection[52. cv91 {}-- Variants of short horizontal stroke (U+0335)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv91} -- Variants of short horizontal stroke (U+0335)}
 1=\cvd{91}{◌̵}, 2=\cvd[1]{91}{◌̵}, 3=\cvd[2]{91}{◌̵}. This character can be used with letters with ascenders or
 descenders, e.g. \textLetterExample{\cvd{91}{d̵ b̵ {\th}̵ p̵}}. \textSourceText{cv91[1]} widens the
@@ -1070,13 +1077,13 @@ stroke, and \textSourceText{cv91[2]} and \textSourceText{[3]} offset the stroke 
 \textSourceText{calt} ``Contextual Alternates,'' this offset is performed automatically for many characters
 with ascenders and descenders, and so it should rarely be necessary to use an index with \textSourceText{cv91}.
 
-\subsection[52. cv92 {}-- Variant of breve below (U+032E)]{\stepcounter{Feature}{\theFeature}. cv92 -- Variant of breve
+\subsection[53. cv92 {}-- Variant of breve below (U+032E)]{\stepcounter{Feature}{\theFeature}. cv92 -- Variant of breve
 below (U+032E)}
 1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
 to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
 
 \hypertarget{SectionJ}{}\section{J. Currency and Weights}
-\subsection[53. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
+\subsection[54. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
 sign)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv93} -- Variants of {\textcurrency} (U+0044, generic
 currency sign)}
 
@@ -1139,67 +1146,67 @@ currency sign)}
 \noindent All of MUFI’s currency and weight symbols (those that do
 not have Unicode code points) are gathered here, but some are also variants of other currency signs (see below).
 
-\subsection[54. cv94 {}-- Variant of ℔ (U+2114)]{\stepcounter{Feature}{\theFeature}.
+\subsection[55. cv94 {}-- Variant of ℔ (U+2114)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (U+2114)}
 1=\cvd{94}{℔}. Same as MUFI U+F2EB (French Libra sign).
 
-\subsection[55. cv95 {}-- Variants of {\pounds} (U+00A3, British pound sign)]{\stepcounter{Feature}{\theFeature}.
+\subsection[56. cv95 {}-- Variants of {\pounds} (U+00A3, British pound sign)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv95} -- Variants of {\pounds} (U+00A3, British pound sign)}
 1=\cvd{95}{\pounds}, 2=\cvd[1]{95}{\pounds}, 3=\cvd[2]{95}{\pounds}, 4=\cvd[3]{95}{\pounds},
 5=\cvd[4]{95}{\pounds}, 6=\cvd[5]{95}{\pounds}. Same as MUFI U+F2EA, F2EB, F2EC, F2ED,
 F2EE, F2EF, pound signs from various locales.
 
-\subsection[56. cv96 {}-- Variant of ₰ (U+20B0, German penny sign)]{\stepcounter{Feature}{\theFeature}.
+\subsection[57. cv96 {}-- Variant of ₰ (U+20B0, German penny sign)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv96} -- Variant of ₰ (U+20B0, German penny sign)}
 1=\cvd{96}{₰}. Same as MUFI U+F2F5.
 
-\subsection[57. cv97 {}-- Variant of ƒ (U+0192, florin)]{\stepcounter{Feature}{\theFeature}.
+\subsection[58. cv97 {}-- Variant of ƒ (U+0192, florin)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv97} -- Variant of ƒ (U+0192, florin)}
 1=\cvd{97}{ƒ}. Same as MUFI U+F2E8.
 
-\subsection[58. cv98 {}-- Variant of ℥ (U+2125, Ounce sign)]{\stepcounter{Feature}{\theFeature}.
+\subsection[59. cv98 {}-- Variant of ℥ (U+2125, Ounce sign)]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv98} -- Variant of ℥ (U+2125, Ounce sign)}
 1=\cvd{98}{℥}. Same as MUFI U+F2FD, Script ounce sign.
 
 \hypertarget{SectionK}{}\section{K. Gothic}
-\subsection[59. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
+\subsection[60. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss19} -- Latin to Gothic Transliteration}
 Produces Gothic letters from Latin: \revthorn{Warþ þan in dagans jainans} $\rightarrow $
 {\addfontfeature{StylisticSet=19}Warþ þan in dagans
 jainans}. In web pages, the letters will be searchable as their Latin equivalents.
 
 \hypertarget{SectionL}{}\section[L. Runic]{K. Runic}
-\subsection[60. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
+\subsection[61. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss12} -- Early English Futhorc}
 Changes Latin letters to their equivalents in the early English futhorc. Because of the variability of the runic
 alphabet, this method of transliteration may not produce the result you want. In that case, it may be necessary to
 manually edit the result. fisc flodu ahof $\rightarrow $ {\addfontfeature{StylisticSet=12}fisc flodu ahof}.
 
-\subsection[61. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss13} -- Elder
+\subsection[62. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss13} -- Elder
 Futhark}
 Changes Latin letters to their equivalents in the Elder Futhark. Because of the variability of the runic alphabet, this
 method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit the
 result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=13}ABCDEFG}.
 
-\subsection[62. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss14} -- Younger
+\subsection[63. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss14} -- Younger
 Futhark}
 Changes Latin letters to their equivalents in the Younger Futhark. Because of the variability of the runic alphabet,
 this method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit
 the result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=14}ABCDEFG}.
 
-\subsection[63. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss15} --
+\subsection[64. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss15} --
 Long Branch to Short Twig}
 In combination with \textSourceText{ss14}, converts long branch (the default for the Younger Futhark) to short twig runes:
 {\addfontfeature{StylisticSet=14}{ABCDEFG $\rightarrow $
 \addfontfeature{StylisticSet=15}ABCDEFG}}.
 
-\subsection[64. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{rtlm}
+\subsection[65. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{rtlm}
 -- Right to Left Mirrored Forms}
 Produces mirrored runes, e.g. {\addfontfeature{StylisticSet=12}ABCDEFG $\rightarrow $ \addfontfeature{Style=mirrored}GFEDCBA}.
 This feature cannot change the direction of text.
 
 \hypertarget{SectionM}{}\section[M. Ligatures and Digraphs]{L. Ligatures and Digraphs}
-\subsection[65. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
+\subsection[66. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{hlig} -- Historic Ligatures}
 
 Produces ligatures for combinations that should not ordinarily be rendered as
@@ -1418,13 +1425,13 @@ Notes: For \textLetterExample{\textsc{\cvd{99}{\hlig{an}}}} and
 work properly, U+017F \textLetterExample{ſ} must be entered directly, not by applying an OpenType feature to
 \textLetterExample{s}.
 
-\subsection[66. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textSourceText{dlig} --
+\subsection[67. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textSourceText{dlig} --
 Discretionary Ligatures}
 Produces lesser-used ligatures, but also roman numbers, e.g.
 {\addfontfeature{Ligatures=Rare}ii, II, xi, XI}. The lesser-used ligatures:
 \textLetterExample{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, ſp, str, st, tr, tt, ty}}.
 
-\hypertarget{ss17}{}\subsection[67. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss17} -- Rare
+\hypertarget{ss17}{}\subsection[68. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss17} -- Rare
 Digraphs}
 By ``digraph'' we mean conjoined letters that represent a phonetic value: the most common examples
 for western languages are \textLetterExample{{\ae}} and \textLetterExample{{\oe}} (though these, because they

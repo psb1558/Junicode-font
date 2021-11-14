@@ -8,95 +8,15 @@ layers = (
 hints = (
 {
 horizontal = 1;
-options = 4;
-place = (-472, 148);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (875, 140);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-472, 17);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-place = (875, 49);
-type = TTShift;
-},
-{
-horizontal = 1;
-place = (-21, 0);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-21, 275);
-type = TTShift;
-},
-{
-horizontal = 1;
-place = (873, 0);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-place = (873, 5);
-type = TTShift;
-},
-{
-horizontal = 1;
 origin = (1,15);
-stem = -1;
-target = (1,12);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (0, 49);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,31);
-target = (1,11);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,31);
-target = (1,11);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,31);
-target = (1,11);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,11);
-target = (1,11);
-type = TTShift;
-},
-{
-horizontal = 1;
-origin = (1,12);
 type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,15);
+target = (0,11);
+type = TTShift;
 },
 {
 horizontal = 1;
@@ -107,39 +27,13 @@ type = TTStem;
 },
 {
 horizontal = 1;
-options = 4;
 origin = (1,31);
-target = (1,31);
-type = TTShift;
+type = TTSnap;
 },
 {
 horizontal = 1;
-options = 4;
-origin = (1,8);
-target = (1,8);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,15);
-target = (1,12);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,31);
-other1 = (1,28,2,14);
-target = (1,15);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (1,27);
-target = (1,27);
-type = TTShift;
+origin = (0,2);
+type = TTSnap;
 }
 );
 layerId = master01;

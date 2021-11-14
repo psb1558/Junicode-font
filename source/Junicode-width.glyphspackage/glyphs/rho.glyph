@@ -25,44 +25,21 @@ hints = (
 {
 horizontal = 1;
 options = 4;
-place = (870, 84);
+origin = (0,18);
+target = (0,11);
 type = TTStem;
 },
 {
 horizontal = 1;
-place = (-445, 0);
+options = 4;
+origin = (0,24);
+target = (0,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+origin = (0,31);
 type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,14);
-place = (870, 150);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-options = 4;
-place = (201, 84);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-22, 114);
-type = TTStem;
-},
-{
-horizontal = 1;
-place = (871, 0);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,24);
-place = (-22, 150);
-type = TTInterpolate;
 }
 );
 layerId = master01;
@@ -172,50 +149,6 @@ name = top;
 pos = (498,850);
 }
 );
-hints = (
-{
-horizontal = 1;
-options = 4;
-place = (1160, 112);
-type = TTStem;
-},
-{
-horizontal = 1;
-place = (-593.333, 2000);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,14);
-place = (1160, 200);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-options = 4;
-place = (268, 112);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-29.333, 152);
-type = TTStem;
-},
-{
-horizontal = 1;
-place = (1161.333, 0);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,24);
-place = (-29.333, 200);
-type = TTInterpolate;
-}
-);
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
 shapes = (
 {
@@ -318,50 +251,6 @@ anchors = (
 {
 name = top;
 pos = (549,850);
-}
-);
-hints = (
-{
-horizontal = 1;
-options = 4;
-place = (1740, 168);
-type = TTStem;
-},
-{
-horizontal = 1;
-place = (-890, 2000);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,14);
-place = (1740, 300);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-options = 4;
-place = (402, 168);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-44, 228);
-type = TTStem;
-},
-{
-horizontal = 1;
-place = (1742, 0);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,24);
-place = (-44, 300);
-type = TTInterpolate;
 }
 );
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";

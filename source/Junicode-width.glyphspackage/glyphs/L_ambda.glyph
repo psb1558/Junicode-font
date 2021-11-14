@@ -1,4 +1,5 @@
 {
+color = 7;
 glyphname = Lambda;
 kernLeft = A;
 kernRight = A;
@@ -102,6 +103,13 @@ type = TTShift;
 horizontal = 1;
 options = 4;
 origin = (0,8);
+target = (0,40);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,8);
 target = (0,17);
 type = TTShift;
 },
@@ -114,34 +122,8 @@ type = TTShift;
 },
 {
 horizontal = 1;
-options = 4;
-origin = (0,8);
-target = (0,40);
-type = TTShift;
-},
-{
-horizontal = 1;
 origin = (0,36);
 type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,36);
-target = (0,13);
-type = TTShift;
-},
-{
-horizontal = 1;
-origin = (0,2);
-other1 = (0,14);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-options = 4;
-place = (531, 69);
-type = TTStem;
 }
 );
 layerId = master01;

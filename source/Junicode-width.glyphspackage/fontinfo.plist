@@ -91,6 +91,22 @@ name = LowercaseMarks;
 {
 code = "A AA AVhorizontalbar AY Ao Aring Astroke Au Av AE B Bhook C Chook Creverseddot D Dhook Dinsular E Eopen Ereversed Estroke Ezh Ezhreversed F Finsular G Ghook Ginsular Gstroke Gturnedinsular Yogh H Hbar Heng Hwair I Iotaafrican Is Istroke J Jstroke K Kdiagonalstroke Khook Kstrokediagonalstroke L Lbroken Lslash Lturned M N Nhookleft Eng O OO Ocenteredtilde Olongstroke Oloop Oopen Oslash OE P Pflourish Phook Thorn Psquirreltail Q Qdiagonalstroke R Rinsular Rrotunda RumRotunda S Sinsular Schwa T Thook Tinsular Tonesix Tonetwo U Uhorn V VY Gammaafrican Vend W Whook Wynn X Y Yhook Yloop Z Zhook Gormulum Ssigmoid ";
 name = UppercaseWithTopAnchor;
+},
+{
+code = "Alphatonos Epsilontonos Etatonos Iotatonos Omicrontonos Upsilontonos Omegatonos ";
+name = grekCapsTonos;
+},
+{
+code = "Alpha Epsilon Eta Iota Omicron Upsilon Omega ";
+name = grekCapsTonosless;
+},
+{
+code = "alpha.sc beta.sc gamma.sc delta.sc epsilon.sc zeta.sc eta.sc theta.sc iota.sc kappa.sc lambda.sc mu.sc nu.sc xi.sc omicron.sc pi.sc rho.sc sigmafinal.sc sigma.sc tau.sc upsilon.sc phi.sc chi.sc psi.sc omega.sc iotatonos.sc iotadieresis.sc iotadieresistonos.sc upsilontonos.sc upsilondieresis.sc upsilondieresistonos.sc omicrontonos.sc omegatonos.sc alphatonos.sc epsilontonos.sc etatonos.sc alphapsili.sc alphadasia.sc alphapsilivaria.sc alphadasiavaria.sc alphapsilioxia.sc alphadasiaoxia.sc alphapsiliperispomeni.sc alphadasiaperispomeni.sc alphavaria.sc alphaoxia.sc alphaperispomeni.sc alphavrachy.sc alphamacron.sc alphaypogegrammeni.sc alphavariaypogegrammeni.sc alphaoxiaypogegrammeni.sc alphapsiliypogegrammeni.sc alphadasiaypogegrammeni.sc alphapsilivariaypogegrammeni.sc alphadasiavariaypogegrammeni.sc alphapsilioxiaypogegrammeni.sc alphadasiaoxiaypogegrammeni.sc alphapsiliperispomeniypogegrammeni.sc alphadasiaperispomeniypogegrammeni.sc alphaperispomeniypogegrammeni.sc epsilonpsili.sc epsilondasia.sc epsilonpsilivaria.sc epsilondasiavaria.sc epsilonpsilioxia.sc epsilondasiaoxia.sc epsilonvaria.sc epsilonoxia.sc etapsili.sc etadasia.sc etapsilivaria.sc etadasiavaria.sc etapsilioxia.sc etadasiaoxia.sc etapsiliperispomeni.sc etadasiaperispomeni.sc etavaria.sc etaperispomeni.sc etaypogegrammeni.sc etavariaypogegrammeni.sc etapsiliypogegrammeni.sc etadasiaypogegrammeni.sc etapsilivariaypogegrammeni.sc etadasiavariaypogegrammeni.sc etapsilioxiaypogegrammeni.sc etadasiaoxiaypogegrammeni.sc etapsiliperispomeniypogegrammeni.sc etadasiaperispomeniypogegrammeni.sc etaperispomeniypogegrammeni.sc iotapsili.sc iotadasia.sc iotapsilivaria.sc iotadasiavaria.sc iotapsilioxia.sc iotadasiaoxia.sc iotapsiliperispomeni.sc iotadasiaperispomeni.sc iotavaria.sc iotaoxia.sc iotaperispomeni.sc iotavrachy.sc iotamacron.sc iotadialytikavaria.sc iotadialytikaoxia.sc iotadialytikaperispomeni.sc omicronpsili.sc omicrondasia.sc omicronpsilivaria.sc omicrondasiavaria.sc omicronpsilioxia.sc omicrondasiaoxia.sc omicronvaria.sc omicronoxia.sc rhopsili.sc rhodasia.sc upsilonpsili.sc upsilondasia.sc upsilonpsilivaria.sc upsilondasiavaria.sc upsilonpsilioxia.sc upsilondasiaoxia.sc upsilonpsiliperispomeni.sc upsilondasiaperispomeni.sc upsilonvaria.sc upsilonoxia.sc upsilonperispomeni.sc upsilonvrachy.sc upsilonmacron.sc upsilondialytikavaria.sc upsilondialytikaoxia.sc upsilondialytikaperispomeni.sc omegapsili.sc omegadasia.sc omegapsilivaria.sc omegadasiavaria.sc omegapsilioxia.sc omegadasiaoxia.sc omegapsiliperispomeni.sc omegadasiaperispomeni.sc omegavaria.sc omegaoxia.sc omegaperispomeni.sc omegaypogegrammeni.sc omegavariaypogegrammeni.sc omegaoxiaypogegrammeni.sc omegapsiliypogegrammeni.sc omegadasiaypogegrammeni.sc omegapsilivariaypogegrammeni.sc omegadasiavariaypogegrammeni.sc omegapsilioxiaypogegrammeni.sc omegadasiaoxiaypogegrammeni.sc omegapsiliperispomeniypogegrammeni.sc omegadasiaperispomeniypogegrammeni.sc omegaperispomeniypogegrammeni.sc ";
+name = grekSmcp;
+},
+{
+code = "Alpha Beta Gamma Delta Epsilon Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega Alphatonos Epsilontonos Etatonos Iotatonos Omicrontonos Upsilontonos Omegatonos Iotadieresis Upsilondieresis ";
+name = grekCaps;
 }
 );
 customParameters = (
@@ -260,7 +276,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2021-11-13 14:21:49 +0000";
+date = "2021-11-14 19:41:48 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -277,7 +293,7 @@ languagesystem latn CRT;
 languagesystem latn AZE;
 languagesystem latn CAT;
 languagesystem latn FRA;
-";
+languagesystem grek ELL;";
 name = Languagesystems;
 },
 {
@@ -333,6 +349,7 @@ feature subs;
 feature ornm;
 feature ss01;
 feature ss02;
+feature ss03;
 feature ss04;
 feature ss05;
 feature ss06;
@@ -421,7 +438,6 @@ feature cv86;
 feature cv87;
 feature cv88;
 feature cv89;
-feature cv90;
 feature cv91;
 feature cv92;
 feature cv93;
@@ -440,6 +456,71 @@ feature calt;
 feature ss17;
 ";
 tag = aalt;
+},
+{
+automatic = 1;
+code = "lookup locl_latn_0 {
+	script latn;
+	language AZE;
+	sub i by idotaccent;
+	language CRT;
+	sub i by idotaccent;
+	language KAZ;
+	sub i by idotaccent;
+	language TAT;
+	sub i by idotaccent;
+	language TRK;
+	sub i by idotaccent;
+} locl_latn_0;
+
+lookup locl_latn_1 {
+	script latn;
+	language ROM;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+	language MOL;
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_1;
+
+lookup locl_latn_2 {
+	script latn;
+	language ENG;
+	sub Thorn by Thorn.loclENG;
+	sub Thornstroke by Thornstroke.loclENG;
+	sub eth by eth.loclENG;
+	sub thorn by thorn.loclENG;
+	sub thornstroke by thornstroke.loclENG;
+	sub Thorndotbelow by Thorndotbelow.loclENG;
+	sub thorndotbelow by thorndotbelow.loclENG;
+	sub ethcomb by ethcomb.loclENG;
+	sub thorncomb by thorncomb.loclENG;
+	sub uniE48F by uniE48F.loclENG;
+	sub uniF03D by uniF03D.loclENG;
+} locl_latn_2;
+
+lookup locl_latn_3 {
+	script latn;
+	language CAT;
+	sub  l' periodcentered' l by ldot;
+	sub  L' periodcentered' L by Ldot;
+} locl_latn_3;
+
+lookup locl_grek_0 {
+	script grek;
+	language ELL;
+	sub dieresiscomb by dieresiscomb.loclELL;
+	sub gravecomb by gravecomb.loclELL;
+	sub acutecomb by acutecomb.loclELL;
+	sub commaabovecomb by commaabovecomb.loclELL;
+	sub commareversedabovecomb by commareversedabovecomb.loclELL;
+} locl_grek_0;
+";
+tag = locl;
 },
 {
 code = "lookup i_dot {
@@ -580,6 +661,330 @@ sub thorn.loclENG overlinecomb by thorn.medhighoverline.loclENG ;
 # sub eth Rcomb by uniF0AB ;
 # sub eth uni036D by uniF0AE ;
 # } diacritics ;
+
+# These two Greek lookups adapted from code by Tosche at
+# https://forum.glyphsapp.com/t/auto-feature-suggestion-for-greek/4054/2
+# To avoid this kind of normalizing in polytonic, use oxia code points
+# instead of tonos code points.
+
+lookup grek_dieresisCapInsertion {
+#	script grek;
+	sub [Alphatonos Epsilontonos Omicrontonos Upsilontonos] Iota' by Iotadieresis;
+	sub [Alphatonos Epsilontonos Etatonos Omicrontonos Omegatonos] Upsilon' by Upsilondieresis;
+	sub [alphatonos.sc epsilontonos.sc omicrontonos.sc upsilontonos.sc] iota.sc' by iotadieresis.sc;
+	sub [alphatonos.sc epsilontonos.sc etatonos.sc omicrontonos.sc omegatonos.sc] upsilon.sc' by upsilondieresis.sc;
+} grek_dieresisCapInsertion;
+
+lookup grek_tonosCap {
+#	script grek;
+	# tonos supression within a word
+	sub @grekCapsTonos' @grekSmcp by @grekCapsTonosless;
+	sub @grekCaps @grekCapsTonos' by @grekCapsTonosless;
+	sub @grekCapsTonos' @grekCaps by @grekCapsTonosless;
+} grek_tonosCap;
+
+lookup grek_ComplexDiacritics {
+# script grek;
+  sub commaabovecomb.loclELL gravecomb.loclELL by commaabovecomb_gravecomb ;
+  sub commaabovecomb.loclELL acutecomb.loclELL by commaabovecomb_acutecomb.loclELL ;
+  sub commaabovecomb.loclELL perispomenicomb by commaabovecomb_perispomenicomb ;
+  sub commareversedabovecomb.loclELL gravecomb.loclELL by commareversedabovecomb_gravecomb ;
+  sub commareversedabovecomb.loclELL acutecomb.loclELL by commareversedabovecomb_acutecomb ;
+  sub commaabovecomb.loclELL perispomenicomb by commaabovecomb_perispomenicomb ;
+  sub commareversedabovecomb.loclELL perispomenicomb by commareversedabovecomb_perispomenicomb ;
+  sub dieresiscomb.loclELL gravecomb.loclELL by dieresiscomb_gravecomb.Greek ;
+  sub dieresiscomb.loclELL acutecomb.loclELL by dialytikatonoscomb ;
+  sub dieresiscomb.loclELL perispomenicomb by dieresiscomb_perispomenicomb.loclELL ;
+} grek_ComplexDiacritics ;
+
+lookup grek_Composed {
+
+# Alpha:
+
+  sub Alpha commaabovecomb.loclELL prosgegrammeni by Alphapsiliprosgegrammeni ;
+  sub Alpha commareversedabovecomb.loclELL prosgegrammeni by Alphadasiaprosgegrammeni ;
+  sub Alpha commaabovecomb_gravecomb prosgegrammeni by Alphapsilivariaprosgegrammeni ;
+  sub Alpha commareversedabovecomb_gravecomb prosgegrammeni by Alphadasiavariaprosgegrammeni ;
+  sub Alpha commaabovecomb_acutecomb.loclELL prosgegrammeni by Alphapsilioxiaprosgegrammeni ;
+  sub Alpha commareversedabovecomb_acutecomb prosgegrammeni by Alphadasiaoxiaprosgegrammeni ;
+  sub Alpha commaabovecomb_perispomenicomb prosgegrammeni by Alphapsiliperispomeniprosgegrammeni ;
+  sub Alpha commareversedabovecomb_perispomenicomb prosgegrammeni by Alphadasiaperispomeniprosgegrammeni ;
+  sub Alpha commaabovecomb.loclELL ypogegrammenicomb by Alphapsiliprosgegrammeni ;
+  sub Alpha commareversedabovecomb.loclELL ypogegrammenicomb by Alphadasiaprosgegrammeni ;
+  sub Alpha commaabovecomb_gravecomb ypogegrammenicomb by Alphapsilivariaprosgegrammeni ;
+  sub Alpha commareversedabovecomb_gravecomb ypogegrammenicomb by Alphadasiavariaprosgegrammeni ;
+  sub Alpha commaabovecomb_acutecomb.loclELL ypogegrammenicomb by Alphapsilioxiaprosgegrammeni ;
+  sub Alpha commareversedabovecomb_acutecomb ypogegrammenicomb by Alphadasiaoxiaprosgegrammeni ;
+  sub Alpha commaabovecomb_perispomenicomb ypogegrammenicomb by Alphapsiliperispomeniprosgegrammeni ;
+  sub Alpha commareversedabovecomb_perispomenicomb ypogegrammenicomb by Alphadasiaperispomeniprosgegrammeni ;
+  sub Alpha commaabovecomb.loclELL by Alphapsili ;
+  sub Alpha commareversedabovecomb.loclELL by Alphadasia ;
+  sub Alpha commaabovecomb_gravecomb by Alphapsilivaria ;
+  sub Alpha commareversedabovecomb_gravecomb by Alphadasiavaria ;
+  sub Alpha commaabovecomb_acutecomb.loclELL by Alphapsilioxia ;
+  sub Alpha commareversedabovecomb_acutecomb by Alphadasiaoxia ;
+  sub Alpha commaabovecomb_perispomenicomb by Alphapsiliperispomeni ;
+  sub Alpha commareversedabovecomb_perispomenicomb by Alphadasiaperispomeni ;
+  sub Alpha gravecomb.loclELL by Alphavaria ;
+  sub Alpha acutecomb.loclELL by Alphaoxia ;
+  sub Alpha macroncomb by Alphamacron ;
+  sub Alpha brevecomb by Alphavrachy ;
+  sub Alpha prosgegrammeni by Alphaprosgegrammeni ;
+  sub Alpha ypogegrammenicomb by Alphaprosgegrammeni ;
+
+# Eta:
+
+  sub Eta commaabovecomb.loclELL prosgegrammeni by Etapsiliprosgegrammeni ;
+  sub Eta commareversedabovecomb.loclELL prosgegrammeni by Etadasiaprosgegrammeni ;
+  sub Eta commaabovecomb_gravecomb prosgegrammeni by Etapsilivariaprosgegrammeni ;
+  sub Eta commareversedabovecomb_gravecomb prosgegrammeni by Etadasiavariaprosgegrammeni ;
+  sub Eta commaabovecomb_acutecomb.loclELL prosgegrammeni by Etapsilioxiaprosgegrammeni ;
+  sub Eta commareversedabovecomb_acutecomb prosgegrammeni by Etadasiaoxiaprosgegrammeni ;
+  sub Eta commaabovecomb_perispomenicomb prosgegrammeni by Etapsiliperispomeniprosgegrammeni ;
+  sub Eta commareversedabovecomb_perispomenicomb prosgegrammeni by Etadasiaperispomeniprosgegrammeni ;
+  sub Eta commaabovecomb.loclELL ypogegrammenicomb by Etapsiliprosgegrammeni ;
+  sub Eta commareversedabovecomb.loclELL ypogegrammenicomb by Etadasiaprosgegrammeni ;
+  sub Eta commaabovecomb_gravecomb ypogegrammenicomb by Etapsilivariaprosgegrammeni ;
+  sub Eta commareversedabovecomb_gravecomb ypogegrammenicomb by Etadasiavariaprosgegrammeni ;
+  sub Eta commaabovecomb_acutecomb.loclELL ypogegrammenicomb by Etapsilioxiaprosgegrammeni ;
+  sub Eta commareversedabovecomb_acutecomb ypogegrammenicomb by Etadasiaoxiaprosgegrammeni ;
+  sub Eta commaabovecomb_perispomenicomb ypogegrammenicomb by Etapsiliperispomeniprosgegrammeni ;
+  sub Eta commareversedabovecomb_perispomenicomb ypogegrammenicomb by Etadasiaperispomeniprosgegrammeni ;
+  sub Eta commaabovecomb.loclELL by Etapsili ;
+  sub Eta commareversedabovecomb.loclELL by Etadasia ;
+  sub Eta commaabovecomb_gravecomb by Etapsilivaria ;
+  sub Eta commareversedabovecomb_gravecomb by Etadasiavaria ;
+  sub Eta commaabovecomb_acutecomb.loclELL by Etapsilioxia ;
+  sub Eta commareversedabovecomb_acutecomb by Etadasiaoxia ;
+  sub Eta commaabovecomb_perispomenicomb by Etapsiliperispomeni ;
+  sub Eta commareversedabovecomb_perispomenicomb by Etadasiaperispomeni ;
+  sub Eta gravecomb.loclELL by Etavaria ;
+  sub Eta acutecomb.loclELL by Etaoxia ;
+  sub Eta prosgegrammeni by Etaprosgegrammeni ;
+  sub Eta ypogegrammenicomb by Etaprosgegrammeni ;
+
+# Omega:
+
+  sub Omega commaabovecomb.loclELL prosgegrammeni by Omegapsiliprosgegrammeni ;
+  sub Omega commareversedabovecomb.loclELL prosgegrammeni by Omegadasiaprosgegrammeni ;
+  sub Omega commaabovecomb_gravecomb prosgegrammeni by Omegapsilivariaprosgegrammeni ;
+  sub Omega commareversedabovecomb_gravecomb prosgegrammeni by Omegadasiavariaprosgegrammeni ;
+  sub Omega commaabovecomb_acutecomb.loclELL prosgegrammeni by Omegapsilioxiaprosgegrammeni ;
+  sub Omega commareversedabovecomb_acutecomb prosgegrammeni by Omegadasiaoxiaprosgegrammeni ;
+  sub Omega commaabovecomb_perispomenicomb prosgegrammeni by Omegapsiliperispomeniprosgegrammeni ;
+  sub Omega commareversedabovecomb_perispomenicomb prosgegrammeni by Omegadasiaperispomeniprosgegrammeni ;
+  sub Omega commaabovecomb.loclELL ypogegrammenicomb by Omegapsiliprosgegrammeni ;
+  sub Omega commareversedabovecomb.loclELL ypogegrammenicomb by Omegadasiaprosgegrammeni ;
+  sub Omega commaabovecomb_gravecomb ypogegrammenicomb by Omegapsilivariaprosgegrammeni ;
+  sub Omega commareversedabovecomb_gravecomb ypogegrammenicomb by Omegadasiavariaprosgegrammeni ;
+  sub Omega commaabovecomb_acutecomb.loclELL ypogegrammenicomb by Omegapsilioxiaprosgegrammeni ;
+  sub Omega commareversedabovecomb_acutecomb ypogegrammenicomb by Omegadasiaoxiaprosgegrammeni ;
+  sub Omega commaabovecomb_perispomenicomb ypogegrammenicomb by Omegapsiliperispomeniprosgegrammeni ;
+  sub Omega commareversedabovecomb_perispomenicomb ypogegrammenicomb by Omegadasiaperispomeniprosgegrammeni ;
+  sub Omega commaabovecomb.loclELL by Omegapsili ;
+  sub Omega commareversedabovecomb.loclELL by Omegadasia ;
+  sub Omega commaabovecomb_gravecomb by Omegapsilivaria ;
+  sub Omega commareversedabovecomb_gravecomb by Omegadasiavaria ;
+  sub Omega commaabovecomb_acutecomb.loclELL by Omegapsilioxia ;
+  sub Omega commareversedabovecomb_acutecomb by Omegadasiaoxia ;
+  sub Omega commaabovecomb_perispomenicomb by Omegapsiliperispomeni ;
+  sub Omega commareversedabovecomb_perispomenicomb by Omegadasiaperispomeni ;
+  sub Omega gravecomb.loclELL by Omegavaria ;
+  sub Omega acutecomb.loclELL by Omegaoxia ;
+  sub Omega prosgegrammeni by Omegaprosgegrammeni ;
+  sub Omega ypogegrammenicomb by Omegaprosgegrammeni ;
+
+# Epsilon:
+
+  sub Epsilon commaabovecomb.loclELL by Epsilonpsili ;
+  sub Epsilon commareversedabovecomb.loclELL by Epsilondasia ;
+  sub Epsilon commaabovecomb_gravecomb by Epsilonpsilivaria ;
+  sub Epsilon commareversedabovecomb_gravecomb by Epsilondasiavaria ;
+  sub Epsilon commaabovecomb_acutecomb.loclELL by Epsilonpsilioxia ;
+  sub Epsilon commareversedabovecomb_acutecomb by Epsilondasiaoxia ;
+  sub Epsilon gravecomb.loclELL by Epsilonvaria ;
+  sub Epsilon acutecomb.loclELL by Epsilonoxia ;
+
+# Iota:
+
+  sub Iota commaabovecomb.loclELL by Iotapsili ;
+  sub Iota commareversedabovecomb.loclELL by Iotadasia ;
+  sub Iota commaabovecomb_gravecomb by Iotapsilivaria ;
+  sub Iota commareversedabovecomb_gravecomb by Iotadasiavaria ;
+  sub Iota commaabovecomb_acutecomb.loclELL by Iotapsilioxia ;
+  sub Iota commareversedabovecomb_acutecomb by Iotadasiaoxia ;
+  sub Iota commaabovecomb_perispomenicomb by Iotapsiliperispomeni ;
+  sub Iota commareversedabovecomb_perispomenicomb by Iotadasiaperispomeni ;
+  sub Iota brevecomb by Iotavrachy ;
+  sub Iota macroncomb by Iotamacron ;
+  sub Iota acutecomb.loclELL by Iotaoxia ;
+  sub Iota gravecomb.loclELL by Iotavaria ;
+
+# Omicron:
+
+  sub Omicron commaabovecomb.loclELL by Omicronpsili ;
+  sub Omicron commareversedabovecomb.loclELL by Omicrondasia ;
+  sub Omicron commaabovecomb_gravecomb by Omicronpsilivaria ;
+  sub Omicron commareversedabovecomb_gravecomb by Omicrondasiavaria ;
+  sub Omicron commaabovecomb_acutecomb.loclELL by Omicronpsilioxia ;
+  sub Omicron commareversedabovecomb_acutecomb by Omicrondasiaoxia ;
+  sub Omicron gravecomb.loclELL by Omicronvaria ;
+  sub Omicron acutecomb.loclELL by Omicronoxia ;
+
+# Upsilon:
+
+  sub Upsilon commareversedabovecomb.loclELL by Upsilondasia ;
+  sub Upsilon commareversedabovecomb_gravecomb by Upsilondasiavaria ;
+  sub Upsilon commareversedabovecomb_acutecomb by Upsilondasiaoxia ;
+  sub Upsilon commareversedabovecomb_perispomenicomb by Upsilondasiaperispomeni ;
+  sub Upsilon gravecomb.loclELL by Upsilonvaria ;
+  sub Upsilon acutecomb.loclELL by Upsilonoxia ;
+  sub Upsilon brevecomb by Upsilonvrachy ;
+  sub Upsilon macroncomb by Upsilonmacron ;
+
+# alpha:
+
+  sub alpha commaabovecomb.loclELL ypogegrammenicomb by alphapsiliypogegrammeni ;
+  sub alpha commareversedabovecomb.loclELL ypogegrammenicomb by alphadasiaypogegrammeni ;
+  sub alpha commaabovecomb_gravecomb ypogegrammenicomb by alphapsilivariaypogegrammeni ;
+  sub alpha commareversedabovecomb_gravecomb ypogegrammenicomb by alphadasiavariaypogegrammeni ;
+  sub alpha commaabovecomb_acutecomb.loclELL ypogegrammenicomb by alphapsilioxiaypogegrammeni ;
+  sub alpha commareversedabovecomb_acutecomb ypogegrammenicomb by alphadasiaoxiaypogegrammeni ;
+  sub alpha commaabovecomb_perispomenicomb ypogegrammenicomb by alphapsiliperispomeniypogegrammeni ;
+  sub alpha commareversedabovecomb_perispomenicomb ypogegrammenicomb by alphadasiaperispomeniypogegrammeni ;
+  sub alpha gravecomb.loclELL ypogegrammenicomb by alphavariaypogegrammeni ;
+  sub alpha acutecomb.loclELL ypogegrammenicomb by alphaoxiaypogegrammeni ;
+  sub alpha perispomenicomb ypogegrammenicomb by alphaperispomeniypogegrammeni ;
+  sub alpha commaabovecomb.loclELL by alphapsili ;
+  sub alpha commareversedabovecomb.loclELL by alphadasia ;
+  sub alpha commaabovecomb_gravecomb by alphapsilivaria ;
+  sub alpha commareversedabovecomb_gravecomb by alphadasiavaria ;
+  sub alpha commaabovecomb_acutecomb.loclELL by alphapsilioxia ;
+  sub alpha commareversedabovecomb_acutecomb by alphadasiaoxia ;
+  sub alpha commaabovecomb_perispomenicomb by alphapsiliperispomeni ;
+  sub alpha commareversedabovecomb_perispomenicomb by alphadasiaperispomeni ;
+  sub alpha gravecomb.loclELL by alphavaria ;
+  sub alpha acutecomb.loclELL by alphaoxia ;
+  sub alpha perispomenicomb by alphaperispomeni ;
+  sub alpha brevecomb by alphavrachy ;
+  sub alpha macroncomb by alphamacron ;
+  sub alpha ypogegrammenicomb by alphaypogegrammeni ;
+
+# eta:
+
+  sub eta commaabovecomb.loclELL ypogegrammenicomb by etapsiliypogegrammeni ;
+  sub eta commareversedabovecomb.loclELL ypogegrammenicomb by etadasiaypogegrammeni ;
+  sub eta commaabovecomb_gravecomb ypogegrammenicomb by etapsilivariaypogegrammeni ;
+  sub eta commareversedabovecomb_gravecomb ypogegrammenicomb by etadasiavariaypogegrammeni ;
+  sub eta commaabovecomb_acutecomb.loclELL ypogegrammenicomb by etapsilioxiaypogegrammeni ;
+  sub eta commareversedabovecomb_acutecomb ypogegrammenicomb by etadasiaoxiaypogegrammeni ;
+  sub eta commaabovecomb_perispomenicomb ypogegrammenicomb by etapsiliperispomeniypogegrammeni ;
+  sub eta commareversedabovecomb_perispomenicomb ypogegrammenicomb by etadasiaperispomeniypogegrammeni ;
+  sub eta acutecomb.loclELL ypogegrammenicomb by etaoxiaypogegrammeni ;
+  sub eta gravecomb.loclELL ypogegrammenicomb by etavariaypogegrammeni ;
+  sub eta perispomenicomb ypogegrammenicomb by etaperispomeniypogegrammeni ;
+  sub eta commaabovecomb.loclELL by etapsili ;
+  sub eta commareversedabovecomb.loclELL by etadasia ;
+  sub eta commaabovecomb_gravecomb by etapsilivaria ;
+  sub eta commareversedabovecomb_gravecomb by etadasiavaria ;
+  sub eta commaabovecomb_acutecomb.loclELL by etapsilioxia ;
+  sub eta commareversedabovecomb_acutecomb by etadasiaoxia ;
+  sub eta commaabovecomb_perispomenicomb by etapsiliperispomeni ;
+  sub eta commareversedabovecomb_perispomenicomb by etadasiaperispomeni ;
+  sub eta acutecomb.loclELL by etaoxia ;
+  sub eta gravecomb.loclELL by etavaria ;
+  sub eta perispomenicomb by etaperispomeni ;
+  sub eta ypogegrammenicomb by etaypogegrammeni ;
+
+# omega:
+
+  sub omega commaabovecomb.loclELL ypogegrammenicomb by omegapsiliypogegrammeni ;
+  sub omega commareversedabovecomb.loclELL ypogegrammenicomb by omegadasiaypogegrammeni ;
+  sub omega commaabovecomb_gravecomb ypogegrammenicomb by omegapsilivariaypogegrammeni ;
+  sub omega commareversedabovecomb_gravecomb ypogegrammenicomb by omegadasiavariaypogegrammeni ;
+  sub omega commaabovecomb_acutecomb.loclELL ypogegrammenicomb by omegapsilioxiaypogegrammeni ;
+  sub omega commareversedabovecomb_acutecomb ypogegrammenicomb by omegadasiaoxiaypogegrammeni ;
+  sub omega commaabovecomb_perispomenicomb ypogegrammenicomb by omegapsiliperispomeniypogegrammeni ;
+  sub omega commareversedabovecomb_perispomenicomb ypogegrammenicomb by omegadasiaperispomeniypogegrammeni ;
+  sub omega gravecomb.loclELL ypogegrammenicomb by omegavariaypogegrammeni ;
+  sub omega acutecomb.loclELL ypogegrammenicomb by omegaoxiaypogegrammeni ;
+  sub omega perispomenicomb ypogegrammenicomb by omegaperispomeniypogegrammeni ;
+  sub omega commaabovecomb.loclELL by omegapsili ;
+  sub omega commareversedabovecomb.loclELL by omegadasia ;
+  sub omega commaabovecomb_gravecomb by omegapsilivaria ;
+  sub omega commareversedabovecomb_gravecomb by omegadasiavaria ;
+  sub omega commaabovecomb_acutecomb.loclELL by omegapsilioxia ;
+  sub omega commareversedabovecomb_acutecomb by omegadasiaoxia ;
+  sub omega commaabovecomb_perispomenicomb by omegapsiliperispomeni ;
+  sub omega commareversedabovecomb_perispomenicomb by omegadasiaperispomeni ;
+  sub omega gravecomb.loclELL by omegavaria ;
+  sub omega acutecomb.loclELL by omegaoxia ;
+  sub omega perispomenicomb by omegaperispomeni ;
+  sub omega ypogegrammenicomb by omegaypogegrammeni ;
+
+# epsilon:
+
+  sub epsilon commaabovecomb.loclELL by epsilonpsili ;
+  sub epsilon commareversedabovecomb.loclELL by epsilondasia ;
+  sub epsilon commaabovecomb_gravecomb by epsilonpsilivaria ;
+  sub epsilon commareversedabovecomb_gravecomb by epsilondasiavaria ;
+  sub epsilon commaabovecomb_acutecomb.loclELL by epsilonpsilioxia ;
+  sub epsilon commareversedabovecomb_acutecomb by epsilondasiaoxia ;
+  sub epsilon acutecomb.loclELL by epsilonoxia ;
+  sub epsilon gravecomb.loclELL by epsilonvaria ;
+
+# iota:
+
+  sub iota commaabovecomb.loclELL by iotapsili ;
+  sub iota commareversedabovecomb.loclELL by iotadasia ;
+  sub iota commaabovecomb_gravecomb by iotapsilivaria ;
+  sub iota commareversedabovecomb_gravecomb by iotadasiavaria ;
+  sub iota commaabovecomb_acutecomb.loclELL by iotapsilioxia ;
+  sub iota commareversedabovecomb_acutecomb by iotadasiaoxia ;
+  sub iota commaabovecomb_perispomenicomb by iotapsiliperispomeni ;
+  sub iota commareversedabovecomb_perispomenicomb by iotadasiaperispomeni ;
+  sub iota gravecomb.loclELL by iotavaria ;
+  sub iota acutecomb.loclELL by iotaoxia ;
+  sub iota perispomenicomb by iotaperispomeni ;
+  sub iota brevecomb by iotavrachy ;
+  sub iota macroncomb by iotamacron ;
+  sub iota dieresiscomb_gravecomb.Greek by iotadialytikavaria ;
+  sub iota dialytikatonoscomb by iotadialytikaoxia ;
+  sub iota dieresiscomb_perispomenicomb.loclELL by iotadialytikaperispomeni ;
+  sub iota dieresiscomb.loclELL by iotadieresis ;
+
+# omicron:
+
+  sub omicron commaabovecomb.loclELL by omicronpsili ;
+  sub omicron commareversedabovecomb.loclELL by omicrondasia ;
+  sub omicron commaabovecomb_gravecomb by omicronpsilivaria ;
+  sub omicron commareversedabovecomb_gravecomb by omicrondasiavaria ;
+  sub omicron commaabovecomb_acutecomb.loclELL by omicronpsilioxia ;
+  sub omicron commareversedabovecomb_acutecomb by omicrondasiaoxia ;
+  sub omicron acutecomb.loclELL by omicronoxia ;
+  sub omicron gravecomb.loclELL by omicronvaria ;
+
+# upsilon:
+
+  sub upsilon commaabovecomb.loclELL by upsilonpsili ;
+  sub upsilon commareversedabovecomb.loclELL by upsilondasia ;
+  sub upsilon commaabovecomb_gravecomb by upsilonpsilivaria ;
+  sub upsilon commareversedabovecomb_gravecomb by upsilondasiavaria ;
+  sub upsilon commaabovecomb_acutecomb.loclELL by upsilonpsilioxia ;
+  sub upsilon commareversedabovecomb_acutecomb by upsilondasiaoxia ;
+  sub upsilon commaabovecomb_perispomenicomb by upsilonpsiliperispomeni ;
+  sub upsilon commareversedabovecomb_perispomenicomb by upsilondasiaperispomeni ;
+  sub upsilon gravecomb.loclELL by upsilonvaria ;
+  sub upsilon acutecomb.loclELL by upsilonoxia ;
+  sub upsilon perispomenicomb by upsilonperispomeni ;
+  sub upsilon brevecomb by upsilonvrachy ;
+  sub upsilon macroncomb by upsilonmacron ;
+  sub upsilon dieresiscomb_gravecomb.Greek by upsilondialytikavaria ;
+  sub upsilon dialytikatonoscomb by upsilondialytikaoxia ;
+  sub upsilon dieresiscomb_perispomenicomb.loclELL by upsilondialytikaperispomeni ;
+  sub upsilon dieresiscomb.loclELL by upsilondieresis ;
+
+} grek_Composed ;
 ";
 tag = ccmp;
 },
@@ -721,68 +1126,6 @@ code = "sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt 
 tag = cv84;
 },
 {
-automatic = 1;
-code = "lookup locl_latn_0 {
-	script latn;
-	language AZE;
-	sub i by idotaccent;
-	language CRT;
-	sub i by idotaccent;
-	language KAZ;
-	sub i by idotaccent;
-	language TAT;
-	sub i by idotaccent;
-	language TRK;
-	sub i by idotaccent;
-} locl_latn_0;
-
-lookup locl_latn_1 {
-	script latn;
-	language ROM;
-	sub Scedilla by Scommaaccent;
-	sub scedilla by scommaaccent;
-	sub Tcedilla by Tcommaaccent;
-	sub tcedilla by tcommaaccent;
-	language MOL;
-	sub Scedilla by Scommaaccent;
-	sub scedilla by scommaaccent;
-	sub Tcedilla by Tcommaaccent;
-	sub tcedilla by tcommaaccent;
-} locl_latn_1;
-
-lookup locl_latn_2 {
-	script latn;
-	language ENG;
-	sub Thorn by Thorn.loclENG;
-	sub Thornstroke by Thornstroke.loclENG;
-	sub eth by eth.loclENG;
-	sub thorn by thorn.loclENG;
-	sub thornstroke by thornstroke.loclENG;
-	sub Thorndotbelow by Thorndotbelow.loclENG;
-	sub thorndotbelow by thorndotbelow.loclENG;
-	sub ethcomb by ethcomb.loclENG;
-	sub thorncomb by thorncomb.loclENG;
-	sub uniE48F by uniE48F.loclENG;
-	sub uniF03D by uniF03D.loclENG;
-} locl_latn_2;
-
-lookup locl_latn_3 {
-	script latn;
-	language CAT;
-	sub  l' periodcentered' l by ldot;
-	sub  L' periodcentered' L by Ldot;
-} locl_latn_3;
-
-lookup locl_grek_0 {
-	script grek;
-	language ELL;
-	sub gravecomb by gravecomb.loclELL;
-	sub acutecomb by acutecomb.loclELL;
-} locl_grek_0;
-";
-tag = locl;
-},
-{
 code = "sub dieresiscomb by dieresiscomb.case;
 sub dotaccentcomb by dotaccentcomb.case;
 sub gravecomb by gravecomb.case;
@@ -814,6 +1157,20 @@ sub l.medhighoverline by l.highoverline ;
 sub m.medhighoverline by m.highoverline ;
 sub v.medhighoverline by v.highoverline ;
 sub x.medhighoverline by x.highoverline ;
+# Greek things:
+sub gravecomb.loclELL by gravecomb.loclELL.case ;
+sub acutecomb.loclELL by acutecomb.loclELL.case ;
+sub acutecomb.loclELL by acutecomb.loclELL.case ;
+sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.case ;
+sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.case ;
+sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.case ;
+sub commaabovecomb_gravecomb by commaabovecomb_gravecomb.case ;
+sub commaabovecomb_acutecomb.loclELL  by commaabovecomb_acutecomb.case ;
+sub commareversedabovecomb_gravecomb by commareversedabovecomb_gravecomb.case ;
+sub commareversedabovecomb_acutecomb by commareversedabovecomb_acutecomb.case ;
+# sub dieresisacutecomb by dieresisacutecomb.case ;
+sub commaabovecomb.loclELL by commaabovecomb.loclELL.case ;
+
 ";
 tag = case;
 },
@@ -3641,6 +3998,7 @@ sub xi by xi.sc;
 sub omicron by omicron.sc;
 sub pi by pi.sc;
 sub rho by rho.sc;
+sub sigmafinal by sigmafinal.sc;
 sub sigma by sigma.sc;
 sub tau by tau.sc;
 sub upsilon by upsilon.sc;
@@ -3674,6 +4032,7 @@ sub alphavrachy by alphavrachy.sc;
 sub alphamacron by alphamacron.sc;
 sub alphaypogegrammeni by alphaypogegrammeni.sc;
 sub alphavariaypogegrammeni by alphavariaypogegrammeni.sc;
+sub alphaoxiaypogegrammeni by alphaoxiaypogegrammeni.sc;
 sub alphapsiliypogegrammeni by alphapsiliypogegrammeni.sc;
 sub alphadasiaypogegrammeni by alphadasiaypogegrammeni.sc;
 sub alphapsilivariaypogegrammeni by alphapsilivariaypogegrammeni.sc;
@@ -3690,6 +4049,7 @@ sub epsilondasiavaria by epsilondasiavaria.sc;
 sub epsilonpsilioxia by epsilonpsilioxia.sc;
 sub epsilondasiaoxia by epsilondasiaoxia.sc;
 sub epsilonvaria by epsilonvaria.sc;
+sub epsilonoxia by epsilonoxia.sc;
 sub etapsili by etapsili.sc;
 sub etadasia by etadasia.sc;
 sub etapsilivaria by etapsilivaria.sc;
@@ -3720,6 +4080,7 @@ sub iotadasiaoxia by iotadasiaoxia.sc;
 sub iotapsiliperispomeni by iotapsiliperispomeni.sc;
 sub iotadasiaperispomeni by iotadasiaperispomeni.sc;
 sub iotavaria by iotavaria.sc;
+sub iotaoxia by iotaoxia.sc;
 sub iotaperispomeni by iotaperispomeni.sc;
 sub iotavrachy by iotavrachy.sc;
 sub iotamacron by iotamacron.sc;
@@ -3733,6 +4094,7 @@ sub omicrondasiavaria by omicrondasiavaria.sc;
 sub omicronpsilioxia by omicronpsilioxia.sc;
 sub omicrondasiaoxia by omicrondasiaoxia.sc;
 sub omicronvaria by omicronvaria.sc;
+sub omicronoxia by omicronoxia.sc;
 sub rhopsili by rhopsili.sc;
 sub rhodasia by rhodasia.sc;
 sub upsilonpsili by upsilonpsili.sc;
@@ -3744,6 +4106,7 @@ sub upsilondasiaoxia by upsilondasiaoxia.sc;
 sub upsilonpsiliperispomeni by upsilonpsiliperispomeni.sc;
 sub upsilondasiaperispomeni by upsilondasiaperispomeni.sc;
 sub upsilonvaria by upsilonvaria.sc;
+sub upsilonoxia by upsilonoxia.sc;
 sub upsilonperispomeni by upsilonperispomeni.sc;
 sub upsilonvrachy by upsilonvrachy.sc;
 sub upsilonmacron by upsilonmacron.sc;
@@ -3759,9 +4122,11 @@ sub omegadasiaoxia by omegadasiaoxia.sc;
 sub omegapsiliperispomeni by omegapsiliperispomeni.sc;
 sub omegadasiaperispomeni by omegadasiaperispomeni.sc;
 sub omegavaria by omegavaria.sc;
+sub omegaoxia by omegaoxia.sc;
 sub omegaperispomeni by omegaperispomeni.sc;
 sub omegaypogegrammeni by omegaypogegrammeni.sc;
 sub omegavariaypogegrammeni by omegavariaypogegrammeni.sc;
+sub omegaoxiaypogegrammeni by omegaoxiaypogegrammeni.sc;
 sub omegapsiliypogegrammeni by omegapsiliypogegrammeni.sc;
 sub omegadasiaypogegrammeni by omegadasiaypogegrammeni.sc;
 sub omegapsilivariaypogegrammeni by omegapsilivariaypogegrammeni.sc;
@@ -3792,6 +4157,7 @@ sub dotacutecomb by dotacutecomb.sc;
 sub dieresiscomb_perispomenicomb.loclELL by dieresiscomb_perispomenicomb.loclELL.sc;
 sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.sc;
 sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.sc;
+sub perispomenicomb by perispomenicomb.sc;
 sub dialytikatonoscomb by dialytikatonoscomb.sc;
 sub dieresiscomb by dieresiscomb.sc;
 sub dotaccentcomb by dotaccentcomb.sc;
@@ -4476,19 +4842,19 @@ pos = 1638;
 size = 16;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 name = capHeight;
 pos = 1352;
 size = 35;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+filter = "category == \"Letter\" AND case == 3";
 name = smallCapHeight;
 pos = 932;
 size = 19;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 name = xHeight;
 pos = 850;
 size = 35;
@@ -4504,7 +4870,7 @@ pos = -550;
 size = -25;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 name = "G serif";
 pos = 548;
 size = 10;
@@ -4515,7 +4881,7 @@ pos = 1607;
 size = 5;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 name = "lc ascender";
 pos = 1480;
 size = 10;
@@ -4531,37 +4897,37 @@ size = 5;
 name = TTFStems;
 value = (
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 horizontal = 1;
 name = "lc round stem";
 width = 62;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 horizontal = 1;
 name = "lc serif";
 width = 49;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 horizontal = 1;
 name = "cap round stem";
 width = 73;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 horizontal = 1;
 name = "cap serif";
 width = 69;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 horizontal = 1;
 name = "cap bar";
 width = 69;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 horizontal = 1;
 name = "lc bar";
 width = 67;
@@ -4572,30 +4938,31 @@ name = "high overline";
 width = 94;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 horizontal = 0;
 name = "cap vstem";
 width = 160;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
+filter = "category == \"Letter\" AND case == 1";
 horizontal = 0;
 name = "cap vroundstem";
 width = 191;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 horizontal = 0;
 name = "lc vstem";
 width = 153;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+filter = "category == \"Letter\" AND case == 2";
 horizontal = 0;
 name = lcvroundstem;
 width = 163;
 },
 {
+filter = "category == \"Letter\" AND case == 3";
 horizontal = 1;
 name = "sc serif";
 width = 59;
@@ -5109,6 +5476,7 @@ GSOffsetHorizontal = 5;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 10;
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -14798,5 +15166,5 @@ type = unicode;
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 28;
+versionMinor = 29;
 }

@@ -12,52 +12,15 @@ pos = (183,850);
 hints = (
 {
 horizontal = 1;
-place = (870, 0);
+origin = (0,17);
 type = TTSnap;
 },
 {
 horizontal = 1;
 options = 4;
-place = (-29, 291);
+origin = (0,21);
+target = (0,8);
 type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-23, 109);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (830, 0);
-stem = -1;
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-23, 0);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-23, 109);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-other1 = (0,12);
-place = (-23, 150);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-options = 4;
-place = (850, 0);
-type = TTShift;
 }
 );
 layerId = master01;

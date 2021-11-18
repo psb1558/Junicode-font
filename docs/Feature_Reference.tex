@@ -23,8 +23,8 @@
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{hhline}
-\usepackage{hyperref}
 \usepackage{metalogo}
+\usepackage{hyperref}
 \hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,%
   urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
 % Footnotes configuration
@@ -201,8 +201,8 @@ The type used for Hickes’s {\itshape Thesaurus} resembles those assembled
 by John Fell (1625–86) and bequeathed by him to the University of
 Oxford. To my eye, however, it looks more like the “Pica Roman”
 purchased by the University in 1692 than like any of Fell’s. For printing in Old English, this type was
-supplemented by the “Pica Saxon” commissioned by the early
-Anglo-Saxonist Franciscus Junius (1591–1677) and bequeathed by him to
+supplemented by the “Pica Saxon” commissioned by the literary scholar
+Franciscus Junius (1591–1677) and bequeathed by him to
 the University. Specimens of both can be found in {\itshape A Specimen of the
 Several Sorts of Letter Given to the University by Dr. John Fell,
 Sometime Lord Bishop of Oxford. To Which Is Added the Letter Given by
@@ -232,7 +232,7 @@ Introduction to the Feature Reference.
 \textit{Users need to be aware that Junicode version 2 is a beta, unstable and
 incomplete. Until the official release of version 2 (probably sometime in 2022), versions of Junicode
 numbered \textsc{1.nnn} should be used for projects that require
-stability. The latest stable version can be downloaded \href{https://github.com/psb1558/Junicode-font/releases}{here}.}
+stability. The latest stable version can be downloaded} \href{https://github.com/psb1558/Junicode-font/releases}{here}.
 
 }
 \pagestyle{fancy}
@@ -979,8 +979,10 @@ capitals, if you prefer, the \textit{prosgegrammeni} (U+1FBE).
 
 For example, the sequence ω (U+03C9) ◌̓ (U+0313) ◌́ (U+0301) ◌ͅ (U+0345)
 produces \textLetterExample{ᾤ}. Substitute capital Ω (U+03A9) and the result is
-\textLetterExample{ᾬ}. If you
-prefer a different result, place U+034F \textUName{combining grapheme joiner} somewhere
+\textLetterExample{ᾬ}. Note that in a number of applications the layout
+engine will perform these substitutions before Junicode’s own programming is
+invoked. If either the layout engine or Junicode fails to produce your
+preferred result, try placing U+034F \textUName{combining grapheme joiner} somewhere
 in the sequence of combining marks---for example, before the \textit{ypogegrammeni}
 to make \textLetterExample{Ὤ͏ͅ}.
 

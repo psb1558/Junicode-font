@@ -94,12 +94,20 @@
 
 /* Classes using Stylistic Sets */
 
-.alt-thorn-eth {
-  font-variant-alternates: styleset(Alternate-thorn-and-eth);
+.alt-thorn-eth { font-feature-settings: "ss01"; }
+
+@supports (font-variant-alternates) {
+  .alt-thorn-eth {
+    font-variant-alternates: styleset(Alternate-thorn-and-eth);
+  }
 }
 
-.insular {
-  font-variant-alternates: styleset(Insular-letter-forms);
+.insular { font-feature-settings: "ss02"; }
+
+@supports (font-variant-alternates) {
+  .insular {
+    font-variant-alternates: styleset(Insular-letter-forms);
+  }
 }
 
 .alt-greek {

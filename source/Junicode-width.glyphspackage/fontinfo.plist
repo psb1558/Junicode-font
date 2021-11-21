@@ -327,6 +327,15 @@ lookup Contextual_Kerning_02 {
     pos doublebrevebelowcomb <-60 0 0 0> ;
     pos doublecircumflexcomb <-60 0 0 0> ;
 } Contextual_Kerning_02 ;
+
+lookup  altgreek {
+  sub beta by beta.alt ;
+  sub gamma by gamma.alt ;
+  sub theta by theta.alt ;
+  sub pi by pi.alt ;
+  sub phi by phi.alt ;
+  sub omega by omega.alt ;
+} altgreek;
 ";
 name = Misc_lookups;
 }
@@ -1507,12 +1516,19 @@ disabled = 1;
 tag = hist;
 },
 {
-code = "sub beta by beta.alt ;
-sub gamma by gamma.alt ;
-sub theta by theta.alt ;
-sub pi by pi.alt ;
-sub phi by phi.alt ;
-sub omega by omega.alt ;
+code = "#sub beta by beta.alt ;
+#sub gamma by gamma.alt ;
+#sub theta by theta.alt ;
+#sub pi by pi.alt ;
+#sub phi by phi.alt ;
+#sub omega by omega.alt ;
+
+script DFLT;
+language dflt;
+  lookup altgreek;
+script grek;
+language dflt;
+  lookup altgreek;
 ";
 labels = (
 {

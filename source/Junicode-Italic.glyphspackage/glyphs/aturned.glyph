@@ -12,6 +12,51 @@ name = top;
 pos = (571,856);
 }
 );
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,31);
+target = (1,6);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,31);
+target = (0,40);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,6);
+target = (0,55);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,68);
+target = (0,14);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,31);
+other1 = (0,24);
+target = (0,68);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,24);
+target = (1,12);
+type = TTShift;
+}
+);
 layerId = master01;
 shapes = (
 {

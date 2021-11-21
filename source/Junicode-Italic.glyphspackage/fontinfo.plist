@@ -4270,13 +4270,15 @@ size = 22;
 name = TTFZones;
 value = (
 {
+filter = "category == \"Letter\" AND case == 1";
 name = "Cap Height";
 pos = 1363;
 size = 23;
 },
 {
+filter = "category == \"Letter\" AND case == 2";
 name = "x-height";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
@@ -4285,12 +4287,13 @@ pos = 0;
 size = -28;
 },
 {
+filter = "category == \"Letter\" AND case == 2";
 name = descender;
 pos = -563;
 size = 0;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
+filter = "category == \"Letter\" AND case == 3";
 name = "small cap height";
 pos = 937;
 size = 20;
@@ -4298,13 +4301,31 @@ size = 20;
 {
 filter = "category == \"Letter\" AND case == 2";
 name = "x-height-enlarged";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
+filter = "category == \"Letter\" AND case == 2";
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+}
+);
+},
+{
+name = TTFStems;
+value = (
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Bar";
+width = 73;
+},
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Serif";
+width = 69;
 }
 );
 }
@@ -4408,7 +4429,7 @@ size = 23;
 },
 {
 name = "x-height";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
@@ -4429,13 +4450,29 @@ size = 20;
 },
 {
 name = "x-height-enlarged";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+}
+);
+},
+{
+name = TTFStems;
+value = (
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Bar";
+width = 91;
+},
+{
+horizontal = 1;
+name = "Cap Serif";
+width = 89;
 }
 );
 }
@@ -4540,7 +4577,7 @@ size = 23;
 },
 {
 name = "x-height";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
@@ -4568,6 +4605,22 @@ size = 31;
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+}
+);
+},
+{
+name = TTFStems;
+value = (
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Bar";
+width = 65;
+},
+{
+horizontal = 1;
+name = "Cap Serif";
+width = 63;
 }
 );
 }
@@ -4672,7 +4725,7 @@ size = 23;
 },
 {
 name = "x-height";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
@@ -4693,13 +4746,29 @@ size = 20;
 },
 {
 name = "x-height-enlarged";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+}
+);
+},
+{
+name = TTFStems;
+value = (
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Bar";
+width = 73;
+},
+{
+horizontal = 1;
+name = "Cap Serif";
+width = 69;
 }
 );
 }
@@ -4803,7 +4872,7 @@ size = 23;
 },
 {
 name = "x-height";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
@@ -4824,13 +4893,29 @@ size = 20;
 },
 {
 name = "x-height-enlarged";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+}
+);
+},
+{
+name = TTFStems;
+value = (
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Bar";
+width = 73;
+},
+{
+horizontal = 1;
+name = "Cap Serif";
+width = 69;
 }
 );
 }
@@ -4934,7 +5019,7 @@ size = 23;
 },
 {
 name = "x-height";
-pos = 852;
+pos = 844;
 size = 31;
 },
 {
@@ -4955,13 +5040,29 @@ size = 20;
 },
 {
 name = "x-height-enlarged";
-pos = 1045;
-size = 0;
+pos = 1040;
+size = 25;
 },
 {
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+}
+);
+},
+{
+name = TTFStems;
+value = (
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "Cap Bar";
+width = 73;
+},
+{
+horizontal = 1;
+name = "Cap Serif";
+width = 69;
 }
 );
 }

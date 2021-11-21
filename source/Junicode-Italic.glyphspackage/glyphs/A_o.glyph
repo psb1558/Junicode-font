@@ -12,10 +12,83 @@ name = top;
 pos = (1326,1363);
 }
 );
-guides = (
+hints = (
 {
-pos = (926,1179);
-showMeasurement = 1;
+horizontal = 1;
+options = 4;
+origin = (0,2);
+target = (0,44);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,2);
+target = (4,2);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,44);
+target = (0,8);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,44);
+target = (4,17);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,11);
+target = (0,2);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,11);
+target = (3,11);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,5);
+target = (3,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,5);
+target = (0,22);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,22);
+target = (0,13);
+type = TTShift;
+},
+{
+horizontal = 1;
+origin = (0,2);
+other1 = (2,0);
+target = (1,5);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,0);
+target = (2,1);
+type = TTStem;
 }
 );
 layerId = master01;

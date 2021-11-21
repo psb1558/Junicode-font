@@ -133,7 +133,7 @@
 \Huge \centering {\color{myBlue}Junicode} \\[1cm]
 \huge \centering the font for medievalists \\[1cm]
  \Huge\centering {\color{myRed}} \\[1cm]
- \huge\centering {\stditalic specimens and feature reference} \\[1ex]
+ \huge\centering {\stditalic specimens and user manual} \\[1ex]
  \Large\centering{\regular for version 2}\\
 \vfill
 {\color{myRed}}
@@ -143,16 +143,18 @@
 \chapter*{\color{RViolet}Contents}
 \thispagestyle{plain}
 
-\noindent\hyperlink{aboutj}{\bfseries\large About Junicode}\\
+\noindent\hyperlink{aboutj}{\bfseries\large About Junicode}\\[-0.25em]
 
-\noindent\hyperlink{specimens}{\bfseries\large Specimens}\\
+\noindent\hyperlink{specimens}{\bfseries\large Specimens}\\[-0.25em]
 
-\noindent\hyperlink{FeatureReference}{\bfseries\large Feature Reference}\\
+\noindent\hyperlink{GettingStarted}{\bfseries\large Getting Started With Junicode}\\[-0.25em]
+
+\noindent\hyperlink{FeatureReference}{\bfseries\large Feature Reference}\\[-0.25em]
 
 \hyperlink{intro}{Introduction}
 
 \begin{itemize}
-\setlength\itemsep{0em}
+\setlength\itemsep{-0.25em}
 \item[A] \hyperlink{SectionA}{Case-Related Features}
 
 \item[B] \hyperlink{SectionB}{Numbers and Sequencing}
@@ -213,7 +215,7 @@ Junicode includes two Greek faces, one for the roman font and another
 for the italic. The first is newly designed to harmonize with Junicode,
 and the other, accompanying the italic face, is based on type designed by Alexander
 Wilson (1714–86) of Glasgow and used in numerous books published by
-the Foulis Press, most notably the great Glasgow Homer.
+the Foulis Press, most notably the great Glasgow Homer of 1756–58.
 
 The font dates from 1998, when the developer began to revise his
 older (early 1990s) “Junius” fonts for medievalists to take account of the Unicode
@@ -276,7 +278,7 @@ or apply the OpenType ss01 (Stylistic Set 1) feature.}\\[1ex]
 lið alt myndi vera niðri í eyjum at lúka heyverkum. Riðu þeir Gizurr Hvíti ok
 Geirr Goði austr yfir ár, þegar þeir spurðu þat, ok austr yfir sanda til Hofs.
 Þá sendu þeir orð Starkaði undir Þríhyrningi; ok fundusk þeir þar allir er at
-Gunnari skyldu fara, ok réðu hversu at skyldi fara. (SemiExpanded Medium)}
+Gunnari skyldu fara, ok réðu hversu at skyldi fara.} (SemiExpanded Medium)
 
 \subsection*{Runic}
 {\wide ᚠᛁᛋᚳ ᚠᛚᚩᛞᚢ ᚪᚻᚩᚠ ᚩᚾ ᚠᛖᚱᚷᛖᚾᛒᛖᚱᛁᚷ ᚹᚪᚱᚦ ᚷᚪ᛬ᛇᚱᛁᚳ ᚷᚱᚩᚱᚾ ᚦᚨᚱ ᚻᛖ ᚩᚾ ᚷᚱᛖᚢᛏ ᚷᛁᛇᚹᚩᛗ
@@ -411,7 +413,115 @@ uczynimy sobie znak, abyśmy się nie rozproszyli po całej ziemi.} (Condensed B
  
 \end{center}
 
-\hypertarget{FeatureReference}{}\chapter*{\color{RViolet}Feature Reference}
+\chapter*{\color{RViolet}Getting Started with Junicode}\hypertarget{GettingStarted}{}
+
+With more than 4,700 characters, Junicode is a large font. Finding the things you
+want in a collection that size can be a challenge, and then entering them in your
+documents is another challenge. This document will help, but it
+presupposes a certain amount of knowledge—for example, how to install a font in
+Windows, Mac OS or Linux and how to install and use different kinds of software.
+
+Medievalists will find the \href{https://bora.uib.no/bora-xmlui/handle/1956/10699}%
+{\textit{MUFI Character Recommendation}}, version 4.0 (2015)
+an essential supplement to this document. The \textit{Recommendation} lists
+thousands of characters identified by the
+Medieval Unicode Font Initiative as being of interest to medievalists. Junicode
+contains all of these characters. There are two versions of the \textit{Recommendation}:
+you will probably find the “Alphabetical Order” version most helpful.
+
+From the \textit{MUFI Character Recommendation} or, alternatively, the Junicode
+\textit{List of Encoded Characters} (packaged with the font) you can find out
+the \textbf{code points}\footnote{A Unicode code point is a numerical identifier for a character.
+It is generally expressed as a
+four-digit hexadecimal (or base-16) number with a prefix of ``U+''. The letter
+capital ``A,'' for example, is U+0041 (65
+in decimal notation), and lowercase ``ȝ'' (Middle English yogh) is U+021D.}
+of the characters you need. These code points can be used to enter
+characters in your documents when they cannot be typed on the keyboard.
+
+To enter any Unicode character in a Windows application, type its four-digit
+code, followed by Alt-X. To do the same in the Mac OS, first install and switch
+to the “Unicode Hex Input” keyboard, then type the code while holding down the Option
+key. In most Linux distributions you can enter a code by typing Shift-Control-U,
+then the code followed by Return or Enter.
+
+\textbf{Combining marks} (diacritics and certain abbreviation signs) can pose special problems for
+medievalists. Unicode contains a great
+many \textbf{precomposed characters} consisting of a base letter plus one or more marks.
+If these are all you need you're fortunate---especially if they can be
+typed on an international keyboard (not all can).\footnote{Both
+Windows and the Mac OS come with international keyboards that make it easy to
+type special letters and diacritics. To find out how to enable these, search
+online for “Mac OS International Keyboard” or “Windows International Keyboard.”}
+But medieval manuscripts frequently contain
+combinations of base + mark that are not used in modern written languages.
+For these, you'll have to
+enter bases and marks separately.
+
+To position a mark correctly over a base character, first enter the base,
+followed by the mark or marks.
+The sequence \textbf{m} + \textbf{◌ᷙ} (U+1DD9)
+will make \textbf{mᷙ}; \textbf{y} + \textbf{◌̄} (U+0304) + \textbf{◌̆} (U+0306) will make \textbf{ȳ̆};
+\textbf{e} + \textbf{◌̣} (U+0323) + \textbf{◌ᷠ} (U+1DE0) will make \textbf{ẹᷠ}.
+
+More than sixteen hundred characters in Junicode can only be accessed via OpenType features—that is,
+by way of the programming built into the font—and many others \textit{should} be
+accessed that way for reasons explained in the Introduction
+to the Feature Reference section of this document.
+
+For example, some programs (including Microsoft Word) produce small caps by
+scaling capitals down to approximately the height of lowercase letters.
+These always look too thin and light.
+But Junicode contains hundreds of \textsc{true small caps} designed to harmonize with
+the surrounding text. These can only be accessed via the OpenType \textSourceText{smcp} feature,
+which you can apply to a run of text much as you apply italic or bold styles:
+select some text and then apply the feature.
+
+Unfortunately, not every program supports OpenType features, and some that do
+either support only a few or make them difficult to access. Programs
+that support Junicode’s features fully include the free word processor
+\href{https://www.libreoffice.org/}{LibreOffice Writer}, all major browsers
+(Firefox, Chrome, Safari and Edge), and
+the typesetting programs {\LuaLaTeX} and {\XeLaTeX}. Adobe InDesign supports
+OpenType features only partially, but provides access to all of Junicode's characters
+through its own interface.
+
+Microsoft Word, unfortunately, provides only limited support for OpenType
+features. It supports the \hyperlink{req}{Required Features} discussed below, and also
+variant number forms and Stylistic Sets (though only one at a time). Many characters
+(for example, \textsc{true small caps} and those accessible only via Character
+Variant features) cannot be accessed at all. To activate Word's OpenType
+support, you must open the “Font” dialog, click over to the “Advanced” tab,
+and check the “Kerning” box. (Oddly, the “Kerning” box enables all other
+OpenType features.) Then, in the same tab, select Standard Ligatures, Contextual
+Alternates, and any other features you want.
+OpenType features are best applied to character styles rather than
+directly to text: this will
+save you from having to perform this operation repeatedly.
+
+It is also good to set the language properly for the text you're working on.
+Programs like Word will automatically set the language to the default for your system. If you
+change to a language other than your own for a passage (or even a single word),
+you should set the language for that passage appropriately. This will unlock
+a number of capabilities. For example, in Old and Middle English, Word and
+other programs will use the English form of thorn and eth (þð), and in ancient
+Greek you will be able to type accents after vowels instead of looking up
+the codes for hundreds of polytonic vowels. But these and other capabilities
+are only available when you set the language correctly.
+
+In LibreOffice and InDesign you can set the language with a drop-down menu
+in the “Character” dialog. In Word there is a separate “Language” dialog,
+accessible from the “Tools” menu.
+
+If you have questions about any aspect of Junicode,
+post a query in the \href{https://github.com/psb1558/Junicode-font/discussions}%
+{Junicode discussion forum}. If you notice a bug, please open an
+\href{https://github.com/psb1558/Junicode-font/issues}{issue} at the font's
+\href{https://github.com/psb1558/Junicode-font}{development site}. If you need
+help with programming, subsetting or other tasks, contact the developer
+directly.\footnote{b dot tarde at gmail dot com.}
+
+\chapter*{\color{RViolet}Feature Reference}\hypertarget{FeatureReference}{}
 
 \hypertarget{intro}{}\section{Introduction}
 The OpenType features of Junicode version 2 and its variable counterpart (hereafter referred to together as
@@ -420,9 +530,7 @@ Font Initiative (MUFI) recommendation. The other is to enable best practices in 
 promoting accessibility in electronic texts from PDFs to e-books to web pages.
 %\thispagestyle{plain}
 
-Each character in the MUFI recommendation has a code point\footnote{A Unicode code point is generally expressed as a
-four-digit hexadecimal (or base-16) number with a prefix of ``U+''. The letter capital ``A,'' for example, is U+0041 (65
-in decimal notation), and lowercase ``ȝ'' (Middle English yogh) is U+021D.} associated with it: either the one
+Each character in the MUFI recommendation has a code point associated with it: either the one
 assigned by Unicode or, where the character is not recognized by Unicode, in the Private Use Area (PUA) of the Basic
 Multilingual Plane, a block of codes, running from U+E000 to U+F8FF, that are assigned no value by Unicode but instead
 are available for font designers to use in any way they please.

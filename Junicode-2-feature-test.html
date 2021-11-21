@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+<style>
+@font-face {
+    font-family: "Junicode Two Beta VF";
+    src: url("./webfiles/JunicodeTwoBetaVF-Roman.woff2");
+    font-weight: 300 700;
+    font-stretch: 60% 140%;
+}
+
+@font-feature-values "Junicode Two Beta VF" {
+    @styleset {
+      Alternate-thorn-and-eth: 1;
+      Insular-letter-forms: 2;
+      Alternate-Greek: 3;
+      High-Overline: 4;
+      Medium-high-Overline: 5;
+      Enlarged-minuscules: 6;
+      Underdotted: 7;
+      Contextual-long-s: 8;
+      Entities: 10;
+      Early-English-Futhorc: 12;
+      Elder-Futhark: 13;
+      Younger-Futhark: 14;
+      Long-Branch-to-Short-Twig: 15;
+      Contextual-r-rotunda: 16;
+      Rare-Digraphs: 17;
+      Old-style-punctuation-spacing: 18;
+      Latin-to-Gothic: 19;
+      Low-Diacritics: 20;
+    }
+    @character-variant {
+      Alternate-A-1: 1;
+      Alternate-A-2: 1 2;
+      Alternate-A-2: 1 3;
+      Alternate-a-1: 2;
+      Alternate-a-2: 2 2;
+      Alternate-a-3: 2 3;
+      Alternate-a-4: 2 4;
+      Alternate-a-5: 2 5;
+      Alternate-C:   5;
+      Alternate-c:   6;
+      Alternate-D:   7;
+      Alternate-d-1: 8;
+      Alternate-d-2: 8 2;
+      Alternate-d-3: 8 3;
+      Alternate-E-1: 9;
+      Alternate-E-2: 9 2;
+      Alternate-e-1: 10;
+      Alternate-e-2: 10 2;
+      Alternate-e-3: 10 3;
+    }
+}
+
+.dlig { font-variant-ligatures: discretionary-ligatures; }
+
+.hlig { font-variant-ligatures: historical-ligatures; }
+
+.lnum { font-variant-numeric: lining-nums; }
+
+.onum { font-variant-numeric: oldstyle-nums; }
+
+.pcap { font-variant-caps: petite-caps; }
+
+.pnum { font-variant-numeric: proportional-nums; }
+
+.smcp { font-variant-caps: small-caps; }
+
+.subs { font-variant-position: sub; }
+
+.sups { font-variant-position: super; }
+
+.tnum { font-variant-numeric: tabular-nums; }
+
+.oldstylenums { font-variant-numeric: oldstyle-nums proportional-nums; }
+
+.defaultnums { font-variant-numeric: tabular-nums lining-nums; }
+
+.zero { font-variant-numeric: slashed-zero; }
+
+.dlig { font-variant-ligatures: discretionary-ligatures; }
+
+.hlig { font-variant-ligatures: historical-ligatures; }
+
+.alt-thorn-eth {
+  font-variant-alternates: styleset(Alternate-thorn-and-eth);
+}
+
+.insular {
+  font-variant-alternates: styleset(Insular-letter-forms);
+}
+
+.alt-greek {
+  font-variant-alternates: styleset(Alternate-Greek);
+}
+
+.high-overline {
+  font-variant-alternates: styleset(High-Overline);
+}
+
+.med-high-overline {
+  font-variant-alternates: styleset(Medium-high-Overline);
+}
+
+.enlarged {
+  font-variant-alternates: styleset(Enlarged-minuscules);
+}
+
+.underdotted {
+  font-variant-alternates: styleset(Underdotted);
+}
+
+.scontextual {
+  font-variant-alternates: styleset(Contextual-long-s);
+}
+
+.futhorc {
+  font-variant-alternates: styleset(Early-English-Futhorc);
+}
+
+.elder-futhark {
+  font-variant-alternates: styleset(Elder-Futhark);
+}
+
+.younger-futhark {
+  font-variant-alternates: styleset(Younger-Futhark);
+}
+
+.short-twig {
+  font-variant-alternates: styleset(Younger-Futhark, Long-Branch-to-Short-Twig);
+}
+
+.rcontextual {
+  font-variant-alternates: styleset(Contextual-r-rotunda);
+}
+
+.digraphs {
+  font-variant-alternates: styleset(Rare-Digraphs);
+}
+
+.punct-spacing {
+  font-variant-alternates: styleset(Old-style-punctuation-spacing);
+}
+
+.gothic {
+  font-variant-alternates: styleset(Latin-to-Gothic);
+}
+
+.low-diacritics {
+  font-variant-alternates: styleset(Entities, Low-Diacritics);
+}
+
+.entities {
+  font-variant-alternates: styleset(Entities);
+}
+
+.one-alts {
+  font-variant-alternates: character-variant(Alternate-A-1,
+  Alternate-a-1,
+  Alternate-C,
+  Alternate-c,
+  Alternate-D,
+  Alternate-d-1,
+  Alternate-E-1,
+  Alternate-e-1);
+}
+
+.two-alts {
+  font-variant-alternates: character-variant(Alternate-A-2,
+  Alternate-a-2,
+  Alternate-d-2,
+  Alternate-E-2,
+  Alternate-e-2);
+}
+
+.three-alts {
+  font-variant-alternates: character-variant(Alternate-A-3,
+  Alternate-a-3,
+  Alternate-d-3,
+  Alternate-e-3);
+}
+
+.four-alts {
+  font-variant-alternates: character-variant(Alternate-a-4);
+}
+
+.five-alts {
+  font-variant-alternates: character-variant(Alternate-a-5);
+}
+
+body {
+  font-family: 'Junicode Two Beta VF';
+  font-size: 28px;
+  line-height: 150%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+</style>
+</head>
+<body>
+  <p>
+    This file tests to make sure that high-level CSS font propertiesw work in Junicode 2.
+    View page source to see the code that makes it happen.
+  </p>
+  <p>
+    <b>one-alts:</b>
+  </p>
+  <p class="one-alts">
+    AaBbCcDdEe.
+  </p>
+  <p>
+    <b>two-alts:</b>
+  </p>
+  <p class="two-alts">
+    AaBbCcDdEe.
+  </p>
+  <p>
+    <b>three-alts:</b>
+  </p>
+  <p class="three-alts">
+    AaBbCcDdEe.
+  </p>
+  <p>
+    <b>four-alts:</b>
+  </p>
+  <p class="four-alts">
+    AaBbCcDdEe.
+  </p>
+  <p>
+    <b>five-alts:</b>
+  </p>
+  <p class="five-alts">
+    AaBbCcDdEe.
+  </p>
+  <p>
+    <b>Reversed thorn and eth (ss01, from English):</b>
+  </p>
+  <p lang="en">
+    Normal: ÞÐþð. Reversed: <span class="alt-thorn-eth">ÞÐþð.</span>
+  </p>
+  <p>
+    <b>Insular (ss02):</b>
+  </p>
+  <p class="insular">
+    Fourscore and seven years ago, our forefathers brought forth upon this
+    continent.
+  </p>
+  <p>
+    <b>Discretionary Ligatures:</b>
+  </p>
+  <p class="dlig">
+    strict.
+  </p>
+  <p>
+    <b>Historical Ligatures:</b>
+  </p>
+  <p class="hlig">
+    al Psi.
+  </p>
+  <p>
+    <b>Old-style numbers (onum + pnum):</b>
+  </p>
+  <p class="oldstylenums">
+    0123456789
+  </p>
+  <p>
+    <b>Petite caps:</b>
+  </p>
+  <p class="pcap">
+    abcdefg
+  </p>
+  <p>
+    <b>Small caps:</b>
+  </p>
+  <p class="smcp">
+    abcdefg
+  </p>
+  <p>
+    <b>Subscripts:</b>
+  </p>
+  <p>
+    a<span class="subs">012345</span>A
+  </p>
+  <p>
+    <b>Superscripts:</b>
+  </p>
+  <p>
+    a<span class="sups">012345 abcd</span>A
+  </p>
+  <p>
+    <b>Slashed zero:</b>
+  </p>
+  <p class="zero">
+    0
+  </p>
+  <p>
+    <b>Enlarged minuscules (ss06):</b>
+  </p>
+  <p>
+    abcde <span class="enlarged">abcde</span>
+  </p>
+  <p>
+    <b>Underdotted text (ss07):</b>
+  </p>
+  <p class="underdotted">
+    abcde
+  </p>
+  <p>
+    <b>Contextual long s (ss08):</b>
+  </p>
+  <p class="scontextual">
+    simple sizzles cliffside
+  </p>
+  <p>
+    <b>English forthorc (ss12):</b>
+  </p>
+  <p class="futhorc">
+    abcdefghi
+  </p>
+  <p>
+    <b>Elder futhark (ss13):</b>
+  </p>
+  <p class="elder-futhark">
+    abcdefghi
+  </p>
+  <p>
+    <b>Younger futhark (ss14):</b>
+  </p>
+  <p class="younger-futhark">
+    abcdefghi
+  </p>
+  <p>
+    <b>Long Branch to Short Twig (ss15):</b>
+  </p>
+  <p class="short-twig">
+    abcdefghi
+  </p>
+  <p>
+    <b>Contextual r rotunda:</b>
+  </p>
+  <p class="rcontextual">
+    priest offer arise port
+  </p>
+  <p>
+    <b>Rare diagraphs:</b>
+  </p>
+  <p class="digraphs">
+    au av oo
+  </p>
+  <p>
+    <b>Old-style punctuation spacing:</b>
+  </p>
+  <p>
+    normal: (here) there; “everywhere”. old: <span class="punct-spacing">(here) there; “everywhere”.</span>
+  </p>
+  <p>
+    <b>Gothic transliteration:</b>
+  </p>
+  <p class="gothic">
+    abcdefg
+  </p>
+  <p>
+    <b>Low diacritics:</b>
+  </p>
+  <p>
+    Without: <span class="entities">bͦ h&_idotl;</span>. With: <span class="low-diacritics">bͦ h&_idotl;</span>
+  </p>
+  <p>
+    <b>Letters with high overlines</b>
+  </p>
+  <p class="high-overline">
+    DCLXXIV dclxxiv
+  </p>
+  <p>
+    <b>Letters with medium-high overlines</b>
+  </p>
+  <p class="med-high-overline">
+    dclxxiv
+  </p>
+  <p>
+    <b>Alternative Greek letters:</b>
+  </p>
+  <p class="alt-greek">
+    This is the only thing not working. Why not? (can't work around it either)<br/>
+    βγθφχψ
+    <!-- <span style="font-feature-settings: 'ss03';">βγθφχψ</span> -->
+  </p>
+
+
+</body>

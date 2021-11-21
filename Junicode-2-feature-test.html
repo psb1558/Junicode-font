@@ -4,6 +4,7 @@
 
 <meta charset="UTF-8"/>
 <style>
+
 @font-face {
     font-family: "Junicode Two Beta VF";
     src: url("./webfiles/JunicodeTwoBetaVF-Roman.woff2");
@@ -11,6 +12,8 @@
     font-stretch: 60% 140%;
 }
 
+/* Assign names to Stylistic Sets and Character Variant features here.
+   (only A-e in cvNN features since this is only a test). */
 @font-feature-values "Junicode Two Beta VF" {
     @styleset {
       Alternate-thorn-and-eth: 1;
@@ -55,6 +58,8 @@
     }
 }
 
+/* Standard high-level CSS font properties */
+
 .dlig { font-variant-ligatures: discretionary-ligatures; }
 
 .hlig { font-variant-ligatures: historical-ligatures; }
@@ -84,6 +89,8 @@
 .dlig { font-variant-ligatures: discretionary-ligatures; }
 
 .hlig { font-variant-ligatures: historical-ligatures; }
+
+/* Classes using Stylistic Sets */
 
 .alt-thorn-eth {
   font-variant-alternates: styleset(Alternate-thorn-and-eth);
@@ -157,6 +164,8 @@
   font-variant-alternates: styleset(Entities);
 }
 
+/* test cvNN features together: first those with an index of one, then two ... */
+
 .one-alts {
   font-variant-alternates: character-variant(Alternate-A-1,
   Alternate-a-1,
@@ -207,31 +216,31 @@ body {
     View page source to see the code that makes it happen.
   </p>
   <p>
-    <b>one-alts:</b>
+    <b>one-alts</b> (AaCcDdEe only):
   </p>
   <p class="one-alts">
     AaBbCcDdEe.
   </p>
   <p>
-    <b>two-alts:</b>
+    <b>two-alts</b> (AadEe only):
   </p>
   <p class="two-alts">
     AaBbCcDdEe.
   </p>
   <p>
-    <b>three-alts:</b>
+    <b>three-alts</b> (ade only):
   </p>
   <p class="three-alts">
     AaBbCcDdEe.
   </p>
   <p>
-    <b>four-alts:</b>
+    <b>four-alts</b> (a only):
   </p>
   <p class="four-alts">
     AaBbCcDdEe.
   </p>
   <p>
-    <b>five-alts:</b>
+    <b>five-alts</b> (a only):
   </p>
   <p class="five-alts">
     AaBbCcDdEe.

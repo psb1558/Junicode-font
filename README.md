@@ -52,7 +52,7 @@ An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making
 
 An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
 
-[Test/demonstration]{https://psb1558.github.io/Junicode-font/Junicode-2-feature-test.html} of
+[Test/demonstration](https://psb1558.github.io/Junicode-font/Junicode-2-feature-test.html) of
 high-level CSS font properties in Junicode 2
 
 # Changes

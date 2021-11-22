@@ -605,8 +605,21 @@ body {
   margin-right: 10%;
 }
 
-tt {
-  font-size: 60%;
+.tt {
+  font-family: monospace, monospace;
+  font-size: 0.75em;
+}
+
+.hlcode {
+  color: green;
+  font-size: 90%;
+  font-variation-settings: "wght" 400, "wdth" 80, "ENLA" 0;
+}
+
+.fbcode {
+  color: red;
+  font-size: 90%;
+  font-variation-settings: "wght" 400, "wdth" 80, "ENLA" 0;
 }
 
 h1 {
@@ -634,7 +647,7 @@ h1 {
       place and the transformed text is
       <span style="color: red;">red</span>, your browser does not support the high-level
       property, but it does support Junicode’s OpenType feature via the low-level
-      <tt style="font-size: 75%;">font-feature-settings</tt> property.
+      <span class="tt">font-feature-settings</span> property.
     </li>
     <li>
       If the transformation has not taken place, some other error has occurred.
@@ -646,238 +659,270 @@ h1 {
   </p>
   <p class="indent">
     AaCcDdEe → <span class="one-alts">AaCcDdEe</span>.<br/>
-    <tt>font-variant-alternates: character-variant(Alternate-A-1,
+    <span class="hlcode">font-variant-alternates: character-variant(Alternate-A-1,
       Alternate-a-1,
       Alternate-C,
       Alternate-c,
       Alternate-D,
       Alternate-d-1,
       Alternate-E-1,
-      Alternate-e-1)</tt>
+      Alternate-e-1)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "cv01", "cv02", "cv05", "cv06", "cv06", "cv07",
+        "cv08", "cv09", "cv10"</span>
   </p>
   <p>
     <b>cvNN[2]</b>
   </p>
   <p class="indent">
     AadEe → <span class="two-alts">AadEe</span>.<br/>
-    <tt>font-variant-alternates: character-variant(Alternate-A-2,
+    <span class="hlcode">font-variant-alternates: character-variant(Alternate-A-2,
       Alternate-a-2,
       Alternate-d-2,
       Alternate-E-2,
-      Alternate-e-2)</tt>
+      Alternate-e-2)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "cv01" 2, "cv02" 2, "cv08" 2, "cv09" 2, "cv10" 2</span>
   </p>
   <p>
     <b>cvNN[3]</b>
   </p>
   <p class="indent">
     Aade → <span class="three-alts">Aade</span>.<br/>
-    <tt>font-variant-alternates: character-variant(Alternate-A-3,
+    <span class="hlcode">font-variant-alternates: character-variant(Alternate-A-3,
       Alternate-a-3,
       Alternate-d-3,
-      Alternate-e-3)</tt>
+      Alternate-e-3)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "cv01" 3, "cv02" 3, "cv08" 3, "cv10" 3</span>
   </p>
   <p>
     <b>cvNN[4]</b>
   </p>
   <p class="indent">
     a → <span class="four-alts">a</span>.<br/>
-    <tt>font-variant-alternates: character-variant(Alternate-a-4)</tt>
+    <span class="hlcode">font-variant-alternates: character-variant(Alternate-a-4)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "cv02" 4</span>
   </p>
   <p>
     <b>cvNN[5]</b>
   </p>
   <p class="indent">
     a → <span class="five-alts">a</span>.<br/>
-    <tt>font-variant-alternates: character-variant(Alternate-a-5)</tt>
+    <span class="hlcode">font-variant-alternates: character-variant(Alternate-a-5)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "cv02" 5</span>
   </p>
   <p>
     <b>Swapped thorn and eth (ss01, from English)</b>
   </p>
   <p lang="en" class="indent">
     ÞÐþð → <span class="alt-thorn-eth">ÞÐþð</span>.<br/>
-    <tt>font-variant-alternates: styleset(Alternate-thorn-and-eth)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Alternate-thorn-and-eth)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss01"</span>
   </p>
   <p>
     <b>Insular (ss02)</b>
   </p>
   <p class="indent">
     wyrd oft nereð unfægne eorl → <span class="insular">wyrd oft nereð unfægne eorl</span>.<br/>
-    <tt>font-variant-alternates: styleset(Insular-letter-forms)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Insular-letter-forms)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss02"</span>
   </p>
   <p>
     <b>Discretionary Ligatures (dlig)</b>
   </p>
   <p class="indent">
     strict → <span class="dlig">strict</span>.<br/>
-    <tt>font-variant-ligatures: discretionary-ligatures</tt>
+    <span class="hlcode">font-variant-ligatures: discretionary-ligatures</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "dlig"</span>
   </p>
   <p>
     <b>Historical Ligatures (hlig)</b>
   </p>
   <p class="indent">
     al Psi → <span class="hlig">al Psi</span>.<br/>
-    <tt>font-variant-ligatures: historical-ligatures</tt>
+    <span class="hlcode">font-variant-ligatures: historical-ligatures</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "hlig"</span>
   </p>
   <p>
     <b>Old-style numbers (onum + pnum)</b>
   </p>
   <p class="indent">
     0123456789 → <span class="oldstylenums">0123456789</span>.<br/>
-    <tt>font-variant-numeric: oldstyle-nums proportional-nums</tt>
+    <span class="hlcode">font-variant-numeric: oldstyle-nums proportional-nums</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "onum", "pnum"</span>
   </p>
   <p>
     <b>Petite caps (pcap)</b>
   </p>
   <p class="indent">
     abcdefg → <span class="pcap">abcdefg</span>.<br/>
-    <tt>font-variant-caps: petite-caps</tt>
+    <span class="hlcode">font-variant-caps: petite-caps</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "pcap"</span>
   </p>
   <p>
     <b>Small caps (smcp)</b>
   </p>
   <p class="indent">
     abcdefg → <span class="smcp">abcdefg</span>.<br/>
-    <tt>font-variant-caps: small-caps</tt>
+    <span class="hlcode">font-variant-caps: small-caps</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "smcp"</span>
   </p>
   <p>
     <b>All small caps (c2sp + smcp)</b>
   </p>
   <p class="indent">
     Abc Defg → <span class="all-sc">Abc Defg</span>.<br/>
-    <tt>font-variant-caps: all-small-caps</tt>
+    <span class="hlcode">font-variant-caps: all-small-caps</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "c2sp", "smcp"</span>
   </p>
   <p>
     <b>Subscripts (subs)</b>
   </p>
   <p class="indent">
     012345 → <span class="subs">012345</span>.<br/>
-    <tt>font-variant-position: sub</tt>
+    <span class="hlcode">font-variant-position: sub</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "subs"</span>
   </p>
   <p>
     <b>Superscripts (sups)</b>
   </p>
   <p class="indent">
     012345 abcd → <span class="sups">012345 abcd</span>.<br/>
-    <tt>font-variant-position: super</tt>
+    <span class="hlcode">font-variant-position: super</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "sups"</span>
   </p>
   <p>
     <b>Slashed zero (zero)</b>
   </p>
   <p class="indent">
     0 → <span class="zero">0</span>.<br/>
-    <tt>font-variant-numeric: slashed-zero</tt>
+    <span class="hlcode">font-variant-numeric: slashed-zero</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "zero"</span>
   </p>
   <p>
     <b>Enlarged minuscules (ss06)</b>
   </p>
   <p class="indent">
     abcde → <span class="enlarged">abcde</span>.<br/>
-    <tt>font-variant-alternates: styleset(Enlarged-minuscules)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Enlarged-minuscules)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss06"</span>
   </p>
   <p>
     <b>Underdotted text (ss07)</b>
   </p>
   <p class="indent">
     abcde → <span class="underdotted">abcde</span>.<br/>
-    <tt>font-variant-alternates: styleset(Underdotted)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Underdotted)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss07"</span>
   </p>
   <p>
     <b>Contextual long s (ss08)</b>
   </p>
   <p class="indent">
     simple sizzles cliffside → <span class="scontextual">simple sizzles cliffside</span>.<br/>
-    <tt>font-variant-alternates: styleset(Contextual-long-s)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Contextual-long-s)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss08"</span>
   </p>
   <p>
     <b>English forthorc (ss12)</b>
   </p>
   <p class="indent">
     abcdefghi → <span class="futhorc">abcdefghi</span>.<br/>
-    <tt>font-variant-alternates: styleset(Early-English-futhorc)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Early-English-futhorc)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss12"</span>
   </p>
   <p>
     <b>Elder futhark (ss13)</b>
   </p>
   <p class="indent">
     abcdefghi → <span class="elder-futhark">abcdefghi</span>.<br/>
-    <tt>font-variant-alternates: styleset(Elder-futhark)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Elder-futhark)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss13"</span>
   </p>
   <p>
     <b>Younger futhark (ss14)</b>
   </p>
   <p class="indent">
     abcdefghi → <span class="younger-futhark">abcdefghi</span>.<br/>
-    <tt>font-variant-alternates: styleset(Younger-futhark)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Younger-futhark)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss14"</span>
   </p>
   <p>
     <b>Long branch to short twig (ss14 + ss15)</b>
   </p>
   <p class="indent">
     abcdefghi → <span class="short-twig">abcdefghi</span>.<br/>
-    <tt>font-variant-alternates: styleset(Younger-futhark, Long-branch-to-short-twig)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Younger-futhark, Long-branch-to-short-twig)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss14", "ss15"</span>
   </p>
   <p>
     <b>Contextual r rotunda (ss16)</b>
   </p>
   <p class="indent">
     priest offer arise port → <span class="rcontextual">priest offer arise port</span>.<br/>
-    <tt>font-variant-alternates: styleset(Contextual-r-rotunda)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Contextual-r-rotunda)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss16"</span>
   </p>
   <p>
     <b>Rare diagraphs (ss17)</b>
   </p>
   <p class="indent">
     au av oo → <span class="digraphs">au av oo</span>.<br/>
-    <tt>font-variant-alternates: styleset(Rare-digraphs)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Rare-digraphs)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss17"</span>
   </p>
   <p>
     <b>Old-style punctuation spacing (ss18)</b>
   </p>
   <p class="indent">
     (here) there; “everywhere” → <span class="punct-spacing">(here) there; “everywhere”</span>.<br/>
-    <tt>font-variant-alternates: styleset(Old-style-punctuation-spacing)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Old-style-punctuation-spacing)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss18"</span>
   </p>
   <p>
     <b>Gothic transliteration (ss19)</b>
   </p>
   <p class="indent">
     abcdefg → <span class="gothic">abcdefg</span>.<br/>
-    <tt>font-variant-alternates: styleset(Latin-to-Gothic)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Latin-to-Gothic)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss19"</span>
   </p>
   <p>
     <b>Low diacritics: (ss20)</b>
   </p>
   <p class="indent">
     <span class="entities">bͦ h&_idotl;</span> → <span class="low-diacritics">bͦ h&_idotl;</span>.<br/>
-    <tt>font-variant-alternates: styleset(Entities, Low-diacritics)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Entities, Low-diacritics)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss20"</span>
   </p>
   <p>
     <b>Letters with high overlines (ss04)</b>
   </p>
   <p class="indent">
     DCLXXIV dclxxiv → <span class="high-overline">DCLXXIV dclxxiv</span>.<br/>
-    <tt>font-variant-alternates: styleset(High-overline)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(High-overline)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss04"</span>
   </p>
   <p>
     <b>Letters with medium-high overlines (ss05)</b>
   </p>
   <p class="indent">
     dclxxiv → <span class="med-high-overline">dclxxiv</span>.<br/>
-    <tt>font-variant-alternates: styleset(Medium-high-overline)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Medium-high-overline)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss05"</span>
   </p>
   <p>
     <b>Alternative Greek letters (ss03)</b>
   </p>
   <p class="indent">
     βγθφπω → <span class="alt-greek">βγθφπω</span><br/>
-    <tt>font-variant-alternates: styleset(Alternate-Greek)</tt>
+    <span class="hlcode">font-variant-alternates: styleset(Alternate-Greek)</span><br/>
+    <span class="fbcode">Fallback: font-feature-settings: "ss03"</span>
   </p>
   <p>
     <b>Appendix: Font feature values</b>
   </p>
   <p class="indent">
     The names of Stylistic Sets and Character Variant features can be declared
-    in the <tt style="font-size: 75%;">@font-feature-values</tt> CSS at-rule (not
+    in the <span class="tt">@font-feature-values</span> CSS at-rule (not
     yet implemented in all browsers). Here is the rule for this document:
   </p>
   <pre><code style="font-size: 60%; line-height: 60%;">    @font-feature-values "Junicode Two Beta VF" {

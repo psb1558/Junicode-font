@@ -77,3 +77,23 @@ cv84[2], so later indexes must be increased by one (see Feature Reference)
 * Disabled cv90, variants of U+0304. Use cv84[1] and cv84[2] for this.
 
 * Italic: more catching up
+
+Junicode Two Beta (1.027-1.030)
+
+* Newly designed Greek in roman face; retaining Wilson Greek in italic (for now).
+Work on metrics and kerning for Greek.
+
+Junicode Two Beta (1.031)
+
+* Italic: minor fixes, mostly for Greek face.
+
+* Italic: added kerning via standard English word list; fixed positive
+sidebearing and reviewed negative sidebearings.
+
+* Roman: Added ss03 for romanized Greek (for IPA compatibility).
+
+* Roman: minor fixes for Greek
+
+* Roman: fixed positive sidebearings, reviewed selected kerns.
+
+* Added web page to test OT features in browsers.

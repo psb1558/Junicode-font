@@ -75,19 +75,19 @@
   }
 }
 
-@supports ( font-variant-ligatures: historical-ligatures ) {
+/* @supports ( font-variant-ligatures: historical-ligatures ) {
   .hlig {
     color: green;
     font-variant-ligatures: historical-ligatures;
   }
-}
+} */
 
-@supports not ( font-variant-ligatures: historical-ligatures ) {
+/* @supports not ( font-variant-ligatures: historical-ligatures ) { */
   .hlig {
     color: red;
     font-feature-settings: "hlig";
   }
-}
+/* } */
 
 @supports ( font-variant-caps: petite-caps ) {
   .pcap {
@@ -607,6 +607,7 @@ body {
 }
 
 .tt {
+  color: #8B4513;
   font-family: monospace, monospace;
   font-size: 0.75em;
 }
@@ -788,7 +789,12 @@ h1 {
   <p class="indent">
     012345 abcd → <span class="sups">012345 abcd</span>.<br/>
     <span class="hlcode">font-variant-position: super</span><br/>
-    <span class="fbcode">Fallback: font-feature-settings: "sups"</span>
+    <span class="fbcode">Fallback: font-feature-settings: "sups"</span><br/>
+    Note: Firefox is scaling and repositioning characters instead of applying
+    the <span class="tt">sups</span> feature, even though it does support that
+    feature. As <span class="tt">font-variant-position</span> is not
+    supported by Chrome or Safari, <span class="tt">font-feature-settings</span>
+    should be used instead.
   </p>
   <p>
     <b>Slashed zero (zero)</b>

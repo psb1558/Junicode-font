@@ -28,17 +28,17 @@ widthDict = dict(
     tag="wdth",
     name="Width",
     values=[
-       dict(nominalValue=60, name="Condensed", rangeMinValue=60, rangeMaxValue=70),
-       dict(nominalValue=80, name="SemiCondensed", rangeMinValue=70, rangeMaxValue=90),
-       dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=90, rangeMaxValue=110),
-       dict(nominalValue=120, name="SemiExpanded", rangeMinValue=110, rangeMaxValue=125),
-       dict(nominalValue=140, name="Expanded", rangeMinValue=125, rangeMaxValue=140),
+#       dict(nominalValue=60, name="Condensed", rangeMinValue=60, rangeMaxValue=70),
+#       dict(nominalValue=80, name="SemiCondensed", rangeMinValue=70, rangeMaxValue=90),
+#       dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=90, rangeMaxValue=110),
+#       dict(nominalValue=120, name="SemiExpanded", rangeMinValue=110, rangeMaxValue=125),
+#       dict(nominalValue=140, name="Expanded", rangeMinValue=125, rangeMaxValue=140),
 # Recalculated, since glyphslib changes scale to 75-125 with 100 default
-#        dict(nominalValue=75, name="Condensed", rangeMinValue=75, rangeMaxValue=81),
-#        dict(nominalValue=87.5, name="SemiCondensed", rangeMinValue=81, rangeMaxValue=94),
-#        dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=94, rangeMaxValue=106),
-#        dict(nominalValue=112.5, name="SemiExpanded", rangeMinValue=106, rangeMaxValue=119),
-#        dict(nominalValue=125, name="Expanded", rangeMinValue=119, rangeMaxValue=125),
+        dict(nominalValue=75, name="Condensed", rangeMinValue=75, rangeMaxValue=81),
+        dict(nominalValue=87.5, name="SemiCondensed", rangeMinValue=81, rangeMaxValue=94),
+        dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=94, rangeMaxValue=106),
+        dict(nominalValue=112.5, name="SemiExpanded", rangeMinValue=106, rangeMaxValue=119),
+        dict(nominalValue=125, name="Expanded", rangeMinValue=119, rangeMaxValue=125),
     ]
 )
 

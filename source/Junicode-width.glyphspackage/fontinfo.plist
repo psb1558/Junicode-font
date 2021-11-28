@@ -3453,7 +3453,10 @@ sub Epsilontonos by epsilontonos.sc;
 sub Etatonos by etatonos.sc;
 sub Iotatonos by iotatonos.sc;
 sub Omicrontonos by omicrontonos.sc;
+sub Upsilontonos by upsilontonos.sc;
 sub Omegatonos by omegatonos.sc;
+sub Iotadieresis by iotadieresis.sc;
+sub Upsilondieresis by upsilondieresis.sc;
 sub Alphapsili by alphapsili.sc;
 sub Alphadasia by alphadasia.sc;
 sub Alphapsilivaria by alphapsilivaria.sc;
@@ -3463,8 +3466,12 @@ sub Alphadasiaoxia by alphadasiaoxia.sc;
 sub Alphapsiliperispomeni by alphapsiliperispomeni.sc;
 sub Alphadasiaperispomeni by alphadasiaperispomeni.sc;
 sub Alphavaria by alphavaria.sc;
+sub Alphaoxia by alphaoxia.sc;
 sub Alphavrachy by alphavrachy.sc;
 sub Alphamacron by alphamacron.sc;
+sub Alphaprosgegrammeni by alphaypogegrammeni.sc;
+sub Alphapsiliprosgegrammeni by alphapsiliypogegrammeni.sc;
+sub Alphadasiaprosgegrammeni by alphadasiaypogegrammeni.sc;
 sub Alphapsilivariaprosgegrammeni by alphapsilivariaypogegrammeni.sc;
 sub Alphadasiavariaprosgegrammeni by alphadasiavariaypogegrammeni.sc;
 sub Alphapsilioxiaprosgegrammeni by alphapsilioxiaypogegrammeni.sc;
@@ -3478,6 +3485,7 @@ sub Epsilondasiavaria by epsilondasiavaria.sc;
 sub Epsilonpsilioxia by epsilonpsilioxia.sc;
 sub Epsilondasiaoxia by epsilondasiaoxia.sc;
 sub Epsilonvaria by epsilonvaria.sc;
+sub Epsilonoxia by epsilonoxia.sc;
 sub Etapsili by etapsili.sc;
 sub Etadasia by etadasia.sc;
 sub Etapsilivaria by etapsilivaria.sc;
@@ -3487,6 +3495,9 @@ sub Etadasiaoxia by etadasiaoxia.sc;
 sub Etapsiliperispomeni by etapsiliperispomeni.sc;
 sub Etadasiaperispomeni by etadasiaperispomeni.sc;
 sub Etavaria by etavaria.sc;
+sub Etaprosgegrammeni by etaypogegrammeni.sc;
+sub Etapsiliprosgegrammeni by etapsiliypogegrammeni.sc;
+sub Etadasiaprosgegrammeni by etadasiaypogegrammeni.sc;
 sub Etapsilivariaprosgegrammeni by etapsilivariaypogegrammeni.sc;
 sub Etadasiavariaprosgegrammeni by etadasiavariaypogegrammeni.sc;
 sub Etapsilioxiaprosgegrammeni by etapsilioxiaypogegrammeni.sc;
@@ -3502,6 +3513,7 @@ sub Iotadasiaoxia by iotadasiaoxia.sc;
 sub Iotapsiliperispomeni by iotapsiliperispomeni.sc;
 sub Iotadasiaperispomeni by iotadasiaperispomeni.sc;
 sub Iotavaria by iotavaria.sc;
+sub Iotaoxia by iotaoxia.sc;
 sub Iotavrachy by iotavrachy.sc;
 sub Iotamacron by iotamacron.sc;
 sub Omicronpsili by omicronpsili.sc;
@@ -3511,12 +3523,14 @@ sub Omicrondasiavaria by omicrondasiavaria.sc;
 sub Omicronpsilioxia by omicronpsilioxia.sc;
 sub Omicrondasiaoxia by omicrondasiaoxia.sc;
 sub Omicronvaria by omicronvaria.sc;
+sub Omicronoxia by omicronoxia.sc;
 sub Rhodasia by rhodasia.sc;
 sub Upsilondasia by upsilondasia.sc;
 sub Upsilondasiavaria by upsilondasiavaria.sc;
 sub Upsilondasiaoxia by upsilondasiaoxia.sc;
 sub Upsilondasiaperispomeni by upsilondasiaperispomeni.sc;
 sub Upsilonvaria by upsilonvaria.sc;
+sub Upsilonoxia by upsilonoxia.sc;
 sub Upsilonvrachy by upsilonvrachy.sc;
 sub Upsilonmacron by upsilonmacron.sc;
 sub Omegapsili by omegapsili.sc;
@@ -3528,6 +3542,10 @@ sub Omegadasiaoxia by omegadasiaoxia.sc;
 sub Omegapsiliperispomeni by omegapsiliperispomeni.sc;
 sub Omegadasiaperispomeni by omegadasiaperispomeni.sc;
 sub Omegavaria by omegavaria.sc;
+sub Omegaoxia by omegaoxia.sc;
+sub Omegaprosgegrammeni by omegaypogegrammeni.sc;
+sub Omegapsiliprosgegrammeni by omegapsiliypogegrammeni.sc;
+sub Omegadasiaprosgegrammeni by omegadasiaypogegrammeni.sc;
 sub Omegapsilivariaprosgegrammeni by omegapsilivariaypogegrammeni.sc;
 sub Omegadasiavariaprosgegrammeni by omegadasiavariaypogegrammeni.sc;
 sub Omegapsilioxiaprosgegrammeni by omegapsilioxiaypogegrammeni.sc;
@@ -3541,8 +3559,6 @@ sub exclamdown by exclamdown.sc;
 sub question by question.sc;
 sub questiondown by questiondown.sc;
 sub numbersign by numbersign.sc;
-sub parenleft by parenleft.sc;
-sub parenright by parenright.sc;
 sub quotedblleft by quotedblleft.sc;
 sub quotedblright by quotedblright.sc;
 sub quoteleft by quoteleft.sc;
@@ -3554,6 +3570,7 @@ sub versicle by versicle.sc;
 sub dotacutecomb by dotacutecomb.sc;
 sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.sc;
 sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.sc;
+sub perispomenicomb by perispomenicomb.sc;
 sub dialytikatonoscomb by dialytikatonoscomb.sc;
 sub dieresiscomb_perispomenicomb.loclELL by dieresiscomb_perispomenicomb.loclELL.sc;
 sub circumflexacutecomb by circumflexacutecomb.sc;
@@ -4867,8 +4884,8 @@ size = 16;
 {
 filter = "category == \"Letter\" AND case == 1";
 name = capHeight;
-pos = 1352;
-size = 35;
+pos = 1358;
+size = 30;
 },
 {
 filter = "category == \"Letter\" AND case == 3";
@@ -4880,7 +4897,7 @@ size = 19;
 filter = "category == \"Letter\" AND case == 2";
 name = xHeight;
 pos = 850;
-size = 35;
+size = 20;
 },
 {
 name = baseline;
@@ -4962,34 +4979,25 @@ name = "high overline";
 width = 94;
 },
 {
-filter = "category == \"Letter\" AND case == 1";
-horizontal = 0;
-name = "cap vstem";
-width = 160;
-},
-{
-filter = "category == \"Letter\" AND case == 1";
-horizontal = 0;
-name = "cap vroundstem";
-width = 191;
-},
-{
-filter = "category == \"Letter\" AND case == 2";
-horizontal = 0;
-name = "lc vstem";
-width = 153;
-},
-{
-filter = "category == \"Letter\" AND case == 2";
-horizontal = 0;
-name = lcvroundstem;
-width = 163;
-},
-{
 filter = "category == \"Letter\" AND case == 3";
 horizontal = 1;
 name = "sc serif";
 width = 59;
+},
+{
+horizontal = 1;
+name = "a top";
+width = 75;
+},
+{
+horizontal = 1;
+name = "a bottom";
+width = 101;
+},
+{
+horizontal = 1;
+name = "f top";
+width = 94;
 }
 );
 },
@@ -5103,8 +5111,8 @@ size = 16;
 },
 {
 name = capHeight;
-pos = 1352;
-size = 35;
+pos = 1358;
+size = 30;
 },
 {
 name = smallCapHeight;
@@ -5114,7 +5122,7 @@ size = 20;
 {
 name = xHeight;
 pos = 850;
-size = 35;
+size = 20;
 },
 {
 name = baseline;
@@ -5191,29 +5199,24 @@ name = "high overline";
 width = 110;
 },
 {
-horizontal = 0;
-name = "cap vstem";
-width = 243;
-},
-{
-horizontal = 0;
-name = "cap vroundstem";
-width = 273;
-},
-{
-horizontal = 0;
-name = "lc vstem";
-width = 230;
-},
-{
-horizontal = 0;
-name = "lc vroundstem";
-width = 253;
-},
-{
 horizontal = 1;
 name = "sc serif";
 width = 68;
+},
+{
+horizontal = 1;
+name = "a top";
+width = 96;
+},
+{
+horizontal = 1;
+name = "a bottom";
+width = 111;
+},
+{
+horizontal = 1;
+name = "f top";
+width = 113;
 }
 );
 },
@@ -5327,8 +5330,8 @@ size = 16;
 },
 {
 name = capHeight;
-pos = 1352;
-size = 35;
+pos = 1358;
+size = 30;
 },
 {
 name = smallCapHeight;
@@ -5338,7 +5341,7 @@ size = 20;
 {
 name = xHeight;
 pos = 850;
-size = 35;
+size = 20;
 },
 {
 name = baseline;
@@ -5415,29 +5418,24 @@ name = "high overline";
 width = 90;
 },
 {
-horizontal = 0;
-name = "cap vstem";
-width = 132;
-},
-{
-horizontal = 0;
-name = "cap vroundstem";
-width = 164;
-},
-{
-horizontal = 0;
-name = "lc vstem";
-width = 127;
-},
-{
-horizontal = 0;
-name = "lc vroundstem";
-width = 133;
-},
-{
 horizontal = 1;
 name = "sc serif";
 width = 56;
+},
+{
+horizontal = 1;
+name = "a top";
+width = 68;
+},
+{
+horizontal = 1;
+name = "a bottom";
+width = 98;
+},
+{
+horizontal = 1;
+name = "f top";
+width = 88;
 }
 );
 },
@@ -5546,8 +5544,8 @@ size = 16;
 },
 {
 name = capHeight;
-pos = 1352;
-size = 35;
+pos = 1358;
+size = 30;
 },
 {
 name = smallCapHeight;
@@ -5557,7 +5555,7 @@ size = 20;
 {
 name = xHeight;
 pos = 850;
-size = 35;
+size = 20;
 },
 {
 name = baseline;
@@ -5636,33 +5634,24 @@ name = "high overline";
 width = 94;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
-horizontal = 0;
-name = "cap vstem";
-width = 160;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = "cap vroundstem";
-width = 191;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = "lc vstem";
-width = 153;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = lcvroundstem;
-width = 163;
-},
-{
 horizontal = 1;
 name = "sc serif";
 width = 59;
+},
+{
+horizontal = 1;
+name = "a top";
+width = 75;
+},
+{
+horizontal = 1;
+name = "a bottom";
+width = 101;
+},
+{
+horizontal = 1;
+name = "f top";
+width = 94;
 }
 );
 },
@@ -5761,8 +5750,8 @@ size = 16;
 },
 {
 name = capHeight;
-pos = 1352;
-size = 35;
+pos = 1358;
+size = 30;
 },
 {
 name = smallCapHeight;
@@ -5772,7 +5761,7 @@ size = 20;
 {
 name = xHeight;
 pos = 850;
-size = 35;
+size = 20;
 },
 {
 name = baseline;
@@ -5851,33 +5840,24 @@ name = "high overline";
 width = 94;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
-horizontal = 0;
-name = "cap vstem";
-width = 160;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = "cap vroundstem";
-width = 191;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = "lc vstem";
-width = 153;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = lcvroundstem;
-width = 163;
-},
-{
 horizontal = 1;
 name = "sc serif";
 width = 59;
+},
+{
+horizontal = 1;
+name = "a top";
+width = 75;
+},
+{
+horizontal = 1;
+name = "a bottom";
+width = 101;
+},
+{
+horizontal = 1;
+name = "f top";
+width = 94;
 }
 );
 },
@@ -5978,8 +5958,8 @@ size = 16;
 {
 filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
 name = capHeight;
-pos = 1352;
-size = 35;
+pos = 1358;
+size = 30;
 },
 {
 filter = "category == \"Letter\" AND subCategory == \"Smallcaps\"";
@@ -5991,7 +5971,7 @@ size = 20;
 filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
 name = xHeight;
 pos = 1012;
-size = 41;
+size = 23;
 },
 {
 name = baseline;
@@ -6072,33 +6052,24 @@ name = "high overline";
 width = 94;
 },
 {
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
-horizontal = 0;
-name = "cap vstem";
-width = 160;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
-horizontal = 0;
-name = "cap vroundstem";
-width = 191;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = "lc vstem";
-width = 153;
-},
-{
-filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
-horizontal = 0;
-name = lcvroundstem;
-width = 163;
-},
-{
 horizontal = 1;
 name = "sc serif";
 width = 59;
+},
+{
+horizontal = 1;
+name = "a top";
+width = 75;
+},
+{
+horizontal = 1;
+name = "a bottom";
+width = 101;
+},
+{
+horizontal = 1;
+name = "f top";
+width = 94;
 }
 );
 },
@@ -6355,7 +6326,7 @@ weightClass = 700;
 {
 axesValues = (
 500,
-60,
+75,
 0
 );
 customParameters = (
@@ -6371,11 +6342,10 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.25333;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1.44786;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.24889;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.15214;
-master01 = -0.29128;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.91667;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.08333;
+master01 = -0.16667;
 };
 name = "Condensed Medium";
 weightClass = 500;
@@ -6384,7 +6354,7 @@ widthClass = 3;
 {
 axesValues = (
 300,
-60,
+75,
 0
 );
 customParameters = (
@@ -6400,10 +6370,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1.31852;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = -0.33333;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.28148;
-master01 = 0.2963;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 1.25;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.08333;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.5;
+master01 = -0.33333;
 };
 name = "Condensed Light";
 weightClass = 300;
@@ -6412,7 +6383,7 @@ widthClass = 3;
 {
 axesValues = (
 400,
-60,
+75,
 0
 );
 customParameters = (
@@ -6432,9 +6403,7 @@ value = (
 }
 );
 instanceInterpolations = {
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1.45;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.15;
-master01 = -0.3;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1;
 };
 name = Condensed;
 widthClass = 3;
@@ -6442,7 +6411,7 @@ widthClass = 3;
 {
 axesValues = (
 600,
-60,
+75,
 0
 );
 customParameters = (
@@ -6458,11 +6427,10 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.28667;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1.32906;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.57111;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.27094;
-master01 = -0.34256;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.83333;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.66667;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.16667;
+master01 = -0.33333;
 };
 name = "Condensed Semibold";
 weightClass = 600;
@@ -6471,7 +6439,7 @@ widthClass = 3;
 {
 axesValues = (
 700,
-60,
+75,
 0
 );
 customParameters = (
@@ -6487,11 +6455,10 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.13333;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.95043;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.95556;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.64957;
-master01 = -0.12308;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.1875;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.375;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 1.0625;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.625;
 };
 isBold = 1;
 linkStyle = Condensed;
@@ -6502,7 +6469,7 @@ widthClass = 3;
 {
 axesValues = (
 500,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -6518,11 +6485,9 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.03333;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.77778;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.32222;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.02222;
-master01 = -0.04444;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
+master01 = 0.16667;
 };
 name = "SemiCondensed Medium";
 weightClass = 500;
@@ -6531,7 +6496,7 @@ widthClass = 4;
 {
 axesValues = (
 300,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -6547,10 +6512,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.54286;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.70476;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = -0.15238;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.09524;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.875;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.30556;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = -0.04167;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.19444;
+master01 = 0.05556;
 };
 name = "SemiCondensed Light";
 weightClass = 300;
@@ -6559,7 +6525,7 @@ widthClass = 4;
 {
 axesValues = (
 400,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -6579,8 +6545,8 @@ value = (
 }
 );
 instanceInterpolations = {
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.8;
-master01 = 0.2;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;
+master01 = 0.5;
 };
 name = SemiCondensed;
 widthClass = 4;
@@ -6588,7 +6554,7 @@ widthClass = 4;
 {
 axesValues = (
 600,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -6604,11 +6570,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.04571;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.63122;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.65143;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.16878;
-master01 = -0.06815;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.04167;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.47222;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.65278;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.02778;
+master01 = -0.05556;
 };
 name = "SemiCondensed Semibold";
 weightClass = 600;
@@ -6617,7 +6583,7 @@ widthClass = 4;
 {
 axesValues = (
 700,
-80,
+87.5,
 0
 );
 customParameters = (
@@ -6633,11 +6599,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.10286;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.53968;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.96571;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.26032;
-master01 = -0.14222;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.05;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.18889;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 1.01667;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.31111;
+master01 = 0.05556;
 };
 isBold = 1;
 linkStyle = SemiCondensed;
@@ -6648,7 +6614,7 @@ widthClass = 4;
 {
 axesValues = (
 300,
-120,
+112.5,
 0
 );
 customParameters = (
@@ -6664,10 +6630,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.54286;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.09524;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = -0.15238;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.70476;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.875;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.19444;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = -0.04167;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.30556;
+master01 = 0.05556;
 };
 name = "SemiExpanded Light";
 weightClass = 300;
@@ -6676,7 +6643,7 @@ widthClass = 6;
 {
 axesValues = (
 400,
-120,
+112.5,
 0
 );
 customParameters = (
@@ -6696,8 +6663,8 @@ value = (
 }
 );
 instanceInterpolations = {
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.8;
-master01 = 0.2;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.5;
+master01 = 0.5;
 };
 name = SemiExpanded;
 widthClass = 6;
@@ -6705,7 +6672,7 @@ widthClass = 6;
 {
 axesValues = (
 500,
-120,
+112.5,
 0
 );
 customParameters = (
@@ -6725,11 +6692,9 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.03333;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.02222;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.32222;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.77778;
-master01 = -0.04444;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.5;
+master01 = 0.16667;
 };
 name = "SemiExpanded Medium";
 weightClass = 500;
@@ -6738,7 +6703,7 @@ widthClass = 6;
 {
 axesValues = (
 600,
-120,
+112.5,
 0
 );
 customParameters = (
@@ -6758,11 +6723,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.04571;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.16878;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.65143;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.63122;
-master01 = -0.06815;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.04167;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.02778;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.65278;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.47222;
+master01 = -0.05556;
 };
 name = "SemiExpanded Semibold";
 weightClass = 600;
@@ -6771,7 +6736,7 @@ widthClass = 6;
 {
 axesValues = (
 700,
-120,
+112.5,
 0
 );
 customParameters = (
@@ -6791,11 +6756,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.10286;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.26032;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.96571;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.53968;
-master01 = -0.14222;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.05;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.31111;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 1.01667;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.18889;
+master01 = 0.05556;
 };
 isBold = 1;
 linkStyle = SemiExpanded;
@@ -6806,7 +6771,7 @@ widthClass = 6;
 {
 axesValues = (
 300,
-140,
+125,
 0
 );
 customParameters = (
@@ -6822,10 +6787,11 @@ value = (
 }
 );
 instanceInterpolations = {
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.28148;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = -0.33333;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1.31852;
-master01 = 0.2963;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 1.25;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.5;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.08333;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.5;
+master01 = -0.33333;
 };
 name = "Expanded Light";
 weightClass = 300;
@@ -6834,7 +6800,7 @@ widthClass = 7;
 {
 axesValues = (
 400,
-140,
+125,
 0
 );
 customParameters = (
@@ -6854,9 +6820,7 @@ value = (
 }
 );
 instanceInterpolations = {
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.15;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1.45;
-master01 = -0.3;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1;
 };
 name = Expanded;
 widthClass = 7;
@@ -6864,7 +6828,7 @@ widthClass = 7;
 {
 axesValues = (
 500,
-140,
+125,
 0
 );
 customParameters = (
@@ -6884,11 +6848,10 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.25333;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.15214;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.24889;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1.44786;
-master01 = -0.29128;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.08333;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.91667;
+master01 = -0.16667;
 };
 name = "Expanded Medium";
 weightClass = 500;
@@ -6897,7 +6860,7 @@ widthClass = 7;
 {
 axesValues = (
 600,
-140,
+125,
 0
 );
 customParameters = (
@@ -6917,11 +6880,10 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.28667;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.27094;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.57111;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1.32906;
-master01 = -0.34256;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.16667;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.66667;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.83333;
+master01 = -0.33333;
 };
 name = "Expanded Semibold";
 weightClass = 600;
@@ -6930,7 +6892,7 @@ widthClass = 7;
 {
 axesValues = (
 700,
-140,
+125,
 0
 );
 customParameters = (
@@ -6950,11 +6912,10 @@ value = (
 }
 );
 instanceInterpolations = {
-"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.13333;
-"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.64957;
-"75918100-ED89-42A8-B0FE-888EB9C86810" = 0.95556;
-"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.95043;
-master01 = -0.12308;
+"6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.1875;
+"70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.625;
+"75918100-ED89-42A8-B0FE-888EB9C86810" = 1.0625;
+"9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.375;
 };
 isBold = 1;
 linkStyle = Expanded;

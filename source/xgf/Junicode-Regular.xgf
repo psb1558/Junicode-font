@@ -17,6 +17,7 @@
   <cv nm="baseline" val="0"/>
   <cv nm="cap-serif" val="69" col="b"/>
   <cv nm="cap-serif-undershoot" val="-7" col="g"/>
+  <cv nm="cap-bar" val="69" col="b"/>
   <cv nm="cap-height" val="1358"/>
   <cv nm="cap-height-overshoot" val="1385"/>
   <cv nm="cap-serif-overshoot" val="5" col="g"/>
@@ -26,6 +27,7 @@
   <cv nm="lc-serif" val="50" col="b"/>
   <cv nm="lc-ascender" val="1487"/>
   <cv nm="lc-descender" val="-551"/>
+  <cv nm="lc-round-stem" val="64" col="b"/>
   <cv nm="xheight" val="850"/>
   <cv nm="xheight-overshoot" val="870"/>
   <cv nm="lc-baseline-undershoot" val="-23"/>
@@ -43,8 +45,10 @@
       <!-- weight min -->
       <region tag="wght" bot="-1.0" peak="-1.0" top="0.0"/>
       <cvv nm="cap-serif" val="63"/>
+      <cvv nm="cap-bar" val="64"/>
       <cvv nm="cap-round-stem" val="66"/>
       <cvv nm="lc-serif" val="43"/>
+      <cvv nm="lc-round-stem" val="57"/>
       <cvv nm="num-circle" val="62"/>
       <cvv nm="sc-serif" val="61"/>
     </tuple>
@@ -52,8 +56,10 @@
       <!-- weight max -->
       <region tag="wght" bot="0.0" peak="1.0" top="1.0"/>
       <cvv nm="cap-serif" val="86"/>
+      <cvv nm="cap-bar" val="84"/>
       <cvv nm="cap-round-stem" val="92"/>
       <cvv nm="lc-serif" val="68"/>
+      <cvv nm="lc-round-stem" val="81"/>
       <cvv nm="num-circle" val="147"/>
       <cvv nm="sc-serif" val="74"/>
     </tuple>
@@ -71,6 +77,7 @@
       <cvv nm="xheight-overshoot" val="1035"/>
       <cvv nm="xheight" val="1012"/>
       <cvv nm="lc-baseline-undershoot" val="-27"/>
+      <cvv nm="lc-round-stem" val="70"/>
     </tuple>
   </cvar>
 
@@ -100,16 +107,19 @@
     <push>4 511</push>
     <command nm="SCANCTRL"/>
     <command nm="SCANTYPE"/>
-    <if test="pixels-per-em &lt; 50">
-      <setcv nm="xheight-overshoot" unit="pixel" val="control-value(xheight)"/>
-    </if>
-    <if test="pixels-per-em &lt; 144">
-      <setcv nm="cap-serif-overshoot" unit="pixel"
-       val="control-value(cap-serif-undershoot)"/>
+    <if test="pixels-per-em &lt; 40">
+      <setcv nm="xheight-overshoot" unit="pixel"
+        val="control-value(xheight)"/>
+      <setcv nm="lc-baseline-undershoot" unit="pixel"
+        val="control-value(baseline)"/>
       <setcv nm="u-top-a" unit="pixel"
        val="control-value(xheight)"/>
       <setcv nm="u-top-b" unit="pixel"
        val="control-value(xheight)"/>
+    </if>
+    <if test="pixels-per-em &lt; 144">
+      <setcv nm="cap-serif-overshoot" unit="pixel"
+       val="control-value(cap-serif-undershoot)"/>
     </if>
   </prep>
 
@@ -138,6 +148,7 @@
     </if>
   </fn>
 
+<!--
   <fn nm="fix-near-curve" stack-safe="yes">
     <pm nm="base"/>
     <pm nm="pt-a"/>
@@ -152,6 +163,7 @@
       </if>
     </if>
   </fn>
+-->
 
   <mo nm="cap-serif">
     <pm nm="base"/>
@@ -292,12 +304,12 @@
     <pm nm="stem-cv" val="-1"/>
     <compile-if test="stem-cv != -1">
       <mv di="cv" p="pt-a">
-	<mv di="stem-cv" p="pt-b"/>
+        <mv di="stem-cv" p="pt-b"/>
       </mv>
       <else>
-	<mv di="cv" p="pt-a">
-	  <mv p="pt-b"/>
-	</mv>
+        <mv di="cv" p="pt-a">
+          <mv p="pt-b"/>
+        </mv>
       </else>
     </compile-if>
   </mo>
@@ -309,12 +321,12 @@
     <pm nm="stem-cv" val="-1"/>
     <compile-if test="stem-cv != -1">
       <mv di="cv" p="pt-a">
-	<mv di="stem-cv" p="pt-b"/>
+        <mv di="stem-cv" p="pt-b"/>
       </mv>
       <else>
-	<mv di="cv" p="pt-a">
-	  <mv p="pt-b"/>
-	</mv>
+        <mv di="cv" p="pt-a">
+          <mv p="pt-b"/>
+        </mv>
       </else>
     </compile-if>
   </mo>
@@ -361,7 +373,7 @@
       <else>
         <push>sh2 pt2</push>
         <command nm="MDRP" modifier="11101"/>
-	<command nm="SHP" modifier="0"/>
+        <command nm="SHP" modifier="0"/>
       </else>
     </compile-if>
   </mo>
@@ -372,7 +384,7 @@
     <pm nm="serif-b"/>
     <mv di="cpho" p="top">
       <mv min-distance="no" p="serif-a">
-	<mv di="cap-serif" p="serif-b"/>
+        <mv di="cap-serif" p="serif-b"/>
       </mv>
     </mv>
   </mo>
@@ -383,7 +395,7 @@
     <pm nm="p3"/>
     <mv di="lc-ascender" p="p1">
       <mv p="p2">
-	<mv di="lc-serif" p="p3"/>
+        <mv di="lc-serif" p="p3"/>
       </mv>
     </mv>
   </mo>
@@ -405,7 +417,7 @@
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 61, ref2: 25, pt1: 53, pt2: 70
+      ref1: 61, ref2: 25, pt1: 53, pt2: 70, cv: cap-bar
     </callm>
     <compile-if test="iup != 0">
       <iup axis="y"/>
@@ -443,7 +455,7 @@
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 55, ref2: 15, pt1: 44, pt2: 61
+      ref1: 55, ref2: 15, pt1: 44, pt2: 61, cv: cap-bar
     </callm>
   </gl>
 
@@ -464,7 +476,7 @@
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 61, ref2: 23, pt1: 50, pt2: 67
+      ref1: 61, ref2: 23, pt1: 50, pt2: 67, cv: cap-bar
     </callm>
     <compile-if test="iup != 0">
       <iup axis="y"/>
@@ -489,7 +501,7 @@
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 99, ref2: 22, pt1: 88, pt2: 105
+      ref1: 99, ref2: 22, pt1: 88, pt2: 105, cv: cap-bar
     </callm>
     <sh r="88" p="68"/>
     <sh r="105" p="106"/>
@@ -511,7 +523,7 @@
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 55, ref2: 28, pt1: 17, pt2: 80
+      ref1: 55, ref2: 28, pt1: 17, pt2: 80, cv: cap-bar
     </callm>
     <callm nm="cap-round-stem">
       pt-a: 72, pt-b: 96, stem-cv: cprs
@@ -548,7 +560,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 43, ref2: 23, pt1: 12, pt2: 86
+      ref1: 43, ref2: 23, pt1: 12, pt2: 86, cv: cap-bar
     </callm>
     <callm nm="cap-round-stem">
       pt-a: 85, pt-b: 56, stem-cv: cprs
@@ -579,7 +591,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 61, ref2: 14, pt1: 3, pt2: 78
+      ref1: 61, ref2: 14, pt1: 3, pt2: 78, cv: cap-bar
     </callm>
     <mv di="cpbu" p="74"/>
   </gl>
@@ -608,7 +620,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 43, ref2: 14, pt1: 81, pt2: 75
+      ref1: 43, ref2: 14, pt1: 81, pt2: 75, cv:cap-bar
     </callm>
     <mv di="cpbu" p="74"/>
   </gl>
@@ -637,7 +649,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 23, ref2: 51, pt1: 12, pt2: 87
+      ref1: 23, ref2: 51, pt1: 12, pt2: 87, cv: cap-bar
     </callm>
     <mv p="83">
       <mv p="6"/>
@@ -663,7 +675,7 @@
       pt-b-sh: bot-b
     </callm>
     <callm nm="mid-stem">
-      ref1: 61, ref2: 23, pt1: 50, pt2: 67
+      ref1: 61, ref2: 23, pt1: 50, pt2: 67, cv: cap-bar
     </callm>
     <mv r="23" p="85" col="w">
       <mv p="76" col="b">
@@ -675,7 +687,7 @@
     <iup axis="y"/>
   </gl>
 
-    <gl pnm="uniA722">
+  <gl pnm="uniA722">
     <!-- Egyptological Alef -->
     <mv p="35">
       <mv col="g" p="27">
@@ -720,7 +732,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem-serif">
-      ref1: 111, ref2: 17, pt1: 101, pt2: 78, sh1: 85, sh2: 95
+      ref1: 111, ref2: 17, pt1: 101, pt2: 78, sh1: 85, sh2: 95, cv: cap-bar
     </callm>
   </gl>
 
@@ -747,7 +759,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem-serif">
-      ref1: 87, ref2: 17, pt1: 63, pt2: 39, sh1: 57, sh2: 45
+      ref1: 87, ref2: 17, pt1: 63, pt2: 39, sh1: 57, sh2: 45, cv: cap-bar
     </callm>
     <sh r="63" p="97"/>
     <sh r="38" p="8"/>
@@ -777,7 +789,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 42, ref2: 15, pt1: 51, pt2: 65
+      ref1: 42, ref2: 15, pt1: 51, pt2: 65, cv: cap-bar
     </callm>
   </gl>
 
@@ -804,7 +816,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 64, ref2: 37, pt1: 73, pt2: 86
+      ref1: 64, ref2: 37, pt1: 73, pt2: 86, cv: cap-bar
     </callm>
   </gl>
 
@@ -831,7 +843,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 53, ref2: 16, pt1: 62, pt2: 40
+      ref1: 53, ref2: 16, pt1: 62, pt2: 40, cv: cap-bar
     </callm>
   </gl>
 
@@ -920,7 +932,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem-serif">
-      ref1: 84, ref2: 14, pt1: 60, pt2: 36, sh1: 54, sh2: 42
+      ref1: 84, ref2: 14, pt1: 60, pt2: 36, sh1: 54, sh2: 42, cv: cap-bar
     </callm>
   </gl>
 
@@ -945,7 +957,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem-serif">
-      ref1: 76, ref2: 18, pt1: 65, pt2: 41, sh1: 59, sh2: 47
+      ref1: 76, ref2: 18, pt1: 65, pt2: 41, sh1: 59, sh2: 47, cv: cap-bar
     </callm>
   </gl>
 
@@ -993,7 +1005,7 @@
       cup-cv: cap-serif-overshoot
     </callm>
     <callm nm="mid-stem">
-      ref1: 85, ref2: 18, pt1: 74, pt2: 29
+      ref1: 85, ref2: 18, pt1: 74, pt2: 29, cv: cap-bar
     </callm>
   </gl>
 
@@ -1059,7 +1071,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 86, ref2: 14, pt1: 77, pt2: 24
+      ref1: 86, ref2: 14, pt1: 77, pt2: 24, cv: cap-bar
     </callm>
     <ip r="77 24" p="52"/>
   </gl>
@@ -1173,7 +1185,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 42, ref2: 15, pt1: 28, pt2: 58
+      ref1: 42, ref2: 15, pt1: 28, pt2: 58, cv: cap-round-stem
     </callm>
   </gl>
 
@@ -1189,7 +1201,7 @@
     <command nm="MDAP" modifier="1"/>
   </gl>
 
-    <gl pnm="R">
+  <gl pnm="R">
     <set nm="bot-a" p="15 60"/>
     <callm nm="cap-serif">
       <pmset>
@@ -1211,7 +1223,7 @@
       </pmset>
     </callm>
     <callm nm="mid-stem">
-      ref1: 35, ref2: 17, pt1: 7, pt2: 74
+      ref1: 35, ref2: 17, pt1: 7, pt2: 74, cv: cap-bar
     </callm>
   </gl>
 
@@ -1363,6 +1375,45 @@
     </mv>
   </gl>
 
+  <gl pnm="Thorn">
+    <callm nm="cap-serif">
+      <pmset>
+        base: 62,
+        pt-a: 64,
+        pt-b: 3,
+        pt-a-sh: 60,
+        pt-b-sh: 56
+      </pmset>
+      <pmset>
+        base: 21,
+        pt-a: 16,
+        pt-a-sh: 25,
+        pt-b: 12,
+        pt-b-sh: 29,
+        base-cv: cap-height,
+        cup-cv: cap-serif-overshoot
+      </pmset>
+    </callm>
+    <ip r="21 62" p="46 38" round="yes"/>
+    <mv r="38" p="71" di="cap-bar"/>
+    <mv r="46" p="79" di="cap-bar"/>
+  </gl>
+
+  <gl pnm="Thorn.loclENG">
+    <mv di="cpho" p="19">
+      <sh p="36"/>
+    </mv>
+    <mv p="36">
+      <mv p="66"/>
+    </mv>
+    <mv di="cpbu" p="49">
+      <mv p="75"/>
+    </mv>
+    <mv p="54">
+      <sh p="3"/>
+    </mv>
+  </gl>
+
   <gl pnm="a">
     <mv di="xho" p="27">
       <mv p="11"/>
@@ -1393,7 +1444,7 @@
   <gl pnm="b">
     <mv di="lca" p="29"/>
     <callm nm="lc-round-stem">
-      pt-a: 47, pt-b: 63
+      pt-a: 47, pt-b: 63, stem-cv: lc-round-stem
     </callm>
     <callm nm="lc-round-stem">
       pt-a: 39, pt-b: 55, cv: xho
@@ -1405,7 +1456,7 @@
       pt-a: 41, pt-b: 31
     </callm>
     <callm nm="lc-round-stem">
-      pt-a: 7, pt-b: 23, cv: xho
+      pt-a: 7, pt-b: 23, cv: xho, stem-cv: lc-round-stem
     </callm>
   </gl>
 
@@ -1415,13 +1466,13 @@
       pt-a: 19, pt-b: 71
     </callm>
     <callm nm="lc-round-stem">
-      pt-a: 27, pt-b: 63, cv: xho
+      pt-a: 27, pt-b: 63, cv: xho, stem-cv: lc-round-stem
     </callm>
   </gl>
 
   <gl pnm="e">
     <callm nm="lc-round-stem">
-      pt-a: 43, pt-b: 33
+      pt-a: 43, pt-b: 33, stem-cv: lc-round-stem
     </callm>
     <callm nm="lc-round-stem">
       pt-a: 7, pt-b: 25, cv: xho
@@ -1450,7 +1501,7 @@
 
   <gl pnm="g">
     <callm nm="lc-round-stem">
-      pt-a: 53, pt-b: 80, cv: xho
+      pt-a: 53, pt-b: 80, cv: xho, stem-cv: lc-round-stem
     </callm>
     <mv p="29">
       <mv p="45"/>
@@ -1460,7 +1511,7 @@
       <mv p="21"/>
     </mv>
     <mv p="72">
-      <mv p="88"/>
+      <mv di="lc-round-stem" p="88"/>
     </mv>
     <ip r="72 88" p="14"/>
   </gl>
@@ -1597,16 +1648,16 @@
 
   <gl pnm="o">
     <callm nm="lc-round-stem">
-      pt-a: 15, pt-b: 31
+      pt-a: 15, pt-b: 31, stem-cv: lc-round-stem
     </callm>
     <callm nm="lc-round-stem">
-      pt-a: 7, pt-b: 23, cv: xho
+      pt-a: 7, pt-b: 23, cv: xho, stem-cv: lc-round-stem
     </callm>
   </gl>
 
   <gl pnm="p">
     <callm nm="lc-round-stem">
-      pt-a: 31, pt-b: 81
+      pt-a: 31, pt-b: 81, stem-cv: lc-round-stem
     </callm>
     <callm nm="lc-round-stem">
       pt-a: 21, pt-b: 71, cv: xho
@@ -1624,7 +1675,7 @@
 
   <gl pnm="q">
     <callm nm="lc-round-stem">
-      pt-a: 5, pt-b: 47
+      pt-a: 5, pt-b: 47, stem-cv: lc-round-stem
     </callm>
     <callm nm="lc-round-stem">
       pt-a: 13, pt-b: 40, cv: xho
@@ -1656,10 +1707,10 @@
 
   <gl pnm="s">
     <callm nm="lc-round-stem">
-      pt-a: 61, pt-b: 15
+      pt-a: 61, pt-b: 15, stem-cv: lc-round-stem
     </callm>
     <callm nm="lc-round-stem">
-      pt-a: 30, pt-b: 45, cv: xho
+      pt-a: 30, pt-b: 45, cv: xho, stem-cv: lc-round-stem
     </callm>
     <ip r="30 61" p="53 23"/>
   </gl>
@@ -1778,6 +1829,82 @@
     <mv di="baseline" p="5">
       <mv p="40"/>
     </mv>
+  </gl>
+
+  <gl pnm="thorn">
+    <callm nm="lc-round-stem">
+      pt-a: 63, pt-b: 89, stem-cv: lc-round-stem
+    </callm>
+    <callm nm="lc-round-stem">
+      pt-a: 53, pt-b: 80, cv: xho
+    </callm>
+    <callm nm="lc-serif">
+      base: 18,
+      pt-a: 21,
+      pt-a-sh: 15,
+      pt-b: 3,
+      pt-b-sh: 11,
+      base-cv: lc-descender
+    </callm>
+    <mv di="lc-ascender" p="37"/>
+  </gl>
+
+  <gl pnm="thorn.loclENG">
+    <mv di="lcbu" p="46">
+      <mv p="71"/>
+    </mv>
+    <mv di="xho" p="38">
+      <mv p="62"/>
+    </mv>
+    <mv di="lc-descender" p="54">
+      <sh p="3"/>
+    </mv>
+    <mv di="lc-ascender" p="23"/>
+  </gl>
+
+  <gl pnm="eth">
+    <callm nm="lc-round-stem">
+      pt-a: 42, pt-b: 22, stem-cv: lc-round-stem
+    </callm>
+    <callm nm="lc-round-stem">
+      pt-a: 7, pt-b: 14, cv: xho, stem-cv: lc-round-stem
+    </callm>
+    <mv p="34" round="no">
+      <mv p="30" round="no"/>
+    </mv>
+    <ip r="34 7" p="47 52"/>
+    <mv r="52" p="46"/>
+    <mv r="47" p="51"/>
+  </gl>
+
+  <gl pnm="eth.loclENG">
+    <callm nm="lc-round-stem">
+      pt-a: 24, pt-b: 40, stem-cv: lc-round-stem
+    </callm>
+    <callm nm="lc-round-stem">
+      pt-a: 7, pt-b: 32, cv: xho, stem-cv: lc-round-stem
+    </callm>
+    <mv p="16" round="no">
+      <mv p="12" round="no"/>
+    </mv>
+    <ip r="16 7" p="55 69"/>
+    <mv r="69" p="51"/>
+    <mv r="55" p="68"/>
+  </gl>
+
+  <gl pnm="eth.loclENG.alt">
+    <callm nm="lc-round-stem">
+      pt-a: 24, pt-b: 40, stem-cv: lc-round-stem
+    </callm>
+    <callm nm="lc-round-stem">
+      pt-a: 7, pt-b: 32, cv: xho, stem-cv: lc-round-stem
+    </callm>
+    <mv p="16" round="no">
+      <mv p="12" round="no"/>
+    </mv>
+    <ip r="16 7" p="55 69"/>
+    <mv r="69" p="51"/>
+    <mv r="55" p="68"/>
   </gl>
 
 </xgridfit>

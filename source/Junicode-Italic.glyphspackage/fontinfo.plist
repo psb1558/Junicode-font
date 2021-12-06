@@ -128,7 +128,7 @@ Location = 0;
 );
 }
 );
-date = "2021-11-22 19:25:01 +0000";
+date = "2021-12-06 03:38:16 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -740,6 +740,16 @@ lookup grek_Composed {
 } grek_Composed ;
 ";
 tag = ccmp;
+},
+{
+code = "sub A by A.swash ;
+sub AE by AE.swash ;
+sub D by D.swash ;
+sub J by J.swash ;
+sub e by e.swash ;
+sub k by k.swash ;
+";
+tag = swsh;
 },
 {
 code = "  # Nine-character codes
@@ -1814,13 +1824,11 @@ tag = cv01;
 {
 code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 ] ;
 ";
-disabled = 1;
 tag = cv02;
 },
 {
 code = "sub C from [ C.alt ] ;
 ";
-disabled = 1;
 labels = (
 {
 language = default;
@@ -1911,7 +1919,6 @@ tag = cv14;
 {
 code = "sub H from [ H.alt ] ;
 ";
-disabled = 1;
 labels = (
 {
 language = default;
@@ -1954,19 +1961,16 @@ tag = cv18;
 {
 code = "sub J from [ Jdotaccent ] ;
 ";
-disabled = 1;
 tag = cv19;
 },
 {
 code = "sub j from [ jdotless j.alt2 jdotaccent ] ;
 ";
-disabled = 1;
 tag = cv20;
 },
 {
 code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl ] ;
 ";
-disabled = 1;
 labels = (
 {
 language = default;
@@ -2004,9 +2008,8 @@ code = "sub m from [ m.alt1 m.alt2 m.alt3  ] ;
 tag = cv26;
 },
 {
-code = "sub N from [ N.alt ] ;
+code = "sub N from [ N.alt1 ] ;
 ";
-disabled = 1;
 labels = (
 {
 language = default;
@@ -2022,13 +2025,11 @@ tag = cv28;
 },
 {
 code = "sub O from [ Ooldpolish ] ;";
-disabled = 1;
 tag = cv29;
 },
 {
 code = "sub o from [ ooldpolish] ;
 ";
-disabled = 1;
 tag = cv30;
 },
 {
@@ -2079,7 +2080,6 @@ tag = cv36;
 {
 code = "sub S from [ Sinsular Ssigmoid    ] ;
 ";
-disabled = 1;
 labels = (
 {
 language = default;
@@ -2090,8 +2090,7 @@ tag = cv37;
 },
 {
 code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 ] ;
-";
-disabled = 1;
+# check these over.";
 tag = cv38;
 },
 {
@@ -4427,8 +4426,9 @@ sub f t by f_t;
 sub f udieresis by f_udieresis;
 sub longs longs by longs_longs;
 sub o rrotunda by o_rrotunda;
-
-";
+sub a s by a_s.dlig ;
+sub i s by i_s.dlig ;
+sub u s by u_s.dlig ;";
 tag = dlig;
 },
 {
@@ -7530,5 +7530,5 @@ userData = {
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 31;
+versionMinor = 33;
 }

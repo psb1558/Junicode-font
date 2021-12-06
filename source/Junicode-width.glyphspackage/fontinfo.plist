@@ -209,6 +209,40 @@ Location = 0;
 );
 },
 {
+name = "Virtual Master";
+value = (
+{
+Axis = Weight;
+Location = 400;
+},
+{
+Axis = Width;
+Location = 100;
+},
+{
+Axis = Enlarge;
+Location = 0;
+}
+);
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = Weight;
+Location = 700;
+},
+{
+Axis = Width;
+Location = 125;
+},
+{
+Axis = Enlarge;
+Location = 0;
+}
+);
+},
+{
 name = "Use Typo Metrics";
 value = 1;
 },
@@ -276,7 +310,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2021-11-22 19:21:35 +0000";
+date = "2021-12-06 03:38:35 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -336,6 +370,40 @@ lookup  altgreek {
   sub phi by phi.alt ;
   sub omega by omega.alt ;
 } altgreek;
+
+lookup f_before_dia {
+  sub f by f.alt ;
+  sub eth.loclENG by eth.loclENG.alt ;
+} f_before_dia ;
+
+lookup dbl_f_left {
+  sub [ f longs ] by [ f.rf longs.rlongs ] ;
+} dbl_f_left ;
+
+lookup f_tall_right {
+  sub [ f longs f.lf longs.llongs ] by [ f.rtall longs.rtall f.lfrtall longs.llongsrtall ] ;
+} f_tall_right ;
+
+lookup dlb_f_right {
+  sub [ f f.alt longs ] by [ f.lf f.alt.lf longs.llongs ] ;
+} dlb_f_right ;
+
+lookup lig_left {
+  sub [ f longs ] by [ f.rij longs.rij ] ;
+  sub [ f.lf longs.llongs ] by [ f.lfrij longs.llongsrij ] ;
+} lig_left ;
+
+lookup lig_right {
+  sub [ b h k l thorn thorn.loclENG ] by [ b.lf h.lf k.lf l.lf thorn.lf thorn.loclENG.lf ] ;
+} lig_right ;
+
+lookup lig_f_right {
+  sub [ i j ] by [ i.lf j.lf] ;
+} lig_f_right ;
+
+lookup lig_longs_right {
+  sub [ i j ] by [ i.llongs j.llongs ] ;
+} lig_longs_right ;
 ";
 name = Misc_lookups;
 }
@@ -1631,6 +1699,46 @@ sub w by w.enlarged ;
 sub x by x.enlarged ;
 sub y by y.enlarged ;
 sub z by z.enlarged ;
+sub Ao by AO.enlarged ;
+sub A by A.enlarged ;
+sub AA by AA.enlarged ;
+sub Aacute by Aacute.enlarged ;
+sub AE by AE.enlarged ;
+sub B by B.enlarged ;
+sub C by C.enlarged ;
+sub D by D.enlarged ;
+sub Eth by Eth.enlarged ;
+sub Dinsular by Dinsular.enlarged ;
+sub E by E.enlarged ;
+sub Eogonek by Eogonek.enlarged ;
+sub F by F.enlarged ;
+sub Finsular by Finsular.enlarged ;
+sub G by G.enlarged ;
+sub H by H.enlarged ;
+sub I by I.enlarged ;
+sub J by J.enlarged ;
+sub K by K.enlarged ;
+sub L by L.enlarged ;
+sub M by M.enlarged ;
+sub N by N.enlarged ;
+sub O by O.enlarged ;
+sub OE by OE.enlarged ;
+sub P by P.enlarged ;
+sub Thorn by Thorn.enlarged ;
+sub Q by Q.enlarged ;
+sub R by R.enlarged ;
+sub S by S.enlarged ;
+sub T by T.enlarged ;
+sub U by U.enlarged ;
+sub V by V.enlarged ;
+sub W by W.enlarged ;
+sub X by X.enlarged ;
+sub Y by Y.enlarged ;
+sub Z by Z.enlarged ;
+sub Eogonek.alt by Eogonek.enlarged.alt ;
+sub Eogonek.alt1 by Eogonek.enlarged.alt1 ;
+# sub Eth.loclENG by Eth.enlarged.loclENG ;
+sub Thorn.loclENG by Thorn.enlarged.loclENG ;
 ";
 labels = (
 {
@@ -2022,7 +2130,7 @@ value = "Low Diacritics";
 tag = ss20;
 },
 {
-code = "sub A from [ A.alt1 A.alt2 A.alt3 ];
+code = "sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
 ";
 labels = (
 {
@@ -2033,12 +2141,22 @@ value = "alternate a";
 tag = cv01;
 },
 {
-code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 ] ;
+code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged ] ;
 ";
 tag = cv02;
 },
 {
-code = "sub C from [ C.alt ] ;
+code = "sub B from [ B.enlarged ] ;
+";
+tag = cv03;
+},
+{
+code = "sub b from [ b.enlarged ];
+";
+tag = cv04;
+},
+{
+code = "sub C from [ C.alt C.enlarged ] ;
 ";
 labels = (
 {
@@ -2049,12 +2167,12 @@ value = "Alternate C";
 tag = cv05;
 },
 {
-code = "sub c from [ c.mecurl ] ;
+code = "sub c from [ c.mecurl c.enlarged ] ;
 ";
 tag = cv06;
 },
 {
-code = "sub D from [ Dinsular ] ;
+code = "sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
 
 ";
 labels = (
@@ -2066,12 +2184,12 @@ value = "Round form of d";
 tag = cv07;
 },
 {
-code = "sub d from [ dinsular dinsular.alt d.mecurl ] ;
+code = "sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
 ";
 tag = cv08;
 },
 {
-code = "sub E from [ E.alt1 E.alt2 ] ;
+code = "sub E from [ E.alt1 E.alt2 E.enlarged ] ;
 ";
 labels = (
 {
@@ -2082,13 +2200,13 @@ value = "Alternate e";
 tag = cv09;
 },
 {
-code = "sub e from [ e.alt1 e.alt2 e.alt3 ] ;
+code = "sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged ] ;
 ";
 tag = cv10;
 },
 {
-code = "sub F         from [ Finsular         ] ;
-sub Fdotbelow from [ Finsulardotbelow ] ;
+code = "sub F         from [ Finsular         F.enlarged Finsular.enlarged ] ;
+# sub Fdotbelow from [ Finsulardotbelow ] ;
 
 ";
 labels = (
@@ -2100,7 +2218,7 @@ value = "Alternate f";
 tag = cv11;
 },
 {
-code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl ] ;
+code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged ] ;
 
 
 # do something about underdotted form (supply for all?)
@@ -2111,7 +2229,7 @@ code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl ] ;
 tag = cv12;
 },
 {
-code = "sub G from [ Ginsular Gormulum G.alt ] ;
+code = "sub G from [ Ginsular Gormulum G.alt G.enlarged ] ;
 ";
 labels = (
 {
@@ -2122,12 +2240,12 @@ value = "Alternate g";
 tag = cv13;
 },
 {
-code = "sub g from [ ginsular gormulum uni0261 g.alt1 g.alt2 g.alt3 g.mecurl ] ;
+code = "sub g from [ ginsular gormulum uni0261 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
 ";
 tag = cv14;
 },
 {
-code = "sub H from [ H.alt ] ;
+code = "sub H from [ H.alt H.enlarged ] ;
 ";
 labels = (
 {
@@ -2138,12 +2256,12 @@ value = "Alternate h";
 tag = cv15;
 },
 {
-code = "sub h from [ h.alt h.alt2 ] ;
+code = "sub h from [ h.alt h.alt2 h.enlarged ] ;
 ";
 tag = cv16;
 },
 {
-code = "sub I from [ Idotaccent uniA7FE ] ;
+code = "sub I from [ Idotaccent uniA7FE I.enlarged ] ;
 # figure this out
 # sub Idotaccent    from [ I                                  ] ;
 ";
@@ -2156,24 +2274,28 @@ value = "Alternate i";
 tag = cv17;
 },
 {
-code = "sub i from [ dotlessi i.alt i.alt1 ] ;
+code = "sub i from [ dotlessi i.alt i.alt1 i.enlarged ] ;
 # figure this out
 # sub dotlessi      from [ i                                  ] ;
 ";
 tag = cv18;
 },
 {
-code = "sub J from [ Jdotaccent ] ;
+code = "sub J from [ Jdotaccent j.enlarged ] ;
 ";
 tag = cv19;
 },
 {
-code = "sub j from [ jdotless j.alt2 jdotaccent ] ;
+code = "sub j from [ jdotless j.alt2 jdotaccent j.enlarged ] ;
 ";
 tag = cv20;
 },
 {
-code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl ] ;
+code = "sub K from [ K.enlarged ] ;";
+tag = cv21;
+},
+{
+code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged ] ;
 ";
 labels = (
 {
@@ -2184,7 +2306,11 @@ value = "Alternate k";
 tag = cv22;
 },
 {
-code = "sub l by l.alt ;
+code = "sub L from [ L.enlarged ] ;";
+tag = cv23;
+},
+{
+code = "sub l from [ l.alt l.enlarged ] ;
 ";
 labels = (
 {
@@ -2195,7 +2321,7 @@ value = "Alternate l";
 tag = cv24;
 },
 {
-code = "sub M from [ M.alt1 M.alt2 uniA7FF ] ;
+code = "sub M from [ M.alt1 M.alt2 uniA7FF M.enlarged ] ;
 ";
 labels = (
 {
@@ -2206,12 +2332,12 @@ value = "Alternate m";
 tag = cv25;
 },
 {
-code = "sub m from [ m.alt1 m.alt2 m.alt3  ] ;
+code = "sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
 ";
 tag = cv26;
 },
 {
-code = "sub N from [ N.alt1 ] ;
+code = "sub N from [ N.alt1 N.enlarged ] ;
 ";
 labels = (
 {
@@ -2222,21 +2348,22 @@ value = "Alternate n";
 tag = cv27;
 },
 {
-code = "sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl ] ;
+code = "sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged ] ;
 ";
 tag = cv28;
 },
 {
-code = "sub O from [ Ooldpolish ] ;";
+code = "sub O from [ Ooldpolish O.enlarged ] ;
+";
 tag = cv29;
 },
 {
-code = "sub o from [ ooldpolish] ;
+code = "sub o from [ ooldpolish o.enlarged ] ;
 ";
 tag = cv30;
 },
 {
-code = "sub P from [ uniA7FC ] ;
+code = "sub P from [ uniA7FC P.enlarged ] ;
 ";
 labels = (
 {
@@ -2247,7 +2374,11 @@ value = "Alternate P";
 tag = cv31;
 },
 {
-code = "sub Q from [ Q.alt ] ;
+code = "sub p from [ p.enlarged ] ;";
+tag = cv32;
+},
+{
+code = "sub Q from [ Q.alt Q.enlarged ] ;
 ";
 labels = (
 {
@@ -2258,12 +2389,12 @@ value = "Alternate Q";
 tag = cv33;
 },
 {
-code = "sub q from [ q.alt ] ;
+code = "sub q from [ q.alt q.enlarged ] ;
 ";
 tag = cv34;
 },
 {
-code = "sub R from [ Rinsular ] ;
+code = "sub R from [ Rinsular R.enlarged ] ;
 ";
 labels = (
 {
@@ -2274,12 +2405,12 @@ value = "Alternate r";
 tag = cv35;
 },
 {
-code = "sub r from [ rinsular rrotunda r.mecurl ] ;
+code = "sub r from [ rinsular rrotunda r.mecurl r.enlarged ] ;
 ";
 tag = cv36;
 },
 {
-code = "sub S from [ Sinsular Ssigmoid    ] ;
+code = "sub S from [ Sinsular Ssigmoid S.enlarged   ] ;
 ";
 labels = (
 {
@@ -2290,12 +2421,12 @@ value = "Alternate s";
 tag = cv37;
 },
 {
-code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 ] ;
+code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged ] ;
 ";
 tag = cv38;
 },
 {
-code = "sub T from [ Tinsular ] ;
+code = "sub T from [ Tinsular T.enlarged ] ;
 ";
 labels = (
 {
@@ -2306,12 +2437,27 @@ value = "Alternate t";
 tag = cv39;
 },
 {
-code = "sub t from [ tinsular t.mecurl ] ;
+code = "sub t from [ tinsular t.mecurl t.enlarged ] ;
 ";
 tag = cv40;
 },
 {
-code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 ];
+code = "sub U from [ U.enlarged ] ;
+";
+tag = cv41;
+},
+{
+code = "sub u from [ u.enlarged ] ;
+";
+tag = cv42;
+},
+{
+code = "sub V from [ V.enlarged ] ;
+";
+tag = cv43;
+},
+{
+code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
 ";
 labels = (
 {
@@ -2322,7 +2468,22 @@ value = "Alternate v";
 tag = cv44;
 },
 {
-code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 ] ;
+code = "sub W from [ W.enlarged ] ;
+";
+tag = cv45;
+},
+{
+code = "sub w from [ w.enlarged ] ;
+";
+tag = cv46;
+},
+{
+code = "sub X from [ X.enlarged ] ;
+";
+tag = cv47;
+},
+{
+code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
 ";
 labels = (
 {
@@ -2333,7 +2494,7 @@ value = "Alternate x";
 tag = cv48;
 },
 {
-code = "sub Y from [ Y.alt ] ;
+code = "sub Y from [ Y.alt Y.enlarged ] ;
 ";
 labels = (
 {
@@ -2344,12 +2505,12 @@ value = "Alternate y";
 tag = cv49;
 },
 {
-code = "sub y from [ y.alt y.alt2 ] ;
+code = "sub y from [ y.alt y.alt2 y.enlarged ] ;
 ";
 tag = cv50;
 },
 {
-code = "sub Z from [ Zvisigothic ] ;
+code = "sub Z from [ Zvisigothic Z.enlarged ] ;
 ";
 labels = (
 {
@@ -2360,7 +2521,7 @@ value = "Alternate Z";
 tag = cv51;
 },
 {
-code = "sub z from [ zvisigothic z.alt1 ] ;
+code = "sub z from [ zvisigothic z.alt1 z.enlarged ] ;
 ";
 tag = cv52;
 },
@@ -2382,7 +2543,7 @@ code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
 tag = cv54;
 },
 {
-code = "sub aa from [ aa.alt2 aa.alt ] ;
+code = "sub aa from [ aa.alt2 aa.alt aa.enlarged ] ;
 ";
 labels = (
 {
@@ -2393,17 +2554,17 @@ value = "Alternate aa";
 tag = cv55;
 },
 {
-code = "sub AE from [ AE.alt1 ] ;
+code = "sub AE from [ AE.alt1 AE.enlarged ] ;
 ";
 tag = cv56;
 },
 {
-code = "sub ae from [ ae.alt1 ae.alt2 ae.alt3 ] ;
+code = "sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
 ";
 tag = cv57;
 },
 {
-code = "sub Ao from [ Ao.alt ] ;
+code = "sub Ao from [ Ao.alt AO.enlarged AO.enlarged.alt ] ;
 ";
 tag = cv58;
 },
@@ -4445,8 +4606,19 @@ lookup shortstroke {
 } shortstroke ;
 
 lookup f_alt {
-  sub f' @lc_with_diacritics_above by f.alt;
+#  sub f' [ @lc_with_diacritics_above eth ] by f.alt;
+  sub f' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
 } f_alt;
+
+lookup fligs1 {
+  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dlb_f_right ;
+} fligs1 ;
+
+lookup fligs2 {
+  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
+  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
+  sub [ f f.lf longs longs.llongs ]' lookup f_tall_right [ b h k l thorn thorn.loclENG ]' lookup lig_right ;
+} fligs2 ;
 
 lookup j_alt {
   @g_and_ogonek = [ g Eogonek eogonek Aogonek aogonek uogonek ] ;
@@ -4758,47 +4930,47 @@ code = "lookupflag IgnoreMarks;
 
 sub longs i z.alt1 by longs_i_z.alt1 ;
 sub longs.alt1 i z.alt1 by longs_i_z.alt1 ;
-sub f f i by f_f_i ;
-sub f f l by f_f_l;
+# sub f f i by f_f_i ;
+# sub f f l by f_f_l;
 sub f f t by f_f_t;
 sub f f udieresis by f_f_udieresis;
 sub f f y by f_f_y;
 sub f t y by f_t_y;
-sub longs longs i by longs_longs_i;
-sub longs.alt1 longs.alt1 i by longs_longs_i;
-sub longs longs l by longs_longs_l;
-sub longs.alt1 longs.alt1 l by longs_longs_l;
-sub f f by f_f ;
-sub f i by fi ;
-sub f l by fl ;
-sub f j by f_j;
+# sub longs longs i by longs_longs_i;
+# sub longs.alt1 longs.alt1 i by longs_longs_i;
+# sub longs longs l by longs_longs_l;
+# sub longs.alt1 longs.alt1 l by longs_longs_l;
+# sub f f by f_f ;
+# sub f i by fi ;
+# sub f l by fl ;
+# sub f j by f_j;
 sub f odieresis by f_odieresis;
 sub f r by f_r;
 sub f t by f_t;
 sub f udieresis by f_udieresis;
 sub f y by f_y;
-sub longs b by longs_b;
-sub longs.alt1 b by longs_b;
-sub longs h by longs_h;
-sub longs.alt1 h by longs_h;
-sub longs i by longs_i;
-sub longs.alt1 i by longs_i;
-sub longs j by longs_j;
-sub longs.alt1 j by longs_j;
-sub longs k by longs_k;
-sub longs.alt1 k by longs_k;
-sub longs l by longs_l;
+# sub longs b by longs_b;
+# sub longs.alt1 b by longs_b;
+# sub longs h by longs_h;
+# sub longs.alt1 h by longs_h;
+# sub longs i by longs_i;
+# sub longs.alt1 i by longs_i;
+# sub longs j by longs_j;
+# sub longs.alt1 j by longs_j;
+# sub longs k by longs_k;
+# sub longs.alt1 k by longs_k;
+# sub longs l by longs_l;
 sub longs.medhighoverline l.medhighoverline by longs_l.medhighoverline ;
-sub longs.alt1 l by longs_l;
+# sub longs.alt1 l by longs_l;
 sub longs t by longs_t;
 sub longs.alt1 t by longs_t;
-sub longs longs by longs_longs;
-sub longs.alt1 longs.alt1 by longs_longs;
-sub f eth by f_eth;
-sub f eth.loclENG by f_eth.loclENG;
-sub f f.alt by f_f.alt;
-sub f thorn by f_thorn;
-sub f thorn.loclENG by f_thorn.loclENG;
+# sub longs longs by longs_longs;
+# sub longs.alt1 longs.alt1 by longs_longs;
+# sub f eth by f_eth;
+# sub f eth.loclENG by f_eth.loclENG;
+# sub f f.alt by f_f.alt;
+# sub f thorn by f_thorn;
+# sub f thorn.loclENG by f_thorn.loclENG;
 sub f adieresis by f_adieresis;
 sub Q u by Q_u;
 sub Q u.pcap by Q_u.pcap ;
@@ -5066,7 +5238,6 @@ GSOffsetHorizontal = 10;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 0;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -5972,8 +6143,8 @@ size = 20;
 {
 filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
 name = xHeight;
-pos = 1012;
-size = 23;
+pos = 1358;
+size = 27;
 },
 {
 name = baseline;
@@ -6114,7 +6285,7 @@ pos = 1358;
 },
 {
 over = 25;
-pos = 1012;
+pos = 1358;
 },
 {
 over = -28;
@@ -6136,7 +6307,7 @@ stemValues = (
 191
 );
 userData = {
-GSCornerRadius = 50;
+GSCornerRadius = 25;
 GSOffsetHorizontal = 10;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 0;
@@ -6350,6 +6521,7 @@ instanceInterpolations = {
 master01 = -0.16667;
 };
 name = "Condensed Medium";
+visible = 0;
 weightClass = 500;
 widthClass = 3;
 },
@@ -7302,7 +7474,6 @@ x = -47;
 "@MMK_R_M" = -40;
 "@MMK_R_S" = -40;
 "@MMK_R_T" = -30;
-"@MMK_R_U" = -70;
 "@MMK_R_V" = -82;
 "@MMK_R_X" = -84;
 "@MMK_R_Y" = -110;
@@ -8665,7 +8836,6 @@ x = -51.7;
 "@MMK_R_M" = -44;
 "@MMK_R_S" = -44;
 "@MMK_R_T" = -33;
-"@MMK_R_U" = -77;
 "@MMK_R_V" = -90.2;
 "@MMK_R_X" = -92.4;
 "@MMK_R_Y" = -121;
@@ -10019,7 +10189,6 @@ x = -47;
 "@MMK_R_M" = -40;
 "@MMK_R_S" = -40;
 "@MMK_R_T" = -30;
-"@MMK_R_U" = -70;
 "@MMK_R_V" = -82;
 "@MMK_R_X" = -84;
 "@MMK_R_Y" = -110;
@@ -11379,7 +11548,6 @@ x = -37.6;
 "@MMK_R_M" = -32;
 "@MMK_R_S" = -32;
 "@MMK_R_T" = -24;
-"@MMK_R_U" = -56;
 "@MMK_R_V" = -65.6;
 "@MMK_R_X" = -67.2;
 "@MMK_R_Y" = -88;
@@ -12736,7 +12904,6 @@ x = -56;
 "@MMK_R_M" = -48;
 "@MMK_R_S" = -48;
 "@MMK_R_T" = -36;
-"@MMK_R_U" = -84;
 "@MMK_R_V" = -98;
 "@MMK_R_X" = -101;
 "@MMK_R_Y" = -132;
@@ -14087,7 +14254,6 @@ x = -47;
 "@MMK_R_M" = -40;
 "@MMK_R_S" = -40;
 "@MMK_R_T" = -30;
-"@MMK_R_U" = -70;
 "@MMK_R_V" = -82;
 "@MMK_R_X" = -84;
 "@MMK_R_Y" = -110;
@@ -15276,5 +15442,5 @@ type = unicode;
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 31;
+versionMinor = 33;
 }

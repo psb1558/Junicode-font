@@ -1,5 +1,5 @@
 {
-.appVersion = "3100";
+.appVersion = "3106";
 .formatVersion = 3;
 axes = (
 {
@@ -17,13 +17,13 @@ tag = ENLA;
 );
 classes = (
 {
-code = "dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb.alt1 macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commareversedabovecomb commaaboverightcomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb doublebrevecomb doublemacroncomb tildedoublecomb breveinverteddoublecomb doublecircumflexcomb ogonekabovecomb urabovecomb usabovecomb diagonaldieresiscomb dotacutecomb midtildecomb acomb ecomb icomb ocomb ucomb ccomb dcomb hcomb mcomb rcomb tcomb vcomb xcomb flattenedopenaabovecomb aecomb aocomb avcomb ccedillacomb insulardcomb ethcomb gcomb Gcomb kcomb lcomb Lcomb Mcomb ncomb Ncomb Rcomb rrotundacomb scomb longscomb zcomb insulardcomb.alt ethcomb.loclENG dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case caroncomb.case brevecomb.case tildecomb.case macroncomb.case hookabovecomb.case dblgravecomb.case strokeshortcomb.case dotacutecomb.case dieresiscomb.sc gravecomb.sc acutecomb.sc hungarumlautcomb.sc circumflexcomb.sc caroncomb.sc tildecomb.sc macroncomb.sc ancomb ansmcpcomb arcomb arsmcpcomb bsmcpcomb bcomb emacroncomb eogonekcomb fcomb dotlessicomb jcomb jdotlesscomb omacroncomb oogonekcomb oslashcomb pcomb thorncomb qcomb rumrotundacomb tinsularcomb wcomb ycomb dotacutecomb.case dsmcpcomb ksmcpcomb orrotcomb orumcomb tsmcpcomb
-";
+code = "# Combining above with unicode:
+Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb bcomb ccedillacomb ccomb dcomb ecomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb pcomb rcomb rrotundacomb scomb tcomb ucomb tinsularcomb vcomb wcomb xcomb zcomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commareversedabovecomb commaaboverightcomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb doublebrevecomb doublemacroncomb tildedoublecomb breveinverteddoublecomb doublecircumflexcomb ogonekabovecomb tripleacute ginsularcomb rinsularcomb uniF1C8 urabovecomb usabovecomb";
 name = combining_above;
 },
 {
-code = "gravebelowcomb acutebelowcomb lefttackbelowcomb righttackbelowcomb ringhalfleftbelowcomb uptackbelowcomb downtackbelowcomb plusbelowcomb minusbelowcomb palatalhookcomb retroflexhookcomb dotbelowcomb dieresisbelowcomb ringbelowcomb commaaccentcomb cedillacomb ogonekcomb verticallinebelowcomb bridgebelowcomb dblarchinvertedbelowcomb caronbelowcomb circumflexbelowcomb brevebelowcomb breveinvertedbelowcomb tildebelowcomb macronbelowcomb lowlinecomb dbllowlinecomb ringhalfrightbelowcomb bridgeinvertedbelowcomb squarebelowcomb seagullbelowcomb equalbelowcomb doubleverticallinebelowcomb leftanglebelowcomb arrowleftrightbelowcomb arrowupbelowcomb xbelowcomb arrowheadleftbelowcomb arrowheadrightbelowcomb arrowheadrightheadupbelowcomb asteriskbelowcomb uni1DCF uni1DD0
-";
+code = "# combining below with unicode:
+gravebelowcomb acutebelowcomb lefttackbelowcomb righttackbelowcomb ringhalfleftbelowcomb uptackbelowcomb downtackbelowcomb plusbelowcomb minusbelowcomb dotbelowcomb dieresisbelowcomb ringbelowcomb commaaccentcomb cedillacomb ogonekcomb verticallinebelowcomb bridgebelowcomb dblarchinvertedbelowcomb caronbelowcomb circumflexbelowcomb brevebelowcomb breveinvertedbelowcomb tildebelowcomb macronbelowcomb lowlinecomb dbllowlinecomb ringhalfrightbelowcomb bridgeinvertedbelowcomb squarebelowcomb seagullbelowcomb equalbelowcomb doubleverticallinebelowcomb leftanglebelowcomb arrowleftrightbelowcomb arrowupbelowcomb graphemejoinercomb xbelowcomb arrowheadleftbelowcomb arrowheadrightbelowcomb arrowheadrightheadupbelowcomb asteriskbelowcomb doublebrevebelowcomb doublemacronbelowcomb arrowdoublerightbelowcomb uni1DCF uni1DD0 ";
 name = combining_below;
 },
 {
@@ -107,6 +107,11 @@ name = grekSmcp;
 {
 code = "Alpha Beta Gamma Delta Epsilon Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega Alphatonos Epsilontonos Etatonos Iotatonos Omicrontonos Upsilontonos Omegatonos Iotadieresis Upsilondieresis ";
 name = grekCaps;
+},
+{
+code = "Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb ancomb ansmcpcomb aocomb arcomb arsmcpcomb avcomb bcomb bsmcpcomb ccedillacomb ccomb dcomb diagonaldieresiscomb dotacutecomb dotlessicomb dsmcpcomb ecomb emacroncomb eogonekcomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb jcomb jdotlesscomb kcomb ksmcpcomb lcomb longscomb mcomb midtildecomb ncomb ocomb ogonekdotcomb omacroncomb oogonekcomb orrotcomb orumcomb oslashcomb pcomb qcomb rcomb rrotundacomb rumrotundacomb scomb tcomb thorncomb tsmcpcomb ucomb tinsularcomb vcomb wcomb xcomb ycomb zcomb flattenedopenaabovecomb.alt insulardcomb.alt rrotundacomb.alt dotacutecomb.case dotacutecomb.sc dotlessicomb.low ethcomb.loclENG Rcomb.low acomb.low ecomb.low ocomb.low rcomb.low tcomb.low vcomb.low zcomb.low thorncomb.loclENG commaabovecomb_perispomenicomb commareversedabovecomb_perispomenicomb perispomenicomb koroniscomb dialytikatonoscomb ypogegrammenicomb commaabovecomb_perispomenicomb.case commareversedabovecomb_perispomenicomb.case dieresiscomb_perispomenicomb.loclELL commaabovecomb_perispomenicomb.sc commareversedabovecomb_perispomenicomb.sc perispomenicomb.sc dialytikatonoscomb.sc dieresiscomb_perispomenicomb.loclELL.sc dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commaabovecomb_gravecomb commareversedabovecomb commareversedabovecomb_gravecomb commareversedabovecomb_acutecomb commaaboverightcomb gravebelowcomb acutebelowcomb lefttackbelowcomb righttackbelowcomb leftangleabovecomb horncomb ringhalfleftbelowcomb uptackbelowcomb downtackbelowcomb plusbelowcomb minusbelowcomb palatalhookcomb retroflexhookcomb dotbelowcomb dieresisbelowcomb ringbelowcomb commaaccentcomb cedillacomb ogonekcomb verticallinebelowcomb bridgebelowcomb dblarchinvertedbelowcomb caronbelowcomb circumflexbelowcomb brevebelowcomb breveinvertedbelowcomb tildebelowcomb macronbelowcomb lowlinecomb dbllowlinecomb tildeoverlaycomb strokeshortcomb strokelongcomb slashshortcomb slashlongcomb ringhalfrightbelowcomb bridgeinvertedbelowcomb squarebelowcomb seagullbelowcomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb equalbelowcomb doubleverticallinebelowcomb leftanglebelowcomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowleftrightbelowcomb arrowupbelowcomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb xbelowcomb arrowheadleftbelowcomb arrowheadrightbelowcomb arrowheadrightheadupbelowcomb righthalfringabovecomb asteriskbelowcomb doublebrevebelowcomb doublebrevecomb doublemacroncomb doublemacronbelowcomb tildedoublecomb breveinverteddoublecomb arrowdoublerightbelowcomb circumflexacutecomb circumflexgravecomb circumflexhookabovecomb doublecircumflexcomb muncialcomb ogonekabovecomb triplebrevebelowcomb tripleacute ginsularcomb rinsularcomb uniF1C8 uni1DCF uni1DD0 urabovecomb usabovecomb dieresiscomb_gravecomb.Greek overlinecomb.alt cedillacomb.alt macroncomb.alt1  macroncomb.alt2 caronlowcomb.case dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case caroncomb.case brevecomb.case tildecomb.case macroncomb.case hookabovecomb.case dblgravecomb.case breveinvertedcomb.case commaabovecomb_gravecomb.case commaabovecomb_acutecomb.case commareversedabovecomb_gravecomb.case commareversedabovecomb_acutecomb.case strokeshortcomb.case circumflexacutecomb.case circumflexacutecomb.sc circumflexgravecomb.case circumflexgravecomb.sc circumflexhookabovecomb.sc circumflexhookcomb.case circumflexlowcomb.case dieresisacutecomb.case eogonekcomb.alt eogonekcomb.alt1 breveinverteddoublecomb.high dieresiscomb.loclELL gravecomb.loclELL acutecomb.loclELL commaabovecomb.loclELL commaabovecomb_acutecomb.loclELL commareversedabovecomb.loclELL muncialcomb.low macroncomb.narrow dieresiscomb.sc dotaccentcomb.sc gravecomb.sc acutecomb.sc hungarumlautcomb.sc circumflexcomb.sc caroncomb.sc brevecomb.sc ringcomb.sc tildecomb.sc macroncomb.sc hookabovecomb.sc dblgravecomb.sc breveinvertedcomb.sc commaabovecomb_gravecomb.sc commareversedabovecomb_gravecomb.sc commareversedabovecomb_acutecomb.sc strokeshortcomb.sc slashshortcomb.sc strokeshortcomb.wide strokeshortcomb.wideleft strokeshortcomb.wideright dieresiscomb_gravecomb.Greek.sc gravecomb.loclELL.case acutecomb.loclELL.case commaabovecomb.loclELL.case commareversedabovecomb.loclELL.case commaabovecomb_acutecomb.loclELL.sc dieresiscomb.loclELL.sc gravecomb.loclELL.sc acutecomb.loclELL.sc commareversedabovecomb.loclELL.sc 
+";
+name = all_combining_nozz;
 }
 );
 customParameters = (
@@ -290,9 +295,9 @@ value = (
 {
 name = "gasp Table";
 value = {
-"12" = 10;
-"36" = 7;
-"65535" = 15;
+12 = 10;
+20 = 7;
+65535 = 15;
 };
 },
 {
@@ -310,7 +315,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2021-12-09 02:27:32 +0000";
+date = "2021-12-12 12:40:11 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -344,6 +349,15 @@ code = "lookup Vertical_Kerning_01 {
     pos doublecircumflexcomb <0 500 0 0> ;
 } Vertical_Kerning_01 ;
 
+lookup Vertical_Kerning_02 {
+  lookupflag 0 ;
+    pos doublebrevecomb <0 200 0 0> ;
+    pos doublemacroncomb <0 200 0 0> ;
+    pos tildedoublecomb <0 200 0 0> ;
+    pos breveinverteddoublecomb <0 200 0 0> ;
+    pos doublecircumflexcomb <0 200 0 0> ;
+} Vertical_Kerning_02 ;
+
 lookup Contextual_Kerning_01 {
   lookupflag 0 ;
     pos doublebrevecomb <-80 0 0 0> ;
@@ -374,6 +388,25 @@ lookup  altgreek {
   sub phi by phi.alt ;
   sub omega by omega.alt ;
 } altgreek;
+
+lookup sub_low_diacritics {
+  sub muncialcomb by muncialcomb.low ;
+  sub dotlessicomb by dotlessicomb.low ;
+  sub Rcomb by Rcomb.low ;
+  sub acomb by acomb.low ;
+  sub ecomb by ecomb.low ;
+  sub ocomb by ocomb.low ;
+  sub rcomb by rcomb.low ;
+  sub tcomb by tcomb.low ;
+  sub vcomb by vcomb.low ;
+  sub zcomb by zcomb.low ;
+} sub_low_diacritics ;
+
+lookup ethdiacritic {
+  sub eth' @lowdiacritics by eth.withdiacritic ;
+  sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
+  sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
+} ethdiacritic ;
 
 # If \"Contextual long s\" is on, sub s by longs.
 
@@ -1291,12 +1324,18 @@ code = "sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt 
                        zigzagabovecomb.alt3.case flattenedopenaabovecomb.alt ancomb ansmcpcomb arcomb arsmcpcomb bcomb
                        bsmcpcomb dsmcpcomb emacroncomb eogonekcomb fcomb dotlessicomb jcomb
                        jdotlesscomb ksmcpcomb muncialcomb omacroncomb oogonekcomb oslashcomb pcomb qcomb rumrotundacomb tsmcpcomb
-                       tinsularcomb wcomb ycomb thorncomb orrotcomb orumcomb diagonaldieresiscomb dotacutecomb ogonekdotcomb ] ;
+                       tinsularcomb wcomb ycomb thorncomb orrotcomb orumcomb diagonaldieresiscomb dotacutecomb ogonekdotcomb
+                       macroncomb.narrow ] ;
 ";
 tag = cv84;
 },
 {
-code = "sub dieresiscomb by dieresiscomb.case;
+automatic = 1;
+code = "sub dotacutecomb by dotacutecomb.case;
+sub tonos by tonos.case;
+sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.case;
+sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.case;
+sub dieresiscomb by dieresiscomb.case;
 sub dotaccentcomb by dotaccentcomb.case;
 sub gravecomb by gravecomb.case;
 sub acutecomb by acutecomb.case;
@@ -1308,39 +1347,48 @@ sub tildecomb by tildecomb.case;
 sub macroncomb by macroncomb.case;
 sub hookabovecomb by hookabovecomb.case;
 sub dblgravecomb by dblgravecomb.case;
-sub acute by acute.case;
-sub caron by caron.case;
-sub circumflex by circumflex.case;
+sub breveinvertedcomb by breveinvertedcomb.case;
+sub commaabovecomb_gravecomb by commaabovecomb_gravecomb.case;
+sub commareversedabovecomb_gravecomb by commareversedabovecomb_gravecomb.case;
+sub commareversedabovecomb_acutecomb by commareversedabovecomb_acutecomb.case;
+sub strokeshortcomb by strokeshortcomb.case;
+sub zigzagabovecomb by zigzagabovecomb.case;
 sub dieresis by dieresis.case;
 sub grave by grave.case;
-sub macron by macron.case;
+sub acute by acute.case;
+sub circumflex by circumflex.case;
+sub caron by caron.case;
 sub tilde by tilde.case;
-sub zigzagabovecomb by zigzagabovecomb.case;
-# The following rules don't change the base character, but
-# substitute a version with an overline that harmonizes with
-# the overline that appears above caps.
-sub c.medhighoverline by c.highoverline ;
-sub d.medhighoverline by d.highoverline ;
-sub i.medhighoverline by i.highoverline ;
-sub j.medhighoverline by j.highoverline ;
-sub l.medhighoverline by l.highoverline ;
-sub m.medhighoverline by m.highoverline ;
-sub v.medhighoverline by v.highoverline ;
-sub x.medhighoverline by x.highoverline ;
-# Greek things:
-sub gravecomb.loclELL by gravecomb.loclELL.case ;
-sub acutecomb.loclELL by acutecomb.loclELL.case ;
-sub acutecomb.loclELL by acutecomb.loclELL.case ;
-sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.case ;
-sub commaabovecomb_perispomenicomb by commaabovecomb_perispomenicomb.case ;
-sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomenicomb.case ;
-sub commaabovecomb_gravecomb by commaabovecomb_gravecomb.case ;
-sub commaabovecomb_acutecomb.loclELL  by commaabovecomb_acutecomb.case ;
-sub commareversedabovecomb_gravecomb by commareversedabovecomb_gravecomb.case ;
-sub commareversedabovecomb_acutecomb by commareversedabovecomb_acutecomb.case ;
-# sub dieresisacutecomb by dieresisacutecomb.case ;
-sub commaabovecomb.loclELL by commaabovecomb.loclELL.case ;
-
+sub macron by macron.case;
+sub circumflexacutecomb by circumflexacutecomb.case;
+sub circumflexgravecomb by circumflexgravecomb.case;
+sub zigzagabovecomb.alt1 by zigzagabovecomb.alt1.case;
+sub zigzagabovecomb.alt2 by zigzagabovecomb.alt2.case;
+sub zigzagabovecomb.alt3 by zigzagabovecomb.alt3.case;
+sub gravecomb.loclELL by gravecomb.loclELL.case;
+sub acutecomb.loclELL by acutecomb.loclELL.case;
+sub commaabovecomb.loclELL by commaabovecomb.loclELL.case;
+sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.case;
+sub zero.osf by zero.lf;
+sub one.osf by one.lf;
+sub two.osf by two.lf;
+sub three.osf by three.lf;
+sub four.osf by four.lf;
+sub five.osf by five.lf;
+sub six.osf by six.lf;
+sub seven.osf by seven.lf;
+sub eight.osf by eight.lf;
+sub nine.osf by nine.lf;
+sub zero.tosf by zero;
+sub one.tosf by one;
+sub two.tosf by two;
+sub three.tosf by three;
+sub four.tosf by four;
+sub five.tosf by five;
+sub six.tosf by six;
+sub seven.tosf by seven;
+sub eight.tosf by eight;
+sub nine.tosf by nine;
 ";
 tag = case;
 },
@@ -2222,16 +2270,7 @@ value = "Latin to Gothic";
 tag = ss19;
 },
 {
-code = "sub muncialcomb by muncialcomb.low ;
-sub dotlessicomb by dotlessicomb.low ;
-sub Rcomb by Rcomb.low ;
-sub acomb by acomb.low ;
-sub ecomb by ecomb.low ;
-sub ocomb by ocomb.low ;
-sub rcomb by rcomb.low ;
-sub tcomb by tcomb.low ;
-sub vcomb by vcomb.low ;
-sub zcomb by zcomb.low ;
+code = "lookup sub_low_diacritics ;
 ";
 labels = (
 {
@@ -3884,7 +3923,6 @@ sub ssigmoid by ssigmoid.sc;
 tag = c2sc;
 },
 {
-automatic = 1;
 code = "sub a by a.sc;
 sub aa by aa.sc;
 sub aacute by aacute.sc;
@@ -3985,6 +4023,26 @@ sub ezh by ezh.sc;
 sub ezhcaron by ezhcaron.sc;
 sub ezhreversed by ezhreversed.sc;
 sub f by f.sc;
+# added to auto:
+sub f.alt by f.sc ;
+sub f.lf by f.sc ;
+sub f.lfrij by f.sc ;
+sub f.lfrl by f.sc ;
+sub f.lfrtall by f.sc ;
+sub f.rf by f.sc ;
+sub f.rij by f.sc ;
+sub f.rl by f.sc ;
+sub f.rtall by f.sc ;
+sub f.alt.lf by f.sc ;
+sub b.lf by b.sc ;
+sub h.lf by h.sc ;
+sub i.lf by i.sc ;
+sub j.lf by j.sc ;
+sub k.lf by k.sc ;
+sub l.lf by l.sc ;
+sub thorn.lf by thorn.sc ;
+sub thorn.loclENG.lf by thorn.loclENG.sc ;
+# end added
 sub fdotaccent by fdotaccent.sc;
 sub finsular by finsular.sc;
 sub g by g.sc;
@@ -4700,19 +4758,7 @@ code = "    sub Feoh by Feoh.rtl ;
 tag = rtlm;
 },
 {
-code = "lookup zigzag {
-  sub d zigzagabovecomb.alt2' by zigzagabovecomb.alt4 ;
-  sub [ b h k l thorn thorn.loclENG uniF208 uniF221 uniF23A uniF209 h.alt k.alt1 k.alt2 k.alt3 ] zigzagabovecomb.alt2' by zigzagabovecomb.alt6 ;
-  sub [f f.alt] zigzagabovecomb.alt2' by zigzagabovecomb.alt5 ;
-} zigzag ;
-
-lookup ethdiacritic {
- sub eth' @lowdiacritics by eth.withdiacritic ;
- sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
- sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
-} ethdiacritic ;
-
-lookup shortstroke {
+code = "lookup shortstroke {
   sub [ b h k thorn thorn.loclENG uniF208 uniF221 uniF23A uniF209 h.alt k.alt1 k.alt2 k.alt3 ] strokeshortcomb.wide' by strokeshortcomb.wideright ;
   sub [ d dinsular ] strokeshortcomb.wide' by strokeshortcomb.wideleft ;
 } shortstroke ;
@@ -4722,6 +4768,7 @@ lookup f_alt {
   sub f' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
 } f_alt;
 
+lookup ethdiacritic ;
 lookup calt_f_alt ;
 lookup calt_fligs_1 ;
 lookup calt_fligs_2 ;
@@ -4740,6 +4787,22 @@ lookup calt_rrotunda {
 } calt_rrotunda;
 
 lookup calt_insular_st ;
+
+lookup calt_zzalt {
+  lookupflag UseMarkFilteringSet @all_combining_nozz ;
+  sub [ b d eth dinsular h k kstroke thorn thornstrokethroughdescender thorndouble h.alt k.alt1 k.alt2 k.alt3
+        thorn.loclENG eth.withdiacritic ] [ zigzagabovecomb zigzagabovecomb.alt1 zigzagabovecomb.alt3 ]' by
+        [ zigzagabovecomb.altloc zigzagabovecomb.altloc.alt1 zigzagabovecomb.altloc.alt3 ] ;
+  sub [ b d eth dinsular h k kstroke thorn thornstrokethroughdescender thorndouble h.alt k.alt1 k.alt2 k.alt3
+        thorn.loclENG eth.withdiacritic ] @all_combining_nozz [ zigzagabovecomb zigzagabovecomb.alt1 zigzagabovecomb.alt3 ]' by
+        [ zigzagabovecomb.altloc zigzagabovecomb.altloc.alt1 zigzagabovecomb.altloc.alt3 ] ;
+} calt_zzalt ;
+
+lookup zigzag {
+  sub d zigzagabovecomb.alt2' by zigzagabovecomb.alt4 ;
+  sub [ b h k l thorn thorn.loclENG h.alt k.alt1 k.alt2 k.alt3 ] zigzagabovecomb.alt2' by zigzagabovecomb.alt6 ;
+  sub [f f.alt] zigzagabovecomb.alt2' by zigzagabovecomb.alt5 ;
+} zigzag ;
 ";
 labels = (
 {
@@ -5067,9 +5130,11 @@ code = "lookup kern_Vertical_Kerning {
         h i j k l hbar Iotaafrican lbar uni01C0 uni01C1 uni01C2 uni01C3 
         bhook uni0256 dhook uni0266 uni0267 uni026B uni026C uni026D 
         uni026E uni0278 uni027A uni0283 uni0284 uni0285 uni0286 uni028E 
-        uni0294 uni0295 uni0296 uni02A1 uni02A2 ] ;
+        uni0294 uni0295 uni0296 uni02A1 uni02A2 thorn thorn.loclENG ] ;
     pos @high_letters @double_diacritics' lookup Vertical_Kerning_01 ;
     pos @double_diacritics' lookup Vertical_Kerning_01  @high_letters ;
+    pos t @double_diacritics' lookup Vertical_Kerning_02 ;
+    pos @double_diacritics' lookup Vertical_Kerning_02  t ;
 } kern_Vertical_Kerning ;
 
 lookup kern_Contextual_Kerning {
@@ -5180,6 +5245,16 @@ size = 10;
 name = "med high overline";
 pos = 1118;
 size = 5;
+},
+{
+name = capmacron;
+pos = 1525;
+size = 0;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
 }
 );
 },
@@ -5246,6 +5321,11 @@ width = 101;
 {
 horizontal = 1;
 name = "f top";
+width = 94;
+},
+{
+horizontal = 1;
+name = capmacron;
 width = 94;
 }
 );
@@ -5402,6 +5482,16 @@ size = 10;
 name = "med high overline";
 pos = 1118;
 size = 5;
+},
+{
+name = capmacron;
+pos = 1525;
+size = 5;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
 }
 );
 },
@@ -5466,6 +5556,11 @@ width = 111;
 horizontal = 1;
 name = "f top";
 width = 113;
+},
+{
+horizontal = 1;
+name = capmacron;
+width = 107;
 }
 );
 },
@@ -5621,6 +5716,16 @@ size = 10;
 name = "med high overline";
 pos = 1118;
 size = 5;
+},
+{
+name = capmacron;
+pos = 1525;
+size = 5;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
 }
 );
 },
@@ -5685,6 +5790,11 @@ width = 98;
 horizontal = 1;
 name = "f top";
 width = 88;
+},
+{
+horizontal = 1;
+name = capmacron;
+width = 90;
 }
 );
 },
@@ -5835,6 +5945,16 @@ size = 10;
 name = "med high overline";
 pos = 1118;
 size = 5;
+},
+{
+name = capmacron;
+pos = 1525;
+size = 5;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
 }
 );
 },
@@ -5900,6 +6020,11 @@ width = 101;
 {
 horizontal = 1;
 name = "f top";
+width = 94;
+},
+{
+horizontal = 1;
+name = capmacron;
 width = 94;
 }
 );
@@ -6041,6 +6166,16 @@ size = 10;
 name = "med high overline";
 pos = 1118;
 size = 5;
+},
+{
+name = capmacron;
+pos = 1525;
+size = 5;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
 }
 );
 },
@@ -6106,6 +6241,11 @@ width = 101;
 {
 horizontal = 1;
 name = "f top";
+width = 94;
+},
+{
+horizontal = 1;
+name = capmacron;
 width = 94;
 }
 );
@@ -6253,6 +6393,16 @@ size = 10;
 name = "med high overline";
 pos = 1118;
 size = 5;
+},
+{
+name = capmacron;
+pos = 1525;
+size = 5;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
 }
 );
 },
@@ -6318,6 +6468,11 @@ width = 101;
 {
 horizontal = 1;
 name = "f top";
+width = 94;
+},
+{
+horizontal = 1;
+name = capmacron;
 width = 94;
 }
 );

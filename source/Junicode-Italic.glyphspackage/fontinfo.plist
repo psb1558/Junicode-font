@@ -1,5 +1,5 @@
 {
-.appVersion = "3100";
+.appVersion = "3106";
 .formatVersion = 3;
 axes = (
 {
@@ -173,9 +173,13 @@ value = (
 20,
 65535
 );
+},
+{
+name = "Disable Subroutines";
+value = 1;
 }
 );
-date = "2021-12-12 16:51:14 +0000";
+date = "2021-12-13 01:51:17 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -325,10 +329,21 @@ lookup f_alt {
   sub [ f longs ]' @lc_with_diacritics_above by [ f.alt longs.alt ];
 } f_alt;
 
-# lookup ss08_longs_cleanup {
-#  sub longs.alt1 by longs ;
-#  sub longs.enlarged.alt by longs.enlarged ;
-# } ss08_longs_cleanup ;
+lookup calt_zzalt {
+  # Allow zero or one mark between the base and the zigzag
+  sub [ b h k kstroke thorn thornstrokethroughdescender thorndouble h.alt k.alt1 k.alt2 k.alt3
+        thorn.loclENG eth.withdiacritic ] zigzagabovecomb' by zigzagabovecomb.bh ;
+  sub [ b h k kstroke thorn thornstrokethroughdescender thorndouble h.alt k.alt1 k.alt2 k.alt3
+        thorn.loclENG eth.withdiacritic ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.bh ;
+  sub d zigzagabovecomb' by zigzagabovecomb.d ;
+  sub d @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.d ;
+  sub [ eth dinsular ] zigzagabovecomb' by zigzagabovecomb.eth ;
+  sub [ eth dinsular ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.eth ;
+  sub [ f f.alt ] zigzagabovecomb' by zigzagabovecomb.ff ;
+  sub [ f f.alt ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.ff ;
+} calt_zzalt ;
+
+
 ";
 name = Misc_lookups;
 }
@@ -2672,10 +2687,13 @@ value = "Alternate -rum sign";
 tag = cv80;
 },
 {
-code = "# sub zigzagabovecomb      from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2      zigzagabovecomb.alt3      ] ;
-# sub zigzagabovecomb.case from [ zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case zigzagabovecomb.alt3.case ] ;
-# sub zigzagabovecomb.sc   from [ zigzagabovecomb.alt1.sc   zigzagabovecomb.alt2.sc   zigzagabovecomb.alt3.sc   ] ;
-sub zigzagabovecomb      from [ zigzagabovecomb.alt1 ] ;
+code = "sub zigzagabovecomb        from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2       zigzagabovecomb.alt3      ] ;
+sub zigzagabovecomb.eth    from [ zigzagabovecomb.alt2      zigzagabovecomb.alt1.eth   zigzagabovecomb.alt3.eth  ] ;
+sub zigzagabovecomb.case   from [ zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case  zigzagabovecomb.alt3.case ] ;
+sub zigzagabovecomb.sc     from [ zigzagabovecomb.alt1.sc   zigzagabovecomb.alt2.sc    zigzagabovecomb.alt3.sc   ] ;
+sub zigzagabovecomb.d      from [ zigzagabovecomb.alt1.eth  zigzagabovecomb.alt2.d     zigzagabovecomb.alt3.eth  ] ;
+sub zigzagabovecomb.bh     from [ zigzagabovecomb.alt1.eth  zigzagabovecomb.alt2.bh    zigzagabovecomb.alt3.eth  ] ;
+sub zigzagabovecomb.ff     from [ zigzagabovecomb.alt1.ff   zigzagabovecomb.alt2.ff    zigzagabovecomb.alt3.ff   ] ;
 ";
 labels = (
 {
@@ -4317,6 +4335,16 @@ sub strokeshortcomb by strokeshortcomb.sc;
 sub commaabovecomb_acutecomb.case by commaabovecomb_acutecomb.case.sc;
 sub commareversedabovecomb_acutecomb.case by commareversedabovecomb_acutecomb.case.sc;
 sub commaabovecomb_acutecomb.loclELL by commaabovecomb_acutecomb.loclELL.sc;
+sub zigzagabovecomb.alt1 by zigzagabovecomb.alt1.sc;
+sub zigzagabovecomb.alt1.ff by zigzagabovecomb.alt1.sc;
+sub zigzagabovecomb.alt1.eth by zigzagabovecomb.alt1.sc;
+sub zigzagabovecomb.alt2.bh by zigzagabovecomb.alt2.sc;
+sub zigzagabovecomb.alt2.d by zigzagabovecomb.alt2.sc;
+sub zigzagabovecomb.alt2.ff by zigzagabovecomb.alt2.sc;
+sub zigzagabovecomb.alt2 by zigzagabovecomb.alt2.sc;
+sub zigzagabovecomb.alt3.eth by zigzagabovecomb.alt3.sc;
+sub zigzagabovecomb.alt3.ff by zigzagabovecomb.alt3.sc;
+sub zigzagabovecomb.alt3 by zigzagabovecomb.alt3.sc;
 ";
 tag = smcp;
 },
@@ -4522,22 +4550,7 @@ code = "# lookup zigzag {
 # lookup alt_eth {
 # lookup calt_rrotunda {
   lookup calt_insular_st ;
-
-lookup calt_zzalt {
-  lookupflag UseMarkFilteringSet @all_combining_nozz ;
-  sub [ b d eth dinsular h k kstroke thorn thornstrokethroughdescender thorndouble h.alt k.alt1 k.alt2 k.alt3
-        thorn.loclENG eth.withdiacritic ] [ zigzagabovecomb zigzagabovecomb.alt1 zigzagabovecomb.alt3 ]' by
-        [ zigzagabovecomb.altloc zigzagabovecomb.altloc.alt1 zigzagabovecomb.altloc.alt3 ] ;
-  sub [ b d eth dinsular h k kstroke thorn thornstrokethroughdescender thorndouble h.alt k.alt1 k.alt2 k.alt3
-        thorn.loclENG eth.withdiacritic ] @all_combining_nozz [ zigzagabovecomb zigzagabovecomb.alt1 zigzagabovecomb.alt3 ]' by
-        [ zigzagabovecomb.altloc zigzagabovecomb.altloc.alt1 zigzagabovecomb.altloc.alt3 ] ;
-} calt_zzalt ;
-
-lookup zigzag {
-  sub d zigzagabovecomb.alt2' by zigzagabovecomb.alt4 ;
-  sub [ b h k l thorn thorn.loclENG h.alt k.alt1 k.alt2 k.alt3 ] zigzagabovecomb.alt2' by zigzagabovecomb.alt6 ;
-  sub [f f.alt] zigzagabovecomb.alt2' by zigzagabovecomb.alt5 ;
-} zigzag ;
+  lookup calt_zzalt ;
 ";
 labels = (
 {
@@ -7799,5 +7812,5 @@ userData = {
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 34;
+versionMinor = 35;
 }

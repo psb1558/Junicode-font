@@ -24,6 +24,99 @@ name = top_2;
 pos = (1346,1363);
 }
 );
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (1,2);
+target = (1,39);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,2);
+target = (0,2);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,39);
+target = (1,8);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,39);
+target = (0,34);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,39);
+target = (0,8);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,29);
+target = (1,32);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,29);
+target = (0,27);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,32);
+target = (2,9);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,32);
+target = (3,9);
+type = TTShift;
+},
+{
+horizontal = 1;
+origin = (1,2);
+other1 = (1,18);
+target = (1,29);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,18);
+target = (2,16);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (1,18);
+target = (0,18);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,16);
+target = (3,15);
+type = TTShift;
+}
+);
 layerId = master01;
 shapes = (
 {
@@ -54,11 +147,11 @@ nodes = (
 (1876,1100,o),
 (1839,1208,o),
 (1746,1276,cs),
-(1677,1327,o),
-(1550,1361,o),
-(1301,1361,cs),
-(1170,1361,o),
-(1140,1331,o),
+(1676,1327,o),
+(1550,1363,o),
+(1301,1363,cs),
+(1170,1363,o),
+(1140,1332,o),
 (1120,1262,cs),
 (811,186,ls),
 (785,94,o),
@@ -99,10 +192,10 @@ nodes = (
 (1182,1257,o),
 (1156,1276,cs),
 (1087,1327,o),
-(960,1361,o),
-(711,1361,cs),
-(375,1361,ls),
-(356,1361,o),
+(960,1363,o),
+(711,1363,cs),
+(375,1363,ls),
+(356,1363,o),
 (332,1296,o),
 (351,1296,cs),
 (500,1296,o),

@@ -8,15 +8,38 @@ name = _zzcurly;
 pos = (-190,1122);
 }
 );
-backgroundImage = {
-imagePath = "Images/zigzagabovecomb.alt2.glif-Regular.tif";
-locked = 1;
-pos = (-178,-615);
-scale = (14.534,13.011);
-};
 guides = (
 {
 pos = (383,1773);
+}
+);
+hints = (
+{
+horizontal = 1;
+origin = (0,5);
+stem = -1;
+type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,5);
+target = (0,29);
+type = TTStem;
+},
+{
+horizontal = 1;
+origin = (0,36);
+stem = -1;
+type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,5);
+other1 = (0,20);
+target = (0,36);
+type = TTInterpolate;
 }
 );
 layerId = master01;
@@ -289,12 +312,6 @@ name = _zzcurly;
 pos = (-190,1122);
 }
 );
-backgroundImage = {
-imagePath = "Images/zigzagabovecomb.alt2.glif-Regular.tif";
-locked = 1;
-pos = (-178,-615);
-scale = (14.534,13.011);
-};
 guides = (
 {
 pos = (383,1773);

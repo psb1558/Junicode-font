@@ -24,6 +24,59 @@ name = top_2;
 pos = (1753,1363);
 }
 );
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,5);
+target = (1,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,11);
+target = (1,11);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,14);
+target = (2,21);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,36);
+target = (2,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,14);
+other1 = (2,30);
+target = (2,36);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,30);
+target = (2,27);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,14);
+other1 = (2,8);
+target = (2,36);
+type = TTInterpolate;
+}
+);
 layerId = master01;
 shapes = (
 {

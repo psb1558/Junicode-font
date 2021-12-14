@@ -30,15 +30,38 @@ nodes = (
 }
 );
 };
-backgroundImage = {
-imagePath = "Images/zigzagabovecomb.alt2.glif-Regular.tif";
-locked = 1;
-pos = (-178,-615);
-scale = (14.534,13.011);
-};
 guides = (
 {
 pos = (383,1773);
+}
+);
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,5);
+target = (0,26);
+type = TTStem;
+},
+{
+horizontal = 1;
+origin = (0,5);
+stem = -1;
+type = TTSnap;
+},
+{
+horizontal = 1;
+origin = (0,33);
+stem = -1;
+type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,5);
+other1 = (0,17);
+target = (0,33);
+type = TTInterpolate;
 }
 );
 layerId = master01;
@@ -333,12 +356,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "Images/zigzagabovecomb.alt2.glif-Regular.tif";
-locked = 1;
-pos = (-178,-615);
-scale = (14.534,13.011);
 };
 guides = (
 {

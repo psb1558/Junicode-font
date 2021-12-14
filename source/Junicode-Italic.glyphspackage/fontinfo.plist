@@ -179,7 +179,7 @@ name = "Disable Subroutines";
 value = 1;
 }
 );
-date = "2021-12-13 01:51:17 +0000";
+date = "2021-12-14 10:55:40 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -4906,6 +4906,23 @@ filter = "category == \"Letter\" AND case == 2";
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+},
+{
+filter = "category == \"Mark\"";
+name = lcmacron;
+pos = 1048;
+size = 0;
+},
+{
+name = pcapheight;
+pos = 850;
+size = 5;
+},
+{
+filter = "category == \"Mark\"";
+name = lctilde;
+pos = 1028;
+size = 5;
 }
 );
 },
@@ -4923,6 +4940,11 @@ filter = "category == \"Letter\" AND case == 1";
 horizontal = 1;
 name = "Cap Serif";
 width = 69;
+},
+{
+horizontal = 1;
+name = lcmacron;
+width = 0;
 }
 );
 }
@@ -5054,6 +5076,21 @@ size = 31;
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
+},
+{
+name = pcapheight;
+pos = 850;
+size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
 }
 );
 },
@@ -5070,6 +5107,11 @@ width = 91;
 horizontal = 1;
 name = "Cap Serif";
 width = 89;
+},
+{
+horizontal = 1;
+name = lcmacron;
+width = 107;
 }
 );
 }
@@ -5202,6 +5244,21 @@ size = 31;
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
+},
+{
+name = pcapheight;
+pos = 850;
+size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
 }
 );
 },
@@ -5218,6 +5275,11 @@ width = 65;
 horizontal = 1;
 name = "Cap Serif";
 width = 63;
+},
+{
+horizontal = 1;
+name = lcmacron;
+width = 90;
 }
 );
 }
@@ -5350,6 +5412,21 @@ size = 31;
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
+},
+{
+name = pcapheight;
+pos = 850;
+size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
 }
 );
 },
@@ -5366,6 +5443,11 @@ width = 73;
 horizontal = 1;
 name = "Cap Serif";
 width = 69;
+},
+{
+horizontal = 1;
+name = lcmacron;
+width = 94;
 }
 );
 }
@@ -5497,6 +5579,21 @@ size = 31;
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
+},
+{
+name = pcapheight;
+pos = 850;
+size = 4;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
 }
 );
 },
@@ -5513,6 +5610,11 @@ width = 73;
 horizontal = 1;
 name = "Cap Serif";
 width = 69;
+},
+{
+horizontal = 1;
+name = lcmacron;
+width = 94;
 }
 );
 }
@@ -5644,6 +5746,21 @@ size = 25;
 name = "lc-ascender";
 pos = 1485;
 size = 10;
+},
+{
+name = lcmacron;
+pos = 1048;
+size = 5;
+},
+{
+name = pcapheight;
+pos = 850;
+size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
 }
 );
 },
@@ -5660,6 +5777,11 @@ width = 73;
 horizontal = 1;
 name = "Cap Serif";
 width = 69;
+},
+{
+horizontal = 1;
+name = lcmacron;
+width = 94;
 }
 );
 }
@@ -7812,5 +7934,5 @@ userData = {
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 35;
+versionMinor = 36;
 }

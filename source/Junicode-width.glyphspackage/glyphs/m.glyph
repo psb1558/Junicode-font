@@ -31,8 +31,8 @@ pos = (697,354);
 hints = (
 {
 horizontal = 1;
+options = 4;
 origin = (0,88);
-stem = -1;
 target = (0,18);
 type = TTStem;
 },
@@ -53,16 +53,16 @@ type = TTShift;
 {
 horizontal = 1;
 options = 4;
-origin = (0,34);
-target = (0,40);
-type = TTStem;
+origin = (0,88);
+target = (0,98);
+type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
 origin = (0,34);
-target = (0,2);
-type = TTShift;
+target = (0,28);
+type = TTStem;
 },
 {
 horizontal = 1;
@@ -74,42 +74,44 @@ type = TTShift;
 {
 horizontal = 1;
 options = 4;
-origin = (0,40);
-target = (0,28);
+origin = (0,34);
+target = (0,2);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,40);
+origin = (0,28);
 target = (0,8);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,40);
+origin = (0,28);
 target = (0,114);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,40);
+origin = (0,28);
+target = (0,40);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,28);
 target = (0,60);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,40);
+origin = (0,28);
 target = (0,72);
 type = TTShift;
-},
-{
-horizontal = 1;
-origin = (0,98);
-type = TTSnap;
 }
 );
 layerId = master01;

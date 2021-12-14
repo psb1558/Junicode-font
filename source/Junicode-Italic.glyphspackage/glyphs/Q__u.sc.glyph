@@ -1,4 +1,5 @@
 {
+case = smallCaps;
 glyphname = Q_u.sc;
 layers = (
 {
@@ -116,6 +117,85 @@ nodes = (
 }
 );
 };
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,12);
+target = (1,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+origin = (0,21);
+stem = -1;
+type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,21);
+target = (0,2);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,12);
+other1 = (0,6);
+target = (0,21);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,6);
+target = (0,18);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,44);
+target = (2,50);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,44);
+target = (2,15);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,50);
+target = (2,39);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,50);
+target = (2,21);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,50);
+target = (2,9);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,60);
+target = (2,28);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {

@@ -25,6 +25,78 @@ name = top_2;
 pos = (1997,852);
 }
 );
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,12);
+target = (1,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,21);
+target = (0,2);
+type = TTStem;
+},
+{
+horizontal = 1;
+origin = (0,21);
+stem = -1;
+type = TTSnap;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,12);
+other1 = (0,6);
+target = (0,21);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,6);
+target = (0,18);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,73);
+target = (2,38);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,73);
+target = (2,10);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,51);
+target = (2,60);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,51);
+target = (2,29);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (2,10);
+target = (2,19);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {

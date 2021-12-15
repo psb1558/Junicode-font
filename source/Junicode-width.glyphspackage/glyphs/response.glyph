@@ -2,12 +2,6 @@
 glyphname = response;
 layers = (
 {
-backgroundImage = {
-imagePath = "../Images/uni211F_.glif-Regular.tif";
-locked = 1;
-pos = (-320,-812);
-scale = (10.6717,10.6717);
-};
 guides = (
 {
 angle = 180;
@@ -16,6 +10,80 @@ pos = (1311,1560);
 {
 angle = 180;
 pos = (178,-557);
+}
+);
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,20);
+stem = 3;
+target = (0,26);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,26);
+target = (1,6);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,39);
+stem = 3;
+target = (0,33);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,33);
+target = (0,45);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,59);
+target = (0,39);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,59);
+target = (0,5);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,59);
+target = (2,44);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,59);
+target = (2,25);
+type = TTShift;
+},
+{
+horizontal = 1;
+origin = (0,20);
+other1 = (0,53);
+target = (0,39);
+type = TTInterpolate;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,53);
+target = (1,12);
+type = TTStem;
 }
 );
 layerId = master01;
@@ -723,12 +791,6 @@ nodes = (
 width = 1816;
 },
 {
-backgroundImage = {
-imagePath = "../Images/uni211F_.glif-Regular.tif";
-locked = 1;
-pos = (-320,-812);
-scale = (10.6717,10.6717);
-};
 guides = (
 {
 angle = 180;

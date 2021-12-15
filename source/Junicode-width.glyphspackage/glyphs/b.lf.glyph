@@ -1,4 +1,5 @@
 {
+case = lower;
 glyphname = b.lf;
 layers = (
 {
@@ -6,25 +7,20 @@ hints = (
 {
 horizontal = 1;
 options = 4;
-place = (420, 383);
-stem = 0;
+origin = (0,5);
+target = (1,6);
 type = TTStem;
 },
 {
 horizontal = 1;
 options = 4;
-place = (420, 387);
-type = TTShift;
-},
-{
-horizontal = 1;
-place = (870, 79);
-stem = 0;
+origin = (0,37);
+target = (1,12);
 type = TTStem;
 },
 {
 horizontal = 1;
-place = (1485, 0);
+origin = (0,15);
 type = TTSnap;
 }
 );

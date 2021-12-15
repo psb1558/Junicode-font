@@ -496,7 +496,6 @@ lookup calt_zzalt {
   sub [ f f.alt ] zigzagabovecomb' by zigzagabovecomb.ff ;
   sub [ f f.alt ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.ff ;
 } calt_zzalt ;
-
 ";
 name = Misc_lookups;
 }
@@ -5225,14 +5224,42 @@ pos = 1118;
 size = 5;
 },
 {
+filter = "category == \"Mark\"";
 name = capmacron;
-pos = 1525;
-size = 0;
+options = "{
+alignToZone = captilde;
+}";
+pos = 1557;
+size = 5;
 },
 {
+filter = "category == \"Mark\"";
 name = lcmacron;
+options = "{
+alignToZone = lctilde;
+}";
 pos = 1048;
 size = 5;
+},
+{
+filter = "category == \"Mark\"";
+name = lctilde;
+pos = 1028;
+size = 5;
+},
+{
+filter = "category == \"Mark\"";
+name = captilde;
+pos = 1469;
+size = 20;
+},
+{
+name = "combining letter";
+options = "{
+alignToZone = captilde;
+}";
+pos = 1039;
+size = -5;
 }
 );
 },
@@ -5470,6 +5497,21 @@ size = 5;
 name = lcmacron;
 pos = 1048;
 size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
+},
+{
+name = captilde;
+pos = 1469;
+size = 20;
+},
+{
+name = "combining letter";
+pos = 1039;
+size = -5;
 }
 );
 },
@@ -5697,13 +5739,28 @@ size = 5;
 },
 {
 name = capmacron;
-pos = 1525;
+pos = 1557;
 size = 5;
 },
 {
 name = lcmacron;
 pos = 1048;
 size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
+},
+{
+name = captilde;
+pos = 1469;
+size = 20;
+},
+{
+name = "combining letter";
+pos = 1039;
+size = -5;
 }
 );
 },
@@ -5926,13 +5983,28 @@ size = 5;
 },
 {
 name = capmacron;
-pos = 1525;
+pos = 1557;
 size = 5;
 },
 {
 name = lcmacron;
 pos = 1048;
 size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
+},
+{
+name = captilde;
+pos = 1469;
+size = 20;
+},
+{
+name = "combining letter";
+pos = 1039;
+size = -5;
 }
 );
 },
@@ -6147,13 +6219,28 @@ size = 5;
 },
 {
 name = capmacron;
-pos = 1525;
+pos = 1557;
 size = 5;
 },
 {
 name = lcmacron;
 pos = 1048;
 size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
+},
+{
+name = captilde;
+pos = 1469;
+size = 20;
+},
+{
+name = "combining letter";
+pos = 1039;
+size = -5;
 }
 );
 },
@@ -6381,6 +6468,21 @@ size = 5;
 name = lcmacron;
 pos = 1048;
 size = 5;
+},
+{
+name = lctilde;
+pos = 1028;
+size = 5;
+},
+{
+name = captilde;
+pos = 1469;
+size = 20;
+},
+{
+name = "combining letter";
+pos = 1039;
+size = -5;
 }
 );
 },

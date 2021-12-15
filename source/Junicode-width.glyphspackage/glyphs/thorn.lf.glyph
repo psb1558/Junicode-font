@@ -1,13 +1,9 @@
 {
+case = lower;
 glyphname = thorn.lf;
 layers = (
 {
 hints = (
-{
-horizontal = 1;
-origin = (0,38);
-type = TTSnap;
-},
 {
 horizontal = 1;
 options = 4;
@@ -35,6 +31,11 @@ options = 4;
 origin = (0,48);
 target = (0,8);
 type = TTShift;
+},
+{
+horizontal = 1;
+origin = (0,38);
+type = TTSnap;
 }
 );
 layerId = master01;

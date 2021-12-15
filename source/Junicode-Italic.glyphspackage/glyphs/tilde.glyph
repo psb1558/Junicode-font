@@ -2,6 +2,44 @@
 glyphname = tilde;
 layers = (
 {
+hints = (
+{
+horizontal = 1;
+options = 4;
+origin = (0,10);
+target = (0,19);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 1;
+origin = (0,10);
+stem = -1;
+target = (0,4);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,4);
+target = (0,25);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,25);
+target = (0,16);
+type = TTShift;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,10);
+target = (0,1);
+type = TTShift;
+}
+);
 layerId = master01;
 shapes = (
 {
@@ -43,30 +81,6 @@ nodes = (
 width = 569;
 },
 {
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,10);
-target = (0,19);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,10);
-stem = -1;
-target = (0,4);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,4);
-target = (0,25);
-type = TTStem;
-}
-);
 layerId = "2438E31C-45B5-47A7-9B3D-1A0FEFB47671";
 shapes = (
 {

@@ -177,6 +177,24 @@ value = (
 {
 name = "Disable Subroutines";
 value = 1;
+},
+{
+disabled = 1;
+name = "Virtual Master";
+value = (
+{
+Axis = Weight;
+Location = 400;
+},
+{
+Axis = Width;
+Location = 100;
+},
+{
+Axis = Enlarge;
+Location = 0;
+}
+);
 }
 );
 date = "2021-12-14 10:55:40 +0000";
@@ -4981,6 +4999,7 @@ name = Italic;
 userData = {
 GSCornerRadius = 30;
 };
+visible = 1;
 },
 {
 axesValues = (

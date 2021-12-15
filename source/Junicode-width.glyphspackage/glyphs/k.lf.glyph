@@ -1,4 +1,5 @@
 {
+case = lower;
 glyphname = k.lf;
 layers = (
 {
@@ -11,42 +12,28 @@ type = TTSnap;
 {
 horizontal = 1;
 options = 4;
-origin = (0,57);
-target = (0,63);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
 origin = (0,2);
-target = (0,96);
+target = (0,8);
 type = TTStem;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,63);
-target = (0,51);
+origin = (0,8);
+target = (0,93);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,96);
-target = (0,8);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,96);
+origin = (0,8);
 target = (0,25);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-origin = (0,96);
+origin = (0,8);
 target = (0,37);
 type = TTShift;
 },
@@ -59,7 +46,7 @@ type = TTShift;
 },
 {
 horizontal = 1;
-origin = (0,57);
+origin = (0,83);
 other1 = (0,15);
 target = (0,2);
 type = TTInterpolate;
@@ -75,9 +62,15 @@ type = TTStem;
 horizontal = 1;
 options = 4;
 origin = (0,57);
-other1 = (0,41);
-target = (0,2);
-type = TTInterpolate;
+target = (0,63);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,63);
+target = (0,51);
+type = TTShift;
 }
 );
 layerId = master01;

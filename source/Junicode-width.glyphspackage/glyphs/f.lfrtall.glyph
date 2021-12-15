@@ -5,33 +5,38 @@ layers = (
 hints = (
 {
 horizontal = 1;
-place = (0, 50);
-stem = 1;
+options = 4;
+origin = (0,28);
+stem = 10;
+target = (0,21);
 type = TTStem;
 },
 {
 horizontal = 1;
 options = 4;
-place = (50, 0);
+origin = (0,2);
+target = (0,43);
+type = TTStem;
+},
+{
+horizontal = 1;
+options = 4;
+origin = (0,43);
+target = (0,8);
 type = TTShift;
 },
 {
 horizontal = 1;
 options = 4;
-place = (1393, 94);
-stem = 10;
+origin = (0,17);
+target = (0,12);
 type = TTStem;
 },
 {
 horizontal = 1;
 options = 4;
-place = (850, 86);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (764, 766);
+origin = (0,12);
+target = (0,39);
 type = TTShift;
 }
 );

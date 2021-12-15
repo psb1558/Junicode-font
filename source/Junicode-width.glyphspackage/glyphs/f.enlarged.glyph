@@ -18,6 +18,38 @@ name = us;
 pos = (1069,1012);
 }
 );
+hints = (
+{
+options = 4;
+origin = (0,45);
+target = (0,33);
+type = TTStem;
+},
+{
+options = 4;
+origin = (0,2);
+target = (0,65);
+type = TTStem;
+},
+{
+options = 4;
+origin = (0,65);
+target = (0,11);
+type = TTShift;
+},
+{
+origin = (0,45);
+other1 = (0,19);
+target = (0,2);
+type = TTInterpolate;
+},
+{
+options = 4;
+origin = (0,19);
+target = (0,25);
+type = TTStem;
+}
+);
 layerId = master01;
 shapes = (
 {

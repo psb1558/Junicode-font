@@ -1,5 +1,5 @@
 {
-.appVersion = "3106";
+.appVersion = "3108";
 .formatVersion = 3;
 axes = (
 {
@@ -53,16 +53,16 @@ name = UppercaseMarks;
 },
 {
 code = "dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb
-caroncomb brevecomb tildecomb macroncomb hookabovecomb dblgravecomb ogonekabovecomb 
+caroncomb brevecomb tildecomb macroncomb hookabovecomb dblgravecomb ogonekabovecomb
 ";
 name = LowercaseMarks;
 },
 {
 code = "A AA AVhorizontalbar AY Ao Aring Astroke Au Av AE B Btopbar C Chook D Dhook E Eopen Ereversed Estroke Ezh
-Ezhreversed F Finsular G Ghook Ginsular Gturnedinsular Yogh H Halfh Hbar Heng Hwair I Iotaafrican Is J K 
-Kdiagonalstroke Khook L Lbroken Lcaron Lslash M N Nhookleft Eng O OO Ohorn Olongstroke Oloop Oopen Oslash 
-OE P Pflourish Psquirreltail Q Qdiagonalstroke Qstrokethroughdescender R Rinsular Rrotunda RumRotunda S 
-Germandbls Sinsular Schwa T Thook Tinsular Tonefive Tretroflexhook U Uhorn Uogonek Upsilonafrican V VY 
+Ezhreversed F Finsular G Ghook Ginsular Gturnedinsular Yogh H Halfh Hbar Heng Hwair I Iotaafrican Is J K
+Kdiagonalstroke Khook L Lbroken Lcaron Lslash M N Nhookleft Eng O OO Ohorn Olongstroke Oloop Oopen Oslash
+OE P Pflourish Psquirreltail Q Qdiagonalstroke Qstrokethroughdescender R Rinsular Rrotunda RumRotunda S
+Germandbls Sinsular Schwa T Thook Tinsular Tonefive Tretroflexhook U Uhorn Uogonek Upsilonafrican V VY
 Gammaafrican Vend Vhook W Whook Wynn X Y Yhook Yr Z Zhook Gormulum uni1EFE ";
 name = UppercaseWithTopAnchor;
 },
@@ -108,7 +108,7 @@ code = "aacute abreve abreveacute abrevedotbelow abrevegrave abrevehookabove abr
 name = lc_with_diacritics_above;
 },
 {
-code = "dotlessicomb.low Rcomb.low acomb.low ecomb.low ocomb.low rcomb.low tcomb.low vcomb.low zcomb.low muncialcomb.low 
+code = "dotlessicomb.low Rcomb.low acomb.low ecomb.low ocomb.low rcomb.low tcomb.low vcomb.low zcomb.low muncialcomb.low
 ";
 name = lowdiacritics;
 },
@@ -1515,12 +1515,6 @@ lookup alpha_method {
   sub B by uniF01E;
   sub C by uniF01B;
 } alpha_method ;";
-labels = (
-{
-language = default;
-value = Fleurons;
-}
-);
 tag = ornm;
 },
 {
@@ -1583,7 +1577,7 @@ code = "    sub ampersand by etTironian ;
 #    sub t.sc by tinsular.sc ;
 #    sub r.sc by rinsular.sc ;
     sub thornstroke.sc by thornstroke.loclENG.sc ;
-    
+
 ";
 labels = (
 {
@@ -2035,7 +2029,7 @@ code = "    sub exclam by exclam.alt ;
     sub quoteright by quoteright.alt ;
     sub quotedblleft by quotedblleft.alt ;
     sub quotedblright by quotedblright.alt ;
-    
+
 ";
 labels = (
 {
@@ -2128,12 +2122,6 @@ tag = ordn;
 code = "# sub A from [ A.alt1 A.alt2 A.alt3 ];
 sub A from [ A.alt1 A.alt2 ];
 ";
-labels = (
-{
-language = default;
-value = "alternate a";
-}
-);
 tag = cv01;
 },
 {
@@ -2144,12 +2132,6 @@ tag = cv02;
 {
 code = "sub C from [ C.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate C";
-}
-);
 tag = cv05;
 },
 {
@@ -2161,12 +2143,6 @@ tag = cv06;
 code = "sub D from [ Dinsular ] ;
 
 ";
-labels = (
-{
-language = default;
-value = "Round form of d";
-}
-);
 tag = cv07;
 },
 {
@@ -2178,12 +2154,6 @@ tag = cv08;
 code = "sub E from [ E.alt1 E.alt2 ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate e";
-}
-);
 tag = cv09;
 },
 {
@@ -2196,12 +2166,6 @@ code = "sub F         from [ Finsular         ] ;
 # sub Fdotbelow from [ Finsulardotbelow ] ;
 
 ";
-labels = (
-{
-language = default;
-value = "Alternate f";
-}
-);
 tag = cv11;
 },
 {
@@ -2218,12 +2182,6 @@ tag = cv12;
 {
 code = "sub G from [ Ginsular Gormulum G.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate g";
-}
-);
 tag = cv13;
 },
 {
@@ -2234,23 +2192,11 @@ tag = cv14;
 {
 code = "sub H from [ H.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate h";
-}
-);
 tag = cv15;
 },
 {
 code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ] ;
 ";
-labels = (
-{
-language = dflt;
-value = "Alternate o";
-}
-);
 tag = cv16;
 },
 {
@@ -2258,12 +2204,6 @@ code = "sub I from [ Idotaccent Longaepigraphici ] ;
 # figure this out
 # sub Idotaccent    from [ I                                  ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate i";
-}
-);
 tag = cv17;
 },
 {
@@ -2286,35 +2226,17 @@ tag = cv20;
 {
 code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate k";
-}
-);
 tag = cv22;
 },
 {
 code = "sub l by l.alt ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate l";
-}
-);
 tag = cv24;
 },
 {
 code = "sub M from [ M.alt1 M.alt2 uniA7FF ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate m";
-}
-);
 tag = cv25;
 },
 {
@@ -2325,12 +2247,6 @@ tag = cv26;
 {
 code = "sub N from [ N.alt1 ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate n";
-}
-);
 tag = cv27;
 },
 {
@@ -2351,24 +2267,12 @@ tag = cv30;
 code = "sub P from [ uniA7FC ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate P";
-}
-);
 tag = cv31;
 },
 {
 code = "sub Q from [ Q.alt ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate Q";
-}
-);
 tag = cv33;
 },
 {
@@ -2379,12 +2283,6 @@ tag = cv34;
 {
 code = "sub R from [ Rinsular ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate r";
-}
-);
 tag = cv35;
 },
 {
@@ -2395,12 +2293,6 @@ tag = cv36;
 {
 code = "sub S from [ Sinsular Ssigmoid    ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate s";
-}
-);
 tag = cv37;
 },
 {
@@ -2411,12 +2303,6 @@ tag = cv38;
 {
 code = "sub T from [ Tinsular ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate t";
-}
-);
 tag = cv39;
 },
 {
@@ -2427,35 +2313,17 @@ tag = cv40;
 {
 code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 ];
 ";
-labels = (
-{
-language = default;
-value = "Alternate v";
-}
-);
 tag = cv44;
 },
 {
 code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate x";
-}
-);
 tag = cv48;
 },
 {
 code = "sub Y from [ Y.alt ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate y";
-}
-);
 tag = cv49;
 },
 {
@@ -2466,12 +2334,6 @@ tag = cv50;
 {
 code = "sub Z from [ Zvisigothic ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate Z";
-}
-);
 tag = cv51;
 },
 {
@@ -2483,12 +2345,6 @@ tag = cv52;
 code = "sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
 
 ";
-labels = (
-{
-language = default;
-value = "Alternate a + ogonek";
-}
-);
 tag = cv53;
 },
 {
@@ -2499,12 +2355,6 @@ tag = cv54;
 {
 code = "sub aa from [ aa.alt2 aa.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate aa";
-}
-);
 tag = cv55;
 },
 {
@@ -2534,12 +2384,6 @@ tag = cv60;
 {
 code = "sub dcroat from [ dcroat.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate round d";
-}
-);
 tag = cv61;
 },
 {
@@ -2552,12 +2396,6 @@ sub Eogonekdotacute    from [ Eogonekdotacute.alt    ] ;
 sub eogonek.enlarged   from [ eogonek.enlarged.alt   ] ;
 # sub eogonekcomb        from [ eogonekcomb.alt        ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate e + ogonek";
-}
-);
 tag = cv62;
 },
 {
@@ -2570,35 +2408,17 @@ tag = cv63;
 code = "    sub Yogh       from [ Ezh         ] ;
     sub yogh       from [ ezh         ] ;
 ";
-labels = (
-{
-language = default;
-value = "Flat-top yogh";
-}
-);
 tag = cv64;
 },
 {
 code = "sub lhighstroke from [ lhighstroke.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate l with high stroke";
-}
-);
 tag = cv65;
 },
 {
 code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate o";
-}
-);
 tag = cv66;
 },
 {
@@ -2611,12 +2431,6 @@ tag = cv67;
 code = "sub uni0294 from [ uni0294.alt ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate glottal stop";
-}
-);
 tag = cv68;
 },
 {
@@ -2624,12 +2438,6 @@ code = "sub tironiansignet from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
 sub uni2E52        from [ uni2E52.alt1        uni2E52.alt2        ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate Tironian nota";
-}
-);
 tag = cv69;
 },
 {
@@ -2696,12 +2504,6 @@ tag = cv79;
 {
 code = "sub rumrotunda from [ rumrotunda.alt ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate -rum sign";
-}
-);
 tag = cv80;
 },
 {
@@ -2713,71 +2515,35 @@ sub zigzagabovecomb.d      from [ zigzagabovecomb.alt1.eth  zigzagabovecomb.alt2
 sub zigzagabovecomb.bh     from [ zigzagabovecomb.alt1.eth  zigzagabovecomb.alt2.bh    zigzagabovecomb.alt3.eth  ] ;
 sub zigzagabovecomb.ff     from [ zigzagabovecomb.alt1.ff   zigzagabovecomb.alt2.ff    zigzagabovecomb.alt3.ff   ] ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate zigzags";
-}
-);
 tag = cv81;
 },
 {
 code = "sub usmod from [ usmod.alt1 usmod.alt2 ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Variants of spacing us";
-}
-);
 tag = cv82;
 },
 {
 code = "sub et from [ et.alt et.alt1 ];
 ";
-labels = (
-{
-language = default;
-value = "et sign";
-}
-);
 tag = cv83;
 },
 {
 code = "sub flattenedopenaabovecomb from [ flattenedopenaabovecomb.alt ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate flattenedopenaabovecomb";
-}
-);
 tag = cv85;
 },
 {
 code = "sub insulardcomb by insulardcomb.alt ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alt insular d";
-}
-);
 tag = cv86;
 },
 {
 code = "sub rrotundacomb from [ rrotundacomb.alt ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate combining r rotunda";
-}
-);
 tag = cv87;
 },
 {
@@ -2791,12 +2557,6 @@ tag = cv88;
 code = "sub overlinecomb from [ overlinecomb.alt ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Alternate combining bar";
-}
-);
 tag = cv89;
 },
 {
@@ -2853,38 +2613,20 @@ tag = cv92;
 {
 code = "sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 currency.alt05 currency.alt06 currency.alt07
                     currency.alt08 currency.alt09 currency.alt10 currency.alt11 currency.alt12 currency.alt13 currency.alt14
-                    currency.alt15 currency.alt16 currency.alt17 currency.alt18 currency.alt19 currency.alt20 
+                    currency.alt15 currency.alt16 currency.alt17 currency.alt18 currency.alt19 currency.alt20
                     currency.alt21 currency.alt22 currency.alt23 currency.alt24 currency.alt25 currency.alt26 currency.alt27 ] ;
 ";
-labels = (
-{
-language = default;
-value = "currency signs";
-}
-);
 tag = cv93;
 },
 {
 code = "sub lbbarsymbol from [ currency.alt12 ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "French Libra Sign";
-}
-);
 tag = cv94;
 },
 {
 code = "sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
 ";
-labels = (
-{
-language = default;
-value = "Variants of Sterling";
-}
-);
 tag = cv95;
 },
 {
@@ -2897,24 +2639,12 @@ tag = cv96;
 code = "sub florin from [ currency.alt07 ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Variants of florin";
-}
-);
 tag = cv97;
 },
 {
 code = "sub uni2125 from [ currency.alt27 ] ;
 ";
 disabled = 1;
-labels = (
-{
-language = default;
-value = "Variant of ounce sign";
-}
-);
 tag = cv98;
 },
 {
@@ -4570,12 +4300,6 @@ code = "# lookup zigzag {
   lookup calt_insular_st ;
   lookup calt_zzalt ;
 ";
-labels = (
-{
-language = default;
-value = "Alternate v";
-}
-);
 tag = calt;
 },
 {

@@ -1095,7 +1095,7 @@ code = "  # Nine-character codes
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = Entities;
 }
 );
@@ -1543,7 +1543,7 @@ language ENG;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Alternate thorn and eth";
 }
 );
@@ -1581,7 +1581,7 @@ code = "    sub ampersand by etTironian ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Insular letter-forms";
 }
 );
@@ -1597,7 +1597,7 @@ code = "sub s by longs;";
 disabled = 1;
 labels = (
 {
-language = default;
+language = dflt;
 value = "Long s";
 }
 );
@@ -1624,7 +1624,7 @@ code = "  sub C by C.highoverline ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "High Overline";
 }
 );
@@ -1648,7 +1648,7 @@ sub thorn.loclENG by thorn.medhighoverline.loclENG ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Medium-high Overline";
 }
 );
@@ -1699,7 +1699,7 @@ sub z by z.enlarged ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Enlarged minuscules";
 }
 );
@@ -1740,7 +1740,7 @@ language FRA exclude_dflt ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Contextual long s";
 }
 );
@@ -1753,7 +1753,7 @@ code = "sub r by rrotunda ;
 disabled = 1;
 labels = (
 {
-language = default;
+language = dflt;
 value = "r rotunda";
 }
 );
@@ -1836,7 +1836,7 @@ lookup ss12_02 {
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Early English Futhorc";
 }
 );
@@ -1902,7 +1902,7 @@ code = "  sub f by fehu-runic ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Elder Futhark";
 }
 );
@@ -1979,7 +1979,7 @@ sub L by laukazLaguLogrL-runic ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Younger Futhark";
 }
 );
@@ -1998,7 +1998,7 @@ sub yrLongBranch-runic by yrShortTwig-runic ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Long Branch to Short Twig";
 }
 );
@@ -2012,7 +2012,7 @@ sub rrotunda by rrotunda.alt ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Contextual r rotunda";
 }
 );
@@ -2033,7 +2033,7 @@ code = "    sub exclam by exclam.alt ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Old-style punctuation spacing";
 }
 );
@@ -2095,7 +2095,7 @@ code = "    sub A by u10330 ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Latin to Gothic";
 }
 );
@@ -2105,7 +2105,7 @@ tag = ss19;
 code = "lookup sub_low_diacritics ;";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Low Diacritics";
 }
 );
@@ -2153,7 +2153,6 @@ tag = cv08;
 {
 code = "sub E from [ E.alt1 E.alt2 ] ;
 ";
-disabled = 1;
 tag = cv09;
 },
 {
@@ -2428,16 +2427,14 @@ sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
 tag = cv67;
 },
 {
-code = "sub uni0294 from [ uni0294.alt ] ;
+code = "sub glottalstop from [ glottalstop.alt ] ;
 ";
-disabled = 1;
 tag = cv68;
 },
 {
-code = "sub tironiansignet from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
-sub uni2E52        from [ uni2E52.alt1        uni2E52.alt2        ] ;
+code = "sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
+sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     ] ;
 ";
-disabled = 1;
 tag = cv69;
 },
 {
@@ -4229,7 +4226,7 @@ code = "# should be moved to after the cvXX features to take in variants produce
     ";
 labels = (
 {
-language = default;
+language = dflt;
 value = Underdotted;
 }
 );
@@ -4507,7 +4504,7 @@ sub a.sc o.sc by ao.sc ;
 ";
 labels = (
 {
-language = default;
+language = dflt;
 value = "Rare Digraphs";
 }
 );
@@ -4723,7 +4720,6 @@ name = Italic;
 userData = {
 GSCornerRadius = 30;
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -7643,6 +7639,21 @@ From at diff of small cpas in the roman and the italic, there are three that hav
 
 As the second of these has as its base a PUA code point, it should perhaps be removed from the roman rather than
 included here. (Study this further.)
+
+Steps to create a cff2-flavored variable font:
+
+Save as a .glyphs file
+Change family name to *VF
+Change UPM to 1000
+Delete gasp custom parameter (if present)
+Delete non-exported and/or incompatible glyphs
+Delete all hints in font (l.hints.clear())
+Delete all background (optional, l.background = None)
+Delete any inactive classes and features
+
+Run glyphs2ufo
+
+In designspace file, delete mappings for wdth and make sure min=75, max=125, default=100
 ";
 properties = (
 {

@@ -5115,7 +5115,12 @@ stemValues = (
 153,
 160,
 163,
-191
+191,
+172,
+65,
+49,
+69,
+84
 );
 userData = {
 GSCornerRadius = 31;
@@ -5364,7 +5369,12 @@ stemValues = (
 230,
 243,
 253,
-273
+273,
+0,
+0,
+0,
+0,
+0
 );
 userData = {
 GSCornerRadius = 60;
@@ -5608,7 +5618,12 @@ stemValues = (
 127,
 132,
 133,
-164
+164,
+0,
+0,
+0,
+0,
+0
 );
 userData = {
 GSCornerRadius = 50;
@@ -5848,7 +5863,12 @@ stemValues = (
 153,
 160,
 163,
-191
+191,
+0,
+0,
+0,
+0,
+0
 );
 userData = {
 GSCornerRadius = 50;
@@ -6084,7 +6104,12 @@ stemValues = (
 153,
 160,
 163,
-191
+191,
+0,
+0,
+0,
+0,
+0
 );
 userData = {
 GSCornerRadius = 50;
@@ -6339,7 +6364,12 @@ stemValues = (
 153,
 160,
 163,
-191
+191,
+0,
+0,
+0,
+0,
+0
 );
 userData = {
 GSCornerRadius = 25;
@@ -15440,16 +15470,43 @@ value = psbk;
 );
 stems = (
 {
-name = vStem0;
+filter = "category == \"Letter\" AND case == 2";
+name = "i-stem";
 },
 {
-name = vStem1;
+filter = "category == \"Letter\" AND case == 1";
+name = "H-stem";
 },
 {
-name = vStem2;
+filter = "category == \"Letter\" AND subCategory == \"Lowercase\"";
+name = "o-stem";
 },
 {
-name = vStem3;
+filter = "category == \"Letter\" AND case == 1";
+name = "O-stem";
+},
+{
+filter = "category == \"Letter\" AND case == 1";
+name = "P-stem";
+},
+{
+filter = "category == \"Letter\" AND case == 2";
+horizontal = 1;
+name = "o-stem";
+},
+{
+filter = "category == \"Letter\" AND case == 2";
+horizontal = 1;
+name = "lc-serif";
+},
+{
+filter = "category == \"Letter\" AND case == 1";
+horizontal = 1;
+name = "uc-serif";
+},
+{
+filter = "category == \"Letter\" AND case == 1";
+name = "uc-bar";
 }
 );
 unitsPerEm = 2048;

@@ -14,7 +14,8 @@ The Junicode 2 font
 - will, when complete, have the same character set in all faces;
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and five widths (Regular, SemiCondensed, Condensed, SemiExpanded, Expanded);
-- includes a variable font version with three axes (width, weight, and the custom
+- includes a variable font (in both tff and cff2 flavors) with three axes:
+  width, weight, and the custom
   [Enlarge](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) axis;
 - has improved outlines,
 - an expanded collection of small caps (covering all case-paired characters),

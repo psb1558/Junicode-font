@@ -13,7 +13,7 @@
 
 /*
   font-family names this family and associates this declaration with
-    other possible declarations for JuniusX.
+    other possible declarations for Junicode 2.
   src:url() points to the font file.
   font-weight is either normal (400) or bold (700).
   font-style: normal indicates that this declaration is for an upright
@@ -181,9 +181,9 @@ pre {
 </script>
 </head>
 <body lang="en">
-<h1>Searchable web pages with MUFI and JuniusX</h1>
+<h1>Searchable web pages with MUFI and Junicode 2</h1>
 <p>
-  JuniusX fully implements the recommendations of the
+  Junicode 2 fully implements the recommendations of the
   <a href="https://mufi.info/m.php?p=mufi">Medieval Unicode
   Font Initiative</a> (MUFI), which offers an encoding scheme for medieval
   texts based on <a href="https://home.unicode.org/">Unicode</a>,
@@ -196,21 +196,21 @@ pre {
   computer. MUFI does a similar job for medieval characters. For
   example, if you need a Dutch libra sign, you won’t find it in Unicode;
   but MUFI has it at code point U+F2EA (), and it will be recognizable
-  to anyone with a MUFI-compliant font (like JuniusX).
+  to anyone with a MUFI-compliant font (like Junicode 2).
 </p>
 <p>
   To work its magic, MUFI selects characters of interest to medievalists
   from the Unicode standard, and when a medieval character is missing
   from Unicode it assigns a code point from a block of numbers set aside
   for individuals and groups to use in any way they like: the
-  <b>Private Use Area</b>. MUFI-compliant fonts like JuniusX must all
+  <b>Private Use Area</b>. MUFI-compliant fonts like Junicode 2 must all
   agree on the mappings of code point to character defined by MUFI so
   that texts can be exchanged reliably.
 </p>
 <p>
   For example, here is the beginning of a diplomatic text of the Old
   Norse <i>Vǫluspá</i>, copied and pasted from the
-  Medieval Nordic Text Archive (MENOTA—because JuniusX Italic is not yet
+  Medieval Nordic Text Archive (MENOTA—because Junicode 2 Italic is not yet
   ready, the text is presented only in roman type):
 </p>
 <p class="mufitext" lang="is">
@@ -222,7 +222,7 @@ pre {
 </p>
 <p>
   Looks great, right? And it will read the same way whether it’s set in
-  JuniusX, Andron Scriptor, Cardo, or Palemonas MUFI. There’s just one
+  Junicode 2, Andron Scriptor, Cardo, or Palemonas MUFI. There’s just one
   problem—but it’s a significant one. To illustrate, look at the last
   word in the second line:
   <b>ꝼoꝛn</b>. That’s an <b>insular f</b> in the first position and an
@@ -247,12 +247,12 @@ pre {
 </p>
 <p>
   Turns out that it is both possible and easy to create such a page
-  using JuniusX. We’ll take it in two steps. The first will be to create
+  using Junicode 2. We’ll take it in two steps. The first will be to create
   as plain an etext as we can get away with, and the second will be to
   style this text using
   <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
   (“Cascading Style Sheets,” the standard for
-  styling web pages) and the features of JuniusX.
+  styling web pages) and the features of Junicode 2.
 </p>
 <p>
   Here’s my attempt to convert the passage to plain text:
@@ -286,13 +286,13 @@ pre {
 </p>
 <p>
   The next step is to select what we need from among the OpenType
-  features of JuniusX.
+  features of Junicode 2.
   <a href="https://docs.microsoft.com/en-us/typography/opentype/spec/">OpenType</a>
   is a standard for font construction that
   allows fonts to do all kinds of clever things. To cite one common
   example, when you type the letters “f‌ind” and the <b>f</b> and the <b>i</b> come out
   joined in a ligature (“find”), an OpenType feature did that. But
-  JuniusX has more than eighty OpenType features that do a lot of useful
+  Junicode 2 has more than eighty OpenType features that do a lot of useful
   things.
 </p>
 <p>
@@ -406,11 +406,11 @@ pre {
 <div style="clear: both; padding: 20px; background-color:
 lightgray">
 <p>
-  Junicode/JuniusX font copyright © 1998–2020 by Peter
+  Junicode/Junicode 2 font copyright © 1998–2022 by Peter
   S. Baker.
 </p>
 <p>
-  <a href="https://github.com/psb1558/Junicode-New">Development site</a>   ·   <a href="https://psb1558.github.io/Junicode-New/">Specimen Page</a>
+  <a href="https://github.com/psb1558/Junicode-font">Development site</a>   ·   <a href="https://psb1558.github.io/Junicode-New/">Specimen Page</a>
 </p>
 <p>
   Licensed under the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License, v. 1.1</a>.

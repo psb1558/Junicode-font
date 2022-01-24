@@ -168,7 +168,7 @@ Location = 100;
 },
 {
 Axis = Enlarge;
-Location = 0.47;
+Location = 47;
 }
 );
 },
@@ -5388,7 +5388,7 @@ GSCornerRadius = 115;
 axesValues = (
 400,
 100,
-1
+100
 );
 customParameters = (
 {
@@ -6451,7 +6451,7 @@ widthClass = 7;
 axesValues = (
 400,
 100,
-1
+100
 );
 customParameters = (
 {
@@ -7677,9 +7677,12 @@ Delete all hints in font (l.hints.clear())
 Delete all background (optional, l.background = None)
 Delete any inactive classes and features
 
-Run glyphs2ufo
+Run glyphs2ufo <.glyphs file>
 
 In designspace file, delete mappings for wdth and make sure min=75, max=125, default=100
+Comment out source “{700, 75, 0}” (in roman, comment out both of “{*, 125, *}”)
+
+Run fontmake -o variable-cff2 -mm <designspace file>
 ";
 properties = (
 {

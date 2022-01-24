@@ -46,8 +46,9 @@ enlargeDict = dict(
     tag="ENLA",
     name="Enlarge",
     values=[
-        dict(nominalValue=0, name="Normal", flags=0x2, rangeMinValue=0, rangeMaxValue=0.5),
-        dict(nominalValue=1, name="Enlarged", rangeMinValue=0.5, rangeMaxValue=1)
+        dict(nominalValue=0, name="Normal", flags=0x2, rangeMinValue=0, rangeMaxValue=33),
+        dict(nominalValue=47, name="Enlarged", rangeMinValue=33, rangeMaxValue=66),
+        dict(nominalValue=100, name="CapSize", rangeMinValue=66, rangeMaxValue=100),
     ]
 )
 

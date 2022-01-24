@@ -156,20 +156,6 @@ Location = 0;
 );
 },
 {
-disabled = 1;
-name = "gasp Table";
-value = (
-12,
-20,
-65535
-);
-},
-{
-name = "Disable Subroutines";
-value = 1;
-},
-{
-disabled = 1;
 name = "Virtual Master";
 value = (
 {
@@ -182,9 +168,22 @@ Location = 100;
 },
 {
 Axis = Enlarge;
-Location = 0;
+Location = 0.47;
 }
 );
+},
+{
+disabled = 1;
+name = "gasp Table";
+value = (
+12,
+20,
+65535
+);
+},
+{
+name = "Disable Subroutines";
+value = 1;
 }
 );
 date = "2021-12-14 10:55:40 +0000";

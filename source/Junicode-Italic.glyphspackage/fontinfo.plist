@@ -7682,7 +7682,7 @@ Run glyphs2ufo <.glyphs file>
 In designspace file, delete mappings for wdth and make sure min=75, max=125, default=100
 Comment out source “{700, 75, 0}” (in roman, comment out both of “{*, 125, *}”)
 
-Run fontmake -o variable-cff2 -mm <designspace file>
+Run fontmake -o variable-cff2 -m <designspace file>
 ";
 properties = (
 {

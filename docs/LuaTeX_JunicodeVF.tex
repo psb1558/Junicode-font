@@ -1,0 +1,310 @@
+\documentclass[11pt]{article}
+
+\usepackage{fontspec}
+\usepackage{realscripts}
+\usepackage{relsize}
+\usepackage{microtype}
+
+\setmainfont{JunicodeTwoBetaVF-Regular.otf}[
+  ItalicFont = JunicodeTwoBetaVF-Italic.otf,
+  BoldFont = JunicodeTwoBetaVF-Regular.otf,
+  BoldItalicFont =  JunicodeTwoBetaVF-Italic.otf,
+  Numbers={Lowercase,Proportional},
+  UprightFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=115}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=110}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=300,wdth=95}}}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=112}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=106}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=300,wdth=95}}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=112}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=95}}}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=112}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=106}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=95}}}
+    },
+  },
+  ]
+
+  \setfontface\mediumupright{JunicodeTwoBetaVF-Regular.otf}[
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=650,wdth=115}}},
+      {Size={8.5-11}, RawFeature={axis={wght=575,wdth=110}}},
+      {Size={11-22},  RawFeature={axis={wght=500,wdth=100}}},
+      {Size={22-},     RawFeature={axis={wght=400,wdth=95}}}
+    },
+  ]
+  \setfontface\light{JunicodeTwoBetaVF-Regular.otf}[
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=400,wdth=115}}},
+      {Size={8.5-11}, RawFeature={axis={wght=350,wdth=110}}},
+      {Size={11-22},  RawFeature={axis={wght=300,wdth=100}}},
+      {Size={22-},     RawFeature={axis={wght=300,wdth=95}}}
+    },
+  ]
+  \setfontface\condensed{JunicodeTwoBetaVF-Regular.otf}[
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=450,wdth=85}}},
+      {Size={8.5-11}, RawFeature={axis={wght=400,wdth=80}}},
+      {Size={11-22},  RawFeature={axis={wght=350,wdth=75}}},
+      {Size={22-},     RawFeature={axis={wght=300,wdth=75}}}
+    },
+  ]
+  \setfontface\expanded{JunicodeTwoBetaVF-Regular.otf}[
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=575,wdth=125}}},
+      {Size={8.5-11}, RawFeature={axis={wght=500,wdth=125}}},
+      {Size={11-22},  RawFeature={axis={wght=425,wdth=120}}},
+      {Size={22-},     RawFeature={axis={wght=325,wdth=120}}}
+    },
+  ]
+  \setfontface\condensedbold{JunicodeTwoBetaVF-Regular.otf}[
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=85}}},
+      {Size={8.5-11},    RawFeature={axis={wght=700,wdth=80}}},
+      {Size={11-22},     RawFeature={axis={wght=700,wdth=75}}},
+      {Size={22-},       RawFeature={axis={wght=700,wdth=75}}}
+    },
+  ]
+  \setfontface\expandedbold{JunicodeTwoBetaVF-Regular.otf}[
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=125}}},
+      {Size={8.5-11},    RawFeature={axis={wght=700,wdth=125}}},
+      {Size={11-22},     RawFeature={axis={wght=700,wdth=120}}},
+      {Size={22-},       RawFeature={axis={wght=700,wdth=120}}}
+    },
+  ]
+  \setmonofont{SourceCodeVariable-Roman.otf}[
+    Scale = MatchLowercase,
+    Numbers = Lowercase,
+    SizeFeatures={
+      {Size={-8},        RawFeature={axis={wght=500}}},
+      {Size={8-11},      RawFeature={axis={wght=450}}},
+      {Size={11-},       RawFeature={axis={wght=400}}}
+    }
+  ]
+
+  \newcommand{\cvd}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+  \newcommand{\sups}[1]{{\addfontfeature{VerticalPosition=Superior}#1}}
+  \newcommand{\enla}[1]{{\addfontfeature{StylisticSet=6}#1}}
+  \newcommand{\oldch}[1]{{\addfontfeature{CharacterVariant={38:2,69:1}}#1}}
+  \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
+
+  \setlength{\footnotesep}{10pt}
+  \setlength{\skip\footins}{18pt}
+  \setlength{\parindent}{0pt}
+  \renewcommand{\baselinestretch}{1.15}
+
+  \tolerance=2000
+  \frenchspacing
+
+
+  \title{Junicode VF and Lua\kern-2pt\TeX}
+  \author{Peter S. Baker}
+  \date{}
+
+  \newcommand{\textsample}{\oldch{\textit{Recti diligunt te. In
+  canticis sponsa ad sponsum. Est rectum grammaticum. Rectum
+  geomet\sups{i}cum. rectum theologicum. ⁊ sunt differencie totidem reguloꝝ.
+  De recto theologico sermo nobis est.} Lauerd seið godes spuse to hire deoꝛeƿurðe
+  spus. þeo richte luuieð þé. \enla{þ}eo beoð richte. þe liuieð efter riƿle. ⁊
+  ȝe mine leoue sustren habbeð moni dei icraued me efter riƿle. Moni cunne riƿlen
+  beoð. \enla{a}ch twa beoð bemong alle ꝥ ich ƿille speoken of þurch oƿer bone ⁊
+  mid godes grace}.}
+
+\begin{document}
+
+\addfontfeature{Language=English,Contextuals=Alternate,Numbers={Lowercase,Proportional}}
+
+\maketitle
+
+\section*{Introduction}
+
+\ltech{} now supports variable fonts. Support for TrueType-flavored
+variable fonts is buggy (as of luaotfload version 3.18); until these bugs
+are fixed (reportedly in the next release), users should prefer the Compact
+File Format flavor of
+Junicode VF (with extension \texttt{.otf} in the \slash fonts\slash variable-cff2 folder).\\
+
+There are at least two reasons for \ltech{} users to prefer variable over
+conventional fonts:
+\begin{itemize}
+\item With Junicode VF, you can precisely control the weight and width of letters
+so as to achieve an even color.\footnote{\ “Color” is the overall ratio of black
+and white in a block of text, ideally giving the impression of an even gray.}
+With a conventional font, text set in a smaller size (like block quotations or
+footnotes) may appear lighter than the main text. Users of Junicode VF can set small text
+in a heavier weight (without going all the way to Bold) for evenness of color, and wider for better
+legibility.\footnote{\ For example, these footnotes should harmonize well
+with the main text: that is, the block of footnotes should be approximately the
+same shade of gray as the main text.}
+\item Second, if you prefer,
+for example, weights that are a little different from the ordinary (e.g.
+{\mediumupright “Medium”} or {\light “Light”}
+instead of “Regular” for the main text),\footnote{\ Here's another footnote, just
+to expand the footnote block. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \textit{Ut enim ad
+minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat}. Duis aute irure dolor in reprehenderit in voluptate velit.}
+%esse cillum dolore eu fugiat nulla pariatur.}
+you can do that very easily. Likewise, you can choose a width anywhere from
+{\condensed “Condensed”} to {\expanded “Expanded,”} adjusting for size as necessary.
+In short, you have discretion to style Junicode VF in numerous ways, and one
+document set in Junicode VF can look very different from another.
+\end{itemize}
+
+\section*{Axes}
+
+Junicode VF has three axes, two of which are useful to \ltech{} users.
+\begin{description}
+\item[Weight] The tag is \texttt{wght}.\footnote{\ Data structures and features
+of modern fonts are identified by four-letter tags. You will need these when
+you set up your document.} This axis corresponds to the
+distinction between Regular and Bold in a traditional font family; extended
+font families may also include weights called Light, Medium, and Semibold,
+to name a few. In Junicode VF, Weight is continuously variable from 300
+({\light Light}) to 700 (\textbf{Bold}).
+\item[Width] The tag is \texttt{wdth}. Some conventional fonts come in more
+than one width. In Junicode VF, the width is continuously variable, from
+{\condensed “Condensed”} (75) to {\expanded “Expanded”} (125). Note that the
+weight of strokes remains the same as Width increases or decreases,%
+\footnote{\ For example, the width of the three vertical strokes in the letter
+\textbf{m} is the same whether it is set Condensed ({\condensedbold m})
+or Expanded ({\expandedbold m}).} with the result that the ratio of black to
+white decreases as width increases, and the text becomes a lighter gray. If you
+set different widths together you may want to slightly decrease the weight of
+Condensed text and increase the weight of Expanded text so as to compensate.
+\item[Enlarge] The tag is \texttt{ENLA}. This is a custom axis, intended for a
+particular purpose. In medieval manuscripts, sentences often begin with
+“enlarged minuscules,” that is, letters that are lowercase in shape but
+written larger than other lowercase letters. Junicode VF's Enlarge axis
+provides a way to represent these “enlarged minuscules” in an accessible and
+flexible way. Values run from 0 to 100, with 0 matching other lowercase letters
+and 100 at the same height and weight as uppercase letters. Unfortunately,
+luaotfload ignores this axis (perhaps it ignores \textit{all} custom axes), and so it
+cannot be used in \ltech{} documents. Users should use Stylistic Set 6 (“Enlarged
+Minuscules”) instead. The stylistic set does not provide the same flexibility
+as the Enlarge axis, but it is an accessible solution and will suffice for most purposes.
+\end{description}
+
+These axes can be combined in any way you like, but some combinations
+will work better than others. In particular, combining two extremes (say,
+Condensed and Bold) may occasionally produce distorted letter-shapes.
+
+\section*{Selecting Junicode VF with fontspec}
+
+Fontspec provides a number of ways to select a font. The commands used
+to set up the fonts for this document
+are \verb|\setmainfont| and \verb|\setfontface|. First, to select Junicode
+VF as the main font with automatic adjustment of weight and width to
+provide for even text color:\footnote{\ This code is adapted from a concept
+by Andrew Dunning; see https://github.com\slash psb1558\slash Junicode-font/discussions/92.}
+
+\scriptsize\begin{verbatim}
+\setmainfont{JunicodeTwoBetaVF-Roman}[
+  Extension      = .otf,
+  ItalicFont     = JunicodeTwoBetaVF-Italic,
+  BoldFont       = JunicodeTwoBetaVF-Roman,
+  BoldItalicFont = JunicodeTwoBetaVF-Italic,
+  UprightFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=115}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=110}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=300,wdth=95}}}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=112}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=106}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=300,wdth=95}}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=112}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=95}}}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=112}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=106}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=100}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=95}}}
+    },
+  },
+]
+\end{verbatim}
+
+\normalsize Because fontspec does not (yet) support variable font axes, it is
+necessary to use \texttt{RawFeature} to set these up. Axes can be omitted
+from these declarations when you're using the font's default values
+(\texttt{wght} 400, \texttt{wdth} 100, \texttt{ENLA} 0),
+though it is perfectly all right to include these for clarity.\\
+
+If you need other variants of Junicode VF, use \verb|\setfontface| to select
+them. For example, this document has a few words in Junicode's
+{\light Light} weight, so the preamble has this font definition:
+
+\scriptsize\begin{verbatim}
+\setfontface\light{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},   RawFeature={axis={wght=400,wdth=115}}},
+    {Size={8.5-11}, RawFeature={axis={wght=350,wdth=110}}},
+    {Size={11-22},  RawFeature={axis={wght=300,wdth=100}}},
+    {Size={22-},    RawFeature={axis={wght=300,wdth=95}}}
+  },
+]
+\end{verbatim}
+
+\normalsize Here the \verb|SizeFeatures| command looks exactly like the ones in
+\verb|\setmainfont|, except for the different \texttt{wght} values, so the \verb|\light|
+command can be created by copying and pasting and just a little editing.
+
+\section*{Specimens}
+
+\noindent\tiny\textbf{tiny}: \textsample\\
+
+\noindent\scriptsize\textbf{scriptsize}: \textsample\\
+
+\noindent\footnotesize\textbf{footnotesize}: \textsample\\
+
+\noindent\small\textbf{small}: \textsample\\
+
+\noindent\normalsize\textbf{normalsize}: \textsample\\
+
+\noindent\large\textbf{large}: \textsample\\
+
+\noindent\Large\textbf{Large}: \textsample\\
+
+\noindent\LARGE\textbf{LARGE}: \textsample\\
+
+\noindent\huge\textbf{huge}: \textsample\\
+
+\Huge\textbf{Huge}: \textit{Recti diligunt te.} Lauerd seið godes spuse
+to hire deoꝛeƿurðe spus.
+
+\end{document}

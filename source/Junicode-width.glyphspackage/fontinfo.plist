@@ -276,14 +276,6 @@ value = (
 );
 },
 {
-name = "gasp Table";
-value = {
-12 = 10;
-20 = 7;
-65535 = 15;
-};
-},
-{
 name = "Disable autohinting for glyphs";
 value = (
 "uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
@@ -298,7 +290,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2022-01-31 04:57:31 +0000";
+date = "2022-02-04 23:07:07 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -1461,23 +1453,23 @@ code = "  sub zero from [ zero.circled zero.paren zero.doubleCircled zero.blackC
 tag = nalt;
 },
 {
-automatic = 1;
 code = "lookup FRAC {
 	sub slash by fraction;
 } FRAC;
 lookup UP {
-	sub [zero one two three four five six seven eight nine] by [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr];
+	sub [zero zero.zero one two three four five six seven eight nine] by [zero.numr zero.zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr];
 } UP;
 lookup DOWN {
-	sub fraction [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr]' by [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
-	sub [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom] [zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr]' by [zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
+	sub fraction [zero.numr zero.zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr]' by [zero.dnom zero.zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
+	sub [zero.dnom zero.zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom] [zero.numr zero.zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr]' by [zero.dnom zero.zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom];
 } DOWN;
 ";
 tag = frac;
 },
 {
 automatic = 1;
-code = "sub zero by zero.numr;
+code = "sub zero.zero by zero.zero.numr;
+sub zero by zero.numr;
 sub one by one.numr;
 sub two by two.numr;
 sub three by three.numr;
@@ -1492,7 +1484,8 @@ tag = numr;
 },
 {
 automatic = 1;
-code = "sub zero by zero.dnom;
+code = "sub zero.zero by zero.zero.dnom;
+sub zero by zero.dnom;
 sub one by one.dnom;
 sub two by two.dnom;
 sub three by three.dnom;
@@ -1535,6 +1528,10 @@ code = "  sub zero by zero.zero;
   sub zero.tosf by zero.tosf.zero;
   sub zerosuperior by zerosuperior.zero;
   sub zeroinferior by zeroinferior.zero;
+  sub zero.sups by zero.sups.zero ;
+  sub zero.subs by zero.subs.zero ;
+  sub zero.numr by zero.zero.numr ;
+  sub zero.dnom by zero.zero.dnom ;
 ";
 tag = zero;
 },
@@ -1542,17 +1539,17 @@ tag = zero;
 code = "    sub parenleft by uni207D ;
     sub parenright by uni207E ;
 #    sub plus by uni207A ;
-    sub zero by zerosuperior ;
-    sub zero.zero by zerosuperior.zero ;
-    sub one by onesuperior ;
-    sub two by twosuperior ;
-    sub three by threesuperior ;
-    sub four by foursuperior ;
-    sub five by fivesuperior ;
-    sub six by sixsuperior ;
-    sub seven by sevensuperior ;
-    sub eight by eightsuperior ;
-    sub nine by ninesuperior ;
+    sub zero by zero.sups ;
+    sub zero.zero by zero.sups.zero ;
+    sub one by one.sups ;
+    sub two by two.sups ;
+    sub three by three.sups ;
+    sub four by four.sups ;
+    sub five by five.sups ;
+    sub six by six.sups ;
+    sub seven by seven.sups ;
+    sub eight by eight.sups ;
+    sub nine by nine.sups ;
     sub equal by equalsuperior ;
     sub A by uni1D2C ;
     sub AE by uni1D2D ;
@@ -1619,17 +1616,17 @@ tag = sups;
 {
 code = "sub parenleft by uni208D ;
 sub parenright by uni208E ;
-sub zero by zeroinferior ;
-sub zero.zero by zeroinferior.zero ;
-sub one by oneinferior ;
-sub two by twoinferior ;
-sub three by threeinferior ;
-sub four by fourinferior ;
-sub five by fiveinferior ;
-sub six by sixinferior ;
-sub seven by seveninferior ;
-sub eight by eightinferior ;
-sub nine by nineinferior ;
+sub zero by zero.subs ;
+sub zero.zero by zero.subs.zero ;
+sub one by one.subs ;
+sub two by two.subs ;
+sub three by three.subs ;
+sub four by four.subs ;
+sub five by five.subs ;
+sub six by six.subs ;
+sub seven by seven.subs ;
+sub eight by eight.subs ;
+sub nine by nine.subs ;
 sub zero.osf by zero.subold ;
 sub zero.osf.zero by zero.subold.zero ;
 sub one.osf by one.subold ;
@@ -15612,5 +15609,5 @@ type = unicode;
 UFOFormat = 2;
 };
 versionMajor = 1;
-versionMinor = 38;
+versionMinor = 39;
 }

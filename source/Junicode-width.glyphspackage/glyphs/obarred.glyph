@@ -14,36 +14,6 @@ name = top;
 pos = (240,415);
 }
 );
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,5);
-target = (1,5);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,11);
-target = (1,11);
-type = TTStem;
-},
-{
-horizontal = 1;
-origin = (0,5);
-other1 = (1,5,2,2);
-target = (0,11);
-type = TTInterpolate;
-},
-{
-horizontal = 1;
-origin = (1,5,2,2);
-stem = -1;
-target = (1,2,2,0);
-type = TTStem;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -339,82 +309,6 @@ name = top;
 pos = (269,494);
 }
 );
-background = {
-anchors = (
-{
-name = bottom;
-pos = (270,0);
-},
-{
-name = center;
-pos = (270,247);
-},
-{
-name = ogonek;
-pos = (356,25);
-},
-{
-name = ogonek_above;
-pos = (251,482);
-},
-{
-name = top;
-pos = (270,494);
-},
-{
-name = topright;
-pos = (425,471);
-},
-{
-name = us;
-pos = (433,494);
-},
-{
-name = zzcurly;
-pos = (393,450);
-},
-{
-name = zzcurlya;
-pos = (270,494);
-}
-);
-shapes = (
-{
-closed = 1;
-nodes = (
-(182,23,o),
-(120,122,o),
-(120,249,cs),
-(120,370,o),
-(181,474,o),
-(270,474,cs),
-(358,474,o),
-(418,372,o),
-(418,249,cs),
-(418,118,o),
-(357,23,o),
-(270,23,cs)
-);
-},
-{
-closed = 1;
-nodes = (
-(410,-13,o),
-(501,89,o),
-(501,247,cs),
-(501,404,o),
-(410,506,o),
-(270,506,cs),
-(129,506,o),
-(38,404,o),
-(38,247,cs),
-(38,89,o),
-(129,-13,o),
-(270,-13,cs)
-);
-}
-);
-};
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
 shapes = (
 {

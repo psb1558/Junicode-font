@@ -41,44 +41,6 @@ angle = 180;
 pos = (793,1284);
 }
 );
-hints = (
-{
-horizontal = 1;
-origin = (0,2);
-stem = 1;
-target = (0,47);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,47);
-target = (0,8);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,21);
-stem = 10;
-target = (0,33);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,17);
-target = (0,12);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,12);
-target = (0,43);
-type = TTShift;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -672,28 +634,6 @@ name = zzcurly;
 pos = (292,400);
 }
 );
-background = {
-shapes = (
-{
-closed = 0;
-nodes = (
-(174,538,ls),
-(174,643,o),
-(198,680,o),
-(262,680,cs),
-(293,680,o),
-(313,671,o),
-(329,654,cs),
-(344,636,o),
-(358,627,o),
-(376,627,cs),
-(400,627,o),
-(420,645,o),
-(420,671,cs)
-);
-}
-);
-};
 guides = (
 {
 angle = 180;

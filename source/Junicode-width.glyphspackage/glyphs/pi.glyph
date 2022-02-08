@@ -5,48 +5,6 @@ kernLeft = pi;
 kernRight = tau;
 layers = (
 {
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(69,-19,o),
-(154,-9,o),
-(156,0,cs),
-(177,128,o),
-(199,288,o),
-(208,372,c),
-(143,373,l),
-(133,263,o),
-(100,96,o),
-(71,-10,cs)
-);
-}
-);
-};
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,10);
-target = (0,2);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (2,19);
-target = (2,8);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (2,19);
-target = (1,2);
-type = TTShift;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -251,17 +209,6 @@ nodes = (
 width = 520;
 },
 {
-background = {
-shapes = (
-{
-closed = 0;
-nodes = (
-(-4,209,l),
-(444,209,l)
-);
-}
-);
-};
 guides = (
 {
 angle = 90;

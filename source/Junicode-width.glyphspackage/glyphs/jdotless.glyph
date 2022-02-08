@@ -31,28 +31,6 @@ name = zzcurly;
 pos = (132,378);
 }
 );
-hints = (
-{
-horizontal = 1;
-origin = (0,15);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,2);
-target = (0,40);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,40);
-other1 = (0,34);
-target = (0,2);
-type = TTInterpolate;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -548,83 +526,6 @@ name = zzcurly;
 pos = (157,603);
 }
 );
-background = {
-anchors = (
-{
-name = bottom;
-pos = (146,0);
-},
-{
-name = ogonek;
-pos = (227,6);
-},
-{
-name = ogonek_above;
-pos = (195,629);
-},
-{
-name = top;
-pos = (170,641);
-},
-{
-name = us;
-pos = (341,641);
-},
-{
-name = zzcurly;
-pos = (182,597);
-},
-{
-name = zzcurlya;
-pos = (170,641);
-}
-);
-shapes = (
-{
-closed = 1;
-nodes = (
-(113,0,o),
-(154,1,o),
-(195,1,cs),
-(237,1,o),
-(281,0,o),
-(324,-3,c),
-(335,-3,o),
-(336,31,o),
-(324,31,cs),
-(266,31,o),
-(235,51,o),
-(235,93,cs),
-(235,544,ls),
-(235,578,o),
-(235,614,o),
-(239,654,c),
-(239,667,o),
-(239,676,o),
-(235,676,cs),
-(230,676,o),
-(217,667,o),
-(202,654,cs),
-(157,615,o),
-(113,589,o),
-(90,589,cs),
-(78,589,o),
-(78,554,o),
-(90,554,cs),
-(134,554,o),
-(157,518,o),
-(157,443,cs),
-(157,93,ls),
-(157,51,o),
-(128,31,o),
-(70,31,cs),
-(58,31,o),
-(58,-3,o),
-(70,-3,c)
-);
-}
-);
-};
 guides = (
 {
 pos = (761,641);

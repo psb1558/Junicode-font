@@ -13,36 +13,6 @@ name = ogonek;
 pos = (312,21);
 }
 );
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,5);
-target = (1,5);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,35);
-target = (1,11);
-type = TTStem;
-},
-{
-horizontal = 1;
-origin = (0,14);
-stem = -1;
-target = (0,23);
-type = TTStem;
-},
-{
-horizontal = 1;
-origin = (0,5);
-stem = -1;
-target = (2,5);
-type = TTStem;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -478,56 +448,6 @@ name = ogonek;
 pos = (312,21);
 }
 );
-background = {
-anchors = (
-{
-name = _ogonek_above;
-pos = (275,671);
-}
-);
-shapes = (
-{
-closed = 1;
-nodes = (
-(566,875,ls),
-(575,890,o),
-(520,920,o),
-(512,903,cs),
-(445,750,ls),
-(434,725,o),
-(460,707,o),
-(477,733,cs)
-);
-},
-{
-closed = 1;
-nodes = (
-(290,671,l),
-(362,729,o),
-(399,784,o),
-(399,834,cs),
-(399,876,o),
-(371,912,o),
-(316,912,cs),
-(284,912,o),
-(252,901,o),
-(225,864,c),
-(225,855,o),
-(228,850,o),
-(234,848,c),
-(247,858,o),
-(262,863,o),
-(280,863,cs),
-(316,863,o),
-(334,844,o),
-(334,807,cs),
-(334,769,o),
-(307,723,o),
-(251,671,c)
-);
-}
-);
-};
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
 shapes = (
 {

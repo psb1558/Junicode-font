@@ -5,66 +5,6 @@ kernLeft = A;
 kernRight = A;
 layers = (
 {
-background = {
-hints = (
-{
-horizontal = 1;
-options = 4;
-place = (676, 71);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-place = (-13, 75);
-type = TTStem;
-}
-);
-shapes = (
-{
-closed = 1;
-nodes = (
-(452,79,o),
-(452,67,qs),
-(452,34,o),
-(404,34,qs),
-(397,34,o),
-(397,0,o),
-(404,0,qs),
-(629,0,ls),
-(635,0,o),
-(635,34,o),
-(629,34,qs),
-(554,34,o),
-(535,91,qs),
-(363,628,ls),
-(359,642,o),
-(299,642,o),
-(294,627,qs),
-(110,98,l),
-(93,61,o),
-(62,34,o),
-(15,34,qs),
-(8,34,o),
-(8,0,o),
-(15,0,qs),
-(222,0,ls),
-(229,0,o),
-(229,34,o),
-(222,34,qs),
-(149,34,o),
-(149,69,qs),
-(149,76,o),
-(153,89,qs),
-(298,506,ls),
-(301,516,o),
-(313,516,o),
-(316,506,qs),
-(448,91,ls)
-);
-}
-);
-};
 guides = (
 {
 pos = (887,1366);
@@ -82,48 +22,6 @@ pos = (754,776);
 },
 {
 pos = (637,1126);
-}
-);
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,2);
-target = (0,8);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,2);
-target = (0,23);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,8);
-target = (0,40);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,8);
-target = (0,17);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,8);
-target = (0,29);
-type = TTShift;
-},
-{
-horizontal = 1;
-origin = (0,36);
-type = TTSnap;
 }
 );
 layerId = master01;

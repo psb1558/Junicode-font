@@ -5,48 +5,6 @@ kernLeft = phi;
 kernRight = b;
 layers = (
 {
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,28);
-target = (0,11);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,28);
-target = (0,27);
-type = TTShift;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,11);
-target = (0,12);
-type = TTShift;
-},
-{
-horizontal = 1;
-origin = (0,41);
-type = TTSnap;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,34);
-target = (0,5);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,34);
-target = (0,21);
-type = TTShift;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -100,50 +58,6 @@ nodes = (
 width = 579;
 },
 {
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(368,141,l),
-(368,235,ls),
-(368,345,o),
-(399,363,o),
-(421,363,cs),
-(466,363,o),
-(487,290,o),
-(487,208,c),
-(611,207,l),
-(611,298,o),
-(568,402,o),
-(448,402,cs),
-(367,402,o),
-(275,368,o),
-(275,235,cs),
-(275,141,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(157,208,l),
-(157,304,o),
-(192,366,o),
-(234,366,cs),
-(244,366,o),
-(253,362,o),
-(260,358,c),
-(283,395,l),
-(271,409,o),
-(245,419,o),
-(209,419,cs),
-(88,419,o),
-(34,321,o),
-(34,208,c)
-);
-}
-);
-};
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
 shapes = (
 {

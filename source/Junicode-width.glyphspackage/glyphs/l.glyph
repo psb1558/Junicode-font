@@ -44,27 +44,6 @@ guides = (
 pos = (393,1487);
 }
 );
-hints = (
-{
-horizontal = 1;
-options = 4;
-origin = (0,2);
-target = (0,34);
-type = TTStem;
-},
-{
-horizontal = 1;
-options = 4;
-origin = (0,34);
-target = (0,8);
-type = TTShift;
-},
-{
-horizontal = 1;
-origin = (0,18);
-type = TTSnap;
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -490,90 +469,6 @@ name = zzcurly;
 pos = (155,548);
 }
 );
-background = {
-anchors = (
-{
-name = bottom;
-pos = (138,0);
-},
-{
-name = cedilla;
-pos = (131,0);
-},
-{
-name = center;
-pos = (148,514);
-},
-{
-name = center_high;
-pos = (150,660);
-},
-{
-name = top;
-pos = (138,684);
-},
-{
-name = topright;
-pos = (273,696);
-},
-{
-name = us;
-pos = (312,494);
-},
-{
-name = zzcurlya;
-pos = (138,684);
-}
-);
-shapes = (
-{
-closed = 1;
-nodes = (
-(208,26,o),
-(186,42,o),
-(186,73,cs),
-(186,622,ls),
-(186,641,o),
-(186,668,o),
-(189,709,c),
-(189,719,o),
-(187,725,o),
-(183,725,cs),
-(179,725,o),
-(169,719,o),
-(159,710,cs),
-(146,699,o),
-(127,688,o),
-(109,678,cs),
-(90,667,o),
-(68,658,o),
-(56,658,cs),
-(47,658,o),
-(47,627,o),
-(56,627,cs),
-(90,627,o),
-(107,600,o),
-(107,545,cs),
-(107,73,ls),
-(107,42,o),
-(85,26,o),
-(41,26,cs),
-(32,26,o),
-(32,-5,o),
-(41,-5,c),
-(68,-2,o),
-(104,0,o),
-(147,0,cs),
-(193,0,o),
-(229,-2,o),
-(254,-5,c),
-(263,-5,o),
-(263,26,o),
-(254,26,cs)
-);
-}
-);
-};
 guides = (
 {
 pos = (376,1487);

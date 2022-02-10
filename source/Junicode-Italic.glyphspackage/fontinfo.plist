@@ -143,23 +143,6 @@ name = "Virtual Master";
 value = (
 {
 Axis = Weight;
-Location = 700;
-},
-{
-Axis = Width;
-Location = 75;
-},
-{
-Axis = Enlarge;
-Location = 0;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
 Location = 400;
 },
 {
@@ -169,40 +152,6 @@ Location = 100;
 {
 Axis = Enlarge;
 Location = 47;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
-Location = 700;
-},
-{
-Axis = Width;
-Location = 100;
-},
-{
-Axis = Enlarge;
-Location = 100;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
-Location = 400;
-},
-{
-Axis = Width;
-Location = 125;
-},
-{
-Axis = Enlarge;
-Location = 100;
 }
 );
 },
@@ -4784,7 +4733,7 @@ pos = 8;
 );
 name = Italic;
 userData = {
-GSCornerRadius = 31;
+GSCornerRadius = 10;
 };
 },
 {
@@ -4952,7 +4901,7 @@ pos = 8;
 );
 name = "Bold Italic";
 userData = {
-GSCornerRadius = 45;
+GSCornerRadius = 10;
 };
 },
 {
@@ -5120,7 +5069,7 @@ pos = 8;
 );
 name = "Light Italic";
 userData = {
-GSCornerRadius = 90;
+GSCornerRadius = 10;
 };
 },
 {
@@ -5287,7 +5236,7 @@ pos = 6;
 );
 name = "Narrow Italic";
 userData = {
-GSCornerRadius = 100;
+GSCornerRadius = 10;
 };
 },
 {
@@ -5454,7 +5403,7 @@ pos = 8;
 );
 name = "Expanded Italic";
 userData = {
-GSCornerRadius = 115;
+GSCornerRadius = 10;
 };
 },
 {
@@ -5621,7 +5570,7 @@ pos = 8;
 );
 name = Enlarged;
 userData = {
-GSCornerRadius = 30;
+GSCornerRadius = 10;
 GSExtrudeAngle = 30;
 GSExtrudeOffset = 15;
 };
@@ -5669,14 +5618,17 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wght;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wght;
 },
@@ -5685,6 +5637,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
 }
@@ -5705,22 +5658,27 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Elidable STAT Axis Value Name";
 value = ital;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wght;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wdth;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = ital;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5729,6 +5687,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
 }
@@ -5748,10 +5707,12 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wght;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5760,6 +5721,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
 }
@@ -5781,10 +5743,12 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wght;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5793,6 +5757,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
 }
@@ -5814,10 +5779,12 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wght;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5826,6 +5793,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
 }
@@ -5847,6 +5815,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5855,6 +5824,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "13";
 }
@@ -5880,10 +5850,12 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wdth;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5892,6 +5864,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "13";
 }
@@ -5912,6 +5885,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5920,6 +5894,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "13";
 }
@@ -5944,6 +5919,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5952,6 +5928,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "13";
 }
@@ -5976,6 +5953,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -5984,6 +5962,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "13";
 }
@@ -6009,6 +5988,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -6017,6 +5997,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "14.5";
 }
@@ -6042,6 +6023,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -6050,6 +6032,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "14.5";
 }
@@ -6071,6 +6054,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -6079,6 +6063,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "14.5";
 }
@@ -6102,6 +6087,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -6110,6 +6096,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "14.5";
 }
@@ -6135,6 +6122,7 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
@@ -6143,6 +6131,7 @@ name = "Keep Overlapping Components";
 value = 1;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "14.5";
 }
@@ -6169,20 +6158,28 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wdth;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = ital;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
 }
 );
 instanceInterpolations = {
@@ -6201,20 +6198,27 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wdth;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = ital;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
 {
 name = italicAngle;
 value = "16";
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
 }
 );
 instanceInterpolations = {
@@ -6227,6 +6231,7 @@ master01 = -0.33333;
 isItalic = 1;
 linkStyle = "Expanded Light";
 name = "Expanded Light Italic";
+weightClass = 300;
 widthClass = 7;
 },
 {
@@ -6237,20 +6242,28 @@ axesValues = (
 );
 customParameters = (
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = wdth;
 },
 {
+disabled = 1;
 name = "Style Name as STAT entry";
 value = ital;
 },
 {
+disabled = 1;
 name = "Export STAT Table";
 value = 0;
 },
 {
+disabled = 1;
 name = italicAngle;
 value = "16";
+},
+{
+name = "Keep Overlapping Components";
+value = 1;
 }
 );
 instanceInterpolations = {
@@ -6369,7 +6382,7 @@ master01 = 0.1;
 isItalic = 1;
 linkStyle = SemiExpanded;
 name = "SemiExpanded Italic";
-widthClass = 7;
+widthClass = 6;
 },
 {
 axesValues = (
@@ -6405,7 +6418,7 @@ isItalic = 1;
 linkStyle = "SemiExpanded Light";
 name = "SemiExpanded Light Italic";
 weightClass = 300;
-widthClass = 7;
+widthClass = 6;
 },
 {
 axesValues = (
@@ -6442,7 +6455,7 @@ isItalic = 1;
 linkStyle = "SemiExpanded Medium";
 name = "SemiExpanded Medium Italic";
 weightClass = 500;
-widthClass = 7;
+widthClass = 6;
 },
 {
 axesValues = (
@@ -6479,7 +6492,7 @@ isItalic = 1;
 linkStyle = "SemiExpanded Semibold";
 name = "SemiExpanded Semibold Italic";
 weightClass = 600;
-widthClass = 7;
+widthClass = 6;
 },
 {
 axesValues = (
@@ -6517,7 +6530,29 @@ isItalic = 1;
 linkStyle = SemiExpanded;
 name = "SemiExpanded Bold Italic";
 weightClass = 700;
-widthClass = 7;
+widthClass = 6;
+},
+{
+axesValues = (
+400,
+100,
+47
+);
+customParameters = (
+{
+name = "Keep Overlapping Components";
+value = 0;
+},
+{
+name = italicAngle;
+value = "16";
+}
+);
+instanceInterpolations = {
+"997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 0.47;
+master01 = 0.53;
+};
+name = "SemiEnlarged Italic";
 },
 {
 axesValues = (
@@ -6528,7 +6563,7 @@ axesValues = (
 customParameters = (
 {
 name = "Keep Overlapping Components";
-value = 1;
+value = 0;
 },
 {
 name = italicAngle;

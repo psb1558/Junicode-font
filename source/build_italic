@@ -1,0 +1,43 @@
+#!/bin/bash
+
+outputtype="ttf"
+
+instanceparam="-i"
+
+for arg in $@
+do
+  if [$arg == "otf"]
+  then
+    outputtype=$arg
+  elif [$arg == "variable"]
+  then
+    outputtype=$arg
+    instanceparam=""
+  elif [$arg == "variable-cff2"]
+  then
+    outputtype=$arg
+    instanceparam=""
+  fi
+done
+
+glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF \
+ --write-public-skip-export-glyphs Junicode-Italic.glyphs
+if [ $? -ne 0 ]
+then
+ echo "glyphs2ufo failed"
+ exit 1
+fi
+
+xsltproc -o Junicode-Italic-fixed.designspace fix_wdth_axis.xsl Junicode-Italic.designspace
+if [ $? -ne 0 ]
+then
+ echo "xsltproc failed"
+ exit 1
+fi
+
+fontmake -o $outputtype $instanceparam -m "Junicode-Italic-fixed.designspace"
+if [ $? -ne 0 ]
+then
+ echo "fontmake failed"
+ exit 1
+fi

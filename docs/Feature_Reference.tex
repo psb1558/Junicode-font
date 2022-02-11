@@ -11,7 +11,154 @@
 \usepackage{fancyhdr}
 \usepackage[english,greek,lithuanian,polish,latin]{babel}
 \usepackage[quiet]{fontspec}
-\setmainfont{Junicode Two Beta SemiExpanded}[Language=English,StylisticSet=10]
+% \setmainfont{Junicode Two Beta SemiExpanded}[Language=English,StylisticSet=10]
+\setmainfont{JunicodeTwoBetaVF-Roman.otf}[
+  ItalicFont = JunicodeTwoBetaVF-Italic.otf,
+  BoldFont = JunicodeTwoBetaVF-Roman.otf,
+  BoldItalicFont =  JunicodeTwoBetaVF-Italic.otf,
+  Contextuals=Alternate,
+  StylisticSet=10,
+  Numbers={Lowercase,Proportional},
+  UprightFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=300,wdth=100}}}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=300,wdth=98}}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=100}}}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=98}}}
+    },
+  },
+]
+\setfontface\regular{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+\setfontface\narrow{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=350,wdth=75}}}
+  },
+]
+\setfontface\seminarrow{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=350,wdth=87.5}}}
+  },
+]
+\setfontface\seminarrowlight{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=350,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=300,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=300,wdth=87.5}}}
+  },
+]
+\setfontface\semiwide{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=350,wdth=112.5}}}
+  },
+]
+\setfontface\wide{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
+    {Size={22-},       RawFeature={axis={wght=350,wdth=125}}}
+  },
+]
+\setfontface\light{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=350,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=300,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=300,wdth=100}}}
+  },
+]
+\setfontface\medium{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
+  },
+]
+\setfontface\semicondsemibold{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=650,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=600,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=600,wdth=87.5}}}
+  },
+]
+\setfontface\condbold{JunicodeTwoBetaVF-Roman.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=700,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=700,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=700,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=700,wdth=75}}}
+  },
+]
+\setfontface\stditalic{JunicodeTwoBetaVF-Italic.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+\setfontface\semiconditalic{JunicodeTwoBetaVF-Italic.otf}[
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=300,wdth=100}}}
+  },
+]
+\setmonofont{SourceCodeVariable-Roman.otf}[
+  Scale = MatchLowercase,
+  Numbers = Lowercase,
+  SizeFeatures={
+    {Size={-8},        RawFeature={axis={wght=500}}},
+    {Size={8-11},      RawFeature={axis={wght=450}}},
+    {Size={11-},       RawFeature={axis={wght=400}}}
+  }
+]
+
+
 \usepackage{xcolor,colortbl}
 \definecolor{BrickRed}{RGB}{146,18,6}
 \definecolor{SlateGray}{RGB}{112,128,144}
@@ -48,19 +195,20 @@
 \newcommand{\ltab}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
 \newcommand{\ornm}[2][0]{{\addfontfeature{Ornament=#1}#2}}
 \newcommand{\revthorn}[1]{{\addfontfeature{StylisticSet=1}#1}}
-\newfontface\regular{Junicode Two Beta}
-\newfontface\narrow{Junicode Two Beta Condensed}
-\newfontface\seminarrow{Junicode Two Beta SemiCondensed}
-\newfontface\seminarrowlight{Junicode Two Beta SemiCondensed Light}
-\newfontface\semiwide{Junicode Two Beta SemiExpanded}
-\newfontface\wide{Junicode Two Beta Expanded}
-\newfontface\light{Junicode Two Beta Light}
-%\newfontface\semibold{Junicode Two Beta Semibold}
-\newfontface\medium{Junicode Two Beta SemiExpanded Medium}
-\newfontface\semicondsemibold{Junicode Two Beta SemiCondensed Semibold}
-\newfontface\condbold{Junicode Two Beta Condensed Bold}
-\newfontface\stditalic{Junicode Two Beta Italic}
-\newfontface\semiconditalic{Junicode Two Beta SemiCondensed Italic}
+\newcommand{\grk}{\addfontfeature{Script=Greek,Language=Greek}}
+\newcommand{\ltech}{Lua\kern-1.5pt\TeX}
+%\newfontface\regular{Junicode Two Beta}
+%\newfontface\narrow{Junicode Two Beta Condensed}
+%\newfontface\seminarrow{Junicode Two Beta SemiCondensed}
+%\newfontface\seminarrowlight{Junicode Two Beta SemiCondensed Light}
+%\newfontface\semiwide{Junicode Two Beta SemiExpanded}
+%\newfontface\wide{Junicode Two Beta Expanded}
+%\newfontface\light{Junicode Two Beta Light}
+%\newfontface\medium{Junicode Two Beta SemiExpanded Medium}
+%\newfontface\semicondsemibold{Junicode Two Beta SemiCondensed Semibold}
+%\newfontface\condbold{Junicode Two Beta Condensed Bold}
+%\newfontface\stditalic{Junicode Two Beta Italic}
+%\newfontface\semiconditalic{Junicode Two Beta SemiCondensed Italic}
 \newopentypefeature{MyStyle}{insular}{+ss02}
 \newopentypefeature{MyStyle}{altogonek}{+cv62}
 \newopentypefeature{MyStyle}{mirrored}{+rtlm}
@@ -217,9 +365,9 @@ and the other, accompanying the italic face, is based on type designed by Alexan
 Wilson (1714–86) of Glasgow and used in numerous books published by
 the Foulis Press, most notably the great Glasgow Homer of 1756–58.
 
-The font dates from 1998, when the developer began to revise his
+The Junicode project began around 1998, when the developer began to revise his
 older (early 1990s) “Junius” fonts for medievalists to take account of the Unicode
-system standard, then relatively new. The font’s name, a contraction of
+standard, then relatively new. The font’s name, a contraction of
 “Junius Unicode,” was supposed to be a stopgap, serving until a more suitable name
 could be found, but the name “Junicode” is now so well known that it can’t be
 changed. The project has been active for its entire history, responding to
@@ -338,7 +486,7 @@ sadr̥śāsadr̥śatvācca viṣayāviṣayatvataḥ \\
 ɛnʤɛndrəd ɪs θə fluːr hwɑn zɛfɪrʊs eːk wɪθ hɪs sweːtə bræːθ}} (Regular)
 
 \subsection*{Greek}
-{\regular\addfontfeature{Language=Greek} βίβλος
+{\regular\grk βίβλος
 γενέσεως ἰησοῦ χριστοῦ υἱοῦ δαυὶδ
 υἱοῦ ἀβραάμ.
 ἀβραὰμ
@@ -356,7 +504,7 @@ sadr̥śāsadr̥śatvācca viṣayāviṣayatvataḥ \\
 σαλμὼν
 δὲ ἐγέννησεν τὸν βόες ἐκ τῆς ῥαχά} (Regular)\\
 
-\noindent\textit{\addfontfeature{Language=Greek}βίβλος
+\noindent\textit{\grk βίβλος
 γενέσεως ἰησοῦ χριστοῦ υἱοῦ δαυὶδ
 υἱοῦ ἀβραάμ.
 ἀβραὰμ
@@ -1097,13 +1245,14 @@ to right or bottom to top; 3. the \textit{ypogegrammeni} (U+0345), or for
 capitals, if you prefer, the \textit{prosgegrammeni} (U+1FBE).
 
 For example, the sequence ω (U+03C9) ◌̓ (U+0313) ◌́ (U+0301) ◌ͅ (U+0345)
-produces \textLetterExample{ᾤ}. Substitute capital Ω (U+03A9) and the result is
-\textLetterExample{ᾬ}. Note that in a number of applications the layout
+produces \textLetterExample{\grk \char"03C9\char"0313\char"0301\char"0345}.
+Substitute capital Ω (U+03A9) and the result is
+\textLetterExample{\grk \char"03A9\char"0313\char"0301\char"0345}. Note that in a number of applications the layout
 engine will perform these substitutions before Junicode’s own programming is
 invoked. If either the layout engine or Junicode fails to produce your
 preferred result, try placing U+034F \textUName{combining grapheme joiner} somewhere
 in the sequence of combining marks---for example, before the \textit{ypogegrammeni}
-to make \textLetterExample{Ὤ͏ͅ}.
+to make \textLetterExample{\grk Ὤ͏ͅ}.
 
 \subsection[26. ss03 {}-- Alternate Greek]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{ss03} -- Alternate Greek}
@@ -2209,8 +2358,8 @@ needed.
 
 \vspace*{\fill}
 \begin{center}
-{\stditalic{This document was set in 12pt Junicode SemiExpanded\\
-using the {\XeLaTeX} typesetting system with fontspec for font management.\\
+{\stditalic{This document was set in 12pt Junicode VF SemiExpanded\\
+using the {\ltech} typesetting system with fontspec for font management.\\
 The source for the document, Feature\_Reference.tex, is available at}}\\
 {\color{BrickRed}https://github.com/psb1558/Junicode-font.}
 \end{center}

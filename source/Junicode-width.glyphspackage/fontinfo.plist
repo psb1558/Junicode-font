@@ -133,91 +133,6 @@ name = "Virtual Master";
 value = (
 {
 Axis = Weight;
-Location = 700;
-},
-{
-Axis = Width;
-Location = 125;
-},
-{
-Axis = Enlarge;
-Location = 0;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
-Location = 700;
-},
-{
-Axis = Width;
-Location = 75;
-},
-{
-Axis = Enlarge;
-Location = 0;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
-Location = 700;
-},
-{
-Axis = Width;
-Location = 75;
-},
-{
-Axis = Enlarge;
-Location = 100;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
-Location = 300;
-},
-{
-Axis = Width;
-Location = 75;
-},
-{
-Axis = Enlarge;
-Location = 0;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
-Location = 300;
-},
-{
-Axis = Width;
-Location = 125;
-},
-{
-Axis = Enlarge;
-Location = 0;
-}
-);
-},
-{
-name = "Virtual Master";
-value = (
-{
-Axis = Weight;
 Location = 400;
 },
 {
@@ -290,7 +205,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2022-02-07 20:00:17 +0000";
+date = "2022-02-10 22:53:18 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -5147,17 +5062,6 @@ size = "-25";
 );
 }
 );
-guides = (
-{
-angle = 180;
-pos = (-71,-148);
-},
-{
-angle = 180;
-filter = "category == \"Letter\" AND subCategory == \"Uppercase\"";
-pos = (-71,-140);
-}
-);
 id = master01;
 metricValues = (
 {
@@ -5399,16 +5303,6 @@ pos = "-550";
 size = "-25";
 }
 );
-}
-);
-guides = (
-{
-angle = 0.8488;
-pos = (-62,-168);
-},
-{
-angle = 180;
-pos = (-71,-140);
 }
 );
 iconName = Bold;
@@ -5653,11 +5547,6 @@ pos = "-550";
 size = "-25";
 }
 );
-}
-);
-guides = (
-{
-pos = (558,-42);
 }
 );
 iconName = Light;
@@ -6398,16 +6287,6 @@ size = "-25";
 );
 }
 );
-guides = (
-{
-angle = 180;
-pos = (-71,-148);
-},
-{
-angle = 180;
-pos = (-71,-140);
-}
-);
 id = "00F4936D-6309-4DEC-83B3-42806ED1A477";
 metricValues = (
 {
@@ -6456,48 +6335,9 @@ GSOffsetVertical = 0;
 instances = (
 {
 axesValues = (
-400,
-100,
-0
-);
-instanceInterpolations = {
-master01 = 1;
-};
-name = Regular;
-properties = (
-{
-key = familyNames;
-values = (
-{
-language = dflt;
-value = "Junicode Two Beta VF";
-}
-);
-}
-);
-type = variable;
-},
-{
-axesValues = (
 300,
 100,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 1;
@@ -6511,38 +6351,6 @@ axesValues = (
 100,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Elidable STAT Axis Value Name";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Name Table Entry";
-value = "4 1; JuniusX";
-},
-{
-name = "Name Table Entry";
-value = "4 3; JuniusX";
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 master01 = 1;
 };
@@ -6553,22 +6361,6 @@ axesValues = (
 500,
 100,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
@@ -6583,22 +6375,6 @@ axesValues = (
 100,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.66667;
 master01 = 0.33333;
@@ -6612,22 +6388,6 @@ axesValues = (
 100,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 1;
 };
@@ -6640,18 +6400,6 @@ axesValues = (
 500,
 75,
 0
-);
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.91667;
@@ -6670,18 +6418,6 @@ axesValues = (
 75,
 0
 );
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 1.25;
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;
@@ -6699,22 +6435,6 @@ axesValues = (
 75,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1;
 };
@@ -6726,18 +6446,6 @@ axesValues = (
 600,
 75,
 0
-);
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.83333;
@@ -6754,18 +6462,6 @@ axesValues = (
 700,
 75,
 0
-);
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.1875;
@@ -6785,18 +6481,6 @@ axesValues = (
 87.5,
 0
 );
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
@@ -6811,18 +6495,6 @@ axesValues = (
 300,
 87.5,
 0
-);
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.875;
@@ -6845,16 +6517,6 @@ customParameters = (
 {
 name = "Style Name as STAT entry";
 value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
 }
 );
 instanceInterpolations = {
@@ -6869,18 +6531,6 @@ axesValues = (
 600,
 87.5,
 0
-);
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.04167;
@@ -6898,18 +6548,6 @@ axesValues = (
 700,
 87.5,
 0
-);
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.05;
@@ -6930,18 +6568,6 @@ axesValues = (
 112.5,
 0
 );
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.875;
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.19444;
@@ -6959,22 +6585,6 @@ axesValues = (
 112.5,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.5;
 master01 = 0.5;
@@ -6987,22 +6597,6 @@ axesValues = (
 500,
 112.5,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
@@ -7018,22 +6612,6 @@ axesValues = (
 600,
 112.5,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = -0.04167;
@@ -7051,22 +6629,6 @@ axesValues = (
 700,
 112.5,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.05;
@@ -7087,18 +6649,6 @@ axesValues = (
 125,
 0
 );
-customParameters = (
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 1.25;
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.5;
@@ -7116,22 +6666,6 @@ axesValues = (
 125,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1;
 };
@@ -7143,22 +6677,6 @@ axesValues = (
 500,
 125,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.08333;
@@ -7176,22 +6694,6 @@ axesValues = (
 125,
 0
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.16667;
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.66667;
@@ -7207,22 +6709,6 @@ axesValues = (
 700,
 125,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.1875;
@@ -7242,40 +6728,6 @@ axesValues = (
 100,
 47
 );
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Elidable STAT Axis Value Name";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-disabled = 1;
-name = "Name Table Entry";
-value = "4 1; JuniusX";
-},
-{
-disabled = 1;
-name = "Name Table Entry";
-value = "4 3; JuniusX";
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
-);
 instanceInterpolations = {
 "00F4936D-6309-4DEC-83B3-42806ED1A477" = 0.47;
 master01 = 0.53;
@@ -7287,40 +6739,6 @@ axesValues = (
 400,
 100,
 100
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wght;
-},
-{
-name = "Elidable STAT Axis Value Name";
-value = wght;
-},
-{
-name = "Export STAT Table";
-value = 0;
-},
-{
-name = "Style Name as STAT entry";
-value = wdth;
-},
-{
-disabled = 1;
-name = "Name Table Entry";
-value = "4 1; JuniusX";
-},
-{
-disabled = 1;
-name = "Name Table Entry";
-value = "4 3; JuniusX";
-},
-{
-name = "Disable autohinting for glyphs";
-value = (
-"uniE270 uniE27D uniE670 uniE67D uniE68A uniE736 uniE8B0 uniE8B1 uniEF90 uniEF91 uniEF92 uniEF93 uniEF94 uniEF95 uniEF96 uniEF97 uniEF98 uniEF99 uniEF9A uniEF9B uniEF9C uniEF9F uniF011 uniF014 uniF018 uniF019 uniF01B uniF01D uniF01E uniF19F uni2619 uni261A uni261B uni261C uni261D uni261E uni261F uni2740 uni2766 uni2767"
-);
-}
 );
 instanceInterpolations = {
 "00F4936D-6309-4DEC-83B3-42806ED1A477" = 1;

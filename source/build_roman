@@ -29,15 +29,14 @@ done
 if [ "$generateufo" = true ]
 then
   echo "Generating UFOs and designspace file from Glyphs source"
-  glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF \
-   --write-public-skip-export-glyphs Junicode-Italic.glyphs
+  glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF --write-public-skip-export-glyphs Junicode-width.glyphs
   if [ $? -ne 0 ]
   then
     echo "glyphs2ufo failed"
     exit 1
   fi
   echo "Cleaning up designspace file"
-  xsltproc -o Junicode-Italic-fixed.designspace fix_wdth_axis.xsl Junicode-Italic.designspace
+  xsltproc -o Junicode-width-fixed.designspace fix_wdth_axis.xsl Junicode-width.designspace
   if [ $? -ne 0 ]
   then
    echo "xsltproc failed"
@@ -46,7 +45,7 @@ then
 fi
 
 echo "building font(s)"
-fontmake -o $outputtype $instanceparam -m "Junicode-Italic-fixed.designspace"
+fontmake -o $outputtype $instanceparam -m "Junicode-width-fixed.designspace"
 if [ $? -ne 0 ]
 then
  echo "fontmake failed"

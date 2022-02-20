@@ -51,3 +51,15 @@ then
  echo "fontmake failed"
  exit 1
 fi
+
+if [ $outputtype == "variable" ]
+then
+  cp variable_ttf/Junicode-width-fixed-VF.ttf variable_ttf/JunicodeTwoBetaVF-Roman.ttf
+  rm variable_ttf/Junicode-width-fixed-VF.ttf
+fi
+if [ $outputtype == "variable-cff2" ]
+then
+  cp variable_otf/Junicode-width-fixed-VF.otf variable_otf/JunicodeTwoBetaVF-Roman.otf
+  rm -i variable_otf/Junicode-width-fixed-VF.otf
+fi
+exit 0

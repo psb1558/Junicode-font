@@ -296,11 +296,11 @@ lookup  altgreek {
 #  sub zcomb by zcomb.low ;
 # } sub_low_diacritics ;
 
-lookup ethdiacritic {
-  sub eth' @lowdiacritics by eth.withdiacritic ;
-  sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
-  sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
-} ethdiacritic ;
+#lookup ethdiacritic {
+#  sub eth' @lowdiacritics by eth.withdiacritic ;
+#  sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
+#  sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
+#} ethdiacritic ;
 
 # If \"Contextual long s\" is on, sub s by longs.
 
@@ -4539,7 +4539,13 @@ lookup f_alt {
   sub f' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
 } f_alt;
 
-lookup ethdiacritic ;
+lookup ethdiacritic {
+  sub eth' @lowdiacritics by eth.withdiacritic ;
+  sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
+  sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
+} ethdiacritic ;
+
+#lookup ethdiacritic ;
 lookup calt_f_alt ;
 lookup calt_fligs_1 ;
 lookup calt_fligs_2 ;

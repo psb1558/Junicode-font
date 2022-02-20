@@ -1690,6 +1690,29 @@
     </compile-if>
   </gl>
 
+  <gl pnm="uni1EFA">
+    <set nm="top-sh-a" p="{693;666} {438;666} {295;666}"/>
+    <set nm="top-sh-b" p="{693;628} {438;628} {295;628}"/>
+    <set nm="bottom-sh-b" p="{695;30} {297;30}"/>
+    <callm nm="cap-serif">
+      <pmset>
+        base: {168;663},
+        base-sh: {566;663},
+        pt-a: {40;666},
+        pt-a-sh: top-sh-a,
+        pt-b: {40;628},
+        pt-b-sh: top-sh-b
+      </pmset>
+      <pmset>
+        base: {171;0},
+        pt-a: {46;-3},
+        pt-a-sh: {927;-3},
+        pt-b: {46;34},
+        pt-b-sh: bottom-b-sh
+      </pmset>
+    </callm>
+  </gl>
+
   <gl pnm="M">
     <set nm="bot-a" p="12 0  65 61"/>
     <set nm="bot-b" p="8 69 57"/>

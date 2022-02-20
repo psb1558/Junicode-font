@@ -203,9 +203,13 @@ value = 9;
 {
 name = "Propagate Anchors";
 value = 1;
+},
+{
+name = versionString;
+value = "Version %d.%03d beta";
 }
 );
-date = "2022-02-10 22:53:18 +0000";
+date = "2022-02-19 19:43:48 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -279,18 +283,18 @@ lookup  altgreek {
   sub omega by omega.alt ;
 } altgreek;
 
-lookup sub_low_diacritics {
-  sub muncialcomb by muncialcomb.low ;
-  sub dotlessicomb by dotlessicomb.low ;
-  sub Rcomb by Rcomb.low ;
-  sub acomb by acomb.low ;
-  sub ecomb by ecomb.low ;
-  sub ocomb by ocomb.low ;
-  sub rcomb by rcomb.low ;
-  sub tcomb by tcomb.low ;
-  sub vcomb by vcomb.low ;
-  sub zcomb by zcomb.low ;
-} sub_low_diacritics ;
+# lookup sub_low_diacritics {
+#  sub muncialcomb by muncialcomb.low ;
+#  sub dotlessicomb by dotlessicomb.low ;
+#  sub Rcomb by Rcomb.low ;
+#  sub acomb by acomb.low ;
+#  sub ecomb by ecomb.low ;
+#  sub ocomb by ocomb.low ;
+#  sub rcomb by rcomb.low ;
+#  sub tcomb by tcomb.low ;
+#  sub vcomb by vcomb.low ;
+#  sub zcomb by zcomb.low ;
+# } sub_low_diacritics ;
 
 lookup ethdiacritic {
   sub eth' @lowdiacritics by eth.withdiacritic ;
@@ -1636,7 +1640,7 @@ code = "    sub ampersand by tironiansignet ;
     sub d by dinsular ;
     sub f by finsular ;
     sub g by ginsular ;
-    sub i by dotlessi ;
+    sub i by i.alt2 ;
     sub r by rinsular ;
     sub s by sinsular ;
     sub t by tinsular ;
@@ -1899,6 +1903,15 @@ code = "lookup ss12_01 {
 } ss12_01 ;
 lookup ss12_02 {
   sub f by Feoh ;
+  sub f.lf by Feoh ;
+  sub f.lfrij by Feoh ;
+  sub f.lfrl by Feoh ;
+  sub f.lfrtall by Feoh ;
+  sub f.rf by Feoh ;
+  sub f.rij by Feoh ;
+  sub f.rl by Feoh ;
+  sub f.rtall by Feoh ;
+  sub f.alt.lf by Feoh ;
   sub F by Feoh ;
   sub v by Feoh ;
   sub V by Feoh ;
@@ -1908,6 +1921,8 @@ lookup ss12_02 {
   sub Thorn by uni16A6 ;
   sub thorn.loclENG by uni16A6 ;
   sub Thorn.loclENG by uni16A6 ;
+  sub thorn.loclENG.lf by uni16A6 ;
+  sub thorn.lf by uni16A6 ;
   sub eth by uni16A6 ;
   sub eth.loclENG by uni16A6 ;
   sub Eth by uni16A6 ;
@@ -1918,16 +1933,20 @@ lookup ss12_02 {
   sub c by uni16B3 ;
   sub C by uni16B3 ;
   sub k by uni16B3 ;
+  sub k.lf by uni16B3 ;
   sub K by uni16B3 ;
   sub g by uni16B7 ;
   sub G by uni16B7 ;
 #  sub uni01BF by uni16B9 ;
 #  sub uni01F7 by uni16B9 ;
   sub h by uni16BB ;
+  sub h.lf by uni16BB ;
   sub H by uni16BB ;
   sub n by uni16BE ;
   sub N by uni16BE ;
   sub i by uni16C1 ;
+  sub i.lf by uni16C1 ;
+  sub i.llongs by uni16C1 ;
   sub I by uni16C1 ;
   sub gdotaccent by uni16C4 ;
   sub Gdotaccent by uni16C4 ;
@@ -1940,6 +1959,7 @@ lookup ss12_02 {
   sub t by uni16CF ;
   sub T by uni16CF ;
   sub b by uni16D2 ;
+  sub b.lf by uni16D2 ;
   sub B by uni16D2 ;
   sub e by uni16D6 ;
   sub E by uni16D6 ;
@@ -1948,6 +1968,7 @@ lookup ss12_02 {
   sub oe by uni16DF ;
   sub OE by uni16DF ;
   sub l by uni16DA ;
+  sub l.lf by uni16DA ; 
   sub L by uni16DA ;
   sub d by uni16E5 ;
   sub D by uni16E5 ;
@@ -1965,7 +1986,8 @@ lookup ss12_02 {
   sub Eng by uni16DD ;
   sub w by uni16B9 ;
   sub W by uni16B9 ;
-} ss12_02 ;";
+} ss12_02 ;
+";
 labels = (
 {
 language = dflt;
@@ -1976,6 +1998,15 @@ tag = ss12;
 },
 {
 code = "  sub f by Feoh ;
+  sub f.lf by Feoh ;
+  sub f.lfrij by Feoh ;
+  sub f.lfrl by Feoh ;
+  sub f.lfrtall by Feoh ;
+  sub f.rf by Feoh ;
+  sub f.rij by Feoh ;
+  sub f.rl by Feoh ;
+  sub f.rtall by Feoh ;
+  sub f.alt.lf by Feoh ;
   sub F by Feoh ;
   sub u by uni16A2 ;
   sub U by uni16A2 ;
@@ -1983,6 +2014,8 @@ code = "  sub f by Feoh ;
   sub Thorn by uni16A6 ;
   sub thorn.loclENG by uni16A6 ;
   sub Thorn.loclENG by uni16A6 ;
+  sub thorn.loclENG.lf by uni16A6 ;
+  sub thorn.lf by uni16A6 ;
   sub eth by uni16A6 ;
   sub eth.loclENG by uni16A6 ;
   sub a by uni16A8 ;
@@ -1990,6 +2023,7 @@ code = "  sub f by Feoh ;
   sub r by uni16B1 ;
   sub R by uni16B1 ;
   sub k by uni16B2 ;
+  sub k.lf by uni16B2 ;
   sub K by uni16B2 ;
   sub c by uni16B2 ;
   sub C by uni16B2 ;
@@ -2000,6 +2034,7 @@ code = "  sub f by Feoh ;
   sub v by uni16B9 ;
   sub V by uni16B9 ;
   sub h by uni16BA ;
+  sub h.lf by uni16BA ;
   sub H by uni16BA ;
   sub n by uni16BE ;
   sub N by uni16BE ;
@@ -2016,12 +2051,14 @@ code = "  sub f by Feoh ;
   sub t by uni16CF ;
   sub T by uni16CF ;
   sub b by uni16D2 ;
+  sub b.lf by uni16D2 ;
   sub B by uni16D2 ;
   sub e by uni16D6 ;
   sub E by uni16D6 ;
   sub m by uni16D7 ;
   sub M by uni16D7 ;
   sub l by uni16DA ;
+  sub l.lf by uni16DA ; 
   sub L by uni16DA ;
   sub eng by uni16DC ;
   sub Eng by uni16DC ;
@@ -2030,7 +2067,10 @@ code = "  sub f by Feoh ;
   sub d by uni16DE ;
   sub D by uni16DE ;
   sub i by uni16C1 ;
-  sub I by uni16C1 ;";
+  sub i.lf by uni16C1 ;
+  sub i.llongs by uni16C1 ;
+  sub I by uni16C1 ;
+";
 labels = (
 {
 language = dflt;
@@ -2041,6 +2081,15 @@ tag = ss13;
 },
 {
 code = "sub f by Feoh ;
+  sub f.lf by Feoh ;
+  sub f.lfrij by Feoh ;
+  sub f.lfrl by Feoh ;
+  sub f.lfrtall by Feoh ;
+  sub f.rf by Feoh ;
+  sub f.rij by Feoh ;
+  sub f.rl by Feoh ;
+  sub f.rtall by Feoh ;
+  sub f.alt.lf by Feoh ;
 sub F by Feoh ;
 sub v by Feoh ;
 sub V by Feoh ;
@@ -2062,6 +2111,8 @@ sub thorn by uni16A6 ;
 sub thorn.loclENG by uni16A6 ;
 sub Thorn by uni16A6 ;
 sub Thorn.loclENG by uni16A6 ;
+  sub thorn.loclENG.lf by uni16A6 ;
+  sub thorn.lf by uni16A6 ;
 sub eth by uni16A6 ;
 sub eth.loclENG by uni16A6 ;
 sub Eth by uni16A6 ;
@@ -2072,18 +2123,22 @@ sub O by uni16AC ;
 sub r by uni16B1 ;
 sub R by uni16B1 ;
 sub k by uni16B4 ;
+sub k.lf by uni16B4 ;
 sub K by uni16B4 ;
 sub c by uni16B4 ;
 sub C by uni16B4 ;
 sub g by uni16B4 ;
 sub G by uni16B4 ;
 sub h by uni16BC ;
+  sub h.lf by uni16BC ;
 sub H by uni16BC ;
 sub n by uni16BE ;
 sub N by uni16BE ;
 sub e by uni16C1 ;
 sub E by uni16C1 ;
 sub i by uni16C1 ;
+  sub i.lf by uni16C1 ;
+  sub i.llongs by uni16C1 ;
 sub I by uni16C1 ;
 sub j by uni16C1 ;
 sub J by uni16C1 ;
@@ -2099,13 +2154,16 @@ sub T by uni16CF ;
 sub d by uni16CF ;
 sub D by uni16CF ;
 sub b by uni16D2 ;
+  sub b.lf by uni16D2 ;
 sub B by uni16D2 ;
 sub p by uni16D2 ;
 sub P by uni16D2 ;
 sub m by uni16D8 ;
 sub M by uni16D8 ;
 sub l by uni16DA ;
-sub L by uni16DA ;";
+  sub l.lf by uni16DA ; 
+sub L by uni16DA ;
+";
 labels = (
 {
 language = dflt;
@@ -2228,7 +2286,17 @@ value = "Latin to Gothic";
 tag = ss19;
 },
 {
-code = "lookup sub_low_diacritics ;
+code = "# lookup sub_low_diacritics ;
+  sub muncialcomb by muncialcomb.low ;
+  sub dotlessicomb by dotlessicomb.low ;
+  sub Rcomb by Rcomb.low ;
+  sub acomb by acomb.low ;
+  sub ecomb by ecomb.low ;
+  sub ocomb by ocomb.low ;
+  sub rcomb by rcomb.low ;
+  sub tcomb by tcomb.low ;
+  sub vcomb by vcomb.low ;
+  sub zcomb by zcomb.low ;
 ";
 labels = (
 {
@@ -2335,9 +2403,7 @@ code = "sub I from [ Idotaccent uniA7FE I.enlarged ] ;
 tag = cv17;
 },
 {
-code = "sub i from [ dotlessi i.alt i.alt1 i.enlarged ] ;
-# figure this out
-# sub dotlessi      from [ i                                  ] ;
+code = "sub i from [ i.alt2 i.alt i.alt1 i.enlarged ] ;
 ";
 tag = cv18;
 },
@@ -2347,7 +2413,7 @@ code = "sub J from [ Jdotaccent j.enlarged ] ;
 tag = cv19;
 },
 {
-code = "sub j from [ jdotless j.alt2 jdotaccent j.enlarged ] ;
+code = "sub j from [ j.alt3 j.alt2 jdotaccent j.enlarged ] ;
 ";
 tag = cv20;
 },
@@ -6447,6 +6513,7 @@ axesValues = (
 75,
 0
 );
+exports = 0;
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.83333;
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.66667;
@@ -6463,6 +6530,7 @@ axesValues = (
 75,
 0
 );
+exports = 0;
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.1875;
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.375;
@@ -6549,6 +6617,7 @@ axesValues = (
 87.5,
 0
 );
+exports = 0;
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.05;
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.18889;
@@ -6568,6 +6637,7 @@ axesValues = (
 112.5,
 0
 );
+exports = 0;
 instanceInterpolations = {
 "6ABD9449-5E80-4451-809E-12ADEB9E9AB4" = 0.875;
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = -0.19444;
@@ -14985,10 +15055,6 @@ key = manufacturerURL;
 value = "https://github.com/psb1558/Junicode-New";
 },
 {
-key = versionString;
-value = "Version %d.%03d beta";
-},
-{
 key = licenses;
 values = (
 {
@@ -15072,5 +15138,5 @@ type = unicode;
 };
 };
 versionMajor = 1;
-versionMinor = 40;
+versionMinor = 41;
 }

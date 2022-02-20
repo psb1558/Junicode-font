@@ -123,7 +123,7 @@ value = 1;
 },
 {
 name = versionString;
-value = "Version %d.%03d alpha";
+value = "Version %d.%03d beta";
 },
 {
 name = "Use Extension Kerning";
@@ -160,7 +160,7 @@ name = "Disable Subroutines";
 value = 1;
 }
 );
-date = "2022-02-10 22:53:34 +0000";
+date = "2022-02-11 12:02:29 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -1566,7 +1566,7 @@ code = "    sub ampersand by etTironian ;
     sub d by dinsular ;
     sub f by finsular ;
     sub g by ginsular ;
-    sub i by dotlessi ;
+    sub i by i.alt2 ;
     sub r by rinsular ;
     sub s by sinsular ;
     sub t by tinsular ;
@@ -2217,7 +2217,7 @@ code = "sub I from [ Idotaccent Longaepigraphici ] ;
 tag = cv17;
 },
 {
-code = "sub i from [ dotlessi i.alt i.alt1 ] ;
+code = "sub i from [ i.alt2 i.alt i.alt1 ] ;
 # figure this out
 # sub dotlessi      from [ i                                  ] ;
 ";
@@ -2229,7 +2229,7 @@ code = "sub J from [ Jdotaccent ] ;
 tag = cv19;
 },
 {
-code = "sub j from [ jdotless j.alt2 jdotaccent ] ;
+code = "sub j from [ j.alt3 j.alt2 jdotaccent ] ;
 ";
 tag = cv20;
 },
@@ -5568,7 +5568,7 @@ pos = 458;
 pos = 8;
 }
 );
-name = Enlarged;
+name = "Enlarged Italic";
 userData = {
 GSCornerRadius = 10;
 GSExtrudeAngle = 30;
@@ -6016,6 +6016,8 @@ instanceInterpolations = {
 "997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 0.47;
 master01 = 0.53;
 };
+isItalic = 1;
+linkStyle = SemiEnlarged;
 name = "SemiEnlarged Italic";
 },
 {
@@ -6027,6 +6029,8 @@ axesValues = (
 instanceInterpolations = {
 "997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 1;
 };
+isItalic = 1;
+linkStyle = Enlarged;
 name = "Enlarged Italic";
 }
 );
@@ -7275,5 +7279,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 40;
+versionMinor = 41;
 }

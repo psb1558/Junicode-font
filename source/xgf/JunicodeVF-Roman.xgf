@@ -1701,7 +1701,8 @@
         pt-a: {40;666},
         pt-a-sh: top-sh-a,
         pt-b: {40;628},
-        pt-b-sh: top-sh-b
+        pt-b-sh: top-sh-b,
+        cv: cap-height
       </pmset>
       <pmset>
         base: {171;0},
@@ -1709,6 +1710,73 @@
         pt-a-sh: {927;-3},
         pt-b: {46;34},
         pt-b-sh: bottom-b-sh
+      </pmset>
+    </callm>
+  </gl>
+
+  <gl pnm="uniA746">
+    <!-- Lbroken -->
+    <cn nm="top" val="{168;663}"/>
+    <cn nm="bottom" val="{269;0}"/>
+    <callm nm="cap-serif">
+      <pmset>
+        base: "top", pt-a: {40;666}, pt-a-sh: {295;666},
+        pt-b: {40;628}, pt-b-sh: {295;628}, cv: cap-height
+      </pmset>
+      <pmset>
+        base: bottom, pt-a: {144;-3}, pt-a-sh: {675;-3},
+        pt-b: {144;34}, pt-b-sh: {395;30}
+      </pmset>
+    </callm>
+    <ip r="top bottom" p="{308;306} {210;357} {132;332} {230;282}"/>
+  </gl>
+
+  <gl pnm="Lslash">
+    <cn nm="top" val="{173;663}"/>
+    <cn nm="bottom" val="{176;0}"/>
+    <callm nm="cap-serif">
+      <pmset>
+        base: bottom,
+        pt-a: {51;-3},
+        pt-a-sh: {583;-3},
+        pt-b: {51;34},
+        pt-b-sh: {302;30},
+        ppem: 250
+      </pmset>
+      <pmset>
+        base: top,
+        pt-a: {45;666},
+        pt-a-sh: {300;666},
+        pt-b: {45;628},
+        pt-b-sh: {300;628},
+        base-cv: cap-height,
+        cup-cv: cap-serif-overshoot
+      </pmset>
+    </callm>
+    <ip r="top bottom" p="{410;486} {27;282} {435;439} {56;238}"/>
+  </gl>
+
+  <gl pnm="uniA780">
+    <!-- Lturned -->
+    <cn nm="top" val="{463;663}"/>
+    <cn nm="bottom" val="{466;0}"/>
+    <callm nm="cap-serif">
+      <pmset>
+        base: bottom,
+        pt-a: {338;-3},
+        pt-a-sh: {594;-3},
+        pt-b: {338;35},
+        pt-b-sh: {594;35},
+        ppem: 250
+      </pmset>
+      <pmset>
+        base: top,
+        pt-a: {587;666},
+        pt-a-sh: {56;666},
+        pt-b: {587;629},
+        pt-b-sh: {336;633},
+        base-cv: cap-height,
+        cup-cv: cap-serif-overshoot
       </pmset>
     </callm>
   </gl>
@@ -1737,6 +1805,23 @@
       </pmset>
     </callm>
     <ip r="14 33" p="38 4 73"/>
+  </gl>
+
+  <gl pnm="uni019C">
+    <!-- Mturned -->
+    <cn nm="bottom" val="{299;-13}"/>
+    <set nm="top-sh-a" p="{958;666} {703;666} {628;666} {372;666} {297;666}"/>
+    <set nm="top-sh-b" p="{958;628} {703;628} {628;628} {372;628} {297;628}"/>
+    <set nm="bottom-set" p="{625;-13} {800;-20}"/>
+    <callm nm="cap-serif">
+      base: {169;663}, pt-a: {41;666}, pt-a-sh: top-sh-a,
+      pt-b: {41;628}, pt-b-sh: top-sh-b, base-cv: cap-height
+    </callm>
+    <callm nm="cap-round-stem">
+      pt-a: {299;-13}, pt-b: {325;32}
+    </callm>
+    <sh r="{299;-13}" p="bottom-set"/>
+    <sh r="{325;32}" p="{663;32}"/>
   </gl>
 
   <gl pnm="N">

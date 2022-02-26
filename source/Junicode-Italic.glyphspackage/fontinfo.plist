@@ -160,7 +160,7 @@ name = "Disable Subroutines";
 value = 1;
 }
 );
-date = "2022-02-11 12:02:29 +0000";
+date = "2022-02-26 13:35:47 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -333,13 +333,14 @@ features = (
 {
 automatic = 1;
 code = "feature locl;
-feature swsh;
 feature ss10;
 feature cv84;
 feature case;
 feature nalt;
 feature sinf;
 feature frac;
+feature numr;
+feature dnom;
 feature tnum;
 feature onum;
 feature pnum;
@@ -348,6 +349,7 @@ feature zero;
 feature sups;
 feature subs;
 feature ornm;
+feature swsh;
 feature ss01;
 feature ss02;
 feature ss04;
@@ -364,6 +366,8 @@ feature ss20;
 feature ordn;
 feature cv01;
 feature cv02;
+feature cv03;
+feature cv04;
 feature cv05;
 feature cv06;
 feature cv07;
@@ -382,11 +386,14 @@ feature cv19;
 feature cv20;
 feature cv22;
 feature cv24;
+feature cv25;
 feature cv26;
 feature cv27;
 feature cv28;
 feature cv29;
 feature cv30;
+feature cv31;
+feature cv33;
 feature cv34;
 feature cv35;
 feature cv36;
@@ -396,6 +403,7 @@ feature cv39;
 feature cv40;
 feature cv44;
 feature cv48;
+feature cv49;
 feature cv50;
 feature cv51;
 feature cv52;
@@ -413,17 +421,19 @@ feature cv63;
 feature cv64;
 feature cv65;
 feature cv66;
-feature cv67;
 feature cv68;
 feature cv69;
+feature cv72;
 feature cv75;
 feature cv80;
 feature cv81;
+feature cv82;
 feature cv83;
 feature cv88;
-feature cv90;
+feature cv89;
 feature cv93;
 feature cv95;
+feature cv96;
 feature pcap;
 feature c2sc;
 feature smcp;
@@ -431,6 +441,15 @@ feature cv99;
 feature ss07;
 feature rtlm;
 feature ss17;
+feature cv21;
+feature cv23;
+feature cv32;
+feature cv41;
+feature cv42;
+feature cv43;
+feature cv45;
+feature cv46;
+feature cv47;
 ";
 tag = aalt;
 },
@@ -945,16 +964,6 @@ lookup grek_Composed {
 } grek_Composed ;
 ";
 tag = ccmp;
-},
-{
-code = "sub A by A.swash ;
-sub AE by AE.swash ;
-sub D by D.swash ;
-sub J by J.swash ;
-sub e by e.swash ;
-sub k by k.swash ;
-";
-tag = swsh;
 },
 {
 code = "  # Nine-character codes
@@ -1527,6 +1536,31 @@ lookup alpha_method {
   sub C by uniF01B;
 } alpha_method ;";
 tag = ornm;
+},
+{
+code = "lookup plain_swashes {
+  sub A by A.swash ;
+  sub AE by AE.swash ;
+  sub D by D.swash ;
+  sub J by J.swash ;
+  sub e by e.swash ;
+  sub k by k.swash ;
+} plain_swashes ;
+
+lookup Q_swash {
+  sub Q from [ Q.alt2 Q.swash ] ;
+} Q_swash ;
+
+lookup mecurl {
+  @meuncurled = [ c d f g k n r t ] ;
+  @mecurled = [ c.mecurl d.mecurl f.mecurl g.mecurl k.mecurl n.mecurl r.mecurl t.mecurl ] ;
+  lookupflag UseMarkFilteringSet @combining_above;
+  ignore sub @meuncurled' [ @AllLowerCaseexclf @LowerCase_f ] ;
+  ignore sub @meuncurled' @combining_above [ @AllLowerCaseexclf @LowerCase_f ] ;
+  sub @meuncurled' by @mecurled ;
+} mecurl ;
+";
+tag = swsh;
 },
 {
 code = "  sub thornstroke by thornstroke.loclENG;
@@ -2130,56 +2164,62 @@ sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
 tag = ordn;
 },
 {
-code = "# sub A from [ A.alt1 A.alt2 A.alt3 ];
-sub A from [ A.alt1 A.alt2 ];
+code = "sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
 ";
 tag = cv01;
 },
 {
-code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 ] ;
+code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged ] ;
 ";
 tag = cv02;
 },
 {
-code = "sub C from [ C.alt ] ;
+code = "sub B from [ B.enlarged ] ;";
+tag = cv03;
+},
+{
+code = "sub b from [ b.enlarged ];";
+tag = cv04;
+},
+{
+code = "sub C from [ C.alt C.enlarged ] ;
 ";
 tag = cv05;
 },
 {
-code = "sub c from [ c.mecurl ] ;
+code = "sub c from [ c.mecurl c.enlarged ] ;
 ";
 tag = cv06;
 },
 {
-code = "sub D from [ Dinsular ] ;
-
+code = "sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
 ";
 tag = cv07;
 },
 {
-code = "sub d from [ dinsular dinsular.alt d.mecurl ] ;
+code = "sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
 ";
 tag = cv08;
 },
 {
-code = "sub E from [ E.alt1 E.alt2 ] ;
+code = "sub E from [ E.alt1 E.alt2 E.enlarged ] ;
 ";
 tag = cv09;
 },
 {
-code = "sub e from [ e.alt1 e.alt2 e.alt3 ] ;
+code = "sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged ] ;
 ";
 tag = cv10;
 },
 {
-code = "sub F         from [ Finsular         ] ;
+code = "sub F         from [ Finsular F.enlarged Finsular.enlarged ] ;
 # sub Fdotbelow from [ Finsulardotbelow ] ;
 
 ";
 tag = cv11;
 },
 {
-code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl ] ;
+code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged ] ;
 
 
 # do something about underdotted form (supply for all?)
@@ -2190,164 +2230,206 @@ code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl ] ;
 tag = cv12;
 },
 {
-code = "sub G from [ Ginsular Gormulum G.alt ] ;
+code = "sub G from [ Ginsular Gormulum G.alt G.enlarged ] ;
 ";
 tag = cv13;
 },
 {
-code = "sub g from [ ginsular gormulum gsingle g.alt1 g.alt2 g.alt3 g.mecurl  ] ;
+code = "sub g from [ ginsular gormulum gsingle g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
 ";
 tag = cv14;
 },
 {
-code = "sub H from [ H.alt ] ;
+code = "sub H from [ H.alt H.enlarged ] ;
 ";
 tag = cv15;
 },
 {
-code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ] ;
+code = "sub h from [ h.alt h.alt2 h.enlarged ] ;
 ";
 tag = cv16;
 },
 {
-code = "sub I from [ Idotaccent Longaepigraphici ] ;
+code = "sub I from [ Idotaccent Longaepigraphici I.enlarged ] ;
 # figure this out
 # sub Idotaccent    from [ I                                  ] ;
 ";
 tag = cv17;
 },
 {
-code = "sub i from [ i.alt2 i.alt i.alt1 ] ;
+code = "sub i from [ i.alt2 i.alt i.alt1 i.enlarged ] ;
 # figure this out
 # sub dotlessi      from [ i                                  ] ;
 ";
 tag = cv18;
 },
 {
-code = "sub J from [ Jdotaccent ] ;
+code = "sub J from [ Jdotaccent J.enlarged ] ;
 ";
 tag = cv19;
 },
 {
-code = "sub j from [ j.alt3 j.alt2 jdotaccent ] ;
+code = "sub j from [ j.alt3 j.alt2 jdotaccent j.enlarged ] ;
 ";
 tag = cv20;
 },
 {
-code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl ] ;
+code = "sub K from [ K.enlarged ] ;
+";
+tag = cv21;
+},
+{
+code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged ] ;
 ";
 tag = cv22;
 },
 {
-code = "sub l by l.alt ;
+code = "sub L from [ L.enlarged ] ;";
+tag = cv23;
+},
+{
+code = "sub l from [ l.alt l.enlarged ] ;
 ";
 tag = cv24;
 },
 {
-code = "sub M from [ M.alt1 M.alt2 uniA7FF ] ;
+code = "sub M from [ M.alt1 M.alt2 M.enlarged ] ;
+# Need to add U+A7FF in 3rd position
 ";
-disabled = 1;
 tag = cv25;
 },
 {
-code = "sub m from [ m.alt1 m.alt2 m.alt3  ] ;
+code = "sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
 ";
 tag = cv26;
 },
 {
-code = "sub N from [ N.alt1 ] ;
+code = "sub N from [ N.alt1 N.enlarged ] ;
 ";
 tag = cv27;
 },
 {
-code = "sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl ] ;
+code = "sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged ] ;
 ";
 tag = cv28;
 },
 {
-code = "sub O from [ Ooldpolish ] ;";
+code = "sub O from [ Ooldpolish O.enlarged ] ;
+";
 tag = cv29;
 },
 {
-code = "sub o from [ ooldpolish] ;
+code = "sub o from [ ooldpolish o.enlarged ] ;
 ";
 tag = cv30;
 },
 {
-code = "sub P from [ uniA7FC ] ;
+code = "sub P from [ Pepigraphicreversed P.enlarged ] ;
 ";
-disabled = 1;
 tag = cv31;
 },
 {
-code = "sub Q from [ Q.alt ] ;
+code = "sub p from [ p.enlarged ] ;
 ";
-disabled = 1;
+tag = cv32;
+},
+{
+code = "sub Q from [ Q.alt Q.enlarged Q.alt2 Q.swash ] ;
+";
 tag = cv33;
 },
 {
-code = "sub q from [ q.alt ] ;
+code = "sub q from [ q.alt q.enlarged ] ;
 ";
 tag = cv34;
 },
 {
-code = "sub R from [ Rinsular ] ;
+code = "sub R from [ Rinsular R.enlarged ] ;
 ";
 tag = cv35;
 },
 {
-code = "sub r from [ rinsular r.mecurl ] ;
+code = "sub r from [ rinsular rrotunda r.mecurl r.enlarged ] ;
 ";
 tag = cv36;
 },
 {
-code = "sub S from [ Sinsular Ssigmoid    ] ;
+code = "sub S from [ Sinsular Ssigmoid S.enlarged ] ;
 ";
 tag = cv37;
 },
 {
-code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 ] ;
-# check these over.";
+code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged ] ;
+# check these over.
+";
 tag = cv38;
 },
 {
-code = "sub T from [ Tinsular ] ;
+code = "sub T from [ Tinsular T.enlarged ] ;
 ";
 tag = cv39;
 },
 {
-code = "sub t from [ tinsular t.mecurl ] ;
+code = "sub t from [ tinsular t.mecurl t.enlarged ] ;
 ";
 tag = cv40;
 },
 {
-code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 ];
+code = "sub U from [ U.enlarged ] ;
+";
+tag = cv41;
+},
+{
+code = "sub u from [ u.enlarged ] ;
+";
+tag = cv42;
+},
+{
+code = "sub V from [ V.enlarged ] ;";
+tag = cv43;
+},
+{
+code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
 ";
 tag = cv44;
 },
 {
-code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 ] ;
+code = "sub W from [ W.enlarged ] ;
+";
+tag = cv45;
+},
+{
+code = "sub w from [ w.enlarged ] ;";
+tag = cv46;
+},
+{
+code = "sub X from [ X.enlarged ] ;
+";
+tag = cv47;
+},
+{
+code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
 ";
 tag = cv48;
 },
 {
-code = "sub Y from [ Y.alt ] ;
+code = "# sub Y from [ Y.alt Y.enlarged ] ; Need to add Y.alt
+sub Y from [ Y.enlarged ] ;
 ";
-disabled = 1;
 tag = cv49;
 },
 {
-code = "sub y from [ y.alt y.alt2 ] ;
+code = "sub y from [ y.alt y.alt2 y.enlarged ] ;
 ";
 tag = cv50;
 },
 {
-code = "sub Z from [ Zvisigothic ] ;
+code = "sub Z from [ Zvisigothic Z.enlarged ] ;
 ";
 tag = cv51;
 },
 {
-code = "sub z from [ zvisigothic z.alt1 ] ;
+code = "sub z from [ zvisigothic z.alt1 z.enlarged ] ;
 ";
 tag = cv52;
 },
@@ -2363,32 +2445,33 @@ code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
 tag = cv54;
 },
 {
-code = "sub aa from [ aa.alt2 aa.alt ] ;
+code = "sub aa from [ aa.alt2 aa.alt aa.enlarged ] ;
 ";
 tag = cv55;
 },
 {
-code = "sub AE from [ AE.alt1 ] ;
+code = "sub AE from [ AE.alt1 AE.enlarged ] ;
 ";
 tag = cv56;
 },
 {
-code = "sub ae from [ ae.alt1 ae.alt2 ae.alt3 ] ;
+code = "sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
 ";
 tag = cv57;
 },
 {
-code = "sub Ao from [ Ao.alt ] ;
+code = "sub Ao from [ Ao.alt AO.enlarged AO.enlarged.alt ] ;
 ";
 tag = cv58;
 },
 {
-code = "sub lhighstroke by lhighstroke.alt ;
+code = "sub ao from [ ao.alt ao.alt2 ao.enlarged.alt ] ;
 ";
 tag = cv59;
 },
 {
-code = "sub rumrotunda by rumrotunda.alt ;";
+code = "sub av from [ av.alt ] ;
+";
 tag = cv60;
 },
 {
@@ -2409,24 +2492,24 @@ sub eogonek.enlarged   from [ eogonek.enlarged.alt   ] ;
 tag = cv62;
 },
 {
-code = "sub eogonek from [ eogonek.alt1 ] ;
-sub Eogonek from [ Eogonek.alt1 ] ;
+code = "    sub Yogh       from [ Ezh         ] ;
+    sub yogh       from [ ezh         ] ;
 ";
 tag = cv63;
 },
 {
-code = "    sub Yogh       from [ Ezh         ] ;
-    sub yogh       from [ ezh         ] ;
+code = "sub lhighstroke from [ lhighstroke.alt ] ;
 ";
 tag = cv64;
 },
 {
-code = "sub lhighstroke from [ lhighstroke.alt ] ;
+code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
 ";
 tag = cv65;
 },
 {
-code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
+code = "sub thornstroke         from [ thornstroke.alt         ] ;
+sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
 ";
 tag = cv66;
 },
@@ -2434,6 +2517,7 @@ tag = cv66;
 code = "sub thornstroke         from [ thornstroke.alt         ] ;
 sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
 ";
+disabled = 1;
 tag = cv67;
 },
 {
@@ -2450,8 +2534,7 @@ tag = cv69;
 {
 code = "sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5
                   uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2 question.alt3 question.alt4 asciitilde.alt
-                  asterisk.alt dottedsolidus slash.alt ] ;
-";
+                  asterisk.alt dottedsolidus slash.alt ] ;";
 disabled = 1;
 tag = cv70;
 },
@@ -2464,7 +2547,6 @@ tag = cv71;
 {
 code = "sub comma from [ comma.alt1 comma.alt2 ] ;
 ";
-disabled = 1;
 tag = cv72;
 },
 {
@@ -2527,7 +2609,6 @@ tag = cv81;
 {
 code = "sub usmod from [ usmod.alt1 usmod.alt2 ] ;
 ";
-disabled = 1;
 tag = cv82;
 },
 {
@@ -2563,47 +2644,7 @@ tag = cv88;
 {
 code = "sub overlinecomb from [ overlinecomb.alt ] ;
 ";
-disabled = 1;
 tag = cv89;
-},
-{
-code = "sub macroncomb from [ macroncomb.alt1 macroncomb.alt2 ] ;
-sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 ] ;
-#sub Amacron from [ Amacron.alt1 Amacron.alt2 ] ;
-#sub AEmacron from [ AEmacron.alt1 AEmacron.alt2 ] ;
-#sub Emacron from [ Emacron.alt1 Emacron.alt2 ] ;
-#sub Gmacron from [ Gmacron.alt1 Gmacron.alt2 ] ;
-#sub Imacron from [ Imacron.alt1 Imacron.alt2 ] ;
-#sub Ldotbelowmacron from [ Ldotbelowmacron.alt1 Ldotbelowmacron.alt2 ] ;
-#sub Omacron from [ Omacron.alt1 Omacron.alt2 ] ;
-#sub Oogonekmacron from [ Oogonekmacron.alt1 Oogonekmacron.alt2 ] ;
-#sub Rdotbelowmacron from [ Rdotbelowmacron.alt1 Rdotbelowmacron.alt2 ] ;
-#sub Umacron from [ Umacron.alt1 Umacron.alt2 ] ;
-#sub Ymacron from [ Ymacron.alt1 Ymacron.alt2 ] ;
-#sub amacron from [ amacron.alt1 amacron.alt2 ] ;
-#sub aemacron from [ aemacron.alt1 aemacron.alt2 ] ;
-#sub emacron from [ emacron.alt1 emacron.alt2 ] ;
-#sub emacron from [ emacron.alt1 emacron.alt2 ] ;
-#sub emacron from [ emacron.alt1 emacron.alt2 ] ;
-#sub ldotbelowmacron from [ ldotbelowmacron.alt1 ldotbelowmacron.alt2 ] ;
-#sub omacron from [ omacron.alt1 omacron.alt2 ] ;
-#sub oogonekmacron from [ oogonekmacron.alt1 oogonekmacron.alt2 ] ;
-#sub rdotbelowmacron from [ rdotbelowmacron.alt1 rdotbelowmacron.alt2 ] ;
-#sub umacron from [ umacron.alt1 umacron.alt2 ] ;
-#sub ymacron from [ ymacron.alt1 ymacron.alt2 ] ;
-#sub amacron.sc from [ amacron.alt1.sc amacron.alt2.sc ] ;
-#sub aemacron.sc from [ aemacron.alt1.sc aemacron.alt2.sc ] ;
-#sub emacron.sc from [ emacron.alt1.sc emacron.alt2.sc ] ;
-#sub gmacron.sc from [ gmacron.alt1.sc gmacron.alt2.sc ] ;
-#sub imacron.sc from [ imacron.alt1.sc imacron.alt2.sc ] ;
-#sub ldotbelowmacron.sc from [ ldotbelowmacron.alt1.sc ldotbelowmacron.alt2.sc ] ;
-#sub omacron.sc from [ omacron.alt1.sc omacron.alt2.sc ] ;
-#sub oogonekmacron.sc from [ oogonekmacron.alt1.sc oogonekmacron.alt2.sc ] ;
-#sub rdotbelowmacron.sc from [ rdotbelowmacron.alt1.sc rdotbelowmacron.alt2.sc ] ;
-#sub umacron.sc from [ umacron.alt1.sc umacron.alt2.sc ] ;
-#sub ymacron.sc from [ ymacron.alt1.sc ymacron.alt2.sc ] ;
-";
-tag = cv90;
 },
 {
 code = "sub strokeshortcomb from [ strokeshortcomb.wide strokeshortcomb.wideright strokeshortcomb.wideleft ] ;
@@ -2637,9 +2678,8 @@ code = "sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currenc
 tag = cv95;
 },
 {
-code = "sub uni20B0 from [ currency.alt22 ] ;
+code = "sub germanpenny from [ currency.alt22 ] ;
 ";
-disabled = 1;
 tag = cv96;
 },
 {
@@ -4534,9 +4574,9 @@ sub f t y by f_t_y ;
 sub longs t i by longs_t_i ;
 sub longs t r by longs_t_r ;
 sub longs longs t by longs_longs_t ;
-sub Q u by Q_u ;
-sub Q u.sc by Q_u.sc ;
-sub Q u.pcap by Q_u.pcap ;
+# sub Q u by Q_u ;
+# sub Q u.sc by Q_u.sc ;
+# sub Q u.pcap by Q_u.pcap ;
 sub f j by f_j ;
 sub f eth by f_eth ;
 sub f eth.loclENG by f_eth.loclENG ;
@@ -7283,5 +7323,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 41;
+versionMinor = 42;
 }

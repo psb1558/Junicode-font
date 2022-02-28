@@ -22,6 +22,7 @@
   <cv nm="cap-round-stem" val="34" col="b"/>
   <cv nm="cap-baseline-undershoot" val="-13"/>
   <cv nm="cap-lower-serif" val="-220"/>
+  <cv nm="Thornstroke-bottom" val="-111"/>
   <cv nm="G-serif" val="268"/>
   <cv nm="lc-serif" val="24" col="b"/>
   <cv nm="lc-ascender" val="726 "/>
@@ -368,6 +369,12 @@
     </compile-if>
   </mo>
 
+  <!--
+    <callm nm="cap-round-stem">
+      pt-a: 0, ptb: 0,
+      cv: cap-baseline-undershoot, stem-cv: -1
+    </callm>
+  -->
   <mo nm="cap-round-stem">
     <pm nm="pt-a"/>
     <pm nm="pt-b"/>
@@ -2366,6 +2373,42 @@
     <ip r="0 30" p="50 24"/>
   </gl>
 
+  <gl pnm="uni1E9E">
+    <!-- Germandbls -->
+    <cn nm="top" val="{461;676}"/>
+    <cn nm="bottom" val="{495;-17}"/>
+    <callm nm="cap-serif">
+      base: {172;0},
+      pt-a: {45;-3}, pt-a-sh: {298;-3},
+      pt-b: {45;34}, pt-b-sh: {298;34}
+    </callm>
+    <callm nm="cap-round-stem">
+      <pmset>
+        pt-a: top, pt-b: {430;642},
+        cv: cpho, stem-cv: cap-round-stem
+      </pmset>
+      <pmset>
+        pt-a: bottom, pt-b: {484;24},
+        stem-cv: cap-round-stem
+      </pmset>
+    </callm>
+    <ip r="top bottom" p="{494;361}"/>
+    <mv p="{494;361}">
+      <mv p="{418;330}"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA784">
+    <!-- Sinsular -->
+    <callm nm="cap-round-stem">
+      pt-a: {430;660}, pt-b: {346;563}, cv: cpho
+    </callm>
+    <sh r="{430;660}" p="{174;676}"/>
+    <mv p="{67;-254}">
+      <sh p="{29;-207}"/>
+    </mv>
+  </gl>
+
   <gl pnm="T">
     <callm nm="cap-serif">
       base: 45,
@@ -2382,6 +2425,108 @@
       <sh p="35"/>
     </mv>
   </gl>
+
+  <gl pnm="uni01AC">
+    <!-- Thook -->
+    <callm nm="cap-serif">
+      base: {320;0}, pt-a: {187;-3},
+      pt-a-sh: {453;-3}, pt-b: {187;34},
+      pt-b-sh: {453;34}
+    </callm>
+    <callf nm="serif-helper">
+      base: {322;663}, pt-a: {194;665}, base-cv: cap-height, cup-cv: cpso, ppem: 230
+    </callf>
+    <sh r="{194;665}" p="{592;665}"/>
+    <mv di="cap-bar" r="{322;663}" p="{283;628}">
+      <sh p="{361;628}"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA764">
+    <!-- Thornstroke -->
+    <cn nm="top" val="{169;663}"/>
+    <cn nm="bottom" val="{171;0}"/>
+    <cn nm="bowl-top" val="{314;481}"/>
+    <cn nm="bowl-bottom" val="{311;145}"/>
+    <cn nm="bar-top" val="{342;564}"/>
+    <callm nm="cap-serif">
+      <pmset>
+        base: {171;0},
+        pt-a: {45;-3}, pt-a-sh: {298;-3},
+        pt-b: {45;34}, pt-b-sh: {298;34}
+      </pmset>
+      <pmset>
+        base: {169;663}, base-cv: cap-height,
+        pt-a: {40;666}, pt-a-sh: {298;666},
+        pt-b: {40;628}, pt-b-sh: {298;628}
+      </pmset>
+    </callm>
+    <ip r="top bottom" p="bowl-top bowl-bottom"/>
+    <mv p="bowl-top">
+      <mv p="{249;451}" di="cap-round-stem"/>
+    </mv>
+    <mv p="bowl-bottom">
+      <mv p="{281;175}" di="cap-round-stem"/>
+    </mv>
+    <ip r="top bowl-top" p="bar-top"/>
+    <mv p="bar-top">
+      <mv p="{342;523}" di="cap-bar"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA766">
+    <!-- Thornstrokethroughdescender -->
+    <cn nm="top" val="{169;663}"/>
+    <cn nm="bottom" val="{171;-111}"/>
+    <cn nm="bowl-top" val="{314;536}"/>
+    <cn nm="bowl-bottom" val="{311;164}"/>
+    <cn nm="bar-top" val="{333;68}"/>
+    <mv di="Thornstroke-bottom" p="bottom">
+      <mv di="cap-serif" p="{45;-77}">
+        <sh p="{298;-77}"/>
+      </mv>
+    </mv>
+    <callf nm="serif-helper">
+      base: bottom,
+      pt-a: {45;-114},
+      base-cv: Thornstroke-bottom,
+      ppem: 250
+    </callf>
+    <sh p="{298;-114}"/>
+    <callm nm="cap-serif">
+      base: top, base-cv: cap-height,
+      pt-a: {40;666}, pt-a-sh: {298;666},
+      pt-b: {40;628}, pt-b-sh: {298;628}
+    </callm>
+    <ip r="top bottom" p="top bottom"/>
+    <mv p="bowl-top">
+      <mv di="cap-round-stem" p="{249;506}"/>
+    </mv>
+    <mv p="bowl-bottom">
+      <mv di="cap-round-stem" p="{281;194}"/>
+    </mv>
+    <ip r="bowl-bottom bottom" p="bar-top"/>
+    <mv p="bar-top">
+      <mv di="cap-bar" p="{333;27}"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA786">
+    <!-- Tinsular -->
+    <cn nm="top" val="{628;663}"/>
+    <cn nm="bottom" val="{388;-13}"/>
+    <mv di="cpbu" p="bottom">
+      <mv di="cap-round-stem" p="{378;23}"/>
+    </mv>
+    <mv di="cap-height" p="top">
+      <sh p="{77;718}"/>
+      <mv di="cap-bar" p="{354;613}">
+        <sh p="{262;613} {249;622}"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <!-- Next is Tonefive -->
 
   <gl pnm="U">
     <set nm="top-a" p="18 40 44"/>

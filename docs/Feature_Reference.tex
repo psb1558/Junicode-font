@@ -235,6 +235,7 @@
 \newcommand\textLetterExample[1]{\textrm{\textbf{\color{BrickRed}#1}}}
 \newcommand\textUName[1]{\textsc{#1}}
 \newcommand\textSourceText[1]{{\color{GGOrange}\texttt{#1}}}
+\newcommand\cvc[1]{{\color{magenta}#1}}
 \newcommand\textstyleEmphasis[1]{\textit{#1}}
 \newcommand\textstyleEntityRef[1]{\textrm{#1}}
 \newcommand{\cvd}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
@@ -976,8 +977,9 @@ implemented.
 \subsection[14. cv01{}--cv52 {}-- Basic Latin Variants]{\stepcounter{Feature}{\theFeature}.
 \textSourceText{cv01-cv52} -- Basic Latin Variants}
 These features also affect small cap (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms,
-where available. Where Junicode has no variant for a Basic Latin letter, the expected \textSourceText{cvNN}
-feature is skipped, being reserved for future development.
+where available. Variants in \cvc{red} are also available via \textSourceText{ss06} “Enlarged Minuscules.”
+Use the \textSourceText{cvNN} features instead of \textSourceText{ss06} when you want to substitute an
+enlarged minuscule for a capital (or, less likely, a lowercase) letter everywhere in a text.
 
 %\definecolor{LightBlueGray}{RGB}{212,218,218}
 \begin{center}
@@ -1002,161 +1004,166 @@ feature is skipped, being reserved for future development.
 %\centering\arraybslash{\bfseries Variants}\\\hline
 \color{black}\centering{A} &
 \centering{cv01} &
-1=\cvd{1}{A}, 2=\cvd[1]{1}{A}, 3=\cvd[2]{1}{A}\\\hline
+1=\cvd{1}{A}, 2=\cvd[1]{1}{A}, 3=\cvd[2]{1}{A}, \cvc{4=\cvd[3]{1}{A}}\\\hline
 \centering{a} &
 \centering{cv02} &
-{1=\cvd{2}{a}, 2=\cvd[1]{2}{a}, 3=\cvd[2]{2}{a}, 4=\cvd[3]{2}{a}, 5=\cvd[4]{2}{a}}\\\hline
+{1=\cvd{2}{a}, 2=\cvd[1]{2}{a}, 3=\cvd[2]{2}{a}, 4=\cvd[3]{2}{a},
+5=\cvd[4]{2}{a}, \cvc{6=\cvd[5]{2}{a}}}\\\hline
 \centering{B} &
 \centering{cv03} &
-{No variants available}\\\hline
+{\cvc{1=\cvd{3}{B}}}\\\hline
 \centering{b} &
 \centering{cv04} &
-{No variants available}\\\hline
+{\cvc{1=\cvd{4}{b}}}\\\hline
 \centering{C} &
 \centering{cv05} &
-{1=\cvd{5}{C}}\\\hline
+{1=\cvd{5}{C}, \cvc{2=\cvd[1]{5}{C}}}\\\hline
 \centering{c} &
 \centering{cv06} &
-{1=\cvd{6}{c}}\\\hline
+{1=\cvd{6}{c}, 2=\cvd[1]{6}{c}}\\\hline
 \centering{D} &
 \centering{cv07} &
-{1=\cvd{7}{D}}\\\hline
+{1=\cvd{7}{D}, 2=\cvd[1]{7}{D}, \cvc{3=\cvd[2]{7}{D}, 4=\cvd[3]{7}{D}}}\\\hline
 \centering{d} &
 \centering{cv08} &
-{1=\cvd{8}{d}, 2=\cvd[1]{8}{d}, 3=\cvd[2]{8}{d} (for 1, see also ss02)}\\\hline
+{1=\cvd{8}{d}, 2=\cvd[1]{8}{d}, 3=\cvd[2]{8}{d}, \cvc{4=\cvd[3]{8}{d},
+5=\cvd[4]{8}{d}} (for 1, see also ss02)}\\\hline
 \centering{E} &
 \centering{cv09} &
-{1=\cvd{9}{E}, 2=\cvd[1]{9}{E}}\\\hline
+{1=\cvd{9}{E}, 2=\cvd[1]{9}{E}, \cvc{3=\cvd[2]{9}{E}}}\\\hline
 \centering{e} &
 \centering{cv10} &
-{1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}}\\\hline
+{1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}, \cvc{4=\cvd[3]{10}{e}}}\\\hline
 \centering{F} &
 \centering{cv11} &
-{1=\cvd{11}{F}}\\\hline
+{1=\cvd{11}{F},  \cvc{2=\cvd[1]{11}{F}, 3=\cvd[2]{11}{F}}}\\\hline
 \centering{f} &
 \centering{cv12} &
-{1=\cvd{12}{f}, 2=\cvd[1]{12}{f}, 3=\cvd[2]{12}{f}, 4=\cvd[3]{12}{f}, 5=\cvd[4]{12}{f}, 6=\cvd[5]{12}{f}}\\\hline
+{1=\cvd{12}{f}, 2=\cvd[1]{12}{f}, 3=\cvd[2]{12}{f}, 4=\cvd[3]{12}{f}, 5=\cvd[4]{12}{f},
+6=\cvd[5]{12}{f}, \cvc{7=\cvd[6]{12}{f}, 8=\cvd[7]{12}{f}}}\\\hline
 \centering{G} &
 \centering{cv13} &
-{1=\cvd{13}{G}, 2=\cvd[1]{13}{G}, 3=\cvd[2]{13}{G}}\\\hline
+{1=\cvd{13}{G}, 2=\cvd[1]{13}{G}, 3=\cvd[2]{13}{G}, \cvc{4=\cvd[3]{13}{G}}}\\\hline
 \centering{g} &
 \centering{cv14} &
-{1=\cvd{14}{g}, 2=\cvd[1]{14}{g}, 3=\cvd[2]{14}{g}, 4=\cvd[3]{14}{g}, 5=\cvd[4]{14}{g}, 6=\cvd[5]{14}{g}, 7=\cvd[6]{14}{g}}\\\hline
+{1=\cvd{14}{g}, 2=\cvd[1]{14}{g}, 3=\cvd[2]{14}{g}, 4=\cvd[3]{14}{g}, 5=\cvd[4]{14}{g},
+6=\cvd[5]{14}{g}, 7=\cvd[6]{14}{g}, \cvc{8=\cvd[7]{14}{g}}}\\\hline
 \centering{H} &
 \centering{cv15} &
-{1=\cvd{15}{H}}\\\hline
+{1=\cvd{15}{H}, \cvc{2=\cvd[1]{15}{H}}}\\\hline
 \centering{h} &
 \centering{cv16} &
-{1=\cvd{16}{h}, 2=\cvd[1]{16}{h}}\\\hline
+{1=\cvd{16}{h}, 2=\cvd[1]{16}{h}, \cvc{3=\cvd[2]{16}{h}}}\\\hline
 \centering{I} &
 \centering{cv17} &
-{1=\cvd{17}{I}, 2=\cvd[1]{17}{I}}\\\hline
+{1=\cvd{17}{I}, 2=\cvd[1]{17}{I}, \cvc{3=\cvd[2]{17}{I}}}\\\hline
 \centering{i} &
 \centering{cv18} &
-{1=\cvd{18}{i}, 2=\cvd[1]{18}{i}, 3=\cvd[2]{18}{i}}\\\hline
+{1=\cvd{18}{i}, 2=\cvd[1]{18}{i}, 3=\cvd[2]{18}{i}, \cvc{4=\cvd[3]{18}{i}}}\\\hline
 \centering{J} &
 \centering{cv19} &
-{1=\cvd{19}{J}}\\\hline
+{1=\cvd{19}{J}, \cvc{2=\cvd[1]{19}{J}}}\\\hline
 \centering{j} &
 \centering{cv20} &
-{1=\cvd{20}{j}, 2=\cvd[1]{20}{j}, 3=\cvd[2]{20}{j}}\\\hline
+{1=\cvd{20}{j}, 2=\cvd[1]{20}{j}, 3=\cvd[2]{20}{j}, \cvc{4=\cvd[3]{20}{j}}}\\\hline
 \centering{K} &
 \centering{cv21} &
-{No variants available}\\\hline
+{\cvc{1=\cvd{21}{K}}}\\\hline
 \centering{k} &
 \centering{cv22} &
-{1=\cvd{22}{k}, 2=\cvd[1]{22}{k}, 3=\cvd[2]{22}{k}, 4=\cvd[3]{22}{k}}\\\hline
+{1=\cvd{22}{k}, 2=\cvd[1]{22}{k}, 3=\cvd[2]{22}{k}, 4=\cvd[3]{22}{k}, \cvc{4=\cvd[3]{22}{k}}}\\\hline
 \centering{L} &
 \centering{cv23} &
-{No variants available}\\\hline
+{\cvc{\cvd{23}{L}}}\\\hline
 \centering{l} &
 \centering{cv24} &
-{1=\cvd{24}{l}}\\\hline
+{1=\cvd{24}{l}, \cvc{2=\cvd[1]{24}{l}}}\\\hline
 \centering{M} &
 \centering{cv25} &
-{1=\cvd{25}{M}, 2=\cvd[1]{25}{M}, 3=\cvd[2]{25}{M}}\\\hline
+{1=\cvd{25}{M}, 2=\cvd[1]{25}{M}, 3=\cvd[2]{25}{M}, cvc{4=\cvd[3]{25}{M}}}\\\hline
 \centering{m} &
 \centering{cv26} &
-{1=\cvd{26}{m}, 2=\cvd[1]{26}{m}, 3=\cvd[2]{26}{m}}\\\hline
+{1=\cvd{26}{m}, 2=\cvd[1]{26}{m}, 3=\cvd[2]{26}{m}, \cvc{4=\cvd[3]{26}{m}}}\\\hline
 \centering{N} &
 \centering{cv27} &
-{1=\cvd{27}{N}}\\\hline
+{1=\cvd{27}{N}, \cvc{2=\cvd[1]{27}{N}}}\\\hline
 \centering{n} &
 \centering{cv28} &
-{1=\cvd{28}{n}, 2=\cvd[1]{28}{n}, 3=\cvd[2]{28}{n}, 4=\cvd[3]{28}{n}}\\\hline
+{1=\cvd{28}{n}, 2=\cvd[1]{28}{n}, 3=\cvd[2]{28}{n}, 4=\cvd[3]{28}{n}, \cvc{5=\cvd[4]{28}{n}}}\\\hline
 \centering{O} &
 \centering{cv29} &
-{1=\cvd{29}{O}}\\\hline
+{1=\cvd{29}{O}, \cvc{2=\cvd[1]{29}{O}}}\\\hline
 \centering{o} &
 \centering{cv30} &
-{1=\cvd{30}{o}}\\\hline
+{1=\cvd{30}{o}, \cvc{2=\cvd[1]{30}{o}}}\\\hline
 \centering{P} &
 \centering{cv31} &
-{1=\cvd{31}{P}}\\\hline
+{1=\cvd{31}{P}, \cvc{2=\cvd[1]{31}{P}}}\\\hline
 \centering{p} &
 \centering{cv32} &
-{No variants available}\\\hline
+{\cvc{\cvd{32}{p}}}\\\hline
 \centering{Q} &
 \centering{cv33} &
-{1=\cvd{33}{Q}}\\\hline
+{1=\cvd{33}{Q}, 2=\cvd[1]{33}{Q}, \cvc{3=\cvd[2]{33}{Q}},
+\textit{4=\cvd[3]{33}{Q} (italics only)}}\\\hline
 \centering{q} &
 \centering{cv34} &
-{1=\cvd{34}{q}}\\\hline
+{1=\cvd{34}{q}, \cvc{2=\cvd[1]{34}{q}}}\\\hline
 \centering{R} &
 \centering{cv35} &
-{1=\cvd{35}{R}}\\\hline
+{1=\cvd{35}{R}, \cvc{2=\cvd[1]{35}{R}}}\\\hline
 \centering{r} &
 \centering{cv36} &
-{1=\cvd{36}{r}, 2=\cvd[1]{36}{r}}\\\hline
+{1=\cvd{36}{r}, 2=\cvd[1]{36}{r}, 3=\cvd[2]{36}{r}, \cvc{4=\cvd[3]{36}{r}}}\\\hline
 \centering{S} &
 \centering{cv37} &
-{1=\cvd{37}{S}, 2=\cvd[1]{37}{S}}\\\hline
+{1=\cvd{37}{S}, 2=\cvd[1]{37}{S}, \cvc{3=\cvd[2]{37}{S}}}\\\hline
 \centering{s} &
 \centering{cv38} &
 {1=\cvd{38}{s}, 2=\cvd[1]{38}{s}, 3=\cvd[2]{38}{s}, 4=\cvd[3]{38}{s},
-            5=\cvd[4]{38}{s}, 6=\cvd[5]{38}{s}}\\\hline
+            5=\cvd[4]{38}{s}, 6=\cvd[5]{38}{s}, cvc{7=\cvd[6]{38}{s}}}\\\hline
 \centering{T} &
 \centering{cv39} &
-{1=\cvd{39}{T}}\\\hline
+{1=\cvd{39}{T}, \cvc{2=\cvd[1]{39}{T}}}\\\hline
 \centering{t} &
 \centering{cv40} &
-{1=\cvd{40}{t}, 2=\cvd[1]{40}{t}}\\\hline
+{1=\cvd{40}{t}, 2=\cvd[1]{40}{t}, cvc{3=\cvd[2]{40}{t}}}\\\hline
 \centering{U} &
 \centering{cv41} &
-{No variants available}\\\hline
+{\cvc{\cvd{42}{U}}}\\\hline
 \centering{u} &
 \centering{cv42} &
-{No variants available}\\\hline
+{\cvc{\cvd{43}{u}}}\\\hline
 \centering{V} &
 \centering{cv43} &
-{No variants available}\\\hline
+{\cvc{\cvd{43}{V}}}\\\hline
 \centering{v} &
 \centering{cv44} &
-{1=\cvd{44}{v}, 2=\cvd[1]{44}{v}, 3=\cvd[2]{44}{v}, 4=\cvd[3]{44}{v}}\\\hline
+{1=\cvd{44}{v}, 2=\cvd[1]{44}{v}, 3=\cvd[2]{44}{v}, 4=\cvd[3]{44}{v}, \cvc{5=\cvd[4]{44}{v}}}\\\hline
 \centering{W} &
 \centering{cv45} &
-{No variants available}\\\hline
+{\cvc{\cvd{45}{W}}}\\\hline
 \centering{w} &
 \centering{cv46} &
-{No variants available}\\\hline
+{\cvc{\cvd{46}{w}}}\\\hline
 \centering{X} &
 \centering{cv47} &
-{No variants available}\\\hline
+{\cvc{cvd{47}{X}}}\\\hline
 \centering{x} &
 \centering{cv48} &
-{1=\cvd{48}{x}, 2=\cvd[1]{48}{x}, 3=\cvd[2]{48}{x}, 4=\cvd[3]{48}{x}}\\\hline
+{1=\cvd{48}{x}, 2=\cvd[1]{48}{x}, 3=\cvd[2]{48}{x}, 4=\cvd[3]{48}{x}, \cvc{5=\cvd[4]{48}{x}}}\\\hline
 \centering{Y} &
 \centering{cv49} &
-{1=\cvd{49}{Y}}\\\hline
+{1=\cvd{49}{Y}, \cvc{2=\cvd[1]{49}{Y}}}\\\hline
 \centering{y} &
 \centering{cv50} &
-{1=\cvd{50}{y}, 2=\cvd[1]{50}{y}}\\\hline
+{1=\cvd{50}{y}, 2=\cvd[1]{50}{y}, \cvc{3=\cvd[2]{50}{y}}}\\\hline
 \centering{Z} &
 \centering{cv51} &
-{1=\cvd{51}{Z}}\\\hline
+{1=\cvd{51}{Z}, \cvc{2=\cvd[1]{51}{Z}}}\\\hline
 \centering{z} &
 \centering{cv52} &
-{1=\cvd{52}{z}, 2=\cvd[1]{52}{z}}\\\hline
+{1=\cvd{52}{z}, 2=\cvd[1]{52}{z}, \cvc{3=\cvd[2]{52}{z}}}\\\hline
 \end{supertabular}
 \end{center}
 \hypertarget{OtherLatin}{}\subsection[15. cv53{}-cv67 {}-- Other Latin Letters]{\stepcounter{Feature}{\theFeature}.
@@ -1190,16 +1197,16 @@ features.
 {1=\cvd{54}{ą}, 2=\cvd[1]{54}{ą}}\\\hline
 \centering ꜳ (U+A733) &
 \centering cv55 &
-{1=\cvd{55}{ꜳ}, 2=\cvd[1]{55}{ꜳ}}\\\hline
+{1=\cvd{55}{ꜳ}, 2=\cvd[1]{55}{ꜳ}, \cvc{3=\cvd[2]{55}{ꜳ}}}\\\hline
 \centering  {\AE} (U+00C6) &
 \centering cv56 &
-{1=\cvd{56}{\AE}}\\\hline
+{1=\cvd{56}{\AE}, \cvc{2=\cvd[1]{56}{\AE}}}\\\hline
 \centering {\ae} (U+00E6) &
 \centering cv57 &
-{1=\cvd{57}{\ae}, 2=\cvd[1]{57}{\ae}, 3=\cvd[2]{57}{\ae}}\\\hline
+{1=\cvd{57}{\ae}, \cvc{2=\cvd[1]{57}{\ae}}, 3=\cvd[2]{57}{\ae}, 4=\cvd[3]{57}{\ae}}\\\hline
 \centering Ꜵ (U+A734) &
 \centering cv58 &
-{1=\cvd{58}{Ꜵ}}\\\hline
+{1=\cvd{58}{Ꜵ}, \cvc{2=\cvd[1]{58}{Ꜵ}, 3=\cvd[2]{58}{Ꜵ}}}\\\hline
 \centering ꜵ (U+A735) &
 \centering cv59 &
 {1=\cvd{59}{ꜵ}, 2=\cvd[1]{59}{ꜵ}, 3=\cvd[2]{59}{ꜵ}}\\\hline

@@ -250,6 +250,7 @@
 \newcommand{\revthorn}[1]{{\addfontfeature{StylisticSet=1}#1}}
 \newcommand{\grk}{\addfontfeature{Script=Greek,Language=Greek}}
 \newcommand{\eng}{\addfontfeature{Language=English}}
+\newcommand{\icel}{\addfontfeature{Language=Icelandic}}
 \newcommand{\unic}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
 %\newcommand{\colongs}{\addfontfeature{Language=English,RawFeature={+ss08;+calt}}}
 \newcommand{\colongs}{\addfontfeature{Language=English,StylisticSet=8}}
@@ -471,7 +472,7 @@ oft miclum gefeohtum feaht uuiþ bretwalū.} (SemiCondensed)
 {\small\semiconditalic\addfontfeature{Language=English} For Nordic shapes of þ and ð in an
 English context, specify the appropriate language (e.g. Icelandic or Norwegian);
 or apply the OpenType ss01 (Stylistic Set 1) feature.}\\[1ex]
-{\addfontfeature{Language=Icelandic}\medium Um haustit sendi Mǫrðr Valgarðsson orð at Gunnarr myndi vera einn heimi, en
+{\icel\medium Um haustit sendi Mǫrðr Valgarðsson orð at Gunnarr myndi vera einn heimi, en
 lið alt myndi vera niðri í eyjum at lúka heyverkum. Riðu þeir Gizurr Hvíti ok
 Geirr Goði austr yfir ár, þegar þeir spurðu þat, ok austr yfir sanda til Hofs.
 Þá sendu þeir orð Starkaði undir Þríhyrningi; ok fundusk þeir þar allir er at
@@ -632,10 +633,11 @@ the fonts/ttf folder.
 Use the CFF version (fonts/otf) if you run into problems with TrueType (for example,
 a few Mac printer drivers mess up the placement of diacritics when rendering
 these fonts). Use the TrueType variable version if you're using Junicode in a
-web page, and the OpenType (CFF2) variable version if you are using
+web page, and the CFF variable version if you are using
 {\ltech} (see the document LuaTeX\_JunicodeVF.pdf for instructions and pointers).
 
-Junicode has five weights and five widths, for a total of twenty-five styles in
+Junicode has five weights and five widths, which are combined in many ways
+for a total of twenty-two styles in
 both roman and italic. It is not necessary to install all of these; in fact,
 your life will be simplified (font menus easier to navigate) if you
 make a selection. You will probably want the traditional Regular, Bold, Italic, and Bold
@@ -735,7 +737,7 @@ change to a language other than your own for a passage (or even a single word),
 you should set the language for that passage appropriately. This will unlock
 a number of capabilities. For example, in Old and Middle English, Word and
 other programs will use the English form of thorn and eth ({\eng þð}) instead of
-the modern Icelandic (þð), and in ancient
+the modern Icelandic ({\icel þð}), and in ancient
 Greek you will be able to type accents after vowels instead of looking up
 the codes for hundreds of polytonic vowel + accent combinations. But these and other capabilities
 are only available when you set the language correctly.

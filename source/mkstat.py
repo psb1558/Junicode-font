@@ -79,7 +79,7 @@ format2ItalicAxes = [
 
 ttfont = ttLib.TTFont(inFont)
 if whichFont == "italic":
-    print("This is an italic font")
+    print("Adding STAT table to italic font "  + inFont)
     builder.buildStatTable(ttfont,format2ItalicAxes)
     # Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).
     ttfont['name'].setName("JunicodeTwoBetaVF", 25, 3, 1, 0x409)
@@ -95,7 +95,7 @@ if whichFont == "italic":
     ttfont['name'].removeNames(platformID=1)
     ttfont.save(outFont)
 elif whichFont == "roman":
-    print("This is a roman font")
+    print("Adding STAT table to roman font " + inFont)
     ttfont = ttLib.TTFont(inFont)
     builder.buildStatTable(ttfont,format2RomanAxes)
     # Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).

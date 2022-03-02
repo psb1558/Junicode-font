@@ -40,6 +40,11 @@
   <cv nm="sc-baseline-undershoot" val="-9 "/>
   <cv nm="sc-serif-undershoot" val="-3"/>
   <cv nm="lc-markabove" val="495"/>
+  <!-- Horizontal distances -->
+  <cv nm="cap-v-straight-stem" val="78"/>
+  <cv nm="cap-v-round-stem" val="94"/>
+  <cv nm="lc-v-straight-stem" val="75"/>
+  <cv nm="lc-v-round-stem" val="80"/>
 
   <cvar>
     <tuple>
@@ -52,6 +57,10 @@
       <cvv nm="lc-round-stem" val="26"/>
       <cvv nm="num-circle" val="31"/>
       <cvv nm="sc-serif" val="27"/>
+      <cvv nm="cap-v-straight-stem" val="64"/>
+      <cvv nm="cap-v-round-stem" val="80"/>
+      <cvv nm="lc-v-straight-stem" val="62"/>
+      <cvv nm="lc-v-round-stem" val="65"/>
     </tuple>
     <tuple>
       <!-- weight max -->
@@ -63,6 +72,10 @@
       <cvv nm="lc-round-stem" val="38"/>
       <cvv nm="num-circle" val="72"/>
       <cvv nm="sc-serif" val="33"/>
+      <cvv nm="cap-v-straight-stem" val="119"/>
+      <cvv nm="cap-v-round-stem" val="133"/>
+      <cvv nm="lc-v-straight-stem" val="113"/>
+      <cvv nm="lc-v-round-stem" val="124"/>
     </tuple>
     <tuple>
       <!-- width min -->
@@ -115,6 +128,12 @@
       <setcv nm="u-top-a" unit="pixel" val="control-value(xheight)"/>
       <setcv nm="u-top-b" unit="pixel" val="control-value(xheight)"/>
     </if>
+    <!--
+    <push>145</push>
+    <command nm="IDEF"/>
+    <push>0 0 0</push>
+    <command nm="ENDF"/>
+    -->
   </prep>
 
 <!--
@@ -1490,13 +1509,14 @@
     </mv>
   </gl>
 
-  <gl pnm="H">
+  <gl pnm="H" assume-y="no">
     <cn nm="top" val="{169;663}"/>
     <cn nm="bottom" val="{172;0}"/>
     <set nm="top-a" p="{757;666} {499;666} {298;666}"/>
     <set nm="top-b" p="{757;628} {499;628} {298;628}"/>
     <set nm="bot-a" p="{298;-3} {504;-3} {757;-3}"/>
     <set nm="bot-b" p="{298;34} {504;34} {757;34}"/>
+    <setvs axis="y"/>
     <callm nm="cap-serif">
       base: bottom,
       base-sh: {631;0},
@@ -1518,6 +1538,18 @@
     <callm nm="mid-stem">
       ref1: top, ref2: bottom, pt-a: {210;322}, pt-b: {210;363}, cv: cap-bar
     </callm>
+    <setvs axis="x"/>
+    <mv p="{132;91}">
+      <mv di="cap-v-straight-stem" p="{210;322}">
+        <sh p="{210;363}"/>
+      </mv>
+    </mv>
+    <mv p="{669;91}">
+      <mv di="cap-v-straight-stem" p="{591;322}">
+        <sh p="{591;363}"/>
+      </mv>
+    </mv>
+    <iup/>
   </gl>
 
   <gl pnm="uni2C75">
@@ -2526,7 +2558,108 @@
     </mv>
   </gl>
 
-  <!-- Next is Tonefive -->
+  <gl pnm="uni01BC">
+    <!-- Tonefive -->
+    <cn nm="top" val="{378;663}"/>
+    <cn nm="bottom" val="{174;-9}"/>
+    <cn nm="mid-bottom" val="{183;375}"/>
+    <mv di="cap-height" p="top">
+      <mv di="cap-serif" p="{39;625}"/>
+    </mv>
+    <callf nm="align-or-shift">
+      r: {39;625}, p: {176;621}
+    </callf>
+    <callm nm="cap-round-stem">
+      pt-a: bottom, pt-b: {224;33},
+      stem-cv: cap-round-stem
+    </callm>
+    <ip r="top bottom" p="mid-bottom"/>
+    <mv p="mid-bottom">
+      <mv p="{223;452}"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0184">
+    <!-- tone six -->
+    <cn nm="top" val="{193;625}"/>
+    <cn nm="bottom" val="{167;0}"/>
+    <cn nm="mid-top" val="{310;28}"/>
+    <mv p="top"/>
+    <callm nm="cap-serif">
+      base: bottom,
+      pt-a: {40;-3}, pt-a-sh: {302;-3},
+      pt-b: {40;34}
+    </callm>
+    <callf nm="align-or-shift">
+      r: {40;34}, p: {40;34}
+    </callf>
+    <ip r="top bottom" p="mid-top"/>
+    <mv p="mid-top">
+      <mv di="cap-round-stem" p="{290;333}"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni01A7">
+    <!-- Tonetwo -->
+    <cn nm="top" val="{237;676}"/>
+    <cn nm="bottom" val="{265;-13}"/>
+    <callm nm="cap-round-stem">
+      <pmset>
+        pt-a: top, pt-b: {250;644}, cv: cpho, stem-cv: cap-round-stem
+      </pmset>
+      <pmset>
+        pt-a: bottom, pt-b: {251;23}, stem-cv: cap-round-stem
+      </pmset>
+    </callm>
+    <ip r="top bottom" p="{244;293} {229;392}"/>
+  </gl>
+
+  <gl pnm="uni01AE">
+    <!-- Tretroflexhook -->
+    <callf nm="serif-helper">
+      base: {320;663}, pt-a: {55;666}, base-cv: cap-height, cup-cv: cpso, ppem: 230
+    </callf>
+    <sh r="{55;666}" p="{590;666}"/>
+    <mv r="{320;663}" p="{281;628}">
+      <sh p="{359;628}"/>
+    </mv>
+    <callm nm="hook">
+      pt-a: {469;-205}, pt-b: {423;-156}, pt-c: {488;-105}
+    </callm>
+  </gl>
+
+  <gl pnm="uniA728">
+    <!-- Tz -->
+    <cn nm="top" val="{320;663}"/>
+    <cn nm="top-left" val="{55;666}"/>
+    <cn nm="z-top" val="{670;414}"/>
+    <cn nm="z-bottom" val="{544;-272}"/>
+    <callm nm="cap-serif">
+      base: {318;0},
+      pt-a: {185;-3},
+      pt-a-sh: {451;-3},
+      pt-b: {185;34},
+      pt-b-sh: {451;34}
+    </callm>
+    <callf nm="serif-helper">
+      base: top, pt-a: top-left, base-cv: cap-height, cup-cv: cpso, ppem: 230
+    </callf>
+    <sh r="top-left" p="{590;666}"/>
+    <mv r="top" p="{281;628}">
+      <sh p="{359;628}"/>
+    </mv>
+    <mv p="z-bottom">
+      <mv di="cap-round-stem" p="{561;-237}"/>
+    </mv>
+    <ip r="top z-bottom" p="z-top"/>
+    <mv p="z-top">
+      <mv di="cap-bar" p="{700;360}"/>
+    </mv>
+    <ip r="z-top z-bottom" p="{582;144}"/>
+    <mv p="{582;144}">
+      <mv di="cap-round-stem" p="{617;174}"/>
+    </mv>
+  </gl>
 
   <gl pnm="U">
     <set nm="top-a" p="18 40 44"/>
@@ -2544,6 +2677,24 @@
     <callm nm="cap-round-stem">
       pt-a: 0, pt-b: 30, stem-cv: cprs
     </callm>
+  </gl>
+
+  <gl pnm="Uhorn">
+    <cn nm="top" val="{170;663}"/>
+    <cn nm="bottom" val="{370;-13}"/>
+    <set nm="top-serif-a" p="{484;666} {305;666}"/>
+      <set nm="top-serif-b" p="{683;628} {484;628} {305;628}"/>
+    <callm nm="cap-round-stem">
+      pt-a: bottom, pt-b: {382;23}, stem-cv: cap-round-stem
+    </callm>
+    <callm nm="cap-serif">
+      base: top, base-sh: {601;663}, base-cv: cap-height,
+      pt-a: {35;666}, pt-a-sh: top-serif-a,
+      pt-b: {35;628}, pt-b-sh: top-serif-b
+    </callm>
+    <mv r="{601;663}" p="{713;706}" col="w">
+      <mv p="{718;763}" col="b"/>
+    </mv>
   </gl>
 
   <gl pnm="V">
@@ -2731,6 +2882,16 @@
     </callm>
   </gl>
 
+  <gl pnm="b.lf">
+    <mv di="lca" p="{179;725}"/>
+    <callm nm="lc-round-stem">
+      pt-a: {298;-11}, pt-b: {286;18}, stem-cv: lc-round-stem
+    </callm>
+    <callm nm="lc-round-stem">
+      pt-a: {296;425}, pt-b: {265;386}, cv: xho
+    </callm>
+  </gl>
+
   <gl pnm="c">
     <callm nm="lc-round-stem">
       pt-a: 0, pt-b: 34
@@ -2762,21 +2923,152 @@
     </callm>
   </gl>
 
-  <gl pnm="f">
+  <!--
+    call template. N.B. Pass all these params even if the coordinates
+    are the same as in f. You can't count on identical coordinatess resolving
+    to identical indices.
+
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      base: {98;373}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {325;726}, top-inside: {268;680}
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  -->
+  <gl pnm="f" assume-y="no">
+    <pm nm="iup" val="1"/>
+    <pm nm="setv" val="1"/>
+    <pm nm="bottom" val="{143;0}"/>
+    <pm nm="pt-a" val="{41;-3}"/>
+    <pm nm="pt-a-sh" val="{245;-3}"/>
+    <pm nm="pt-b" val="{41;24}"/>
+    <pm nm="pt-b-sh" val="{245;24}"/>
+    <pm nm="top" val="{325;726}"/>
+    <pm nm="top-inside" val="{268;680}"/>
+    <pm nm="bar-lower-right" val="{173;373}"/>
+    <pm nm="bar-lower-left" val="{98;373}"/>
+    <pm nm="bar-upper" val="{173;415}"/>
+    <compile-if test="setv != 0">
+      <setvs axis="y"/>
+    </compile-if>
     <callm nm="lc-serif">
-      base: 52,
-      pt-a: 0,
-      pt-a-sh: 49,
-      pt-b: 4,
-      pt-b-sh: 45
+      base: bottom,
+      pt-a: pt-a,
+      pt-a-sh: pt-a-sh,
+      pt-b: pt-b,
+      pt-b-sh: pt-b-sh
     </callm>
-    <mv di="lc-ascender" p="20">
-      <mv p="32"/>
+    <mv di="lc-ascender" p="top">
+      <mv p="top-inside"/>
     </mv>
     <callm nm="mid-stem">
-      ref1: 52, ref2: 20, pt-a: 42, pt-b: 36
+      ref1: bottom, ref2: top, pt-a: bar-lower-right, pt-b: bar-upper
     </callm>
-    <sh r="42" p="7"/>
+    <sh r="bar-lower-right" p="bar-lower-left"/>
+    <compile-if test="iup != 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="f.lf">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {143;0}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {325;726}, top-inside: {268;680},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.lfrij">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {143;0}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {345;726}, top-inside: {287;680},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.lfrl">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {143;0}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {325;726}, top-inside: {280;680},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.lfrtall">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {143;0}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {325;726}, top-inside: {280;680},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.rf">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {136;0}, pt-a: {41;-3}, pt-a-sh: {231;-3},
+      pt-b: {41;24}, pt-b-sh: {231;24},
+      top: {313;708}, top-inside: {279;662},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.rij">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {135;0}, pt-a: {41;-3}, pt-a-sh: {229;-3},
+      pt-b: {41;24}, pt-b-sh: {229;24},
+      top: {344;726}, top-inside: {286;680},
+      bar-lower-right: {172;373}, bar-lower-left: {98;373},
+      bar-upper: {172;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.rl">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {143;0}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {325;726}, top-inside: {280;680},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.rtall">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {143;0}, pt-a: {41;-3}, pt-a-sh: {245;-3},
+      pt-b: {41;24}, pt-b-sh: {245;24},
+      top: {325;726}, top-inside: {280;680},
+      bar-lower-right: {173;373}, bar-lower-left: {98;373},
+      bar-upper: {173;415}
+    </callg>
+  </gl>
+
+  <gl pnm="f.alt.lf">
+    <callg pnm="f">
+      iup: 0, setv: 0,
+      bottom: {144;0}, pt-a: {42;-3}, pt-a-sh: {246;-3},
+      pt-b: {42;24}, pt-b-sh: {246;24},
+      top: {255;726}, top-inside: {222;690},
+      bar-lower-right: {173;373}, bar-lower-left: {99;373},
+      bar-upper: {173;415}
+    </callg>
   </gl>
 
   <gl pnm="g">
@@ -2813,29 +3105,88 @@
     <mv di="lca" p="19"/>
   </gl>
 
-  <gl pnm="i">
+  <gl pnm="h.lf">
+    <set nm="b-sh" p="{236;24} {329;24} {521;24}"/>
+    <set nm="a-sh" p="{236;-3} {329;-3} {521;-3}"/>
     <callm nm="lc-serif">
-      base: 36,
-      pt-a: 0,
-      pt-a-sh: 33,
-      pt-b: 4,
-      pt-b-sh: 29
+      base: {143;0},
+      base-sh: {425;0},
+      pt-a: {48;-3},
+      pt-a-sh: a-sh,
+      pt-b: {48;24},
+      pt-b-sh: b-sh
     </callm>
-    <mv di="xho" p="20">
-      <mv p="39" col="w">
-	<mv p="45" col="b"/>
-    </mv></mv>
+    <mv di="xho" p="{312;425}">
+      <mv p="{275;381}"/>
+    </mv>
+    <mv di="lca" p="{179;727}"/>
   </gl>
 
-  <gl pnm="dotlessi">
+  <gl pnm="i">
+    <callg pnm="dotlessi">
+      setv: 0,
+      iup: 0,
+      top: {170;431},
+      bottom: {136;0},
+      pt-a: {41;-3},
+      pt-a-sh: {231;-3},
+      pt-b: {41;24},m
+      pt-b-sh: {231;24}
+    </callg>
+    <mv r="{170;431}" p="{125;512}" col="w">
+      <mv p="{125;617}" col="b"/>
+    </mv>
+  </gl>
+
+  <gl pnm="dotlessi" assume-y="no">
+    <pm nm="setv" val="1"/>
+    <pm nm="iup" val="1"/>
+    <pm nm="top" val="{170;431}"/>
+    <pm nm="bottom" val="{136;0}"/>
+    <pm nm="pt-a" val="{41;-3}"/>
+    <pm nm="pt-a-sh" val="{231;-3}"/>
+    <pm nm="pt-b" val="{41;24}"/>
+    <pm nm="pt-b-sh" val="{231;24}"/>
+    <compile-if test="setv != 0">
+      <setvs axis="y"/>
+    </compile-if>
     <callm nm="lc-serif">
-      base: 36,
-      pt-a: 0,
-      pt-a-sh: 33,
-      pt-b: 4,
-      pt-b-sh: 29
+      base: bottom,
+      pt-a: pt-a,
+      pt-a-sh: pt-a-sh,
+      pt-b: pt-b,
+      pt-b-sh: pt-b-sh
     </callm>
-    <mv di="xho" p="20"/>
+    <mv di="xho" p="top"/>
+    <compile-if test="iup != 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="i.lf">
+    <callg pnm="dotlessi">
+      setv: 0,
+      iup: 0,
+      top: {152;431},
+      bottom: {116;0},
+      pt-a: {24;-3},
+      pt-a-sh: {208;-3},
+      pt-b: {24;24},
+      pt-b-sh: {208;24}
+    </callg>
+  </gl>
+
+  <gl pnm="i.llongs">
+    <callg pnm="dotlessi">
+      setv: 0,
+      iup: 0,
+      top: {170;431},
+      bottom: {136;0},
+      pt-a: {41;-3},
+      pt-a-sh: {231;-3},
+      pt-b: {41;24},
+      pt-b-sh: {231;24}
+    </callg>
   </gl>
 
   <gl pnm="j">
@@ -2878,6 +3229,39 @@
     <mv di="lca" p="20"/>
   </gl>
 
+  <gl pnm="k.lf">
+    <cn nm="top" val="{179;726}"/>
+    <cn nm="bottom" val="{146;0}"/>
+    <cn nm="mid-serif" val="{388;415}"/>
+    <set nm="a-sh" p="{240;-3} {315;-3} {512;-3}"/>
+    <set nm="b-sh" p="{240;24} {315;24} {512;24}"/>
+    <callm nm="lc-serif">
+      <pmset>
+        base: bottom,
+        base-sh: {414;0},
+      	pt-a: {51;-3},
+      	pt-a-sh: a-sh,
+      	pt-b: {51;24},
+      	pt-b-sh: b-sh
+      </pmset>
+      <pmset>
+        base: mid-serif,
+        pt-a: {299;418},
+      	pt-a-sh: {477;418},
+      	pt-b: {299;392},
+      	pt-b-sh: {477;392},
+      	base-cv: xh
+      </pmset>
+    </callm>
+    <callm nm="mid-stem">
+      ref1: mid-serif,
+      ref2: bottom,
+      pt-a: {198;201},
+      pt-b: {205;234}
+    </callm>
+    <mv di="lca" p="top"/>
+  </gl>
+
   <gl pnm="l">
     <callm nm="lc-serif">
       base: {136;0},
@@ -2887,9 +3271,18 @@
       pt-b-sh: {231;24}
     </callm>
     <mv di="lca" p="{170;726}"/>
-    <!-- <mv di="lca" p="18"/> -->
   </gl>
 
+  <gl pnm="l.lf">
+    <callm nm="lc-serif">
+      base: {147;0},
+      pt-a: {41;-3},
+      pt-a-sh: {254;-3},
+      pt-b: {41;24},
+      pt-b-sh: {254;24}
+    </callm>
+    <mv di="lca" p="{183;725}"/>
+  </gl>
 
   <gl pnm="m">
     <set nm="b-sh" p="{231;24} {305;24} {495;24} {570;24} {760;24}"/>
@@ -3141,6 +3534,24 @@
     <mv di="lc-ascender" p="{152;725}"/>
   </gl>
 
+  <gl pnm="thorn.lf">
+    <callm nm="lc-round-stem">
+      pt-a: {271;-11}, pt-b: {275;20}, stem-cv: lc-round-stem
+    </callm>
+    <callm nm="lc-round-stem">
+      pt-a: {304;425}, pt-b: {283;385}, cv: xho
+    </callm>
+    <callm nm="lc-serif">
+      base: {152;-269},
+      pt-a: {50;-272},
+      pt-a-sh: {254;-272},
+      pt-b: {50;-245},
+      pt-b-sh: {254;-245},
+      base-cv: lc-descender
+    </callm>
+    <mv di="lc-ascender" p="{179;725}"/>
+  </gl>
+
   <gl pnm="thorn.loclENG">
     <mv di="lcbu" p="{175;-10}">
       <mv p="{172;25}"/>
@@ -3152,6 +3563,19 @@
       <sh p="{32;-248}"/>
     </mv>
     <mv di="lc-ascender" p="{157;726}"/>
+  </gl>
+
+  <gl pnm="thorn.loclENG.lf">
+    <mv di="lcbu" p="{197;-10}">
+      <mv p="{194;25}"/>
+    </mv>
+    <mv di="xho" p="{286;425}">
+      <mv p="{267;389}"/>
+    </mv>
+    <mv di="lc-descender" p="{65;-273}">
+      <sh p="{54;-248}"/>
+    </mv>
+    <mv di="lc-ascender" p="{179;726}"/>
   </gl>
 
   <gl pnm="eth">

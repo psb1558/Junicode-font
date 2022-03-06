@@ -109,6 +109,11 @@ name = combining_below;
 {
 code = "Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb brevehook ccedillacomb ccomb dcomb diagonaldieresiscomb dotacutecomb dotlessicomb ecomb ethcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb muncialcomb ncomb ocomb rcomb rrotundacomb scomb tcomb thorncomb ucomb uniF1CC vcomb xcomb zcomb brevehook.case circumacute.viet circumgrave.viet circumhook.viet dotacutecomb.case dotacutecomb.sc Rcomb.low acomb.low ecomb.low ocomb.low rcomb.low tcomb.low vcomb.low zcomb.low muncialcomb.low thorncomb.loclENG circumacute.viet.case circumgrave.viet.case circumhook.viet.case commaabovecomb_perispomenicomb commareversedabovecomb_perispomenicomb perispomenicomb koroniscomb dialytikatonoscomb ypogegrammenicomb commaabovecomb_perispomenicomb.case commareversedabovecomb_perispomenicomb.case dieresiscomb_perispomenicomb.loclELL commaabovecomb_perispomenicomb.sc commareversedabovecomb_perispomenicomb.sc dialytikatonoscomb.sc dieresiscomb_perispomenicomb.loclELL.sc dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commaabovecomb_gravecomb commareversedabovecomb commareversedabovecomb_gravecomb commareversedabovecomb_acutecomb commaaboverightcomb gravebelowcomb acutebelowcomb lefttackbelowcomb righttackbelowcomb leftangleabovecomb horncomb ringhalfleftbelowcomb uptackbelowcomb downtackbelowcomb plusbelowcomb minusbelowcomb palatalhookcomb retroflexhookcomb dotbelowcomb dieresisbelowcomb ringbelowcomb commaaccentcomb cedillacomb ogonekcomb verticallinebelowcomb bridgebelowcomb dblarchinvertedbelowcomb caronbelowcomb circumflexbelowcomb brevebelowcomb breveinvertedbelowcomb tildebelowcomb macronbelowcomb lowlinecomb dbllowlinecomb tildeoverlaycomb strokeshortcomb strokelongcomb slashshortcomb slashlongcomb ringhalfrightbelowcomb bridgeinvertedbelowcomb squarebelowcomb seagullbelowcomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb equalbelowcomb doubleverticallinebelowcomb leftanglebelowcomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowleftrightbelowcomb arrowupbelowcomb graphemejoinercomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb xbelowcomb arrowheadleftbelowcomb arrowheadrightbelowcomb arrowheadrightheadupbelowcomb righthalfringabovecomb asteriskbelowcomb doublebrevebelowcomb doublebrevecomb doublemacroncomb doublemacronbelowcomb tildedoublecomb breveinverteddoublecomb arrowdoublerightbelowcomb carondotcomb doublecircumflexcomb isbelowcomb ogonekabovecomb ogonekdotcomb uni1ACB uni1ACC uni1ACD tinsularcomb urabovecomb usabovecomb wcomb zigzagbelowcomb dieresiscomb_gravecomb.Greek overlinecomb.alt ogonekcomb.alt macroncomb.alt1 macroncomb.alt2 carondotcomb.case carondotcomb.sc dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case caroncomb.case brevecomb.case tildecomb.case macroncomb.case hookabovecomb.case dblgravecomb.case commaabovecomb_gravecomb.case commaabovecomb_acutecomb.case commareversedabovecomb_gravecomb.case commareversedabovecomb_acutecomb.case strokeshortcomb.case ogonekabovecomb.case dotaccentcomb.centered dieresisacutecomb.case dotlessicomb.low dieresiscomb.loclELL dieresiscomb_acutecomb.loclELL gravecomb.loclELL acutecomb.loclELL commaabovecomb.loclELL commaabovecomb_acutecomb.loclELL commareversedabovecomb.loclELL slashlongcomb.lslash macroncomb.narrow strokeshortcomb.narrow dieresiscomb.sc dotaccentcomb.sc gravecomb.sc acutecomb.sc hungarumlautcomb.sc circumflexcomb.sc caroncomb.sc brevecomb.sc tildecomb.sc macroncomb.sc hookabovecomb.sc dblgravecomb.sc breveinvertedcomb.sc commaabovecomb.sc commaabovecomb_gravecomb.sc commareversedabovecomb.sc commareversedabovecomb_gravecomb.sc commareversedabovecomb_acutecomb.sc ogonekcomb.sc strokeshortcomb.sc strokeshortcomb.wide dieresiscomb_gravecomb.Greek.sc gravecomb.loclELL.case acutecomb.loclELL.case commaabovecomb.loclELL.case commareversedabovecomb.loclELL.case commaabovecomb_acutecomb.case.sc commareversedabovecomb_acutecomb.case.sc commaabovecomb_acutecomb.loclELL.sc dieresiscomb.loclELL.sc gravecomb.loclELL.sc acutecomb.loclELL.sc strokeshortcomb.noarrow.sc ";
 name = all_combining_nozz;
+},
+{
+code = "doublecircumflexcomb doublebrevecomb doublemacroncomb tildedoublecomb breveinverteddoublecomb doublebrevebelowcomb doublemacronbelowcomb
+";
+name = double_diacritics;
 }
 );
 customParameters = (
@@ -160,7 +165,7 @@ name = "Disable Subroutines";
 value = 1;
 }
 );
-date = "2022-02-26 13:35:47 +0000";
+date = "2022-03-05 22:43:42 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -185,7 +190,59 @@ languagesystem grek ELL;
 name = Languagesystems;
 },
 {
-code = "lookup sub_low_diacritics {
+code = "lookup Vertical_Kerning_01 {
+  lookupflag 0 ;
+    pos doublebrevecomb <33 264 0 0> ;
+    pos doublemacroncomb <33 264 0 0> ;
+    pos tildedoublecomb <33 264 0 0> ;
+    pos breveinverteddoublecomb <33 264 0 0> ;
+    pos doublecircumflexcomb <33 264 0 0> ;
+} Vertical_Kerning_01 ;
+
+lookup Vertical_Kerning_02 {
+  lookupflag 0 ;
+    pos doublebrevecomb <0 64 0 0> ;
+    pos doublemacroncomb <0 64 0 0> ;
+    pos tildedoublecomb <0 64 0 0> ;
+    pos breveinverteddoublecomb <0 64 0 0> ;
+    pos doublecircumflexcomb <0 64 0 0> ;
+} Vertical_Kerning_02 ;
+
+lookup Contextual_Kerning_01 {
+  lookupflag 0 ;
+    pos doublebrevecomb <-65 0 0 0> ;
+    pos doublemacroncomb <-65 0 0 0> ;
+    pos doublemacronbelowcomb <-65 0 0 0> ;
+    pos tildedoublecomb <-65 0 0 0> ;
+    pos breveinverteddoublecomb <-65 0 0 0> ;
+    pos doublebrevebelowcomb <-65 0 0 0> ;
+    pos doublecircumflexcomb <-65 0 0 0> ;
+} Contextual_Kerning_01 ;
+
+lookup Contextual_Kerning_02 {
+  lookupflag 0 ;
+    pos doublebrevecomb <-70 0 0 0> ;
+    pos doublemacroncomb <-70 0 0 0> ;
+    pos doublemacronbelowcomb <-70 0 0 0> ;
+    pos tildedoublecomb <-70 0 0 0> ;
+    pos breveinverteddoublecomb <-70 0 0 0> ;
+    pos doublebrevebelowcomb <-70 0 0 0> ;
+    pos doublecircumflexcomb <-70 0 0 0> ;
+} Contextual_Kerning_02 ;
+
+lookup Contextual_Kerning_03 {
+  lookupflag 0 ;
+    pos doublebrevecomb <30 0 0 0> ;
+    pos doublemacroncomb <30 0 0 0> ;
+    pos doublemacronbelowcomb <30 0 0 0> ;
+    pos tildedoublecomb <30 0 0 0> ;
+    pos breveinverteddoublecomb <30 0 0 0> ;
+    pos doublebrevebelowcomb <30 0 0 0> ;
+    pos doublecircumflexcomb <30 0 0 0> ;
+} Contextual_Kerning_03 ;
+
+
+lookup sub_low_diacritics {
   sub muncialcomb by muncialcomb.low ;
   sub dotlessicomb by dotlessicomb.low ;
   sub Rcomb by Rcomb.low ;
@@ -524,6 +581,11 @@ code = "lookup i_dot {
 lookup UpperCaseDiacritics {
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
 } UpperCaseDiacritics ;
+
+lookup Oddball_ligs {
+  sub b tildeoverlaycomb b tildeoverlaycomb by b_tildeoverlaycomb_b_tildeoverlaycomb ;
+  sub l tildeoverlaycomb l tildeoverlaycomb by l_tildeoverlaycomb_l_tildeoverlaycomb ;
+} Oddball_ligs ;
 
 lookup ogonekdot {
 # 4-part
@@ -1094,7 +1156,13 @@ value = Entities;
 tag = ss10;
 },
 {
-code = "sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining macron\";  # English US
+  };
+  Character 0x0304;
+};
+sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 ] ;
 #overlinecomb.alt zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case
 #                       zigzagabovecomb.alt3.case flattenedopenaabovecomb.alt ancomb ansmcpcomb arcomb arsmcpcomb bcomb
 #                      bsmcpcomb dsmcpcomb emacroncomb eogonekcomb fcomb dotlessicomb jcomb
@@ -1103,6 +1171,28 @@ code = "sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 ] ;
 #                      macroncomb.narrow ] ;
 ";
 tag = cv84;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of double macron\";  # English US
+  };
+  Character 0x035E;
+};
+sub doublemacroncomb from [ doublemacroncomb.alt1 doublemacroncomb.alt2 ] ;
+";
+tag = cv90;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of spacing macron\";  # English US
+  };
+  Character 0x00AF;
+};
+sub macron from [ zigzagmod ] ;
+";
+tag = cv67;
 },
 {
 automatic = 1;
@@ -2164,62 +2254,136 @@ sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
 tag = ordn;
 },
 {
-code = "sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of A\";  # English US
+  };
+  Character 0x0041;
+};
+sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
 ";
 tag = cv01;
 },
 {
-code = "sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of a\";  # English US
+  };
+  Character 0x0061;
+};
+sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged ] ;
 ";
 tag = cv02;
 },
 {
-code = "sub B from [ B.enlarged ] ;";
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of B\";  # English US
+  };
+  Character 0x0042;
+};
+sub B from [ B.enlarged ] ;
+";
 tag = cv03;
 },
 {
-code = "sub b from [ b.enlarged ];";
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of b\";  # English US
+  };
+  Character 0x0062;
+};
+sub b from [ b.enlarged ];
+";
 tag = cv04;
 },
 {
-code = "sub C from [ C.alt C.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of C\";  # English US
+  };
+  Character 0x0043;
+};
+sub C from [ C.alt C.enlarged ] ;
 ";
 tag = cv05;
 },
 {
-code = "sub c from [ c.mecurl c.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of c\";  # English US
+  };
+  Character 0x0063;
+};
+sub c from [ c.mecurl c.enlarged ] ;
 ";
 tag = cv06;
 },
 {
-code = "sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of D\";  # English US
+  };
+  Character 0x0044;
+};
+sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
 ";
 tag = cv07;
 },
 {
-code = "sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of d\";  # English US
+  };
+  Character 0x0064;
+};
+sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
 ";
 tag = cv08;
 },
 {
-code = "sub E from [ E.alt1 E.alt2 E.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of E\";  # English US
+  };
+  Character 0x0045;
+};
+sub E from [ E.alt1 E.alt2 E.enlarged ] ;
 ";
 tag = cv09;
 },
 {
-code = "sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of e\";  # English US
+  };
+  Character 0x0065;
+};
+sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged ] ;
 ";
 tag = cv10;
 },
 {
-code = "sub F         from [ Finsular F.enlarged Finsular.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of F\";  # English US
+  };
+  Character 0x0046;
+};
+sub F from [ Finsular F.enlarged Finsular.enlarged ] ;
 # sub Fdotbelow from [ Finsulardotbelow ] ;
 
 ";
 tag = cv11;
 },
 {
-code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of f\";  # English US
+  };
+  Character 0x0066;
+};
+sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged ] ;
 
 
 # do something about underdotted form (supply for all?)
@@ -2230,257 +2394,561 @@ code = "sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged fin
 tag = cv12;
 },
 {
-code = "sub G from [ Ginsular Gormulum G.alt G.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of G\";  # English US
+  };
+  Character 0x0047;
+};
+sub G from [ Ginsular Gormulum G.alt G.enlarged ] ;
 ";
 tag = cv13;
 },
 {
-code = "sub g from [ ginsular gormulum gsingle g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of g\";  # English US
+  };
+  Character 0x0067;
+};
+sub g from [ ginsular gormulum gsingle g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
 ";
 tag = cv14;
 },
 {
-code = "sub H from [ H.alt H.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of H\";  # English US
+  };
+  Character 0x0048;
+};
+sub H from [ H.alt H.enlarged ] ;
 ";
 tag = cv15;
 },
 {
-code = "sub h from [ h.alt h.alt2 h.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of h\";  # English US
+  };
+  Character 0x0068;
+};
+sub h from [ h.alt h.alt2 h.enlarged ] ;
 ";
 tag = cv16;
 },
 {
-code = "sub I from [ Idotaccent Longaepigraphici I.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of I\";  # English US
+  };
+  Character 0x0049;
+};
+sub I from [ Idotaccent Longaepigraphici I.enlarged ] ;
 # figure this out
 # sub Idotaccent    from [ I                                  ] ;
 ";
 tag = cv17;
 },
 {
-code = "sub i from [ i.alt2 i.alt i.alt1 i.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of i\";  # English US
+  };
+  Character 0x0069;
+};
+sub i from [ i.alt2 i.alt i.alt1 i.enlarged ] ;
 # figure this out
 # sub dotlessi      from [ i                                  ] ;
 ";
 tag = cv18;
 },
 {
-code = "sub J from [ Jdotaccent J.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of J\";  # English US
+  };
+  Character 0x004A;
+};
+sub J from [ Jdotaccent J.enlarged ] ;
 ";
 tag = cv19;
 },
 {
-code = "sub j from [ j.alt3 j.alt2 jdotaccent j.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of j\";  # English US
+  };
+  Character 0x006A;
+};
+sub j from [ j.alt3 j.alt2 jdotaccent j.enlarged ] ;
 ";
 tag = cv20;
 },
 {
-code = "sub K from [ K.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of K\";  # English US
+  };
+  Character 0x004B;
+};
+sub K from [ K.enlarged ] ;
 ";
 tag = cv21;
 },
 {
-code = "sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of k\";  # English US
+  };
+  Character 0x006B;
+};
+sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged ] ;
 ";
 tag = cv22;
 },
 {
-code = "sub L from [ L.enlarged ] ;";
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of L\";  # English US
+  };
+  Character 0x004C;
+};
+sub L from [ L.enlarged ] ;
+";
 tag = cv23;
 },
 {
-code = "sub l from [ l.alt l.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of l\";  # English US
+  };
+  Character 0x006C;
+};
+sub l from [ l.alt l.enlarged ] ;
 ";
 tag = cv24;
 },
 {
-code = "sub M from [ M.alt1 M.alt2 M.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of M\";  # English US
+  };
+  Character 0x004D;
+};
+sub M from [ M.alt1 M.alt2 M.enlarged ] ;
 # Need to add U+A7FF in 3rd position
 ";
 tag = cv25;
 },
 {
-code = "sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of m\";  # English US
+  };
+  Character 0x006D;
+};
+sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
 ";
 tag = cv26;
 },
 {
-code = "sub N from [ N.alt1 N.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of N\";  # English US
+  };
+  Character 0x004E;
+};
+sub N from [ N.alt1 N.enlarged ] ;
 ";
 tag = cv27;
 },
 {
-code = "sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of n\";  # English US
+  };
+  Character 0x006E;
+};
+sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged ] ;
 ";
 tag = cv28;
 },
 {
-code = "sub O from [ Ooldpolish O.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of O\";  # English US
+  };
+  Character 0x004F;
+};
+sub O from [ Ooldpolish O.enlarged ] ;
 ";
 tag = cv29;
 },
 {
-code = "sub o from [ ooldpolish o.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of o\";  # English US
+  };
+  Character 0x006F;
+};
+sub o from [ ooldpolish o.enlarged ] ;
 ";
 tag = cv30;
 },
 {
-code = "sub P from [ Pepigraphicreversed P.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of P\";  # English US
+  };
+  Character 0x0050;
+};
+sub P from [ Pepigraphicreversed P.enlarged ] ;
 ";
 tag = cv31;
 },
 {
-code = "sub p from [ p.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of p\";  # English US
+  };
+  Character 0x0070;
+};
+sub p from [ p.enlarged ] ;
 ";
 tag = cv32;
 },
 {
-code = "sub Q from [ Q.alt Q.enlarged Q.alt2 Q.swash ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Q\";  # English US
+  };
+  Character 0x0051;
+};
+sub Q from [ Q.alt Q.enlarged Q.alt2 Q.swash ] ;
 ";
 tag = cv33;
 },
 {
-code = "sub q from [ q.alt q.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of q\";  # English US
+  };
+  Character 0x0071;
+};
+sub q from [ q.alt q.enlarged ] ;
 ";
 tag = cv34;
 },
 {
-code = "sub R from [ Rinsular R.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of R\";  # English US
+  };
+  Character 0x0052;
+};
+sub R from [ Rinsular R.enlarged ] ;
 ";
 tag = cv35;
 },
 {
-code = "sub r from [ rinsular rrotunda r.mecurl r.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of r\";  # English US
+  };
+  Character 0x0072;
+};
+sub r from [ rinsular rrotunda r.mecurl r.enlarged ] ;
 ";
 tag = cv36;
 },
 {
-code = "sub S from [ Sinsular Ssigmoid S.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of S\";  # English US
+  };
+  Character 0x0053;
+};
+sub S from [ Sinsular Ssigmoid S.enlarged ] ;
 ";
 tag = cv37;
 },
 {
-code = "sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of s\";  # English US
+  };
+  Character 0x0073;
+};
+sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged ] ;
 # check these over.
 ";
 tag = cv38;
 },
 {
-code = "sub T from [ Tinsular T.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of T\";  # English US
+  };
+  Character 0x0054;
+};
+sub T from [ Tinsular T.enlarged ] ;
 ";
 tag = cv39;
 },
 {
-code = "sub t from [ tinsular t.mecurl t.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of t\";  # English US
+  };
+  Character 0x0074;
+};
+sub t from [ tinsular t.mecurl t.enlarged ] ;
 ";
 tag = cv40;
 },
 {
-code = "sub U from [ U.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of U\";  # English US
+  };
+  Character 0x0055;
+};
+sub U from [ U.enlarged ] ;
 ";
 tag = cv41;
 },
 {
-code = "sub u from [ u.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of u\";  # English US
+  };
+  Character 0x0075;
+};
+sub u from [ u.enlarged ] ;
 ";
 tag = cv42;
 },
 {
-code = "sub V from [ V.enlarged ] ;";
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of V\";  # English US
+  };
+  Character 0x0056;
+};
+sub V from [ V.enlarged ] ;
+";
 tag = cv43;
 },
 {
-code = "sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of v\";  # English US
+  };
+  Character 0x0076;
+};
+sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
 ";
 tag = cv44;
 },
 {
-code = "sub W from [ W.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of W\";  # English US
+  };
+  Character 0x0057;
+};
+sub W from [ W.enlarged ] ;
 ";
 tag = cv45;
 },
 {
-code = "sub w from [ w.enlarged ] ;";
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of w\";  # English US
+  };
+  Character 0x0077;
+};
+sub w from [ w.enlarged ] ;
+";
 tag = cv46;
 },
 {
-code = "sub X from [ X.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of X\";  # English US
+  };
+  Character 0x0058;
+};
+sub X from [ X.enlarged ] ;
 ";
 tag = cv47;
 },
 {
-code = "sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of x\";  # English US
+  };
+  Character 0x0078;
+};
+sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
 ";
 tag = cv48;
 },
 {
-code = "# sub Y from [ Y.alt Y.enlarged ] ; Need to add Y.alt
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Y\";  # English US
+  };
+  Character 0x0059;
+};
+# sub Y from [ Y.alt Y.enlarged ] ; Need to add Y.alt
 sub Y from [ Y.enlarged ] ;
 ";
 tag = cv49;
 },
 {
-code = "sub y from [ y.alt y.alt2 y.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of y\";  # English US
+  };
+  Character 0x0079;
+};
+sub y from [ y.alt y.alt2 y.enlarged ] ;
 ";
 tag = cv50;
 },
 {
-code = "sub Z from [ Zvisigothic Z.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Z\";  # English US
+  };
+  Character 0x005A;
+};
+sub Z from [ Zvisigothic Z.enlarged ] ;
 ";
 tag = cv51;
 },
 {
-code = "sub z from [ zvisigothic z.alt1 z.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of z\";  # English US
+  };
+  Character 0x007A;
+};
+sub z from [ zvisigothic z.alt1 z.enlarged ] ;
 ";
 tag = cv52;
 },
 {
-code = "sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of A with ogonek\";  # English US
+  };
+  Character 0x0104;
+};
+sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
 
 ";
 tag = cv53;
 },
 {
-code = "sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of a with ogonek\";  # English US
+  };
+  Character 0x0105;
+};
+sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
 ";
 tag = cv54;
 },
 {
-code = "sub aa from [ aa.alt2 aa.alt aa.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of aa\";  # English US
+  };
+  Character 0xA733;
+};
+sub aa from [ aa.alt2 aa.alt aa.enlarged ] ;
 ";
 tag = cv55;
 },
 {
-code = "sub AE from [ AE.alt1 AE.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of AE\";  # English US
+  };
+  Character 0x00C6;
+};
+sub AE from [ AE.alt1 AE.enlarged ] ;
 ";
 tag = cv56;
 },
 {
-code = "sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of ae\";  # English US
+  };
+  Character 0x00E6;
+};
+sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
 ";
 tag = cv57;
 },
 {
-code = "sub Ao from [ Ao.alt AO.enlarged AO.enlarged.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Ao\";  # English US
+  };
+  Character 0xA734;
+};
+sub Ao from [ Ao.alt AO.enlarged AO.enlarged.alt ] ;
 ";
 tag = cv58;
 },
 {
-code = "sub ao from [ ao.alt ao.alt2 ao.enlarged.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of ao\";  # English US
+  };
+  Character 0xA735;
+};
+sub ao from [ ao.alt ao.alt2 ao.enlarged.alt ] ;
 ";
 tag = cv59;
 },
 {
-code = "sub av from [ av.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of av\";  # English US
+  };
+  Character 0xA739;
+};
+sub av from [ av.alt ] ;
 ";
 tag = cv60;
 },
 {
-code = "sub dcroat from [ dcroat.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of crossed d\";  # English US
+  };
+  Character 0x0111;
+};
+sub dcroat from [ dcroat.alt ] ;
 ";
 tag = cv61;
 },
 {
-code = "sub eogonek            from [ eogonek.alt            ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of e with ogonek\";  # English US
+  };
+  Character 0x0118;
+  Character 0x0119;
+};
+sub eogonek            from [ eogonek.alt            ] ;
 sub Eogonek            from [ Eogonek.alt           ] ;
 sub eogonekdotbelow    from [ eogonekdotbelow.alt    ] ;
 sub Eogonekdotbelow    from [ Eogonekdotbelow.alt    ] ;
@@ -2492,60 +2960,112 @@ sub eogonek.enlarged   from [ eogonek.enlarged.alt   ] ;
 tag = cv62;
 },
 {
-code = "    sub Yogh       from [ Ezh         ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of yogh\";  # English US
+  };
+  Character 0x021C;
+  Character 0x021D;
+};
+    sub Yogh       from [ Ezh         ] ;
     sub yogh       from [ ezh         ] ;
 ";
 tag = cv63;
 },
 {
-code = "sub lhighstroke from [ lhighstroke.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of l with high stroke\";  # English US
+  };
+  Character 0xA749;
+};
+
+sub lhighstroke from [ lhighstroke.alt ] ;
 ";
 tag = cv64;
 },
 {
-code = "sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of o with slash\";  # English US
+  };
+  Character 0x00F8;
+};
+sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
 ";
 tag = cv65;
 },
 {
-code = "sub thornstroke         from [ thornstroke.alt         ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of crossed thorn\";  # English US
+  };
+  Character 0xA765;
+};
+sub thornstroke         from [ thornstroke.alt         ] ;
 sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
 ";
 tag = cv66;
 },
 {
-code = "sub thornstroke         from [ thornstroke.alt         ] ;
-sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
-";
-disabled = 1;
-tag = cv67;
-},
-{
-code = "sub glottalstop from [ glottalstop.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of glottal stop\";  # English US
+  };
+  Character 0x0294;
+};
+sub glottalstop from [ glottalstop.alt ] ;
 ";
 tag = cv68;
 },
 {
-code = "sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Tironian et\";  # English US
+  };
+  Character 0x204A;
+  Character 0x2E52;
+};
+sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
 sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     ] ;
 ";
 tag = cv69;
 },
 {
-code = "sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of period\";  # English US
+  };
+  Character 0x002e;
+};
+sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5
                   uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2 question.alt3 question.alt4 asciitilde.alt
-                  asterisk.alt dottedsolidus slash.alt ] ;";
+                  asterisk.alt dottedsolidus slash.alt ] ;
+";
 disabled = 1;
 tag = cv70;
 },
 {
-code = "sub periodcentered from [ periodcentered.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of centered period\";  # English US
+  };
+  Character 0x00B7;
+};
+sub periodcentered from [ periodcentered.alt ] ;
+
 ";
 disabled = 1;
 tag = cv71;
 },
 {
-code = "sub comma from [ comma.alt1 comma.alt2 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of comma\";  # English US
+  };
+  Character 0x002C;
+};
+sub comma from [ comma.alt1 comma.alt2 ] ;
 ";
 tag = cv72;
 },
@@ -2562,7 +3082,13 @@ disabled = 1;
 tag = cv74;
 },
 {
-code = "sub exclam from [ exclam.alt2 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of exclamation mark\";  # English US
+  };
+  Character 0x0021;
+};
+sub exclam from [ exclam.alt2 ] ;
 ";
 tag = cv75;
 },
@@ -2591,12 +3117,24 @@ disabled = 1;
 tag = cv79;
 },
 {
-code = "sub rumrotunda from [ rumrotunda.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of -rum abbreviation\";  # English US
+  };
+  Character 0xA75D;
+};
+sub rumrotunda from [ rumrotunda.alt ] ;
 ";
 tag = cv80;
 },
 {
-code = "sub zigzagabovecomb        from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2       zigzagabovecomb.alt3      ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining zigzag\";  # English US
+  };
+  Character 0x035B;
+};
+sub zigzagabovecomb        from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2       zigzagabovecomb.alt3      ] ;
 sub zigzagabovecomb.eth    from [ zigzagabovecomb.alt2      zigzagabovecomb.alt1.eth   zigzagabovecomb.alt3.eth  ] ;
 sub zigzagabovecomb.case   from [ zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case  zigzagabovecomb.alt3.case ] ;
 sub zigzagabovecomb.sc     from [ zigzagabovecomb.alt1.sc   zigzagabovecomb.alt2.sc    zigzagabovecomb.alt3.sc   ] ;
@@ -2607,12 +3145,24 @@ sub zigzagabovecomb.ff     from [ zigzagabovecomb.alt1.ff   zigzagabovecomb.alt2
 tag = cv81;
 },
 {
-code = "sub usmod from [ usmod.alt1 usmod.alt2 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of spacing -us abbreviation\";  # English US
+  };
+  Character 0xA770;
+};
+sub usmod from [ usmod.alt1 usmod.alt2 ] ;
 ";
 tag = cv82;
 },
 {
-code = "sub et from [ et.alt et.alt1 ];
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of et abbreviation\";  # English US
+  };
+  Character 0xA76B;
+};
+sub et from [ et.alt et.alt1 ];
 ";
 tag = cv83;
 },
@@ -2635,22 +3185,28 @@ disabled = 1;
 tag = cv87;
 },
 {
-code = "# sub adieresis    from [ adieresis.alt        ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining dieresis\";  # English US
+  };
+  Character 0x0308;
+};
+# sub adieresis    from [ adieresis.alt        ] ;
 # sub odieresis    from [ odieresis.alt        ] ;
 sub dieresiscomb from [ diagonaldieresiscomb ] ;
 ";
 tag = cv88;
 },
 {
-code = "sub overlinecomb from [ overlinecomb.alt ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining overline\";  # English US
+  };
+  Character 0x0305;
+};
+sub overlinecomb from [ overlinecomb.alt ] ;
 ";
 tag = cv89;
-},
-{
-code = "sub strokeshortcomb from [ strokeshortcomb.wide strokeshortcomb.wideright strokeshortcomb.wideleft ] ;
-";
-disabled = 1;
-tag = cv91;
 },
 {
 code = "sub brevebelowcomb from [ triplebrevebelowcomb ] ;
@@ -2659,7 +3215,13 @@ disabled = 1;
 tag = cv92;
 },
 {
-code = "sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 currency.alt05 currency.alt06 currency.alt07
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of currency sign\";  # English US
+  };
+  Character 0x00A4;
+};
+sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 currency.alt05 currency.alt06 currency.alt07
                     currency.alt08 currency.alt09 currency.alt10 currency.alt11 currency.alt12 currency.alt13 currency.alt14
                     currency.alt15 currency.alt16 currency.alt17 currency.alt18 currency.alt19 currency.alt20
                     currency.alt21 currency.alt22 currency.alt23 currency.alt24 currency.alt25 currency.alt26 currency.alt27 ] ;
@@ -2673,12 +3235,24 @@ disabled = 1;
 tag = cv94;
 },
 {
-code = "sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of pound sign\";  # English US
+  };
+  Character 0x00A3;
+};
+sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
 ";
 tag = cv95;
 },
 {
-code = "sub germanpenny from [ currency.alt22 ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of German penny sign\";  # English US
+  };
+  Character 0x20B0;
+};
+sub germanpenny from [ currency.alt22 ] ;
 ";
 tag = cv96;
 },
@@ -4335,7 +4909,20 @@ code = "sub fehu-runic by fehu-runic.rtl ;
 tag = rtlm;
 },
 {
-code = "# lookup zigzag {
+code = "lookup shortstroke {
+  sub [ b h k thorn thorn.loclENG h.alt k.alt1 k.alt2 k.alt3 ]
+    [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.wideright tildeoverlaycomb.wideright ] ;
+  sub [ d dinsular ] [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.wideleft tildeoverlaycomb.wideleft ] ;
+  sub [ i l ] [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] ;
+} shortstroke ;
+
+lookup widemacron {
+  sub [ m w ] [ macroncomb tildecomb macroncomb.alt3 ]' by [ macroncomb.wide tildecomb.wide macroncomb.alt3.wide ] ;
+  sub [ M W AE ] [ macroncomb.case tildecomb.case macroncomb.alt3.case ]' by
+                 [ macroncomb.wide.case tildecomb.wide.case macroncomb.alt3.wide.case ] ;
+} widemacron ;
+
+# lookup zigzag {
   lookup ethdiacritic ;
 # lookup shortstroke {
   lookup f_alt ;
@@ -4405,6 +4992,8 @@ sub p s i by p_s_i.hlig ;
 sub P s i by P_s_i.hlig ;
 sub longs t r by longs_t_r ;
 # sub longs.alt1 t r by longs_t_r ;
+sub qstrokethroughdescender qstrokethroughdescender by qstrokethroughdescender_qstrokethroughdescender ;
+sub pstrokethroughdescender pstrokethroughdescender by pstrokethroughdescender_pstrokethroughdescender ;
 sub o rrotunda by o_rrotunda ;
 sub o rrotunda.alt by o_rrotunda ;
 sub o rumrotunda by o_rumrotunda ;
@@ -4598,6 +5187,35 @@ sub longs.alt2 t by longs_t.alt ;
 # sub longs udieresis by longs_udieresis ;
 ";
 tag = liga;
+},
+{
+code = "lookup kern_Vertical_Kerning {
+  lookupflag 0 ;
+    @high_letters = [  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AE Thorn Eth b d f
+        h i j k l hbar Iotaafrican lbar clickdental clicklateral clickalveolar clickretroflex
+        bhook dtail dhook hhook henghook lmiddletilde lbelt lhookretroflex
+        lezh phi-latin rlonglegturned esh jdotlessstrokehook eshsquatreversed eshcurl
+        yturned glottalstop glottalstopreversed glottalstopinverted glottalstopstroke
+        glottalstopstrokereversed thorn thorn.loclENG ] ;
+    pos @high_letters @double_diacritics' lookup Vertical_Kerning_01 ;
+    pos @double_diacritics' lookup Vertical_Kerning_01  @high_letters ;
+    pos t @double_diacritics' lookup Vertical_Kerning_02 ;
+    pos @double_diacritics' lookup Vertical_Kerning_02  t ;
+} kern_Vertical_Kerning ;
+
+lookup kern_Contextual_Kerning {
+  lookupflag 0 ;
+    @enohu = [ n o u ] ;
+    @eye = [ dotlessi i ] ;
+    @ayee = [ a e ] ;
+    @essess = [ s ] ;
+    pos @enohu @double_diacritics' <-28 0 0 0> @eye ;
+    pos @ayee @double_diacritics' lookup Contextual_Kerning_01  @eye ;
+    pos @enohu @double_diacritics' lookup Contextual_Kerning_02  @essess ;
+    pos @ayee @double_diacritics' lookup Contextual_Kerning_03  @enohu ;
+} kern_Contextual_Kerning ;
+";
+tag = kern;
 }
 );
 fontMaster = (
@@ -5592,7 +6210,7 @@ pos = 666;
 },
 {
 over = 15;
-pos = 513;
+pos = 676;
 },
 {
 over = -14;
@@ -7323,5 +7941,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 42;
+versionMinor = 43;
 }

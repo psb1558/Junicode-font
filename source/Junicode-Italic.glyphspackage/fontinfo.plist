@@ -2258,6 +2258,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of A\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular A\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"A with top bar\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Antiphon\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule a\";  # English US
+  };
   Character 0x0041;
 };
 sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
@@ -2268,6 +2280,24 @@ tag = cv01;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Carolingian open a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Gothic closed a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule a\";  # English US
   };
   Character 0x0061;
 };
@@ -2280,6 +2310,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of B\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule b\";  # English US
+  };
   Character 0x0042;
 };
 sub B from [ B.enlarged ] ;
@@ -2290,6 +2323,9 @@ tag = cv03;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of b\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule b\";  # English US
   };
   Character 0x0062;
 };
@@ -2302,6 +2338,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of C\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Square C\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule c\";  # English US
+  };
   Character 0x0043;
 };
 sub C from [ C.alt C.enlarged ] ;
@@ -2312,6 +2354,12 @@ tag = cv05;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of c\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"c with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule c\";  # English US
   };
   Character 0x0063;
 };
@@ -2324,6 +2372,15 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of D\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular D\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule d\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular d\";  # English US
+  };
   Character 0x0044;
 };
 sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
@@ -2334,6 +2391,21 @@ tag = cv07;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of d\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular d\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate insular d\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"d with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule d\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular d\";  # English US
   };
   Character 0x0064;
 };
@@ -2346,6 +2418,15 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of E\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial E\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed uncial E\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule e\";  # English US
+  };
   Character 0x0045;
 };
 sub E from [ E.alt1 E.alt2 E.enlarged ] ;
@@ -2357,6 +2438,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of e\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial e\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with bar\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tall e with bar\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule e\";  # English US
+  };
   Character 0x0065;
 };
 sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged ] ;
@@ -2367,6 +2460,15 @@ tag = cv10;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of F\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular F\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular f\";  # English US
   };
   Character 0x0046;
 };
@@ -2380,6 +2482,30 @@ tag = cv11;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular f with dotted hooks\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semi-closed insular f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed insular f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Narrow f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"f with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule f\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular f\";  # English US
   };
   Character 0x0066;
 };
@@ -2398,6 +2524,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of G\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular G\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Orm's hard G\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Square G\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule g\";  # English US
+  };
   Character 0x0047;
 };
 sub G from [ Ginsular Gormulum G.alt G.enlarged ] ;
@@ -2408,6 +2546,30 @@ tag = cv13;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of g\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular g\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Orm's hard g\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Script g\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with separate loops\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with large loop\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with small loop\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"g with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule g\";  # English US
   };
   Character 0x0067;
 };
@@ -2420,6 +2582,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of H\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial H\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule h\";  # English US
+  };
   Character 0x0048;
 };
 sub H from [ H.alt H.enlarged ] ;
@@ -2431,6 +2599,15 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of h\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"h with right descender\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"autem abbreviation\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule h\";  # English US
+  };
   Character 0x0068;
 };
 sub h from [ h.alt h.alt2 h.enlarged ] ;
@@ -2441,6 +2618,15 @@ tag = cv16;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of I\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"I with dot\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Epigraphic I Longa\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule i\";  # English US
   };
   Character 0x0049;
 };
@@ -2455,6 +2641,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of i\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotless i\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Long i\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"i with two strokes\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule i\";  # English US
+  };
   Character 0x0069;
 };
 sub i from [ i.alt2 i.alt i.alt1 i.enlarged ] ;
@@ -2468,6 +2666,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of J\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotted J\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule j\";  # English US
+  };
   Character 0x004A;
 };
 sub J from [ Jdotaccent J.enlarged ] ;
@@ -2478,6 +2682,18 @@ tag = cv19;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of j\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotless j\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"j with two strokes\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"j with dot accent\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule j\";  # English US
   };
   Character 0x006A;
 };
@@ -2490,6 +2706,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of K\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule k\";  # English US
+  };
   Character 0x004B;
 };
 sub K from [ K.enlarged ] ;
@@ -2500,6 +2719,21 @@ tag = cv21;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of k\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial k\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semi-closed k\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed k\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"k with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule k\";  # English US
   };
   Character 0x006B;
 };
@@ -2512,6 +2746,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of L\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule l\";  # English US
+  };
   Character 0x004C;
 };
 sub L from [ L.enlarged ] ;
@@ -2523,6 +2760,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of l\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Descending l\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule l\";  # English US
+  };
   Character 0x006C;
 };
 sub l from [ l.alt l.enlarged ] ;
@@ -2533,6 +2776,18 @@ tag = cv24;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of M\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial M\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial M with descender\";  # English US
+  };
+#  ParamUILabelNameID {
+#    name 3 1 0x0409 \"Epigraphic Archaic M\";  # English US
+#  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule m\";  # English US
   };
   Character 0x004D;
 };
@@ -2546,6 +2801,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of m\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial m\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial m with descender\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"m with descender\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule m\";  # English US
+  };
   Character 0x006D;
 };
 sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
@@ -2556,6 +2823,12 @@ tag = cv26;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of N\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"N with descender\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule n\";  # English US
   };
   Character 0x004E;
 };
@@ -2568,6 +2841,21 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of n\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"n with descender\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Petite cap n with descender\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"n with bar\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"n with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule n\";  # English US
+  };
   Character 0x006E;
 };
 sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged ] ;
@@ -2578,6 +2866,12 @@ tag = cv28;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of O\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old Polish O\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule o\";  # English US
   };
   Character 0x004F;
 };
@@ -2590,6 +2884,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of o\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old Polish o\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule o\";  # English US
+  };
   Character 0x006F;
 };
 sub o from [ ooldpolish o.enlarged ] ;
@@ -2600,6 +2900,12 @@ tag = cv30;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of P\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Reversed P\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule p\";  # English US
   };
   Character 0x0050;
 };
@@ -2612,6 +2918,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of p\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule p\";  # English US
+  };
   Character 0x0070;
 };
 sub p from [ p.enlarged ] ;
@@ -2622,6 +2931,21 @@ tag = cv32;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of Q\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Q with stem\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule q\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Q with long tail\";  # English US
+  };
+#  ParamUILabelNameID {
+#    name 3 1 0x0409 \"Q with longer tail\";  # English US
+#  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Swash Q\";  # English US
   };
   Character 0x0051;
 };
@@ -2634,6 +2958,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of q\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"q with slanted stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule q\";  # English US
+  };
   Character 0x0071;
 };
 sub q from [ q.alt q.enlarged ] ;
@@ -2645,9 +2975,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of R\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular R\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"R rotunda\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule r\";  # English US
+  };
   Character 0x0052;
 };
-sub R from [ Rinsular R.enlarged ] ;
+sub R from [ Rinsular Rrotunda R.enlarged ] ;
 ";
 tag = cv35;
 },
@@ -2655,6 +2994,18 @@ tag = cv35;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of r\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular r\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"r rotunda\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"r with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule r\";  # English US
   };
   Character 0x0072;
 };
@@ -2667,6 +3018,15 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of S\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular S\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Sigmoid S\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule s\";  # English US
+  };
   Character 0x0053;
 };
 sub S from [ Sinsular Ssigmoid S.enlarged ] ;
@@ -2677,6 +3037,27 @@ tag = cv37;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of s\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular s\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Sigmoid s\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Longs s\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Descending longs s\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Longs s with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Longs s with descending stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule s\";  # English US
   };
   Character 0x0073;
 };
@@ -2690,6 +3071,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of T\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular T\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule t\";  # English US
+  };
   Character 0x0054;
 };
 sub T from [ Tinsular T.enlarged ] ;
@@ -2700,6 +3087,15 @@ tag = cv39;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of t\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular t\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"t with flourish\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule t\";  # English US
   };
   Character 0x0074;
 };
@@ -2712,6 +3108,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of U\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule u\";  # English US
+  };
   Character 0x0055;
 };
 sub U from [ U.enlarged ] ;
@@ -2722,6 +3121,9 @@ tag = cv41;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of u\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule u\";  # English US
   };
   Character 0x0075;
 };
@@ -2734,6 +3136,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of V\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule v\";  # English US
+  };
   Character 0x0056;
 };
 sub V from [ V.enlarged ] ;
@@ -2744,6 +3149,21 @@ tag = cv43;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of v\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with short slash\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with slash above right\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with two slashes above right\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with bar\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule v\";  # English US
   };
   Character 0x0076;
 };
@@ -2756,6 +3176,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of W\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule w\";  # English US
+  };
   Character 0x0057;
 };
 sub W from [ W.enlarged ] ;
@@ -2766,6 +3189,9 @@ tag = cv45;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of w\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule w\";  # English US
   };
   Character 0x0077;
 };
@@ -2778,6 +3204,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of X\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule x\";  # English US
+  };
   Character 0x0058;
 };
 sub X from [ X.enlarged ] ;
@@ -2789,6 +3218,21 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of x\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with long left leg\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with slash above left\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with slash below right\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with two slashes below right\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule x\";  # English US
+  };
   Character 0x0078;
 };
 sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
@@ -2799,6 +3243,12 @@ tag = cv48;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of Y\";  # English US
+  };
+#  ParamUILabelNameID {
+#    name 3 1 0x0409 \"Hymnus\";  # English US
+#  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule y\";  # English US
   };
   Character 0x0059;
 };
@@ -2812,6 +3262,15 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of y\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"y with right main stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"y with bar\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule y\";  # English US
+  };
   Character 0x0079;
 };
 sub y from [ y.alt y.alt2 y.enlarged ] ;
@@ -2823,6 +3282,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of Z\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Visigothic Z\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule z\";  # English US
+  };
   Character 0x005A;
 };
 sub Z from [ Zvisigothic Z.enlarged ] ;
@@ -2833,6 +3298,15 @@ tag = cv51;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of z\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Visigothic z\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Middle High German z\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule z\";  # English US
   };
   Character 0x007A;
 };

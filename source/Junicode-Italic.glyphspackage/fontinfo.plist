@@ -165,7 +165,7 @@ name = "Disable Subroutines";
 value = 1;
 }
 );
-date = "2022-03-05 22:43:42 +0000";
+date = "2022-03-07 20:10:12 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -5387,7 +5387,7 @@ code = "lookup shortstroke {
   sub [ b h k thorn thorn.loclENG h.alt k.alt1 k.alt2 k.alt3 ]
     [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.wideright tildeoverlaycomb.wideright ] ;
   sub [ d dinsular ] [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.wideleft tildeoverlaycomb.wideleft ] ;
-  sub [ i l ] [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] ;
+  sub [ i j l ] [ strokeshortcomb tildeoverlaycomb ]' by [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] ;
 } shortstroke ;
 
 lookup widemacron {
@@ -5407,6 +5407,13 @@ lookup widemacron {
 # lookup calt_rrotunda {
   lookup calt_insular_st ;
   lookup calt_zzalt ;
+
+lookup calt_is {
+  sub f is' by is.lf ;
+  sub g is' by is.lg ;
+  sub t is' by is.lt ;
+} calt_is ;
+
 ";
 tag = calt;
 },
@@ -7358,6 +7365,9 @@ Z = -19.53125;
 "@MMK_L_z" = {
 "@MMK_R_uni1EF5" = -29.29688;
 };
+b = {
+"@MMK_R_is" = -40;
+};
 i = {
 "@MMK_R_u" = 0;
 };
@@ -7743,6 +7753,12 @@ P = {
 P = {
 "@MMK_R_A" = -68.35938;
 };
+b = {
+"@MMK_R_is" = -110;
+};
+z = {
+"@MMK_R_is" = -86;
+};
 };
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = {
 "@MMK_L_A" = {
@@ -7932,6 +7948,9 @@ P = {
 };
 P = {
 "@MMK_R_A" = -53.71094;
+};
+b = {
+"@MMK_R_is" = -40;
 };
 };
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = {
@@ -8415,5 +8434,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 43;
+versionMinor = 44;
 }

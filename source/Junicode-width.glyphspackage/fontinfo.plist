@@ -3766,6 +3766,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of yogh\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Yogh with flat top\";  # English US
+  };
   Character 0x021C;
   Character 0x021D;
 };
@@ -3779,6 +3782,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of l with high stroke\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with curved high stroke\";  # English US
+  };
   Character 0xA749;
 };
 sub lhighstroke from [ lhighstroke.alt ] ;
@@ -3790,6 +3796,21 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of o with slash\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with broken diagonal stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with partial diagonal stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with lower-left stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with upper-right stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old Polish o\";  # English US
+  };
   Character 0x00F8;
 };
 sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
@@ -3800,6 +3821,9 @@ tag = cv65;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of crossed thorn\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"thorn with variant cross stroke\";  # English US
   };
   Character 0xA765;
 };
@@ -3813,6 +3837,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of glottal stop\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Cursive glottal stop\";  # English US
+  };
   Character 0x0294;
 };
 sub uni0294 from [ uni0294.alt ] ;
@@ -3823,6 +3850,12 @@ tag = cv68;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of Tironian et\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short Tironian et\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short Tironian et with stroke\";  # English US
   };
   Character 0x204A;
   Character 0x2E52;
@@ -3835,13 +3868,75 @@ tag = cv69;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of period\";  # English US
+    name 3 1 0x0409 \"Variants of period\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Distinctio\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"High comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus versus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus with comma positura\";  # 5
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Colon with middle comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with two dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with three dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with high back\"; # 10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with onset\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus flexus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus exclamativus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with wavy stroke\"; #15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Low wavy line\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Signe de renvoi\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Virgula suspensiva (dotted solidus)\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short virgula\"; # 20
   };
   Character 0x002E;
 };
-sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5
-                  uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2 question.alt3 question.alt4 asciitilde.alt
-                  asterisk.alt dottedsolidus slash.alt ] ;
+sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1                    # 1-4
+                  semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 uni2E4E.alt1   # 5-9
+                  uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2           # 10-14
+                  question.alt3 question.alt4 asciitilde.alt asterisk.alt dottedsolidus      # 15-19
+                  slash.alt ] ;
 ";
 tag = cv70;
 },
@@ -3849,6 +3944,9 @@ tag = cv70;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of centered period\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Distinctio\";
   };
   Character 0x00B7;
 };
@@ -3862,6 +3960,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of comma\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"High comma positura\";
+  };
   Character 0x002C;
 };
 sub comma from [ comma.alt1 comma.alt2 ] ;
@@ -3872,6 +3976,21 @@ tag = cv72;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of semicolon\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus versus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus with comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Colon with middle comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with two dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with three dots\";
   };
   Character 0x003B;
 };
@@ -3885,6 +4004,18 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of punctus elevatus\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with high back\"; # 10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with onset\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus flexus\";
+  };
   Character 0x2E4E;
 };
 
@@ -3897,6 +4028,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of exclamation mark\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus exclamativus\";
+  };
   Character 0x0021;
 };
 sub exclam from [ exclam.alt2 ] ;
@@ -3907,6 +4041,15 @@ tag = cv75;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of question mark\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with wavy stroke\"; #15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
   };
   Character 0x003F;
 };
@@ -3920,6 +4063,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of spacing tilde\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Low wavy line\";
+  };
   Character 0x007E;
 };
 
@@ -3931,6 +4077,9 @@ tag = cv77;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of asterisk\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Signe de renvoi\";
   };
   Character 0x002A;
 };
@@ -3944,6 +4093,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of slash\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Virgula suspensiva (dotted solidus)\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short virgula\"; # 20
+  };
   Character 0x002F;
 };
 
@@ -3956,6 +4111,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of -rum abbreviation\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Record-style -rum\";
+  };
   Character 0xA75D;
 };
 sub rumrotunda from [ rumrotunda.alt ] ;
@@ -3966,6 +4124,15 @@ tag = cv80;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining zigzag\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Angular form zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curly zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Vertical zigzag\";
   };
   Character 0x035B;
 };
@@ -3984,6 +4151,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of spacing -us abbreviation\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Baseline -us abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Capital -us abbreviation\";
+  };
   Character 0xA770;
 };
 sub usmod from [ usmod.alt1 usmod.alt2 ] ;
@@ -3995,6 +4168,12 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of et abbreviation\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semicolon-like et\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Subscript et\";
+  };
   Character 0xA76B;
 };
 sub et from [ et.alt et.alt1 ];
@@ -4005,6 +4184,9 @@ tag = cv83;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining open a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Combining open a with macron\";
   };
   Character 0x1DD3;
 };
@@ -4018,6 +4200,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining insular d\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate combining insular d\";
+  };
   Character 0x1DD8;
 };
 
@@ -4029,6 +4214,9 @@ tag = cv86;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining r rotunda\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curly combining r rotunda\";
   };
   Character 0x1DE3;
 };
@@ -4042,6 +4230,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining dieresis\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Diagonal dieresis\";
+  };
   Character 0x0308;
 };
 sub adieresis    from [ adieresis.alt        ] ;
@@ -4054,6 +4245,9 @@ tag = cv88;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining overline\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotted overline\";
   };
   Character 0x0305;
 };
@@ -4073,6 +4267,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of combining breve below\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Triple breve below\";
+  };
   Character 0x032E;
 };
 
@@ -4084,6 +4281,87 @@ tag = cv92;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of currency sign\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"As libralis sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Small cap x with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Small cap y with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Small cap d with slash\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Pharmaceutical dram sign\"; # 05
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Ecu sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Floren sign with loop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Groschen sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Helbing sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Krone sign\"; # 10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dutch libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"French libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Italian libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Flemish libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira nuova sign\"; # 15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira sterlina sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old mark sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old flourish mark sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Marked small letter m sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Flourished small letter m sign\"; # 20
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Pharmaceutical obelus sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Penning sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old Reichstaler sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"German Schilling sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"German script Schilling sign\"; # 25
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Scudi sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Script ounce sign\";
   };
   Character 0x00A4;
 };
@@ -4099,6 +4377,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of lb with bar\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Italian libra sign\";
+  };
   Character 0x2114;
 };
 
@@ -4111,6 +4392,24 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of pound sign\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dutch libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"French libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Italian libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Flemish libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira nuova sign\"; # 15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira sterlina sign\";
+  };
   Character 0x00A3;
 };
 sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
@@ -4121,6 +4420,9 @@ tag = cv95;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of German penny sign\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Penning sign\";
   };
   Character 0x20B0;
 };
@@ -4133,6 +4435,9 @@ code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of florin sign\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Floren sign with loop\";
+  };
   Character 0x0192;
 };
 
@@ -4144,6 +4449,9 @@ tag = cv97;
 code = "cvParameters {
   FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of ounce sign\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Script ounce sign\";
   };
   Character 0x2125;
 };

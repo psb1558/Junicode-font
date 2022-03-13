@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model
+    href="file:///Users/peterbaker/work/GitHub/xgridfit-3/xgridfit/Schemas/xgridfit-sh.rnc"
+    type="application/relax-ng-compact-syntax"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
+	  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <inputfont>JunicodeTwoBeta-Regular.ttf</inputfont>
+  <outputfont>JunicodeTwoBeta-Regular-hinted.ttf</outputfont>
+
+  <default type="init-graphics" val="no"/>
+  <default type="cleartype" val="yes"/>
+  <default type="assume-always-y" val="yes"/>
+
+  <cv nm="lc-mark-bottom" val="502"/>
+
+  <prep></prep>
+
+  <gl pnm="tilde">
+    <mv di="lc-mark-bottom" p="{247;502}">
+      <mv p="{98;548}">
+        <mv p="{105;616}"/>
+      </mv>
+      <mv p="{252;571}"/>
+    </mv>
+  </gl>
+
+  </xgridfit>

@@ -3816,11 +3816,14 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Yogh with flat top\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular minuscule yogh\";  # English US
+  };
   Character 0x021C;
   Character 0x021D;
 };
-    sub Yogh       from [ Yogh.alt ] ;
-    sub yogh       from [ yogh.alt ] ;
+    sub Yogh       from [ Yogh.alt Yogh.alt2 ] ;
+    sub yogh       from [ yogh.alt yogh.alt2 ] ;
 ";
 tag = cv63;
 },
@@ -5463,6 +5466,8 @@ sub gmacron by gmacron.sc;
 sub gstroke by gstroke.sc;
 sub gturnedinsular by gturnedinsular.sc;
 sub yogh by yogh.sc;
+sub yogh.alt by yogh.alt.sc ;
+sub yogh.alt2 by yogh.alt2.sc ;
 sub h by h.sc;
 sub halfh by halfh.sc;
 sub hbar by hbar.sc;

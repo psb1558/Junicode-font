@@ -252,7 +252,7 @@ size = 0;
 );
 }
 );
-date = "2022-03-12 16:17:02 +0000";
+date = "2022-03-25 11:43:06 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -619,7 +619,6 @@ feature cv98;
 feature pcap;
 feature c2sc;
 feature smcp;
-feature cv99;
 feature ss07;
 feature rtlm;
 feature calt;
@@ -704,6 +703,8 @@ lookup UpperCaseDiacritics {
 
 lookup Oddball_ligs {
   sub b tildeoverlaycomb b tildeoverlaycomb by b_tildeoverlaycomb_b_tildeoverlaycomb ;
+  sub d tildeoverlaycomb d tildeoverlaycomb by d_tildeoverlaycomb_d_tildeoverlaycomb ;
+  sub f tildeoverlaycomb f tildeoverlaycomb by f_tildeoverlaycomb_f_tildeoverlaycomb ;
   sub l tildeoverlaycomb l tildeoverlaycomb by l_tildeoverlaycomb_l_tildeoverlaycomb ;
 } Oddball_ligs ;
 
@@ -795,7 +796,12 @@ sub x overlinecomb by x.medhighoverline ;
 sub thorn.loclENG overlinecomb by thorn.medhighoverline.loclENG ;
 } overlines ;
 
-# lookup diacritics {
+lookup diacritics {
+  sub H tildeoverlaycomb by Htildeoverlay ;
+  sub Q strokeshortcomb by Qstrokethroughdescender ;
+  sub Q tildeoverlaycomb by Qstrokethroughdescender ;
+  sub Q slashshortcomb by Qdiagonalstroke ;
+  sub q slashshortcomb by qdiagonalstroke ;
 # But we don't really want to produce PUA characters here. Use rlig instead?
 # sub b uni0364 by uniF056 ;
 # sub b dotlessicomb by uniF057 ;
@@ -835,12 +841,52 @@ sub thorn.loclENG overlinecomb by thorn.medhighoverline.loclENG ;
 # sub eth uni036C by uniF0AA ;
 # sub eth Rcomb by uniF0AB ;
 # sub eth uni036D by uniF0AE ;
-# } diacritics ;
+} diacritics ;
 
 # These two Greek lookups adapted from code by Tosche at
 # https://forum.glyphsapp.com/t/auto-feature-suggestion-for-greek/4054/2
 # To avoid this kind of normalizing in polytonic, use oxia code points
 # instead of tonos code points.
+
+lookup vtagentities {
+sub ampersand underscore underscore c a semicolon by cancel.vtag ;
+sub ampersand underscore underscore a semicolon by a.vtag ;
+sub ampersand underscore underscore b semicolon by b.vtag ;
+sub ampersand underscore underscore c semicolon by c.vtag ;
+sub ampersand underscore underscore d semicolon by d.vtag ;
+sub ampersand underscore underscore e semicolon by e.vtag ;
+sub ampersand underscore underscore f semicolon by f.vtag ;
+sub ampersand underscore underscore g semicolon by g.vtag ;
+sub ampersand underscore underscore h semicolon by h.vtag ;
+sub ampersand underscore underscore i semicolon by i.vtag ;
+sub ampersand underscore underscore j semicolon by j.vtag ;
+sub ampersand underscore underscore k semicolon by k.vtag ;
+sub ampersand underscore underscore l semicolon by l.vtag ;
+sub ampersand underscore underscore m semicolon by m.vtag ;
+sub ampersand underscore underscore n semicolon by n.vtag ;
+sub ampersand underscore underscore o semicolon by o.vtag ;
+sub ampersand underscore underscore p semicolon by p.vtag ;
+sub ampersand underscore underscore q semicolon by q.vtag ;
+sub ampersand underscore underscore r semicolon by r.vtag ;
+sub ampersand underscore underscore s semicolon by s.vtag ;
+sub ampersand underscore underscore t semicolon by t.vtag ;
+sub ampersand underscore underscore u semicolon by u.vtag ;
+sub ampersand underscore underscore v semicolon by v.vtag ;
+sub ampersand underscore underscore w semicolon by w.vtag ;
+sub ampersand underscore underscore x semicolon by x.vtag ;
+sub ampersand underscore underscore y semicolon by y.vtag ;
+sub ampersand underscore underscore z semicolon by z.vtag ;
+sub ampersand underscore underscore zero semicolon by zero.vtag ;
+sub ampersand underscore underscore one semicolon by one.vtag ;
+sub ampersand underscore underscore two semicolon by two.vtag ;
+sub ampersand underscore underscore three semicolon by three.vtag ;
+sub ampersand underscore underscore four semicolon by four.vtag ;
+sub ampersand underscore underscore five semicolon by five.vtag ;
+sub ampersand underscore underscore six semicolon by six.vtag ;
+sub ampersand underscore underscore seven semicolon by seven.vtag ;
+sub ampersand underscore underscore eight semicolon by eight.vtag ;
+sub ampersand underscore underscore nine semicolon by nine.vtag ;
+} vtagentities ;
 
 lookup grek_dieresisCapInsertion {
 #	script grek;
@@ -1173,124 +1219,272 @@ lookup grek_Composed {
 tag = ccmp;
 },
 {
-code = "  # Nine-character codes
-#  sub ampersand underscore c c e d i l semicolon by ccedillacomb ;
+code = "sub ampersand t a g underscore c a semicolon by cancel.vtag ;
+sub ampersand t a g underscore a semicolon by a.vtag ;
+sub ampersand t a g underscore b semicolon by b.vtag ;
+sub ampersand t a g underscore c semicolon by c.vtag ;
+sub ampersand t a g underscore d semicolon by d.vtag ;
+sub ampersand t a g underscore e semicolon by e.vtag ;
+sub ampersand t a g underscore f semicolon by f.vtag ;
+sub ampersand t a g underscore g semicolon by g.vtag ;
+sub ampersand t a g underscore h semicolon by h.vtag ;
+sub ampersand t a g underscore i semicolon by i.vtag ;
+sub ampersand t a g underscore j semicolon by j.vtag ;
+sub ampersand t a g underscore k semicolon by k.vtag ;
+sub ampersand t a g underscore l semicolon by l.vtag ;
+sub ampersand t a g underscore m semicolon by m.vtag ;
+sub ampersand t a g underscore n semicolon by n.vtag ;
+sub ampersand t a g underscore o semicolon by o.vtag ;
+sub ampersand t a g underscore p semicolon by p.vtag ;
+sub ampersand t a g underscore q semicolon by q.vtag ;
+sub ampersand t a g underscore r semicolon by r.vtag ;
+sub ampersand t a g underscore s semicolon by s.vtag ;
+sub ampersand t a g underscore t semicolon by t.vtag ;
+sub ampersand t a g underscore u semicolon by u.vtag ;
+sub ampersand t a g underscore v semicolon by v.vtag ;
+sub ampersand t a g underscore w semicolon by w.vtag ;
+sub ampersand t a g underscore x semicolon by x.vtag ;
+sub ampersand t a g underscore y semicolon by y.vtag ;
+sub ampersand t a g underscore  z semicolon by z.vtag ;";
+disabled = 1;
+labels = (
+{
+language = dflt;
+value = "Make tag visible";
+}
+);
+tag = ss09;
+},
+{
+code = "lookup entities {
   sub ampersand underscore o s l a s h semicolon by oslashcomb ;
-  # Eight-character codes
-#  sub ampersand underscore a e l i g semicolon by aecomb ;
   sub ampersand underscore j d o t l semicolon by jdotlesscomb ;
   sub ampersand underscore i d o t l semicolon by dotlessicomb ;
-#  sub ampersand underscore l o n g s semicolon by longscomb ;
   sub ampersand underscore t h o r n semicolon by thorncomb ;
-  # Seven-character codes
-#  sub ampersand t h o r n semicolon by thorn ;
-#  sub ampersand T H O R N semicolon by Thorn ;
-#  sub ampersand A E l i g semicolon by AE ;
-#  sub ampersand a e l i g semicolon by ae ;
   sub ampersand underscore a n s c semicolon by ansmcpcomb ;
   sub ampersand underscore a r s c semicolon by arsmcpcomb ;
   sub ampersand underscore m u n c semicolon by muncialcomb ;
-#  sub ampersand underscore d i n s semicolon by insulardcomb ;
   sub ampersand underscore e o g o semicolon by eogonekcomb ;
   sub ampersand underscore o o g o semicolon by oogonekcomb ;
   sub ampersand underscore e m a c semicolon by emacroncomb ;
   sub ampersand underscore o m a c semicolon by omacroncomb ;
-#  sub ampersand underscore t i n s semicolon by tinsularcomb ;
-  # Six-character codes
   sub ampersand underscore b s c semicolon by bsmcpcomb ;
   sub ampersand underscore d s c semicolon by dsmcpcomb ;
   sub ampersand underscore t s c semicolon by tsmcpcomb ;
   sub ampersand underscore k s c semicolon by ksmcpcomb ;
-#  sub ampersand underscore e t h semicolon by ethcomb ;
-  # In Unicode
-#  sub ampersand underscore g s c semicolon by Gcomb ;
-#  sub ampersand underscore l s c semicolon by Lcomb ;
-#  sub ampersand underscore m s c semicolon by Mcomb ;
-#  sub ampersand underscore n s c semicolon by Ncomb ;
-#  sub ampersand underscore r s c semicolon by Rcomb ;
   sub ampersand underscore o r r semicolon by orrotcomb ;
   sub ampersand underscore o r u semicolon by orumcomb ;
-  # Five-character codes
-#  sub ampersand underscore u r semicolon by urabovecomb ;
-#  sub ampersand underscore Z Z semicolon by uni1DCF ;
-#  sub ampersand underscore o a semicolon by flattenedopenaabovecomb ;
   sub ampersand underscore a n semicolon by ancomb ;
   sub ampersand underscore a r semicolon by arcomb ;
-  # In Unicode
-#  sub ampersand underscore u s semicolon by usabovecomb ;
-#  sub ampersand underscore z z semicolon by zigzagabovecomb ;
-#  sub ampersand underscore o l semicolon by overlinecomb ;
   sub ampersand underscore r u semicolon by rumrotundacomb ;
-#  sub ampersand underscore r r semicolon by rrotundacomb ;
-  # In Unicode
-#  sub ampersand underscore a o semicolon by aocomb ;
-#  sub ampersand underscore a v semicolon by avcomb ;
-#  sub ampersand underscore p e semicolon by uni2E4E ;
-#  sub ampersand E T H semicolon  by Eth ;
-#  sub ampersand e t h semicolon  by eth ;
-  # Four-letter spacing codes:
-#  sub ampersand U S semicolon by usmod ;
-#  sub ampersand e t semicolon by et ;
-#  sub ampersand y o semicolon by yogh ;
-#  sub ampersand Y O semicolon by Yogh ;
-#  sub ampersand t i semicolon by tironiansignet ;
-#  sub ampersand c t semicolon by thornstroke ;
-#  sub ampersand c o semicolon by con ;
-#  sub ampersand a a semicolon by aa ;
-#  sub ampersand A A semicolon by AA ;
-#  sub ampersand a o semicolon by ao ;
-#  sub ampersand A O semicolon by Ao ;
-#  sub ampersand a u semicolon by au ;
-#  sub ampersand A U semicolon by Au ;
-#  sub ampersand a v semicolon by av ;
-#  sub ampersand A V semicolon by Av ;
-#  sub ampersand a y semicolon by ay ;
-#  sub ampersand A Y semicolon by AY ;
-#  sub ampersand v y semicolon by vy ;
-#  sub ampersand V Y semicolon by VY ;
-#  sub ampersand w n semicolon by wynn ;
-#  sub ampersand W N semicolon by Wynn ;
-#  sub ampersand r u semicolon by rumrotunda ;
-#  sub ampersand p r semicolon by pstrokethroughdescender ;
-#  sub ampersand p o semicolon by pflourish ;
-#  sub ampersand q one semicolon by qstrokethroughdescender ;
-#  sub ampersand q two semicolon by qdiagonalstroke ;
-#  sub ampersand o b semicolon by olongstroke ;
-#  sub ampersand O B semicolon by Olongstroke ;
-#  sub ampersand s d semicolon by longsdiagonalstroke ;
-#  sub ampersand k l semicolon by kstroke ;
-#  sub ampersand O O semicolon by OO ;
-#  sub ampersand o o semicolon by oo ;
-#  sub ampersand r r semicolon by rrotunda ;
-#  sub ampersand i s semicolon by uniA76D ;
-  # Four-character codes -- Alternates to PUA
-#  sub ampersand underscore b semicolon by bcomb ;
-#  sub ampersand underscore f semicolon by fcomb ;
   sub ampersand underscore j semicolon by jcomb ;
-#  sub ampersand underscore p semicolon by pcomb ;
   sub ampersand underscore q semicolon by qcomb ;
-#  sub ampersand underscore w semicolon by wcomb ;
   sub ampersand underscore y semicolon by ycomb ;
-  # In Unicode
-#  sub ampersand underscore a semicolon by acomb ;
-#  sub ampersand underscore e semicolon by ecomb ;
-#  sub ampersand underscore i semicolon by icomb ;
-#  sub ampersand underscore o semicolon by ocomb ;
-#  sub ampersand underscore u semicolon by ucomb ;
-#  sub ampersand underscore c semicolon by ccomb ;
-#  sub ampersand underscore d semicolon by dcomb ;
-#  sub ampersand underscore h semicolon by hcomb ;
-#  sub ampersand underscore m semicolon by mcomb ;
-#  sub ampersand underscore r semicolon by rcomb ;
-#  sub ampersand underscore t semicolon by tcomb ;
-#  sub ampersand underscore v semicolon by vcomb ;
-#  sub ampersand underscore x semicolon by xcomb ;
-#  sub ampersand underscore g semicolon by gcomb ;
-#  sub ampersand underscore k semicolon by kcomb ;
-#  sub ampersand underscore l semicolon by lcomb ;
-#  sub ampersand underscore n semicolon by ncomb ;
-#  sub ampersand underscore s semicolon by scomb ;
-#  sub ampersand underscore z semicolon by zcomb ;
+}  entities ;
+
+lookup vtags {
+ sub cancel.vtag by cancel.tag ;
+ sub a.vtag by a.tag ;
+ sub b.vtag by b.tag ;
+ sub c.vtag by c.tag ;
+ sub d.vtag by d.tag ;
+ sub e.vtag by e.tag ;
+ sub f.vtag by f.tag ;
+ sub g.vtag by g.tag ;
+ sub h.vtag by h.tag ;
+ sub i.vtag by i.tag ;
+ sub j.vtag by j.tag ;
+ sub k.vtag by k.tag ;
+ sub l.vtag by l.tag ;
+ sub m.vtag by m.tag ;
+ sub n.vtag by n.tag ;
+ sub o.vtag by o.tag ;
+ sub p.vtag by p.tag ;
+ sub q.vtag by q.tag ;
+ sub r.vtag by r.tag ;
+ sub s.vtag by s.tag ;
+ sub t.vtag by t.tag ;
+ sub u.vtag by u.tag ;
+ sub v.vtag by v.tag ;
+ sub w.vtag by w.tag ;
+ sub x.vtag by x.tag ;
+ sub y.vtag by y.tag ;
+ sub z.vtag by z.tag ;
+ sub zero.vtag by zero.tag ;
+ sub one.vtag by one.tag ;
+ sub two.vtag by two.tag ;
+ sub three.vtag by three.tag ;
+ sub four.vtag by four.tag ;
+ sub five.vtag by five.tag ;
+ sub six.vtag by six.tag ;
+ sub seven.vtag by seven.tag ;
+ sub eight.vtag by eight.tag ;
+ sub nine.vtag by nine.tag ;
+} vtags ;
+
+lookup tagligs {
+  sub A i.tag n.tag by A.alt1 ;
+  sub A s.tag q.tag by A.alt2 ;
+  sub A a.tag zero.tag by A.alt3 ;
+  sub A e.tag n.tag by A.enlarged ;
+  sub a i.tag n.tag by a.alt3 ;
+  sub a u.tag n.tag by a.alt1 ;
+  sub a o.tag p.tag by a.alt2 ;
+  sub a c.tag l.tag by a.alt4 ;
+  sub a a.tag zero.tag by a.alt5 ;
+  sub a e.tag n.tag by a.enlarged ;
+  sub B e.tag n.tag  by B.enlarged ;
+  sub b e.tag n.tag  by b.enlarged ;
+  sub C s.tag q.tag by C.alt ;
+  sub C e.tag n.tag by C.enlarged ;
+  sub c c.tag u.tag by c.mecurl ;
+  sub c e.tag n.tag by c.enlarged ;
+  sub D i.tag n.tag by Dinsular ;
+  sub D e.tag n.tag by D.enlarged ;
+  sub D i.tag n.tag e.tag n.tag by Dinsular.enlarged ;
+  sub d i.tag n.tag by dinsular ;
+  sub d i.tag n.tag a.tag zero.tag by dinsular.alt ;
+  sub d c.tag u.tag by d.mecurl ;
+  sub d e.tag n.tag by d.enlarged ;
+  sub d i.tag n.tag e.tag n.tag by dinsular.enlarged ;
+  sub E u.tag n.tag by E.alt1 ;
+  sub E c.tag l.tag u.tag n.tag by E.alt2 ;
+  sub E e.tag n.tag by E.enlarged ;
+  sub e u.tag n.tag by e.alt1 ;
+  sub e a.tag zero.tag by e.alt2 ;
+  sub e a.tag one.tag by e.alt3 ;
+  sub e e.tag n.tag by e.enlarged ;
+  sub F i.tag n.tag by Finsular ;
+  sub F e.tag n.tag by F.enlarged ;
+  sub F i.tag n.tag e.tag n.tag by Finsular.enlarged ;
+  sub f i.tag n.tag by finsular ;
+  sub f i.tag n.tag a.tag zero.tag by f.alt1 ;
+  sub f i.tag n.tag a.tag one.tag by f.alt2 ;
+  sub f i.tag n.tag c.tag l.tag by f.alt3 ;
+  sub f a.tag two.tag by f.alt ;
+  sub f c.tag u.tag by f.mecurl ;
+  sub f e.tag n.tag by f.enlarged ;
+  sub f i.tag n.tag e.tag n.tag by finsular.enlarged ;
+  sub G i.tag n.tag by Ginsular ;
+  sub G a.tag zero.tag by Gormulum ;
+  sub G s.tag q.tag by G.alt ;
+  sub G e.tag n.tag by G.enlarged ;
+  sub g i.tag n.tag by ginsular ;
+  sub g a.tag zero.tag by gormulum ;
+  sub g a.tag one.tag by g.alt4 ;
+  sub g c.tag l.tag a.tag two.tag by g.alt1 ;
+  sub g c.tag l.tag a.tag three.tag by g.alt2 ;
+  sub g c.tag l.tag a.tag four.tag by g.alt3 ;
+  sub g c.tag u.tag by g.mecurl ;
+  sub g e.tag n.tag by g.enlarged ;
+  sub H u.tag n.tag by H.alt ;
+  sub H e.tag n.tag by H.enlarged ;
+  sub h a.tag zero.tag by h.alt ;
+  sub h a.tag one.tag by h.alt2 ;
+  sub h e.tag n.tag by h.enlarged ;
+  sub I d.tag a.tag by Idotaccent ;
+  sub I a.tag zero.tag by uniA7FE ;
+  sub I e.tag n.tag by I.enlarged ;
+  sub i d.tag l.tag by i.alt2 ;
+  sub i l.tag o.tag by i.alt ;
+  sub i a.tag zero.tag by i.alt1 ;
+  sub i a.tag one.tag by i.romnum ;
+  sub i a.tag two.tag by i.romnum1 ;
+  sub i e.tag n.tag by i.enlarged ;
+  sub J d.tag a.tag by Jdotaccent ;
+  sub J e.tag n.tag by J.enlarged ;
+  sub j d.tag l.tag by j.alt3 ;
+  sub j a.tag zero.tag by j.alt2 ;
+  sub j d.tag a.tag by jdotaccent ;
+  sub j e.tag n.tag by j.enlarged ;
+  sub K e.tag n.tag by K.enlarged ;
+  sub k u.tag n.tag by k.alt1 ;
+  sub k a.tag zero.tag by k.alt2 ;
+  sub k c.tag l.tag by k.alt3 ;
+  sub k c.tag u.tag by k.mecurl ;
+  sub k e.tag n.tag by k.enlarged ;
+  sub L e.tag n.tag by L.enlarged ;
+  sub l d.tag e.tag by l.alt ;
+  sub l e.tag n.tag by l.enlarged ;
+  sub M u.tag n.tag by M.alt1 ;
+  sub M u.tag n.tag d.tag e.tag by M.alt2 ;
+  sub M a.tag zero.tag by uniA7FF ;
+  sub M e.tag n.tag by M.enlarged ;
+  sub m u.tag n.tag by m.alt1 ;
+  sub m u.tag n.tag d.tag e.tag by m.alt2 ;
+  sub m d.tag e.tag by m.alt3 ;
+  sub m e.tag n.tag by m.enlarged ;
+  sub N d.tag e.tag by N.alt1 ;
+  sub N e.tag n.tag by N.enlarged ;
+  sub n d.tag e.tag by n.alt1 ;
+  sub n p.tag e.tag d.tag e.tag by n.alt2 ;
+  sub n b.tag a.tag by n.alt3 ;
+  sub n c.tag u.tag by n.mecurl ;
+  sub n e.tag n.tag by n.enlarged ;
+  sub O a.tag zero.tag by Ooldpolish ;
+  sub O e.tag n.tag by O.enlarged ;
+  sub o a.tag zero.tag by ooldpolish ;
+  sub o e.tag n.tag by o.enlarged ;
+  sub P r.tag e.tag by uniA7FC ;
+  sub P e.tag n.tag by P.enlarged ;
+  sub p e.tag n.tag by p.enlarged ;
+  sub Q a.tag zero.tag by Q.alt ;
+  sub Q e.tag n.tag by Q.enlarged ;
+  sub Q l.tag o.tag a.tag zero.tag by Q.alt2 ;
+  sub Q l.tag o.tag a.tag one.tag by Q.alt3 ;
+  sub q s.tag l.tag by q.alt ;
+  sub q e.tag n.tag by q.enlarged ;
+  sub R i.tag n.tag by Rinsular ;
+  sub R r.tag o.tag by Rrotunda ;
+  sub R e.tag n.tag by R.enlarged ;
+  sub r i.tag n.tag by rinsular ;
+  sub r r.tag o.tag by rrotunda ;
+  sub r c.tag u.tag by r.mecurl ;
+  sub r e.tag n.tag by r.enlarged ;
+  sub S i.tag n.tag by Sinsular ;
+  sub S a.tag zero.tag by Ssigmoid ;
+  sub S e.tag n.tag by S.enlarged ;
+  sub S a.tag one.tag by Sanctus ;
+  sub s i.tag n.tag by sinsular ;
+  sub s a.tag zero.tag by ssigmoid ;
+  sub s l.tag o.tag by ssigmoid ;
+  sub s l.tag o.tag d.tag e.tag by longs.alt2 ;
+  sub s l.tag o.tag f.tag l.tag by longs.alt3 ;
+  sub s l.tag o.tag a.tag one.tag by longs.alt4 ;
+  sub s e.tag n.tag by s.enlarged ;
+  sub T i.tag n.tag by Tinsular ;
+  sub T e.tag n.tag by T.enlarged ;
+  sub t i.tag n.tag by tinsular ;
+  sub t c.tag u.tag by t.mecurl ;
+  sub t e.tag n.tag by t.enlarged ;
+  sub U e.tag n.tag by U.enlarged ;
+  sub u e.tag n.tag by u.enlarged ;
+  sub V e.tag n.tag by V.enlarged ;
+  sub v s.tag l.tag by v.alt1 ;
+  sub v s.tag t.tag r.tag u.tag by v.alt2 ;
+  sub v s.tag t.tag r.tag u.tag zero.tag two.tag by v.alt3 ;
+  sub v b.tag a.tag by v.alt4 ;
+  sub v e.tag n.tag by v.enlarged ;
+  sub W e.tag n.tag by W.enlarged ;
+  sub w e.tag n.tag by w.enlarged ;
+  sub X e.tag n.tag by X.enlarged ;
+  sub x l.tag o.tag l.tag l.tag by xlongleftleg ;
+  sub x s.tag l.tag l.tag u.tag by x.alt2 ;
+  sub x s.tag l.tag r.tag l.tag by x.alt3 ;
+  sub x s.tag l.tag zero.tag two.tag by x.alt4 ;
+  sub x e.tag n.tag by x.enlarged ;
+  sub Y a.tag zero.tag by Y.alt ;
+  sub Y e.tag n.tag by Y.enlarged ;
+  sub y a.tag n.tag by y.alt ;
+  sub y b.tag a.tag by y.alt2 ;
+  sub y e.tag n.tag by y.enlarged ;
+  sub Z a.tag zero.tag by Zvisigothic ;
+  sub Z e.tag n.tag by Z.enlarged ;
+  sub z a.tag zero.tag by zvisigothic ;
+  sub z a.tag one.tag by z.alt1 ;
+  sub z e.tag n.tag by z.enlarged ;
+  sub lhighstroke f.tag l.tag by lhighstroke.alt ;
+} tagligs ;
 ";
 labels = (
 {
@@ -3327,9 +3521,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule s\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Sanctus abbreviation\";  # English US
+  };
   Character 0x0053;
 };
-sub S from [ Sinsular Ssigmoid S.enlarged   ] ;
+sub S from [ Sinsular Ssigmoid S.enlarged Sanctus  ] ;
 ";
 tag = cv37;
 },
@@ -16329,5 +16526,5 @@ type = unicode;
 };
 };
 versionMajor = 1;
-versionMinor = 45;
+versionMinor = 46;
 }

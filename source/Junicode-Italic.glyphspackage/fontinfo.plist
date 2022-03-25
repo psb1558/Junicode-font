@@ -173,7 +173,7 @@ name = "Use Typo Metrics";
 value = 1;
 }
 );
-date = "2022-03-13 01:22:40 +0000";
+date = "2022-03-25 10:46:38 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -500,6 +500,8 @@ feature cv66;
 feature cv68;
 feature cv69;
 feature cv72;
+feature cv73;
+feature cv74;
 feature cv75;
 feature cv79;
 feature cv80;
@@ -661,7 +663,13 @@ lookup underdots {
   sub ezh dotbelowcomb by yoghflatdot ;
 } underdots ;
 
-# lookup diacritics {
+lookup diacritics {
+#  sub H tildeoverlaycomb by Htildeoverlay ;
+  sub Q strokeshortcomb by Qstrokethroughdescender ;
+  sub Q tildeoverlaycomb by Qstrokethroughdescender ;
+  sub Q slashshortcomb by Qdiagonalstroke ;
+  sub q slashshortcomb by qdiagonalstroke ;
+
 # But we don't really want to produce PUA characters here. Use rlig instead?
 # sub b uni0364 by uniF056 ;
 # sub b dotlessicomb by uniF057 ;
@@ -701,7 +709,47 @@ lookup underdots {
 # sub eth uni036C by uniF0AA ;
 # sub eth Rcomb by uniF0AB ;
 # sub eth uni036D by uniF0AE ;
-# } diacritics ;
+} diacritics ;
+
+lookup vtagentities {
+sub ampersand underscore underscore c a semicolon by cancel.vtag ;
+sub ampersand underscore underscore a semicolon by a.vtag ;
+sub ampersand underscore underscore b semicolon by b.vtag ;
+sub ampersand underscore underscore c semicolon by c.vtag ;
+sub ampersand underscore underscore d semicolon by d.vtag ;
+sub ampersand underscore underscore e semicolon by e.vtag ;
+sub ampersand underscore underscore f semicolon by f.vtag ;
+sub ampersand underscore underscore g semicolon by g.vtag ;
+sub ampersand underscore underscore h semicolon by h.vtag ;
+sub ampersand underscore underscore i semicolon by i.vtag ;
+sub ampersand underscore underscore j semicolon by j.vtag ;
+sub ampersand underscore underscore k semicolon by k.vtag ;
+sub ampersand underscore underscore l semicolon by l.vtag ;
+sub ampersand underscore underscore m semicolon by m.vtag ;
+sub ampersand underscore underscore n semicolon by n.vtag ;
+sub ampersand underscore underscore o semicolon by o.vtag ;
+sub ampersand underscore underscore p semicolon by p.vtag ;
+sub ampersand underscore underscore q semicolon by q.vtag ;
+sub ampersand underscore underscore r semicolon by r.vtag ;
+sub ampersand underscore underscore s semicolon by s.vtag ;
+sub ampersand underscore underscore t semicolon by t.vtag ;
+sub ampersand underscore underscore u semicolon by u.vtag ;
+sub ampersand underscore underscore v semicolon by v.vtag ;
+sub ampersand underscore underscore w semicolon by w.vtag ;
+sub ampersand underscore underscore x semicolon by x.vtag ;
+sub ampersand underscore underscore y semicolon by y.vtag ;
+sub ampersand underscore underscore z semicolon by z.vtag ;
+sub ampersand underscore underscore zero semicolon by zero.vtag ;
+sub ampersand underscore underscore one semicolon by one.vtag ;
+sub ampersand underscore underscore two semicolon by two.vtag ;
+sub ampersand underscore underscore three semicolon by three.vtag ;
+sub ampersand underscore underscore four semicolon by four.vtag ;
+sub ampersand underscore underscore five semicolon by five.vtag ;
+sub ampersand underscore underscore six semicolon by six.vtag ;
+sub ampersand underscore underscore seven semicolon by seven.vtag ;
+sub ampersand underscore underscore eight semicolon by eight.vtag ;
+sub ampersand underscore underscore nine semicolon by nine.vtag ;
+} vtagentities ;
 
 # These two Greek lookups adapted from code by Tosche at
 # https://forum.glyphsapp.com/t/auto-feature-suggestion-for-greek/4054/2
@@ -1039,7 +1087,8 @@ lookup grek_Composed {
 tag = ccmp;
 },
 {
-code = "  # Nine-character codes
+code = "lookup entities {
+  # Nine-character codes
   sub ampersand underscore c c e d i l semicolon by ccedillacomb ;
 #  sub ampersand underscore o s l a s h semicolon by oslashcomb ;
   # Eight-character codes
@@ -1157,6 +1206,211 @@ code = "  # Nine-character codes
   sub ampersand underscore n semicolon by ncomb ;
   sub ampersand underscore s semicolon by scomb ;
   sub ampersand underscore z semicolon by zcomb ;
+} entities ;
+
+lookup vtags {
+ sub cancel.vtag by cancel.tag ;
+ sub a.vtag by a.tag ;
+ sub b.vtag by b.tag ;
+ sub c.vtag by c.tag ;
+ sub d.vtag by d.tag ;
+ sub e.vtag by e.tag ;
+ sub f.vtag by f.tag ;
+ sub g.vtag by g.tag ;
+ sub h.vtag by h.tag ;
+ sub i.vtag by i.tag ;
+ sub j.vtag by j.tag ;
+ sub k.vtag by k.tag ;
+ sub l.vtag by l.tag ;
+ sub m.vtag by m.tag ;
+ sub n.vtag by n.tag ;
+ sub o.vtag by o.tag ;
+ sub p.vtag by p.tag ;
+ sub q.vtag by q.tag ;
+ sub r.vtag by r.tag ;
+ sub s.vtag by s.tag ;
+ sub t.vtag by t.tag ;
+ sub u.vtag by u.tag ;
+ sub v.vtag by v.tag ;
+ sub w.vtag by w.tag ;
+ sub x.vtag by x.tag ;
+ sub y.vtag by y.tag ;
+ sub z.vtag by z.tag ;
+ sub zero.vtag by zero.tag ;
+ sub one.vtag by one.tag ;
+ sub two.vtag by two.tag ;
+ sub three.vtag by three.tag ;
+ sub four.vtag by four.tag ;
+ sub five.vtag by five.tag ;
+ sub six.vtag by six.tag ;
+ sub seven.vtag by seven.tag ;
+ sub eight.vtag by eight.tag ;
+ sub nine.vtag by nine.tag ;
+} vtags ;
+
+lookup tagligs {
+  sub A i.tag n.tag by A.alt1 ;
+  sub A s.tag q.tag by A.alt2 ;
+  sub A a.tag zero.tag by A.alt3 ;
+  sub A e.tag n.tag by A.enlarged ;
+  sub a i.tag n.tag by a.alt3 ;
+  sub a u.tag n.tag by a.alt1 ;
+  sub a o.tag p.tag by a.alt2 ;
+  sub a c.tag l.tag by a.alt4 ;
+  sub a a.tag zero.tag by a.alt5 ;
+  sub a e.tag n.tag by a.enlarged ;
+  sub B e.tag n.tag  by B.enlarged ;
+  sub b e.tag n.tag  by b.enlarged ;
+  sub C s.tag q.tag by C.alt ;
+  sub C e.tag n.tag by C.enlarged ;
+  sub c c.tag u.tag by c.mecurl ;
+  sub c e.tag n.tag by c.enlarged ;
+  sub D i.tag n.tag by Dinsular ;
+  sub D e.tag n.tag by D.enlarged ;
+  sub D i.tag n.tag e.tag n.tag by Dinsular.enlarged ;
+  sub d i.tag n.tag by dinsular ;
+  sub d i.tag n.tag a.tag zero.tag by dinsular.alt ;
+  sub d c.tag u.tag by d.mecurl ;
+  sub d e.tag n.tag by d.enlarged ;
+  sub d i.tag n.tag e.tag n.tag by dinsular.enlarged ;
+  sub E u.tag n.tag by E.alt1 ;
+  sub E c.tag l.tag u.tag n.tag by E.alt2 ;
+  sub E e.tag n.tag by E.enlarged ;
+  sub e u.tag n.tag by e.alt1 ;
+  sub e a.tag zero.tag by e.alt2 ;
+  sub e a.tag one.tag by e.alt3 ;
+  sub e e.tag n.tag by e.enlarged ;
+  sub F i.tag n.tag by Finsular ;
+  sub F e.tag n.tag by F.enlarged ;
+  sub F i.tag n.tag e.tag n.tag by Finsular.enlarged ;
+  sub f i.tag n.tag by finsular ;
+  sub f i.tag n.tag a.tag zero.tag by f.alt1 ;
+  sub f i.tag n.tag a.tag one.tag by f.alt2 ;
+  sub f i.tag n.tag c.tag l.tag by f.alt3 ;
+  sub f a.tag two.tag by f.alt ;
+  sub f c.tag u.tag by f.mecurl ;
+  sub f e.tag n.tag by f.enlarged ;
+  sub f i.tag n.tag e.tag n.tag by finsular.enlarged ;
+  sub G i.tag n.tag by Ginsular ;
+  sub G a.tag zero.tag by Gormulum ;
+  sub G s.tag q.tag by G.alt ;
+  sub G e.tag n.tag by G.enlarged ;
+  sub g i.tag n.tag by ginsular ;
+  sub g a.tag zero.tag by gormulum ;
+  sub g a.tag one.tag by g.alt4 ;
+  sub g c.tag l.tag a.tag two.tag by g.alt1 ;
+  sub g c.tag l.tag a.tag three.tag by g.alt2 ;
+  sub g c.tag l.tag a.tag four.tag by g.alt3 ;
+  sub g c.tag u.tag by g.mecurl ;
+  sub g e.tag n.tag by g.enlarged ;
+  sub H u.tag n.tag by H.alt ;
+  sub H e.tag n.tag by H.enlarged ;
+  sub h a.tag zero.tag by h.alt ;
+  sub h a.tag one.tag by h.alt2 ;
+  sub h e.tag n.tag by h.enlarged ;
+  sub I d.tag a.tag by Idotaccent ;
+  sub I a.tag zero.tag by Longaepigraphici ;
+  sub I e.tag n.tag by I.enlarged ;
+  sub i d.tag l.tag by i.alt2 ;
+  sub i l.tag o.tag by i.alt ;
+  sub i a.tag zero.tag by i.alt1 ;
+  sub i a.tag one.tag by i.romnum ;
+  sub i a.tag two.tag by i.romnum1 ;
+  sub i e.tag n.tag by i.enlarged ;
+  sub J d.tag a.tag by Jdotaccent ;
+  sub J e.tag n.tag by J.enlarged ;
+  sub j d.tag l.tag by j.alt3 ;
+  sub j a.tag zero.tag by j.alt2 ;
+  sub j d.tag a.tag by jdotaccent ;
+  sub j e.tag n.tag by j.enlarged ;
+  sub K e.tag n.tag by K.enlarged ;
+  sub k u.tag n.tag by k.alt1 ;
+  sub k a.tag zero.tag by k.alt2 ;
+  sub k c.tag l.tag by k.alt3 ;
+  sub k c.tag u.tag by k.mecurl ;
+  sub k e.tag n.tag by k.enlarged ;
+  sub L e.tag n.tag by L.enlarged ;
+  sub l d.tag e.tag by l.alt ;
+  sub l e.tag n.tag by l.enlarged ;
+  sub M u.tag n.tag by M.alt1 ;
+  sub M u.tag n.tag d.tag e.tag by M.alt2 ;
+  sub M a.tag zero.tag by Mepigraphicarchaic ;
+  sub M e.tag n.tag by M.enlarged ;
+  sub m u.tag n.tag by m.alt1 ;
+  sub m u.tag n.tag d.tag e.tag by m.alt2 ;
+  sub m d.tag e.tag by m.alt3 ;
+  sub m e.tag n.tag by m.enlarged ;
+  sub N d.tag e.tag by N.alt1 ;
+  sub N e.tag n.tag by N.enlarged ;
+  sub n d.tag e.tag by n.alt1 ;
+  sub n p.tag e.tag d.tag e.tag by n.alt2 ;
+  sub n b.tag a.tag by n.alt3 ;
+  sub n c.tag u.tag by n.mecurl ;
+  sub n e.tag n.tag by n.enlarged ;
+  sub O a.tag zero.tag by Ooldpolish ;
+  sub O e.tag n.tag by O.enlarged ;
+  sub o a.tag zero.tag by ooldpolish ;
+  sub o e.tag n.tag by o.enlarged ;
+  sub P r.tag e.tag by Pepigraphicreversed ;
+  sub P e.tag n.tag by P.enlarged ;
+  sub p e.tag n.tag by p.enlarged ;
+  sub Q a.tag zero.tag by Q.alt ;
+  sub Q e.tag n.tag by Q.enlarged ;
+  sub Q l.tag o.tag a.tag zero.tag by Q.alt2 ;
+  sub Q l.tag o.tag a.tag one.tag by Q.alt3 ;
+  sub q s.tag l.tag by q.alt ;
+  sub q e.tag n.tag by q.enlarged ;
+  sub R i.tag n.tag by Rinsular ;
+  sub R r.tag o.tag by Rrotunda ;
+  sub R e.tag n.tag by R.enlarged ;
+  sub r i.tag n.tag by rinsular ;
+  sub r r.tag o.tag by rrotunda ;
+  sub r c.tag u.tag by r.mecurl ;
+  sub r e.tag n.tag by r.enlarged ;
+  sub S i.tag n.tag by Sinsular ;
+  sub S a.tag zero.tag by Ssigmoid ;
+  sub S e.tag n.tag by S.enlarged ;
+#  sub S a.tag zero.tag by Sanctus ;
+  sub s i.tag n.tag by sinsular ;
+  sub s a.tag zero.tag by ssigmoid ;
+  sub s l.tag o.tag by ssigmoid ;
+  sub s l.tag o.tag d.tag e.tag by longs.alt2 ;
+  sub s l.tag o.tag f.tag l.tag by longs.alt3 ;
+  sub s l.tag o.tag a.tag one.tag by longs.alt4 ;
+  sub s e.tag n.tag by s.enlarged ;
+  sub T i.tag n.tag by Tinsular ;
+  sub T e.tag n.tag by T.enlarged ;
+  sub t i.tag n.tag by tinsular ;
+  sub t c.tag u.tag by t.mecurl ;
+  sub t e.tag n.tag by t.enlarged ;
+  sub U e.tag n.tag by U.enlarged ;
+  sub u e.tag n.tag by u.enlarged ;
+  sub V e.tag n.tag by V.enlarged ;
+  sub v s.tag l.tag by v.alt1 ;
+  sub v s.tag t.tag r.tag u.tag by v.alt2 ;
+  sub v s.tag t.tag r.tag u.tag zero.tag two.tag by v.alt3 ;
+  sub v b.tag a.tag by v.alt4 ;
+  sub v e.tag n.tag by v.enlarged ;
+  sub W e.tag n.tag by W.enlarged ;
+  sub w e.tag n.tag by w.enlarged ;
+  sub X e.tag n.tag by X.enlarged ;
+  sub x l.tag o.tag l.tag l.tag by xlongleftleg ;
+  sub x s.tag l.tag l.tag u.tag by x.alt2 ;
+  sub x s.tag l.tag r.tag l.tag by x.alt3 ;
+  sub x s.tag l.tag zero.tag two.tag by x.alt4 ;
+  sub x e.tag n.tag by x.enlarged ;
+#  sub Y a.tag zero.tag by Y.alt ;
+  sub Y e.tag n.tag by Y.enlarged ;
+  sub y a.tag n.tag by y.alt ;
+  sub y b.tag a.tag by y.alt2 ;
+  sub y e.tag n.tag by y.enlarged ;
+  sub Z a.tag zero.tag by Zvisigothic ;
+  sub Z e.tag n.tag by Z.enlarged ;
+  sub z a.tag zero.tag by zvisigothic ;
+  sub z a.tag one.tag by z.alt1 ;
+  sub z e.tag n.tag by z.enlarged ;
+  sub lhighstroke f.tag l.tag by lhighstroke.alt ;
+} tagligs ;
 ";
 labels = (
 {
@@ -2555,7 +2809,7 @@ code = "cvParameters {
   };
   Character 0x0067;
 };
-sub g from [ ginsular gormulum gsingle g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
+sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
 ";
 tag = cv14;
 },
@@ -3617,6 +3871,57 @@ code = "cvParameters {
 sub comma from [ comma.alt1 comma.alt2 ] ;
 ";
 tag = cv72;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of semicolon\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus versus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus with comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Colon with middle comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with two dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with three dots\";
+  };
+  Character 0x003B;
+};
+
+sub semicolon from [ semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 ] ;
+";
+tag = cv73;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of punctus elevatus\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with high back\"; # 10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with onset\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus flexus\";
+  };
+  Character 0x2E4E;
+};
+
+sub uni2E4E from [ uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 ] ;
+";
+tag = cv74;
 },
 {
 code = "cvParameters {
@@ -8671,5 +8976,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 45;
+versionMinor = 46;
 }

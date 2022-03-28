@@ -4039,12 +4039,9 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"o with upper-right stroke\";  # English US
   };
-  ParamUILabelNameID {
-    name 3 1 0x0409 \"Old Polish o\";  # English US
-  };
   Character 0x00F8;
 };
-sub oslash from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ooldpolish ] ;
+sub ooldpolish from [ oslash.alt1 oslash.alt2 oslash.alt3 oslash.alt4 ] ;
 ";
 tag = cv65;
 },
@@ -7549,7 +7546,6 @@ axesValues = (
 75,
 0
 );
-exports = 0;
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.16667;
@@ -7658,6 +7654,7 @@ axesValues = (
 87.5,
 0
 );
+exports = 0;
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.01667;
 "7904EAEE-2B64-409E-B923-0048172372BE" = 0.05;
@@ -9169,23 +9166,16 @@ From at diff of small cpas in the roman and the italic, there are three that hav
 As the second of these has as its base a PUA code point, it should perhaps be removed from the roman rather than
 included here. (Study this further.)
 
-Steps to create a cff2-flavored variable font:
+Steps to create various flavors of font:
 
 Save as a .glyphs file
-Change family name to *VF
-Change UPM to 1000
-Delete gasp custom parameter (if present)
+If generating variable font, add VF to family name.
 Delete non-exported and/or incompatible glyphs
-Delete all hints in font (l.hints.clear())
-Delete all background (optional, l.background = None)
-Delete any inactive classes and features
+run delete_background_and_hints.py and delete_inactive_features.py
 
-Run glyphs2ufo <.glyphs file>
+./build_roman [ otf | variable |  variable-cff2 ]
+(default is static tff) (this runs fix_wdth_axis.xsl as well as glyphs2ufo and fontmake)
 
-In designspace file, delete mappings for wdth and make sure min=75, max=125, default=100
-Comment out source “{700, 75, 0}” (in roman, comment out both of “{*, 125, *}”)
-
-Run fontmake -o variable-cff2 -m <designspace file>
 ";
 properties = (
 {

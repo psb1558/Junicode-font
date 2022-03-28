@@ -6,6 +6,8 @@ instanceparam="-i"
 
 generateufo=true
 
+xslfile="fix_wdth_axis.xsl"
+
 for arg in $@
 do
   if [ $arg == "otf" ]
@@ -22,6 +24,9 @@ do
   elif [ $arg == "u" ]
   then
     generateufo=false
+  elif [ $arg == "s"  ]
+  then
+    xslfile="fix_wdth_axis-shorter.xsl"
   fi
 
 done
@@ -36,7 +41,7 @@ then
     exit 1
   fi
   echo "Cleaning up designspace file"
-  xsltproc -o Junicode-width-fixed.designspace fix_wdth_axis.xsl Junicode-width.designspace
+  xsltproc -o Junicode-width-fixed.designspace $xslfile Junicode-width.designspace
   if [ $? -ne 0 ]
   then
    echo "xsltproc failed"

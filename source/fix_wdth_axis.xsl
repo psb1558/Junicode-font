@@ -28,4 +28,9 @@
         </xsl:attribute>
       </axis>
     </xsl:template>
+
+    <xsl:template match="instance[contains(@stylename,'Enlarged') or
+                                  contains(@stylename,'Condensed Bold') or
+                                  contains(@stylename,'Condensed Semibold') or
+                                  contains(@stylename,'Expanded Light')]"/>
 </xsl:stylesheet>

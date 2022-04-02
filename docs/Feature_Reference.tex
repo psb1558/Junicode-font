@@ -1184,7 +1184,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 \end{center}
 
 \noindent * \textSourceText{cv18[4]} changes ii to ij at the end of a word;
-\textSourceText{cv18[5]} changess i to j at the end of a word whether another
+\textSourceText{cv18[5]} changes i to j at the end of a word whether another
 i precedes or not. These variants are chiefly useful for roman numbers, but
 also for Latin words ending in -ii. The j produced by this feature is
 searchable as i.
@@ -1265,9 +1265,14 @@ always be enabled.
 
 \subsection[17. ss02 {}-- Insular Letter{}-Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss02} --
 Insular Letter-Forms}
-Produces insular letter-forms, e.g. {\addfontfeature{StylisticSet=2}dfgrsw}. Does not affect capitals (except W), as these do not not commonly have
-insular shapes in early manuscripts. For these, enter the Unicode code points or use the Character Variant
-(\textSourceText{cvNN}) features.
+Produces insular letter-forms, e.g. {\addfontfeature{StylisticSet=2}dfgrsw}. The result is different,
+depending on whether the language is English or Irish (make sure the language for your document is set
+properly). In English text, capitals are not affected (except W), as these do not not commonly have
+insular shapes in early manuscripts; instead, enter the Unicode code points or use the Character Variant
+(\textSourceText{cvNN}) features. In English text, ss02 imitates the typography of the Old English
+passages of Hickes’s \textit{Thesaurus}, not the usage of Old English or Anglo-Latin manuscripts. In
+Irish texts, it imitates the distribution of insular characters but cannot imitate the style of
+particular scribal hands or typefaces.
 
 \subsection[18. ss04 {}-- High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss04} -- High
 Overline}
@@ -1675,7 +1680,8 @@ Stylistic Set 10 also enables a similar feature, the use of Unicode tags to repr
 characters that can be represented via the cvNN features. Tags work as modifiers for a preceding character
 without disrupting the flow of the text, the placement of diacritics, kerning, or searching. These are similar in
 function to the cvNN features, but while cvNN requires that you enter and exit a mode, tags do not. Another way
-to think of the differences is that, while cvNN features live in a text's markup, tags are part of the text. For detailed instructions on how to use tags and a list of them, see the document tag\_key.pdf.
+to think of the difference is that, while cvNN features live in a text's markup, tags belong to the text
+stream. For detailed instructions on how to use tags and a list of them, see the document tag\_key.pdf.
 
 \subsection[45. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}

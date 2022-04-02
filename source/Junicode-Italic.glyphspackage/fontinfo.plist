@@ -174,7 +174,7 @@ name = "Use Typo Metrics";
 value = 1;
 }
 );
-date = "2022-03-28 22:21:33 +0000";
+date = "2022-04-02 10:40:26 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -192,6 +192,9 @@ languagesystem latn ENG;
 languagesystem latn CAT;
 languagesystem latn FRA;
 languagesystem latn LAT;
+languagesystem latn IRI;
+languagesystem latn IRT;
+languagesystem latn SGA;
 
 languagesystem grek dflt;
 languagesystem grek ELL;
@@ -334,6 +337,78 @@ lookup lig_f_right {
 lookup lig_longs_right {
   sub [ i j ] by [ i.llongs j.llongs ] ;
 } lig_longs_right ;
+
+lookup OldEnglish {
+    sub ampersand by etTironian ;
+    sub W by Wynn ;
+    sub d by dinsular ;
+    sub f by finsular ;
+    sub g by ginsular ;
+    sub i by i.alt2 ;
+    sub r by rinsular ;
+    sub s by sinsular ;
+    sub t by tinsular ;
+    sub w by wynn ;
+    sub y by ydotaccent ;
+    sub thornstroke by thornstroke.loclENG;
+    sub thorn by thorn.loclENG;
+    sub Thorn by Thorn.loclENG;
+    sub thorncomb by thorncomb.loclENG;
+    sub thorn.enlarged by thorn.enlarged.loclENG;
+    sub eth by eth.loclENG;
+    sub eth.enlarged by eth.enlarged.loclENG;
+#    sub ethcomb by ethcomb.loclENG;
+    sub f.sc by finsular.sc ;
+    sub s.sc by sinsular.sc ;
+    sub g.sc by ginsular.sc ;
+    sub w.sc by wynn.sc ;
+    sub thorn.sc by thorn.loclENG.sc ;
+    sub t.sc by tinsular.sc ;
+    sub r.sc by rinsular.sc ;
+    sub thornstroke.sc by thornstroke.loclENG.sc ;
+} OldEnglish ;
+
+lookup ArchaicIrish {
+    sub ampersand by etTironian ;
+    sub A by A.alt1 ;
+    sub Aacute by Aacute.alt1 ;
+    sub a by a.alt3 ;
+    sub aacute by aacute.alt3 ;
+    sub B by B.alt1 ;
+    sub Bdotaccent by Bdotaccent.alt1 ;
+    sub D by Dinsular ;
+    sub Ddotaccent by Ddotaccent.alt1 ;
+    sub d by dinsular.alt ;
+    sub ddotaccent by ddotaccent.alt2 ;
+    sub E by E.alt3 ;
+    sub Eacute by Eacute.alt3 ;
+    sub e by e.alt2 ;
+    sub eacute by eacute.alt2 ;
+    sub F by Finsular ;
+    sub Fdotaccent by Fdotaccent.alt1 ;
+    sub f by finsular ;
+    sub fdotaccent by fdotaccent.alt1 ;
+    sub G by Ginsular ;
+    sub Gdotaccent by Gdotaccent.alt1 ;
+    sub g by ginsular ;
+    sub gdotaccent by gdotaccent.alt1 ;
+    sub i by i.alt2 ;
+    sub r by rinsular ;
+    sub rdotaccent by rdotaccent.alt1 ;
+    sub s by sinsular ;
+    sub sdotaccent by sdotaccent.alt1 ;
+    sub T by Tinsular ;
+    sub Tdotaccent by Tdotaccent.alt1 ;
+    sub t by tinsular ;
+    sub tdotaccent by tdotaccent.alt1 ;
+    sub y by ydotaccent ;
+    sub f.sc by finsular.sc ;
+    sub s.sc by sinsular.sc ;
+    sub g.sc by ginsular.sc ;
+    sub w.sc by wynn.sc ;
+    sub t.sc by tinsular.sc ;
+    sub r.sc by rinsular.sc ;
+} ArchaicIrish ;
 
 # Here are the rules for pseudo-ligatures
 
@@ -2191,34 +2266,20 @@ value = "Alternate thorn and eth";
 tag = ss01;
 },
 {
-code = "    sub ampersand by etTironian ;
-    sub W by Wynn ;
-    sub d by dinsular ;
-    sub f by finsular ;
-    sub g by ginsular ;
-    sub i by i.alt2 ;
-    sub r by rinsular ;
-    sub s by sinsular ;
-    sub t by tinsular ;
-    sub w by wynn ;
-    sub y by ydotaccent ;
-    sub thornstroke by thornstroke.loclENG;
-    sub thorn by thorn.loclENG;
-    sub Thorn by Thorn.loclENG;
-    sub thorncomb by thorncomb.loclENG;
-    sub thorn.enlarged by thorn.enlarged.loclENG;
-    sub eth by eth.loclENG;
-    sub eth.enlarged by eth.enlarged.loclENG;
-#    sub ethcomb by ethcomb.loclENG;
-#    sub f.sc by finsular.sc ;
-#    sub s.sc by sinsular.sc ;
-#    sub g.sc by ginsular.sc ;
-#    sub w.sc by wynn.sc ;
-    sub thorn.sc by thorn.loclENG.sc ;
-#    sub t.sc by tinsular.sc ;
-#    sub r.sc by rinsular.sc ;
-    sub thornstroke.sc by thornstroke.loclENG.sc ;
-
+code = "script DFLT;
+language dflt;
+  lookup OldEnglish;
+script latn;
+language ENG;
+  lookup OldEnglish;
+language IRI;
+  lookup ArchaicIrish;
+language GAE;
+  lookup ArchaicIrish;
+language IRT;
+  lookup ArchaicIrish;
+language SGA;
+  lookup ArchaicIrish;
 ";
 labels = (
 {
@@ -8005,6 +8066,10 @@ Z = -19.53125;
 "@MMK_R_e" = -9.76562;
 "@MMK_R_u" = 34.17969;
 };
+"@MMK_L_dinsular" = {
+"@MMK_R_b" = 20;
+"@MMK_R_ginsular" = -20;
+};
 "@MMK_L_f" = {
 "@MMK_R_a" = -29.29688;
 "@MMK_R_c" = -19.53125;
@@ -8033,6 +8098,10 @@ Z = -19.53125;
 "@MMK_R_r" = 14.64844;
 "@MMK_R_t" = 9.76562;
 "@MMK_R_uni1EF5" = 14.64844;
+};
+"@MMK_L_ginsular" = {
+"@MMK_R_c" = -30;
+"@MMK_R_dinsular" = 20;
 };
 "@MMK_L_k" = {
 "@MMK_R_a" = 9.76562;
@@ -8067,6 +8136,10 @@ Z = -19.53125;
 "@MMK_L_r" = {
 "@MMK_R_a" = -30;
 };
+"@MMK_L_sinsular" = {
+"@MMK_R_ginsular" = 20;
+"@MMK_R_iota-latin" = 20;
+};
 "@MMK_L_v" = {
 "@MMK_R_e" = -18;
 };
@@ -8078,6 +8151,9 @@ b = {
 };
 i = {
 "@MMK_R_u" = 0;
+};
+tinsular = {
+"@MMK_R_dinsular" = 20;
 };
 };
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = {
@@ -8213,6 +8289,10 @@ Z = -19.53125;
 "@MMK_R_e" = -9.76562;
 "@MMK_R_u" = 29.29688;
 };
+"@MMK_L_dinsular" = {
+"@MMK_R_b" = 20;
+"@MMK_R_ginsular" = -14;
+};
 "@MMK_L_f" = {
 "@MMK_R_a" = -24.41406;
 "@MMK_R_c" = -19.53125;
@@ -8241,6 +8321,9 @@ Z = -19.53125;
 "@MMK_R_r" = 14.64844;
 "@MMK_R_t" = 9.76562;
 "@MMK_R_uni1EF5" = 19.53125;
+};
+"@MMK_L_ginsular" = {
+"@MMK_R_c" = -30;
 };
 "@MMK_L_k" = {
 "@MMK_R_a" = 9.76562;
@@ -8274,6 +8357,10 @@ Z = -19.53125;
 };
 "@MMK_L_r" = {
 "@MMK_R_a" = -30;
+};
+"@MMK_L_sinsular" = {
+"@MMK_R_ginsular" = 12;
+"@MMK_R_iota-latin" = 20;
 };
 "@MMK_L_v" = {
 "@MMK_R_e" = -15;
@@ -8416,6 +8503,10 @@ P = {
 "@MMK_R_e" = -9.76562;
 "@MMK_R_u" = 39.0625;
 };
+"@MMK_L_dinsular" = {
+"@MMK_R_b" = 20;
+"@MMK_R_ginsular" = -20;
+};
 "@MMK_L_f" = {
 "@MMK_R_a" = -34.17969;
 "@MMK_R_c" = -24.41406;
@@ -8444,6 +8535,9 @@ P = {
 "@MMK_R_r" = 14.64844;
 "@MMK_R_t" = 9.76562;
 "@MMK_R_uni1EF5" = 19.53125;
+};
+"@MMK_L_ginsular" = {
+"@MMK_R_c" = -30;
 };
 "@MMK_L_k" = {
 "@MMK_R_a" = 9.76562;
@@ -8477,6 +8571,10 @@ P = {
 };
 "@MMK_L_r" = {
 "@MMK_R_a" = -35;
+};
+"@MMK_L_sinsular" = {
+"@MMK_R_ginsular" = 20;
+"@MMK_R_iota-latin" = 20;
 };
 "@MMK_L_v" = {
 "@MMK_R_e" = -20;
@@ -8625,6 +8723,10 @@ z = {
 "@MMK_R_e" = -9.76562;
 "@MMK_R_u" = 34.17969;
 };
+"@MMK_L_dinsular" = {
+"@MMK_R_b" = 20;
+"@MMK_R_ginsular" = -15;
+};
 "@MMK_L_f" = {
 "@MMK_R_a" = -24.41406;
 "@MMK_R_c" = -24.41406;
@@ -8653,6 +8755,9 @@ z = {
 "@MMK_R_r" = 11.23047;
 "@MMK_R_t" = 9.76562;
 "@MMK_R_uni1EF5" = 14.64844;
+};
+"@MMK_L_ginsular" = {
+"@MMK_R_c" = -25;
 };
 "@MMK_L_k" = {
 "@MMK_R_a" = 9.76562;
@@ -8686,6 +8791,10 @@ z = {
 };
 "@MMK_L_r" = {
 "@MMK_R_a" = -22;
+};
+"@MMK_L_sinsular" = {
+"@MMK_R_ginsular" = 15;
+"@MMK_R_iota-latin" = 20;
 };
 "@MMK_L_v" = {
 "@MMK_R_e" = -15;
@@ -8831,6 +8940,10 @@ Z = -24.41406;
 "@MMK_R_e" = -14.64844;
 "@MMK_R_u" = 39.0625;
 };
+"@MMK_L_dinsular" = {
+"@MMK_R_b" = 20;
+"@MMK_R_ginsular" = -20;
+};
 "@MMK_L_f" = {
 "@MMK_R_a" = -39.0625;
 "@MMK_R_c" = -29.29688;
@@ -8858,6 +8971,9 @@ Z = -24.41406;
 "@MMK_R_parenright" = 127.44141;
 "@MMK_R_t" = 9.76562;
 "@MMK_R_uni1EF5" = 14.64844;
+};
+"@MMK_L_ginsular" = {
+"@MMK_R_c" = -34;
 };
 "@MMK_L_h.sc" = {
 "@MMK_R_phi.sc" = -19.53125;
@@ -8897,6 +9013,10 @@ Z = -24.41406;
 };
 "@MMK_L_r" = {
 "@MMK_R_a" = -40;
+};
+"@MMK_L_sinsular" = {
+"@MMK_R_ginsular" = 20;
+"@MMK_R_iota-latin" = 20;
 };
 "@MMK_L_v" = {
 "@MMK_R_e" = -22;
@@ -9033,6 +9153,9 @@ Z = -24.41406;
 "@MMK_R_e" = -9.76562;
 "@MMK_R_u" = 34.17969;
 };
+"@MMK_L_dinsular" = {
+"@MMK_R_b" = 20;
+};
 "@MMK_L_f" = {
 "@MMK_R_a" = -29.29688;
 "@MMK_R_c" = -19.53125;
@@ -9061,6 +9184,10 @@ Z = -24.41406;
 "@MMK_R_r" = 14.64844;
 "@MMK_R_t" = 9.76562;
 "@MMK_R_uni1EF5" = 14.64844;
+};
+"@MMK_L_ginsular" = {
+"@MMK_R_c" = -30;
+"@MMK_R_dinsular" = -20;
 };
 "@MMK_L_k" = {
 "@MMK_R_a" = 9.76562;
@@ -9095,6 +9222,10 @@ Z = -24.41406;
 "@MMK_L_r" = {
 "@MMK_R_a" = -30;
 "@MMK_R_g" = -20;
+};
+"@MMK_L_sinsular" = {
+"@MMK_R_ginsular" = 20;
+"@MMK_R_iota-latin" = 20;
 };
 "@MMK_L_v" = {
 "@MMK_R_e" = -18;
@@ -9201,5 +9332,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 48;
+versionMinor = 49;
 }

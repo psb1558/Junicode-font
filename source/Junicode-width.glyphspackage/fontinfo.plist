@@ -252,7 +252,7 @@ size = 0;
 );
 }
 );
-date = "2022-03-29 00:58:55 +0000";
+date = "2022-04-01 22:06:30 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -270,6 +270,10 @@ languagesystem latn ENG;
 languagesystem latn CAT;
 languagesystem latn LAT;
 languagesystem latn FRA;
+languagesystem latn GAE;
+languagesystem latn IRI;
+languagesystem latn IRT;
+languagesystem latn SGA;
 
 languagesystem grek dflt;
 languagesystem grek ELL;
@@ -459,6 +463,80 @@ lookup f_before_dia {
   sub longs by longs.alt ;
   sub eth.loclENG by eth.loclENG.alt ;
 } f_before_dia ;
+
+lookup OldEnglish {
+    sub ampersand by tironiansignet ;
+    sub W by Wynn ;
+    sub d by dinsular ;
+    sub f by finsular ;
+    sub g by ginsular ;
+    sub i by i.alt2 ;
+    sub r by rinsular ;
+    sub s by sinsular ;
+    sub t by tinsular ;
+    sub w by wynn ;
+    sub y by ydotaccent ;
+    sub thornstroke by thornstroke.loclENG;
+    sub thorn by thorn.loclENG;
+    sub Thorn by Thorn.loclENG;
+    sub thorncomb by thorncomb.loclENG;
+    sub thorn.enlarged by thorn.enlarged.loclENG;
+    sub eth by eth.loclENG;
+    sub eth.enlarged by eth.enlarged.loclENG;
+    sub ethcomb by ethcomb.loclENG;
+    sub f.sc by finsular.sc ;
+    sub s.sc by sinsular.sc ;
+    sub g.sc by ginsular.sc ;
+    sub w.sc by wynn.sc ;
+    sub thorn.sc by thorn.loclENG.sc ;
+    sub t.sc by tinsular.sc ;
+    sub r.sc by rinsular.sc ;
+    sub thornstroke.sc by thornstroke.loclENG.sc ;
+} OldEnglish ;
+
+lookup ArchaicIrish {
+    sub ampersand by tironiansignet ;
+    sub A by A.alt1 ;
+    sub Aacute by Aacute.alt1 ;
+    sub a by a.alt3 ;
+    sub aacute by aacute.alt3 ;
+    sub B by B.alt1 ;
+    sub Bdotaccent by Bdotaccent.alt1 ;
+    sub D by Dinsular ;
+    sub Ddotaccent by Ddotaccent.alt1 ;
+    sub d by dinsular.alt ;
+    sub ddotaccent by ddotaccent.alt2 ;
+    sub E by E.alt3 ;
+    sub Eacute by Eacute.alt3 ;
+    sub e by e.alt2 ;
+    sub eacute by eacute.alt2 ;
+    sub F by Finsular ;
+    sub Fdotaccent by Fdotaccent.alt1 ;
+    sub f by finsular ;
+    sub fdotaccent by fdotaccent.alt1 ;
+    sub G by Ginsular ;
+    sub Gdotaccent by Gdotaccent.alt1 ;
+    sub g by ginsular ;
+    sub gdotaccent by gdotaccent.alt1 ;
+    sub i by i.alt3 ;
+    sub iacute by iacute.alt3 ;
+    sub l by l.alt2 ;
+    sub r by rinsular ;
+    sub rdotaccent by rdotaccent.alt1 ;
+    sub s by sinsular ;
+    sub sdotaccent by sdotaccent.alt1 ;
+    sub T by Tinsular ;
+    sub Tdotaccent by Tdotaccent.alt1 ;
+    sub t by tinsular ;
+    sub tdotaccent by tdotaccent.alt1 ;
+    sub y by ydotaccent ;
+    sub f.sc by finsular.sc ;
+    sub s.sc by sinsular.sc ;
+    sub g.sc by ginsular.sc ;
+    sub w.sc by wynn.sc ;
+    sub t.sc by tinsular.sc ;
+    sub r.sc by rinsular.sc ;
+} ArchaicIrish ;
 
 lookup calt_f_alt {
 #  sub f' [ @lc_with_diacritics_above eth ] by f.alt;
@@ -2272,34 +2350,20 @@ value = "Alternate thorn and eth";
 tag = ss01;
 },
 {
-code = "    sub ampersand by tironiansignet ;
-    sub W by Wynn ;
-    sub d by dinsular ;
-    sub f by finsular ;
-    sub g by ginsular ;
-    sub i by i.alt2 ;
-    sub r by rinsular ;
-    sub s by sinsular ;
-    sub t by tinsular ;
-    sub w by wynn ;
-    sub y by ydotaccent ;
-    sub thornstroke by thornstroke.loclENG;
-    sub thorn by thorn.loclENG;
-    sub Thorn by Thorn.loclENG;
-    sub thorncomb by thorncomb.loclENG;
-    sub thorn.enlarged by thorn.enlarged.loclENG;
-    sub eth by eth.loclENG;
-    sub eth.enlarged by eth.enlarged.loclENG;
-    sub ethcomb by ethcomb.loclENG;
-    sub f.sc by finsular.sc ;
-    sub s.sc by sinsular.sc ;
-    sub g.sc by ginsular.sc ;
-    sub w.sc by wynn.sc ;
-    sub thorn.sc by thorn.loclENG.sc ;
-    sub t.sc by tinsular.sc ;
-    sub r.sc by rinsular.sc ;
-    sub thornstroke.sc by thornstroke.loclENG.sc ;
-
+code = "script DFLT;
+language dflt;
+  lookup OldEnglish;
+script latn;
+language ENG;
+  lookup OldEnglish;
+language IRI;
+  lookup ArchaicIrish;
+language GAE;
+  lookup ArchaicIrish;
+language IRT;
+  lookup ArchaicIrish;
+language SGA;
+  lookup ArchaicIrish;
 ";
 labels = (
 {
@@ -16724,5 +16788,5 @@ type = unicode;
 };
 };
 versionMajor = 1;
-versionMinor = 48;
+versionMinor = 49;
 }

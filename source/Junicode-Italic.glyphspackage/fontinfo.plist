@@ -1426,6 +1426,7 @@ lookup tagligs {
  sub a n.tag e.tag by a.alt5 ;
  sub a e.tag n.tag by a.enlarged ;
  sub B e.tag n.tag by B.enlarged ;
+ sub B i.tag n.tag by B.alt1 ;
  sub b e.tag n.tag by b.enlarged ;
  sub C s.tag q.tag by C.alt ;
  sub C e.tag n.tag by C.enlarged ;
@@ -1442,6 +1443,7 @@ lookup tagligs {
  sub E u.tag c.tag by E.alt2 ;
  sub E u.tag n.tag by E.alt1 ;
  sub E e.tag n.tag by E.enlarged ;
+ sub E i.tag n.tag by E.alt3 ;
  sub e u.tag n.tag by e.alt1 ;
  sub e b.tag a.tag by e.alt2 ;
  sub e b.tag h.tag by e.alt3 ;
@@ -2853,7 +2855,7 @@ code = "cvParameters {
   };
   Character 0x0042;
 };
-sub B from [ B.enlarged ] ;
+sub B from [ B.enlarged B.alt1 ] ;
 ";
 tag = cv03;
 },
@@ -2967,7 +2969,7 @@ code = "cvParameters {
   };
   Character 0x0045;
 };
-sub E from [ E.alt1 E.alt2 E.enlarged ] ;
+sub E from [ E.alt1 E.alt2 E.enlarged E.alt3 ] ;
 ";
 tag = cv09;
 },
@@ -3310,9 +3312,15 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule l\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with high stroke\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with curved high stroke\";  # English US
+  };
   Character 0x006C;
 };
-sub l from [ l.alt l.enlarged ] ;
+sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt ] ;
 ";
 tag = cv24;
 },

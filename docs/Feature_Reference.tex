@@ -1,773 +1,8 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
-% see http://writer2latex.sourceforge.net for more info
-%
-% It was afterwards edited by P. Baker to remove unused packages,
-% use fontspec and other packages, and keep the document up to
-% date. The LibreOffice version of this document is no longer
-% maintained and should not be used.
-%
-\documentclass[12pt,letterpaper,openany]{book}
-\usepackage{microtype}
-\usepackage{fancyhdr}
-\usepackage[english,greek,lithuanian,polish,latin]{babel}
-\usepackage[quiet]{fontspec}
-\setmainfont{Junicode Two Beta}[
-  UprightFont = {*-Regular},
-  ItalicFont = {*-Italic},
-  BoldFont = {*-Semibold},
-  BoldItalicFont = {*-Bold Italic},
-  Numbers={Lowercase,Proportional},
-  StylisticSet=10,
-  UprightFeatures={
-    SizeFeatures={
-      {Size={-8.5},      Font={*-SemiExpanded Medium}},
-      {Size={8.6-10.99}, Font=*-Medium},
-      {Size={11-21.59},  Font=*-Regular},
-      {Size={21.6-},     Font=*-Light}
-    },
-  },
-  ItalicFeatures={
-    SizeFeatures={
-      {Size={-7.5},      Font={*-SemiExpanded Medium Italic}},
-      {Size={7.6-10.99}, Font={*-Medium Italic}},
-      {Size={11-21.59},  Font=*-Italic},
-      {Size={21.6-},     Font={*-Light Italic}}
-    },
-  },
-  BoldFeatures={
-    SizeFeatures={
-      {Size={-8.5},      Font={*-SemiExpanded Bold}},
-      {Size={8.6-10.99}, Font=*-Bold},
-      {Size={11-21.59},  Font=*-Semibold},
-      {Size={21.6-},     Font=*-Medium}
-    },
-  },
-  BoldItalicFeatures={
-    SizeFeatures={
-      {Size={-7.5},      Font={*-SemiExpanded Bold Italic}},
-      {Size={7.6-10.99}, Font={*-Bold Italic}},
-      {Size={11-21.59},  Font={*-Semibold Italic}},
-      {Size={21.6-},     Font={*-Medium Italic}}
-    },
-  },
-]
-%\setmainfont{JunicodeTwoBetaVF-Roman.ttf}[
-%  ItalicFont = JunicodeTwoBetaVF-Italic.ttf,
-%  BoldFont = JunicodeTwoBetaVF-Roman.ttf,
-%  BoldItalicFont =  JunicodeTwoBetaVF-Italic.ttf,
-%  Contextuals=Alternate,
-%  StylisticSet=10,
-%  Numbers={Lowercase,Proportional},
-%  UprightFeatures={
-%    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=115}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=112.5}}},
-%      {Size={21.6-},     RawFeature={axis={wght=351,wdth=100}}}
-%    },
-%  },
-%  ItalicFeatures={
-%    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=550,wdth=118}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=114}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=111}}},
-%      {Size={21.6-},     RawFeature={axis={wght=352,wdth=98}}}
-%    },
-%  },
-%  BoldFeatures={
-%    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=700,wdth=120}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=115}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=112.5}}},
-%      {Size={21.6-},     RawFeature={axis={wght=600,wdth=100}}}
-%    },
-%  },
-%  BoldItalicFeatures={
-%    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=114}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=111}}},
-%      {Size={21.6-},     RawFeature={axis={wght=600,wdth=98}}}
-%    },
-%  },
-%]
-\newfontface\regular{Junicode Two Beta}
-%\setfontface\regular{JunicodeTwoBetaVF-Roman.ttf}[
-%\setfontface\regular{Junicode Two Beta VF}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
-%  },
-%]
-\newfontface\narrow{Junicode Two Beta Condensed}
-%\setfontface\narrow{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
-%    {Size={22-},       RawFeature={axis={wght=353,wdth=75}}}
-%  },
-%]
-\newfontface\seminarrow{Junicode Two Beta SemiCondensed}
-%\setfontface\seminarrow{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
-%    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
-%  },
-%]
-\newfontface\seminarrowlight{Junicode Two Beta SemiCondensed Light}
-%\setfontface\seminarrowlight{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=355,wdth=87.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=301,wdth=87.5}}},
-%    {Size={22-},       RawFeature={axis={wght=301,wdth=87.5}}}
-%  },
-%]
-\newfontface\semiwide{Junicode Two Beta SemiExpanded}
-%\setfontface\semiwide{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
-%    {Size={22-},       RawFeature={axis={wght=356,wdth=112.5}}}
-%  },
-%]
-\newfontface\wide{Junicode Two Beta Expanded}
-%\setfontface\wide{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
-%    {Size={22-},       RawFeature={axis={wght=357,wdth=125}}}
-%  },
-%]
-\newfontface\light{Junicode Two Beta Light}
-%\setfontface\light{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=358,wdth=120}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
-%    {Size={11-22},     RawFeature={axis={wght=301,wdth=112.5}}},
-%    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
-%  },
-%]
-\newfontface\medium{Junicode Two Beta SemiExpanded Medium}
-%\setfontface\medium{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
-%    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
-%    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
-%  },
-%]
-\newfontface\semicondmedium{Junicode Two Beta SemiCondensed Medium}
-%\setfontface\semicondsemibold{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=650,wdth=87.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=87.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=600,wdth=87.5}}},
-%    {Size={22-},       RawFeature={axis={wght=600,wdth=87.5}}}
-%  },
-%]
-\newfontface\condmed{Junicode Two Beta Condensed Medium}
-%\setfontface\condmed{JunicodeTwoBetaVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=75}}},
-%    {Size={11-22},     RawFeature={axis={wght=500,wdth=75}}},
-%    {Size={22-},       RawFeature={axis={wght=500,wdth=75}}}
-%  },
-%]
-\newfontface\stditalic{Junicode Two Beta Italic}
-%\setfontface\stditalic{JunicodeTwoBetaVF-Italic .ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
-%  },
-%]
-\newfontface\semiconditalic{Junicode Two Beta SemiCondensed Italic}
-%\setfontface\semiconditalic{JunicodeTwoBetaVF-Italic.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=100}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=100}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
-%  },
-%]
-\setmonofont{SourceCodePro-Regular.ttf}[Scale=MatchLowercase,Numbers=Lowercase]
-%\setmonofont{SourceCodeVariable-Roman.otf}[
-%  Scale = MatchLowercase,
-%  Numbers = Lowercase,
-%  SizeFeatures={
-%    {Size={-8},        RawFeature={axis={wght=500}}},
-%    {Size={8-11},      RawFeature={axis={wght=450}}},
-%    {Size={11-},       RawFeature={axis={wght=400}}}
-%  }
-%]
 
-\usepackage{xcolor,colortbl}
-\definecolor{BrickRed}{RGB}{146,18,6}
-\definecolor{SlateGray}{RGB}{112,128,144}
-\definecolor{GGOrange}{RGB}{240,74,6}
-\definecolor{RViolet}{RGB}{70,18,87}
-\definecolor{myRed}{rgb}{0.5,0,0}
-\definecolor{myBlue}{rgb}{0,0,0.5}
-\usepackage{multicol}
-\usepackage{array}
-\usepackage{supertabular}
-\usepackage{hhline}
-\usepackage{metalogo}
-\usepackage{hyperref}
-\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,%
-  urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
-% Footnotes configuration
-\makeatletter
-\renewcommand\thefootnote{\arabic{footnote}}
-\makeatother
-% Text styles
-\linespread{1.1}
-\newcommand\textLetterExample[1]{\textrm{\textbf{\color{BrickRed}#1}}}
-\newcommand\textUName[1]{\textsc{#1}}
-\newcommand\textSourceText[1]{{\color{GGOrange}\texttt{#1}}}
-\newcommand\cvc[1]{{\color{magenta}#1}}
-\newcommand\textstyleEmphasis[1]{\textit{#1}}
-\newcommand\textstyleEntityRef[1]{\textrm{#1}}
-\newcommand{\cvd}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
-\newcommand{\hlig}[1]{{\addfontfeature{Ligatures=Historic}#1}}
-\newcommand{\sups}[1]{{\addfontfeature{VerticalPosition = Superior}#1}}
-\newcommand{\subs}[1]{{\addfontfeature{VerticalPosition = Inferior}#1}}
-\newcommand{\oprop}[1]{{\addfontfeature{Numbers={Lowercase,Proportional}}#1}}
-\newcommand{\lprop}[1]{{\addfontfeature{Numbers={Uppercase,Proportional}}#1}}
-\newcommand{\otab}[1]{{\addfontfeature{Numbers={Lowercase,Monospaced}}#1}}
-\newcommand{\ltab}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
-\newcommand{\ornm}[2][0]{{\addfontfeature{Ornament=#1}#2}}
-\newcommand{\revthorn}[1]{{\addfontfeature{StylisticSet=1}#1}}
-\newcommand{\grk}{\addfontfeature{Script=Greek,Language=Greek}}
-\newcommand{\eng}{\addfontfeature{Language=English}}
-\newcommand{\icel}{\addfontfeature{Language=Icelandic}}
-\newcommand{\unic}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
-%\newcommand{\colongs}{\addfontfeature{Language=English,RawFeature={+ss08;+calt}}}
-\newcommand{\colongs}{\addfontfeature{Language=English,StylisticSet=8}}
-\newcommand{\ltech}{Lua\kern-1.5pt\TeX}
-\newopentypefeature{MyStyle}{insular}{+ss02}
-\newopentypefeature{MyStyle}{altogonek}{+cv62}
-\newopentypefeature{MyStyle}{mirrored}{+rtlm}
-\newopentypefeature{MyStyle}{gothic}{+ss19}
-\newopentypefeature{MyStyle}{contextualr}{+ss16}
-\newopentypefeature{MyStyle}{contextuals}{+ss08}
-\newopentypefeature{MyStyle}{IPA}{+ss03}
-\newopentypefeature{MyStyle}{thornswap}{+ss01}
-%\newopentypefeature{Ligatures}{histon}{+hlig}
-\newopentypefeature{Ligatures}{histoff}{-hlig}
-% Outline numbering
-\setcounter{secnumdepth}{0}
-\makeatletter
-\newcommand\arraybslash{\let\\\@arraycr}
-\makeatother
-% Page layout (geometry)
-\setlength\voffset{-1in}
-\setlength\hoffset{-0.75in}
-\setlength\topmargin{1in}
-\setlength\oddsidemargin{1in}
-\setlength\textheight{8.000001in}
-\setlength\textwidth{6in}
-\setlength\footskip{0.0cm}
-\setlength\headheight{0.4in}
-\setlength\headsep{0.2in}
-% Footnote rule
-\setlength{\skip\footins}{14pt}
-\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
-% Pages styles
-\pagestyle{fancy}
-\footskip = 30pt
-\headsep = 30pt
-\renewcommand{\headrule}{}
-\fancyhead[L]{}
-\fancyhead[C]{}
-\fancyhead[R]{}
-\fancyfoot[L]{}
-\fancyfoot[C]{}
-\fancyfoot[R]{}
-\setlength\tabcolsep{1mm}
-\renewcommand\arraystretch{1.3}
-% Headers
-\usepackage{sectsty}
-\subsectionfont{\color{BrickRed}}
-\sectionfont{\color{SlateGray}}
-% List styles
-\newcommand\liststyleLi{%
-\renewcommand\labelitemi{{\textbullet}}
-\renewcommand\labelitemii{{\textbullet}}
-\renewcommand\labelitemiii{{\textbullet}}
-\renewcommand\labelitemiv{{\textbullet}}
-}
-\newcommand\liststyleLii{%
-\renewcommand\labelitemi{{\textbullet}}
-\renewcommand\labelitemii{{\textbullet}}
-\renewcommand\labelitemiii{{\textbullet}}
-\renewcommand\labelitemiv{{\textbullet}}
-}
-\newcounter{Feature}
-\renewcommand\theFeature{\arabic{Feature}}
-\tolerance=1500
-\widowpenalty=500
-\clubpenalty=500
-\frenchspacing
-\raggedbottom
-%
-%
-%
-\begin{document}
-\addfontfeature{Script=Latin,Language=English,Contextuals=Alternate}
-\begin{titlepage}
-\huge\noindent
-{\color{myRed}}\\[5cm]
-\Huge \centering {\color{myBlue}Junicode} \\[1cm]
-\huge \centering the font for medievalists \\[1cm]
- \Huge\centering {\color{myRed}} \\[1cm]
- \huge\centering {\stditalic specimens and user manual} \\[1ex]
- \Large\centering{\regular for version 2}\\
-\vfill
-{\color{myRed}}
-\end{titlepage}
-\mainmatter
+\chapter{Feature Reference}\hypertarget{FeatureReference}{}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}feature reference}
 
-\chapter*{\color{RViolet}Contents}
-\thispagestyle{plain}
-
-\noindent\hyperlink{aboutj}{\bfseries\large About Junicode}\\[-0.25em]
-
-\noindent\hyperlink{specimens}{\bfseries\large Specimens}\\[-0.25em]
-
-\noindent\hyperlink{GettingStarted}{\bfseries\large Getting Started With Junicode}\\[-0.25em]
-
-\noindent\hyperlink{FeatureReference}{\bfseries\large Feature Reference}\\[-0.25em]
-
-\hyperlink{intro}{Introduction}
-
-\begin{itemize}
-\setlength\itemsep{-0.25em}
-\item[A] \hyperlink{SectionA}{Case-Related Features}
-
-\item[B] \hyperlink{SectionB}{Numbers and Sequencing}
-
-\item[C] \hyperlink{SectionC}{Superscripts and Subscripts}
-
-\item[D] \hyperlink{SectionD}{Ornaments}
-
-\item[E] \hyperlink{SectionE}{Alphabetic Variants}
-
-\item[F] \hyperlink{SectionF}{Greek}
-
-\item[G] \hyperlink{SectionG}{Punctuation}
-
-\item[H] \hyperlink{SectionH}{Abbreviations}
-
-\item[I] \hyperlink{SectionI}{Combining Marks}
-
-\item[J] \hyperlink{SectionJ}{Currency and Weights}
-
-\item[K] \hyperlink{SectionK}{Gothic}
-
-\item[L] \hyperlink{SectionL}{Runic}
-
-\item[M] \hyperlink{SectionM}{Ligatures and Digraphs}
-
-\item[N] \hyperlink{req}{Required Features}
-
-\item[O] \hyperlink{nonmufi}{Non-MUFI Code Points}
-\end{itemize}
-%\selectlanguage{english}
-
-\cleardoublepage
-\hypertarget{aboutj}{}\chapter*{\color{RViolet}About Junicode}
-
-{\large%
-\noindent Junicode is modeled on the Pica Roman type
-purchased by Oxford University in 1692 and
-used to set the bulk of the Latin text of George Hickes,
-{\itshape Linguarum vett. septentrionalium thesaurus
-grammatico-criticus et archaeologicus} (Oxford, 1703–5). This massive two-volume folio
-is not only a major work of scholarship on the languages and literatures
-of northern Europe in the Middle Ages, but also a fine
-example of the work of the Oxford Press at this
-period: printed in multiple types (for every language had to
-have its proper type) and lavishly
-illustrated with engravings of manuscript pages, coins and
-artifacts.
-
-Junicode also includes two other typefaces from the \textit{Thesaurus}:
-Pica Saxon, used to set passages in the Old English language,
-and also a typeface reproducing the Gothic alphabet (“Gothic” here
-being not the late medieval style, but rather
-the earliest extensively attested Germanic language).
-These were commissioned by the literary scholar
-Francis\-cus Junius (1591–1677) and bequeathed by him to
-the University. Examples of all these typefaces can be found
-in {\itshape A Specimen of the
-Several Sorts of Letter Given to the University by Dr. John Fell,
-Sometime Lord Bishop of Oxford. To Which Is Added the Letter Given by
-Mr. F. Junius} (Oxford, 1693).
-
-Junicode has two distinct Greek faces. The first, newly designed to harmonize with the roman face, is
-up\-right and modern. The other, accompanying the italic face, is based on type designed by Alexander
-Wilson (1714–86) of Glasgow and used in numerous books published by
-the Foulis Press, most notably the great Glasgow Homer of 1756–58.
-
-The Junicode project began around 1998, when the developer began to revise his
-older (early 1990s) “Junius” fonts for medievalists to take account of the Unicode
-standard, then relatively new. The font’s name, a contraction of
-“Junius Unicode,” was supposed to be a stopgap, serving until a more suitable name
-could be found, but the name “Junicode” is now so well known that it can’t be
-changed.\footnote{\ An effort to change the name to “JuniusX” produced
-only confusion. If you find a font by the name JuniusX on a free font site,
-that is nothing more than an early version of Junicode 2.}
-The project has been active for its entire history, responding to frequent
-requests from users and changes in font technology; the developer is now pushing
-towards the release of Junicode version 2, an extended font family of five weights
-and five widths, with both static and variable versions, which aims to
-promote best practices in the presentation of medieval texts, especially in
-the area of accessibility. This aspect of the font is explored in the
-Introduction to the Feature Reference.
-
-\textit{Users should be aware that Junicode 2 is a beta version in the roman face,
-complete but unstable and subject to change. In the italic it is an alpha, about
-ninety-five percent complete (as of March 2022) and more unstable than the
-roman. Until the official release of version 2 (probably in late 2022), versions of Junicode
-numbered \textsc{1.00N} should be used for projects that require
-stability. The latest stable version can be downloaded} \href{https://github.com/psb1558/Junicode-font/releases}{here}.
-
-}
-\pagestyle{fancy}
-\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}junicode}
-\fancyhead[CO]{\scshape\color{myRed} {junicode}\hspace{10pt}{\addfontfeatures{Numbers=OldStyle}\thepage}}
-
-
-\hypertarget{specimens}{}\chapter*{\color{RViolet}Specimens}
-
-\subsection*{Old and Middle English}
-
-{\noindent\regular\addfontfeature{Language=English}Wē æthrynon mid ūrum ārum þā ȳðan þæs dēopan wǣles; wē
-ġesāwon ēac þā muntas ymbe þǣre sealtan sǣ strande, and wē mid
-āðēnedum hræġle and ġesundfullum windum þǣr ġewīcodon on þām
-ġemǣrum þǣre fæġerestan þēode. Þā ȳðan ġetācniað þisne dēopan
-cræft, and þā muntas ġetācniað ēac þā miċelnyssa þisses cræftes. (Regular)}\\
-
-\noindent{\semiwide\addfontfeature{Language=English} S{\scshape iþen} þe sege and þe assaut watz sesed at Troye,\\
-Þe borȝ brittened and brent to brondez and askez,\\
-Þe tulk þat þe trammes of tresoun þer wroȝt\\
-Watz tried for his tricherie, þe trewest on erthe:\\
-Hit watz Ennias þe athel, and his highe kynde,\\
-Þat siþen depreced prouinces, and patrounes bicome\\
-Welneȝe of al þe wele in þe west iles. (SemiExpanded)}\\
-
-\noindent{\small\semiconditalic Apply the OpenType feature ss02 (Stylistic Set 2)
-for insular letter-forms.}\\[1ex]
-{\seminarrow\addfontfeature{StylisticSet=2,Ligatures=NoCommon,MyStyle=altogonek}
-Her cynewulf benam sigebryht his rices \& westseaxna wiotan for
-un\-ryht\-um dędū buton hamtúnscire \& he hæfde þa oþ he ofslog
-þone aldormon þe hī lengest wunode \& hiene þa cynewulf on
-andred adræfde \& ħ þær wunade oþ þæt hine án swán ofstang
-æt pryfetesflodan \& he wręc þone aldormon cumbran \& se cynewulf
-oft miclum gefeohtum feaht uuiþ bretwalū.} (SemiCondensed)
-
-\subsection*{Old Icelandic}
-{\small\semiconditalic\addfontfeature{Language=English} For Nordic shapes of þ and ð in an
-English context, specify the appropriate language (e.g. Icelandic or Norwegian);
-or apply the OpenType ss01 (Stylistic Set 1) feature.}\\[1ex]
-{\icel\medium Um haustit sendi Mǫrðr Valgarðsson orð at Gunnarr myndi vera einn heimi, en
-lið alt myndi vera niðri í eyjum at lúka heyverkum. Riðu þeir Gizurr Hvíti ok
-Geirr Goði austr yfir ár, þegar þeir spurðu þat, ok austr yfir sanda til Hofs.
-Þá sendu þeir orð Starkaði undir Þríhyrningi; ok fundusk þeir þar allir er at
-Gunnari skyldu fara, ok réðu hversu at skyldi fara.} (SemiExpanded Medium)
-
-\subsection*{Runic}
-{\small\semiconditalic\addfontfeature{Language=English} Junicode has features
-for automated transliteration of Latin letters into various runic systems.}\\[1ex]
-{\wide ᚠᛁᛋᚳ ᚠᛚᚩᛞᚢ ᚪᚻᚩᚠ ᚩᚾ ᚠᛖᚱᚷᛖᚾᛒᛖᚱᛁᚷ ᚹᚪᚱᚦ ᚷᚪ᛬ᛇᚱᛁᚳ ᚷᚱᚩᚱᚾ ᚦᚨᚱ ᚻᛖ ᚩᚾ ᚷᚱᛖᚢᛏ ᚷᛁᛇᚹᚩᛗ
-ᚻᚱᚩᚾᚨᛇ ᛒᚪᚾ\\
-ᚱᚩᛗᚹᚪᛚᚢᛇ ᚪᚾᛞ ᚱᛖᚢᛗᚹᚪᛚᚢᛇ ᛏᚹᛟᚷᛖᚾ ᚷᛁᛒᚱᚩᚦᚫᚱ ᚪᚠᛟᛞᛞᚫ ᛞᛁᚫ ᚹᚣᛚᛁᚠ ᚩᚾ ᚱᚩᛗᚫ\linebreak[0]ᚳᚫᛇᛏᛁ᛬
-ᚩᚦᛚᚫ ᚢᚾᚾᛖᚷ} (Expanded)
-
-\subsection*{German}
-
-{\narrow\addfontfeature{Language=English} Ich ſag üch aber / minen fründen / Foͤꝛchtēd üch nit voꝛ denen die den
-lyb toͤdend / vnd darnach nichts habennd das ſy mer thuͤgind. Ich wil
-üch aber zeigē voꝛ welchem ir üch \cvd[4]{12}{foͤꝛchten} ſollend. Foͤꝛchtend üch voꝛ
-dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die
-hell: ja ich ſag üch / voꝛ dem ſelben \cvd[4]{12}{foͤꝛchtēd} üch. Koufft man nit
-fünff Sparen vm̄ zween pfennig} (Condensed)
-
-\subsection*{Latin}
-
-{\small\semiconditalic Junicode contains the most common Latin abbreviations,
-  making it suitable for diplomatic editions of Latin texts.}\\[1ex]
-{\addfontfeatures{Language=Latin,MyStyle=altogonek,MyStyle=contextualr}\light Adiuuanos dſ̄ ſalutariſ noſter \&
- ꝓpt̄ głam nominiſ tui dnē liƀanoſ· \& ꝓpitiuſ eſto peccatiſ noſtriſ
- ꝓpter nomen tuum· Ne forte dicant ingentib: ubi eſt dſ̄ eorum \&
-  innoteſcat innationib: corā oculiſ nr̄iſ· Poſuerunt moſticina
-  ſeruorū ruorū eſcaſ uolatilib: cęli carneſ ſcōꝝ tuoꝝ beſtiiſ tenice·
-  Facti ſumꝰ ob\kern+0.2ptꝓbrium uiciniſ nr̄iſ·} (Light)
-
-\subsection*{Gothic}
-
-{\seminarrowlight jabai auk ƕas gasaiƕiþ þuk þana habandan kunþi in galiuge stada
-anakumbjandan, niu miþwissei is siukis wis\-an\-dins timrjada du
-galiugagudam gasaliþ matjan?  fraqistniþ auk sa unmahteiga ana
-þeinamma witubnja broþar in þize Xristus gaswalt.  swaþ~þan
-frawaurkjandans wiþra broþruns, slahandans ize gahugd siuka, du
-Xristau fra\-waur\-keiþ.} (SemiCondensed Light)\\
-
-{\noindent\small\semiconditalic Use ss19 to produce Gothic letters
-  automatically from transliterated text.}\\[1ex]
-{\addfontfeature{MyStyle=gothic}\bfseries jabai auk ƕas gasaiƕiþ þuk þana
-  habandan kunþi in ga\-liuge stada anakumbjandan, niu miþwissei is
-  siukis wis\-an\-dins timrjada du galiugagudam gasaliþ matjan?
-  jabai auk ƕas gasaiƕiþ þuk þana habandan kunþi in
-    ga\-liuge stada anakumbjandan, niu miþwissei is siukis
-    wis\-an\-dins timrjada du galiugagudam gasaliþ matjan?} (SemiExpanded Bold)
-
-  \subsection*{Sanskrit Transliteration}
-
-\noindent{\semicondmedium mānaṁ dvividhaṁ viṣayadvai vidyātśaktyaśaktitaḥ \\
-     arthakriyāyāṁ keśadirnārtho ’narthādhimokṣataḥ\\[1ex]
-sadr̥śāsadr̥śatvācca viṣayāviṣayatvataḥ \\
-     śabdasyānyanimittānāṁ bhāve dhīsadasattvataḥ} (SemiCondensed Medium)
-
-\subsection*{International Phonetic Alphabet}
-{\addfontfeature{MyStyle=IPA,MyStyle=thornswap}
-{\regular hwɑn θɑt ɑːprɪl wiθ is ʃuːrəs soːtə θə drʊxt ɔf mɑrʧ hɑθ peːrsəd toː
-θə roːte ɑnd bɑːðəd ɛvrɪ væɪn ɪn swɪʧ lɪkuːr ɔf hwɪʧ vɛrtɪu
-ɛnʤɛndrəd ɪs θə fluːr hwɑn zɛfɪrʊs eːk wɪθ hɪs sweːtə bræːθ}} (Regular)
-
-\subsection*{Greek}
-{\regular\grk βίβλος
-γενέσεως ἰησοῦ χριστοῦ υἱοῦ δαυὶδ
-υἱοῦ ἀβραάμ.
-ἀβραὰμ
-ἐγέννησεν τὸν ἰσαάκ, ἰσαὰκ δὲ ἐγέννησεν
-τὸν ἰακώβ, ἰακὼβ δὲ ἐγέννησεν τὸν
-ἰούδαν καὶ τοὺς ἀδελφοὺς αὐτοῦ,
-ἰούδας
-δὲ ἐγέννησεν τὸν φάρες καὶ τὸν ζάρα
-ἐκ τῆς θαμάρ, φάρες δὲ ἐγέννησεν τὸν
-ἑσρώμ, ἑσρὼμ δὲ ἐγέννησεν τὸν ἀράμ,
-ἀρὰμ
-δὲ ἐγέννησεν τὸν ἀμιναδάβ, ἀμιναδὰβ
-δὲ ἐγέννησεν τὸν ναασσών, ναασσὼν δὲ
-ἐγέννησεν τὸν σαλμών,
-σαλμὼν
-δὲ ἐγέννησεν τὸν βόες ἐκ τῆς ῥαχά} (Regular)\\
-
-\noindent\textit{\grk βίβλος
-γενέσεως ἰησοῦ χριστοῦ υἱοῦ δαυὶδ
-υἱοῦ ἀβραάμ.
-ἀβραὰμ
-ἐγέννησεν τὸν ἰσαάκ, ἰσαὰκ δὲ ἐγέννησεν
-τὸν ἰακώβ, ἰακὼβ δὲ ἐγέννησεν τὸν
-ἰούδαν καὶ τοὺς ἀδελφοὺς αὐτοῦ,
-ἰούδας
-δὲ ἐγέννησεν τὸν φάρες καὶ τὸν ζάρα
-ἐκ τῆς θαμάρ, φάρες δὲ ἐγέννησεν τὸν
-ἑσρώμ, ἑσρὼμ δὲ ἐγέννησεν τὸν ἀράμ,
-ἀρὰμ
-δὲ ἐγέννησεν τὸν ἀμιναδάβ, ἀμιναδὰβ
-δὲ ἐγέννησεν τὸν ναασσών, ναασσὼν δὲ
-ἐγέννησεν τὸν σαλμών,
-σαλμὼν
-δὲ ἐγέννησεν τὸν βόες ἐκ τῆς ῥαχά} (Italic)
-
-\subsection*{Lithuanian}
-
-{\small\semiconditalic Lithuanian poses several typographical challenges. Make sure
-  Contextual Alternates (calt) is turned on; for i̇́, use i followed
-  by combining dot accent (\unic{U+0307}) and acute (\unic{U+0301}).}\\[1ex]
-{\wide\addfontfeature{Language=Lithuanian} Visa žemė turėjo vieną kalbą ir tuos pačius žodžius.  Kai žmonės
-kėlėsi iš rytų, jie rado slėnį Šinaro krašte ir ten įsikūrė.  Vieni
-kitiems sakė: Eime, pasidirbkime plytų ir jas išdekime. – Vietoj
-akmens jie naudojo plytas, o vietoj kalkių – bitumą.  Eime, – jie
-sakė, – pasistatykime miestą ir bokštą su dangų siekiančia viršūne ir
-pasidarykime sau vardą, kad nebūtume išblaškyti po visą žemės veidą.} (Expanded)
-
-\subsection*{Polish}
-{\small\semiconditalic The default shape and position of ogonek in Junicode are suitable
-for modern Polish. For the medieval Latin e-caudata, consider using
-cv62.}\\[1ex]
-{\condmed\addfontfeature{Language=Polish} Mieszkańcy całej ziemi mieli jedną mowę, czyli jednakowe słowa.  A
-gdy wędrowali ze wschodu, napotkali równinę w kraju Szinear i tam
-zamieszkali.  I mówili jeden do drugiego: Chodźcie, wyrabiajmy cegłę
-i wypalmy ją w ogniu. A gdy już mieli cegłę zamiast kamieni i smołę
-zamiast zaprawy murarskiej, rzekli: Chodźcie, zbudujemy sobie miasto
-i wieżę, której wierzchołek będzie sięgał nieba, i w ten sposób
-uczynimy sobie znak, abyśmy się nie rozproszyli po całej ziemi.} (Condensed Medium)
-
-\subsection*{Fleurons}
-
-{\small\semiconditalic Junicode contains a number of fleurons (floral
-  ornaments) copied from a 1785 Caslon specimen book. Access
-  these via the OpenType feature \hyperlink{SectionD}{ornm}. Fleurons have only one weight and
-  width, and they are the same in roman and italic.}
-
-\begin{center}
-\huge    \\
- \\[0.7ex]
-\\[0.7ex]
-\\
- 
-\end{center}
-
-\chapter*{\color{RViolet}Getting Started with Junicode}\hypertarget{GettingStarted}{}
-
-When installing Junicode on your system, you must choose the kind of font that
-will work best for you you
-and which faces you are most likely to use. You can choose between TrueType
-and Compact Font Format (or CFF), and between static and variable.\footnote{\ TrueType is a font format developed by
-Apple Computer in the 1980s; it is still the most commonly used format. Compact Font Format
-(or CFF, often inaccurately called “OpenType”) was developed by Adobe Systems.
-Both TrueType and CFF fonts are capable of fully supporting the OpenType
-standard, developed in the late 1990s by Microsoft and Apple, which dramatically expanded the
-capabilities of computer fonts and continues to evolve. Static fonts are the ones
-users are most familiar with, each font file having a single set of outlines
-scalable to any size. By contrast, a single variable font file stores a set of
-outlines that can morph in various ways—for example, becoming bolder or lighter,
-narrower or wider.} Most users will prefer TrueType fonts, as
-these will look best on computer screens, and static fonts, as these will work
-best with programs like Microsoft Word. You can find static TrueType fonts in
-the fonts/ttf folder.
-
-Use the CFF version (fonts/otf) if you run into problems with TrueType (for example,
-a few Mac printer drivers mess up the placement of diacritics when rendering
-these fonts). Use the TrueType variable version if you're using Junicode in a
-web page, and the CFF variable version if you are using
-{\ltech} (see the document LuaTeX\_JunicodeVF.pdf for instructions and pointers).
-
-Junicode has five weights and five widths, which are combined in many ways
-for a total of twenty-two styles in
-both roman and italic. It is not necessary to install all of these; in fact,
-your life will be simplified (font menus easier to navigate) if you
-make a selection. You will probably want the traditional Regular, Bold, Italic, and Bold
-Italic fonts, but you should survey the styles displayed in the Specimen
-section of this booklet, choose the ones that look best to you, and install
-only those. A reasonable selection for many users will include the traditional four
-styles for main text, several SemiExpanded styles for footnotes, and
-SemiCondensed for titles.
-
-With more than 4,700 characters, Junicode is a large font. Finding the things you
-want in a collection that size can be a challenge, and then entering them in your
-documents is another challenge. This document will help, but it
-presupposes a certain amount of knowledge—for example, how to install a font in
-Windows, Mac OS or Linux and how to install and use different kinds of software.
-
-Medievalists will find the \href{https://bora.uib.no/bora-xmlui/handle/1956/10699}%
-{\textit{MUFI Character Recommendation}}, version 4.0 (2015)
-an essential supplement to this document. The \textit{Recommendation} lists
-thousands of characters identified by the
-Medieval Unicode Font Initiative as being of interest to medievalists. Junicode
-contains all of these characters. There are two versions of the \textit{Recommendation}:
-you will probably find the “Alphabetical Order” version most helpful.
-
-From the \textit{MUFI Character Recommendation} or, alternatively, the Junicode
-\textit{List of Encoded Characters} (packaged with the font) you can find out
-the \textbf{code points}\footnote{\ A Unicode code point is a numerical identifier for a character.
-It is generally expressed as a
-four-digit hexadecimal (or base-16) number with a prefix of ``U+''. The letter
-capital ``A,'' for example, is \unic{U+0041} (65
-in decimal notation), and lowercase ``ȝ'' (Middle English yogh) is \unic{U+021D}.}
-of the characters you need. These code points can be used to enter
-characters in your documents when they cannot be typed on the keyboard.
-
-To enter any Unicode character in a Windows application, type its four-digit
-code, followed by Alt-X. To do the same in the Mac OS, first install and switch
-to the “Unicode Hex Input” keyboard, then type the code while holding down the Option
-key. In most Linux distributions you can enter a code by typing Shift-Control-U,
-then the code followed by Return or Enter.
-
-\textbf{Combining marks} (diacritics and certain abbreviation signs) can pose special problems for
-medievalists. Unicode contains a great
-many \textbf{precomposed characters} consisting of a base letter plus one or more marks.
-If these are all you need you're fortunate---especially if they can be
-typed on an international keyboard (not all can).\footnote{\ Both
-Windows and the Mac OS come with international keyboards that make it easy to
-type special letters and diacritics. To find out how to enable these, search
-online for “Mac OS International Keyboard” or “Windows International Keyboard.”}
-But medieval manuscripts frequently contain
-combinations of base + mark that are not used in modern written languages.
-For these, you'll have to
-enter bases and marks separately.
-
-To position a mark correctly over a base character, first enter the base,
-followed by the mark or marks.
-The sequence \textbf{m} + \textbf{◌ᷙ} (\unic{U+1DD9})
-will make \textbf{mᷙ}; \textbf{y} + \textbf{◌̄} (\unic{U+0304}) + \textbf{◌̆} (\unic{U+0306}) will make \textbf{ȳ̆};
-\textbf{e} + \textbf{◌̣} (\unic{U+0323}) + \textbf{◌ᷠ} (\unic{U+1DE0}) will make \textbf{ẹᷠ}.
-
-More than sixteen hundred characters in Junicode can only be accessed via OpenType features—that is,
-by way of the programming built into the font—and many others \textit{should} be
-accessed that way for reasons explained in the Introduction
-to the Feature Reference section of this document.
-
-For example, some programs (including Microsoft Word) produce small caps by
-scaling capitals down to approximately the height of lowercase letters.
-These always look too thin and light.
-But Junicode contains hundreds of \textsc{true small caps} designed to harmonize with
-the surrounding text. These can only be accessed via the OpenType \textSourceText{smcp} feature,
-which you can apply to a run of text much as you apply italic or bold styles:
-select some text and then apply the feature.
-
-Unfortunately, not every program supports OpenType features, and some that do
-either support only a few or make them difficult to access. Programs
-that support Junicode’s features fully include the free word processor
-\href{https://www.libreoffice.org/}{LibreOffice Writer}, all major browsers
-(Firefox, Chrome, Safari and Edge), and
-the typesetting programs {\LuaLaTeX} and {\XeLaTeX}. Adobe InDesign supports
-OpenType features only partially, but provides access to all of Junicode's characters
-through its own interface.
-
-Microsoft Word, unfortunately, provides only limited support for OpenType
-features. It supports the \hyperlink{req}{Required Features} discussed below, and also
-variant number forms and Stylistic Sets (though only one at a time). Many characters
-(for example, \textsc{true small caps} and those accessible only via Character
-Variant features) cannot be accessed at all. To activate Word's OpenType
-support, you must open the “Font” dialog, click over to the “Advanced” tab,
-and check the “Kerning” box. (Oddly, the “Kerning” box enables all other
-OpenType features.) Then, in the same tab, select Standard Ligatures, Contextual
-Alternates, and any other features you want.
-OpenType features are best applied to character styles rather than
-directly to text: this will
-save you from having to perform this operation repeatedly.
-
-It is also good to set the language properly for the text you're working on.
-Programs like Word will automatically set the language to the default for your system. If you
-change to a language other than your own for a passage (or even a single word),
-you should set the language for that passage appropriately. This will unlock
-a number of capabilities. For example, in Old and Middle English, Word and
-other programs will use the English form of thorn and eth ({\eng þð}) instead of
-the modern Icelandic ({\icel þð}), and in ancient
-Greek you will be able to type accents after vowels instead of looking up
-the codes for hundreds of polytonic vowel + accent combinations. But these and other capabilities
-are only available when you set the language correctly.
-
-In LibreOffice and InDesign you can set the language with a drop-down menu
-in the “Character” dialog. In Word there is a separate “Language” dialog,
-accessible from the “Tools” menu.
-
-If you have questions about any aspect of Junicode,
-post a query in the \href{https://github.com/psb1558/Junicode-font/discussions}%
-{Junicode discussion forum}. If you notice a bug, please open an
-\href{https://github.com/psb1558/Junicode-font/issues}{issue} at the font's
-\href{https://github.com/psb1558/Junicode-font}{development site}. If you need
-help with programming, subsetting or other tasks, contact the developer
-directly.\footnote{\ b dot tarde at gmail dot com.}
-
-\chapter*{\color{RViolet}Feature Reference}\hypertarget{FeatureReference}{}
-
-\hypertarget{intro}{}\section{Introduction}
+\section{Introduction}
 The OpenType features of Junicode version 2 and its variable counterpart (hereafter referred to together as
 ``Junicode'') have two purposes. One is to provide convenient access to the rich character set of the Medieval Unicode
 Font Initiative (MUFI) recommendation. The other is to enable best practices in the presentation of medieval text,
@@ -780,31 +15,31 @@ Multilingual Plane, a block of codes, running from \unic{U+E000} to \unic{U+F8FF
 are available for font designers to use in any way they please.
 
 The problem with PUA code points is precisely their lack of any value. Consider, as a point of comparison, the letter
-\textLetterExample{a} (\unic{U+0061}). Your computer, your phone, and probably a good many other devices around the house
-store a good bit of information about this \textLetterExample{a}: that it’s a letter in the Latin script, that
-it’s lowercase, and that the uppercase equivalent is \textLetterExample{A} (\unic{U+0041}). All this information is
+\textex{a} (\unic{U+0061}). Your computer, your phone, and probably a good many other devices around the house
+store a good bit of information about this \textex{a}: that it’s a letter in the Latin script, that
+it’s lowercase, and that the uppercase equivalent is \textex{A} (\unic{U+0041}). All this information is
 available to word processors, browsers, and other applications running on your computer.
 
 Now suppose you're preparing an electronic text containing what MUFI calls \textUName{latin small letter neckless
-a} (\textLetterExample{}). It is assigned to code point \unic{U+F215}, which belongs to the PUA. Beyond that, your
-computer knows nothing about it: not that it is a variant of \textLetterExample{a}, or that it is lowercase, or a letter in the Latin
+a} (\textex{}). It is assigned to code point \unic{U+F215}, which belongs to the PUA. Beyond that, your
+computer knows nothing about it: not that it is a variant of \textex{a}, or that it is lowercase, or a letter in the Latin
 alphabet, or even a character in a language system. A screen reader cannot read, or even spell out, a word with \unic{U+F215}
-in it; a search engine will not recognize the word as containing the letter \textLetterExample{a}.
+in it; a search engine will not recognize the word as containing the letter \textex{a}.
 
 Junicode offers the full range of MUFI characters---you can enter the PUA code points---but also a solution to the
 problems posed by those code points. Think of an electronic text (a web page, perhaps, or a PDF) as having two layers:
 an underlying text, stable and unchanging, and the displayed text, generated by software at the instant it is needed
 and discarded when it is no longer on the screen. For greatest accessibility the underlying text should contain the
-plain letter \textLetterExample{a} (\unic{U+0061}) along with markup indicating how it should be displayed. To generate
+plain letter \textex{a} (\unic{U+0061}) along with markup indicating how it should be displayed. To generate
 the displayed text, a program called a ``layout engine'' will (simplifying a bit here) read the markup and apply the
 OpenType feature \textSourceText{cv02[5]}\footnote{\ Many OpenType features produce different outcomes depending on
 an index passed to an application’s layout engine along with the feature tag. Different applications have different
 ways of entering this index: consult your application’s documentation. Here, the index is recorded in brackets after
 the feature tag. Users of fontspec (with {\XeLaTeX} or {\LuaTeX}) should also be aware that fontspec indexes start at zero
 while OpenType indexes start at one. Therefore all index numbers listed in this document must be reduced by one for
-use with fontspec.\par } to the underlying \textLetterExample{a}, bypassing the PUA code point, with the result that
-readers see \textLetterExample{\cvd[4]{2}{a}}{}---the ``neckless a.'' And yet the letter will still register as
-\textLetterExample{a} with search engines, screen readers, and so on.
+use with fontspec.\par } to the underlying \textex{a}, bypassing the PUA code point, with the result that
+readers see \textex{\cvd[4]{2}{a}}{}---the ``neckless a.'' And yet the letter will still register as
+\textex{a} with search engines, screen readers, and so on.
 
 This is the Junicode model for text display, but it is not peculiar to Junicode: it is widely considered to be the best
 practice for displaying text using current font technology.
@@ -822,35 +57,35 @@ categories:
 \liststyleLi
 \begin{itemize}
 \item Those with Unicode (non-PUA) code points. MUFI has done valuable work obtaining Unicode code points for medieval characters.
-All such characters (those with hexadecimal codes that \textstyleEmphasis{do not} begin with \textLetterExample{E}
-or \textLetterExample{F}) are presumed safe to use in accessible and searchable text. However, some of these are
+All such characters (those with hexadecimal codes that \textstyleEmphasis{do not} begin with \textex{E}
+or \textex{F}) are presumed safe to use in accessible and searchable text. However, some of these are
 covered by Junicode OpenType features for particular reasons.
 \item Precomposed characters---those consisting of base character + one or more diacritics. For greatest accessibility,
-these should be entered not as PUA code points, but rather as sequences consisting of base character + one or more
+these should be entered not as PUA code points, but rather as sequences consisting of base character +
 diacritics. For example, instead of MUFI \unic{U+E498} \textUName{latin small letter e with dot below and acute}, use
-\textLetterExample{e} + \unic{U+0323} \textUName{combining dot below} + \unic{U+0301} \textUName{combining acute accent}:
-\textLetterExample{ẹ́} (when applying combining marks, start with any marks below the character and work
+\textex{e} + \unic{U+0323} \textUName{combining dot below} + \unic{U+0301} \textUName{combining acute accent}:
+\textex{ẹ́} (when applying combining marks, start with any marks below the character and work
 downwards, then continue with any marks above the character and work upwards. For example, to make
-\textLetterExample{ǭ̣́}, place characters in this order: \textLetterExample{o},
+\textex{ǭ̣́}, place characters in this order: \textex{o},
 \textUName{combining ogonek} \unic{U+0328}, \textUName{combining dot below} \unic{U+0323}, \textUName{combining
 macron} \unic{U+0304}, \textUName{combining acute} \unic{U+0301}). Some MUFI characters have marks in unconventional locations,
-e.g. \textLetterExample{ȯ́} \textUName{latin small letter o with dot above and acute}, where the
+e.g. \textex{ȯ́} \textUName{latin small letter o with dot above and acute}, where the
 acute appears beside the dot instead of above. This and other characters like it should still be entered as a sequence
-of base character + marks (here \textLetterExample{o}, \textUName{combining dot above} \unic{U+0307},
+of base character + marks (here \textex{o}, \textUName{combining dot above} \unic{U+0307},
 \textUName{combining acute} \unic{U+0301}). Junicode will position the marks correctly.
 \item Characters for which a base character (a Unicode character to which it can be linked) cannot be identified, or for
 which there may be an inconsistency in the MUFI recommendation. These include:
 
 \begin{itemize}
-\item \textLetterExample{} \unic{U+E8AF}. This is a ligature of long \textLetterExample{s} and \textLetterExample{l} with stroke,
+\item \textex{} \unic{U+E8AF}. This is a ligature of long \textex{s} and \textex{l} with stroke,
 but there are no base characters with this style of stroke.
-\item \textLetterExample{} \unic{U+EFD8} and \unic{U+EFD9}. MUFI lists these as ligatures (corresponding to the
-historic ligatures \textLetterExample{\hlig{uuUU}}, but they cannot be treated as ligatures in the
+\item \textex{} \unic{U+EFD8} and \unic{U+EFD9}. MUFI lists these as ligatures (corresponding to the
+historic ligatures \textex{\hlig{uuUU}}, but they cannot be treated as ligatures in the
 font because a single diacritic is positioned over the glyphs as if they were digraphs like
-\textLetterExample{ꜳꜲ}.
-\item \textLetterExample{} \unic{U+EBE7} and \unic{U+EBE6}, for the same reason.
-\item \textLetterExample{} \unic{U+F159} \textUName{latin abbreviation sign small de}. Neither a variant of
-\textLetterExample{d} nor an eth (\textLetterExample{ð}), this character may be a candidate for Unicode
+\textex{ꜳꜲ}.
+\item \textex{} \unic{U+EBE7} and \unic{U+EBE6}, for the same reason.
+\item \textex{} \unic{U+F159} \textUName{latin abbreviation sign small de}. Neither a variant of
+\textex{d} nor an eth (\textex{ð}), this character may be a candidate for Unicode
 encoding.
 \end{itemize}
 \item Characters for which OpenType programming is not yet available. These will be added as they are located and
@@ -866,57 +101,49 @@ OpenType programming).
 \item \unic{U+F1CA} \textUName{combining dot above high position}. Use \unic{U+0307} \textUName{combining dot above}. It
 will be positioned correctly on any character.
 \end{itemize}
-\pagebreak
-\hypertarget{SectionA}{}\section{A. Case-Related Features}
-\subsection[1. smcp {}-- Small Capitals]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{smcp} -- Small Capitals}
+
+\section{Case-Related Features}
+\subsection{\textSourceText{smcp} -- Small Capitals}
 Converts lowercase letters to small caps; also several symbols and combining marks. All lower- and uppercase pairs (with
 exceptions noted below) have a small cap equivalent. Lowercase letters without matching caps may lack matching small
 caps. fghij $\rightarrow $ \textsc{fghij}.
 
 Note: Precomposed characters defined by MUFI in the Private Use Area have no small cap equivalents. Instead, compose
 characters using combining diacritics, as outlined in the introduction. For example, \textSourceText{smcp} applied
-to the sequence \textLetterExample{t} + \textUName{combining ogonek} (\unic{U+0328}) + \textUName{combining
-acute} (\unic{U+0301}) will change \textLetterExample{t̨́} to \textLetterExample{\textsc{t̨́}}.
+to the sequence \textex{t} + \textUName{combining ogonek} (\unic{U+0328}) + \textUName{combining
+acute} (\unic{U+0301}) will change \textex{t̨́} to \textex{\textsc{t̨́}}.
 
-\subsection[2. c2sc {}-- Small Capitals from Capitals]{\stepcounter{Feature}{\theFeature}. \textSourceText{c2sc} --
-Small Capitals from Capitals}
+\subsection{\textSourceText{c2sc} -- Small Capitals from Capitals}
 Use with \textSourceText{smcp} for all-small-cap text. ABCDE $\rightarrow $ {\addfontfeature{Letters = UppercaseSmallCaps}ABCDE}.
 
-\subsection[3. pcap {}-- Petite Capitals]{\stepcounter{Feature}{\theFeature}. \textSourceText{pcap} -- Petite
-Capitals}
+\subsection{\textSourceText{pcap} -- Petite Capitals}
 Produces small caps in a smaller size than \textSourceText{smcp}. Use these when small caps have to be mixed with
 lowercase letters. The whole of the basic Latin alphabet is covered, plus several other letters. klmno{\th}
 $\rightarrow $ {\addfontfeature{Letters = PetiteCaps}klmno\th}.
 
-\subsection[4. case {}-- Case{}-Sensitive Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{case} --
-Case-Sensitive Forms}
+\subsection{\textSourceText{case} -- Case-Sensitive Forms}
 Produces combining marks that harmonize with capital letters: {\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
 likelihood that a combining mark will collide with a glyph in the line above. Some applications turn this
 feature on automatically for runs of capitals, and precomposed characters
-(e.g. \textLetterExample{É} \unic{U+00C9}, \textLetterExample{Ū} \unic{U+016A})
+(e.g. \textex{É} \unic{U+00C9}, \textex{Ū} \unic{U+016A})
 already use case-appropriate combining marks.
-\pagebreak
-\hypertarget{SectionB}{}\section{B. Numbers and Sequencing}
-\subsection[4a. frac {}-- Fractions]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{frac} -- Fractions}
+
+\section{Numbers and Sequencing}
+\subsection{\textSourceText{frac} -- Fractions}
 Applied to a slash and surrounding numbers, produces fractions with diagonal
 slashes. 6/9 becomes {\addfontfeature{Fractions=On}6/9}, 16/91 becomes {\addfontfeature{Fractions=On}16/91}.
 
-\subsection[4b. frac {}-- Numerators]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{numr} -- Numerators}
+\subsection{\textSourceText{numr} -- Numerators}
 Changes numbers to those suitable for use on the left/upper side of fractions
 with diagonal stroke (\unic{U+2044}). This can be used, with \textSourceText{dnom}, to manually construct
 fractions, but for most users \textSourceText{frac} will be a better solution.
 
-\subsection[4c. frac {}-- Denominators]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{dnom} -- Denominators}
+\subsection{\textSourceText{dnom} -- Denominators}
 Changes numbers to those suitable for use on the right/lower side of fractions
 with diagonal stroke (\unic{U+2044}). This can be used, with \textSourceText{numr}, to manually construct
 fractions, but for most users \textSourceText{frac} will be a better solution.
 
-\subsection[5. nalt {}-- Alternate Annotation Forms]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{nalt} -- Alternate Annotation Forms}
+\subsection{\textSourceText{nalt} -- Alternate Annotation Forms}
 Produces letters and numbers circled, in parenthesis, or followed by periods, as follows:
 
 \textSourceText{nalt[1]}, circled letters or numbers: {\addfontfeature{Annotation=0}a b .~.~. z; 0 1 2 .~.~. 20}.
@@ -932,19 +159,19 @@ Produces letters and numbers circled, in parenthesis, or followed by periods, as
 \noindent For enclosed figures 10 and higher, \textSourceText{rlig} (Required Ligatures) must also be enabled (as it should
 be by default: see \hyperlink{req}{Required Features} below).
 
-\subsection[6. tnum {}-- Tabular Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{tnum} -- Tabular
+\subsection{\textSourceText{tnum} -- Tabular
 Figures}
 Fixed-width figures: \ltab{0123456789} (default or with \textSourceText{lnum}), \otab{0123456789} (with
 \textSourceText{onum}).
 
-\subsection[7. onum {}-- Oldstyle Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{onum} -- Oldstyle
+\subsection{\textSourceText{onum} -- Oldstyle
 Figures}
 Figures that harmonize with lowercase characters: \otab{0123456789} (default or with
 \textSourceText{tnum}), \oprop{0123456789}
 (with \textSourceText{pnum}). When combined with \textSourceText{pnum}, this feature also affects subscripts
 and superscripts.
 
-\subsection[8. pnum {}-- Proportional Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{pnum} --
+\subsection{\textSourceText{pnum} --
 Proportional Figures}
 Proportionally spaced figures: \lprop{0123456789} (default or with \textSourceText{lnum}),
 \oprop{0123456789} (with
@@ -952,46 +179,99 @@ Proportionally spaced figures: \lprop{0123456789} (default or with \textSourceTe
 superscripts. Most applications (including MS Word) with any support of OpenType features will support this feature and
 \textSourceText{lnum} in such a way that you don't have to enter them manually.
 
-\subsection[9. lnum {}-- Lining Figures]{\stepcounter{Feature}{\theFeature}. \textSourceText{lnum} -- Lining
+\subsection{\textSourceText{lnum} -- Lining
 Figures}
 Figures in a uniform height, harmonizing with uppercase letters: \ltab{0123456789} (default or with
 \textSourceText{tnum}), \lprop{0123456789} (with \textSourceText{pnum}).
 
-\subsection[10. zero {}-- Slashed Zero]{\stepcounter{Feature}{\theFeature}. \textSourceText{zero} -- Slashed Zero}
+\subsection{\textSourceText{zero} -- Slashed Zero}
 Produces slashed zero in all number styles:
 {\addfontfeature{Numbers=SlashedZero}\ltab{0} \otab{0} \lprop{0} \oprop{0}. Includes superscripts, subscripts, and
 fractions formed with \textSourceText{frac}:
-\sups{\ltab{0}~\oprop{0}}~\subs{\ltab{0}~\oprop{0}} \addfontfeature{Fractions=On} 10/30}.
+\sups{\ltab{0}~\oprop{0}}~\subs{\ltab{0}~\oprop{0}} \addfontfeature{Fractions=On} 10/30}.\pagebreak
 
-\hypertarget{SectionC}{}\section{C. Superscripts and Subscripts}
-\subsection[11. sups {}-- Superscripts]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{sups} -- Superscripts}
+\section{Superscripts and Subscripts}
+\subsection{\textSourceText{sups} -- Superscripts}
 Produces superscript numbers and letters. Only affects lining tabular and oldstyle proportional figures. All lowercase
 letters of the basic Latin alphabet are covered, and most uppercase letters: \sups{\ltab{0123} \oprop{4567} abcde ABDEG}. Wherever
 superscripts are needed (e.g. for footnote numbers), use \textSourceText{sups} instead of the raised and scaled
 characters generated by some programs. With sups: \sups{4567}. Scaled: \textsuperscript{4567}.
 
-\subsection[12. subs {}-- Subscripts]{\stepcounter{Feature}{\theFeature}. \textSourceText{subs} -- Subscripts}
+\subsection{\textSourceText{subs} -- Subscripts}
 Produces subscript numbers. Only affects lining tabular (the default numbers) and oldstyle proportional figures (use
 \textSourceText{pnum} and \textSourceText{onum}): \subs{\ltab{8901} \oprop{2345}}.
 
-\hypertarget{SectionD}{}\section{D. Ornaments}
-\subsection[13. ornm {}-- Ornaments]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ornm} -- Ornaments}
+\section{Ornaments}
+\subsection{\textSourceText{ornm} -- Ornaments}
 Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (\unic{U+2022}) or as
 variants of a-z, A-C (all fleurons are available by either method):
 
-As a variant of {\textbullet}: 1=\ornm{\textbullet}, 2=\ornm[1]{\textbullet}, 3=\ornm[2]{\textbullet}, 4=\ornm[3]{\textbullet}, etc., up to 29.
+\begin{multicols}{4}
+a, 1{\tabto{4em}}\ornm{a}
 
-As a variant of a-z, A-C: e=\ornm{e}, f=\ornm{f}, g=\ornm{g}, h=\ornm{h}, etc.
+b, 2{\tabto{4em}}\ornm{b}
+
+c, 3{\tabto{4em}}\ornm{c}
+
+d, 4{\tabto{4em}}\ornm{d}
+
+e, 5{\tabto{4em}}\ornm{e}
+
+f, 6{\tabto{4em}}\ornm{f}
+
+g, 7{\tabto{4em}}\ornm{g}
+
+h, 8{\tabto{4em}}\ornm{h}
+
+i, 9{\tabto{4em}}\ornm{i}
+
+j, 10{\tabto{4em}}\ornm{j}
+
+k, 11{\tabto{4em}}\ornm{k}
+
+l, 12{\tabto{4em}}\ornm{l}
+
+m, 13{\tabto{4em}}\ornm{m}
+
+n, 14{\tabto{4em}}\ornm{n}
+
+o, 15{\tabto{4em}}\ornm{o}
+
+p, 16{\tabto{4em}}\ornm{p}
+
+q, 17{\tabto{4em}}\ornm{q}
+
+r, 18{\tabto{4em}}\ornm{r}
+
+s, 19{\tabto{4em}}\ornm{s}
+
+t, 20{\tabto{4em}}\ornm{t}
+
+u, 21{\tabto{4em}}\ornm{u}
+
+v, 22{\tabto{4em}}\ornm{v}
+
+w, 23{\tabto{4em}}\ornm{w}
+
+x, 24{\tabto{4em}}\ornm{x}
+
+y, 25{\tabto{4em}}\ornm{y}
+
+z, 26{\tabto{4em}}\ornm{z}
+
+A, 27{\tabto{4em}}\ornm{A}
+
+B, 28{\tabto{4em}}\ornm{B}
+
+C, 29{\tabto{4em}}\ornm{C}
+\end{multicols}
 
 \noindent The method with letters of the alphabet is easier, but the method with bullets will produce a more satisfactory result
 when text is displayed in an environment where Junicode is not available or \textSourceText{ornm} is not
 implemented.
 
-\hypertarget{SectionE}{}\section{E. Alphabetic Variants}
-\subsection[14. cv01{}--cv52 {}-- Basic Latin Variants]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv01-cv52} -- Basic Latin Variants}
+\section{Alphabetic Variants}
+\subsection{\textSourceText{cv01-cv52} -- Basic Latin Variants}
 These features also affect small cap (\textSourceText{smcp}) and underdotted (\textSourceText{ss07}) forms,
 where available. Variants in \cvc{magenta} are also available via \textSourceText{ss06} “Enlarged Minuscules.”
 Use the \textSourceText{cvNN} features instead of \textSourceText{ss06} when you want to substitute an
@@ -1027,7 +307,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 5=\cvd[4]{2}{a}, \cvc{6=\cvd[5]{2}{a}}}\\\hline
 \centering{B} &
 \centering{cv03} &
-{\cvc{1=\cvd{3}{B}}}\\\hline
+{\cvc{1=\cvd{3}{B}}, 2=\cvd[1]{3}{B}}\\\hline
 \centering{b} &
 \centering{cv04} &
 {\cvc{1=\cvd{4}{b}}}\\\hline
@@ -1046,7 +326,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 5=\cvd[4]{8}{d}} (for 1, see also ss02)}\\\hline
 \centering{E} &
 \centering{cv09} &
-{1=\cvd{9}{E}, 2=\cvd[1]{9}{E}, \cvc{3=\cvd[2]{9}{E}}}\\\hline
+{1=\cvd{9}{E}, 2=\cvd[1]{9}{E}, \cvc{3=\cvd[2]{9}{E}}, 4=\cvd[3]{9}{E}}\\\hline
 \centering{e} &
 \centering{cv10} &
 {1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}, \cvc{4=\cvd[3]{10}{e}}}\\\hline
@@ -1093,7 +373,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {\cvc{1=\cvd{23}{L}}}\\\hline
 \centering{l} &
 \centering{cv24} &
-{1=\cvd{24}{l}, \cvc{2=\cvd[1]{24}{l}}, 3=\cvd[2]{24}{l}, 4=\cvd[3]{24}{l}}\\\hline
+{1=\cvd{24}{l}, \cvc{2=\cvd[1]{24}{l}}, 3=\cvd[2]{24}{l}, 4=\cvd[3]{24}{l}, 5=\cvd[4]{24}{l} (roman only)}\\\hline
 \centering{M} &
 \centering{cv25} &
 {1=\cvd{25}{M}, 2=\cvd[1]{25}{M}, 3=\cvd[2]{25}{M}, \cvc{4=\cvd[3]{25}{M}}}\\\hline
@@ -1189,13 +469,12 @@ i precedes or not. These variants are chiefly useful for roman numbers, but
 also for Latin words ending in -ii. The j produced by this feature is
 searchable as i.
 
-\hypertarget{OtherLatin}{}\subsection[15. cv53{}-cv66 {}-- Other Latin Letters]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv53-cv66} -- Other Latin Letters}
+\subsection{\textSourceText{cv53-cv66} -- Other Latin Letters}\hypertarget{OtherLatin}{}
 Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
-combining \textLetterExample{e} with ogonek, accessible via \textSourceText{\hyperlink{ss10}{ss10}} with the
+combining \textex{e} with ogonek, accessible via \textSourceText{\hyperlink{ss10}{ss10}} with the
 entity reference \textSourceText{\&\_eogo;}.
 features.
-\pagebreak
+
 \begin{center}
 \tablefirsthead{\hline
 %\rowcolor{LightBlueGray}
@@ -1252,7 +531,7 @@ features.
 {1=\cvd{66}{ꝥ, \revthorn{ꝥ}}}\\\hline
 \end{supertabular}
 \end{center}
-\subsection[16. ss01 {}-- Alternate thorn and eth]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss01} --
+\subsection{\textSourceText{ss01} --
 Alternate thorn and eth}
 Produces Nordic thorn and eth (\revthorn{{\th}{\dh}{\TH}}) when the language is English, and English thorn and eth
 ({\icel\revthorn{{\th}{\dh}{\TH}}}) with any other language, reversing the font’s ordinary usage.
@@ -1263,7 +542,7 @@ thorn (ꝥ \revthorn{ꝥ}---see also
 This feature depends on \textSourceText{\hyperlink{req}{loca}} (Localized Forms), which in most applications will
 always be enabled.
 
-\subsection[17. ss02 {}-- Insular Letter{}-Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss02} --
+\subsection{\textSourceText{ss02} --
 Insular Letter-Forms}
 Produces insular letter-forms, e.g. {\addfontfeature{StylisticSet=2}dfgrsw}. The result is different,
 depending on whether the language is English or Irish (make sure the language for your document is set
@@ -1274,17 +553,17 @@ passages of Hickes’s \textit{Thesaurus}, not the usage of Old English or Anglo
 Irish texts, it imitates the distribution of insular characters but cannot imitate the style of
 particular scribal hands or typefaces.
 
-\subsection[18. ss04 {}-- High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss04} -- High
+\subsection{\textSourceText{ss04} -- High
 Overline}
 Produces a high overline over letters used as roman numbers: {\addfontfeature{StylisticSet=4}cdijlmvx CDIJLMVXↃ}.
 
-\subsection[19. ss05 {}-- Medium{}-High Overline]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss05} --
+\subsection{\textSourceText{ss05} --
 Medium-High Overline}
 Produces a medium-high overline over (or through the ascenders of) letters used as roman numbers, and some others as
 well: {\addfontfeature{StylisticSet=5,Style=Historic}bcdhijklmſvx{\th}}.
 
-\hypertarget{ss06}{}\subsection[20. ss06 {}-- Enlarged Minuscules]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss06} --
-Enlarged Minuscules}
+\subsection{\textSourceText{ss06} --
+Enlarged Minuscules}\hypertarget{ss06}{}
 Letters that are lowercase in form but uppercase in function, and between upper- and
 lowercase in size. They are often used to begin sentences in medieval manuscripts:
 {\addfontfeature{StylisticSet=6}abcdefg}. The feature
@@ -1297,7 +576,7 @@ If you are using the variable version of the font (JunicodeVF), consider using t
 \href{https://psb1558.github.io/Junicode-New/EnlargedAxis.html}{Enlarged axis} instead, for reasons of flexibility and
 accessibility.
 
-\subsection[21. ss07 {}-- Underdotted Text]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss07} --
+\subsection{\textSourceText{ss07} --
 Underdotted Text}
 Produces underdotted text (indicating deletion in medieval manuscripts) for many
 letters (including
@@ -1307,25 +586,24 @@ caps, e.g. \textsc{abcdef} $\rightarrow $ {\addfontfeature{StylisticSet=7}\texts
 For letters without corresponding underdotted forms (e.g. \unic{U+A751}, ꝑ),
 use \unic{U+0323}, combining dot below (\hspace{0.2em}ꝑ̣).
 
-\subsection[22. ss08 {}-- Contextual Long s]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss08} --
+\subsection{\textSourceText{ss08} --
 Contextual Long s}
-In English and French text only, varies \textLetterExample{s} and \textLetterExample{ſ} according to rules
+In English and French text only, varies \textex{s} and \textex{ſ} according to rules
 followed by many early printers: {\colongs sports, essence, stormy, disheveled, transfusions, slyness, cliffside}. For this
 feature to work properly, \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by
 default: see \hyperlink{req}{Required Features} below). This feature does not work in {\ltech}, except in harf mode.
 
-\hypertarget{ss16}{}\subsection[23. ss16 {}-- Contextual r Rotunda]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss16} --
-Contextual r Rotunda}
-Converts \textLetterExample{r} to \textLetterExample{ꝛ} (lowercase only) following the
+\subsection{\textSourceText{ss16} --
+Contextual r Rotunda}\hypertarget{ss16}{}
+Converts \textex{r} to \textex{ꝛ} (lowercase only) following the
 most common rules of medieval manuscripts: {\addfontfeature{StylisticSet=16,Contextuals=Alternate}priest, firmer, frost, ornament}. For this feature to work properly,
 \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by default: see
 \hyperlink{req}{Required Features} below).  This feature does not work in {\ltech}, except in harf mode.
 
-\subsection[24. cv68 {}-- Variant of ʔ (U+0294, glottal stop)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv68} -- Variant of ʔ (\unic{U+0294}, glottal stop)}
+\subsection{\textSourceText{cv68} -- Variant of ʔ (\unic{U+0294}, glottal stop)}
 1=\cvd{68}{ʔ}.
 
-\hypertarget{SectionF}{}\section{F. Greek}
+\section{Greek}
 Junicode has two distinct styles of Greek. In the roman face, it is upright and
 modern, especially designed to harmonize with Junicode's Latin letters. In the
 italic, it is slanted and old-style, being based on the eighteenth-century
@@ -1344,8 +622,8 @@ suppresses accents automatically (except in single-letter words, for which
 you must substitute unaccented forms manually). This substitution is not
 performed on text containing visually identical letters from the ``Greek Extended''
 range (\unic{U+0F00–U+1FFF}).
-Thus when setting polytonic Greek, one should use (for example) \textLetterExample{Ά}
-(\unic{U+1FBB}), not \textLetterExample{Ά} (\unic{U+0386}),
+Thus when setting polytonic Greek, one should use (for example) \textex{Ά}
+(\unic{U+1FBB}), not \textex{Ά} (\unic{U+0386}),
 though they look the same.
 
 You can set polytonic Greek either by entering code points from the Greek
@@ -1362,23 +640,23 @@ applications will automatically reorder sequences of letters and accents,
 sparing you the trouble of remembering the canonical order.}
 
 For example, the sequence ω (\unic{U+03C9}) ◌̓ (\unic{U+0313}) ◌́ (\unic{U+0301}) ◌ͅ (\unic{U+0345})
-produces \textLetterExample{\grk ᾤ}.
+produces \textex{\grk ᾤ}.
 Substitute capital Ω (\unic{U+03A9}) and the result is
-\textLetterExample{\grk ᾬ}. Note that in a number of applications the layout
+\textex{\grk ᾬ}. Note that in a number of applications the layout
 engine will perform these substitutions before Junicode’s own programming is
 invoked. If either the layout engine or Junicode fails to produce your
 preferred result, try placing \unic{U+034F} \textUName{combining grapheme joiner} somewhere
 in the sequence of combining marks---for example, before the \textit{ypogegrammeni}
-to make \textLetterExample{\grk Ὤ͏ͅ}.
+to make \textex{\grk Ὤ͏ͅ}.
 
-\subsection[26. ss03 {}-- Alternate Greek]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ss03} -- Alternate Greek}
-Provides alternate shapes of β γ θ π φ χ ω: {\addfontfeature{StylisticSet=3}β γ θ π φ χ ω}.
+\subsection{\textSourceText{ss03} -- Alternate Greek}
+Provides alternate shapes of {\addfontfeature{Language=Greek}β γ θ π φ χ ω}:
+{\addfontfeature{StylisticSet=3}β γ θ π φ χ ω}.
 These are chiefly useful in linguistics, as they harmonize with IPA characters.
 
-\hypertarget{SectionG}{}\section{G. Punctuation}
+\section{Punctuation}
 MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
-either of two ways: all are indexed variants of \textLetterExample{.} (period), and all are associated with the Unicode marks of
+either of two ways: all are indexed variants of \textex{.} (period), and all are associated with the Unicode marks of
 punctuation they most resemble (but it should not be inferred that the medieval marks are semantically identical with
 the Unicode marks, or that there is an etymological relationship between them). The first method will be easier for
 most to use, but the second is more likely to yield acceptable fallbacks in environments where Junicode is not
@@ -1389,16 +667,14 @@ have PUA encodings, but have since that release been assigned Unicode code point
 \unic{U+2E4D}), medieval comma (⹌~\unic{U+2E4C}), \textit{punctus elevatus} (⹎ \unic{U+2E4E}), \textit{virgula suspensiva}
 (⹊ \unic{U+2E4A}), triple dagger (⹋ \unic{U+2E4B}).
 
-\subsection[27. ss18 {}-- Old{}-Style Punctuation Spacing]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ss18} -- Old-Style Punctuation Spacing}
+\subsection{\textSourceText{ss18} -- Old-Style Punctuation Spacing}
 Colons, semicolons, parentheses, quotation marks and several other glyphs are spaced as in early printed books.
 
-\subsection[28. cv69 {}-- Variants of ⁊⹒ (U+204A / U+2E52, Tironian
-nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of ⁊⹒
+\subsection{\textSourceText{cv69} -- Variants of ⁊⹒
 (\unic{U+204A / U+2E52}, Tironian nota)}
 1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}.
 
-\subsection[29. cv70 {}-- Variants of . (period)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv70} --
+\subsection{\textSourceText{cv70} --
   Variants of . (period)}
 1=\cvd{70}{.}, 2=\cvd[1]{70}{.}, 3=\cvd[2]{70}{.}, 4=\cvd[3]{70}{.}, 5=\cvd[4]{70}{.}, 6=\cvd[5]{70}{.},
 7=\cvd[6]{70}{.}, 8=\cvd[7]{70}{.}, 9=\cvd[8]{70}{.}, 10=\cvd[9]{70}{.}, 11=\cvd[10]{70}{.}, 12=\cvd[11]{70}{.},
@@ -1407,51 +683,45 @@ nota)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv69} -- Variants of 
 feature provides access to all non-Unicode MUFI punctuation marks. Some of them are available via other features (see
 below).
 
-\subsection[30. cv71 {}-- Variant of {\textperiodcentered} (U+00B7, middle dot)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv71} -- Variant of {\textperiodcentered} (\unic{U+00B7}, middle dot)}
+\subsection{\textSourceText{cv71} -- Variant of {\textperiodcentered} (\unic{U+00B7}, middle dot)}
 1=\cvd{71}{\textperiodcentered} (\textit{distinctio}).
 
-\subsection[31. cv72 {}-- Variants of , (comma)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv72} --
+\subsection{\textSourceText{cv72} --
 Variants of , (comma)}
 1=\cvd{72}{,}, 2=\cvd[1]{72}{,}.
 
-\subsection[32. cv73 {}-- Variants of ; (semicolon)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv73} --
+\subsection{\textSourceText{cv73} --
 Variants of ; (semicolon)}
 1=\cvd{73}{;} (\textit{punctus versus}), 2=\cvd[1]{73}{;}, 3=\cvd[2]{73}{;}, 4=\cvd[3]{73}{;}, 5=\cvd[4]{73}{;}.
 
-\subsection[33. cv74 {}-- Variants of ⹎ (U+2E4E, punctus elevatus)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv74} -- Variants of ⹎ (\unic{U+2E4E}, \textit{punctus elevatus})}
+\subsection{\textSourceText{cv74} -- Variants of ⹎ (\unic{U+2E4E}, \textit{punctus elevatus})}
 1=\cvd{74}{⹎}, 2=\cvd[1]{74}{⹎}, 3=\cvd[2]{74}{⹎}, 4=\cvd[3]{74}{⹎} (\textit{punctus flexus}).
 
-\subsection[34. cv75 {}-- Variant of ! (exclamation mark)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
+\subsection{\textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
 1=\cvd{75}{!} (\textit{punctus exclamativus}).
 
-\subsection[35. cv76 {}-- Variants of ? (question mark)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv76}
+\subsection{\textSourceText{cv76}
 -- Variants of ? (question mark)}
 1=\cvd{76}{?}, 2=\cvd[1]{76}{?}, 3=\cvd[2]{76}{?}. Shapes of the \textit{punctus interrogativus}.
 
-\subsection[36. cv77 {}-- Variant of \~{} (ASCII tilde)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv77}
+\subsection{\textSourceText{cv77}
 -- Variant of \~{} (ASCII tilde)}
 1=\cvd{77}{\~{}} (same as MUFI \unic{U+F1F9}, ``wavy line'').
 
-\subsection[37. cv78 {}-- Variant of * (asterisk)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv78} --
+\subsection{\textSourceText{cv78} --
 Variant of * (asterisk)}
 1=\cvd{78}{*}. MUFI defines \unic{U+F1EC} as a \textit{signe de renvoi}. Manuscripts employ a number of shapes (of which this is one) for
 this purpose. Junicode defines it as a variant of the asterisk---the most common modern \textit{signe de renvoi}.
 
-\subsection[38. cv79 {}-- Variants of / (slash)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
+\subsection{\textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
 1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, \unic{U+2E4E}.
 
-\hypertarget{SectionH}{}\section{H. Abbreviations}
-\subsection[39. cv80 {}-- Variant of ꝝ (U+A75D, rum
-abbreviation)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv80} -- Variant of ꝝ (\unic{U+A75D}, rum
+\section{Abbreviations}
+\subsection{\textSourceText{cv80} -- Variant of ꝝ (\unic{U+A75D}, rum
 abbreviation)}
 1=\cvd{80}{ꝝ}.
 
-\subsection[40. cv81 {}-- Variants of ◌͛ (U+035B, combining zigzag
-above)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv81} -- Variants of ◌͛ (\unic{U+035B}, combining
+\subsection{\textSourceText{cv81} -- Variants of ◌͛ (\unic{U+035B}, combining
 zigzag above)}
 1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
 marks, e.g. b͛, f͛, d͛. If \textSourceText{calt} ``Contextual Alternates'' is enabled (as it is by
@@ -1460,22 +730,19 @@ default in most apps), variant forms of \textSourceText{cv81[2]} will be used wi
 ({\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}), \textSourceText{smcp} for forms that harmonize with small caps
   (\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}).
 
-\subsection[41. cv82 {}-- Variants of spacing ꝰ (U+A770)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv82} -- Variants of spacing ꝰ (\unic{U+A770})}
+\subsection{\textSourceText{cv82} -- Variants of spacing ꝰ (\unic{U+A770})}
 1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
 \unic{U+F1A6}). MUFI also has an uppercase baseline \textit{{}-us} abbreviation (\unic{U+F1A5}), but as there is no uppercase version
 of \unic{U+A770} to pair it with, it is indexed separately here.
 
-\subsection[42. cv83 {}-- Variants of ꝫ (U+A76B, {}``et{}'' abbreviation)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv83} -- Variants of ꝫ (\unic{U+A76B}, ``et'' abbreviation)}
+\subsection{\textSourceText{cv83} -- Variants of ꝫ (\unic{U+A76B}, ``et'' abbreviation)}
 1=\cvd{83}{ꝫ}, 2=\cvd[1]{83}{ꝫ}. \textSourceText{[1]} is identical in shape to a
 semicolon, but as it is semantically the same as \unic{U+A76B}, it is preferable to use that
 character with this feature. \textSourceText{[2]} produces a subscript version of
 the character, a common variant in printed books.
 
-\hypertarget{SectionI}{}\section{I. Combining Marks}
-  \hypertarget{cv84}{}\subsection[43. cv84 {}-- MUFI combining marks (variants of ◌̄
-(U+0304)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv84} -- MUFI combining marks (variants of \unic{U+0304})}
+\section{Combining Marks}
+\subsection{\textSourceText{cv84} -- MUFI combining marks (variants of \unic{U+0304})}
 MUFI encodes a number of combining marks in the PUA (with code points between \unic{E000} and \unic{F8FF}), but when these characters
 are entered directly, they can interfere with searching and accessibility, and some important applications fail to
 position them correctly over their base characters. To avoid these problems, enter \unic{U+0304} (◌̄, \textUName{combining
@@ -1487,15 +754,15 @@ characters, and three more (\textSourceText{[2]}, \textSourceText{[33]},
 and \textSourceText{[34]}) that have no code points in Unicode or MUFI.
 
 This feature may often appear to have no effect. When this happens it is because
-an application replaced a sequence like \textLetterExample{a \unic{U+0304}} with a precomposed character
-like \textLetterExample{ā} (\unic{U+0101}) before Junicode's OpenType programming had a chance to work.
+an application replaced a sequence like \textex{a \unic{U+0304}} with a precomposed character
+like \textex{ā} (\unic{U+0101}) before Junicode's OpenType programming had a chance to work.
 This process is called normalization, and it usually has the effect of simplifying
 text processing tasks, but can sometimes prevent the proper functioning of OpenType
 features. To disable it, place the character \unic{U+034F} \textUName{combining
 grapheme joiner} (don't waste time puzzling over the name) between the base
 character and the combining mark (or the first combining mark). For example, to produce
-the combination \textLetterExample{\cvd[1]{84}{u͏̄}}, enter \textLetterExample{u \unic{U+034F U+0304}}.
-(Without \unic{U+034F}, you would get \textLetterExample{\cvd[1]{84}{ū}}).
+the combination \textex{\cvd[1]{84}{u͏̄}}, enter \textex{u \unic{U+034F U+0304}}.
+(Without \unic{U+034F}, you would get \textex{\cvd[1]{84}{ū}}).
 
 These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
 \textSourceText{cv84} as providing more suitable fallbacks for applications that do not support Character Variant
@@ -1507,8 +774,8 @@ These marks are not affected by most other features. This is to preserve flexibi
 that produces them must be applied to both the mark and the base character. For example, if you had to
 apply \textSourceText{smcp} ``Small Caps'' to \textSourceText{U+1DE8} ◌͏ᷨ to get
 \textSourceText{cv84[11]} \cvd[10]{84}{◌͏̄}, it would be impossible to produce the sequence
-\textLetterExample{\cvd[10]{84}{na͏{\char"34F\char"304}a}}
-(or the reverse case \textLetterExample{\textsc{na{\char"1DE8}a}})
+\textex{\cvd[10]{84}{na͏{\char"34F\char"304}a}}
+(or the reverse case \textex{\textsc{na{\char"1DE8}a}})
 with the diacritic properly positioned.
 
 \begin{multicols}{4}
@@ -1581,20 +848,18 @@ with the diacritic properly positioned.
 34=\cvd[33]{84}{◌͏̄}
 \end{multicols}
 
-\hypertarget{cv67}{}\subsection[44. cv67 {}-- Spacing zigzag]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv67} -- Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}
+\subsection{\textSourceText{cv67} -- Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}
 A spacing version of ◌͛ (\unic{U+035B}, combining zigzag) appears in John Hutchins,
 \textit{The History and Antiquities of the County of Dorset} (London, 1774). It
 is not in Unicode or MUFI. In the future this feature may be used, as necessary,
 for other spacing marks of abbreviation.
 
-\hypertarget{ss10}{}\subsection[44. ss10 {}-- Character Entities for Combining Marks; Unicode Tags]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ss10} -- Character Entities for Combining Marks; Unicode Tags}
+\subsection{\textSourceText{ss10} -- Character Entities for Combining Marks}\hypertarget{ss10}{}
 Instead of \textSourceText{\hyperlink{cv84}{cv84}} for representing non-Unicode combining marks, some users may
 wish to use XML/HTML-style entities. When \textSourceText{ss10} is turned on (preferably for the entire
 text), these entities appear as combining marks and are correctly positioned over base characters.
-For example, the letter \textLetterExample{e} followed by
-\textLetterExample{\&{\textcompwordmark}\_eogo;} will yield \textLetterExample{e\&\_eogo;}. An advantage of entities is that
+For example, the letter \textex{e} followed by
+\textex{\&{\textcompwordmark}\_eogo;} will yield \textex{e\&\_eogo;}. An advantage of entities is that
 they are (unlike the PUA code points or the indexes of \textSourceText{cv84}) mnemonic and thus easy to use.
 A disadvantage is that
 searches cannot ignore combining marks entered by this method as they can using the \textSourceText{cv84} method.
@@ -1605,7 +870,11 @@ If you use any of these entities in a work intended for print publication, you s
 attention to them, since they will likely have their own method of representing them.
 
 \begin{multicols}{3}
-\color{RViolet}
+\color{RViolet}%
+% Some of the marks in this table are made with cv84. It appears that the
+% program may be calculating column width using the width of the unresolved
+% entity, and that is causing some cells to wrap. We use cv84 for those
+% cells.
 \&{\textcompwordmark}\_ansc; $\rightarrow $
 \textstyleEntityRef{◌\&\_ansc;}
 
@@ -1628,7 +897,7 @@ attention to them, since they will likely have their own method of representing 
 \textstyleEntityRef{◌\&\_eogo;}
 
 \&{\textcompwordmark}\_emac; $\rightarrow $
-\textstyleEntityRef{◌\&\_emac;}
+\cvd[12]{84}{◌\char"0304}
 
 \&\_{\textcompwordmark}idotl; $\rightarrow $
 \textstyleEntityRef{◌\&\_idotl;}
@@ -1643,16 +912,16 @@ attention to them, since they will likely have their own method of representing 
 \textstyleEntityRef{◌\&\_ksc;}
 
 {\narrow\&\_{\textcompwordmark}munc; $\rightarrow $
-\textstyleEntityRef{◌\&\_munc;}}
+\cvd[18]{84}{◌\char"0304}}
 
 \&\_{\textcompwordmark}oogo; $\rightarrow $
-\textstyleEntityRef{◌\&\_oogo;}
+\cvd[20]{84}{◌\char"0304}
 
 {\narrow\&\_{\textcompwordmark}oslash; $\rightarrow $
-\textstyleEntityRef{◌\&\_oslash;}}
+\cvd[21]{84}{◌\char"0304}}
 
 \&\_{\textcompwordmark}omac; $\rightarrow $
-\textstyleEntityRef{◌\&\_omac;}
+\cvd[]{84}{◌\char"0304}
 
 \&\_{\textcompwordmark}orr; $\rightarrow $
 \textstyleEntityRef{◌\&\_orr;}
@@ -1676,67 +945,55 @@ attention to them, since they will likely have their own method of representing 
 \textstyleEntityRef{◌\&\_thorn;}}
 \end{multicols}
 
-Stylistic Set 10 also enables a similar feature, the use of Unicode tags to represent any of Junicode's
-characters that can be represented via the cvNN features. Tags work as modifiers for a preceding character
-without disrupting the flow of the text, the placement of diacritics, kerning, or searching. These are similar in
-function to the cvNN features, but while cvNN requires that you enter and exit a mode, tags do not. Another way
-to think of the difference is that, while cvNN features live in a text's markup, tags belong to the text
-stream. For detailed instructions on how to use tags and a list of them, see the document tag\_key.pdf.
+\noindent For another function of Stylistic Set 10, see \hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
 
-\subsection[45. ss20 {}-- Low Diacritics]{\stepcounter{Feature}{\theFeature}. ss20 -- Low Diacritics}
+\subsection{ss20 -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}
 and combining marks ◌ͣ (\unic{U+0363}), ◌ͤ (\unic{U+0364}), \cvd[14]{84}{◌͏̄}
 (\unic{U+0304}\slash\textSourceText{cv84[15]}), ◌ͦ (\unic{U+0366}), ◌ͬ (\unic{U+036C}), ◌ᷢ (\unic{U+1DE2}),
 ◌ͭ (\unic{U+036D}), ◌ͮ (\unic{U+036E}), ◌ᷦ (\unic{U+1DE6}) and \cvd[18]{84}{◌͏̄}
 (\unic{U+0304}/\textSourceText{cv84[19]}). Instead of being positioned above ascender height as usual (e.g.
-\textLetterExample{hͣ}), the MUFI glyphs have the marks positioned above the x-height
-(e.g. \textLetterExample{\addfontfeature{StylisticSet=20}hͣ}).
+\textex{hͣ}), the MUFI glyphs have the marks positioned above the x-height
+(e.g. \textex{\addfontfeature{StylisticSet=20}hͣ}).
 Using the MUFI code points for these precomposed glyphs can interfere with searching
 and drastically reduce accessibility. Users of Junicode should instead use a sequence of base character + combining
-mark, and apply \textSourceText{ss20} to the two glyphs. A variant shape of eth (\textLetterExample{{\dh}})
+mark, and apply \textSourceText{ss20} to the two glyphs. A variant shape of eth (\textex{{\dh}})
 that accommodates the combining mark will be substituted for the normal base character (but this is not necessary for
 the other base characters). Examples:
 {\addfontfeature{StylisticSet=20}bͦ, ꝺᷦ, \cvd[14]{84}{h̄}, kͤ, {\th}ͭ, ðᷢ}.
 
 \textSourceText{ss20} affects only the diacritics and base characters listed here; other combinations (e.g.
-\textLetterExample{mͤ}, \textLetterExample{\'{h}}) are not affected. It will therefore probably be safe
+\textex{mͤ}, \textex{\'{h}}) are not affected. It will therefore probably be safe
 to apply this feature to the whole text if it is needed anywhere.
 
-\subsection[46. cv85 {}-- Variant of ◌ᷓ (U+1DD3, combining open a)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
+\subsection{\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.
 
-\subsection[47. cv86 {}-- Variant of ◌ᷘ (U+1DD8, combining insular d)]{%
-\stepcounter{Feature}{\theFeature}. \textSourceText{cv86} -- Variant of ◌ᷘ (\unic{U+1DD8}, combining insular
+\subsection{\textSourceText{cv86} -- Variant of ◌ᷘ (\unic{U+1DD8}, combining insular
 d)}
 1=\cvd{86}{◌ᷘ}.
 
-\subsection[48. cv87 {}-- Variant of ◌ᷣ (U+1DE3, combining r rotunda)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv87} -- Variant of ◌ᷣ (\unic{U+1DE3}, combining r rotunda)}
+\subsection{\textSourceText{cv87} -- Variant of ◌ᷣ (\unic{U+1DE3}, combining r rotunda)}
 1=\cvd{87}{◌ᷣ}.
 
-\subsection[49. cv88 {}-- Variant of combining dieresis (U+0308)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (\unic{U+0308})}
+\subsection{\textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (\unic{U+0308})}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
-\textLetterExample{\cvd{88}{\"a}}.
+\textex{\cvd{88}{\"a}}.
 
-\subsection[50. cv89 {}-- Variant of ◌̅ (U+0305, combining
-overline)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv89} -- Variant of ◌̅ (\unic{U+0305},
+\subsection{\textSourceText{cv89} -- Variant of ◌̅ (\unic{U+0305},
 combining overline)}
 1=\cvd{89}{◌̅}.
 
-\subsection[51. cv90 {}-- Variants of ◌͞◌ (U+035E, combining double macron)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv}\textSourceText{90} -- Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}
+\subsection{\textSourceText{cv}\textSourceText{90} -- Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}
 1=\cvd{90}{◌͞◌}, 2=\cvd[1]{90}{◌͞◌}.
 
-\subsection[53. cv92 {}-- Variant of breve below (U+032E)]{\stepcounter{Feature}{\theFeature}. cv92 -- Variant of breve
+\subsection{cv92 -- Variant of breve
 below (\unic{U+032E})}
 1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
 to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
 
-\hypertarget{SectionJ}{}\section{J. Currency and Weights}
-\subsection[54. cv93 {}-- Variants of {\textcurrency} (U+0044, generic currency
-sign)]{\stepcounter{Feature}{\theFeature}. \textSourceText{cv93} -- Variants of {\textcurrency} (\unic{U+0044}, generic
+\section{Currency and Weights}
+\subsection{\textSourceText{cv93} -- Variants of {\textcurrency} (\unic{U+0044}, generic
 currency sign)}
 
 \begin{multicols}{4}
@@ -1798,68 +1055,60 @@ currency sign)}
 \noindent All of MUFI’s currency and weight symbols (those that do
 not have Unicode code points) are gathered here, but some are also variants of other currency signs (see below).
 
-\subsection[55. cv94 {}-- Variant of ℔ (U+2114)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (\unic{U+2114})}
+\subsection{\textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (\unic{U+2114})}
 1=\cvd{94}{℔}. Same as MUFI \unic{U+F2EB} (French Libra sign).
 
-\subsection[56. cv95 {}-- Variants of {\pounds} (U+00A3, British pound sign)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv95} -- Variants of {\pounds} (\unic{U+00A3}, British pound sign)}
+\subsection{\textSourceText{cv95} -- Variants of {\pounds} (\unic{U+00A3}, British pound sign)}
 1=\cvd{95}{\pounds}, 2=\cvd[1]{95}{\pounds}, 3=\cvd[2]{95}{\pounds}, 4=\cvd[3]{95}{\pounds},
 5=\cvd[4]{95}{\pounds}, 6=\cvd[5]{95}{\pounds}. Same as MUFI \unic{U+F2EA, F2EB, F2EC, F2ED,
 F2EE, F2EF}, pound signs from various locales.
 
-\subsection[57. cv96 {}-- Variant of ₰ (U+20B0, German penny sign)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv96} -- Variant of ₰ (\unic{U+20B0}, German penny sign)}
+\subsection{\textSourceText{cv96} -- Variant of ₰ (\unic{U+20B0}, German penny sign)}
 1=\cvd{96}{₰}. Same as MUFI \unic{U+F2F5}.
 
-\subsection[58. cv97 {}-- Variant of ƒ (U+0192, florin)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv97} -- Variant of ƒ (\unic{U+0192}, florin)}
+\subsection{\textSourceText{cv97} -- Variant of ƒ (\unic{U+0192}, florin)}
 1=\cvd{97}{ƒ}. Same as MUFI \unic{U+F2E8}.
 
-\subsection[59. cv98 {}-- Variant of ℥ (U+2125, Ounce sign)]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{cv98} -- Variant of ℥ (\unic{U+2125}, Ounce sign)}
-1=\cvd{98}{℥}. Same as MUFI \unic{U+F2FD}, Script ounce sign.
+\subsection{\textSourceText{cv98} -- Variant of ℥ (\unic{U+2125}, Ounce sign)}
+1=\cvd{98}{℥}. Same as MUFI \unic{U+F2FD}, Script ounce sign.\pagebreak
 
-\hypertarget{SectionK}{}\section{K. Gothic}
-\subsection[60. ss19 {}-- Latin to Gothic Transliteration]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ss19} -- Latin to Gothic Transliteration}
+\section{Gothic}
+\subsection{\textSourceText{ss19} -- Latin to Gothic Transliteration}
 Produces Gothic letters from Latin: \revthorn{Warþ þan in dagans jainans} $\rightarrow $
 {\addfontfeature{StylisticSet=19}Warþ þan in dagans
 jainans}. In web pages, the letters will be searchable as their Latin equivalents.
 
-\hypertarget{SectionL}{}\section[L. Runic]{K. Runic}
-\subsection[61. ss12 {}-- Early English Futhorc]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{ss12} -- Early English Futhorc}
+\section{Runic}
+\subsection{\textSourceText{ss12} -- Early English Futhorc}
 Changes Latin letters to their equivalents in the early English futhorc. Because of the variability of the runic
 alphabet, this method of transliteration may not produce the result you want. In that case, it may be necessary to
 manually edit the result. fisc flodu ahof $\rightarrow $ {\addfontfeature{StylisticSet=12}fisc flodu ahof}.
 
-\subsection[62. ss13 {}-- Elder Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss13} -- Elder
+\subsection{\textSourceText{ss13} -- Elder
 Futhark}
 Changes Latin letters to their equivalents in the Elder Futhark. Because of the variability of the runic alphabet, this
 method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit the
 result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=13}ABCDEFG}.
 
-\subsection[63. ss14 {}-- Younger Futhark]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss14} -- Younger
+\subsection{\textSourceText{ss14} -- Younger
 Futhark}
 Changes Latin letters to their equivalents in the Younger Futhark. Because of the variability of the runic alphabet,
 this method of transliteration may not produce the result you want. In that case, it may be necessary to manually edit
 the result. ABCDEFG $\rightarrow $ {\addfontfeature{StylisticSet=14}ABCDEFG}.
 
-\subsection[64. ss15 {}-- Long Branch to Short Twig]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss15} --
+\subsection{\textSourceText{ss15} --
 Long Branch to Short Twig}
 In combination with \textSourceText{ss14}, converts long branch (the default for the Younger Futhark) to short twig runes:
 {\addfontfeature{StylisticSet=14}{ABCDEFG $\rightarrow $
 \addfontfeature{StylisticSet=15}ABCDEFG}}.
 
-\subsection[65. rtlm {}-- Right to Left Mirrored Forms]{\stepcounter{Feature}{\theFeature}. \textSourceText{rtlm}
+\subsection{\textSourceText{rtlm}
 -- Right to Left Mirrored Forms}
 Produces mirrored runes, e.g. {\addfontfeature{StylisticSet=12}ABCDEFG $\rightarrow $ \addfontfeature{MyStyle=mirrored}GFEDCBA}.
 This feature cannot change the direction of text.
 
-\hypertarget{SectionM}{}\section[M. Ligatures and Digraphs]{L. Ligatures and Digraphs}
-\subsection[66. hlig {}-- Historic Ligatures]{\stepcounter{Feature}{\theFeature}.
-\textSourceText{hlig} -- Historic Ligatures}
+\section{Ligatures and Digraphs}
+\subsection{\textSourceText{hlig} -- Historic Ligatures}
 
 Produces ligatures for combinations that should not ordinarily be rendered as
 ligatures in modern text.\footnote{\ Some
@@ -2074,35 +1323,35 @@ u{\textcompwordmark}u$\rightarrow $uu}
 \end{multicols}
 
 \noindent\addfontfeatures{Ligatures=histoff}
-Note: For the ligature \textLetterExample{\textsc{\hlig{nſ}}} to
-work properly, \unic{U+017F} \textLetterExample{ſ} must be entered directly, not by applying an OpenType feature to
-\textLetterExample{s}.
+Note: For the ligature \textex{\textsc{\hlig{nſ}}} to
+work properly, \unic{U+017F} \textex{ſ} must be entered directly, not by applying an OpenType feature to
+\textex{s}.
 
-\subsection[67. dlig {}-- Discretionary Ligatures]{\stepcounter{Feature}{\theFeature}. \textSourceText{dlig} --
+\subsection{\textSourceText{dlig} --
 Discretionary Ligatures}
 Produces lesser-used ligatures, but also roman numbers, e.g.
 {\addfontfeature{Ligatures=Rare}ii, II, xi, XI}. The lesser-used ligatures:
-\textLetterExample{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, ſp, str, st, tr, tt, ty}}.
+\textex{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, ſp, str, st, tr, tt, ty}}.
 
-\hypertarget{ss17}{}\subsection[68. ss17 {}-- Rare Digraphs]{\stepcounter{Feature}{\theFeature}. \textSourceText{ss17} -- Rare
-Digraphs}
+\subsection{\textSourceText{ss17} -- Rare
+Digraphs}\hypertarget{ss17}{}
 By ``digraph'' we mean conjoined letters that represent a phonetic value: the most common examples
-for western languages are \textLetterExample{{\ae}} and \textLetterExample{{\oe}} (though these, because they
+for western languages are \textex{{\ae}} and \textex{{\oe}} (though these, because they
 are so common, are not included in this feature). Use of this feature in web pages enables easier searches: for
-example, producing \textLetterExample{\addfontfeature{StylisticSet=17}{\th}au} from
-\textLetterExample{{\th}au} allows the word to be
+example, producing \textex{\addfontfeature{StylisticSet=17}{\th}au} from
+\textex{{\th}au} allows the word to be
 searched as ``{\th}au.'' The digraphs covered by this feature are \textcolor[rgb]{0.5529412,0.15686275,0.11764706}{%
 \addfontfeature{StylisticSet=17}aa, ao, au, av, ay, oo, vy,} plus capital and small cap equivalents and digraph + diacritic combinations anticipated in the
 MUFI recommendation. To produce such a digraph + diacritic combination, either type a letter + diacritic combination as
 the second element of the digraph or type the diacritic after the second element. For example,
-\textLetterExample{a} + \textLetterExample{\'u} yields \textLetterExample{\addfontfeature{StylisticSet=17}a\'u}, and so does
-\textLetterExample{a} + \textLetterExample{u} + \unic{U+0301} (combining acute accent). To produce a digraph +
-diacritic combination not covered by MUFI (e.g. \textLetterExample{ꜵ̀}), you may have to place \unic{U+034F}
+\textex{a} + \textex{\'u} yields \textex{\addfontfeature{StylisticSet=17}a\'u}, and so does
+\textex{a} + \textex{u} + \unic{U+0301} (combining acute accent). To produce a digraph +
+diacritic combination not covered by MUFI (e.g. \textex{ꜵ̀}), you may have to place \unic{U+034F}
 \textUName{combining grapheme joiner} (see \hyperlink{cv84}{cv84} above) between the second element of the digraph and the combining mark.
-Without \unic{U+034F}: \textLetterExample{\addfontfeature{StylisticSet=17}aō}.
-With \unic{U+034F}: \textLetterExample{\addfontfeature{StylisticSet=17}ao͏̄}.
+Without \unic{U+034F}: \textex{\addfontfeature{StylisticSet=17}aō}.
+With \unic{U+034F}: \textex{\addfontfeature{StylisticSet=17}ao͏̄}.
 
-\hypertarget{req}{}\section{N. Required Features}
+\section{Required Features}
 Required features, which provide some of the font’s most basic functionality---ligatures, support for
 other features, kerning, and more---include \textSourceText{ccmp} (Glyph Composition/Decomposition),
 \textSourceText{calt} (Contextual Alternates), \textSourceText{liga} (Standard Ligatures),
@@ -2113,7 +1362,8 @@ Cmd-D: enable Kerning, Standard Ligatures, and Contextual Alternates, and the ot
 but in most other applications they are enabled by default.
 
 
-\hypertarget{nonmufi}{}\section{O. Non-MUFI Code Points}
+\chapter{Non-MUFI Code Points}\hypertarget{nonmufi}{}
+
 Characters in Junicode that do not have Unicode code points should be accessed via OpenType
 features whenever possible. MUFI/PUA code points should be used only in applications that do not support OpenType, or
 that support it only partially (for example, MS Word). For certain characters that lack either Unicode or MUFI code
@@ -2216,270 +1466,3 @@ U+F001E 󰀞}
 {\color[rgb]{0.13333334,0.29411766,0.07058824}
 U+F001F 󰀟}
 \end{multicols}
-
-\chapter*{Junicode on the Web}
-
-If you are using Junicode on a web page, you should prefer the variable fonts
-(those with “VF” in the family name and filename) to the static fonts. One
-variable font file can do the work of many traditional font files. For example,
-the \href{https://psb1558.github.io/Junicode-font/Junicode-2-feature-test.html}%
-{Test of High-Level CSS Properties} web page displays Junicode in regular,
-bold and semicondensed styles. It used
-to be that your user would have to download three font files, one for each
-style, but one variable font will display all three.
-
-But you may be thinking, \textit{That font is big}! It's true: even the
-compressed webfont (.woff2) is nearly a megabyte in size—enough to seriously
-slow down the loading of a web page.
-
-To solve this problem, you'll need to subset the font—that is, produce a copy
-that contains only what you need. The subsetted font that downloads
-with the property test web page
-is approximately 275k in size—almost thirty percent of the
-size of the full webfont. It's still a pretty big download, but that's because the page
-displays a lot of the font's features. If I were displaying, say, a diplomatic
-transcript of a Latin text, the font would be much smaller.
-
-So the first section of this chapter will talk about how to subset the Junicode
-font.
-
-\section{Subsetting Junicode}
-
-First the legalities. It is perfectly all right to create a modified version
-of Junicode via subsetting, compress it into a webfont (almost certainly in
-woff2 format), and host it on your web server. This is because “Junicode” is
-not a “Reserved Font Name” (which complicates web use of
-many fonts licensed under the Open Font License). If you are nervous about the
-legal requirements of the Open Font License, you can change the font name to
-something arbitrary with the \texttt{-‌-obfuscate-names} option
-of the pyftsubset program, and you can embed the Open Font License, or a
-link to it, in your CSS. These steps should settle any ambiguity about whether
-you are in compliance with the license.
-
-Generating a subsetted version of Junicode should be one of the last tasks you
-perform before deploying your web page(s). Until then, it is recommended that
-you work with the unmodified font. After subsetting, review your
-pages thoroughly to make sure everything is displayed properly. If you have
-forgotten to include a glyph in your subsetted font, you will see little boxes
-where characters should be or, perhaps, the correct characters
-displayed in the wrong typeface. If you have omitted features, you will see
-default instead of transformed characters.
-
-There are many subsetting programs, some online and very easy to use. But for
-maximum control (and thus the smallest fonts), you should choose pyftsubset, a
-part of the \href{https://github.com/fonttools/fonttools}{fontTools} library,
-which runs under Python 3.7 or higher. This is a command-line tool which
-takes a long list of arguments; you should create a shell script to run it.
-
-Here is the script used to create the subsetted font for the property test
-web page mentioned above:
-
-\small\begin{verbatim}
-#!/bin/zsh
-pyftsubset JunicodeTwoBetaVF-Roman.ttf \
---flavor=woff2 --output-file=JunicodeVFsubset.woff2 \
---recommended-glyphs \
---text="jq" --text-file=Junicode-2-feature-test.html \
---layout-features+=liga,ss01,ss02,ss03,ss04,ss05,ss06,ss07,ss08,\
-ss10,ss12,ss13,ss14,ss15,ss16,ss17,ss18,ss19,ss20,cv01,cv02,cv05,\
-cv06,cv07,cv08,cv09,cv10,dlig,hlig,onum,pnum,pcap,smcp,c2sc,subs,\
-sups,zero \
---layout-features-=rlig
-\end{verbatim}
-
-\normalsize\noindent For those unfamiliar with shell scripts, the first line specifies the shell
-the script is to run under (in this case the default shell for Mac OS, but
-\texttt{bash} is another possible choice), and the backslashes mean
-that the command continues on the next line. The rest of the file is a list
-of arguments passed to pyftsubset. Let's walk through them.
-
-First after the program name comes the name of the unsubsetted, uncompressed
-font file. After that,
-the \texttt{--flavor} argument tells the program that you want a webfont in
-woff2 format, and \texttt{--output} is the name of the font file you want the
-program to save.
-
-Having taken care of this preliminary business, we tell pyftsubset what we
-want the font to contain.
-
-\texttt{--recommended-glyphs} includes a few characters that
-every font should have, according to the OpenType specification---though in
-fact modern browsers don't care. It's best, however, to conform to the specification,
-since it's impossible to say with absolute certainty that no program will
-ever reject the font
-because of the absence of these few characters.
-
-\texttt{--text-file} is the name of a file to treat as a list of characters
-that \textit{must} be included in the font. In this case I have simply used
-the html file for the web page for this purpose. If your site contains
-multiple web pages, your job will be more complicated. You must make sure the
-text file contains all the characters used on the site---either that or
-supplement the text file with a \texttt{--text} argument (which here adds
-two lowercase letters that don't appear in the web page---just in case).
-The text file will
-contain only encoded characters—you don't have to worry here about unencoded
-characters produced by OpenType features.
-
-\texttt{--layout-features+} tells the program which OpenType features you
-want to retain in the font. All others, except for the
-\hyperlink{req}{Required Features}, are discarded. All of the characters
-referenced in these features will also be included in the output file, as long
-as those characters are variants of characters in your text file. For example,
-the \textSourceText{smcp} (Small Caps) feature has many more small caps than there are letters
-of the alphabet, but most of them are not included in the subsetted font. The
-program's parsimony with characters keeps the font file as small as possible.
-Note that some features are included automatically: \textSourceText{ccmp},
-\textSourceText{locl}, \textSourceText{calt}, \textSourceText{liga}, \textSourceText{rlig},
-\textSourceText{kern}, \textSourceText{mark}, and \textSourceText{mkmk}.
-
-
-\texttt{--layout-features-} tells the program which OpenType features to omit.
-Normally, \textSourceText{rlig} (Required Ligtures) is automatically
-included in fonts by pyftsubset, but as it has no relevance to this web page,
-it can be omitted.
-
-These are the most useful arguments, but there are many more. Type
-\texttt{pyftsubset --help} for a complete list. Once you have written your
-script, run it (in Mac OS or Linux you need to make the file executable
-by typing \texttt{chmod +x mysubsetscript} on the command line).
-
-Before you put your subsetted font to work, check it carefully in a program
-like \href{https://github.com/justvanrossum/fontgoggles}{FontGoggles},
-which lets you preview the font and test all its OpenType features. If you
-find errors, revise your script and run it again.
-
-\section{Junicode and CSS/HTML}
-
-This section assumes a basic knowledge of HTML (Hypertext Markup Language, used
-to construct web pages) and CSS (Cascading Style Sheets, used to format them).
-If you want to learn about these subjects, the number of good books and online
-tutorials is so great that it makes no sense to try to list them. Just make sure
-that the instructional materials you choose are of recent vintage, because the
-relevant standards are always changing.
-
-In the CSS for your web page, the \texttt{@font-face} at-rule for a variable
-font is a little different
-from the one for a static font in that the range of possible values for each
-axis can be declared:
-
-\small\begin{verbatim}
-@font-face {
-    font-family: "Junicode Two Beta VF";
-    src: url("./webfiles/JunicodeVFsubset.woff2");
-    font-weight: 300 700;
-    font-stretch: 75% 125%;
-    font-style: normal;
-}
-\end{verbatim}
-
-\normalsize\noindent These ranges are not strictly necessary, but they will prevent your
-supplying invalid values for \texttt{font-weight} and \texttt{font-stretch}
-(that is, \texttt{width}) in other CSS rules.
-
-Once you have declared the font, you can invoke it in setting up classes.
-For example:
-
-\small\begin{verbatim}
-body {
-  font-family: "Junicode Two Beta VF";
-  font-size: 28px;
-  font-weight: normal; /* that is, 400 */
-  font-stretch: 112.5%; /* that is, semiexpanded */
-}
-h1 {
-  font-family: "Junicode Two Beta VF";
-  font-size: 125%;
-  font-weight: 600; /* that is, semibold */
-  font-stretch: 112.5%; /* that is, semiexpanded */
-}
-.annotation {
-  font-size: 90%;
-  font-weight: 300; /* that is, light */
-  font-stretch: 87.5%; /* that is, semicondensed */
-}
-\end{verbatim}
-
-\normalsize\noindent These classes should be tested in all browsers. If any fail to
-display text properly, you can use \texttt{font-variation-settings}
-instead of the high-level \texttt{font-weight} and \texttt{font-stretch}:
-
-\small\begin{verbatim}
-body {
-  font-family: "Junicode Two Beta VF";
-  font-size: 28px;
-  font-variation-settings: "wght" 400, "wdth" 112.5;
-}
-h1 {
-  font-family: "Junicode Two Beta VF";
-  font-size: 125%;
-  font-variation-settings: "wght" 600, "wdth" 112.5;
-}
-.annotation {
-  font-size: 90%;
-  font-variation-settings: "wght" 300, "wdth" 87.5;
-}
-\end{verbatim}
-
-\normalsize\noindent To accommodate older browsers, you should make a selection of
-Junicode static fonts, subset them, and include them in your CSS. For example,
-if you need normal and bold weights of Junicode roman, your
-\texttt{@font-face} at-rule may look like this:
-
-\small\begin{verbatim}
-@font-face {
-    font-family: "Junicode Two Beta VF";
-    src: url("./webfiles/JunicodeVFsubset.woff2");
-    font-weight: 300 700;
-    font-stretch: 75% 125%;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Junicode Two Beta";
-    src: url("./webfiles/JunicodeTwoBeta-Regular.woff2");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Junicode Two Beta";
-    src: url("./webfiles/JunicodeTwoBeta-Bold.woff2");
-    font-weight: 700;
-    font-style: normal;
-}
-\end{verbatim}
-
-\normalsize\noindent Now use \texttt{@supports} in your CSS rules to determine which
-font gets downloaded:
-
-\small\begin{verbatim}
-body {
-  font-family: "Junicode Two Beta", serif;
-}
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "Junicode Two Beta VF", serif;
-  }
-}
-b {
-  font-weight: 700;
-}
-@supports (font-variation-settings: "wght" 700) {
-  b {
-    font-variation-settings: "wght" 700;
-  }
-}
-\end{verbatim}
-
-\normalsize\noindent The variable version of Junicode will be downloaded only if
-the browser supports it, and the static version will be downloaded only if
-needed.
-
-
-\vspace*{\fill}
-\begin{center}
-{\stditalic{This document was set in 12pt Junicode SemiExpanded\\
-using the {\XeLaTeX} typesetting system with fontspec for font management.\\
-The source for the document, Feature\_Reference.tex, is available at}}\\
-{\color{BrickRed}https://github.com/psb1558/Junicode-font.}
-\end{center}
-%\thispagestyle{plain}
-\end{document}

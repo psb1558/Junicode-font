@@ -1,113 +1,7 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
-% see http://writer2latex.sourceforge.net for more info
-\documentclass[12pt,letterpaper,openany]{book}
-\usepackage{microtype}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\footskip = 30pt
-\headsep = 30pt
-\renewcommand{\headrule}{}
-\fancyhead[L]{}
-\fancyhead[C]{}
-\fancyhead[R]{}
-\fancyfoot[L]{}
-\fancyfoot[C]{}
-\fancyfoot[R]{}
-\setlength\tabcolsep{1mm}
-\setlength{\headheight}{14.5pt}
-\addtolength{\topmargin}{-2.5pt}
-\usepackage[english,icelandic,latin]{babel}
-\usepackage[quiet]{fontspec}
-\setmainfont{Junicode Two Beta}[
-  UprightFont = {*-Regular},
-  ItalicFont = {*-Italic},
-  BoldFont = {*-Semibold},
-  BoldItalicFont = {*-Bold Italic},
-  UprightFeatures={
-    SizeFeatures={
-      {Size={-8.5},      Font={*-SemiExpanded Medium}},
-      {Size={8.6-10.99}, Font=*-Medium},
-      {Size={11-21.59},  Font=*-Regular},
-      {Size={21.6-},     Font=*-Light}
-    },
-  },
-  ItalicFeatures={
-    SizeFeatures={
-      {Size={-7.5},      Font={*-SemiExpanded Medium Italic}},
-      {Size={7.6-10.99}, Font={*-Medium Italic}},
-      {Size={11-21.59},  Font=*-Italic},
-      {Size={21.6-},     Font={*-Light Italic}}
-    },
-  },
-  BoldFeatures={
-    SizeFeatures={
-      {Size={-8.5},      Font={*-SemiExpanded Bold}},
-      {Size={8.6-10.99}, Font=*-Bold},
-      {Size={11-21.59},  Font=*-Semibold},
-      {Size={21.6-},     Font=*-Medium}
-    },
-  },
-  BoldItalicFeatures={
-    SizeFeatures={
-      {Size={-7.5},      Font={*-SemiExpanded Bold Italic}},
-      {Size={7.6-10.99}, Font={*-Bold Italic}},
-      {Size={11-21.59},  Font={*-Semibold Italic}},
-      {Size={21.6-},     Font={*-Medium Italic}}
-    },
-  },
-]
-\newfontface\narrow{Junicode Two Beta Condensed}
-\newfontface\regular{Junicode Two Beta}
-\newfontface\stditalic{Junicode Two Beta Italic}
-\usepackage[table,dvipsnames]{xcolor}
-\definecolor{RViolet}{RGB}{70,18,87}
-\definecolor{myBlue}{rgb}{0,0,0.5}
-\definecolor{myRed}{rgb}{0.5,0,0}
-\definecolor{myLightRed}{RGB}{255,232,244}
-\definecolor{myLightYellow}{RGB}{239,249,218}
-\definecolor{myLightBlue}{RGB}{203,228,249}
-\definecolor{myLightGreen}{RGB}{234,255,244}
-\definecolor{myLightPurple}{RGB}{214,205,234}
-\usepackage{array}
-\usepackage{supertabular}
-\usepackage{hhline}
-% footnotes configuration
-\makeatletter
-\renewcommand\thefootnote{\arabic{footnote}}
-\makeatother
-\linespread{1.1}
-% Outline numbering
-\setcounter{secnumdepth}{0}
-\makeatletter
-\newcommand\arraybslash{\let\\\@arraycr}
-\makeatother
-\newcommand{\restag}[1]{{\addfontfeature{StylisticSet=10}#1}}
-\newcommand{\mufi}{\rowcolor{myLightGreen}}
-\newcommand{\prob}{\cellcolor{myLightPurple}}
-\newcommand{\opua}{\rowcolor{myLightYellow}}
-\newcommand{\stdu}{\rowcolor{myLightBlue}}
-\newcommand{\nuni}{\rowcolor{myLightRed}}
-\newcommand{\textex}[1]{{\color{myRed}#1}}
-\newcommand{\ctosc}[1]{{\addfontfeature{Letters=UppercaseSmallCaps}#1}}
-\newcommand{\charvar}{cv{\narrow NN}}
-\frenchspacing
-%\raggedbottom
-\begin{document}
-\pagestyle{fancy}
-\addfontfeature{Script=Latin,Language=English}
-\begin{titlepage}
-\huge\noindent
-{\color{myRed}}\\[5cm]
-\Huge \centering {\color{myBlue}Junicode} \\[1cm]
-\huge \centering the font for medievalists \\[1cm]
- \Huge\centering {\color{myRed}} \\[1cm]
- \huge\centering {\stditalic Entering characters with tags} \\[1ex]
- \Large\centering{\regular for version 2}\\
-\vfill
-{\color{myRed}}
-\end{titlepage}
-\mainmatter
-\chapter*{\color{RViolet}Entering characters with tags}
+
+\chapter{Entering characters with tags}\hypertarget{tagchapter}{}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}entering characters with tags}
+\addfontfeature{MyStyle=noentities}
 
 Any character in Junicode that can be rendered using a Character Variant ({\charvar}) feature can also be rendered using a
 sequence consisting of a base character and two Unicode tags---that is, characters from the Unicode tag range. This range
@@ -161,15 +55,15 @@ characters:
 \end{center}
 
 \noindent When creating web pages or XML documents,
-you can enter these using character entities (e.g. \textex{\&\#xE0073;} for \textex{\&\_\_s;});
-along the same lines, you can use the \textex{{\textbackslash}char} command
-(e.g. \textex{{\textbackslash}char{\textquotedbl}0E0073}) when
+you can enter these using character entities (e.g. \textSourceText{\&\#xE0073;} for \textex{\noent{\&\_\_s;}});
+along the same lines, you can use the \textSourceText{{\textbackslash}char} command
+(e.g. \textSourceText{{\textbackslash}char{\textquotedbl}0E0073}) when
 composing TeX documents. But such entities and commands are not generally available in editors and word processors, and
 entering the tags themselves can be tricky because they are not only invisible, but also ignored by the application
 (the cursor
 skips over them). Instead of attempting to enter the code points for tags directly, use character entities consisting
 of \textbf{an ampersand, two underscores, the tag character, and a semicolon}. These will yield visible tags. For
-example, typing \textex{\&\_\_6\char"200C;} will yield the tag \textex{\&\_\_6;}.
+example, typing \textSourceText{\&\_\_6;} will yield the tag \textex{\noent{\&\_\_6;}}.
 
 To use the tag method of entering characters, first type the base character from the table below, then the two tags.
 For example, to make a square C (\textex{\restag{C\&\_\_s;\&\_\_q;}}), enter one of these sequences:
@@ -188,17 +82,13 @@ C{\textbackslash}char{\textquotedbl}0E0073{\textbackslash}char{\textquotedbl}0E0
 C\&\_\_s\textcompwordmark;\&\_\_q\textcompwordmark; (appears as C\&\_\_s;\&\_\_q;)\\
 \end{supertabular}
 \end{center}
-\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}%
-entering characters with tags}
-\fancyhead[CO]{\scshape\color{myRed} {%
-entering characters with tags}\hspace{10pt}{\addfontfeatures{Numbers=OldStyle}\thepage}}
 
-\noindent Then apply the OpenType feature ss10 (Stylistic Set 10) to the passage or passages containing the tags or, if tags occur
+\noindent Then apply the OpenType feature \textSourceText{ss10} (Stylistic Set 10) to the passage or passages containing the tags or, if tags occur
 throughout, to the whole document. The tags will disappear and the preceding characters (the base characters) will be
 transformed.
 
-For variants of the combining macron (U+0304) and perhaps other combining marks, it will often be necessary to place the
-\ctosc{COMBINING GRAPHEME JOINER} (U+034F) between the macron and the base character that precedes it. This will prevent
+For variants of the combining macron (\unic{U+0304}) and perhaps other combining marks, it will often be necessary to place the
+\ctosc{COMBINING GRAPHEME JOINER} (\unic{U+034F}) between the macron and the base character that precedes it. This will prevent
 normalization (the shaping engine changing sequences of character + combining mark into precomposed characters),
 which interferes with the operation of tags.
 
@@ -210,22 +100,21 @@ not descriptive at all, but rather an index (the same numbers used in the corres
 
 These tags are compatible with Junicode's other OpenType features, including the {\charvar} features, and can be mixed with
 them. They will not interfere with the placement of combining marks. Use a {\charvar} feature when a variant should appear
-throughout the text, in a particular passage (for example, a block quotation), or in a style. A tag sequence may be
-preferable for isolated forms or to override an OpenType feature.
+throughout the text, repeatedly in a particular passage (for example, a block quotation), or in a style. A tag sequence may be preferable for isolated forms or to override an OpenType feature.
 
 In the list below, records for each character are color-coded as follows:
 
 \begin{center}
   \tablefirsthead{}
   \tablehead{}
-  \tabletail{}
-  \tablelasttail{}
+  \tabletail{\hline}
+  \tablelasttail{\hline}
   \begin{supertabular}{|m{13mm}|m{72mm}|}
     \hline
     \mufi{green} & MUFI characters with PUA code points\\\hline
     \opua{yellow} & Other characters with PUA code points\\\hline
     \stdu{blue} & Characters with Unicode code points\\\hline
-    \nuni{red} & Characters without code points\\\hline
+    \nuni{red} & Characters without code points\\
   \end{supertabular}
 \end{center}
 
@@ -235,12 +124,13 @@ not issues (mainly in printed texts). Unicode code points can safely be
 entered directly. Junicode makes a few of them accessible via {\charvar} features and tags because it may often
 be desirable to associate these characters with their bases rather than the Unicode code points. For
 example, the insular T (\textex{\restag{T\&\_\_i;\&\_\_n;}}) is sure to be searchable as T if entered with the sequence
-\textex{T\&\_\_i;\&\_\_n;}, but if entered as \textex{U+A786} it may or may not be searchable as T,
+\textex{\noent{T\&\_\_i;\&\_\_n;}}, but if entered as \textex{U+A786} it may or may not be searchable as T,
 depending on the application.
 
 Characters without code points can only be entered via tags or OpenType features.
 
 \begin{center}
+  \addfontfeature{Numbers={Uppercase,Monospaced}}
 \tablefirsthead{\hline\rowcolor{Goldenrod}
 {Base} &
 {Sequence} &
@@ -516,6 +406,10 @@ Characters without code points can only be entered via tags or OpenType features
 {B\&\_\_e;\&\_\_n;} &
 {\restag{B\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule B\\\hline
+\nuni{B} &
+{B\&\_\_i;\&\_\_n;} &
+{\restag{B\char"0E0069\char"0E006E}} &
+\arraybslash Insular B\\\hline
 \mufi{b} &
 {b\&\_\_e;\&\_\_n;} &
 {\restag{b\char"0E0065\char"0E006E}} &
@@ -576,6 +470,10 @@ Characters without code points can only be entered via tags or OpenType features
 {E\&\_\_u;\&\_\_n;} &
 {\restag{E\char"0E0075\char"0E006E}} &
 \arraybslash Uncial E / F10A\\\hline
+\nuni{E} &
+{E\&\_\_e;\&\_\_n;} &
+{\restag{E\char"0E0069\char"0E006E}} &
+\arraybslash Insular E\\\hline
 \nuni{E} &
 {E\&\_\_e;\&\_\_n;} &
 {\restag{E\char"0E0065\char"0E006E}} &
@@ -812,6 +710,10 @@ Characters without code points can only be entered via tags or OpenType features
 {l\&\_\_s;\&\_\_f;} &
 {\restag{l\char"0E0073\char"0E0066}} &
 \arraybslash {\narrow l with high stroke ending with flourish / F000F}\\\hline
+\opua{l} &
+{l\&\_\_i;\&\_\_n;} &
+{\restag{l\char"0E0069\char"0E006E}} &
+\arraybslash {Insular l (roman only) / F000F}\\\hline
 \mufi{M} &
 {M\&\_\_u;\&\_\_d;} &
 {\restag{M\char"0E0075\char"0E0064}} &
@@ -1614,6 +1516,4 @@ Characters without code points can only be entered via tags or OpenType features
 displayed or resolved for technical reasons related to U+A7C1 having very recently been added to Unicode. However, tags
 entered directly (as here) or via HTML/XML entity references and TeX commands will still work, and the Junicode entity
 will work once applications are updated with the latest additions to the Unicode standard.}
-
-\bigskip
-\end{document}
+\addfontfeature{StylisticSet=10}

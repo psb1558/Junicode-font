@@ -1363,6 +1363,7 @@ lookup vtags {
 } vtags ;
 
 lookup tagligs {
+ lookupflag IgnoreMarks;
  # Three elements (first the big indexed ones):
  sub period zero.tag one.tag by periodcentered.alt ;
  sub period zero.tag two.tag by comma.alt1 ;
@@ -6889,7 +6890,8 @@ sub wynn wynn by wynn_wynn.hlig ;
 tag = hlig;
 },
 {
-code = "# four elements:
+code = "lookupflag IgnoreMarks;
+# four elements:
     sub V I I I  by uni2167 ;
     sub v i i i  by uni2177 ;
 # three elements:

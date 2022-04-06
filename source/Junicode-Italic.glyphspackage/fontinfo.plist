@@ -1325,6 +1325,7 @@ lookup vtags {
 } vtags ;
 
 lookup tagligs {
+ lookupflag IgnoreMarks;
  # Three elements (first the big indexed ones):
 # sub period zero.tag one.tag by periodcentered.alt ;
  sub period zero.tag two.tag by comma.alt1 ;
@@ -6399,7 +6400,8 @@ value = "Rare Digraphs";
 tag = ss17;
 },
 {
-code = "sub f f t by f_f_t ;
+code = "lookupflag IgnoreMarks;
+sub f f t by f_f_t ;
 # sub f f udieresis by f_f_udieresis ;
 # sub f f i by uniFB03 ;
 # sub f f l by uniFB04 ;
@@ -6638,6 +6640,7 @@ name = Italic;
 userData = {
 GSCornerRadius = 10;
 };
+visible = 1;
 },
 {
 axesValues = (

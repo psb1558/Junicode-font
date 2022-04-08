@@ -2378,11 +2378,6 @@ value = "Insular letter-forms";
 tag = ss02;
 },
 {
-code = "sub s by longs;";
-disabled = 1;
-tag = hist;
-},
-{
 code = "#sub beta by beta.alt ;
 #sub gamma by gamma.alt ;
 #sub theta by theta.alt ;
@@ -2615,19 +2610,6 @@ value = "Contextual long s";
 }
 );
 tag = ss08;
-},
-{
-code = "sub r by rrotunda ;
-sub r.sc by rrotunda.sc;
-";
-disabled = 1;
-labels = (
-{
-language = dflt;
-value = "r rotunda";
-}
-);
-tag = ss11;
 },
 {
 code = "lookup ss12_01 {
@@ -4332,21 +4314,6 @@ tag = cv63;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of l with high stroke\";  # English US
-  };
-  ParamUILabelNameID {
-    name 3 1 0x0409 \"l with curved high stroke\";  # English US
-  };
-  Character 0xA749;
-};
-sub lhighstroke from [ lhighstroke.alt ] ;
-";
-disabled = 1;
-tag = cv64;
-},
-{
-code = "cvParameters {
-  FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of Old Polish o\";  # English US
   };
   ParamUILabelNameID {
@@ -4804,13 +4771,6 @@ code = "cvParameters {
 sub overlinecomb from [ overlinecomb.alt ] ;
 ";
 tag = cv89;
-},
-{
-code = "sub strokeshortcomb from [ strokeshortcomb.wide strokeshortcomb.narrow strokeshortcomb.wideright strokeshortcomb.wideleft ] ;
-sub tildeoverlaycomb from [ tildeoverlaycomb.wide tildeoverlaycomb.narrow tildeoverlaycomb.wideright tildeoverlaycomb.wideleft ] ;
-";
-disabled = 1;
-tag = cv91;
 },
 {
 code = "cvParameters {
@@ -6483,18 +6443,6 @@ sub zigzagabovecomb.alt3 by zigzagabovecomb.alt3.sc;
 sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.sc;
 ";
 tag = smcp;
-},
-{
-code = "cvParameters {
-  FeatUILabelNameID {
-    name 3 1 0x0409 \"Variant of small cap a\";  # English US
-  };
-};
-
-sub a.sc by a ;
-";
-disabled = 1;
-tag = cv99;
 },
 {
 code = "# should be moved to after the cvXX features to take in variants produced by those?

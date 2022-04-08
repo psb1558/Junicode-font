@@ -1182,10 +1182,10 @@ code = "lookup entities {
 #  sub ampersand underscore a r s c semicolon by arsmcpcomb ;
   sub ampersand underscore m u n c semicolon by muncialcomb ;
   sub ampersand underscore d i n s semicolon by insulardcomb ;
-#  sub ampersand underscore e o g o semicolon by eogonekcomb ;
-#  sub ampersand underscore o o g o semicolon by oogonekcomb ;
-#  sub ampersand underscore e m a c semicolon by emacroncomb ;
-#  sub ampersand underscore o m a c semicolon by omacroncomb ;
+  sub ampersand underscore e o g o semicolon by eogonekcomb ;
+  sub ampersand underscore o o g o semicolon by oogonekcomb ;
+  sub ampersand underscore e m a c semicolon by emacroncomb ;
+  sub ampersand underscore o m a c semicolon by omacroncomb ;
 #  sub ampersand underscore t i n s semicolon by tinsularcomb ;
   # Six-character codes
 #  sub ampersand underscore b s c semicolon by bsmcpcomb ;
@@ -1359,15 +1359,15 @@ lookup tagligs {
 # sub macroncomb one.tag zero.tag by arsmcpcomb ;
  sub macroncomb one.tag one.tag by bsmcpcomb ;
  sub macroncomb one.tag two.tag by dsmcpcomb ;
-# sub macroncomb one.tag three.tag by emacroncomb ;
-# sub macroncomb one.tag four.tag by eogonekcomb ;
+ sub macroncomb one.tag three.tag by emacroncomb ;
+ sub macroncomb one.tag four.tag by eogonekcomb ;
  sub macroncomb one.tag five.tag by dotlessicomb ;
 # sub macroncomb one.tag six.tag by jcomb ;
 # sub macroncomb one.tag seven.tag by jdotlesscomb ;
 # sub macroncomb one.tag eight.tag by ksmcpcomb ;
  sub macroncomb one.tag nine.tag by muncialcomb ;
-# sub macroncomb two.tag zero.tag by omacroncomb ;
-# sub macroncomb two.tag one.tag by oogonekcomb ;
+ sub macroncomb two.tag zero.tag by omacroncomb ;
+ sub macroncomb two.tag one.tag by oogonekcomb ;
 # sub macroncomb two.tag two.tag by oslashcomb ;
 # sub macroncomb two.tag three.tag by qcomb ;
 # sub macroncomb two.tag four.tag by rumrotundacomb ;
@@ -4051,7 +4051,7 @@ sub Eogonekdotbelow    from [ Eogonekdotbelow.alt    ] ;
 sub eogonekdotacute    from [ eogonekdotacute.alt    ] ;
 sub Eogonekdotacute    from [ Eogonekdotacute.alt    ] ;
 sub eogonek.enlarged   from [ eogonek.enlarged.alt   ] ;
-# sub eogonekcomb        from [ eogonekcomb.alt        ] ;
+sub eogonekcomb        from [ eogonekcomb.alt        ] ;
 ";
 tag = cv62;
 },
@@ -6640,7 +6640,6 @@ name = Italic;
 userData = {
 GSCornerRadius = 10;
 };
-visible = 1;
 },
 {
 axesValues = (

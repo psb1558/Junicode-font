@@ -1,5 +1,5 @@
 {
-.appVersion = "3112";
+.appVersion = "3124";
 .formatVersion = 3;
 axes = (
 {
@@ -6967,9 +6967,9 @@ sub longs i z.alt1 by longs_i_z.alt1 ;
 # sub longs.alt1 i z.alt1 by longs_i_z.alt1 ;
 # sub f f i by f_f_i ;
 # sub f f l by f_f_l;
-sub f f t by f_f_t;
+sub f.rf f.lf t by f_f_t;
 # sub f f udieresis by f_f_udieresis;
-sub f f y by f_f_y;
+sub f.rf f.lf y by f_f_y;
 sub f t y by f_t_y;
 # sub longs longs i by longs_longs_i;
 # sub longs.alt1 longs.alt1 i by longs_longs_i;
@@ -7141,7 +7141,7 @@ stemValues = (
 34
 );
 userData = {
-GSCornerRadius = 31;
+GSCornerRadius = 25;
 GSOffsetHorizontal = 10;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 0;

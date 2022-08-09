@@ -1,7 +1,5 @@
 {
 glyphname = omegaperispomeniypogegrammeni.sc;
-kernLeft = omicron;
-kernRight = omega;
 layers = (
 {
 layerId = master01;
@@ -106,4 +104,10 @@ ref = perispomenicomb.sc;
 width = 564;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

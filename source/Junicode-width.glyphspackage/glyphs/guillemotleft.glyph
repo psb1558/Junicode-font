@@ -1,5 +1,7 @@
 {
 glyphname = guillemotleft;
+kernLeft = KO_emdash;
+kernRight = KO_guillemotleft;
 layers = (
 {
 layerId = master01;
@@ -85,4 +87,10 @@ width = 385;
 }
 );
 unicode = 171;
+userData = {
+KernOnSpecialSpacing = {
+L = quotes;
+R = quotes;
+};
+};
 }

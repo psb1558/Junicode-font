@@ -1,7 +1,5 @@
 {
 glyphname = pi.sc;
-kernLeft = b.sc;
-kernRight = h.sc;
 layers = (
 {
 layerId = master01;
@@ -505,6 +503,10 @@ width = 545;
 metricLeft = h.sc;
 metricRight = h.sc;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = Pi;
 };

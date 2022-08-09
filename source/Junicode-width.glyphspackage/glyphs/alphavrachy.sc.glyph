@@ -1,7 +1,5 @@
 {
 glyphname = alphavrachy.sc;
-kernLeft = a.sc;
-kernRight = a.sc;
 layers = (
 {
 layerId = master01;
@@ -82,4 +80,10 @@ ref = brevecomb.sc;
 width = 490;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

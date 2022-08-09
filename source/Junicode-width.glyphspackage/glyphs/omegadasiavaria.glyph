@@ -1,7 +1,5 @@
 {
 glyphname = omegadasiavaria;
-kernLeft = omicron;
-kernRight = omega;
 layers = (
 {
 layerId = master01;
@@ -11,11 +9,11 @@ ref = omega;
 },
 {
 anchor = top_center;
-pos = (472,0);
+pos = (460,0);
 ref = commareversedabovecomb_gravecomb;
 }
 );
-width = 555;
+width = 532;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -25,11 +23,11 @@ ref = omega;
 },
 {
 anchor = top_center;
-pos = (488,0);
+pos = (475,0);
 ref = commareversedabovecomb_gravecomb;
 }
 );
-width = 582;
+width = 556;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -89,4 +87,10 @@ width = 555;
 }
 );
 unicode = 8035;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

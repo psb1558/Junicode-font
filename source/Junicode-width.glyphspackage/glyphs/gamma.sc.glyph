@@ -1,7 +1,5 @@
 {
 glyphname = gamma.sc;
-kernLeft = b.sc;
-kernRight = gamma.sc;
 layers = (
 {
 layerId = master01;
@@ -385,6 +383,10 @@ width = 424;
 metricLeft = h.sc;
 metricRight = e.sc;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = Gamma;
 };

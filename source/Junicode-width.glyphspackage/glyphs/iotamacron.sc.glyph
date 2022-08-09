@@ -1,7 +1,5 @@
 {
 glyphname = iotamacron.sc;
-kernLeft = b.sc;
-kernRight = h.sc;
 layers = (
 {
 layerId = master01;
@@ -82,4 +80,10 @@ ref = macroncomb.sc;
 width = 266;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

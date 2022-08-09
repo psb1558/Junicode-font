@@ -1,7 +1,7 @@
 {
 glyphname = thorn.sc;
-kernLeft = b.sc;
-kernRight = p.sc;
+kernLeft = KO_r.enlarged;
+kernRight = KO_b;
 layers = (
 {
 anchors = (
@@ -600,4 +600,10 @@ width = 431;
 );
 metricLeft = b.sc;
 metricRight = p.sc;
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

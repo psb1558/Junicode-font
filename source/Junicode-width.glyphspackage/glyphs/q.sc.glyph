@@ -1,7 +1,7 @@
 {
 glyphname = q.sc;
-kernLeft = c.sc;
-kernRight = o.sc;
+kernLeft = KO_d.enlarged;
+kernRight = KO_s;
 layers = (
 {
 anchors = (
@@ -358,4 +358,10 @@ nodes = (
 width = 519;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

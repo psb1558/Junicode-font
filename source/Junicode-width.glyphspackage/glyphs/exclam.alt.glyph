@@ -1,6 +1,5 @@
 {
 glyphname = exclam.alt;
-kernLeft = exclam;
 layers = (
 {
 layerId = master01;
@@ -67,4 +66,10 @@ width = 345;
 );
 metricRight = exclam;
 metricWidth = "=exclam*1.36";
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

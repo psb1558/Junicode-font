@@ -1,7 +1,7 @@
 {
 glyphname = ntilde.sc;
-kernLeft = b.sc;
-kernRight = n.sc;
+kernLeft = KO_r.enlarged;
+kernRight = KO_n.sc;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = tildecomb.sc;
 width = 522;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

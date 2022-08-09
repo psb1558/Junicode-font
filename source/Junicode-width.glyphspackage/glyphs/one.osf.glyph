@@ -1,7 +1,5 @@
 {
 glyphname = one.osf;
-kernLeft = one.osf;
-kernRight = one.osf;
 layers = (
 {
 layerId = master01;
@@ -370,4 +368,10 @@ nodes = (
 width = 318;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

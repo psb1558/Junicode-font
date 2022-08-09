@@ -1,7 +1,5 @@
 {
 glyphname = omegavaria.sc;
-kernLeft = omicron;
-kernRight = omega;
 layers = (
 {
 layerId = master01;
@@ -83,4 +81,10 @@ width = 564;
 }
 );
 note = uni1F7C;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

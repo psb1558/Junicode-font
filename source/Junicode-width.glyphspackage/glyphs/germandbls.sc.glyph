@@ -1,7 +1,7 @@
 {
 glyphname = germandbls.sc;
-kernLeft = s.sc;
-kernRight = s.sc;
+kernLeft = KO_a.enlarged;
+kernRight = KO_s;
 layers = (
 {
 layerId = master01;
@@ -86,4 +86,10 @@ ref = s.sc;
 width = 734;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

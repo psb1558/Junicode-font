@@ -1,7 +1,5 @@
 {
 glyphname = lambda.sc;
-kernLeft = a.sc;
-kernRight = a.sc;
 layers = (
 {
 layerId = master01;
@@ -373,6 +371,10 @@ width = 475;
 metricLeft = a.sc;
 metricRight = a.sc;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = Lambda;
 };

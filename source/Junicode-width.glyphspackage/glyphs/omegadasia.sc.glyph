@@ -1,7 +1,5 @@
 {
 glyphname = omegadasia.sc;
-kernLeft = omicron;
-kernRight = omega;
 layers = (
 {
 layerId = master01;
@@ -82,4 +80,10 @@ ref = commareversedabovecomb.loclELL.sc;
 width = 564;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

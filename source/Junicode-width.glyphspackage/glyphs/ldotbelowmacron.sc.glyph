@@ -1,7 +1,7 @@
 {
 glyphname = ldotbelowmacron.sc;
-kernLeft = b.sc;
-kernRight = l.sc;
+kernLeft = KO_r.mecurl;
+kernRight = KO_l.sc;
 layers = (
 {
 layerId = master01;
@@ -106,4 +106,8 @@ ref = macroncomb.sc;
 width = 456;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+};
+};
 }

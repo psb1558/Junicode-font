@@ -1,6 +1,7 @@
 {
 glyphname = lslash.sc;
-kernRight = l.sc;
+kernLeft = KO_z;
+kernRight = KO_l.sc;
 layers = (
 {
 anchors = (
@@ -539,6 +540,10 @@ width = 467;
 );
 metricRight = l.sc;
 userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
 RMXScaler = {
 source = Lslash;
 };

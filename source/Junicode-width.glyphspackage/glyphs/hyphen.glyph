@@ -1,6 +1,7 @@
 {
 glyphname = hyphen;
-kernLeft = hyphen;
+kernLeft = KO_hyphen;
+kernRight = KO_hyphen;
 layers = (
 {
 layerId = master01;
@@ -154,4 +155,10 @@ width = 404;
 }
 );
 unicode = 45;
+userData = {
+KernOnSpecialSpacing = {
+L = hyphen;
+R = hyphen;
+};
+};
 }

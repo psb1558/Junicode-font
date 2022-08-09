@@ -1,7 +1,5 @@
 {
 glyphname = tau.sc;
-kernLeft = t.sc;
-kernRight = t.sc;
 layers = (
 {
 layerId = master01;
@@ -58,4 +56,10 @@ ref = t.sc;
 width = 461;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

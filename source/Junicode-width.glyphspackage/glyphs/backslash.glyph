@@ -1,5 +1,7 @@
 {
 glyphname = backslash;
+kernLeft = KO_quoteright;
+kernRight = KO_colon;
 layers = (
 {
 layerId = master01;
@@ -118,4 +120,10 @@ width = 350;
 );
 metricWidth = slash;
 unicode = 92;
+userData = {
+KernOnSpecialSpacing = {
+L = "spaced-off";
+R = "spaced-off";
+};
+};
 }

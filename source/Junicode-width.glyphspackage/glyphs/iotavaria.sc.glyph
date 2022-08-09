@@ -1,7 +1,5 @@
 {
 glyphname = iotavaria.sc;
-kernLeft = b.sc;
-kernRight = h.sc;
 layers = (
 {
 layerId = master01;
@@ -82,4 +80,10 @@ ref = gravecomb.loclELL.sc;
 width = 266;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

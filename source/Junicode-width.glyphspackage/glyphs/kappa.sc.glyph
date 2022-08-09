@@ -1,7 +1,5 @@
 {
 glyphname = kappa.sc;
-kernLeft = b.sc;
-kernRight = k.sc;
 layers = (
 {
 layerId = master01;
@@ -58,4 +56,10 @@ ref = k.sc;
 width = 484;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

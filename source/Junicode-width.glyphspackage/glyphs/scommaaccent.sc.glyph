@@ -1,7 +1,7 @@
 {
 glyphname = scommaaccent.sc;
-kernLeft = s.sc;
-kernRight = s.sc;
+kernLeft = KO_a.enlarged;
+kernRight = KO_s;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = commaaccentcomb;
 width = 367;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

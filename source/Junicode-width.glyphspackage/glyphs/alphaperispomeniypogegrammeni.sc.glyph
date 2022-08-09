@@ -1,7 +1,5 @@
 {
 glyphname = alphaperispomeniypogegrammeni.sc;
-kernLeft = a.sc;
-kernRight = a.sc;
 layers = (
 {
 layerId = master01;
@@ -106,4 +104,10 @@ ref = perispomenicomb.sc;
 width = 490;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

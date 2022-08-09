@@ -1,7 +1,5 @@
 {
 glyphname = omicron.sc;
-kernLeft = c.sc;
-kernRight = o.sc;
 layers = (
 {
 layerId = master01;
@@ -58,4 +56,10 @@ ref = o.sc;
 width = 518;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

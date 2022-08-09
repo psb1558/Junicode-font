@@ -1,7 +1,7 @@
 {
 glyphname = abreve.sc;
-kernLeft = a.sc;
-kernRight = a.sc;
+kernLeft = KO_x.enlarged;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = brevecomb.sc;
 width = 490;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

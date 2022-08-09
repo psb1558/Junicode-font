@@ -1,5 +1,5 @@
 {
-.appVersion = "3112";
+.appVersion = "3131";
 .formatVersion = 3;
 axes = (
 {
@@ -1526,6 +1526,7 @@ lookup tagligs {
  sub P r.tag e.tag by Pepigraphicreversed ;
  sub P e.tag n.tag by P.enlarged ;
  sub p e.tag n.tag by p.enlarged ;
+ sub p a.tag one.tag by p.alt1 ;
  sub Q s.tag m.tag by Q.alt ;
  sub Q l.tag one.tag by Q.alt2 ;
  sub Q l.tag two.tag by Q.alt3 ;
@@ -3468,9 +3469,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule p\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate p for the Ormulum\";  # English US
+  };
   Character 0x0070;
 };
-sub p from [ p.enlarged ] ;
+sub p from [ p.enlarged p.alt1 ] ;
 ";
 tag = cv32;
 },
@@ -6281,6 +6285,7 @@ sub h r by h_r.hlig ;
 # sub l l by l_l ;
 sub o c by o_c.hlig ;
 sub p p by p_p.hlig ;
+sub p.alt1 p.alt1 by p_p.hlig.alt ;
 sub P P by P_P ;
 sub p s by p_s.hlig ;
 sub P s by P_s.hlig ;

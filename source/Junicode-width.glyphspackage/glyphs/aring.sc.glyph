@@ -1,7 +1,7 @@
 {
 glyphname = aring.sc;
-kernLeft = a.sc;
-kernRight = a.sc;
+kernLeft = KO_a.sc;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = ringcomb.sc;
 width = 490;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

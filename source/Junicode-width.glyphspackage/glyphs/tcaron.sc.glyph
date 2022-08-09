@@ -1,7 +1,7 @@
 {
 glyphname = tcaron.sc;
-kernLeft = t.sc;
-kernRight = t.sc;
+kernLeft = KO_tinsular;
+kernRight = KO_r;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = caroncomb.sc;
 width = 461;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

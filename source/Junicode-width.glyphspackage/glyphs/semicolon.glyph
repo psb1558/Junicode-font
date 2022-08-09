@@ -1,6 +1,7 @@
 {
 glyphname = semicolon;
-kernLeft = colon;
+kernLeft = KO_colon;
+kernRight = KO_colon;
 layers = (
 {
 layerId = master01;
@@ -316,4 +317,10 @@ width = 290;
 }
 );
 unicode = 59;
+userData = {
+KernOnSpecialSpacing = {
+L = "spaced-off";
+R = "spaced-off";
+};
+};
 }

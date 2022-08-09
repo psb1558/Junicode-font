@@ -1,9 +1,21 @@
 {
 glyphname = uniE60E;
-kernLeft = c;
 layers = (
 {
 layerId = master01;
+shapes = (
+{
+ref = oogonek;
+},
+{
+pos = (418,0);
+ref = circumflexcomb;
+}
+);
+width = 462;
+},
+{
+layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
 shapes = (
 {
 ref = oogonek;
@@ -13,20 +25,7 @@ pos = (430,0);
 ref = circumflexcomb;
 }
 );
-width = 485;
-},
-{
-layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
-shapes = (
-{
-ref = oogonek;
-},
-{
-pos = (443,0);
-ref = circumflexcomb;
-}
-);
-width = 501;
+width = 475;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -82,4 +81,10 @@ width = 680;
 }
 );
 unicode = 58894;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

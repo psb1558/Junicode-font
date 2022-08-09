@@ -1,7 +1,5 @@
 {
 glyphname = two.lf;
-kernLeft = two.lf;
-kernRight = two.lf;
 layers = (
 {
 layerId = master01;
@@ -358,4 +356,10 @@ nodes = (
 width = 450;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

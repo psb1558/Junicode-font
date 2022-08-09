@@ -1,7 +1,5 @@
 {
 glyphname = etaperispomeni.sc;
-kernLeft = b.sc;
-kernRight = h.sc;
 layers = (
 {
 layerId = master01;
@@ -82,4 +80,10 @@ ref = perispomenicomb.sc;
 width = 582;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

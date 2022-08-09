@@ -1,8 +1,6 @@
 {
 color = 7;
 glyphname = upsilon;
-kernLeft = upsilon;
-kernRight = uni1F50;
 layers = (
 {
 anchors = (
@@ -60,7 +58,7 @@ nodes = (
 );
 }
 );
-width = 461;
+width = 450;
 },
 {
 anchors = (
@@ -118,7 +116,7 @@ nodes = (
 );
 }
 );
-width = 497;
+width = 484;
 },
 {
 anchors = (
@@ -176,7 +174,7 @@ nodes = (
 );
 }
 );
-width = 453;
+width = 439;
 },
 {
 anchors = (
@@ -234,7 +232,7 @@ nodes = (
 );
 }
 );
-width = 424;
+width = 420;
 },
 {
 anchors = (
@@ -292,7 +290,7 @@ nodes = (
 );
 }
 );
-width = 502;
+width = 485;
 },
 {
 anchors = (
@@ -350,11 +348,17 @@ nodes = (
 );
 }
 );
-width = 461;
+width = 450;
 }
 );
 metricLeft = "=kappa*0.8";
 metricRight = o;
 note = upsilon;
 unicode = 965;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

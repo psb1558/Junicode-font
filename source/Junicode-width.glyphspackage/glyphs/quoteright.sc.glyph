@@ -1,6 +1,5 @@
 {
 glyphname = quoteright.sc;
-kernLeft = quoteright.sc;
 layers = (
 {
 layerId = master01;
@@ -65,4 +64,10 @@ ref = quoteright;
 width = 190;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

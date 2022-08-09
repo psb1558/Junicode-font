@@ -1,7 +1,5 @@
 {
 glyphname = theta.sc;
-kernLeft = c.sc;
-kernRight = o.sc;
 layers = (
 {
 layerId = master01;
@@ -613,6 +611,10 @@ width = 525;
 metricLeft = o.sc;
 metricRight = o.sc;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = Theta;
 };

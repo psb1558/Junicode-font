@@ -1,7 +1,5 @@
 {
 glyphname = omegaypogegrammeni;
-kernLeft = omicron;
-kernRight = omega;
 layers = (
 {
 layerId = master01;
@@ -10,11 +8,11 @@ shapes = (
 ref = omega;
 },
 {
-pos = (412,0);
+pos = (400,0);
 ref = ypogegrammenicomb;
 }
 );
-width = 555;
+width = 532;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -23,11 +21,11 @@ shapes = (
 ref = omega;
 },
 {
-pos = (431,0);
+pos = (418,0);
 ref = ypogegrammenicomb;
 }
 );
-width = 582;
+width = 556;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -83,4 +81,10 @@ width = 555;
 }
 );
 unicode = 8179;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

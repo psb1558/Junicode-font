@@ -1,10 +1,22 @@
 {
 glyphname = omegapsiliperispomeni;
-kernLeft = omicron;
-kernRight = omega;
 layers = (
 {
 layerId = master01;
+shapes = (
+{
+ref = omega;
+},
+{
+anchor = top_center;
+pos = (445,0);
+ref = commaabovecomb_perispomenicomb;
+}
+);
+width = 532;
+},
+{
+layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
 shapes = (
 {
 ref = omega;
@@ -15,21 +27,7 @@ pos = (457,0);
 ref = commaabovecomb_perispomenicomb;
 }
 );
-width = 555;
-},
-{
-layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
-shapes = (
-{
-ref = omega;
-},
-{
-anchor = top_center;
-pos = (470,0);
-ref = commaabovecomb_perispomenicomb;
-}
-);
-width = 582;
+width = 556;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -89,4 +87,10 @@ width = 555;
 }
 );
 unicode = 8038;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

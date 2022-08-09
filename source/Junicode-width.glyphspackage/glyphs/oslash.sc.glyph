@@ -1,7 +1,7 @@
 {
 glyphname = oslash.sc;
-kernLeft = c.sc;
-kernRight = o.sc;
+kernLeft = KO_d.enlarged;
+kernRight = KO_b;
 layers = (
 {
 anchors = (
@@ -430,4 +430,10 @@ nodes = (
 width = 531;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

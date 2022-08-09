@@ -2,6 +2,8 @@
 case = smallCaps;
 category = Letter;
 glyphname = yoghflatdot.sc;
+kernLeft = KO_r.enlarged;
+kernRight = KO_s;
 layers = (
 {
 layerId = master01;
@@ -83,4 +85,8 @@ width = 359;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+};
+};
 }

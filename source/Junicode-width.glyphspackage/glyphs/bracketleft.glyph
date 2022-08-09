@@ -1,6 +1,6 @@
 {
 glyphname = bracketleft;
-kernRight = parenleft;
+kernRight = KO_parenleft;
 layers = (
 {
 layerId = master01;
@@ -250,4 +250,11 @@ width = 354;
 }
 );
 unicode = 91;
+userData = {
+KernOnName = bracketleft;
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = parenthesis;
+};
+};
 }

@@ -1,7 +1,5 @@
 {
 glyphname = Alphamacron;
-kernLeft = A;
-kernRight = A;
 layers = (
 {
 layerId = master01;
@@ -36,11 +34,11 @@ shapes = (
 ref = A;
 },
 {
-pos = (324,0);
+pos = (325,0);
 ref = macroncomb.case;
 }
 );
-width = 671;
+width = 673;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -84,4 +82,10 @@ width = 683;
 );
 metricRight = A;
 unicode = 8121;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

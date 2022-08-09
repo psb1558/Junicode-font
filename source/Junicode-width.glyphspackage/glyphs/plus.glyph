@@ -1,5 +1,7 @@
 {
 glyphname = plus;
+kernLeft = KO_hyphen;
+kernRight = KO_equal;
 layers = (
 {
 layerId = master01;
@@ -141,4 +143,10 @@ width = 500;
 }
 );
 unicode = 43;
+userData = {
+KernOnSpecialSpacing = {
+L = math;
+R = math;
+};
+};
 }

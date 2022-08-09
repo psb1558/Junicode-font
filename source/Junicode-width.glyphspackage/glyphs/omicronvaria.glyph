@@ -1,7 +1,5 @@
 {
 glyphname = omicronvaria;
-kernLeft = c;
-kernRight = b;
 layers = (
 {
 layerId = master01;
@@ -10,11 +8,11 @@ shapes = (
 ref = omicron;
 },
 {
-pos = (448,0);
+pos = (436,0);
 ref = gravecomb.loclELL;
 }
 );
-width = 460;
+width = 437;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -23,11 +21,11 @@ shapes = (
 ref = omicron;
 },
 {
-pos = (457,0);
+pos = (444,0);
 ref = gravecomb.loclELL;
 }
 );
-width = 477;
+width = 451;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -84,4 +82,10 @@ width = 460;
 );
 note = uni1F78;
 unicode = 8056;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

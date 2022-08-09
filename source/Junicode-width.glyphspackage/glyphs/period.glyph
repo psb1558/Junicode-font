@@ -1,6 +1,7 @@
 {
 glyphname = period;
-kernLeft = comma;
+kernLeft = KO_period;
+kernRight = KO_period;
 layers = (
 {
 layerId = master01;
@@ -142,4 +143,10 @@ width = 254;
 }
 );
 unicode = 46;
+userData = {
+KernOnSpecialSpacing = {
+L = period;
+R = period;
+};
+};
 }

@@ -1,5 +1,6 @@
 {
 glyphname = questiondown.sc;
+kernLeft = KO_colon;
 layers = (
 {
 layerId = master01;
@@ -400,4 +401,10 @@ width = 276;
 );
 metricLeft = "=|question.sc";
 metricRight = "=|question.sc";
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

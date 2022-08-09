@@ -1,7 +1,5 @@
 {
 glyphname = alphavaria.sc;
-kernLeft = a.sc;
-kernRight = a.sc;
 layers = (
 {
 layerId = master01;
@@ -82,4 +80,10 @@ ref = gravecomb.loclELL.sc;
 width = 490;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

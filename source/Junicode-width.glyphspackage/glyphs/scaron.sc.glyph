@@ -1,7 +1,6 @@
 {
 glyphname = scaron.sc;
-kernLeft = s.sc;
-kernRight = s.sc;
+kernRight = KO_s;
 layers = (
 {
 layerId = master01;
@@ -82,4 +81,10 @@ ref = caroncomb.sc;
 width = 367;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

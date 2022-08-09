@@ -1,6 +1,5 @@
 {
 glyphname = hyphen.cap;
-kernLeft = hyphen;
 layers = (
 {
 layerId = master01;
@@ -153,4 +152,10 @@ nodes = (
 width = 404;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = emdash;
+kernLeft = KO_emdash;
+kernRight = KO_endash;
 layers = (
 {
 layerId = master01;
@@ -153,4 +155,10 @@ width = 1000;
 }
 );
 unicode = 8212;
+userData = {
+KernOnSpecialSpacing = {
+L = dashes;
+R = dashes;
+};
+};
 }

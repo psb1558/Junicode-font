@@ -1,7 +1,5 @@
 {
 glyphname = upsilon.sc;
-kernLeft = upsilon.sc;
-kernRight = upsilon.sc;
 layers = (
 {
 anchors = (
@@ -509,6 +507,10 @@ width = 468;
 }
 );
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = Upsilon;
 };

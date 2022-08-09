@@ -1,7 +1,7 @@
 {
 glyphname = oacute.sc;
-kernLeft = c.sc;
-kernRight = o.sc;
+kernLeft = KO_d.enlarged;
+kernRight = KO_p;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = acutecomb.sc;
 width = 518;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = smallcaps;
+R = smallcaps;
+};
+};
 }

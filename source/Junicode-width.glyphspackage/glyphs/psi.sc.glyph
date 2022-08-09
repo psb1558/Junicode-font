@@ -1,7 +1,5 @@
 {
 glyphname = psi.sc;
-kernLeft = psi.sc;
-kernRight = psi.sc;
 layers = (
 {
 layerId = master01;
@@ -623,6 +621,10 @@ width = 546;
 }
 );
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = Psi;
 };

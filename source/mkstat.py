@@ -88,8 +88,13 @@ if whichFont == "italic":
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
     for inst in ttfont['fvar'].instances:
-        subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-        inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoBetaVF" + "-" + subfamilyName,
+        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
+            and inst.coordinates['ENLA'] == 0.0):
+            inst.subfamilyNameID = 2
+            inst.postscriptNameID = 6
+        else:
+            subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
+            inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoBetaVF" + "-" + subfamilyName,
                                                        platforms=((3,1,0x409),))
     # We don't need platform 1 names. If there are any, remove them.
     ttfont['name'].removeNames(platformID=1)
@@ -104,8 +109,13 @@ elif whichFont == "roman":
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
     for inst in ttfont['fvar'].instances:
-        subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-        inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoVFBeta" + "-" + subfamilyName,
+        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
+            and inst.coordinates['ENLA'] == 0.0):
+            inst.subfamilyNameID = 2
+            inst.postscriptNameID = 6
+        else:
+            subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
+            inst.postscriptNameID = ttfont['name'].addName("JunicodeTwoVFBeta" + "-" + subfamilyName,
                                                        platforms=((3,1,0x409),))
     # We don't need platform 1 names. If there are any, remove them.
     ttfont['name'].removeNames(platformID=1)

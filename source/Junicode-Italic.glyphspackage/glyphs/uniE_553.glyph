@@ -1,7 +1,6 @@
 {
 category = Letter;
 glyphname = uniE553;
-kernLeft = j;
 layers = (
 {
 layerId = master01;
@@ -25,11 +24,11 @@ ref = jdotless;
 },
 {
 alignment = 1;
-pos = (118,0);
+pos = (102,0);
 ref = acutecomb;
 }
 );
-width = 216;
+width = 193;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -39,11 +38,11 @@ ref = jdotless;
 },
 {
 alignment = 1;
-pos = (98,0);
+pos = (102,0);
 ref = acutecomb;
 }
 );
-width = 182;
+width = 178;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -53,11 +52,11 @@ ref = jdotless;
 },
 {
 alignment = 1;
-pos = (89,1);
+pos = (63,1);
 ref = acutecomb;
 }
 );
-width = 162;
+width = 129;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -67,11 +66,11 @@ ref = jdotless;
 },
 {
 alignment = 1;
-pos = (103,-1);
+pos = (138,-1);
 ref = acutecomb;
 }
 );
-width = 201;
+width = 228;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -85,10 +84,16 @@ pos = (193,258);
 ref = acutecomb;
 }
 );
-width = 282;
+width = 280;
 }
 );
 script = latin;
 subCategory = Lowercase;
 unicode = 58707;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

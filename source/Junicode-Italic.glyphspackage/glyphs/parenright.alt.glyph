@@ -1,6 +1,5 @@
 {
 glyphname = parenright.alt;
-kernLeft = parenright.alt;
 layers = (
 {
 layerId = master01;
@@ -213,4 +212,10 @@ nodes = (
 width = 330;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,6 +1,5 @@
 {
 glyphname = question.alt;
-kernLeft = question;
 layers = (
 {
 layerId = master01;
@@ -383,4 +382,10 @@ width = 368;
 );
 metricLeft = "=question*1.4";
 metricRight = question;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

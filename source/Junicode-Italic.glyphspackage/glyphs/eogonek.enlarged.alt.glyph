@@ -1,6 +1,8 @@
 {
 color = 6;
 glyphname = eogonek.enlarged.alt;
+kernLeft = KO_c;
+kernRight = KO_x;
 layers = (
 {
 layerId = master01;
@@ -87,4 +89,10 @@ ref = ogonekcomb;
 width = 386;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

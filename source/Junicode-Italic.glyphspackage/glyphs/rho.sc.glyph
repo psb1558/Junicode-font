@@ -1,5 +1,7 @@
 {
 glyphname = rho.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_e.swash;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,9 @@ ref = p.sc;
 width = 425;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+R = NoKerning;
+};
+};
 }

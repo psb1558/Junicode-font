@@ -1,5 +1,7 @@
 {
 glyphname = dcaron;
+kernLeft = KO_d;
+kernRight = KO_d;
 layers = (
 {
 layerId = master01;
@@ -84,4 +86,10 @@ width = 641;
 );
 metricRight = "=+30";
 unicode = 271;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

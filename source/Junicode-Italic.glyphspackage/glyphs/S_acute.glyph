@@ -1,5 +1,7 @@
 {
 glyphname = Sacute;
+kernLeft = KO_S;
+kernRight = KO_S;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = S;
 },
 {
-pos = (174,0);
+pos = (163,0);
 ref = acutecomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 484;
 }
 );
 unicode = 346;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

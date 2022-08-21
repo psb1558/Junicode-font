@@ -1,5 +1,7 @@
 {
 glyphname = longs.sc;
+kernLeft = KO_s.sc;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = s.sc;
 width = 305;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

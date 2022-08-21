@@ -1,5 +1,7 @@
 {
 glyphname = ainvertedbreve.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (172,-2);
+pos = (147,-2);
 ref = breveinvertedcomb;
 }
 );
-width = 390;
+width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = etilde;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -73,12 +75,18 @@ shapes = (
 ref = e;
 },
 {
-pos = (357,258);
+pos = (355,258);
 ref = tildecomb;
 }
 );
-width = 451;
+width = 484;
 }
 );
 unicode = 7869;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

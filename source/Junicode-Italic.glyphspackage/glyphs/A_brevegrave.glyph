@@ -1,5 +1,7 @@
 {
 glyphname = Abrevegrave;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (577,0);
+pos = (573,0);
 ref = brevegravecomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 542;
 }
 );
 unicode = 7856;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

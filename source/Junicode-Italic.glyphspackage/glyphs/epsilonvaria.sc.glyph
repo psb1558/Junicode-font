@@ -1,5 +1,7 @@
 {
 glyphname = epsilonvaria.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -81,4 +83,10 @@ width = 440;
 }
 );
 note = uni1F72;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

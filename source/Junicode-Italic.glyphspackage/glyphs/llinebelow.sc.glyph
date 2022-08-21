@@ -1,5 +1,7 @@
 {
 glyphname = llinebelow.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_L;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = macronbelowcomb;
 width = 458;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

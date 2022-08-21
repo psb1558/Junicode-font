@@ -1,5 +1,7 @@
 {
 glyphname = sacute.pcap;
+kernLeft = KO_s.sc;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = acutecomb;
 width = 279;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

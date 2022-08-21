@@ -1,5 +1,7 @@
 {
 glyphname = Bdotaccent.alt1;
+kernLeft = KO_B.alt1;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = dotaccentcomb.case;
 width = 631;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

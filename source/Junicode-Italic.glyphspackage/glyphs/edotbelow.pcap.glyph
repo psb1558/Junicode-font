@@ -1,5 +1,7 @@
 {
 glyphname = edotbelow.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = e.pcap;
 },
 {
-pos = (223,0);
+pos = (197,0);
 ref = dotbelowcomb;
 }
 );
 width = 393;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

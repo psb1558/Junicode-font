@@ -1,5 +1,7 @@
 {
 glyphname = ecedillabreve.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -84,7 +86,7 @@ pos = (250,0);
 ref = brevecomb;
 }
 );
-width = 448;
+width = 447;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -97,11 +99,17 @@ pos = (206,0);
 ref = cedillacomb;
 },
 {
-pos = (241,0);
+pos = (215,0);
 ref = brevecomb;
 }
 );
-width = 396;
+width = 393;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = ymacron.sc;
+kernLeft = KO_u.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -111,6 +113,10 @@ width = 438;
 }
 );
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = uni0232;
 };

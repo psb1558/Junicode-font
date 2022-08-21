@@ -1,5 +1,7 @@
 {
 glyphname = Umacron;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -81,4 +83,10 @@ width = 692;
 }
 );
 unicode = 362;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

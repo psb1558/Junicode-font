@@ -2,6 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = Eth.enlarged;
+kernLeft = KO_s.sc;
+kernRight = KO_h;
 layers = (
 {
 layerId = master01;
@@ -90,6 +92,10 @@ width = 433;
 );
 script = latin;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = eth.nordic;
 };

@@ -2,6 +2,8 @@
 case = lower;
 category = Letter;
 glyphname = eogonekdotbelow.alt;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -81,7 +83,7 @@ ref = e;
 },
 {
 anchor = ogonek_centered;
-pos = (202,-15);
+pos = (200,-15);
 ref = ogonekdotcomb;
 }
 );
@@ -89,4 +91,10 @@ width = 484;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

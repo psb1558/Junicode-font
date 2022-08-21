@@ -1,5 +1,7 @@
 {
 glyphname = ohorngrave;
+kernLeft = ograve;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -37,11 +39,11 @@ ref = ohorn;
 },
 {
 anchor = top_left;
-pos = (230,0);
+pos = (231,0);
 ref = gravecomb;
 }
 );
-width = 393;
+width = 391;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -51,11 +53,11 @@ ref = ohorn;
 },
 {
 anchor = top_left;
-pos = (186,0);
+pos = (187,0);
 ref = gravecomb;
 }
 );
-width = 328;
+width = 334;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -69,7 +71,7 @@ pos = (277,0);
 ref = gravecomb;
 }
 );
-width = 465;
+width = 457;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -79,12 +81,18 @@ ref = ohorn;
 },
 {
 anchor = top_left;
-pos = (371,258);
+pos = (361,258);
 ref = gravecomb;
 }
 );
-width = 572;
+width = 581;
 }
 );
 unicode = 7901;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

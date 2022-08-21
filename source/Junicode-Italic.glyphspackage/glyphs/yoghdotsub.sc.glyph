@@ -2,6 +2,7 @@
 case = smallCaps;
 category = Letter;
 glyphname = yoghdotsub.sc;
+kernRight = KO_h;
 layers = (
 {
 layerId = master01;
@@ -89,4 +90,10 @@ width = 320;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = g.alt4;
+kernLeft = KO_d;
+kernRight = KO_j;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = gsingle;
 width = 445;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

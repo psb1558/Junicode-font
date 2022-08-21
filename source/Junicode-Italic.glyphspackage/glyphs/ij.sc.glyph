@@ -1,5 +1,7 @@
 {
 glyphname = ij.sc;
+kernLeft = KO_p_p.hlig;
+kernRight = KO_n.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = j.sc;
 width = 501;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

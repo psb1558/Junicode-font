@@ -1,5 +1,7 @@
 {
 glyphname = egrave;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = e;
 },
 {
-pos = (356,258);
+pos = (354,258);
 ref = gravecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 484;
 }
 );
 unicode = 232;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

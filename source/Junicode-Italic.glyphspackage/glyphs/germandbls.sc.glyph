@@ -1,5 +1,7 @@
 {
 glyphname = germandbls.sc;
+kernLeft = KO_s.sc;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = s.sc;
 },
 {
-pos = (306,0);
+pos = (372,0);
 ref = s.sc;
 }
 );
-width = 612;
+width = 678;
 },
 {
 layerId = "2438E31C-45B5-47A7-9B3D-1A0FEFB47671";
@@ -82,8 +84,8 @@ width = 611;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

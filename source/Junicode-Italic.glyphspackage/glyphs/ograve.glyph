@@ -1,5 +1,7 @@
 {
 glyphname = ograve;
+kernLeft = ograve;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (370,258);
+pos = (360,258);
 ref = gravecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 581;
 }
 );
 unicode = 242;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

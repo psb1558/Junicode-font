@@ -1,5 +1,7 @@
 {
 glyphname = racute.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = acutecomb;
 width = 459;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

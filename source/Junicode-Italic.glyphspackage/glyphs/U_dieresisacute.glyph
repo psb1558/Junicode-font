@@ -1,5 +1,7 @@
 {
 glyphname = Udieresisacute;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -98,12 +100,12 @@ shapes = (
 ref = U;
 },
 {
-pos = (345,0);
+pos = (338,0);
 ref = dieresiscomb.case;
 },
 {
 anchor = top_acute;
-pos = (385,103);
+pos = (378,103);
 ref = acutecomb.case;
 }
 );
@@ -111,4 +113,10 @@ width = 692;
 }
 );
 unicode = 471;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

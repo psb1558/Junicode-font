@@ -1,5 +1,7 @@
 {
 glyphname = tdotaccent.alt1;
+kernLeft = KO_tinsular;
+kernRight = KO_c;
 layers = (
 {
 layerId = master01;
@@ -21,7 +23,7 @@ shapes = (
 ref = tinsular;
 },
 {
-pos = (339,0);
+pos = (336,0);
 ref = dotaccentcomb;
 }
 );
@@ -73,11 +75,17 @@ shapes = (
 ref = tinsular;
 },
 {
-pos = (489,260);
+pos = (457,260);
 ref = dotaccentcomb;
 }
 );
 width = 661;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Macute;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = M;
 },
 {
-pos = (459,0);
+pos = (450,0);
 ref = acutecomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 916;
 }
 );
 unicode = 7742;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = obreve;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (399,260);
+pos = (389,260);
 ref = brevecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 581;
 }
 );
 unicode = 335;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

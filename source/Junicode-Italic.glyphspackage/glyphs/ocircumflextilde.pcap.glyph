@@ -1,5 +1,7 @@
 {
 glyphname = ocircumflextilde.pcap;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -8,12 +10,8 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (218,-2);
-ref = circumflexcomb;
-},
-{
-pos = (277,250);
-ref = tildecomb;
+pos = (215,0);
+ref = circumflextildecomb;
 }
 );
 width = 452;
@@ -25,12 +23,8 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (231,-2);
-ref = circumflexcomb;
-},
-{
-pos = (289,249);
-ref = tildecomb;
+pos = (211,0);
+ref = circumflextildecomb;
 }
 );
 width = 460;
@@ -42,12 +36,8 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (212,-2);
-ref = circumflexcomb;
-},
-{
-pos = (267,251);
-ref = tildecomb;
+pos = (204,0);
+ref = circumflextildecomb;
 }
 );
 width = 448;
@@ -59,12 +49,8 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (177,-2);
-ref = circumflexcomb;
-},
-{
-pos = (231,250);
-ref = tildecomb;
+pos = (180,0);
+ref = circumflextildecomb;
 }
 );
 width = 389;
@@ -76,12 +62,8 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (250,-2);
-ref = circumflexcomb;
-},
-{
-pos = (309,250);
-ref = tildecomb;
+pos = (246,0);
+ref = circumflextildecomb;
 }
 );
 width = 513;
@@ -93,15 +75,17 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (218,-2);
-ref = circumflexcomb;
-},
-{
-pos = (277,250);
-ref = tildecomb;
+pos = (214,0);
+ref = circumflextildecomb;
 }
 );
 width = 452;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

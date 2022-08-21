@@ -1,6 +1,8 @@
 {
 color = 3;
 glyphname = fl;
+kernLeft = KO_f.rl;
+kernRight = KO_l;
 layers = (
 {
 layerId = master01;
@@ -22,11 +24,11 @@ shapes = (
 ref = f.rl;
 },
 {
-pos = (208,0);
+pos = (246,0);
 ref = l.lf;
 }
 );
-width = 438;
+width = 476;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -35,11 +37,11 @@ shapes = (
 ref = f.rl;
 },
 {
-pos = (225,0);
+pos = (198,0);
 ref = l.lf;
 }
 );
-width = 466;
+width = 439;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -48,11 +50,11 @@ shapes = (
 ref = f.rl;
 },
 {
-pos = (131,0);
+pos = (156,0);
 ref = l.lf;
 }
 );
-width = 336;
+width = 361;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -61,11 +63,11 @@ shapes = (
 ref = f.rl;
 },
 {
-pos = (302,0);
+pos = (261,0);
 ref = l.lf;
 }
 );
-width = 571;
+width = 530;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -84,4 +86,10 @@ width = 448;
 metricLeft = f;
 metricRight = l;
 unicode = 64258;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

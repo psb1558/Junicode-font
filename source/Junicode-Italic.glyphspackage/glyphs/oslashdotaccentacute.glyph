@@ -2,6 +2,8 @@
 case = lower;
 category = Letter;
 glyphname = oslashdotaccentacute;
+kernLeft = KO_o;
+kernRight = KO_h;
 layers = (
 {
 layerId = master01;
@@ -49,11 +51,11 @@ shapes = (
 ref = oslash;
 },
 {
-pos = (159,-2);
+pos = (160,-2);
 ref = dotacutecomb;
 }
 );
-width = 333;
+width = 334;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -83,4 +85,10 @@ width = 562;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

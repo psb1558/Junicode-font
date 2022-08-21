@@ -1,5 +1,7 @@
 {
 glyphname = odotaccentmacron.pcap;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -93,15 +95,21 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (315,0);
+pos = (289,0);
 ref = dotaccentcomb;
 },
 {
-pos = (355,172);
+pos = (329,172);
 ref = macroncomb;
 }
 );
 width = 452;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Yogh.alt;
+kernLeft = KO_A;
+kernRight = KO_j.lf;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = Ezh;
 width = 419;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

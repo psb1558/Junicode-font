@@ -1,5 +1,7 @@
 {
 glyphname = ccaron;
+kernLeft = KO_c;
+kernRight = KO_c;
 layers = (
 {
 layerId = master01;
@@ -21,11 +23,11 @@ shapes = (
 ref = c;
 },
 {
-pos = (227,0);
+pos = (221,0);
 ref = caroncomb;
 }
 );
-width = 381;
+width = 351;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -38,7 +40,7 @@ pos = (213,0);
 ref = caroncomb;
 }
 );
-width = 331;
+width = 337;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -60,11 +62,11 @@ shapes = (
 ref = c;
 },
 {
-pos = (250,0);
+pos = (244,0);
 ref = caroncomb;
 }
 );
-width = 384;
+width = 390;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -73,12 +75,18 @@ shapes = (
 ref = c;
 },
 {
-pos = (328,258);
+pos = (327,258);
 ref = caroncomb;
 }
 );
-width = 466;
+width = 471;
 }
 );
 unicode = 269;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

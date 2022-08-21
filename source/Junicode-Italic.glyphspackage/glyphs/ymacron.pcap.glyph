@@ -1,5 +1,7 @@
 {
 glyphname = ymacron.pcap;
+kernLeft = KO_u.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = y.pcap;
 },
 {
-pos = (324,0);
+pos = (298,0);
 ref = macroncomb;
 }
 );
 width = 397;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

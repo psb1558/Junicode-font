@@ -1,5 +1,7 @@
 {
 glyphname = odieresismacron.sc;
+kernLeft = KO_n.alt3;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -110,4 +112,10 @@ ref = macroncomb.sc;
 width = 497;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

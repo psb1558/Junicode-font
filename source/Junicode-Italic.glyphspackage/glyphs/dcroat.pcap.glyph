@@ -1,5 +1,7 @@
 {
 glyphname = dcroat.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = eth.pcap;
 width = 490;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

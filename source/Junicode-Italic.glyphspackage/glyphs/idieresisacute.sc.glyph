@@ -1,5 +1,7 @@
 {
 glyphname = idieresisacute.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -110,4 +112,10 @@ ref = acutecomb.sc;
 width = 260;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

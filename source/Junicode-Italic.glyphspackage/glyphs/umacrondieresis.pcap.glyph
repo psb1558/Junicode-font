@@ -1,5 +1,7 @@
 {
 glyphname = umacrondieresis.pcap;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -93,15 +95,21 @@ shapes = (
 ref = u.pcap;
 },
 {
-pos = (356,0);
+pos = (331,0);
 ref = macroncomb;
 },
 {
-pos = (303,115);
+pos = (278,115);
 ref = dieresiscomb;
 }
 );
 width = 487;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

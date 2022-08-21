@@ -1,5 +1,7 @@
 {
 glyphname = eopenreversedhook;
+kernLeft = KO_s.enlarged;
+kernRight = KO_s;
 layers = (
 {
 layerId = master01;
@@ -95,4 +97,10 @@ width = 455;
 metricLeft = eopenreversed;
 metricRight = rhotichookmod;
 unicode = 605;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

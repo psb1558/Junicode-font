@@ -1,5 +1,7 @@
 {
 glyphname = vtilde;
+kernLeft = KO_u;
+kernRight = KO_b;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = v;
 },
 {
-pos = (374,258);
+pos = (373,258);
 ref = tildecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 604;
 }
 );
 unicode = 7805;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Uhornacute;
+kernLeft = KO_U;
+kernRight = KO_uniA7C3;
 layers = (
 {
 layerId = master01;
@@ -78,7 +80,7 @@ ref = Uhorn;
 },
 {
 alignment = 1;
-pos = (304,0);
+pos = (297,0);
 ref = acutecomb.case;
 }
 );
@@ -86,4 +88,10 @@ width = 650;
 }
 );
 unicode = 7912;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

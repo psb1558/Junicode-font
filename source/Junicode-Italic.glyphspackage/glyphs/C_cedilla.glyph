@@ -1,5 +1,7 @@
 {
 glyphname = Ccedilla;
+kernLeft = KO_O;
+kernRight = KO_C;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = C;
 },
 {
-pos = (398,2);
+pos = (361,2);
 ref = cedillacomb;
 }
 );
@@ -81,4 +83,10 @@ width = 698;
 }
 );
 unicode = 199;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

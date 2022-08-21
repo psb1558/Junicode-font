@@ -1,5 +1,7 @@
 {
 glyphname = Wdieresis;
+kernLeft = KO_V;
+kernRight = KO_V;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = W;
 },
 {
-pos = (513,0);
+pos = (488,0);
 ref = dieresiscomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 994;
 }
 );
 unicode = 7812;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

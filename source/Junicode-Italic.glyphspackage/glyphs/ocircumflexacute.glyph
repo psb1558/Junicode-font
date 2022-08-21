@@ -1,5 +1,7 @@
 {
 glyphname = ocircumflexacute;
+kernLeft = ocircumflex;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -8,7 +10,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (216,-2);
+pos = (233,-2);
 ref = circumacute.viet;
 }
 );
@@ -81,4 +83,10 @@ width = 511;
 }
 );
 unicode = 7889;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Abrevehookabove;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (312,0);
+pos = (308,0);
 ref = brevehook.case;
 }
 );
@@ -81,4 +83,10 @@ width = 542;
 }
 );
 unicode = 7858;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = z.pcap;
+kernLeft = KO_ssigmoid;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -416,4 +418,8 @@ nodes = (
 width = 401;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+};
+};
 }

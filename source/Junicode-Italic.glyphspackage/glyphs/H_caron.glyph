@@ -1,5 +1,7 @@
 {
 glyphname = Hcaron;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = H;
 },
 {
-pos = (346,0);
+pos = (337,0);
 ref = caroncomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 721;
 }
 );
 unicode = 542;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

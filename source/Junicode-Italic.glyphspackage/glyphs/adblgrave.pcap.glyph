@@ -1,5 +1,7 @@
 {
 glyphname = adblgrave.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (191,-2);
+pos = (166,-2);
 ref = dblgravecomb;
 }
 );
 width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

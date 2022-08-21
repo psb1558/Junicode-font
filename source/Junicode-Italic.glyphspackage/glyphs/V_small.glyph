@@ -1,5 +1,7 @@
 {
 glyphname = Vsmall;
+kernLeft = KO_u.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -17,7 +19,7 @@ shapes = (
 ref = v.pcap;
 }
 );
-width = 437;
+width = 430;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -59,8 +61,8 @@ width = 420;
 unicode = 7456;
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

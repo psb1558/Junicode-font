@@ -1,5 +1,7 @@
 {
 glyphname = cacute.sc;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -112,8 +114,8 @@ width = 477;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 RMXScaler = {
 source = Cacute;

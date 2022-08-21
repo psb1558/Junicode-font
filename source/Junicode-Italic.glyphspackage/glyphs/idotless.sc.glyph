@@ -1,5 +1,7 @@
 {
 glyphname = idotless.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -87,6 +89,10 @@ width = 260;
 }
 );
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = I;
 };

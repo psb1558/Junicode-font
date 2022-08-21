@@ -1,5 +1,7 @@
 {
 glyphname = Ncircumflexbelow;
+kernLeft = KO_H;
+kernRight = KO_N;
 layers = (
 {
 layerId = master01;
@@ -79,7 +81,7 @@ ref = N;
 },
 {
 alignment = 1;
-pos = (381,0);
+pos = (374,0);
 ref = circumflexbelowcomb;
 }
 );
@@ -87,4 +89,10 @@ width = 755;
 }
 );
 unicode = 7754;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

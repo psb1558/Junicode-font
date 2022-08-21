@@ -1,5 +1,7 @@
 {
 glyphname = itilde.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = i.pcap;
 width = 236;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

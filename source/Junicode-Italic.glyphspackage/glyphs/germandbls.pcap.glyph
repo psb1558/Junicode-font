@@ -1,5 +1,7 @@
 {
 glyphname = germandbls.pcap;
+kernLeft = KO_s.sc;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = s.pcap;
 },
 {
-pos = (278,0);
+pos = (344,0);
 ref = s.pcap;
 }
 );
-width = 556;
+width = 622;
 },
 {
 layerId = "2438E31C-45B5-47A7-9B3D-1A0FEFB47671";
@@ -80,4 +82,10 @@ ref = s.pcap;
 width = 557;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

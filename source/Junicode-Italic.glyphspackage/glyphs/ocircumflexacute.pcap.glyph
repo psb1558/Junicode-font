@@ -1,5 +1,7 @@
 {
 glyphname = ocircumflexacute.pcap;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -8,7 +10,7 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (197,-2);
+pos = (214,-2);
 ref = circumacute.viet;
 }
 );
@@ -80,4 +82,10 @@ ref = circumacute.viet;
 width = 478;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

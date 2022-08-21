@@ -1,5 +1,7 @@
 {
 glyphname = acircumflexacute.sc;
+kernLeft = KO_A;
+kernRight = KO_a.sc;
 layers = (
 {
 guides = (
@@ -120,4 +122,10 @@ ref = acutecomb.sc;
 width = 399;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

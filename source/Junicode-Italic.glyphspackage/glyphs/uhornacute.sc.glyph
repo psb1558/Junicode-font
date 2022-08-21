@@ -1,5 +1,7 @@
 {
 glyphname = uhornacute.sc;
+kernLeft = KO_u.enlarged;
+kernRight = KO_n.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = acutecomb.sc;
 width = 521;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

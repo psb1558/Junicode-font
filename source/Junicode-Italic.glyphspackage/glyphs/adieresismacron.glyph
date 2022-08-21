@@ -1,5 +1,7 @@
 {
 glyphname = adieresismacron;
+kernLeft = adieresis;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -93,11 +95,11 @@ shapes = (
 ref = a;
 },
 {
-pos = (416,267);
+pos = (413,267);
 ref = dieresiscomb;
 },
 {
-pos = (549,439);
+pos = (546,439);
 ref = macroncomb;
 }
 );
@@ -105,4 +107,10 @@ width = 684;
 }
 );
 unicode = 479;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

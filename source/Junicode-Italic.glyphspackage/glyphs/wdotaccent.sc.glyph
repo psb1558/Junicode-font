@@ -1,5 +1,7 @@
 {
 glyphname = wdotaccent.sc;
+kernLeft = KO_u.enlarged;
+kernRight = KO_v.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = dotaccentcomb.sc;
 width = 714;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

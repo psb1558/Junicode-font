@@ -1,5 +1,7 @@
 {
 glyphname = Omacronacute;
+kernLeft = KO_O;
+kernRight = KO_O;
 layers = (
 {
 layerId = master01;
@@ -93,11 +95,11 @@ shapes = (
 ref = O;
 },
 {
-pos = (335,0);
+pos = (329,0);
 ref = macroncomb.case;
 },
 {
-pos = (321,138);
+pos = (315,138);
 ref = acutecomb.case;
 }
 );
@@ -105,4 +107,10 @@ width = 667;
 }
 );
 unicode = 7762;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

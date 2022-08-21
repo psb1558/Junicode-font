@@ -1,5 +1,7 @@
 {
 glyphname = Ezhcaron;
+kernLeft = KO_A;
+kernRight = KO_j.lf;
 layers = (
 {
 layerId = master01;
@@ -79,7 +81,7 @@ ref = Ezh;
 },
 {
 alignment = 1;
-pos = (226,0);
+pos = (200,0);
 ref = caroncomb.case;
 }
 );
@@ -87,4 +89,10 @@ width = 419;
 }
 );
 unicode = 494;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

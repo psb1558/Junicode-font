@@ -2,6 +2,8 @@
 case = lower;
 category = Letter;
 glyphname = edotaccentacute;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -83,4 +85,10 @@ width = 451;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Zsmall;
+kernLeft = KO_ssigmoid;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -17,7 +19,7 @@ shapes = (
 ref = z.pcap;
 }
 );
-width = 451;
+width = 446;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -59,8 +61,8 @@ width = 401;
 unicode = 7458;
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

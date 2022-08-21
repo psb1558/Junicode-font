@@ -1,5 +1,7 @@
 {
 glyphname = otildedieresis;
+kernLeft = otilde;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -93,16 +95,22 @@ shapes = (
 ref = o;
 },
 {
-pos = (371,258);
+pos = (361,258);
 ref = tildecomb;
 },
 {
-pos = (418,423);
+pos = (408,423);
 ref = dieresiscomb;
 }
 );
-width = 576;
+width = 581;
 }
 );
 unicode = 7759;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

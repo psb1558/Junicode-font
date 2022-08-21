@@ -1,5 +1,7 @@
 {
 glyphname = napostrophe;
+kernLeft = KO_quoteright;
+kernRight = KO_quoteright;
 layers = (
 {
 layerId = master01;
@@ -96,4 +98,10 @@ width = 889;
 metricLeft = "=quoteright/2";
 metricRight = n;
 unicode = 329;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

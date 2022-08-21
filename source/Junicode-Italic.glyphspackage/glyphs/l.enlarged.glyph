@@ -1,6 +1,8 @@
 {
 color = 6;
 glyphname = l.enlarged;
+kernLeft = KO_l;
+kernRight = KO_l;
 layers = (
 {
 layerId = master01;
@@ -57,4 +59,10 @@ ref = l;
 width = 246;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

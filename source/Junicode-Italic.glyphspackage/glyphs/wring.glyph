@@ -1,5 +1,7 @@
 {
 glyphname = wring;
+kernLeft = KO_u;
+kernRight = KO_b;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = w;
 },
 {
-pos = (587,258);
+pos = (586,258);
 ref = ringcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 929;
 }
 );
 unicode = 7832;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

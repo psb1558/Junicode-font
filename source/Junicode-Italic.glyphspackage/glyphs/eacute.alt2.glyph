@@ -1,5 +1,7 @@
 {
 glyphname = eacute.alt2;
+kernLeft = KO_d;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -21,7 +23,7 @@ shapes = (
 ref = e.alt2;
 },
 {
-pos = (240,-2);
+pos = (234,-2);
 ref = acutecomb;
 }
 );
@@ -60,7 +62,7 @@ shapes = (
 ref = e.alt2;
 },
 {
-pos = (276,-2);
+pos = (270,-2);
 ref = acutecomb;
 }
 );
@@ -73,11 +75,17 @@ shapes = (
 ref = e.alt2;
 },
 {
-pos = (211,-2);
+pos = (210,-2);
 ref = acutecomb;
 }
 );
 width = 346;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

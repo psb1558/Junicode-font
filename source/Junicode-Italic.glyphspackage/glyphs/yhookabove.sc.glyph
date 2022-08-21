@@ -1,5 +1,7 @@
 {
 glyphname = yhookabove.sc;
+kernLeft = KO_u.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = hookabovecomb.sc;
 width = 438;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = adieresismacron.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -93,15 +95,21 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (222,-2);
+pos = (197,-2);
 ref = dieresiscomb;
 },
 {
-pos = (355,170);
+pos = (330,170);
 ref = macroncomb;
 }
 );
-width = 403;
+width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

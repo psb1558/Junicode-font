@@ -1,5 +1,7 @@
 {
 glyphname = abrevetilde;
+kernLeft = abreve;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -98,12 +100,12 @@ shapes = (
 ref = a;
 },
 {
-pos = (430,269);
+pos = (427,269);
 ref = brevecomb;
 },
 {
 anchor = top_med;
-pos = (448,439);
+pos = (445,439);
 ref = tildecomb;
 }
 );
@@ -111,4 +113,10 @@ width = 684;
 }
 );
 unicode = 7861;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

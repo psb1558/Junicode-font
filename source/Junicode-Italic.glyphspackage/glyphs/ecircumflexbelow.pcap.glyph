@@ -1,5 +1,7 @@
 {
 glyphname = ecircumflexbelow.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = e.pcap;
 },
 {
-pos = (231,0);
+pos = (205,0);
 ref = circumflexbelowcomb;
 }
 );
 width = 393;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

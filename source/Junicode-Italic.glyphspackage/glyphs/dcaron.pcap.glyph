@@ -1,5 +1,7 @@
 {
 glyphname = dcaron.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = caroncomb;
 width = 493;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

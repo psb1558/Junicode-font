@@ -1,5 +1,7 @@
 {
 glyphname = utildeacute.pcap;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -93,15 +95,21 @@ shapes = (
 ref = u.pcap;
 },
 {
-pos = (256,-2);
+pos = (231,-2);
 ref = tildecomb;
 },
 {
-pos = (290,163);
+pos = (265,163);
 ref = acutecomb;
 }
 );
 width = 487;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

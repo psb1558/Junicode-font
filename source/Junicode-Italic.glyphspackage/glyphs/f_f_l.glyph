@@ -1,6 +1,8 @@
 {
 color = 3;
 glyphname = f_f_l;
+kernLeft = KO_f_j;
+kernRight = KO_l;
 layers = (
 {
 layerId = master01;
@@ -26,15 +28,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (191,0);
+pos = (258,0);
 ref = f.lfrl;
 },
 {
-pos = (378,0);
+pos = (483,0);
 ref = l.lf;
 }
 );
-width = 608;
+width = 713;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -43,15 +45,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (236,0);
+pos = (232,0);
 ref = f.lfrl;
 },
 {
-pos = (460,0);
+pos = (432,0);
 ref = l.lf;
 }
 );
-width = 701;
+width = 673;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -60,15 +62,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (143,0);
+pos = (196,0);
 ref = f.lfrl;
 },
 {
-pos = (274,0);
+pos = (350,0);
 ref = l.lf;
 }
 );
-width = 479;
+width = 555;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -77,15 +79,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (304,0);
+pos = (262,0);
 ref = f.lfrl;
 },
 {
-pos = (592,0);
+pos = (509,0);
 ref = l.lf;
 }
 );
-width = 861;
+width = 778;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -107,4 +109,10 @@ width = 676;
 );
 metricLeft = f;
 metricRight = l;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

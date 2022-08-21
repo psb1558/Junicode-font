@@ -1,5 +1,7 @@
 {
 glyphname = ubreve;
+kernLeft = KO_u;
+kernRight = KO_u;
 layers = (
 {
 layerId = master01;
@@ -87,4 +89,10 @@ width = 755;
 }
 );
 unicode = 365;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

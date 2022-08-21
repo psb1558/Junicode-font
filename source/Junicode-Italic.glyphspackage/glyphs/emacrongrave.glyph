@@ -1,5 +1,7 @@
 {
 glyphname = emacrongrave;
+kernLeft = emacron;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -93,16 +95,22 @@ shapes = (
 ref = e;
 },
 {
-pos = (457,260);
+pos = (455,260);
 ref = macroncomb;
 },
 {
-pos = (389,375);
+pos = (387,375);
 ref = gravecomb;
 }
 );
-width = 453;
+width = 484;
 }
 );
 unicode = 7701;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

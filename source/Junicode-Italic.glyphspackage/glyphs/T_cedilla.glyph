@@ -1,5 +1,7 @@
 {
 glyphname = Tcedilla;
+kernLeft = KO_T;
+kernRight = KO_T;
 layers = (
 {
 layerId = master01;
@@ -21,7 +23,7 @@ shapes = (
 ref = T;
 },
 {
-pos = (284,2);
+pos = (273,2);
 ref = cedillacomb;
 }
 );
@@ -73,7 +75,7 @@ shapes = (
 ref = T;
 },
 {
-pos = (280,2);
+pos = (268,2);
 ref = cedillacomb;
 }
 );
@@ -81,4 +83,10 @@ width = 641;
 }
 );
 unicode = 354;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

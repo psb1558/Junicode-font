@@ -1,5 +1,7 @@
 {
 glyphname = agrave;
+kernLeft = KO_a;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = a;
 },
 {
-pos = (401,267);
+pos = (398,267);
 ref = gravecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 684;
 }
 );
 unicode = 224;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

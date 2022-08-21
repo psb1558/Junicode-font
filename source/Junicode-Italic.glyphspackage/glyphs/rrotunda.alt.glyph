@@ -1,5 +1,7 @@
 {
 glyphname = rrotunda.alt;
+kernLeft = KO_rrotunda;
+kernRight = KO_k;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = rrotunda;
 width = 508;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

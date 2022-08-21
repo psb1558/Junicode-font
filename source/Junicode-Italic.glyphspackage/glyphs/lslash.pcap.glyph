@@ -1,5 +1,7 @@
 {
 glyphname = lslash.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_L;
 layers = (
 {
 layerId = master01;
@@ -86,4 +88,10 @@ ref = slashshortcomb;
 width = 415;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

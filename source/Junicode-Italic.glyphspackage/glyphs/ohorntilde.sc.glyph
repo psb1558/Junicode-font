@@ -1,5 +1,7 @@
 {
 glyphname = ohorntilde.sc;
+kernLeft = KO_n.alt3;
+kernRight = KO_h;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = tildecomb.sc;
 width = 497;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

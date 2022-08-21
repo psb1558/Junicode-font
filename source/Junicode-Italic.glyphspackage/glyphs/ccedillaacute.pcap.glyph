@@ -1,5 +1,7 @@
 {
 glyphname = ccedillaacute.pcap;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_x;
 layers = (
 {
 layerId = master01;
@@ -84,7 +86,7 @@ pos = (290,-2);
 ref = acutecomb;
 }
 );
-width = 498;
+width = 499;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -104,4 +106,10 @@ ref = acutecomb;
 width = 438;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

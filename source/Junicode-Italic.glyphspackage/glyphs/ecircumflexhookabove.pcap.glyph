@@ -1,5 +1,7 @@
 {
 glyphname = ecircumflexhookabove.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = e.pcap;
 },
 {
-pos = (211,-2);
+pos = (185,-2);
 ref = circumhook.viet;
 }
 );
-width = 406;
+width = 393;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

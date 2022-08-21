@@ -1,5 +1,7 @@
 {
 glyphname = Hbrevebelow;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = H;
 },
 {
-pos = (357,0);
+pos = (348,0);
 ref = brevebelowcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 721;
 }
 );
 unicode = 7722;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

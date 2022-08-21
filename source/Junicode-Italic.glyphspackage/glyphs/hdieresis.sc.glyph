@@ -1,5 +1,7 @@
 {
 glyphname = hdieresis.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 guides = (
@@ -90,4 +92,10 @@ ref = dieresiscomb.sc;
 width = 527;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

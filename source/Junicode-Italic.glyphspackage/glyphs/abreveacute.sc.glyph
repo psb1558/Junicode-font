@@ -1,5 +1,7 @@
 {
 glyphname = abreveacute.sc;
+kernLeft = KO_A;
+kernRight = KO_a.sc;
 layers = (
 {
 layerId = master01;
@@ -9,12 +11,7 @@ ref = a.sc;
 },
 {
 pos = (440,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_acute;
-pos = (232,158);
-ref = acutecomb.sc;
+ref = breveacutecomb.sc;
 }
 );
 width = 399;
@@ -27,12 +24,7 @@ ref = a.sc;
 },
 {
 pos = (450,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_acute;
-pos = (245,158);
-ref = acutecomb.sc;
+ref = breveacutecomb.sc;
 }
 );
 width = 404;
@@ -45,12 +37,7 @@ ref = a.sc;
 },
 {
 pos = (423,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_acute;
-pos = (231,154);
-ref = acutecomb.sc;
+ref = breveacutecomb.sc;
 }
 );
 width = 399;
@@ -63,12 +50,7 @@ ref = a.sc;
 },
 {
 pos = (356,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_acute;
-pos = (211,158);
-ref = acutecomb.sc;
+ref = breveacutecomb.sc;
 }
 );
 width = 332;
@@ -81,12 +63,7 @@ ref = a.sc;
 },
 {
 pos = (522,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_acute;
-pos = (273,148);
-ref = acutecomb.sc;
+ref = breveacutecomb.sc;
 }
 );
 width = 467;
@@ -99,15 +76,16 @@ ref = a.sc;
 },
 {
 pos = (440,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_acute;
-pos = (232,158);
-ref = acutecomb.sc;
+ref = breveacutecomb.sc;
 }
 );
 width = 399;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

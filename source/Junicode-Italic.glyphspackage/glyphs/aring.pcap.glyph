@@ -1,5 +1,7 @@
 {
 glyphname = aring.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (220,-2);
+pos = (195,-2);
 ref = ringcomb;
 }
 );
 width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

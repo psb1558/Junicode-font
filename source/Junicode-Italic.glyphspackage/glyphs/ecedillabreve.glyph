@@ -1,5 +1,6 @@
 {
 glyphname = ecedillabreve;
+kernLeft = ebreve;
 layers = (
 {
 layerId = master01;
@@ -73,12 +74,18 @@ shapes = (
 ref = ecedilla;
 },
 {
-pos = (385,260);
+pos = (383,260);
 ref = brevecomb;
 }
 );
-width = 473;
+width = 484;
 }
 );
 unicode = 7709;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

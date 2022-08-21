@@ -1,5 +1,7 @@
 {
 glyphname = i.romnum1;
+kernLeft = KO_i;
+kernRight = KO_i;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = i;
 width = 400;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

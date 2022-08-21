@@ -1,5 +1,7 @@
 {
 glyphname = xdieresis.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = x.pcap;
 },
 {
-pos = (266,-2);
+pos = (241,-2);
 ref = dieresiscomb;
 }
 );
 width = 437;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

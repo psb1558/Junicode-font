@@ -1,5 +1,7 @@
 {
 glyphname = Ubreve;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -34,11 +36,11 @@ shapes = (
 ref = U;
 },
 {
-pos = (416,250);
+pos = (415,250);
 ref = brevecomb;
 }
 );
-width = 689;
+width = 688;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -47,11 +49,11 @@ shapes = (
 ref = U;
 },
 {
-pos = (350,250);
+pos = (349,250);
 ref = brevecomb;
 }
 );
-width = 565;
+width = 564;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -60,11 +62,11 @@ shapes = (
 ref = U;
 },
 {
-pos = (480,250);
+pos = (479,250);
 ref = brevecomb;
 }
 );
-width = 820;
+width = 819;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -73,7 +75,7 @@ shapes = (
 ref = U;
 },
 {
-pos = (422,250);
+pos = (415,250);
 ref = brevecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 692;
 }
 );
 unicode = 364;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

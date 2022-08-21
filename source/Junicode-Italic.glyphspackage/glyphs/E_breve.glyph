@@ -1,5 +1,7 @@
 {
 glyphname = Ebreve;
+kernLeft = KO_H;
+kernRight = KO_E;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = E;
 },
 {
-pos = (419,250);
+pos = (410,250);
 ref = brevecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 601;
 }
 );
 unicode = 276;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

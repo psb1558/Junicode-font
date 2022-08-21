@@ -1,5 +1,7 @@
 {
 glyphname = Utildebelow;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -79,7 +81,7 @@ ref = U;
 },
 {
 alignment = 1;
-pos = (313,0);
+pos = (306,0);
 ref = tildebelowcomb;
 }
 );
@@ -87,4 +89,10 @@ width = 692;
 }
 );
 unicode = 7796;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = ytilde.pcap;
+kernLeft = KO_u.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = y.pcap;
 },
 {
-pos = (224,-2);
+pos = (198,-2);
 ref = tildecomb;
 }
 );
 width = 397;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

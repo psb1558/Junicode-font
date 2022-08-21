@@ -1,5 +1,7 @@
 {
 glyphname = gcaron;
+kernLeft = KO_g;
+kernRight = KO_g;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = g;
 },
 {
-pos = (302,258);
+pos = (276,258);
 ref = caroncomb;
 }
 );
@@ -81,4 +83,10 @@ width = 571;
 }
 );
 unicode = 487;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

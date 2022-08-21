@@ -1,5 +1,7 @@
 {
 glyphname = alphadasiaperispomeniypogegrammeni.sc;
+kernLeft = KO_A;
+kernRight = KO_a.sc;
 layers = (
 {
 layerId = master01;
@@ -104,4 +106,10 @@ ref = commareversedabovecomb_perispomenicomb.sc;
 width = 399;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

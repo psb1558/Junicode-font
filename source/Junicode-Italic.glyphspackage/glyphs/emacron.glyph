@@ -1,5 +1,7 @@
 {
 glyphname = emacron;
+kernLeft = emacron;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -73,12 +75,18 @@ shapes = (
 ref = e;
 },
 {
-pos = (457,260);
+pos = (455,260);
 ref = macroncomb;
 }
 );
-width = 453;
+width = 484;
 }
 );
 unicode = 275;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

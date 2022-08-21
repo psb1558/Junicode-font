@@ -1,5 +1,7 @@
 {
 glyphname = eta.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,9 @@ ref = h.sc;
 width = 527;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+R = NoKerning;
+};
+};
 }

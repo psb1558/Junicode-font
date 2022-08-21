@@ -1,5 +1,7 @@
 {
 glyphname = fdotaccent.alt1;
+kernLeft = KO_r;
+kernRight = KO_r;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = finsular;
 },
 {
-pos = (515,260);
+pos = (485,260);
 ref = dotaccentcomb;
 }
 );
 width = 697;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

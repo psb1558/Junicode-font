@@ -1,5 +1,7 @@
 {
 glyphname = Wacute;
+kernLeft = KO_V;
+kernRight = KO_V;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = W;
 },
 {
-pos = (472,0);
+pos = (447,0);
 ref = acutecomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 994;
 }
 );
 unicode = 7810;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

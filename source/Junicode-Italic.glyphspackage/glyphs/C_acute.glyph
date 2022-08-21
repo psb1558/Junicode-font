@@ -1,5 +1,7 @@
 {
 glyphname = Cacute;
+kernLeft = KO_O;
+kernRight = KO_C;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = C;
 },
 {
-pos = (352,0);
+pos = (315,0);
 ref = acutecomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 698;
 }
 );
 unicode = 262;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Aogonek;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (456,0);
+pos = (452,0);
 ref = ogonekcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 542;
 }
 );
 unicode = 260;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

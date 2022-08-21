@@ -1,5 +1,7 @@
 {
 glyphname = ccedillaacute.sc;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -104,4 +106,10 @@ ref = acutecomb.sc;
 width = 477;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = zacute.pcap;
+kernLeft = KO_ssigmoid;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = acutecomb;
 width = 401;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

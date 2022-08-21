@@ -1,5 +1,7 @@
 {
 glyphname = longsdotaccent;
+kernLeft = KO_longs;
+kernRight = KO_longs;
 layers = (
 {
 layerId = master01;
@@ -21,11 +23,11 @@ shapes = (
 ref = longs;
 },
 {
-pos = (414,274);
+pos = (412,274);
 ref = dotaccentcomb;
 }
 );
-width = 236;
+width = 225;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -73,12 +75,18 @@ shapes = (
 ref = longs;
 },
 {
-pos = (397,274);
+pos = (373,274);
 ref = dotaccentcomb;
 }
 );
-width = 254;
+width = 256;
 }
 );
 unicode = 7835;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

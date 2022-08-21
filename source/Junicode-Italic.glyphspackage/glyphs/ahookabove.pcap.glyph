@@ -1,5 +1,7 @@
 {
 glyphname = ahookabove.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (178,-42);
+pos = (153,-42);
 ref = hookabovecomb.sc;
 }
 );
 width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

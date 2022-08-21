@@ -1,5 +1,7 @@
 {
 glyphname = Icircumflex;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,12 +75,18 @@ shapes = (
 ref = I;
 },
 {
-pos = (218,0);
+pos = (209,0);
 ref = circumflexcomb.case;
 }
 );
-width = 356;
+width = 348;
 }
 );
 unicode = 206;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

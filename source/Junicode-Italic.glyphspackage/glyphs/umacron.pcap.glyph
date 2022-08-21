@@ -1,5 +1,7 @@
 {
 glyphname = umacron.pcap;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = u.pcap;
 },
 {
-pos = (356,0);
+pos = (331,0);
 ref = macroncomb;
 }
 );
 width = 487;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

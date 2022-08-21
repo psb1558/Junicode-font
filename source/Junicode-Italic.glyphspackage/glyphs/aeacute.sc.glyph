@@ -1,5 +1,7 @@
 {
 glyphname = aeacute.sc;
+kernLeft = KO_A;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = acutecomb.sc;
 width = 633;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

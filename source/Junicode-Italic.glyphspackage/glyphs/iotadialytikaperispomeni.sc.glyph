@@ -1,5 +1,7 @@
 {
 glyphname = iotadialytikaperispomeni.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = dieresiscomb_perispomenicomb.loclELL.sc;
 width = 260;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

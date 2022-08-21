@@ -1,5 +1,7 @@
 {
 glyphname = gdotaccent;
+kernLeft = KO_g;
+kernRight = KO_g;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = g;
 },
 {
-pos = (404,260);
+pos = (378,260);
 ref = dotaccentcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 571;
 }
 );
 unicode = 289;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

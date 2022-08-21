@@ -1,5 +1,7 @@
 {
 glyphname = scaron.sc;
+kernLeft = KO_s.sc;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -112,8 +114,8 @@ width = 305;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 RMXScaler = {
 source = Scaron;

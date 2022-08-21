@@ -1,5 +1,7 @@
 {
 glyphname = aogonek.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = ogonekcomb;
 width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

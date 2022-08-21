@@ -1,5 +1,7 @@
 {
 glyphname = i.sc1;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -25,7 +27,7 @@ pos = (300,42);
 ref = dotaccentcomb;
 }
 );
-width = 283;
+width = 282;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -80,4 +82,10 @@ ref = dotaccentcomb;
 width = 260;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

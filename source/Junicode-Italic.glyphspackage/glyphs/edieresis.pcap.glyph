@@ -1,5 +1,7 @@
 {
 glyphname = edieresis.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -64,7 +66,7 @@ pos = (260,-2);
 ref = dieresiscomb;
 }
 );
-width = 448;
+width = 447;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -73,11 +75,17 @@ shapes = (
 ref = e.pcap;
 },
 {
-pos = (227,-2);
+pos = (201,-2);
 ref = dieresiscomb;
 }
 );
-width = 399;
+width = 393;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

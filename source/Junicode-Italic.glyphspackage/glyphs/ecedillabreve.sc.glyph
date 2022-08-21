@@ -1,5 +1,7 @@
 {
 glyphname = ecedillabreve.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -104,4 +106,10 @@ ref = brevecomb;
 width = 440;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

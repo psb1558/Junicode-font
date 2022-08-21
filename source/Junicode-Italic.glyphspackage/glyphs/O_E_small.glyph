@@ -1,5 +1,7 @@
 {
 glyphname = OEsmall;
+kernLeft = KO_c;
+kernRight = KO_x;
 layers = (
 {
 layerId = master01;
@@ -17,7 +19,7 @@ shapes = (
 ref = oe.pcap;
 }
 );
-width = 676;
+width = 678;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -59,8 +61,8 @@ width = 664;
 unicode = 630;
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

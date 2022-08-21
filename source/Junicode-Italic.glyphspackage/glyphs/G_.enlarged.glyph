@@ -2,6 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = G.enlarged;
+kernLeft = KO_g.enlarged;
+kernRight = KO_Q;
 layers = (
 {
 layerId = master01;
@@ -90,6 +92,10 @@ width = 423;
 );
 script = latin;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = g;
 };

@@ -1,5 +1,7 @@
 {
 glyphname = abrevegrave.sc;
+kernLeft = KO_A;
+kernRight = KO_a.sc;
 layers = (
 {
 layerId = master01;
@@ -9,12 +11,7 @@ ref = a.sc;
 },
 {
 pos = (440,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_low;
-pos = (205,158);
-ref = gravecomb.sc;
+ref = brevegravecomb.sc;
 }
 );
 width = 399;
@@ -27,12 +24,7 @@ ref = a.sc;
 },
 {
 pos = (450,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_low;
-pos = (222,158);
-ref = gravecomb.sc;
+ref = brevegravecomb.sc;
 }
 );
 width = 404;
@@ -45,12 +37,7 @@ ref = a.sc;
 },
 {
 pos = (423,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_low;
-pos = (211,154);
-ref = gravecomb.sc;
+ref = brevegravecomb.sc;
 }
 );
 width = 399;
@@ -63,12 +50,7 @@ ref = a.sc;
 },
 {
 pos = (356,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_low;
-pos = (167,158);
-ref = gravecomb.sc;
+ref = brevegravecomb.sc;
 }
 );
 width = 332;
@@ -81,12 +63,7 @@ ref = a.sc;
 },
 {
 pos = (522,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_low;
-pos = (261,148);
-ref = gravecomb.sc;
+ref = brevegravecomb.sc;
 }
 );
 width = 467;
@@ -99,15 +76,16 @@ ref = a.sc;
 },
 {
 pos = (440,0);
-ref = brevecomb.sc;
-},
-{
-anchor = top_low;
-pos = (205,158);
-ref = gravecomb.sc;
+ref = brevegravecomb.sc;
 }
 );
 width = 399;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

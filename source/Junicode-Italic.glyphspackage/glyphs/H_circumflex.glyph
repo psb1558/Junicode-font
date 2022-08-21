@@ -1,5 +1,7 @@
 {
 glyphname = Hcircumflex;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -47,11 +49,11 @@ shapes = (
 ref = H;
 },
 {
-pos = (328,0);
+pos = (326,0);
 ref = circumflexcomb.case;
 }
 );
-width = 589;
+width = 587;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -73,7 +75,7 @@ shapes = (
 ref = H;
 },
 {
-pos = (402,0);
+pos = (393,0);
 ref = circumflexcomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 721;
 }
 );
 unicode = 292;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

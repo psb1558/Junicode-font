@@ -1,5 +1,7 @@
 {
 glyphname = Idieresisacute;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -98,17 +100,23 @@ shapes = (
 ref = I;
 },
 {
-pos = (204,0);
+pos = (195,0);
 ref = dieresiscomb.case;
 },
 {
 anchor = top_acute;
-pos = (244,103);
+pos = (235,103);
 ref = acutecomb.case;
 }
 );
-width = 358;
+width = 348;
 }
 );
 unicode = 7726;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

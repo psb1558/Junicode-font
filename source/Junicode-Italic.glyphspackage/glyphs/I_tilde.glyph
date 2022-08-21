@@ -1,5 +1,7 @@
 {
 glyphname = Itilde;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,12 +75,18 @@ shapes = (
 ref = I;
 },
 {
-pos = (203,0);
+pos = (194,0);
 ref = tildecomb.case;
 }
 );
-width = 356;
+width = 348;
 }
 );
 unicode = 296;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

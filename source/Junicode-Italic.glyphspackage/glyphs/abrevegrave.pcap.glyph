@@ -1,5 +1,7 @@
 {
 glyphname = abrevegrave.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -9,12 +11,7 @@ ref = a.pcap;
 },
 {
 pos = (214,0);
-ref = brevecomb;
-},
-{
-anchor = top_low;
-pos = (172,120);
-ref = gravecomb;
+ref = brevegravecomb;
 }
 );
 width = 380;
@@ -27,11 +24,7 @@ ref = a.pcap;
 },
 {
 pos = (204,0);
-ref = brevecomb;
-},
-{
-pos = (244,229);
-ref = gravecomb;
+ref = brevegravecomb;
 }
 );
 width = 381;
@@ -44,11 +37,7 @@ ref = a.pcap;
 },
 {
 pos = (214,0);
-ref = brevecomb;
-},
-{
-pos = (245,208);
-ref = gravecomb;
+ref = brevegravecomb;
 }
 );
 width = 380;
@@ -61,11 +50,7 @@ ref = a.pcap;
 },
 {
 pos = (175,0);
-ref = brevecomb;
-},
-{
-pos = (206,219);
-ref = gravecomb;
+ref = brevegravecomb;
 }
 );
 width = 317;
@@ -78,11 +63,7 @@ ref = a.pcap;
 },
 {
 pos = (253,0);
-ref = brevecomb;
-},
-{
-pos = (286,213);
-ref = gravecomb;
+ref = brevegravecomb;
 }
 );
 width = 441;
@@ -94,16 +75,17 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (236,0);
-ref = brevecomb;
-},
-{
-anchor = top_lowleft;
-pos = (269,213);
-ref = gravecomb;
+pos = (209,0);
+ref = brevegravecomb;
 }
 );
-width = 400;
+width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

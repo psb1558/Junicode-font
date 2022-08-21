@@ -1,5 +1,7 @@
 {
 glyphname = Usmall;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -17,7 +19,7 @@ shapes = (
 ref = u.pcap;
 }
 );
-width = 500;
+width = 499;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -59,8 +61,8 @@ width = 487;
 unicode = 7452;
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

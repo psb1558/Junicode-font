@@ -1,5 +1,7 @@
 {
 glyphname = ncommaaccent.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_n.sc;
 layers = (
 {
 layerId = master01;
@@ -82,8 +84,8 @@ width = 529;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

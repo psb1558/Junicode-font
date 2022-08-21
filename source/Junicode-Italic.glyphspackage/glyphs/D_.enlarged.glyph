@@ -2,6 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = D.enlarged;
+kernLeft = KO_a.enlarged;
+kernRight = KO_l;
 layers = (
 {
 layerId = master01;
@@ -61,4 +63,10 @@ width = 549;
 metricLeft = d;
 metricRight = d;
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

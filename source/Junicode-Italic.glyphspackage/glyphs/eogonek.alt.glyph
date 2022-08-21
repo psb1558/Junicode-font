@@ -1,5 +1,7 @@
 {
 glyphname = eogonek.alt;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 guides = (
@@ -100,4 +102,10 @@ width = 484;
 );
 metricLeft = e;
 metricRight = e;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

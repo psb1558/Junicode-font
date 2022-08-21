@@ -1,5 +1,7 @@
 {
 glyphname = Dzcaron;
+kernLeft = KO_H;
+kernRight = KO_O;
 layers = (
 {
 layerId = master01;
@@ -38,7 +40,7 @@ pos = (726,0);
 ref = zcaron;
 }
 );
-width = 1197;
+width = 1162;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -47,11 +49,11 @@ shapes = (
 ref = D;
 },
 {
-pos = (633,0);
+pos = (631,0);
 ref = zcaron;
 }
 );
-width = 1018;
+width = 982;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -60,11 +62,11 @@ shapes = (
 ref = D;
 },
 {
-pos = (815,0);
+pos = (819,0);
 ref = zcaron;
 }
 );
-width = 1375;
+width = 1336;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -73,12 +75,18 @@ shapes = (
 ref = D;
 },
 {
-pos = (739,0);
+pos = (737,0);
 ref = zcaron;
 }
 );
-width = 1407;
+width = 1405;
 }
 );
 unicode = 453;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

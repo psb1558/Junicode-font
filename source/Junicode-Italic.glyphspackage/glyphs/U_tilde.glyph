@@ -1,5 +1,7 @@
 {
 glyphname = Utilde;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -34,11 +36,11 @@ shapes = (
 ref = U;
 },
 {
-pos = (360,0);
+pos = (359,0);
 ref = tildecomb.case;
 }
 );
-width = 689;
+width = 688;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -81,4 +83,10 @@ width = 692;
 }
 );
 unicode = 360;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

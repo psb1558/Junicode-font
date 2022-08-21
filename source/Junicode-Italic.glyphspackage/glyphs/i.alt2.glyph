@@ -1,5 +1,7 @@
 {
 glyphname = i.alt2;
+kernLeft = KO_u;
+kernRight = KO_n;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = dotlessi;
 width = 394;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

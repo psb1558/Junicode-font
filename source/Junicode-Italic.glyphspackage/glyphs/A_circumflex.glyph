@@ -1,5 +1,7 @@
 {
 glyphname = Acircumflex;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -34,7 +36,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (371,0);
+pos = (367,0);
 ref = circumflexcomb.case;
 }
 );
@@ -73,7 +75,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (345,0);
+pos = (341,0);
 ref = circumflexcomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 542;
 }
 );
 unicode = 194;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

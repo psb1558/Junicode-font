@@ -1,5 +1,7 @@
 {
 glyphname = et.alt;
+kernLeft = KO_colon;
+kernRight = KO_guillemotleft;
 layers = (
 {
 layerId = master01;
@@ -62,4 +64,10 @@ ref = semicolon;
 width = 273;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

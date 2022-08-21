@@ -1,5 +1,7 @@
 {
 glyphname = ccircumflex;
+kernLeft = KO_c;
+kernRight = KO_c;
 layers = (
 {
 layerId = master01;
@@ -21,11 +23,11 @@ shapes = (
 ref = c;
 },
 {
-pos = (243,0);
+pos = (237,0);
 ref = circumflexcomb;
 }
 );
-width = 373;
+width = 351;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -38,7 +40,7 @@ pos = (214,0);
 ref = circumflexcomb;
 }
 );
-width = 332;
+width = 337;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -47,11 +49,11 @@ shapes = (
 ref = c;
 },
 {
-pos = (182,0);
+pos = (181,0);
 ref = circumflexcomb;
 }
 );
-width = 292;
+width = 288;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -60,11 +62,11 @@ shapes = (
 ref = c;
 },
 {
-pos = (255,0);
+pos = (249,0);
 ref = circumflexcomb;
 }
 );
-width = 374;
+width = 390;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -73,12 +75,18 @@ shapes = (
 ref = c;
 },
 {
-pos = (333,258);
+pos = (332,258);
 ref = circumflexcomb;
 }
 );
-width = 455;
+width = 471;
 }
 );
 unicode = 265;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

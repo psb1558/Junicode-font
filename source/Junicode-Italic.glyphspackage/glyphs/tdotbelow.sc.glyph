@@ -1,5 +1,7 @@
 {
 glyphname = tdotbelow.sc;
+kernLeft = KO_r.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = dotbelowcomb;
 width = 442;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

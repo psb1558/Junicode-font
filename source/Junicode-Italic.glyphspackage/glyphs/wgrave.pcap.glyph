@@ -1,5 +1,7 @@
 {
 glyphname = wgrave.pcap;
+kernLeft = KO_u.enlarged;
+kernRight = KO_t.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = gravecomb;
 width = 646;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

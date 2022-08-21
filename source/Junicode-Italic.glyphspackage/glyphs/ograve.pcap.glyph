@@ -1,5 +1,7 @@
 {
 glyphname = ograve.pcap;
+kernLeft = KO_o_c.hlig;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = o.pcap;
 },
 {
-pos = (213,-2);
+pos = (187,-2);
 ref = gravecomb;
 }
 );
 width = 452;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Ibreve;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,12 +75,18 @@ shapes = (
 ref = I;
 },
 {
-pos = (281,250);
+pos = (272,250);
 ref = brevecomb;
 }
 );
-width = 373;
+width = 348;
 }
 );
 unicode = 300;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

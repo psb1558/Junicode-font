@@ -1,5 +1,7 @@
 {
 glyphname = igrave.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = i.pcap;
 },
 {
-pos = (148,-2);
+pos = (122,-2);
 ref = gravecomb;
 }
 );
-width = 249;
+width = 236;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = DZcaron;
+kernLeft = KO_Z;
+kernRight = KO_Z;
 layers = (
 {
 layerId = master01;
@@ -98,17 +100,23 @@ shapes = (
 ref = D;
 },
 {
-pos = (739,0);
+pos = (737,0);
 ref = Z;
 },
 {
 alignment = 1;
-pos = (1017,0);
+pos = (1004,0);
 ref = caroncomb.case;
 }
 );
-width = 1335;
+width = 1322;
 }
 );
 unicode = 452;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

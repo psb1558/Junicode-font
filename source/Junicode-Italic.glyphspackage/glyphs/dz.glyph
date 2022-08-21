@@ -1,5 +1,7 @@
 {
 glyphname = dz;
+kernLeft = KO_z;
+kernRight = KO_z;
 layers = (
 {
 layerId = master01;
@@ -21,11 +23,11 @@ shapes = (
 ref = d;
 },
 {
-pos = (466,0);
+pos = (468,0);
 ref = z;
 }
 );
-width = 905;
+width = 907;
 },
 {
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -38,7 +40,7 @@ pos = (464,0);
 ref = z;
 }
 );
-width = 935;
+width = 900;
 },
 {
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -51,7 +53,7 @@ pos = (379,0);
 ref = z;
 }
 );
-width = 764;
+width = 730;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -60,11 +62,11 @@ shapes = (
 ref = d;
 },
 {
-pos = (545,0);
+pos = (543,0);
 ref = z;
 }
 );
-width = 1105;
+width = 1060;
 },
 {
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -81,4 +83,10 @@ width = 1304;
 }
 );
 unicode = 499;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

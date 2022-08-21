@@ -1,5 +1,7 @@
 {
 glyphname = aring;
+kernLeft = KO_a;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = a;
 },
 {
-pos = (414,267);
+pos = (411,267);
 ref = ringcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 684;
 }
 );
 unicode = 229;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

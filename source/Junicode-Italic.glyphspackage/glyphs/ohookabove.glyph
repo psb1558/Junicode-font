@@ -1,5 +1,7 @@
 {
 glyphname = ohookabove;
+kernLeft = ohookabove;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (567,260);
+pos = (557,260);
 ref = hookabovecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 581;
 }
 );
 unicode = 7887;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = acircumflexgrave.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -8,7 +10,7 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (191,-2);
+pos = (208,-2);
 ref = circumgrave.viet;
 }
 );
@@ -21,7 +23,7 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (176,-2);
+pos = (198,-2);
 ref = circumgrave.viet;
 }
 );
@@ -73,11 +75,17 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (166,-2);
+pos = (209,-2);
 ref = circumgrave.viet;
 }
 );
 width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

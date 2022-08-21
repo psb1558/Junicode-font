@@ -1,5 +1,7 @@
 {
 glyphname = Udieresiscaron;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -93,11 +95,11 @@ shapes = (
 ref = U;
 },
 {
-pos = (345,0);
+pos = (338,0);
 ref = dieresiscomb.case;
 },
 {
-pos = (328,141);
+pos = (321,141);
 ref = caroncomb.case;
 }
 );
@@ -105,4 +107,10 @@ width = 692;
 }
 );
 unicode = 473;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

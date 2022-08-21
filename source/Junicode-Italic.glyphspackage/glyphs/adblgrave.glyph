@@ -1,5 +1,7 @@
 {
 glyphname = adblgrave;
+kernLeft = KO_a;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = a;
 },
 {
-pos = (385,267);
+pos = (382,267);
 ref = dblgravecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 684;
 }
 );
 unicode = 513;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

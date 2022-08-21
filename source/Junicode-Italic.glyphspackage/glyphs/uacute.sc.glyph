@@ -1,5 +1,7 @@
 {
 glyphname = uacute.sc;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -112,8 +114,8 @@ width = 536;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 RMXScaler = {
 source = Uacute;

@@ -1,5 +1,7 @@
 {
 glyphname = ibreve.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = brevecomb;
 width = 236;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

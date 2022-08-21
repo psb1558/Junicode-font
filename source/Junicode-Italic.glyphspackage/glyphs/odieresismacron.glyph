@@ -1,5 +1,7 @@
 {
 glyphname = odieresismacron;
+kernLeft = odieresis;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -93,16 +95,22 @@ shapes = (
 ref = o;
 },
 {
-pos = (385,258);
+pos = (375,258);
 ref = dieresiscomb;
 },
 {
-pos = (518,430);
+pos = (508,430);
 ref = macroncomb;
 }
 );
-width = 577;
+width = 581;
 }
 );
 unicode = 555;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

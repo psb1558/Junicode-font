@@ -1,5 +1,7 @@
 {
 glyphname = cacute;
+kernLeft = KO_c;
+kernRight = KO_c;
 layers = (
 {
 layerId = master01;
@@ -21,7 +23,7 @@ shapes = (
 ref = c;
 },
 {
-pos = (227,0);
+pos = (221,0);
 ref = acutecomb;
 }
 );
@@ -60,7 +62,7 @@ shapes = (
 ref = c;
 },
 {
-pos = (252,0);
+pos = (246,0);
 ref = acutecomb;
 }
 );
@@ -73,7 +75,7 @@ shapes = (
 ref = c;
 },
 {
-pos = (330,258);
+pos = (329,258);
 ref = acutecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 471;
 }
 );
 unicode = 263;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = aemacron.pcap;
+kernLeft = KO_A;
+kernRight = KO_u;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = macroncomb;
 width = 569;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

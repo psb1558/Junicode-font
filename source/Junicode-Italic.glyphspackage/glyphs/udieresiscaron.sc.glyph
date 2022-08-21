@@ -1,5 +1,7 @@
 {
 glyphname = udieresiscaron.sc;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -110,4 +112,10 @@ ref = caroncomb.sc;
 width = 536;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

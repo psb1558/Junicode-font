@@ -1,5 +1,7 @@
 {
 glyphname = Aringacute;
+kernLeft = KO_A;
+kernRight = KO_l;
 layers = (
 {
 layerId = master01;
@@ -79,12 +81,18 @@ ref = Aring;
 },
 {
 anchor = top_side;
-pos = (524,-30);
+pos = (520,-30);
 ref = acutecomb.case;
 }
 );
-width = 544;
+width = 541;
 }
 );
 unicode = 506;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

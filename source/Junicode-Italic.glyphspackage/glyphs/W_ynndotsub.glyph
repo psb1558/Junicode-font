@@ -2,6 +2,8 @@
 case = upper;
 category = Letter;
 glyphname = Wynndotsub;
+kernLeft = KO_Sinsular;
+kernRight = KO_Wynn;
 layers = (
 {
 layerId = master01;
@@ -89,4 +91,10 @@ width = 589;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

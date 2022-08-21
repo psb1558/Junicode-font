@@ -1,5 +1,7 @@
 {
 glyphname = scircumflex.pcap;
+kernLeft = KO_s.sc;
+kernRight = KO_s.sc;
 layers = (
 {
 layerId = master01;
@@ -77,7 +79,13 @@ pos = (124,-2);
 ref = circumflexcomb;
 }
 );
-width = 283;
+width = 279;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

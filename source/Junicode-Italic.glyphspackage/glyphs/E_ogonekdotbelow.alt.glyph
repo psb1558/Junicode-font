@@ -2,6 +2,8 @@
 case = upper;
 category = Letter;
 glyphname = Eogonekdotbelow.alt;
+kernLeft = KO_H;
+kernRight = KO_E;
 layers = (
 {
 layerId = master01;
@@ -89,4 +91,10 @@ width = 601;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

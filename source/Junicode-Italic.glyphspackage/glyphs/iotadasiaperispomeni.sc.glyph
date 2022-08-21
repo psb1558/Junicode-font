@@ -1,5 +1,7 @@
 {
 glyphname = iotadasiaperispomeni.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = commareversedabovecomb_perispomenicomb.sc;
 width = 260;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

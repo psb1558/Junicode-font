@@ -1,5 +1,7 @@
 {
 glyphname = uhungarumlaut.pcap;
+kernLeft = KO_t;
+kernRight = KO_ay;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = hungarumlautcomb;
 width = 487;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

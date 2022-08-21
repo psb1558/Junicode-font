@@ -1,5 +1,7 @@
 {
 glyphname = Tcaron;
+kernLeft = KO_T;
+kernRight = KO_T;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = T;
 },
 {
-pos = (299,0);
+pos = (287,0);
 ref = caroncomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 641;
 }
 );
 unicode = 356;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

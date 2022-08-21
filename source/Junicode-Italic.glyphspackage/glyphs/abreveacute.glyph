@@ -1,5 +1,7 @@
 {
 glyphname = abreveacute;
+kernLeft = abreve;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -9,12 +11,7 @@ ref = a;
 },
 {
 pos = (264,0);
-ref = brevecomb;
-},
-{
-anchor = top_med;
-pos = (275,160);
-ref = acutecomb;
+ref = breveacutecomb;
 }
 );
 width = 448;
@@ -27,12 +24,7 @@ ref = a;
 },
 {
 pos = (268,0);
-ref = brevecomb;
-},
-{
-anchor = top_med;
-pos = (287,180);
-ref = acutecomb;
+ref = breveacutecomb;
 }
 );
 width = 452;
@@ -45,12 +37,7 @@ ref = a;
 },
 {
 pos = (265,0);
-ref = brevecomb;
-},
-{
-anchor = top_med;
-pos = (281,160);
-ref = acutecomb;
+ref = breveacutecomb;
 }
 );
 width = 448;
@@ -63,12 +50,7 @@ ref = a;
 },
 {
 pos = (221,0);
-ref = brevecomb;
-},
-{
-anchor = top_med;
-pos = (242,170);
-ref = acutecomb;
+ref = breveacutecomb;
 }
 );
 width = 366;
@@ -81,12 +63,7 @@ ref = a;
 },
 {
 pos = (305,0);
-ref = brevecomb;
-},
-{
-anchor = top_med;
-pos = (326,170);
-ref = acutecomb;
+ref = breveacutecomb;
 }
 );
 width = 525;
@@ -98,17 +75,18 @@ shapes = (
 ref = a;
 },
 {
-pos = (430,269);
-ref = brevecomb;
-},
-{
-anchor = top_med;
-pos = (449,439);
-ref = acutecomb;
+pos = (405,269);
+ref = breveacutecomb;
 }
 );
 width = 684;
 }
 );
 unicode = 7855;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

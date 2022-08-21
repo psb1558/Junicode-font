@@ -1,5 +1,7 @@
 {
 glyphname = a.alt3;
+kernLeft = KO_c;
+kernRight = KO_i.lf;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = "alpha-latin";
 width = 461;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

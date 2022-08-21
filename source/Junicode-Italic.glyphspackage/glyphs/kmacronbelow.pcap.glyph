@@ -1,5 +1,7 @@
 {
 glyphname = kmacronbelow.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_x;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = macronbelowcomb;
 width = 420;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

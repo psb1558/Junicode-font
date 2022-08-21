@@ -1,5 +1,7 @@
 {
 glyphname = Aacute.alt1;
+kernLeft = KO_O;
+kernRight = KO_A.alt1;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = A.alt1;
 },
 {
-pos = (359,0);
+pos = (322,0);
 ref = acutecomb.case;
 }
 );
 width = 590;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

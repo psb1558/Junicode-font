@@ -1,5 +1,7 @@
 {
 glyphname = oogonekmacron;
+kernLeft = omacron;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -93,11 +95,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (381,-4);
+pos = (371,-4);
 ref = ogonekcomb;
 },
 {
-pos = (471,260);
+pos = (461,260);
 ref = macroncomb;
 }
 );
@@ -105,4 +107,10 @@ width = 581;
 }
 );
 unicode = 493;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

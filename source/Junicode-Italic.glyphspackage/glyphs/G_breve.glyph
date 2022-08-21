@@ -1,5 +1,7 @@
 {
 glyphname = Gbreve;
+kernLeft = KO_O;
+kernRight = KO_G;
 layers = (
 {
 layerId = master01;
@@ -47,11 +49,11 @@ shapes = (
 ref = G;
 },
 {
-pos = (367,250);
+pos = (368,250);
 ref = brevecomb;
 }
 );
-width = 588;
+width = 589;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -73,7 +75,7 @@ shapes = (
 ref = G;
 },
 {
-pos = (463,250);
+pos = (424,250);
 ref = brevecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 693;
 }
 );
 unicode = 286;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = ograve.sc;
+kernLeft = KO_n.alt3;
+kernRight = KO_b.lf;
 layers = (
 {
 layerId = master01;
@@ -112,8 +114,8 @@ width = 497;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 RMXScaler = {
 source = Ograve;

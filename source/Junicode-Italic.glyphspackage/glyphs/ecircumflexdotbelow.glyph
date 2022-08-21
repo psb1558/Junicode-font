@@ -1,5 +1,7 @@
 {
 glyphname = ecircumflexdotbelow;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -93,16 +95,22 @@ shapes = (
 ref = e;
 },
 {
-pos = (244,5);
+pos = (242,5);
 ref = dotbelowcomb;
 },
 {
-pos = (361,258);
+pos = (359,258);
 ref = circumflexcomb;
 }
 );
-width = 457;
+width = 484;
 }
 );
 unicode = 7879;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

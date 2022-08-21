@@ -1,5 +1,7 @@
 {
 glyphname = jstroke.sc;
+kernLeft = KO_p_p.hlig;
+kernRight = KO_n.sc;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = strokeshortcomb.sc;
 width = 241;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

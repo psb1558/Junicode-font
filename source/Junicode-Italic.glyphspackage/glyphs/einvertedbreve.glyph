@@ -1,5 +1,7 @@
 {
 glyphname = einvertedbreve;
+kernLeft = KO_e;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -73,12 +75,18 @@ shapes = (
 ref = e;
 },
 {
-pos = (321,258);
+pos = (319,258);
 ref = breveinvertedcomb;
 }
 );
-width = 457;
+width = 484;
 }
 );
 unicode = 519;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

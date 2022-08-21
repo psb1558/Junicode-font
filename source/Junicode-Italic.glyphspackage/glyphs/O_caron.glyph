@@ -1,5 +1,7 @@
 {
 glyphname = Ocaron;
+kernLeft = KO_O;
+kernRight = KO_O;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = O;
 },
 {
-pos = (293,0);
+pos = (287,0);
 ref = caroncomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 667;
 }
 );
 unicode = 465;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = ecircumflextilde.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -8,13 +10,8 @@ shapes = (
 ref = e.sc;
 },
 {
-pos = (233,0);
-ref = circumflexcomb.sc;
-},
-{
-anchor = top;
-pos = (286,206);
-ref = tildecomb.sc;
+pos = (264,42);
+ref = circumflextildecomb.sc;
 }
 );
 width = 440;
@@ -26,13 +23,8 @@ shapes = (
 ref = e.sc;
 },
 {
-pos = (240,0);
-ref = circumflexcomb.sc;
-},
-{
-anchor = top;
-pos = (294,210);
-ref = tildecomb.sc;
+pos = (272,42);
+ref = circumflextildecomb.sc;
 }
 );
 width = 452;
@@ -44,13 +36,8 @@ shapes = (
 ref = e.sc;
 },
 {
-pos = (230,0);
-ref = circumflexcomb.sc;
-},
-{
-anchor = top;
-pos = (276,205);
-ref = tildecomb.sc;
+pos = (261,42);
+ref = circumflextildecomb.sc;
 }
 );
 width = 435;
@@ -62,13 +49,8 @@ shapes = (
 ref = e.sc;
 },
 {
-pos = (208,0);
-ref = circumflexcomb.sc;
-},
-{
-anchor = top;
-pos = (252,206);
-ref = tildecomb.sc;
+pos = (235,42);
+ref = circumflextildecomb.sc;
 }
 );
 width = 382;
@@ -80,13 +62,8 @@ shapes = (
 ref = e.sc;
 },
 {
-pos = (254,0);
-ref = circumflexcomb.sc;
-},
-{
-anchor = top;
-pos = (326,206);
-ref = tildecomb.sc;
+pos = (296,42);
+ref = circumflextildecomb.sc;
 }
 );
 width = 500;
@@ -98,16 +75,17 @@ shapes = (
 ref = e.sc;
 },
 {
-pos = (233,0);
-ref = circumflexcomb.sc;
-},
-{
-anchor = top;
-pos = (286,206);
-ref = tildecomb.sc;
+pos = (290,42);
+ref = circumflextildecomb.sc;
 }
 );
 width = 440;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

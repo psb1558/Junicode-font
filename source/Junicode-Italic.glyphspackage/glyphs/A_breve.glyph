@@ -1,5 +1,7 @@
 {
 glyphname = Abreve;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -34,7 +36,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (413,250);
+pos = (409,250);
 ref = brevecomb;
 }
 );
@@ -60,7 +62,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (488,250);
+pos = (484,250);
 ref = brevecomb;
 }
 );
@@ -73,7 +75,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (408,250);
+pos = (404,250);
 ref = brevecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 542;
 }
 );
 unicode = 258;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

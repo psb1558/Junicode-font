@@ -1,5 +1,7 @@
 {
 glyphname = aemacron;
+kernLeft = KO_d;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = ae;
 },
 {
-pos = (622,264);
+pos = (619,264);
 ref = macroncomb;
 }
 );
@@ -81,4 +83,10 @@ width = 742;
 }
 );
 unicode = 483;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

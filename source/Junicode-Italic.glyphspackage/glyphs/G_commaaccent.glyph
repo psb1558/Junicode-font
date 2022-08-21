@@ -1,5 +1,7 @@
 {
 glyphname = Gcommaaccent;
+kernLeft = KO_O;
+kernRight = KO_G;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = G;
 },
 {
-pos = (434,0);
+pos = (395,0);
 ref = cedillacomb;
 }
 );
@@ -81,4 +83,10 @@ width = 693;
 }
 );
 unicode = 290;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = abrevetilde.pcap;
+kernLeft = KO_A;
+kernRight = KO_r.sc;
 layers = (
 {
 layerId = master01;
@@ -98,16 +100,22 @@ shapes = (
 ref = a.pcap;
 },
 {
-pos = (236,0);
+pos = (211,0);
 ref = brevecomb;
 },
 {
 anchor = top_med;
-pos = (254,170);
+pos = (229,170);
 ref = tildecomb;
 }
 );
-width = 411;
+width = 380;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

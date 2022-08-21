@@ -1,5 +1,7 @@
 {
 glyphname = wgrave;
+kernLeft = KO_u;
+kernRight = KO_b;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = w;
 },
 {
-pos = (574,258);
+pos = (573,258);
 ref = gravecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 929;
 }
 );
 unicode = 7809;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

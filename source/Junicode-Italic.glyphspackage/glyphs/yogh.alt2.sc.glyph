@@ -1,5 +1,7 @@
 {
 glyphname = yogh.alt2.sc;
+kernLeft = KO_s.enlarged;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -56,4 +58,10 @@ ref = ginsular.sc;
 width = 451;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

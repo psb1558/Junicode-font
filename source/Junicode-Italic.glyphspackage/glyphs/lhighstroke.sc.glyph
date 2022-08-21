@@ -1,5 +1,7 @@
 {
 glyphname = lhighstroke.sc;
+kernLeft = KO_n.alt2;
+kernRight = KO_L;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = strokeshortcomb.sc;
 width = 458;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Hdieresis;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = H;
 },
 {
-pos = (388,0);
+pos = (379,0);
 ref = dieresiscomb.case;
 }
 );
@@ -81,4 +83,10 @@ width = 721;
 }
 );
 unicode = 7718;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = oslashacute;
+kernLeft = KO_o;
+kernRight = KO_h;
 layers = (
 {
 layerId = master01;
@@ -47,11 +49,11 @@ shapes = (
 ref = oslash;
 },
 {
-pos = (176,-2);
+pos = (177,-2);
 ref = acutecomb;
 }
 );
-width = 333;
+width = 334;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -73,7 +75,7 @@ shapes = (
 ref = oslash;
 },
 {
-pos = (370,258);
+pos = (360,258);
 ref = acutecomb;
 }
 );
@@ -81,4 +83,10 @@ width = 581;
 }
 );
 unicode = 511;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Uring;
+kernLeft = KO_U;
+kernRight = KO_U;
 layers = (
 {
 layerId = master01;
@@ -73,7 +75,7 @@ shapes = (
 ref = U;
 },
 {
-pos = (406,248);
+pos = (399,248);
 ref = ringcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 692;
 }
 );
 unicode = 366;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

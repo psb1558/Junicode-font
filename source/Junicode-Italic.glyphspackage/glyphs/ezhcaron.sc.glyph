@@ -1,5 +1,7 @@
 {
 glyphname = ezhcaron.sc;
+kernLeft = KO_ssigmoid;
+kernRight = KO_j.lf;
 layers = (
 {
 layerId = master01;
@@ -80,4 +82,10 @@ ref = caroncomb.sc;
 width = 307;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,5 +1,7 @@
 {
 glyphname = iacute.pcap;
+kernLeft = KO_n.alt2;
+kernRight = KO_h.sc;
 layers = (
 {
 layerId = master01;
@@ -73,11 +75,17 @@ shapes = (
 ref = i.pcap;
 },
 {
-pos = (150,-2);
+pos = (124,-2);
 ref = acutecomb;
 }
 );
-width = 240;
+width = 236;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

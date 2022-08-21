@@ -1,5 +1,7 @@
 {
 glyphname = Tcircumflexbelow;
+kernLeft = KO_T;
+kernRight = KO_T;
 layers = (
 {
 layerId = master01;
@@ -21,7 +23,7 @@ shapes = (
 ref = T;
 },
 {
-pos = (337,0);
+pos = (326,0);
 ref = circumflexbelowcomb;
 }
 );
@@ -73,7 +75,7 @@ shapes = (
 ref = T;
 },
 {
-pos = (325,0);
+pos = (313,0);
 ref = circumflexbelowcomb;
 }
 );
@@ -81,4 +83,10 @@ width = 641;
 }
 );
 unicode = 7792;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

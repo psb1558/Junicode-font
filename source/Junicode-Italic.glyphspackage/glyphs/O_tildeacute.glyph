@@ -1,5 +1,7 @@
 {
 glyphname = Otildeacute;
+kernLeft = KO_O;
+kernRight = KO_O;
 layers = (
 {
 layerId = master01;
@@ -67,7 +69,7 @@ pos = (249,130);
 ref = acutecomb.case;
 }
 );
-width = 574;
+width = 572;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -93,11 +95,11 @@ shapes = (
 ref = O;
 },
 {
-pos = (334,0);
+pos = (328,0);
 ref = tildecomb.case;
 },
 {
-pos = (306,131);
+pos = (300,131);
 ref = acutecomb.case;
 }
 );
@@ -105,4 +107,10 @@ width = 667;
 }
 );
 unicode = 7756;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

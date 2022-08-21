@@ -2,6 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = Finsular.enlarged;
+kernLeft = KO_u.enlarged;
+kernRight = KO_P;
 layers = (
 {
 guides = (
@@ -120,6 +122,10 @@ width = 542;
 );
 script = latin;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = uniA77C;
 };

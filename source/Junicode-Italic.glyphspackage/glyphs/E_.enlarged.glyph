@@ -2,6 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = E.enlarged;
+kernLeft = KO_c;
+kernRight = KO_x;
 layers = (
 {
 guides = (
@@ -85,4 +87,10 @@ width = 386;
 metricLeft = e;
 metricRight = e;
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

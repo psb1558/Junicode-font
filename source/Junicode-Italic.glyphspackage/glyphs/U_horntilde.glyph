@@ -1,5 +1,7 @@
 {
 glyphname = Uhorntilde;
+kernLeft = KO_U;
+kernRight = KO_uniA7C3;
 layers = (
 {
 layerId = master01;
@@ -51,11 +53,11 @@ ref = Uhorn;
 },
 {
 alignment = 1;
-pos = (301,0);
+pos = (300,0);
 ref = tildecomb.case;
 }
 );
-width = 528;
+width = 527;
 },
 {
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -86,4 +88,10 @@ width = 650;
 }
 );
 unicode = 7918;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

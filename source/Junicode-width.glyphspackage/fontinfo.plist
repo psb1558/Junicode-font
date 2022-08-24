@@ -1770,6 +1770,26 @@ sub sterling a.tag six.tag by currency.alt16 ;
 sub uni20B0 a.tag one.tag by currency.alt22 ;
 sub florin a.tag one.tag by currency.alt07 ;
 sub uni2125 a.tag one.tag by currency.alt27 ;
+# Characters for tract by the Polish spelling reformer Jacob Parkosz
+sub P p.tag s.tag by P.p01 ;
+sub B p.tag l.tag by B.p02 ;
+sub P p.tag r.tag by P.p02 ;
+sub b p.tag s.tag by b.p01 ;
+sub c p.tag h.tag by c.p01 ;
+sub g p.tag h.tag by g.p01 ;
+sub l p.tag l.tag by l.p01 ;
+sub p p.tag s.tag by p.p01 ;
+sub v p.tag h.tag by v.p01 ;
+sub b p.tag l.tag by b.p02 ;
+sub p p.tag r.tag by p.p02 ;
+sub m p.tag d.tag by m.alt3 ;
+sub n p.tag d.tag by n.alt1 ;
+sub f p.tag d.tag by fdotaccent ;
+sub f p.tag d.tag by gdotaccent ;
+sub l p.tag b.tag by ldotbelow ;
+sub m p.tag b.tag by mdotbelow ;
+sub n p.tag b.tag by ndotbelow ;
+sub uniA7C1 p.tag s.tag by oslash ;
 } tagligs ;
 ";
 labels = (

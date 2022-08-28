@@ -2,7 +2,7 @@
 category = Letter;
 color = 6;
 glyphname = Eogonek.enlarged.alt1;
-kernLeft = KO_g_eth.hlig;
+kernLeft = KO_e.alt3;
 layers = (
 {
 layerId = master01;
@@ -60,4 +60,10 @@ width = 465;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

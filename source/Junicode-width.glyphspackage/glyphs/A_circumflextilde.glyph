@@ -1,6 +1,6 @@
 {
 glyphname = Acircumflextilde;
-kernLeft = KO_x.enlarged;
+kernLeft = KO_A;
 kernRight = KO_A;
 layers = (
 {
@@ -27,11 +27,11 @@ shapes = (
 ref = A;
 },
 {
-pos = (357,0);
+pos = (358,0);
 ref = circumflexlowcomb.case;
 },
 {
-pos = (356,142);
+pos = (357,142);
 ref = tildecomb.case;
 }
 );
@@ -44,15 +44,15 @@ shapes = (
 ref = A;
 },
 {
-pos = (332,0);
+pos = (331,0);
 ref = circumflexlowcomb.case;
 },
 {
-pos = (335,129);
+pos = (334,129);
 ref = tildecomb.case;
 }
 );
-width = 673;
+width = 672;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -86,7 +86,7 @@ pos = (401,132);
 ref = tildecomb.case;
 }
 );
-width = 809;
+width = 807;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -107,4 +107,10 @@ width = 683;
 }
 );
 unicode = 7850;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,7 +1,7 @@
 {
 glyphname = idotaccent;
-kernLeft = KO_i;
-kernRight = KO_i;
+kernLeft = KO_n;
+kernRight = KO_i.lf;
 layers = (
 {
 layerId = master01;
@@ -82,4 +82,10 @@ ref = dotaccentcomb;
 width = 325;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

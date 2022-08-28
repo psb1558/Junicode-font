@@ -1,6 +1,7 @@
 {
 glyphname = eogonek.alt1.sc;
-kernLeft = KO_r.enlarged;
+kernLeft = KO_x;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -170,6 +171,8 @@ metricLeft = e.sc;
 metricRight = e.sc;
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 RMXScaler = {
 source = Eogonek.alt;

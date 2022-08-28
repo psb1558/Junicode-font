@@ -1,5 +1,7 @@
 {
 glyphname = odotaccentmacron;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -62,16 +64,16 @@ shapes = (
 ref = o;
 },
 {
-pos = (354,0);
+pos = (350,0);
 ref = dotaccentcomb;
 },
 {
 alignment = 1;
-pos = (198,187);
+pos = (194,187);
 ref = macroncomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -80,16 +82,16 @@ shapes = (
 ref = o;
 },
 {
-pos = (487,0);
+pos = (470,0);
 ref = dotaccentcomb;
 },
 {
 alignment = 1;
-pos = (282,168);
+pos = (265,168);
 ref = macroncomb;
 }
 );
-width = 573;
+width = 539;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -111,4 +113,10 @@ width = 657;
 }
 );
 unicode = 561;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

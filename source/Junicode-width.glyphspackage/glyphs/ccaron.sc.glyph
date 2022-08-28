@@ -1,7 +1,7 @@
 {
 glyphname = ccaron.sc;
-kernLeft = KO_d.enlarged;
-kernRight = KO_c;
+kernLeft = KO_ssigmoid;
+kernRight = KO_q;
 layers = (
 {
 layerId = master01;
@@ -84,8 +84,8 @@ width = 472;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

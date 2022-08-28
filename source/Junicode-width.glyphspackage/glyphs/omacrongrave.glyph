@@ -1,5 +1,7 @@
 {
 glyphname = omacrongrave;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -12,7 +14,7 @@ pos = (227,0);
 ref = macroncomb;
 },
 {
-pos = (229,118);
+pos = (203,118);
 ref = gravecomb;
 }
 );
@@ -29,7 +31,7 @@ pos = (237,0);
 ref = macroncomb;
 },
 {
-pos = (236,127);
+pos = (207,127);
 ref = gravecomb;
 }
 );
@@ -46,7 +48,7 @@ pos = (222,0);
 ref = macroncomb;
 },
 {
-pos = (226,115);
+pos = (192,115);
 ref = gravecomb;
 }
 );
@@ -59,15 +61,15 @@ shapes = (
 ref = o;
 },
 {
-pos = (198,0);
+pos = (194,0);
 ref = macroncomb;
 },
 {
-pos = (200,118);
+pos = (189,118);
 ref = gravecomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -76,15 +78,15 @@ shapes = (
 ref = o;
 },
 {
-pos = (281,0);
+pos = (264,0);
 ref = macroncomb;
 },
 {
-pos = (283,118);
+pos = (216,118);
 ref = gravecomb;
 }
 );
-width = 573;
+width = 539;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -105,4 +107,10 @@ width = 657;
 }
 );
 unicode = 7761;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

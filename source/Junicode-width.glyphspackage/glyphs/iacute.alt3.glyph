@@ -1,6 +1,6 @@
 {
 glyphname = iacute.alt3;
-kernLeft = KO_scaron;
+kernLeft = KO_adieresis;
 kernRight = KO_a;
 layers = (
 {
@@ -82,4 +82,10 @@ ref = acutecomb;
 width = 240;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

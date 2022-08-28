@@ -1,7 +1,7 @@
 {
 glyphname = wdieresis.sc;
 kernLeft = KO_y;
-kernRight = KO_P;
+kernRight = KO_y.sc;
 layers = (
 {
 layerId = master01;
@@ -84,6 +84,8 @@ width = 704;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

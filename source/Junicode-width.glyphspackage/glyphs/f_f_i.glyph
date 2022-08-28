@@ -1,5 +1,7 @@
 {
 glyphname = f_f_i;
+kernLeft = KO_f;
+kernRight = KO_i.lf;
 layers = (
 {
 anchors = (
@@ -18,15 +20,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (350,0);
+pos = (261,0);
 ref = f.lfrij;
 },
 {
-pos = (694,0);
+pos = (546,0);
 ref = i.lf;
 }
 );
-width = 927;
+width = 779;
 },
 {
 anchors = (
@@ -45,15 +47,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (368,0);
+pos = (279,0);
 ref = f.lfrij;
 },
 {
-pos = (724,0);
+pos = (571,0);
 ref = i.lf;
 }
 );
-width = 980;
+width = 827;
 },
 {
 anchors = (
@@ -72,15 +74,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (366,0);
+pos = (257,0);
 ref = f.lfrij;
 },
 {
-pos = (716,0);
+pos = (541,0);
 ref = i.lf;
 }
 );
-width = 940;
+width = 765;
 },
 {
 anchors = (
@@ -99,15 +101,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (289,0);
+pos = (218,0);
 ref = f.lfrij;
 },
 {
-pos = (618,0);
+pos = (466,0);
 ref = i.lf;
 }
 );
-width = 808;
+width = 656;
 },
 {
 anchors = (
@@ -126,15 +128,15 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (453,0);
+pos = (305,0);
 ref = f.lfrij;
 },
 {
-pos = (872,0);
+pos = (627,0);
 ref = i.lf;
 }
 );
-width = 1150;
+width = 905;
 },
 {
 anchors = (
@@ -168,4 +170,10 @@ metricLeft = f;
 metricRight = i;
 production = uniFB03;
 unicode = 64259;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

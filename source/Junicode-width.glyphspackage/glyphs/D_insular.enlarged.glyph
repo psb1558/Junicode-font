@@ -3,7 +3,7 @@ category = Letter;
 color = 6;
 glyphname = Dinsular.enlarged;
 kernLeft = KO_dinsular.enlarged;
-kernRight = KO_s;
+kernRight = KO_o.enlarged;
 layers = (
 {
 guides = (
@@ -87,4 +87,10 @@ width = 513;
 metricLeft = dinsular;
 metricRight = dinsular;
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

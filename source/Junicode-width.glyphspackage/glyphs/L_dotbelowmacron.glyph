@@ -1,6 +1,6 @@
 {
 glyphname = Ldotbelowmacron;
-kernLeft = KO_ginsular;
+kernLeft = KO_H;
 kernRight = KO_L;
 layers = (
 {
@@ -10,15 +10,15 @@ shapes = (
 ref = L;
 },
 {
-pos = (343,0);
+pos = (338,0);
 ref = dotbelowcomb;
 },
 {
-pos = (172,0);
+pos = (167,0);
 ref = macroncomb.case;
 }
 );
-width = 664;
+width = 659;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -78,15 +78,15 @@ shapes = (
 ref = L;
 },
 {
-pos = (404,0);
+pos = (400,0);
 ref = dotbelowcomb;
 },
 {
-pos = (194,0);
+pos = (190,0);
 ref = macroncomb.case;
 }
 );
-width = 705;
+width = 701;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -95,16 +95,22 @@ shapes = (
 ref = L;
 },
 {
-pos = (335,0);
+pos = (343,0);
 ref = dotbelowcomb;
 },
 {
-pos = (164,0);
+pos = (172,0);
 ref = macroncomb.case;
 }
 );
-width = 656;
+width = 664;
 }
 );
 unicode = 7736;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

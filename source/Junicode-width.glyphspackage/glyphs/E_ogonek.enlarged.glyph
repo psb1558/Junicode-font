@@ -3,6 +3,7 @@ category = Letter;
 color = 6;
 glyphname = Eogonek.enlarged;
 kernLeft = KO_e.alt3;
+kernRight = KO_e.enlarged;
 layers = (
 {
 layerId = master01;
@@ -93,6 +94,10 @@ metricLeft = e.enlarged;
 metricWidth = e.enlarged;
 script = latin;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = eogonek;
 };

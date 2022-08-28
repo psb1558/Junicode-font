@@ -1,7 +1,6 @@
 {
 case = lower;
 glyphname = k.lf;
-kernLeft = KO_l.lf;
 kernRight = KO_k;
 layers = (
 {
@@ -654,4 +653,9 @@ width = 502;
 }
 );
 metricRight = k;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+};
+};
 }

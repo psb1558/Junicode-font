@@ -1,7 +1,7 @@
 {
 glyphname = aacute.alt3;
 kernLeft = KO_o;
-kernRight = KO_mu;
+kernRight = KO_u;
 layers = (
 {
 layerId = master01;
@@ -23,11 +23,11 @@ shapes = (
 ref = a.alt3;
 },
 {
-pos = (257,0);
+pos = (256,0);
 ref = acutecomb;
 }
 );
-width = 521;
+width = 520;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -49,11 +49,11 @@ shapes = (
 ref = a.alt3;
 },
 {
-pos = (219,0);
+pos = (215,0);
 ref = acutecomb;
 }
 );
-width = 417;
+width = 413;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -82,4 +82,10 @@ ref = acutecomb;
 width = 500;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

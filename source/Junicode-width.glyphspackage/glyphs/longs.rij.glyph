@@ -1,7 +1,6 @@
 {
 glyphname = longs.rij;
 kernLeft = KO_f;
-kernRight = KO_longs;
 layers = (
 {
 layerId = master01;
@@ -58,4 +57,10 @@ ref = longs.llongsrij;
 width = 270;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,6 +1,7 @@
 {
 glyphname = odieresis.alt;
-kernLeft = KO_d_e.hlig;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -22,11 +23,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (251,0);
+pos = (237,0);
 ref = diagonaldieresiscomb;
 }
 );
-width = 501;
+width = 473;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -48,11 +49,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (194,0);
+pos = (190,0);
 ref = diagonaldieresiscomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -81,4 +82,10 @@ ref = diagonaldieresiscomb;
 width = 680;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

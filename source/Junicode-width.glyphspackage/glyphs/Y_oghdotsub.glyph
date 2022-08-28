@@ -3,7 +3,7 @@ case = upper;
 category = Letter;
 glyphname = Yoghdotsub;
 kernLeft = KO_H;
-kernRight = KO_lcaron;
+kernRight = KO_B;
 layers = (
 {
 layerId = master01;
@@ -89,4 +89,10 @@ width = 485;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

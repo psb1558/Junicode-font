@@ -1,5 +1,7 @@
 {
 glyphname = dz.sc;
+kernLeft = KO_n;
+kernRight = KO_z;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = d.sc;
 },
 {
-pos = (530,0);
+pos = (538,0);
 ref = z.sc;
 }
 );
-width = 992;
+width = 1000;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -82,6 +84,8 @@ width = 1000;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

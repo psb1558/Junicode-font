@@ -1,5 +1,7 @@
 {
 glyphname = otildedieresis;
+kernLeft = odieresis;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -105,4 +107,10 @@ width = 657;
 }
 );
 unicode = 7759;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,6 +1,6 @@
 {
 glyphname = tdotaccent.alt1;
-kernLeft = KO_nu;
+kernLeft = KO_tinsular;
 kernRight = KO_e;
 layers = (
 {
@@ -82,4 +82,10 @@ ref = dotaccentcomb;
 width = 673;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

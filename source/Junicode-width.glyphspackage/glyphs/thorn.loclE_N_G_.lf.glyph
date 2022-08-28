@@ -1,7 +1,6 @@
 {
 case = lower;
 glyphname = thorn.loclENG.lf;
-kernLeft = KO_l.alt;
 kernRight = KO_o;
 layers = (
 {
@@ -154,7 +153,7 @@ nodes = (
 );
 }
 );
-width = 454;
+width = 453;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -462,4 +461,9 @@ width = 459;
 }
 );
 metricRight = thorn.loclENG;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+};
+};
 }

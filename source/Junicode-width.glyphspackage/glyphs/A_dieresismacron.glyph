@@ -1,6 +1,6 @@
 {
 glyphname = Adieresismacron;
-kernLeft = KO_x;
+kernLeft = KO_A;
 kernRight = KO_A;
 layers = (
 {
@@ -28,12 +28,12 @@ shapes = (
 ref = A;
 },
 {
-pos = (357,0);
+pos = (358,0);
 ref = dieresiscomb.case;
 },
 {
 anchor = top_low;
-pos = (357,125);
+pos = (358,125);
 ref = macroncomb.case;
 }
 );
@@ -46,16 +46,16 @@ shapes = (
 ref = A;
 },
 {
-pos = (336,0);
+pos = (335,0);
 ref = dieresiscomb.case;
 },
 {
 anchor = top_low;
-pos = (326,106);
+pos = (325,106);
 ref = macroncomb.case;
 }
 );
-width = 673;
+width = 672;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -91,7 +91,7 @@ pos = (394,96);
 ref = macroncomb.case;
 }
 );
-width = 809;
+width = 807;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -113,4 +113,10 @@ width = 683;
 }
 );
 unicode = 478;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,7 +1,7 @@
 {
 glyphname = Ezhcaron;
-kernLeft = KO_l.lf;
-kernRight = KO_S;
+kernLeft = KO_l.enlarged;
+kernRight = KO_B;
 layers = (
 {
 layerId = master01;
@@ -137,4 +137,10 @@ width = 523;
 }
 );
 unicode = 494;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

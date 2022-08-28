@@ -1,7 +1,7 @@
 {
 category = Mark;
 glyphname = omacroncomb;
-kernLeft = KO_arcomb;
+kernLeft = KO_ycomb;
 layers = (
 {
 anchors = (
@@ -384,4 +384,10 @@ width = 0;
 );
 script = latin;
 subCategory = Nonspacing;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

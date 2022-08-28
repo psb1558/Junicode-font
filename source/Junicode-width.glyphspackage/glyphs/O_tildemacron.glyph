@@ -1,5 +1,7 @@
 {
 glyphname = Otildemacron;
+kernLeft = KO_O;
+kernRight = KO_O;
 layers = (
 {
 layerId = master01;
@@ -8,15 +10,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (351,0);
+pos = (353,0);
 ref = tildecomb.case;
 },
 {
-pos = (344,156);
+pos = (346,156);
 ref = macroncomb.case;
 }
 );
-width = 707;
+width = 711;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -25,15 +27,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (372,0);
+pos = (373,0);
 ref = tildecomb.case;
 },
 {
-pos = (372,176);
+pos = (373,176);
 ref = macroncomb.case;
 }
 );
-width = 725;
+width = 727;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -42,15 +44,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (351,0);
+pos = (346,0);
 ref = tildecomb.case;
 },
 {
-pos = (341,148);
+pos = (336,148);
 ref = macroncomb.case;
 }
 );
-width = 708;
+width = 705;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -59,15 +61,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (298,0);
+pos = (294,0);
 ref = tildecomb.case;
 },
 {
-pos = (291,162);
+pos = (287,162);
 ref = macroncomb.case;
 }
 );
-width = 586;
+width = 584;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -76,15 +78,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (418,0);
+pos = (405,0);
 ref = tildecomb.case;
 },
 {
-pos = (410,157);
+pos = (397,157);
 ref = macroncomb.case;
 }
 );
-width = 844;
+width = 825;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -93,16 +95,22 @@ shapes = (
 ref = O;
 },
 {
-pos = (357,0);
+pos = (353,0);
 ref = tildecomb.case;
 },
 {
-pos = (350,157);
+pos = (346,157);
 ref = macroncomb.case;
 }
 );
-width = 713;
+width = 711;
 }
 );
 unicode = 556;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

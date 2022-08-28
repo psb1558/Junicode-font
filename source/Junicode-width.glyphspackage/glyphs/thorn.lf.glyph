@@ -1,7 +1,6 @@
 {
 case = lower;
 glyphname = thorn.lf;
-kernLeft = KO_l.alt;
 kernRight = KO_p;
 layers = (
 {
@@ -528,4 +527,9 @@ width = 511;
 }
 );
 metricRight = p;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+};
+};
 }

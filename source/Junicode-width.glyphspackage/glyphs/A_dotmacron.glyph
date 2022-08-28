@@ -1,5 +1,7 @@
 {
 glyphname = Adotmacron;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -27,13 +29,13 @@ shapes = (
 ref = A;
 },
 {
-pos = (356,0);
+pos = (357,0);
 ref = dotaccentcomb.case;
 },
 {
 alignment = 1;
 anchor = top_low;
-pos = (361,148);
+pos = (362,148);
 ref = macroncomb.case;
 }
 );
@@ -46,17 +48,17 @@ shapes = (
 ref = A;
 },
 {
-pos = (334,0);
+pos = (333,0);
 ref = dotaccentcomb.case;
 },
 {
 alignment = 1;
 anchor = top_low;
-pos = (329,119);
+pos = (328,119);
 ref = macroncomb.case;
 }
 );
-width = 673;
+width = 672;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -94,7 +96,7 @@ pos = (402,119);
 ref = macroncomb.case;
 }
 );
-width = 809;
+width = 807;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -117,4 +119,10 @@ width = 683;
 }
 );
 unicode = 480;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

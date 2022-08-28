@@ -1,7 +1,7 @@
 {
 glyphname = ocircumflexgrave;
-kernLeft = KO_d_e.hlig;
-kernRight = KO_oacute;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 anchors = (
@@ -21,7 +21,7 @@ ref = circumflexcomb;
 },
 {
 anchor = top_vietleft;
-pos = (78,84);
+pos = (52,84);
 ref = gravecomb;
 }
 );
@@ -45,7 +45,7 @@ ref = circumflexcomb;
 },
 {
 anchor = top_vietleft;
-pos = (53,84);
+pos = (24,84);
 ref = gravecomb;
 }
 );
@@ -69,7 +69,7 @@ ref = circumflexcomb;
 },
 {
 anchor = top_vietleft;
-pos = (79,84);
+pos = (45,84);
 ref = gravecomb;
 }
 );
@@ -88,16 +88,16 @@ shapes = (
 ref = o;
 },
 {
-pos = (357,0);
+pos = (353,0);
 ref = circumflexcomb;
 },
 {
 anchor = top_vietleft;
-pos = (77,84);
+pos = (66,84);
 ref = gravecomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 anchors = (
@@ -117,7 +117,7 @@ ref = circumflexcomb;
 },
 {
 anchor = top_vietleft;
-pos = (85,84);
+pos = (35,84);
 ref = gravecomb;
 }
 );
@@ -149,4 +149,10 @@ width = 657;
 }
 );
 unicode = 7891;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

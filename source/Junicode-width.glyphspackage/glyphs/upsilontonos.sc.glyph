@@ -1,7 +1,7 @@
 {
 glyphname = upsilontonos.sc;
 kernLeft = KO_u;
-kernRight = KO_O;
+kernRight = KO_u.sc;
 layers = (
 {
 layerId = master01;
@@ -84,6 +84,8 @@ width = 468;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

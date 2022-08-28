@@ -1,7 +1,7 @@
 {
 glyphname = gcommaaccent.sc;
-kernLeft = KO_d.enlarged;
-kernRight = KO_e;
+kernLeft = KO_ssigmoid;
+kernRight = KO_b;
 layers = (
 {
 layerId = master01;
@@ -84,8 +84,8 @@ width = 506;
 );
 userData = {
 KernOnSpecialSpacing = {
-L = smallcaps;
-R = smallcaps;
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

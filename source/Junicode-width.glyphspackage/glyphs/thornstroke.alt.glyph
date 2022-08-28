@@ -1,5 +1,7 @@
 {
 glyphname = thornstroke.alt;
+kernLeft = KO_b;
+kernRight = KO_p;
 layers = (
 {
 layerId = master01;
@@ -86,4 +88,10 @@ ref = slashshortcomb;
 width = 593;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

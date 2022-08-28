@@ -1,5 +1,7 @@
 {
 glyphname = Hdieresis;
+kernLeft = KO_H;
+kernRight = KO_H;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = H;
 },
 {
-pos = (407,0);
+pos = (402,0);
 ref = dieresiscomb.case;
 }
 );
-width = 813;
+width = 803;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -25,7 +27,7 @@ pos = (408,0);
 ref = dieresiscomb.case;
 }
 );
-width = 815;
+width = 811;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -38,7 +40,7 @@ pos = (408,0);
 ref = dieresiscomb.case;
 }
 );
-width = 814;
+width = 809;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -51,7 +53,7 @@ pos = (350,0);
 ref = dieresiscomb.case;
 }
 );
-width = 698;
+width = 694;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -60,11 +62,11 @@ shapes = (
 ref = H;
 },
 {
-pos = (463,0);
+pos = (453,0);
 ref = dieresiscomb.case;
 }
 );
-width = 924;
+width = 904;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -77,9 +79,15 @@ pos = (407,0);
 ref = dieresiscomb.case;
 }
 );
-width = 813;
+width = 808;
 }
 );
 metricLeft = B;
 unicode = 7718;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

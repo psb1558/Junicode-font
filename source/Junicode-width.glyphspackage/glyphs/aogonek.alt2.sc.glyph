@@ -1,7 +1,7 @@
 {
 category = Letter;
 glyphname = aogonek.alt2.sc;
-kernLeft = KO_a.sc;
+kernLeft = KO_A;
 layers = (
 {
 layerId = master01;
@@ -94,6 +94,8 @@ script = latin;
 subCategory = Smallcaps;
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 RMXScaler = {
 source = Astroke;

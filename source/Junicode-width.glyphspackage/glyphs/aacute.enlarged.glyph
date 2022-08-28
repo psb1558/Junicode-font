@@ -1,6 +1,8 @@
 {
 color = 6;
 glyphname = aacute.enlarged;
+kernLeft = KO_a.enlarged;
+kernRight = KO_a.enlarged;
 layers = (
 {
 layerId = master01;
@@ -81,4 +83,10 @@ ref = acutecomb;
 width = 440;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

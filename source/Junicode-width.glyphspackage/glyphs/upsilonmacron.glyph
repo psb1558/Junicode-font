@@ -1,5 +1,7 @@
 {
 glyphname = upsilonmacron;
+kernLeft = KO_l.p01;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -27,7 +29,7 @@ pos = (241,0);
 ref = macroncomb;
 }
 );
-width = 484;
+width = 483;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -55,7 +57,7 @@ pos = (194,0);
 ref = macroncomb;
 }
 );
-width = 424;
+width = 420;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -69,7 +71,7 @@ pos = (236,0);
 ref = macroncomb;
 }
 );
-width = 502;
+width = 485;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -89,6 +91,8 @@ width = 450;
 unicode = 8161;
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

@@ -1,5 +1,7 @@
 {
 glyphname = odblgrave;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -47,11 +49,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (200,0);
+pos = (196,0);
 ref = dblgravecomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -60,11 +62,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (283,0);
+pos = (266,0);
 ref = dblgravecomb;
 }
 );
-width = 573;
+width = 539;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -81,4 +83,10 @@ width = 657;
 }
 );
 unicode = 525;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

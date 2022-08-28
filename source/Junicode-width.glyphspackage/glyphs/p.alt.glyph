@@ -1,6 +1,7 @@
 {
 glyphname = p.alt;
 kernLeft = KO_p;
+kernRight = KO_p;
 layers = (
 {
 layerId = master01;
@@ -57,4 +58,10 @@ ref = p;
 width = 684;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

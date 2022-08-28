@@ -1,5 +1,7 @@
 {
 glyphname = f_f;
+kernLeft = KO_f;
+kernRight = KO_f;
 layers = (
 {
 anchors = (
@@ -20,11 +22,11 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (350,0);
+pos = (261,0);
 ref = f.lf;
 }
 );
-width = 635;
+width = 546;
 },
 {
 anchors = (
@@ -45,11 +47,11 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (368,0);
+pos = (279,0);
 ref = f.lf;
 }
 );
-width = 660;
+width = 571;
 },
 {
 anchors = (
@@ -70,11 +72,11 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (366,0);
+pos = (257,0);
 ref = f.lf;
 }
 );
-width = 650;
+width = 541;
 },
 {
 anchors = (
@@ -95,11 +97,11 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (289,0);
+pos = (218,0);
 ref = f.lf;
 }
 );
-width = 534;
+width = 463;
 },
 {
 anchors = (
@@ -114,23 +116,23 @@ shapes = (
 ref = f.rf;
 },
 {
-pos = (453,0);
+pos = (305,0);
 ref = f.lf;
 }
 );
-width = 780;
+width = 632;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (227,0);
+pos = (219,0);
 }
 );
 guides = (
 {
 angle = 90;
-pos = (498,359);
+pos = (490,359);
 }
 );
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -150,4 +152,10 @@ metricLeft = f;
 metricRight = f;
 production = uniFB00;
 unicode = 64256;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

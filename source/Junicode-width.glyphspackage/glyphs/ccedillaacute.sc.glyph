@@ -1,5 +1,7 @@
 {
 glyphname = ccedillaacute.sc;
+kernLeft = KO_ssigmoid;
+kernRight = KO_q;
 layers = (
 {
 layerId = master01;
@@ -106,6 +108,8 @@ width = 472;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

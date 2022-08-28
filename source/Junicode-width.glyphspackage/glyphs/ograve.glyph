@@ -1,7 +1,7 @@
 {
 glyphname = ograve;
-kernLeft = KO_d_e.hlig;
-kernRight = KO_oacute;
+kernLeft = KO_o;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -10,7 +10,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (229,0);
+pos = (203,0);
 ref = gravecomb;
 }
 );
@@ -23,7 +23,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (236,0);
+pos = (207,0);
 ref = gravecomb;
 }
 );
@@ -36,7 +36,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (226,0);
+pos = (192,0);
 ref = gravecomb;
 }
 );
@@ -49,11 +49,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (200,0);
+pos = (189,0);
 ref = gravecomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -62,11 +62,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (283,0);
+pos = (216,0);
 ref = gravecomb;
 }
 );
-width = 573;
+width = 539;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -83,4 +83,10 @@ width = 657;
 }
 );
 unicode = 242;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

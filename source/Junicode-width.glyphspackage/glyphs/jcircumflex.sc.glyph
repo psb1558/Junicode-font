@@ -1,6 +1,7 @@
 {
 glyphname = jcircumflex.sc;
-kernRight = KO_n.sc;
+kernLeft = KO_f;
+kernRight = KO_u.sc;
 layers = (
 {
 layerId = master01;
@@ -83,6 +84,8 @@ width = 261;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

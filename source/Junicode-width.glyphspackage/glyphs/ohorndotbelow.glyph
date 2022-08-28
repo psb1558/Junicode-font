@@ -1,7 +1,7 @@
 {
 glyphname = ohorndotbelow;
 kernLeft = KO_o;
-kernRight = KO_q;
+kernRight = KO_n.mecurl;
 layers = (
 {
 layerId = master01;
@@ -23,11 +23,11 @@ shapes = (
 ref = ohorn;
 },
 {
-pos = (227,0);
+pos = (226,0);
 ref = dotbelowcomb;
 }
 );
-width = 475;
+width = 473;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -49,11 +49,11 @@ shapes = (
 ref = ohorn;
 },
 {
-pos = (190,0);
+pos = (186,0);
 ref = dotbelowcomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -62,11 +62,11 @@ shapes = (
 ref = ohorn;
 },
 {
-pos = (287,0);
+pos = (270,0);
 ref = dotbelowcomb;
 }
 );
-width = 573;
+width = 539;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -83,4 +83,10 @@ width = 680;
 }
 );
 unicode = 7907;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

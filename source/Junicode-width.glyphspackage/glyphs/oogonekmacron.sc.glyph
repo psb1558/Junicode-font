@@ -1,5 +1,7 @@
 {
 glyphname = oogonekmacron.sc;
+kernLeft = KO_ssigmoid;
+kernRight = KO_p;
 layers = (
 {
 layerId = master01;
@@ -106,6 +108,8 @@ width = 518;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

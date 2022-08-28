@@ -1,7 +1,7 @@
 {
 glyphname = epsilonvaria;
-kernLeft = KO_s;
-kernRight = KO_c;
+kernLeft = KO_ssigmoid;
+kernRight = KO_q;
 layers = (
 {
 layerId = master01;
@@ -86,6 +86,8 @@ note = uni1F72;
 unicode = 8050;
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

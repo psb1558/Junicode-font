@@ -1,6 +1,7 @@
 {
 glyphname = Ohornacute;
 kernLeft = KO_O;
+kernRight = KO_i.medhighoverline;
 layers = (
 {
 layerId = master01;
@@ -9,11 +10,11 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (351,0);
+pos = (353,0);
 ref = acutecomb.case;
 }
 );
-width = 707;
+width = 711;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -22,11 +23,11 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (377,0);
+pos = (375,0);
 ref = acutecomb.case;
 }
 );
-width = 737;
+width = 727;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -35,7 +36,7 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (343,0);
+pos = (346,0);
 ref = acutecomb.case;
 }
 );
@@ -48,7 +49,7 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (297,0);
+pos = (293,0);
 ref = acutecomb.case;
 }
 );
@@ -61,11 +62,11 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (418,0);
+pos = (405,0);
 ref = acutecomb.case;
 }
 );
-width = 844;
+width = 825;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -74,12 +75,18 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (351,0);
+pos = (353,0);
 ref = acutecomb.case;
 }
 );
-width = 713;
+width = 711;
 }
 );
 unicode = 7898;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

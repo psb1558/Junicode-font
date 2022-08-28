@@ -1,7 +1,7 @@
 {
 glyphname = otilde;
-kernLeft = KO_d_e.hlig;
-kernRight = KO_oacute;
+kernLeft = odieresis;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -49,11 +49,11 @@ shapes = (
 ref = o;
 },
 {
-pos = (392,0);
+pos = (388,0);
 ref = tildecomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -83,4 +83,10 @@ width = 657;
 }
 );
 unicode = 245;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,6 +1,7 @@
 {
 glyphname = adieresis.alt;
-kernLeft = KO_scaron;
+kernLeft = KO_a;
+kernRight = KO_a;
 layers = (
 {
 layerId = master01;
@@ -81,4 +82,10 @@ ref = diagonaldieresiscomb;
 width = 633;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

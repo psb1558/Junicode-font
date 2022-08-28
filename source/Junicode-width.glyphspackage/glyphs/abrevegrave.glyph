@@ -1,6 +1,6 @@
 {
 glyphname = abrevegrave;
-kernLeft = KO_scaron;
+kernLeft = abreve;
 kernRight = KO_a;
 layers = (
 {
@@ -15,7 +15,7 @@ ref = brevecomb;
 },
 {
 anchor = top_low;
-pos = (196,123);
+pos = (170,123);
 ref = gravecomb;
 }
 );
@@ -33,7 +33,7 @@ ref = brevecomb;
 },
 {
 anchor = top_low;
-pos = (211,134);
+pos = (182,134);
 ref = gravecomb;
 }
 );
@@ -51,7 +51,7 @@ ref = brevecomb;
 },
 {
 anchor = top_low;
-pos = (193,119);
+pos = (159,119);
 ref = gravecomb;
 }
 );
@@ -69,7 +69,7 @@ ref = brevecomb;
 },
 {
 anchor = top_low;
-pos = (173,123);
+pos = (166,123);
 ref = gravecomb;
 }
 );
@@ -87,7 +87,7 @@ ref = brevecomb;
 },
 {
 anchor = top_low;
-pos = (221,123);
+pos = (171,123);
 ref = gravecomb;
 }
 );
@@ -113,4 +113,10 @@ width = 633;
 }
 );
 unicode = 7857;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

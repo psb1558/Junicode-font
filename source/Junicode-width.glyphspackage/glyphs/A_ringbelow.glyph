@@ -1,5 +1,7 @@
 {
 glyphname = Aringbelow;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -22,7 +24,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (333,0);
+pos = (334,0);
 ref = ringbelowcomb;
 }
 );
@@ -35,11 +37,11 @@ shapes = (
 ref = A;
 },
 {
-pos = (322,0);
+pos = (321,0);
 ref = ringbelowcomb;
 }
 );
-width = 673;
+width = 672;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -67,7 +69,7 @@ pos = (387,0);
 ref = ringbelowcomb;
 }
 );
-width = 809;
+width = 807;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -85,4 +87,10 @@ width = 683;
 }
 );
 unicode = 7680;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

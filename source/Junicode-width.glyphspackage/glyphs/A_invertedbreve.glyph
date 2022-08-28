@@ -1,5 +1,7 @@
 {
 glyphname = Ainvertedbreve;
+kernLeft = KO_A;
+kernRight = KO_A;
 layers = (
 {
 layerId = master01;
@@ -21,7 +23,7 @@ shapes = (
 ref = A;
 },
 {
-pos = (355,0);
+pos = (356,0);
 ref = breveinvertedcomb.case;
 }
 );
@@ -34,11 +36,11 @@ shapes = (
 ref = A;
 },
 {
-pos = (336,0);
+pos = (335,0);
 ref = breveinvertedcomb.case;
 }
 );
-width = 673;
+width = 672;
 },
 {
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -64,7 +66,7 @@ pos = (404,0);
 ref = breveinvertedcomb.case;
 }
 );
-width = 809;
+width = 807;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -81,4 +83,10 @@ width = 683;
 }
 );
 unicode = 514;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

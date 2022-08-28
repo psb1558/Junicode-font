@@ -1,7 +1,7 @@
 {
 glyphname = alphamacron;
 kernLeft = KO_e;
-kernRight = KO_alpha;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -85,6 +85,8 @@ width = 512;
 unicode = 8113;
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

@@ -1,5 +1,7 @@
 {
 glyphname = Kstroke;
+kernLeft = KO_H;
+kernRight = KO_K;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = K;
 },
 {
-pos = (176,259);
+pos = (171,259);
 ref = strokeshortcomb;
 }
 );
-width = 660;
+width = 655;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -60,11 +62,11 @@ shapes = (
 ref = K;
 },
 {
-pos = (204,259);
+pos = (200,259);
 ref = strokeshortcomb;
 }
 );
-width = 748;
+width = 744;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -73,12 +75,18 @@ shapes = (
 ref = K;
 },
 {
-pos = (168,259);
+pos = (176,259);
 ref = strokeshortcomb;
 }
 );
-width = 652;
+width = 660;
 }
 );
 unicode = 42816;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

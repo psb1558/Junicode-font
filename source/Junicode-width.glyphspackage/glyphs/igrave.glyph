@@ -1,7 +1,7 @@
 {
 glyphname = igrave;
-kernLeft = KO_i;
-kernRight = KO_i;
+kernLeft = KO_n;
+kernRight = KO_i.lf;
 layers = (
 {
 layerId = master01;
@@ -10,7 +10,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (129,0);
+pos = (103,0);
 ref = gravecomb;
 }
 );
@@ -23,7 +23,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (133,0);
+pos = (104,0);
 ref = gravecomb;
 }
 );
@@ -36,7 +36,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (129,0);
+pos = (108,0);
 ref = gravecomb;
 }
 );
@@ -62,7 +62,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (156,0);
+pos = (100,0);
 ref = gravecomb;
 }
 );
@@ -83,4 +83,10 @@ width = 325;
 }
 );
 unicode = 236;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

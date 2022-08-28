@@ -2,6 +2,7 @@
 category = Letter;
 color = 6;
 glyphname = longs.enlarged.alt;
+kernLeft = KO_n;
 layers = (
 {
 layerId = master01;
@@ -91,6 +92,10 @@ width = 309;
 script = latin;
 subCategory = Lowercase;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = longs;
 };

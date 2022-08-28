@@ -1,7 +1,7 @@
 {
 glyphname = cdotaccent.sc;
-kernLeft = KO_d.enlarged;
-kernRight = KO_c;
+kernLeft = KO_ssigmoid;
+kernRight = KO_q;
 layers = (
 {
 layerId = master01;
@@ -84,6 +84,8 @@ width = 472;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

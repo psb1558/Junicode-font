@@ -1,6 +1,7 @@
 {
 glyphname = ibreve.sc;
-kernRight = KO_i.medhighoverline;
+kernLeft = KO_x;
+kernRight = KO_q;
 layers = (
 {
 layerId = master01;
@@ -83,6 +84,8 @@ width = 266;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

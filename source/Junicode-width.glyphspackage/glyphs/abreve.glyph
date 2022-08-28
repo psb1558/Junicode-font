@@ -1,6 +1,6 @@
 {
 glyphname = abreve;
-kernLeft = KO_scaron;
+kernLeft = abreve;
 kernRight = KO_a;
 layers = (
 {
@@ -83,4 +83,10 @@ width = 633;
 }
 );
 unicode = 259;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

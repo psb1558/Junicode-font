@@ -1,7 +1,7 @@
 {
 glyphname = ohorntilde.sc;
-kernLeft = KO_d.enlarged;
-kernRight = KO_z;
+kernLeft = KO_ssigmoid;
+kernRight = KO_r.mecurl;
 layers = (
 {
 layerId = master01;
@@ -84,6 +84,8 @@ width = 518;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

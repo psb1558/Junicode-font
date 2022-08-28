@@ -1,6 +1,7 @@
 {
 category = Letter;
 glyphname = macute.alt;
+kernLeft = KO_m.alt1;
 layers = (
 {
 layerId = master01;
@@ -95,4 +96,10 @@ width = 799;
 );
 script = latin;
 subCategory = Lowercase;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

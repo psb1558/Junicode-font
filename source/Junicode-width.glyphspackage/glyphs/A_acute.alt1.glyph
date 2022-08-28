@@ -1,5 +1,6 @@
 {
 glyphname = Aacute.alt1;
+kernLeft = KO_dinsular.alt;
 kernRight = KO_k.sc;
 layers = (
 {
@@ -81,4 +82,10 @@ ref = acutecomb.case;
 width = 635;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -2,6 +2,7 @@
 case = upper;
 category = Letter;
 glyphname = Eogonekdotbelow.alt1;
+kernLeft = KO_H;
 layers = (
 {
 layerId = master01;
@@ -10,11 +11,11 @@ shapes = (
 ref = Eogonek.alt1;
 },
 {
-pos = (433,0);
+pos = (428,0);
 ref = dotbelowcomb;
 }
 );
-width = 611;
+width = 606;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -62,11 +63,11 @@ shapes = (
 ref = Eogonek.alt1;
 },
 {
-pos = (482,0);
+pos = (478,0);
 ref = dotbelowcomb;
 }
 );
-width = 690;
+width = 686;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -84,6 +85,10 @@ width = 610;
 );
 script = latin;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 case = upper;
 };
 }

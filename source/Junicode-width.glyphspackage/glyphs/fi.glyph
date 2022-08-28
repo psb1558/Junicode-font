@@ -1,5 +1,7 @@
 {
 glyphname = fi;
+kernLeft = KO_f;
+kernRight = KO_i.lf;
 layers = (
 {
 anchors = (
@@ -20,11 +22,11 @@ shapes = (
 ref = f.rij;
 },
 {
-pos = (343,0);
+pos = (284,0);
 ref = i.lf;
 }
 );
-width = 576;
+width = 517;
 },
 {
 anchors = (
@@ -45,11 +47,11 @@ shapes = (
 ref = f.rij;
 },
 {
-pos = (356,0);
+pos = (292,0);
 ref = i.lf;
 }
 );
-width = 612;
+width = 548;
 },
 {
 anchors = (
@@ -70,11 +72,11 @@ shapes = (
 ref = f.rij;
 },
 {
-pos = (350,0);
+pos = (284,0);
 ref = i.lf;
 }
 );
-width = 574;
+width = 508;
 },
 {
 anchors = (
@@ -95,11 +97,11 @@ shapes = (
 ref = f.rij;
 },
 {
-pos = (326,0);
+pos = (245,0);
 ref = i.lf;
 }
 );
-width = 516;
+width = 435;
 },
 {
 anchors = (
@@ -114,11 +116,11 @@ shapes = (
 ref = f.rij;
 },
 {
-pos = (424,0);
+pos = (327,0);
 ref = i.lf;
 }
 );
-width = 702;
+width = 605;
 },
 {
 anchors = (
@@ -153,4 +155,10 @@ metricLeft = f;
 metricRight = i;
 production = uniFB01;
 unicode = 64257;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

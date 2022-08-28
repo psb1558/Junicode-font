@@ -1,7 +1,7 @@
 {
 glyphname = ohornacute;
 kernLeft = KO_o;
-kernRight = KO_q;
+kernRight = KO_n.mecurl;
 layers = (
 {
 layerId = master01;
@@ -23,11 +23,11 @@ shapes = (
 ref = ohorn;
 },
 {
-pos = (232,0);
+pos = (231,0);
 ref = acutecomb;
 }
 );
-width = 475;
+width = 473;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -49,11 +49,11 @@ shapes = (
 ref = ohorn;
 },
 {
-pos = (207,0);
+pos = (203,0);
 ref = acutecomb;
 }
 );
-width = 401;
+width = 393;
 },
 {
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -83,4 +83,10 @@ width = 657;
 }
 );
 unicode = 7899;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

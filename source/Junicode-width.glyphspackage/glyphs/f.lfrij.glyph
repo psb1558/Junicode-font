@@ -1,7 +1,5 @@
 {
 glyphname = f.lfrij;
-kernLeft = KO_f;
-kernRight = KO_f.rij;
 layers = (
 {
 layerId = master01;
@@ -384,4 +382,10 @@ width = 285;
 );
 metricLeft = f.lf;
 metricRight = f.rij;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

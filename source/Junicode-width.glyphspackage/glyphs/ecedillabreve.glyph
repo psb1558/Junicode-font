@@ -1,5 +1,7 @@
 {
 glyphname = ecedillabreve;
+kernLeft = edieresis;
+kernRight = KO_e;
 layers = (
 {
 layerId = master01;
@@ -105,4 +107,10 @@ width = 581;
 }
 );
 unicode = 7709;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

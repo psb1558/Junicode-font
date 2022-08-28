@@ -1,7 +1,7 @@
 {
 glyphname = Ohorndotbelow;
 kernLeft = KO_O;
-kernRight = KO_N;
+kernRight = KO_i.medhighoverline;
 layers = (
 {
 layerId = master01;
@@ -10,11 +10,11 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (349,0);
+pos = (351,0);
 ref = dotbelowcomb;
 }
 );
-width = 707;
+width = 711;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -23,11 +23,11 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (374,0);
+pos = (372,0);
 ref = dotbelowcomb;
 }
 );
-width = 737;
+width = 727;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -62,11 +62,11 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (425,0);
+pos = (412,0);
 ref = dotbelowcomb;
 }
 );
-width = 844;
+width = 825;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -75,12 +75,18 @@ shapes = (
 ref = Ohorn;
 },
 {
-pos = (355,0);
+pos = (351,0);
 ref = dotbelowcomb;
 }
 );
-width = 713;
+width = 711;
 }
 );
 unicode = 7906;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

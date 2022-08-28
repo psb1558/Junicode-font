@@ -2,8 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = Thorn.enlarged.loclENG;
-kernLeft = KO_Sinsular;
-kernRight = KO_O;
+kernLeft = KO_l;
+kernRight = KO_o.enlarged;
 layers = (
 {
 layerId = master01;
@@ -92,6 +92,10 @@ width = 496;
 );
 script = latin;
 userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 RMXScaler = {
 source = thorn;
 };

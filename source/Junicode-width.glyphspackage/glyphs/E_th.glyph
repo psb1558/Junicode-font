@@ -1,7 +1,7 @@
 {
 glyphname = Eth;
 kernLeft = KO_H;
-kernRight = KO_O;
+kernRight = KO_D;
 layers = (
 {
 layerId = master01;
@@ -10,11 +10,11 @@ shapes = (
 ref = D;
 },
 {
-pos = (193,69);
+pos = (188,69);
 ref = strokeshortcomb;
 }
 );
-width = 753;
+width = 748;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -40,7 +40,7 @@ pos = (192,69);
 ref = strokeshortcomb;
 }
 );
-width = 750;
+width = 749;
 },
 {
 guides = (
@@ -68,11 +68,11 @@ shapes = (
 ref = D;
 },
 {
-pos = (221,69);
+pos = (211,69);
 ref = strokeshortcomb;
 }
 );
-width = 856;
+width = 846;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -81,15 +81,19 @@ shapes = (
 ref = D;
 },
 {
-pos = (185,69);
+pos = (193,69);
 ref = strokeshortcomb;
 }
 );
-width = 745;
+width = 753;
 }
 );
 unicode = 208;
 userData = {
 KernOnName = Eth;
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
 };
 }

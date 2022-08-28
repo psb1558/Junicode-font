@@ -1,6 +1,6 @@
 {
 glyphname = adieresismacron;
-kernLeft = KO_scaron;
+kernLeft = adieresis;
 kernRight = KO_a;
 layers = (
 {
@@ -107,4 +107,10 @@ width = 633;
 }
 );
 unicode = 479;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -2,6 +2,8 @@
 category = Letter;
 color = 6;
 glyphname = Eth.enlarged.loclENG;
+kernLeft = KO_h_longshighstroke;
+kernRight = KO_o.enlarged;
 layers = (
 {
 layerId = master01;
@@ -65,4 +67,10 @@ width = 544;
 }
 );
 script = latin;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,7 +1,7 @@
 {
 glyphname = icircumflex;
-kernLeft = KO_h_longshighstroke;
-kernRight = KO_i;
+kernLeft = KO_n;
+kernRight = KO_i.lf;
 layers = (
 {
 layerId = master01;
@@ -36,7 +36,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (313,0);
+pos = (326,0);
 ref = circumflexcomb;
 }
 );
@@ -49,7 +49,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (261,0);
+pos = (268,0);
 ref = circumflexcomb;
 }
 );
@@ -62,7 +62,7 @@ shapes = (
 ref = dotlessi;
 },
 {
-pos = (381,0);
+pos = (375,0);
 ref = circumflexcomb;
 }
 );
@@ -83,4 +83,10 @@ width = 325;
 }
 );
 unicode = 238;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

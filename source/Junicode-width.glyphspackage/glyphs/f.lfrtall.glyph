@@ -1,7 +1,5 @@
 {
 glyphname = f.lfrtall;
-kernLeft = KO_f;
-kernRight = KO_f.rtall;
 layers = (
 {
 layerId = master01;
@@ -352,4 +350,10 @@ nodes = (
 width = 261;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,7 +1,7 @@
 {
 glyphname = uhorngrave;
 kernLeft = KO_u;
-kernRight = KO_alpha;
+kernRight = KO_n.mecurl;
 layers = (
 {
 layerId = master01;
@@ -10,7 +10,7 @@ shapes = (
 ref = uhorn;
 },
 {
-pos = (254,0);
+pos = (228,0);
 ref = gravecomb;
 }
 );
@@ -23,7 +23,7 @@ shapes = (
 ref = uhorn;
 },
 {
-pos = (280,0);
+pos = (251,0);
 ref = gravecomb;
 }
 );
@@ -36,7 +36,7 @@ shapes = (
 ref = uhorn;
 },
 {
-pos = (247,0);
+pos = (213,0);
 ref = gravecomb;
 }
 );
@@ -49,7 +49,7 @@ shapes = (
 ref = uhorn;
 },
 {
-pos = (219,0);
+pos = (212,0);
 ref = gravecomb;
 }
 );
@@ -62,7 +62,7 @@ shapes = (
 ref = uhorn;
 },
 {
-pos = (291,0);
+pos = (241,0);
 ref = gravecomb;
 }
 );
@@ -83,4 +83,10 @@ width = 506;
 }
 );
 unicode = 7915;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

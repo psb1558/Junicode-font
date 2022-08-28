@@ -1,5 +1,7 @@
 {
 glyphname = LJ;
+kernLeft = KO_H;
+kernRight = KO_L;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = L;
 },
 {
-pos = (614,0);
+pos = (622,0);
 ref = J;
 }
 );
-width = 964;
+width = 972;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -60,11 +62,11 @@ shapes = (
 ref = L;
 },
 {
-pos = (663,0);
+pos = (701,0);
 ref = J;
 }
 );
-width = 1073;
+width = 1111;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -73,12 +75,18 @@ shapes = (
 ref = L;
 },
 {
-pos = (656,0);
+pos = (627,0);
 ref = J;
 }
 );
-width = 1006;
+width = 977;
 }
 );
 unicode = 455;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

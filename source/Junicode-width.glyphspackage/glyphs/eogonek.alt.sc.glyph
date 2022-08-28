@@ -1,6 +1,7 @@
 {
 glyphname = eogonek.alt.sc;
-kernLeft = KO_r.enlarged;
+kernLeft = KO_x;
+kernRight = KO_e.sc;
 layers = (
 {
 layerId = master01;
@@ -89,6 +90,8 @@ width = 439;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

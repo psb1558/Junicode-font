@@ -1,5 +1,7 @@
 {
 glyphname = Pstrokethroughdescender;
+kernLeft = KO_H;
+kernRight = KO_P;
 layers = (
 {
 layerId = master01;
@@ -8,11 +10,11 @@ shapes = (
 ref = P;
 },
 {
-pos = (180,-95);
+pos = (175,-95);
 ref = strokeshortcomb;
 }
 );
-width = 576;
+width = 571;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -60,11 +62,11 @@ shapes = (
 ref = P;
 },
 {
-pos = (210,-95);
+pos = (206,-95);
 ref = strokeshortcomb;
 }
 );
-width = 669;
+width = 665;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -73,12 +75,18 @@ shapes = (
 ref = P;
 },
 {
-pos = (172,-95);
+pos = (180,-95);
 ref = strokeshortcomb;
 }
 );
-width = 568;
+width = 576;
 }
 );
 unicode = 42832;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

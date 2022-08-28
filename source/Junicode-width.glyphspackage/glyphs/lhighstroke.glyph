@@ -1,6 +1,7 @@
 {
 glyphname = lhighstroke;
-kernLeft = KO_lhighstroke;
+kernLeft = KO_l;
+kernRight = KO_i;
 layers = (
 {
 layerId = master01;
@@ -88,4 +89,10 @@ width = 279;
 }
 );
 unicode = 42825;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

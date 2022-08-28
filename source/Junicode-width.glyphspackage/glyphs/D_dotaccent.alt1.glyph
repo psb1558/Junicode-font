@@ -1,6 +1,6 @@
 {
 glyphname = Ddotaccent.alt1;
-kernLeft = KO_U;
+kernLeft = KO_l.alt;
 kernRight = KO_O;
 layers = (
 {
@@ -14,7 +14,7 @@ pos = (389,0);
 ref = dotaccentcomb.case;
 }
 );
-width = 737;
+width = 739;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -27,7 +27,7 @@ pos = (397,0);
 ref = dotaccentcomb.case;
 }
 );
-width = 750;
+width = 749;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -66,7 +66,7 @@ pos = (450,0);
 ref = dotaccentcomb.case;
 }
 );
-width = 843;
+width = 837;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -79,7 +79,13 @@ pos = (389,0);
 ref = dotaccentcomb.case;
 }
 );
-width = 737;
+width = 739;
 }
 );
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

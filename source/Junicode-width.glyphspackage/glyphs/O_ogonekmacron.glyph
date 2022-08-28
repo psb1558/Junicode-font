@@ -1,5 +1,7 @@
 {
 glyphname = Oogonekmacron;
+kernLeft = KO_O;
+kernRight = KO_O;
 layers = (
 {
 layerId = master01;
@@ -8,15 +10,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (440,-10);
+pos = (442,-10);
 ref = ogonekcomb;
 },
 {
-pos = (344,0);
+pos = (346,0);
 ref = macroncomb.case;
 }
 );
-width = 707;
+width = 711;
 },
 {
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -25,15 +27,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (464,-10);
+pos = (456,-10);
 ref = ogonekcomb;
 },
 {
-pos = (381,0);
+pos = (373,0);
 ref = macroncomb.case;
 }
 );
-width = 737;
+width = 727;
 },
 {
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -76,15 +78,15 @@ shapes = (
 ref = O;
 },
 {
-pos = (480,-10);
+pos = (467,-10);
 ref = ogonekcomb;
 },
 {
-pos = (410,0);
+pos = (397,0);
 ref = macroncomb.case;
 }
 );
-width = 844;
+width = 825;
 },
 {
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -93,16 +95,22 @@ shapes = (
 ref = O;
 },
 {
-pos = (444,-10);
+pos = (440,-10);
 ref = ogonekcomb;
 },
 {
-pos = (350,0);
+pos = (346,0);
 ref = macroncomb.case;
 }
 );
-width = 713;
+width = 711;
 }
 );
 unicode = 492;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

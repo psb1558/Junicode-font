@@ -1,7 +1,7 @@
 {
 glyphname = lcaron;
 kernLeft = KO_l;
-kernRight = KO_lcaron;
+kernRight = KO_i;
 layers = (
 {
 layerId = master01;
@@ -95,4 +95,10 @@ width = 256;
 }
 );
 unicode = 318;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

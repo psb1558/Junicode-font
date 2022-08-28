@@ -1,5 +1,7 @@
 {
 glyphname = sacutedotaccent.sc;
+kernLeft = KO_a.enlarged;
+kernRight = KO_s;
 layers = (
 {
 layerId = master01;
@@ -112,6 +114,8 @@ width = 367;
 );
 userData = {
 KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
 };
 };
 }

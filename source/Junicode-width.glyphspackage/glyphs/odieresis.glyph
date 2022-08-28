@@ -1,7 +1,7 @@
 {
 glyphname = odieresis;
-kernLeft = KO_d_e.hlig;
-kernRight = KO_odieresis;
+kernLeft = odieresis;
+kernRight = KO_o;
 layers = (
 {
 layerId = master01;
@@ -83,4 +83,10 @@ width = 657;
 }
 );
 unicode = 246;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

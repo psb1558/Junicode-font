@@ -1,0 +1,2680 @@
+font:
+  in: /Users/peterbaker/work/GitHub/Junicode-New/fonts/variable/JunicodeTwoBetaVF-Italic.ttf
+  out: /Users/peterbaker/work/GitHub/Junicode-New/fonts/variable/JunicodeTwoBetaVF-Italic-hinted.ttf
+defaults:
+  init-graphics: false
+  cleartype: true
+  assume-always-y: true
+cvt:
+  baseline:
+    val: 0
+    type: pos
+    vector: y
+  cap-height:
+    val: 666
+    type: pos
+    vector: y
+  cap-serif:
+    val: 35
+    type: dist
+    vector: y
+  cap-serif-undershoot:
+    val: -4
+    type: pos
+    vector: y
+  cap-bar:
+    val: 37
+    type: dist
+    vector: y
+  cap-height-overshoot:
+    val: 676
+    type: pos
+    vector: y
+  cap-serif-overshoot:
+    val: 2
+    type: dist
+    vector: y
+  cap-round-stem:
+    val: 34
+    type: dist
+    vector: y
+  cap-baseline-undershoot:
+    val: -13
+    type: pos
+    vector: y
+  G-serif:
+    val: 268
+    type: pos
+    vector: y
+  lc-serif:
+    val: 24
+    type: dist
+    vector: y
+  lc-ascender:
+    val: 726
+    type: pos
+    vector: y
+  lc-f-top:
+    val: 725
+    type: pos
+    vector: y
+  lc-descender:
+    val: -269
+    type: pos
+    vector: y
+  lc-round-stem:
+    val: 29
+    type: dist
+    vector: y
+  lc-bar:
+    val: 38
+    type: dist
+    vector: y
+  xheight:
+    val: 415
+    type: pos
+    vector: y
+  xheight-overshoot:
+    val: 425
+    type: pos
+    vector: y
+  lc-baseline-undershoot:
+    val: -11
+    type: pos
+    vector: y
+  u-top-a:
+    val: 419
+    type: pos
+    vector: y
+  u-top-b:
+    val: 410
+    type: pos
+    vector: y
+  num-circle:
+    val: 41
+    type: dist
+    vector: y
+  sc-serif:
+    val: 28
+    type: dist
+    vector: y
+  sc-height:
+    val: 455
+    type: pos
+    vector: y
+  sc-height-overshoot:
+    val: 464
+    type: pos
+    vector: y
+  sc-baseline-undershoot:
+    val: -9
+    type: pos
+    vector: y
+  sc-serif-undershoot:
+    val: -3
+    type: pos
+    vector: y
+  lc-markabove:
+    val: 495
+    type: pos
+    vector: y
+  period-width:
+    val: 110
+    type: dist
+    vector: y
+cvar:
+- regions:
+  - tag: wght
+    bot: -1.0
+    peak: -1.0
+    top: 0.0
+  vals:
+  - nm: cap-serif
+    val: 31
+  - nm: cap-bar
+    val: 34
+  - nm: cap-round-stem
+    val: 32
+- regions:
+  - tag: wght
+    bot: 0.0
+    peak: 1.0
+    top: 1.0
+  vals:
+  - nm: cap-serif
+    val: 42
+  - nm: cap-bar
+    val: 47
+  - nm: cap-round-stem
+    val: 42
+prep:
+  code: |-
+    <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+      <if test="pixels-per-em &gt; 300">
+        <disable-instructions/>
+      </if>
+      <push>4 511</push>
+      <command name="SCANCTRL"/>
+      <command name="SCANTYPE"/>
+      <if test="pixels-per-em &lt; 40">
+        <setcv name="xheight-overshoot" unit="pixel" value="control-value(xheight)"/>
+        <setcv name="lc-baseline-undershoot" unit="pixel" value="control-value(baseline)"/>
+      </if>
+      <if test="pixels-per-em &lt; 144">
+        <setcv name="cap-serif-overshoot" unit="pixel" val="control-value(cap-serif-undershoot)"/>
+        <setcv name="u-top-a" unit="pixel" value="control-value(xheight)"/>
+        <setcv name="u-top-b" unit="pixel" value="control-value(xheight)"/>
+      </if>
+    </code>
+functions:
+  serif-helper:
+    base:
+      type: point
+    pt-a:
+      type: point
+    base-cv:
+      type: pos
+      val: 190
+    cup-cv:
+      type: pos
+      val: cap-baseline-undershoot
+    ppem:
+      type: int
+      val: 190
+    code: |
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+        <move distance="base-cv">
+          <point num="base"/>
+        </move>
+        <if test="pixels-per-em &lt; ppem">
+          <align>
+            <point num="pt-a"/>
+          </align>
+          <else>
+            <command name="RTDG"/>
+            <move distance="cup-cv">
+              <reference>
+                <point num="base"/>
+              </reference>
+              <point num="pt-a"/>
+            </move>
+            <command name="RTG"/>
+          </else>
+        </if>
+      </code>
+macros:
+  cap-serif:
+    base:
+      type: point
+      subtype: target
+    base-sh:
+      type: point
+      subtype: target
+      val: -1
+    pt-a:
+      type: point
+      subtype: target
+    pt-a-sh:
+      type: point
+      subtype: target
+      val: -1
+    pt-b:
+      type: point
+      subtype: target
+    pt-b-sh:
+      type: point
+      subtype: target
+      val: -1
+    base-cv:
+      type: pos
+      val: baseline
+    cup-cv:
+      type: pos
+      val: cap-serif-undershoot
+    ppem:
+      type: int
+      val: 160
+    code: |-
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+        <move distance="base-cv"><point num="base"/>
+          <shift compile-if="not( nan(base-sh) ) and base-sh &gt;= 0"><point num="base-sh"/></shift>
+          <shift compile-if="nan(base-sh)">
+            <set ref="base-sh"/>
+          </shift>
+          <move distance="cap-serif"><point num="pt-b"/>
+            <shift compile-if="not( nan(pt-b-sh) ) and pt-b-sh &gt;= 0"><point num="pt-b-sh"/></shift>
+            <shift compile-if="nan(pt-b-sh)">
+              <set ref="pt-b-sh"/>
+            </shift>
+          </move>
+        </move>
+        <call-function name="serif-helper">
+          <with-param name="base" value="base"/>
+          <with-param name="pt-a" value="pt-a"/>
+          <with-param name="base-cv" value="base-cv"/>
+          <with-param name="cup-cv" value="cup-cv"/>
+          <with-param name="ppem" value="ppem"/>
+        </call-function>
+        <shift compile-if="not( nan(pt-a-sh) ) and pt-a-sh &gt;= 0">
+          <reference>
+            <point num="pt-a"/>
+          </reference>
+          <point num="pt-a-sh"/>
+        </shift>
+        <shift compile-if="nan(pt-a-sh)">
+          <reference>
+            <point num="pt-a"/>
+          </reference>
+          <set ref="pt-a-sh"/>
+        </shift>
+      </code>
+  hook:
+    pt-a:
+      type: point
+    cv:
+      type: int
+      val: -1
+    pt-b:
+      type: point
+    pt-c:
+      type: point
+    code: |
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+        <compile-if test="cv &gt;= 0">
+          <push>pt-c pt-b pt-a cv</push>
+          <command name="MIAP" modifier="1"/>
+          <command name="MDRP">
+            <modifier type="color" value="black"/>
+          </command>
+          <command name="MDRP">
+            <modifier type="color" value="black"/>
+          </command>
+          <else>
+            <push>pt-c pt-b pt-a</push>
+            <command name="MDAP" modifier="1"/>
+            <command name="MDRP">
+              <modifier type="color" value="black"/>
+            </command>
+            <command name="MDRP">
+              <modifier type="color" value="black"/>
+            </command>
+          </else>
+        </compile-if>
+      </code>
+  cap-round-stem:
+    pt-a:
+      type: point
+      subtype: target
+    pt-b:
+      type: point
+      subtype: target
+    cv:
+      type: pos
+      val: cap-baseline-undershoot
+    stem-cv:
+      type: dist
+      val: -1
+    code: |-
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+        <compile-if test="stem-cv != -1">
+          <move distance="cv"><point num="pt-a"/>
+            <move distance="stem-cv"><point num="pt-b"/></move>
+          </move>
+          <else>
+            <move distance="cv"><point num="pt-a"/>
+              <move><point num="pt-b"/></move>
+            </move>
+          </else>
+        </compile-if>
+      </code>
+  mid-stem:
+    ref1:
+      type: point
+      subtype: ref
+    ref2:
+      type: point
+      subtype: ref
+    pt-a:
+      type: point
+      subtype: target
+    pt-b:
+      type: point
+      subtype: target
+    cv:
+      type: dist
+      val: -1
+    code: |
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+        <push>pt-a pt-a ref2 ref1</push>
+        <command name="SRP1"/>
+        <command name="SRP2"/>
+        <command name="IP"/>
+        <command name="MDAP" modifier="1"/>
+        <compile-if test="cv &gt;= 0">
+          <push>pt-b cv</push>
+          <command name="MIRP" modifier="11100"/>
+          <else>
+            <push>pt-b</push>
+            <command name="MDRP" modifier="11100"/>
+          </else>
+        </compile-if>
+      </code>
+  mid-stem-serif:
+    ref1:
+      type: point
+      subtype: ref
+    ref2:
+      type: point
+      subtype: ref
+    pt-a:
+      type: point
+      subtype: target
+    pt-b:
+      type: point
+      subtype: target
+    sh-a:
+      type: point
+      subtype: target
+    sh-b:
+      type: point
+      subtype: target
+    cv:
+      type: dist
+      val: -1
+    code: |-
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+        <push>sh-a pt-a pt-a ref2 ref1</push>
+        <command name="SRP1"/>
+        <command name="SRP2"/>
+        <command name="IP"/>
+        <command name="MDAP" modifier="1"/>
+        <command name="SHP" modifier="1"/>
+        <compile-if test="cv &gt;= 0">
+          <push>sh-b pt-b cv</push>
+          <command name="MIRP" modifier="11101"/>
+          <command name="SHP" modifier="0"/>
+          <else>
+            <push>sh-b pt-b</push>
+            <command name="MDRP" modifier="11101"/>
+            <command name="SHP" modifier="0"/>
+          </else>
+        </compile-if>
+      </code>
+glyphs:
+  A:
+    y:
+      points:
+      - ptid: 25
+        pos: cap-height-overshoot
+        points:
+        - ptid: 52
+          rel: shift
+      - ptid:
+          base: 63
+          pt-a: 0
+          pt-b: 4
+          base-sh: 41
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 57
+        - 47
+        - 35
+        ref: 4
+        rel: shift
+      - ptid:
+        - 61
+        - 43
+        - 39
+        ref: 0
+        rel: shift
+      - ptid:
+          ref1: 25
+          ref2: 63
+          pt-a: 65
+          pt-b: 66
+        macro:
+          nm: mid-stem
+          cv: cap-bar
+  B:
+    y:
+      points:
+      - ptid: 17
+        pos: cap-height
+        points:
+        - ptid: 13
+          rel: blackspace
+          dist: cap-serif
+        - ptid: 64
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+          base: 37
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 34
+        macro:
+          nm: cap-serif
+      - ptid: 55
+        ref:
+        - 37
+        - 17
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 49
+          rel: blackspace
+          dist: cap-bar
+      - ptid: 40
+        ref: 37
+        rel: blackspace
+        dist: cap-round-stem
+  C:
+    y:
+      points:
+      - ptid:
+          pt-a: 16
+          pt-b: 36
+        macro:
+          nm: cap-round-stem
+          cv: cap-height-overshoot
+          stem-cv: cap-round-stem
+      - ptid:
+          pt-a: 8
+          pt-b: 46
+        macro:
+          nm: cap-round-stem
+          cv: cap-baseline-undershoot
+          stem-cv: cap-round-stem
+  D:
+    y:
+      points:
+      - ptid: 15
+        pos: cap-height
+        points:
+        - ptid: 11
+          rel: blackspace
+          dist: cap-serif
+        - ptid: 45
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+          base: 31
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 28
+        macro:
+          nm: cap-serif
+      - ptid: 34
+        ref: 31
+        rel: blackspace
+        dist: cap-bar
+  E:
+    y:
+      points:
+      - ptid:
+          base: 19
+          pt-a: 16
+          pt-b: 12
+          pt-a-sh: 22
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+          base: 88
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 85
+        macro:
+          nm: cap-serif
+      - ptid: 43
+        ref:
+        - 19
+        - 88
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 67
+          rel: blackspace
+          dist: cap-bar
+      - ptid: 73
+        ref: 88
+        rel: blackspace
+        dist: cap-bar
+      - ptid: 39
+        ref: 19
+        rel: blackspace
+        dist: cap-bar
+  F:
+    y:
+      points:
+      - ptid:
+          base: 81
+          pt-a: 0
+          pt-b: 4
+          pt-b-sh: 74
+          pt-a-sh: 78
+        macro:
+          nm: cap-serif
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          pt-a-sh: 23
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid: 43
+        ref:
+        - 20
+        - 81
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 69
+          rel: blackspace
+          dist: cap-bar
+      - ptid: 40
+        ref: 20
+        rel: blackspace
+        dist: cap-bar
+  G:
+    y:
+      points:
+      - ptid:
+          pt-a: 12
+          pt-b: 36
+        macro:
+          nm: cap-round-stem
+          cv: cap-height-overshoot
+          stem-cv: cap-round-stem
+      - ptid:
+          pt-a: 0
+          pt-b: 46
+        macro:
+          nm: cap-round-stem
+          cv: cap-baseline-undershoot
+          stem-cv: cap-round-stem
+      - ptid:
+          base: 61
+          pt-a: 59
+          pt-b: 55
+          pt-a-sh: 64
+          pt-b-sh: 68
+        macro:
+          nm: cap-serif
+          base-cv: G-serif
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+  H:
+    y:
+      points:
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          base-sh: 66
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+          base: 43
+          pt-a: 0
+          pt-b: 4
+          base-sh: 89
+        macro:
+          nm: cap-serif
+      - ptid: 93
+        ref:
+        - 43
+        - 20
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 92
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+        - 23
+        - 63
+        - 69
+        ref: 17
+        rel: shift
+      - ptid:
+        - 27
+        - 59
+        - 73
+        ref: 13
+        rel: shift
+      - ptid:
+        - 36
+        - 50
+        - 82
+        ref: 4
+        rel: shift
+      - ptid:
+        - 40
+        - 46
+        - 86
+        ref: 0
+        rel: shift
+  I:
+    y:
+      points:
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          pt-a-sh: 23
+          pt-b-sh: 27
+        macro:
+          nm: cap-serif
+          base-cv: cap-height-overshoot
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+          base: 43
+          pt-a: 0
+          pt-b: 4
+          pt-b-sh: 36
+          pt-a-sh: 40
+        macro:
+          nm: cap-serif
+  J:
+    y:
+      points:
+      - ptid:
+          base: 26
+          pt-a: 23
+          pt-b: 19
+          pt-a-sh: 29
+          pt-b-sh: 33
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+          pt-a: 0
+          pt-b: 9
+          pt-c: 6
+        macro:
+          nm: hook
+  K:
+    y:
+      points:
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          base-sh: 50
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+          base: 105
+          pt-a: 0
+          pt-b: 4
+          base-sh: 75
+        macro:
+          nm: cap-serif
+      - ptid: 35
+        ref:
+        - 105
+        - 20
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 91
+          dist: cap-bar
+          rel: blackspace
+      - ptid:
+        - 23
+        - 47
+        - 53
+        ref: 17
+        rel: shift
+      - ptid:
+        - 27
+        - 43
+        - 57
+        ref: 13
+        rel: shift
+      - ptid:
+        - 98
+        - 82
+        - 68
+        ref: 4
+        rel: shift
+      - ptid:
+        - 102
+        - 78
+        - 72
+        ref: 0
+        rel: shift
+  L:
+    y:
+      points:
+      - ptid:
+          base: 53
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 50
+        macro:
+          nm: cap-serif
+      - ptid: 38
+        ref: 53
+        rel: blackspace
+        dist: cap-bar
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          pt-a-sh: 23
+          pt-b-sh: 27
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+  M:
+    y:
+      points:
+      - ptid:
+          base: 16
+          pt-a: 19
+          pt-b: 23
+          base-sh: 69
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 9
+        - 76
+        - 62
+        ref: 23
+        rel: shift
+      - ptid:
+        - 13
+        - 0
+        - 72
+        - 66
+        ref: 19
+        rel: shift
+      - ptid:
+          base: 38
+          pt-a: 35
+          pt-b: 31
+          base-sh: 47
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid: 50
+        ref: 35
+        rel: shift
+      - ptid: 54
+        ref: 31
+        rel: shift
+      - ptid:
+        - 4
+        - 43
+        - 82
+        ref:
+        - 38
+        - 16
+        rel: interpolate
+  N:
+    y:
+      points:
+      - ptid:
+          base: 38
+          pt-a: 35
+          pt-b: 31
+          base-sh: 54
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 51
+        - 57
+        ref: 35
+        rel: shift
+      - ptid:
+        - 47
+        - 61
+        ref: 31
+        rel: shift
+      - ptid:
+          base: 16
+          pt-a: 19
+          pt-b: 23
+          pt-b-sh: 9
+          pt-a-sh: 13
+        macro:
+          nm: cap-serif
+      - ptid: 0
+        pos: cap-baseline-undershoot
+      - ptid:
+        - 5
+        - 43
+        ref:
+        - 38
+        - 16
+        rel: interpolate
+  O:
+    y:
+      points:
+      - ptid: 10
+        pos: cap-height-overshoot
+        points:
+        - ptid: 30
+          rel: blackspace
+          dist: cap-round-stem
+      - ptid: 0
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 20
+          rel: blackspace
+          dist: cap-round-stem
+  P:
+    y:
+      points:
+      - ptid: 15
+        pos: cap-height
+        points:
+        - ptid: 11
+          rel: blackspace
+          dist: cap-serif
+        - ptid: 54
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+          base: 42
+          pt-a: 0
+          pt-b: 4
+          pt-b-sh: 35
+          pt-a-sh: 39
+        macro:
+          nm: cap-serif
+      - ptid: 26
+        ref:
+        - 42
+        - 15
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 46
+          rel: blackspace
+          dist: cap-round-stem
+  Q:
+    y:
+      points:
+      - ptid:
+          pt-a: 13
+          pt-b: 41
+        macro:
+          nm: cap-round-stem
+          cv: cap-height-overshoot
+          stem-cv: cap-round-stem
+      - ptid: 0
+        points:
+        - ptid: 27
+          rel: shift
+      - ptid:
+        - 31
+        - 22
+        ref:
+        - 0
+        - 13
+        rel: interpolate
+        round: true
+  R:
+    y:
+      points:
+      - ptid: 15
+        pos: cap-height
+        points:
+        - ptid: 11
+          rel: blackspace
+          dist: cap-serif
+        - ptid: 82
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+          base: 72
+          pt-a: 0
+          pt-b: 4
+          base-sh: 42
+          pt-a-sh: 69
+          pt-b-sh: 65
+        macro:
+          nm: cap-serif
+      - ptid: 39
+        ref: 69
+        rel: shift
+      - ptid: 35
+        ref: 42
+        rel: blackspace
+      - ptid: 56
+        ref:
+        - 72
+        - 15
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 75
+          rel: blackspace
+          dist: cap-bar
+      - ptid: 22
+        ref:
+        - 75
+        - 56
+        rel: interpolate
+  S:
+    y:
+      points:
+      - ptid:
+          pt-a: 35
+          pt-b: 55
+        macro:
+          nm: cap-round-stem
+          cv: cap-height-overshoot
+          stem-cv: cap-round-stem
+      - ptid:
+          pt-a: 0
+          pt-b: 20
+        macro:
+          nm: cap-round-stem
+          cv: cap-baseline-undershoot
+          stem-cv: cap-round-stem
+      - ptid:
+        - 27
+        - 62
+        ref:
+        - 0
+        - 35
+        rel: interpolate
+        points: []
+  T:
+    y:
+      points:
+      - ptid: 25
+        pos: cap-height
+        points:
+        - ptid: 10
+          rel: blackspace
+          dist: cap-bar
+          points:
+          - ptid: 43
+            rel: shift
+      - ptid:
+          base: 54
+          pt-a: 52
+          pt-b: 4
+          base-sh: 0
+          pt-b-sh: 48
+        macro:
+          nm: cap-serif
+      - ptid:
+          base: 25
+          pt-a: 22
+        function:
+          nm: serif-helper
+      - ptid: 28
+        ref: 22
+        rel: shift
+  U:
+    y:
+      points:
+      - ptid:
+          base: 18
+          pt-a: 15
+          pt-b: 11
+          base-sh: 51
+        macro:
+          nm: cap-serif
+          base-cv: cap-serif-undershoot
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 21
+        - 48
+        - 54
+        ref: 15
+        rel: shift
+      - ptid:
+        - 25
+        - 44
+        - 58
+        ref: 11
+        rel: shift
+      - ptid:
+          pt-a: 0
+          pt-b: 36
+        macro:
+          nm: cap-round-stem
+          cv: cap-baseline-undershoot
+          stem-cv: cap-round-stem
+  V:
+    y:
+      points:
+      - ptid: 0
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 25
+          rel: shift
+      - ptid:
+          base: 13
+          pt-a: 10
+          pt-b: 6
+          base-sh: 40
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 16
+        - 37
+        - 43
+        ref: 10
+        rel: shift
+      - ptid:
+        - 20
+        - 33
+        - 47
+        ref: 6
+        rel: shift
+  W:
+    y:
+      points:
+      - ptid:
+          base: 14
+          pt-a: 11
+          pt-b: 7
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 38
+        - 61
+        - 89
+        ref: 14
+        rel: shift
+      - ptid:
+        - 17
+        - 35
+        - 41
+        - 58
+        - 64
+        - 86
+        - 92
+        ref: 11
+        rel: shift
+      - ptid:
+        - 21
+        - 31
+        - 45
+        - 54
+        - 68
+        - 82
+        - 96
+        ref: 7
+        rel: shift
+      - ptid: 0
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 108
+          rel: shift
+      - ptid:
+        - 26
+        - 27
+        - 113
+        - 50
+        - 73
+        - 75
+        ref:
+        - 0
+        - 14
+        rel: interpolate
+  X:
+    y:
+      points:
+      - ptid:
+          base: 23
+          pt-a: 20
+          pt-b: 16
+          base-sh: 50
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 26
+        - 47
+        - 53
+        ref: 20
+        rel: shift
+      - ptid:
+        - 30
+        - 43
+        - 57
+        ref: 16
+        rel: shift
+      - ptid:
+          base: 104
+          pt-a: 0
+          pt-b: 4
+          base-sh: 77
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 97
+        - 84
+        - 70
+        ref: 4
+        rel: shift
+      - ptid:
+        - 101
+        - 80
+        - 74
+        ref: 0
+        rel: shift
+      - ptid:
+        - 8
+        - 92
+        - 38
+        - 62
+        ref:
+        - 104
+        - 23
+        rel: interpolate
+  Y:
+    y:
+      points:
+      - ptid:
+          base: 76
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 73
+          pt-b-sh: 69
+        macro:
+          nm: cap-serif
+      - ptid:
+          base: 25
+          pt-a: 22
+          pt-b: 18
+          base-sh: 49
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 28
+        - 46
+        - 52
+        ref: 22
+        rel: shift
+      - ptid:
+        - 32
+        - 42
+        - 56
+        ref: 18
+        rel: shift
+      - ptid:
+        - 11
+        - 38
+        - 62
+        ref:
+        - 25
+        - 76
+        rel: interpolate
+  Z:
+    y:
+      points:
+      - ptid: 34
+        pos: cap-height
+        points:
+        - ptid: 13
+          rel: blackspace
+          dist: cap-bar
+      - ptid: 5
+        pos: baseline
+        points:
+        - ptid: 44
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+          base: 34
+          pt-a: 38
+        function:
+          nm: serif-helper
+  bracketleft:
+    y:
+      points:
+      - ptid: 6
+        points:
+        - ptid: 11
+          rel: blackspace
+      - ptid: 21
+        points:
+        - ptid: 16
+          rel: blackspace
+  bracketright:
+    y:
+      points:
+      - ptid: 15
+        points:
+        - ptid: 10
+          rel: blackspace
+      - ptid: 0
+        points:
+        - ptid: 5
+          rel: blackspace
+  asciicircum:
+    y:
+      points:
+      - ptid: 7
+        points:
+        - ptid: '{466;261}'
+          rel: shift
+      - ptid: 2
+        points:
+        - ptid: 6
+          rel: shift
+  underscore:
+    y:
+      points:
+      - ptid: 1
+        points:
+        - ptid: 0
+          rel: blackspace
+  a:
+    y:
+      points:
+      - ptid: 0
+        points:
+        - ptid: 37
+          rel: shift
+          points:
+          - ptid: 26
+            rel: blackspace
+        - ptid: 47
+          rel: blackspace
+      - ptid: 11
+        pos: xheight
+        points:
+        - ptid: 59
+          rel: blackspace
+          dist: lc-round-stem
+  b:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 39
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 31
+        pos: xheight
+        points:
+        - ptid: 47
+          rel: blackspace
+      - ptid: 21
+        pos: lc-ascender
+        points:
+        - ptid: 15
+          rel: grayspace
+          points:
+          - ptid: 11
+            rel: blackspace
+            dist: lc-serif
+  c:
+    y:
+      points:
+      - ptid: '{272;416}'
+        pos: xheight
+        points:
+        - ptid: '{258;385}'
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: '{159;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{192;31}'
+          rel: blackspace
+  d:
+    y:
+      points:
+      - ptid: 9
+        pos: xheight
+        points:
+        - ptid: 75
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 52
+          rel: shift
+          points:
+          - ptid: 42
+            rel: blackspace
+        - ptid: 65
+          rel: blackspace
+      - ptid: 30
+        pos: lc-ascender
+        points:
+        - ptid: 24
+          rel: grayspace
+          points:
+          - ptid: 20
+            rel: blackspace
+            dist: lc-serif
+  e:
+    y:
+      points:
+      - ptid: '{297;416}'
+        pos: xheight
+        points:
+        - ptid: '{260;377}'
+          rel: blackspace
+      - ptid: '{148;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{176;35}'
+          rel: blackspace
+      - ptid: '{122;174}'
+        ref:
+        - '{148;-13}'
+        - '{297;416}'
+        rel: interpolate
+        points:
+        - ptid: '{131;205}'
+          rel: blackspace
+  f:
+    y:
+      points:
+      - ptid: '{195;411}'
+        points:
+        - ptid: '{136;411}'
+          rel: shift
+        - ptid: '{188;373}'
+          rel: blackspace
+          dist: lc-bar
+          points:
+          - ptid: '{129;373}'
+            rel: shift
+        pos: xheight
+      - ptid: '{370;715}'
+        pos: lc-f-top
+        points:
+        - ptid: '{342;681}'
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid:
+          pt-a: '{-65;-269}'
+          pt-b: '{-33;-228}'
+          pt-c: '{-109;-179}'
+        macro:
+          nm: hook
+  g:
+    y:
+      points:
+      - ptid: '{247;416}'
+        pos: xheight
+        points:
+        - ptid: '{249;386}'
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: '{108;-273}'
+        pos: lc-descender
+        points:
+        - ptid: '{153;-239}'
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid:
+        - '{115;91}'
+        - '{120;-28}'
+        ref:
+        - '{108;-273}'
+        - '{247;416}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{131;121}'
+          ref: '{115;91}'
+          rel: blackspace
+          dist: lc-round-stem
+        - ptid: '{131;-56}'
+          ref: '{120;-28}'
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: '{366;395}'
+        ref:
+        - '{115;91}'
+        - '{247;416}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{422;355}'
+          rel: blackspace
+      - ptid: '{327;369}'
+        ref:
+        - '{366;395}'
+        - '{422;355}'
+        rel: interpolate
+  h:
+    y:
+      points:
+      - ptid: 20
+        points:
+        - ptid: 13
+          rel: grayspace
+          points:
+          - ptid: 9
+            rel: blackspace
+            dist: lc-serif
+      - ptid: 30
+        pos: xheight
+        points:
+        - ptid: 60
+          rel: blackspace
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 38
+          rel: shift
+          points:
+          - ptid: 50
+            rel: blackspace
+  i:
+    y:
+      points:
+      - ptid: 21
+        pos: xheight
+        points:
+        - ptid: 9
+          rel: blackspace
+        - ptid: 41
+          rel: whitespace
+          points:
+          - ptid: 47
+            rel: blackspace
+            dist: period-width
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 30
+          rel: blackspace
+  j:
+    y:
+      points:
+      - ptid: 34
+        pos: xheight
+        points:
+        - ptid: 22
+          rel: blackspace
+        - ptid: 48
+          rel: whitespace
+          points:
+          - ptid: 54
+            rel: blackspace
+            dist: period-width
+      - ptid: 0
+        pos: lc-descender
+        points:
+        - ptid: 12
+          rel: blackspace
+  k:
+    y:
+      points:
+      - ptid: 20
+        pos: lc-ascender
+        points:
+        - ptid: 13
+          rel: grayspace
+          points:
+          - ptid: 9
+            rel: blackspace
+            dist: lc-serif
+      - ptid: 56
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 0
+          rel: shift
+        - ptid: 46
+          rel: blackspace
+      - ptid: 31
+        pos: xheight
+        points:
+        - ptid: 76
+          rel: blackspace
+      - ptid: 64
+        ref:
+        - 31
+        - 56
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 69
+          dist: lc-bar
+          rel: blackspace
+      - ptid: 27
+        ref:
+        - 56
+        - 31
+        rel: interpolate
+  l:
+    y:
+      points:
+      - ptid: 23
+        pos: lc-ascender
+        points:
+        - ptid: 16
+          rel: grayspace
+          points:
+          - ptid: 12
+            rel: blackspace
+            dist: lc-serif
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 30
+          rel: blackspace
+  m:
+    y:
+      points:
+      - ptid: 64
+        pos: lc-baseline-undershoot
+        points:
+        - ptid:
+          - 0
+          - 86
+          rel: shift
+        - ptid: 52
+          rel: blackspace
+      - ptid: 42
+        pos: xheight
+        points:
+        - ptid:
+          - 18
+          - 32
+          rel: shift
+          points:
+          - ptid: 6
+            ref: 18
+            rel: blackspace
+        - ptid: 76
+          rel: blackspace
+          points:
+          - ptid: 94
+            rel: shift
+      - ptid:
+        - 26
+        - 39
+        ref:
+        - 64
+        - 42
+        rel: interpolate
+  n:
+    y:
+      points:
+      - ptid: 50
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 0
+          rel: shift
+        - ptid: 38
+          rel: blackspace
+      - ptid: 28
+        pos: xheight
+        points:
+        - ptid: 18
+          rel: shift
+          points:
+          - ptid: 6
+            rel: blackspace
+        - ptid: 61
+          rel: blackspace
+      - ptid: 25
+        ref:
+        - 50
+        - 28
+        rel: interpolate
+  o:
+    y:
+      points:
+      - ptid: 9
+        pos: xheight
+        points:
+        - ptid: 26
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 17
+          rel: blackspace
+          dist: lc-round-stem
+  p:
+    y:
+      points:
+      - ptid: 28
+        pos: xheight
+        points:
+        - ptid:
+          - 18
+          - 25
+          rel: shift
+        - ptid: 64
+          rel: blackspace
+          dist: lc-round-stem
+          points:
+          - ptid:
+            - 8
+            - 67
+            rel: shift
+      - ptid: 38
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 55
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 52
+        pos: lc-descender
+        points:
+        - ptid: 4
+          rel: blackspace
+          points:
+          - ptid: 45
+            rel: shift
+          dist: lc-serif
+  q:
+    y:
+      points:
+      - ptid: 25
+        pos: xheight
+        points:
+        - ptid: 29
+          rel: shift
+        - ptid: 63
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 15
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 52
+          rel: blackspace
+      - ptid: 0
+        points:
+        - ptid: 49
+          rel: shift
+        - ptid: 5
+          rel: blackspace
+          dist: lc-serif
+          points:
+          - ptid: 44
+            rel: shift
+  r:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-baseline-undershoot
+      - ptid: 33
+        pos: xheight
+        points:
+        - ptid: 22
+          rel: shift
+          points:
+          - ptid: 10
+            rel: blackspace
+        - ptid: 43
+          rel: blackspace
+  s:
+    y:
+      points:
+      - ptid: 24
+        pos: xheight
+        points:
+        - ptid: 36
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 11
+          rel: blackspace
+      - ptid:
+        - 17
+        - 43
+        ref:
+        - 0
+        - 24
+        rel: interpolate
+  t:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 31
+          rel: blackspace
+      - ptid: 14
+        round: false
+      - ptid: 19
+        pos: xheight
+        points:
+        - ptid: 13
+          rel: shift
+        - ptid: 25
+          rel: blackspace
+          dist: lc-bar
+          points:
+          - ptid: 7
+            rel: shift
+            points:
+            - ptid: 12
+              rel: blackspace
+              dist: lc-serif
+  u:
+    y:
+      points:
+      - ptid: 21
+        pos: xheight
+        points:
+        - ptid: 44
+          rel: shift
+        - ptid: 9
+          rel: blackspace
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 63
+          rel: shift
+          points:
+          - ptid: 51
+            rel: blackspace
+        - ptid: 33
+          rel: blackspace
+      - ptid:
+        - 70
+        - 71
+        ref:
+        - 0
+        - 21
+        rel: interpolate
+  v:
+    y:
+      points:
+      - ptid: 26
+        pos: xheight
+        points:
+        - ptid: 49
+          rel: shift
+        - ptid: 14
+          rel: blackspace
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 39
+          rel: blackspace
+  w:
+    y:
+      points:
+      - ptid: 26
+        pos: xheight
+        points:
+        - ptid:
+          - 49
+          - 69
+          rel: shift
+        - ptid: 14
+          rel: blackspace
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 81
+          rel: shift
+        - ptid: 39
+          rel: blackspace
+          points:
+          - ptid: 58
+            rel: shift
+  x:
+    y:
+      points:
+      - ptid: 30
+        pos: xheight
+        points:
+        - ptid: 38
+          rel: shift
+          points:
+          - ptid: 48
+            rel: blackspace
+        - ptid: 19
+          rel: blackspace
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 65
+          rel: shift
+          points:
+          - ptid: 55
+            rel: blackspace
+        - ptid: 11
+          rel: blackspace
+      - ptid:
+        - 15
+        - 69
+        - 34
+        - 51
+        ref:
+        - 0
+        - 30
+        rel: interpolate
+  y:
+    y:
+      points:
+      - ptid: 35
+        pos: xheight
+        points:
+        - ptid: 56
+          rel: shift
+        - ptid: 25
+          rel: blackspace
+      - ptid: 0
+        pos: lc-descender
+        points:
+        - ptid: 12
+          rel: blackspace
+      - ptid: 45
+        ref:
+        - 0
+        - 35
+        rel: interpolate
+  z:
+    y:
+      points:
+      - ptid: 0
+        points:
+        - ptid: 10
+          rel: shift
+        - ptid: 65
+          rel: blackspace
+          points:
+          - ptid: 75
+            rel: grayspace
+      - ptid: 51
+        pos: xheight
+        points:
+        - ptid: 41
+          rel: grayspace
+          points:
+          - ptid: 23
+            rel: blackspace
+            points:
+            - ptid: 33
+              rel: grayspace
+  ae:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 35
+          rel: shift
+          points:
+          - ptid: 25
+            rel: blackspace
+        - ptid: 41
+          rel: blackspace
+      - ptid: 11
+        pos: xheight
+        points:
+        - ptid: 69
+          rel: blackspace
+          points:
+          - ptid: 52
+            rel: shift
+      - ptid: 61
+        ref:
+        - 11
+        - 35
+        rel: interpolate
+        points:
+        - ptid: 19
+          rel: blackspace
+  thorn:
+    y:
+      points:
+      - ptid: 22
+        pos: lc-ascender
+        points:
+        - ptid: 16
+          rel: grayspace
+          points:
+          - ptid: 12
+            rel: blackspace
+            dist: lc-serif
+      - ptid: 57
+        pos: lc-descender
+        points:
+        - ptid: 4
+          rel: blackspace
+          dist: lc-serif
+          points:
+          - ptid: 50
+            rel: shift
+      - ptid: 31
+        pos: xheight-overshoot
+        points:
+        - ptid: 69
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 40
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 60
+          rel: blackspace
+          dist: lc-round-stem
+  eth:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 29
+          rel: blackspace
+      - ptid: 9
+        pos: xheight
+        points:
+        - ptid: 38
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 20
+        points:
+        - ptid: 16
+          rel: shift
+      - ptid:
+        - 51
+        - 47
+        - 52
+        - 56
+        ref:
+        - 20
+        - 0
+        rel: interpolate
+  divide:
+    y:
+      points:
+      - ptid: 1
+        points:
+        - ptid: 0
+          rel: blackspace
+          points:
+          - ptid: 10
+            rel: whitespace
+            points:
+            - ptid: 4
+              rel: blackspace
+        - ptid: 16
+          rel: whitespace
+          points:
+          - ptid: 22
+            rel: blackspace
+  oslash:
+    y:
+      points:
+      - ptid: 9
+        pos: xheight
+        points:
+        - ptid: 40
+          rel: shift
+        - ptid: 26
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 35
+          rel: shift
+        - ptid: 17
+          rel: blackspace
+          dist: lc-round-stem
+  Hbar:
+    y:
+      points:
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          base-sh: 66
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+      - ptid:
+          base: 43
+          pt-a: 0
+          pt-b: 4
+          base-sh: 89
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 93
+        - 96
+        ref:
+        - 43
+        - 20
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 92
+          ref: 93
+          rel: blackspace
+          dist: cap-bar
+        - ptid: 100
+          ref: 96
+          dist: cap-bar
+          rel: blackspace
+      - ptid:
+        - 23
+        - 63
+        - 69
+        ref: 17
+        rel: shift
+      - ptid:
+        - 27
+        - 59
+        - 73
+        ref: 13
+        rel: shift
+      - ptid:
+        - 36
+        - 50
+        - 82
+        ref: 4
+        rel: shift
+      - ptid:
+        - 40
+        - 46
+        - 86
+        ref: 0
+        rel: shift
+  dotlessi:
+    y:
+      points:
+      - ptid: 21
+        pos: xheight
+        points:
+        - ptid: 9
+          rel: blackspace
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 30
+          rel: blackspace
+  kgreenlandic:
+    y:
+      points:
+      - ptid: 18
+        pos: xheight
+        points:
+        - ptid: 11
+          rel: blackspace
+          dist: lc-serif
+          points:
+          - ptid: 25
+            rel: shift
+      - ptid: 39
+        pos: baseline
+        points:
+        - ptid: 4
+          rel: blackspace
+          dist: lc-serif
+          points:
+          - ptid: 32
+            rel: shift
+      - ptid: 70
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 88
+          rel: blackspace
+      - ptid: 51
+        pos: xheight
+        points:
+        - ptid: 62
+          rel: blackspace
+      - ptid:
+        - 79
+        - 80
+        - 42
+        - 43
+        ref:
+        - 18
+        - 39
+        rel: interpolate
+  Lcaron:
+    y:
+      points:
+      - ptid:
+          base: 54
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 51
+        macro:
+          nm: cap-serif
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          pt-a-sh: 23
+          pt-b-sh: 27
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+      - ptid: 38
+        ref: 54
+        rel: blackspace
+        dist: cap-bar
+      - ptid: 73
+        ref: 20
+        rel: grayspace
+      - ptid: 57
+        ref: 27
+        rel: grayspace
+  lcaron:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 36
+          rel: blackspace
+      - ptid: 25
+        pos: lc-ascender
+        points:
+        - ptid: 63
+          rel: shift
+          round: true
+        - ptid: 16
+          rel: grayspace
+          points:
+          - ptid: 12
+            rel: blackspace
+            dist: lc-serif
+            points:
+            - ptid: 47
+              rel: grayspace
+  Ldot:
+    y:
+      points:
+      - ptid:
+          base: 53
+          pt-a: 0
+          pt-b: 4
+          pt-a-sh: 50
+        macro:
+          nm: cap-serif
+      - ptid: 38
+        ref: 53
+        rel: blackspace
+        dist: cap-bar
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          pt-a-sh: 23
+          pt-b-sh: 27
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid: 62
+        ref:
+        - 20
+        - 53
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 56
+          rel: blackspace
+          dist: period-width
+  Lslash:
+    y:
+      points:
+      - ptid:
+          base: 64
+          pt-a: 10
+          pt-b: 14
+          pt-a-sh: 61
+        macro:
+          nm: cap-serif
+      - ptid: 48
+        ref: 64
+        rel: blackspace
+        dist: cap-bar
+      - ptid:
+          base: 30
+          pt-a: 27
+          pt-b: 23
+          pt-a-sh: 33
+          pt-b-sh: 37
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 4
+        - 0
+        - 5
+        - 9
+        ref:
+        - 64
+        - 30
+        rel: interpolate
+  Eng:
+    y:
+      points:
+      - ptid:
+          base: 38
+          pt-a: 40
+          pt-b: 44
+          pt-b-sh: 32
+          pt-a-sh: 36
+        macro:
+          nm: cap-serif
+      - ptid:
+          base: 61
+          pt-a: 58
+          pt-b: 54
+          base-sh: 81
+        macro:
+          nm: cap-serif
+          base-cv: cap-height-overshoot
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 78
+        - 84
+        ref: 58
+        rel: shift
+      - ptid:
+        - 74
+        - 88
+        ref: 54
+        rel: shift
+      - ptid: 0
+        points:
+        - ptid: 11
+          rel: blackspace
+      - ptid:
+        - 25
+        - 67
+        ref:
+        - 38
+        - 61
+        rel: interpolate
+  eng:
+    y:
+      points:
+      - ptid: 0
+        pos: lc-descender
+        points:
+        - ptid: 12
+          rel: blackspace
+      - ptid: 70
+        pos: xheight
+        points:
+        - ptid: 58
+          rel: shift
+          points:
+          - ptid: 42
+            rel: blackspace
+        - ptid: 23
+          rel: blackspace
+      - ptid: 33
+        pos: lc-baseline-undershoot
+  AE:
+    y:
+      points:
+      - ptid:
+          base: 20
+          pt-a: 17
+          pt-b: 13
+          pt-a-sh: 23
+        macro:
+          nm: cap-serif
+          base-cv: cap-height-overshoot
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+          base: 88
+          pt-a: 0
+          pt-b: 4
+          base-sh: 65
+        macro:
+          nm: cap-serif
+      - ptid: 96
+        ref:
+        - 88
+        - 20
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 97
+          rel: blackspace
+          dist: cap-bar
+      - ptid: 41
+        ref: 20
+        rel: blackspace
+        dist: cap-bar
+      - ptid: 76
+        ref: 20
+        rel: shift
+      - ptid:
+        - 81
+        - 72
+        ref: 4
+        rel: shift
+      - ptid:
+        - 85
+        - 68
+        - 62
+        ref: 0
+        rel: shift
+      - ptid: 50
+        ref: 65
+        rel: blackspace
+        dist: cap-bar
+  Aring:
+    y:
+      points:
+      - ptid:
+          base: 46
+          pt-a: 0
+          pt-b: 4
+          base-sh: 22
+        macro:
+          nm: cap-serif
+      - ptid:
+        - 39
+        - 29
+        - 15
+        ref: 4
+        rel: shift
+      - ptid:
+        - 43
+        - 25
+        - 19
+        ref: 0
+        rel: shift
+      - ptid: 9
+        points:
+        - ptid: 34
+          rel: shift
+        - ptid:
+          - 53
+          - 65
+          rel: shift
+          points:
+          - ptid: 59
+            ref: 65
+            rel: grayspace
+            points:
+            - ptid: 71
+              rel: blackspace
+      - ptid: 49
+        ref:
+        - 46
+        - 9
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 50
+          rel: blackspace
+          dist: cap-bar
+  Oslash:
+    y:
+      points:
+      - ptid: 10
+        pos: cap-height-overshoot
+        points:
+        - ptid: 45
+          rel: shift
+        - ptid: 30
+          rel: blackspace
+          dist: cap-round-stem
+      - ptid: 0
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 40
+          rel: shift
+        - ptid: 20
+          rel: blackspace
+          dist: cap-round-stem
+  Thorn:
+    y:
+      points:
+      - ptid:
+          base: 60
+          pt-a: 0
+          pt-b: 4
+          pt-b-sh: 54
+          pt-a-sh: 58
+        macro:
+          nm: cap-serif
+      - ptid:
+          base: 18
+          pt-a: 15
+          pt-b: 11
+          pt-a-sh: 21
+          pt-b-sh: 25
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+      - ptid:
+        - 44
+        - 35
+        ref:
+        - 18
+        - 60
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 69
+          ref: 35
+          rel: blackspace
+          dist: cap-round-stem
+        - ptid: 62
+          ref: 44
+          rel: blackspace
+          dist: cap-round-stem
+  germandbls:
+    y:
+      points:
+      - ptid: 19
+        points:
+        - ptid: 73
+          rel: blackspace
+        pos: lc-ascender
+      - ptid: 41
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 53
+          rel: blackspace
+      - ptid: 0
+        pos: lc-descender
+        points:
+        - ptid: 10
+          rel: blackspace
+  OE:
+    y:
+      points:
+      - ptid: 13
+        points:
+        - ptid: 37
+          rel: blackspace
+          dist: cap-bar
+      - ptid:
+          base: 13
+          pt-a: 10
+        function:
+          nm: serif-helper
+      - ptid: 108
+        ref: 10
+        rel: blackspace
+        dist: cap-round-stem
+      - ptid: 16
+        ref: 10
+        rel: shift
+      - ptid: 94
+        pos: baseline
+        points:
+        - ptid: 78
+          rel: blackspace
+      - ptid:
+          base: 94
+          pt-a: 0
+        function:
+          nm: serif-helper
+      - ptid: 97
+        ref: 0
+        rel: blackspace
+        dist: cap-round-stem
+      - ptid: 91
+        ref: 0
+        rel: shift
+      - ptid: 43
+        ref:
+        - 94
+        - 13
+        rel: interpolate
+        round: true
+        points:
+        - ptid: 70
+          rel: blackspace
+          dist: cap-bar
+  oe:
+    y:
+      points:
+      - ptid: 10
+        pos: xheight
+        points:
+        - ptid: 16
+          rel: shift
+        - ptid: 54
+          rel: blackspace
+          points:
+          - ptid: 71
+            rel: shift
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 41
+          rel: shift
+          points:
+          - ptid: 30
+            rel: blackspace
+        - ptid: 45
+          rel: blackspace
+      - ptid:
+        - 25
+        - 64
+        ref:
+        - 0
+        - 10
+        rel: interpolate
+  tcaron:
+    y:
+      points:
+      - ptid: 22
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 53
+          rel: blackspace
+      - ptid: 36
+        round: false
+        points:
+        - ptid: 0
+          rel: shift
+          round: true
+          points:
+          - ptid: 16
+            rel: blackspace
+      - ptid: 41
+        pos: xheight
+        points:
+        - ptid: 47
+          rel: blackspace
+          dist: lc-bar
+          points:
+          - ptid: 29
+            rel: shift
+            points:
+            - ptid: 34
+              rel: blackspace
+              dist: lc-serif
+  Uogonek:
+    y:
+      points:
+      - ptid:
+          base: 28
+          pt-a: 25
+          pt-b: 21
+          base-sh: 63
+        macro:
+          nm: cap-serif
+          base-cv: cap-height
+          cup-cv: cap-serif-undershoot
+          ppem: '160'
+      - ptid:
+        - 31
+        - 60
+        - 66
+        ref: 25
+        rel: shift
+      - ptid:
+        - 35
+        - 56
+        - 70
+        ref: 21
+        rel: shift
+      - ptid: 9
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 47
+          rel: blackspace
+          dist: cap-round-stem
+        - ptid: 0
+          rel: grayspace
+          points:
+          - ptid: 89
+            rel: blackspace
+  longs:
+    y:
+      points:
+      - ptid: 21
+        pos: lc-ascender
+        points:
+        - ptid: 33
+          rel: blackspace
+          dist: lc-round-stem
+      - ptid: 0
+        pos: lc-descender
+        points:
+        - ptid: 11
+          rel: blackspace
+          dist: lc-round-stem

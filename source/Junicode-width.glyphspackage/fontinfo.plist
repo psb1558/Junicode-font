@@ -4091,11 +4091,14 @@ code = "# cvParameters {
 #     name 3 1 0x0409 \"y with bar\";  # English US
 #   };
 #   ParamUILabelNameID {
+#     name 3 1 0x0409 \"f-shaped insular y\";  # English US
+#   };
+#   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule y\";  # English US
 #   };
 #   Character 0x0079;
 # };
-sub y from [ y.alt y.alt2 y.enlarged ] ;
+sub y from [ y.alt y.alt2 y.alt3 y.enlarged ] ;
 ";
 tag = cv50;
 },
@@ -7120,7 +7123,7 @@ value = -275;
 },
 {
 name = typoLineGap;
-value = 439;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -7132,7 +7135,7 @@ value = -275;
 },
 {
 name = hheaLineGap;
-value = 439;
+value = 0;
 }
 );
 id = master01;
@@ -7284,7 +7287,7 @@ value = -275;
 },
 {
 name = typoLineGap;
-value = 439;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -7296,7 +7299,7 @@ value = -275;
 },
 {
 name = hheaLineGap;
-value = 439;
+value = 0;
 }
 );
 iconName = Bold;
@@ -7447,7 +7450,7 @@ value = -275;
 },
 {
 name = typoLineGap;
-value = 439;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -7459,7 +7462,7 @@ value = -275;
 },
 {
 name = hheaLineGap;
-value = 439;
+value = 0;
 }
 );
 iconName = Light;
@@ -7612,7 +7615,7 @@ value = -275;
 },
 {
 name = typoLineGap;
-value = 439;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -7624,7 +7627,7 @@ value = -275;
 },
 {
 name = hheaLineGap;
-value = 439;
+value = 0;
 }
 );
 id = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -7772,7 +7775,7 @@ value = -275;
 },
 {
 name = typoLineGap;
-value = 439;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -7784,7 +7787,7 @@ value = -275;
 },
 {
 name = hheaLineGap;
-value = 439;
+value = 0;
 }
 );
 id = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -7935,7 +7938,7 @@ value = -275;
 },
 {
 name = typoLineGap;
-value = 439;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -7947,7 +7950,7 @@ value = -275;
 },
 {
 name = hheaLineGap;
-value = 439;
+value = 0;
 }
 );
 id = "00F4936D-6309-4DEC-83B3-42806ED1A477";

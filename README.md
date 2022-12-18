@@ -45,7 +45,7 @@ for production work until the character set is complete (probably some time in
 
 A [specimen](https://psb1558.github.io/Junicode-font/) page.
 
-My [Twitter](https://twitter.com/InPbaker) feed, where I'll share new developments from time to time.
+~~My Twitter feed, where I'll share new developments from time to time.~~
 
 A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where you can post queries about the fonts and how to use them.
 

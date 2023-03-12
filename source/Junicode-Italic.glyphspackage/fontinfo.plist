@@ -174,7 +174,7 @@ name = "Use Typo Metrics";
 value = 1;
 }
 );
-date = "2022-08-27 17:13:52 +0000";
+date = "2023-03-12 00:18:48 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -336,7 +336,7 @@ lookup lig_left {
 } lig_left ;
 
 lookup lig_right {
-  sub [ b h k l thorn thorn.loclENG ] by [ b.lf h.lf k.lf l.lf thorn.lf thorn.loclENG.lf ] ;
+  sub [ b h k l lslash thorn thorn.loclENG ] by [ b.lf h.lf k.lf l.lf lslash.lf thorn.lf thorn.loclENG.lf ] ;
 } lig_right ;
 
 lookup lig_f_right {
@@ -429,8 +429,8 @@ lookup calt_fligs_2 {
   sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
   sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
   sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
-  sub [ f f.lf ]' lookup f_l_right [ l ]' lookup lig_right ;
-  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l thorn thorn.loclENG ]' lookup lig_right ;
+  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
+  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
 } calt_fligs_2 ;
 
 # Handle collision of j with preceding char with ogonek.
@@ -2945,9 +2945,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule b\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"b with loop\";  # English US
+#   };
 #   Character 0x0062;
 # };
-sub b from [ b.enlarged ];
+sub b from [ b.enlarged b.alt2 ];
 ";
 tag = cv04;
 },
@@ -3396,9 +3399,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"l with curved high stroke\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"l with loop\";  # English US
+#   };
 #   Character 0x006C;
 # };
-sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt ] ;
+sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt l.alt3 ] ;
 ";
 tag = cv24;
 },
@@ -6533,7 +6539,7 @@ code = "lookup kern_Vertical_Kerning {
         bhook dtail dhook hhook henghook lmiddletilde lbelt lhookretroflex
         lezh phi-latin rlonglegturned esh jdotlessstrokehook eshsquatreversed eshcurl
         yturned glottalstop glottalstopreversed glottalstopinverted glottalstopstroke
-        glottalstopstrokereversed thorn thorn.loclENG ] ;
+        glottalstopstrokereversed thorn thorn.loclENG beta beta.alt theta theta.alt ] ;
     pos @high_letters @double_diacritics' lookup Vertical_Kerning_01 ;
     pos @double_diacritics' lookup Vertical_Kerning_01  @high_letters ;
     pos t @double_diacritics' lookup Vertical_Kerning_02 ;
@@ -6546,6 +6552,7 @@ lookup kern_Contextual_Kerning {
     @eye = [ dotlessi i ] ;
     @ayee = [ a e ] ;
     @essess = [ s ] ;
+    pos r' 10 quoteright' -20 a ;
     pos @enohu @double_diacritics' <-28 0 0 0> @eye ;
     pos @ayee @double_diacritics' lookup Contextual_Kerning_01  @eye ;
     pos @enohu @double_diacritics' lookup Contextual_Kerning_02  @essess ;
@@ -13417,7 +13424,7 @@ j = 99;
 "@MMK_R_KO_Sinsular" = -27;
 "@MMK_R_KO_T" = -12;
 "@MMK_R_KO_Z" = -23;
-"@MMK_R_KO_a" = -105;
+"@MMK_R_KO_a" = -125;
 "@MMK_R_KO_a.alt1" = -105;
 "@MMK_R_KO_a.alt4" = -105;
 "@MMK_R_KO_a.alt5" = -105;
@@ -13529,7 +13536,6 @@ j = 99;
 "@MMK_R_KO_p_p.hlig" = 0;
 "@MMK_R_KO_parenright" = -66;
 "@MMK_R_KO_period" = -61;
-"@MMK_R_KO_quoteright" = -55;
 "@MMK_R_KO_r" = 7;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = 23;
@@ -21219,7 +21225,6 @@ j = 130;
 "@MMK_R_KO_p_p.hlig" = 0;
 "@MMK_R_KO_parenright" = -69;
 "@MMK_R_KO_period" = -74;
-"@MMK_R_KO_quoteright" = -50;
 "@MMK_R_KO_r" = 14;
 "@MMK_R_KO_r.mecurl" = 13;
 "@MMK_R_KO_rrotunda" = 29;
@@ -28802,7 +28807,7 @@ j = 85;
 "@MMK_R_KO_Sinsular" = -20;
 "@MMK_R_KO_T" = -9;
 "@MMK_R_KO_Z" = -18;
-"@MMK_R_KO_a" = -104;
+"@MMK_R_KO_a" = -124;
 "@MMK_R_KO_a.alt1" = -104;
 "@MMK_R_KO_a.alt4" = -94;
 "@MMK_R_KO_a.alt5" = -104;
@@ -28914,7 +28919,6 @@ j = 85;
 "@MMK_R_KO_p_p.hlig" = 0;
 "@MMK_R_KO_parenright" = -46;
 "@MMK_R_KO_period" = -48;
-"@MMK_R_KO_quoteright" = -50;
 "@MMK_R_KO_r" = 11;
 "@MMK_R_KO_r.mecurl" = 4;
 "@MMK_R_KO_rrotunda" = 30;
@@ -36494,7 +36498,7 @@ j = 126;
 "@MMK_R_KO_Sinsular" = -27;
 "@MMK_R_KO_T" = -11;
 "@MMK_R_KO_Z" = -21;
-"@MMK_R_KO_a" = -86;
+"@MMK_R_KO_a" = -96;
 "@MMK_R_KO_a.alt1" = -86;
 "@MMK_R_KO_a.alt4" = -86;
 "@MMK_R_KO_a.alt5" = -86;
@@ -36606,7 +36610,6 @@ j = 126;
 "@MMK_R_KO_p_p.hlig" = 0;
 "@MMK_R_KO_parenright" = -41;
 "@MMK_R_KO_period" = -44;
-"@MMK_R_KO_quoteright" = -48;
 "@MMK_R_KO_r" = 3;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = 18;
@@ -44297,7 +44300,6 @@ j = 100;
 "@MMK_R_KO_p_p.hlig" = -6;
 "@MMK_R_KO_parenright" = -70;
 "@MMK_R_KO_period" = -55;
-"@MMK_R_KO_quoteright" = -41;
 "@MMK_R_KO_r" = 5;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = 22;
@@ -51991,7 +51993,6 @@ j = 99;
 "@MMK_R_KO_p_p.hlig" = 0;
 "@MMK_R_KO_parenright" = -66;
 "@MMK_R_KO_period" = -61;
-"@MMK_R_KO_quoteright" = -55;
 "@MMK_R_KO_r" = 7;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = 23;
@@ -54841,7 +54842,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright (c) 1998-2022 by Peter S. Baker";
+value = "Copyright (c) 1998-2023 by Peter S. Baker";
 }
 );
 },
@@ -54865,5 +54866,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 53;
+versionMinor = 54;
 }

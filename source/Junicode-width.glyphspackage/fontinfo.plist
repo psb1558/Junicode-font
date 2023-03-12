@@ -252,7 +252,7 @@ size = 0;
 );
 }
 );
-date = "2022-08-27 17:13:33 +0000";
+date = "2023-03-12 01:30:54 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -414,7 +414,7 @@ lookup lig_left {
 } lig_left ;
 
 lookup lig_right {
-  sub [ b h k l thorn thorn.loclENG ] by [ b.lf h.lf k.lf l.lf thorn.lf thorn.loclENG.lf ] ;
+  sub [ b h k l lslash thorn thorn.loclENG ] by [ b.lf h.lf k.lf l.lf lslash.lf thorn.lf thorn.loclENG.lf ] ;
 } lig_right ;
 
 lookup lig_f_right {
@@ -435,14 +435,14 @@ lookup calt_fligs_2 {
   sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
   sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
   sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
-  sub [ f f.lf ]' lookup f_l_right [ l ]' lookup lig_right ;
-  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l thorn thorn.loclENG ]' lookup lig_right ;
+  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
+  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
 } calt_fligs_2 ;
 
 # Handle collision of j with preceding char with ogonek.
 
 lookup calt_j_alt {
-  @g_and_ogonek = [ g Eogonek eogonek Aogonek aogonek uogonek ] ;
+  @g_and_ogonek = [ g Eogonek eogonek Aogonek aogonek iogonek uogonek ] ;
   @jay = [ j ] ;
   sub @g_and_ogonek @jay' by [ j.alt ] ;
 } calt_j_alt;
@@ -3123,9 +3123,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule b\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"b with loop\";  # English US
+#   };
 #   Character 0x0062;
 # };
-sub b from [ b.enlarged ];
+sub b from [ b.enlarged b.alt2 ];
 ";
 tag = cv04;
 },
@@ -3582,9 +3585,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Insular l\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"l with loop\";  # English US
+#   };
 #   Character 0x006C;
 # };
-sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt l.alt2 ] ;
+sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt l.alt2 l.alt3 ] ;
 ";
 tag = cv24;
 },
@@ -7059,7 +7065,7 @@ code = "lookup kern_Vertical_Kerning {
         h i j k l hbar Iotaafrican lbar uni01C0 uni01C1 uni01C2 uni01C3
         bhook uni0256 dhook uni0266 uni0267 uni026B uni026C uni026D
         uni026E uni0278 uni027A uni0283 uni0284 uni0285 uni0286 uni028E
-        uni0294 uni0295 uni0296 uni02A1 uni02A2 thorn thorn.loclENG ] ;
+        uni0294 uni0295 uni0296 uni02A1 uni02A2 thorn thorn.loclENG beta beta.alt theta theta.alt ] ;
     pos @high_letters @double_diacritics' lookup Vertical_Kerning_01 ;
     pos @double_diacritics' lookup Vertical_Kerning_01  @high_letters ;
     pos t @double_diacritics' lookup Vertical_Kerning_02 ;
@@ -7075,6 +7081,7 @@ lookup kern_Contextual_Kerning {
     pos [ c k s t x z ]' 25 l [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] ;
     pos [ g r ]' 35 l [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] ;
     pos [ v w y ]' 45 l [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] ;
+    pos r' 10 quoteright' -20 a ;
     pos l' 35 [ strokeshortcomb.narrow tildeoverlaycomb.narrow ] [f i j m n p t u v w x y z ] ;
     pos @enohu @double_diacritics' <-28 0 0 0> @eye ;
     pos @ayee @double_diacritics' lookup Contextual_Kerning_01  @eye ;
@@ -12722,7 +12729,7 @@ zcaron = -30;
 "@MMK_R_KO_parenright" = -46;
 "@MMK_R_KO_period" = -51;
 "@MMK_R_KO_quotedbl" = -37;
-"@MMK_R_KO_quoteright" = -16;
+"@MMK_R_KO_quoteright" = 20;
 "@MMK_R_KO_s" = 10;
 "@MMK_R_KO_slash" = -41;
 "@MMK_R_KO_tinsular" = 17;
@@ -40584,7 +40591,7 @@ zcaron = -39;
 "@MMK_R_KO_U" = 12;
 "@MMK_R_KO_V" = 42;
 "@MMK_R_KO_X" = 68;
-"@MMK_R_KO_a" = -59;
+"@MMK_R_KO_a" = -79;
 "@MMK_R_KO_a.alt1" = -44;
 "@MMK_R_KO_a.alt4" = -57;
 "@MMK_R_KO_a.alt5" = -109;
@@ -40815,6 +40822,7 @@ zcaron = -39;
 "@MMK_R_KO_parenright" = -36;
 "@MMK_R_KO_period" = -69;
 "@MMK_R_KO_quotedbl" = -26;
+"@MMK_R_KO_quoteright" = 30;
 "@MMK_R_KO_s" = 9;
 "@MMK_R_KO_slash" = -59;
 "@MMK_R_KO_ssigmoid" = 9;
@@ -50021,7 +50029,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright (c) 1998-2022 by Peter S. Baker";
+value = "Copyright (c) 1998-2023 by Peter S. Baker";
 }
 );
 },
@@ -50117,5 +50125,5 @@ type = unicode;
 };
 };
 versionMajor = 1;
-versionMinor = 53;
+versionMinor = 54;
 }

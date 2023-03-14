@@ -53367,6 +53367,42 @@ glyphs:
         rel: interpolate
   backslash: {}
   uni00A0: {}
+  uniAB52:
+    y:
+      points:
+      - ptid: '{129;425}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{125;396}'
+          rel: blackspace
+          round: false
+      - ptid: '{509;419}'
+        pos: u-top-a
+      - ptid: '{385;410}'
+        pos: u-top-b
+        points:
+        - ptid: '{385;383}'
+          rel: blackspace
+          round: false
+      - ptid: '{317;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{354;36}'
+          rel: blackspace
+          round: false
+        - ptid: '{448;-16}'
+          rel: grayspace
+          min: false
+      - ptid: '{94;214}'
+        ref:
+        - '{317;-11}'
+        - '{129;425}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{113;246}'
+          rel: blackspace
+          round: false
 uni01E5:
   y:
     points:

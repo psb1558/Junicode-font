@@ -48044,6 +48044,39 @@ glyphs:
       points:
       - ptid: '{-65;-147}'
       - ptid: '{50;117}'
+  uniAB52:
+    y:
+      points:
+      - ptid: '{163;416}'
+        pos: xheight
+        points:
+        - ptid: '{489;416}'
+          rel: shift
+        - ptid: '{161;388}'
+          rel: blackspace
+          round: false
+      - ptid: '{168;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{387;-13}'
+          rel: shift
+          points:
+          - ptid: '{440;56}'
+            rel: blackspace
+            round: false
+        - ptid: '{211;50}'
+          rel: blackspace
+          round: false
+      - ptid: '{84;210}'
+        ref:
+        - '{168;-13}'
+        - '{163;416}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{99;246}'
+          rel: blackspace
+          round: false
 masters:
   wght-min:
     name: wght-min

@@ -3253,6 +3253,7 @@ glyphs:
         points:
         - ptid: top-inside
           rel: stem
+          round: false
       - ptid: bar-upper
         pos: xheight
         points:
@@ -3265,6 +3266,7 @@ glyphs:
             points:
             - ptid: 12
               rel: blackdist
+              round: false
   f.alt:
     names:
       bottom: '{143;0}'
@@ -3635,6 +3637,7 @@ glyphs:
         points:
         - ptid: 62
           rel: stem
+          round: false
       - ptid:
           p1: 19
           p2: 13
@@ -3924,15 +3927,12 @@ glyphs:
       - ptid: '{301;425}'
         pos: xheight-overshoot
         points:
-        - ptid: '{560;425}'
-          rel: shift
-          points:
-          - ptid: '{537;381}'
-            rel: blackdist
-            round: false
         - ptid: '{275;381}'
           rel: blackdist
           round: false
+          points:
+          - ptid: '{537;381}'
+            rel: shift
       - ptid:
         - '{398;0}'
         - '{663;0}'
@@ -3968,6 +3968,7 @@ glyphs:
         points:
         - ptid: 69
           rel: stem
+          round: false
       - ptid:
           p1: 23
           p2: 16
@@ -4096,9 +4097,6 @@ glyphs:
         macro:
           nm: lc-round-stem
           cv: xheight-overshoot
-      - ptid: stem-top
-        ref: bowl-top
-        rel: shift
       - ptid:
           base: serif-base
           pt-a: serif-a
@@ -4123,6 +4121,7 @@ glyphs:
         points:
         - ptid: 45
           rel: stem
+          round: false
       - ptid:
           p1: 21
           p2: 14
@@ -4173,7 +4172,12 @@ glyphs:
           points:
           - ptid: '{94;371}'
             rel: shift
+            points:
+            - ptid: '{39;394}'
+              rel: blackdist
+              round: false
           dist: lc-thick-bar
+          round: false
   u:
     y:
       points:
@@ -4340,6 +4344,7 @@ glyphs:
         points:
         - ptid: 6
           rel: blackdist
+          round: false
       - ptid:
         - 22
         - 44
@@ -4368,12 +4373,14 @@ glyphs:
         - ptid: 15
           rel: blackdist
           dist: lc-serif
+          round: false
       - ptid: 6
         pos: baseline
         points:
         - ptid: 40
           rel: blackdist
           dist: lc-serif
+          round: false
   cent:
     y:
       points:
@@ -53752,6 +53759,116 @@ glyphs:
         - ptid: '{75;231}'
           rel: blackdist
           round: false
+  uni03D9.sc:
+    y:
+      points:
+      - ptid: '{219;0}'
+        pos: baseline
+        points:
+        - ptid: '{124;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{314;27}'
+            rel: shift
+      - ptid: '{220;464}'
+        pos: sc-height-overshoot
+        points:
+        - ptid: '{219;437}'
+          rel: blackdist
+          round: false
+      - ptid: '{219;112}'
+        ref:
+        - '{220;464}'
+        - '{219;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{223;141}'
+          rel: blackdist
+          round: false
+      - ptid: '{183;127}'
+        ref:
+        - '{219;112}'
+        - '{223;141}'
+        rel: interpolate
+  uni03DB.sc:
+    y:
+      points:
+      - ptid: '{282;455}'
+        pos: sc-height
+        points:
+        - ptid: '{251;392}'
+          rel: blackdist
+          round: false
+      - ptid: '{245;-111}'
+        points:
+        - ptid: '{231;-80}'
+          rel: shift
+      - ptid:
+        - '{169;58}'
+        - '{240;109}'
+        ref:
+        - '{282;455}'
+        - '{245;-111}'
+        rel: interpolate
+  uni03DD.sc:
+    y:
+      points:
+      - ptid: '{74;455}'
+        pos: sc-height
+        points:
+        - ptid: '{124;416}'
+          rel: blackdist
+          round: false
+      - ptid: '{110;0}'
+        pos: baseline
+      - ptid: '{123;222}'
+        ref:
+        - '{74;455}'
+        - '{110;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{123;260}'
+          rel: blackdist
+          round: false
+  uni03DF.sc:
+    y:
+      points:
+      - ptid: '{167;0}'
+        pos: baseline
+      - ptid: '{293;455}'
+        pos: sc-height
+      - ptid: '{227;188}'
+        ref:
+        - '{293;455}'
+        - '{167;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{136;237}'
+          rel: blackdist
+          round: false
+  uni03E1.sc:
+    y:
+      points:
+      - ptid: '{142;464}'
+        pos: sc-height-overshoot
+        points:
+        - ptid: '{100;425}'
+          rel: blackdist
+          round: false
+      - ptid: '{310;-36}'
+      - ptid:
+        - '{284;389}'
+        - '{311;363}'
+        - '{363;249}'
+        - '{387;223}'
+        ref:
+        - '{310;-36}'
+        - '{142;464}'
+        rel: interpolate
 uni01E5:
   y:
     points:

@@ -1,0 +1,280 @@
+font:
+  in: /Users/peterbaker/work/GitHub/Junicode-New/fonts/ttf/JunicodeTwoBeta-Italic.ttf
+  out: /Users/peterbaker/work/GitHub/Junicode-New/fonts/ttf/JunicodeTwoBeta-Italic-hinted.ttf
+defaults:
+  init-graphics: false
+  cleartype: true
+  merge-mode: true
+  no-round:
+  - blackdist
+  assume-always-y: true
+cvt:
+  baseline:
+    val: 0
+    type: pos
+    axis: y
+  cap-height:
+    val: 668
+    type: pos
+    axis: y
+    cat: Lu
+    origin:
+      glyph: H
+      ptnum:
+      - 16
+  xheight:
+    val: 416
+    type: pos
+    axis: y
+    cat: Ll
+    origin:
+      glyph: x
+      ptnum:
+      - 23
+  cap-height-overshoot:
+    val: 676
+    type: pos
+    axis: y
+    cat: Lu
+    same-as:
+      below:
+        ppem: 40
+        cv: cap-height
+    origin:
+      glyph: O
+      ptnum:
+      - 8
+  cap-baseline-undershoot:
+    val: -13
+    type: pos
+    axis: y
+    cat: Lu
+    same-as:
+      below:
+        ppem: 40
+        cv: baseline
+    origin:
+      glyph: O
+      ptnum:
+      - 0
+  xheight-overshoot:
+    val: 416
+    type: pos
+    axis: y
+    cat: Ll
+    same-as:
+      below:
+        ppem: 40
+        cv: xheight
+    origin:
+      glyph: o
+      ptnum:
+      - 7
+  lc-baseline-undershoot:
+    val: -13
+    type: pos
+    axis: y
+    cat: Ll
+    same-as:
+      below:
+        ppem: 40
+        cv: baseline
+    origin:
+      glyph: o
+      ptnum:
+      - 0
+  lc-ascender:
+    val: 725
+    type: pos
+    axis: y
+    cat: Ll
+    origin:
+      glyph: b
+      ptnum:
+      - 18
+  lc-descender:
+    val: -273
+    type: pos
+    axis: y
+    cat: Ll
+    origin:
+      glyph: p
+      ptnum:
+      - 0
+  num-round-top:
+    val: 651
+    type: pos
+    axis: y
+    cat: Nd
+    same-as:
+      below:
+        ppem: 40
+        cv: num-flat-top
+    origin:
+      glyph: eight
+      ptnum:
+      - 11
+  num-baseline-undershoot:
+    val: -8
+    type: pos
+    axis: y
+    cat: Nd
+    same-as:
+      below:
+        ppem: 40
+        cv: baseline
+    origin:
+      glyph: eight
+      ptnum:
+      - 0
+  num-flat-top:
+    val: 643
+    type: pos
+    axis: y
+    cat: Nd
+    origin:
+      glyph: five
+      ptnum:
+      - 26
+  tilde-height:
+    axis: y
+    type: pos
+    val: 502
+    origin:
+      glyph: tilde
+      ptnum:
+      - 21
+prep:
+  code: |-
+    <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+                <!-- Turn off hinting above 300 ppem -->
+                <if test="pixels-per-em &gt; 300">
+                    <disable-instructions/>
+                </if>
+                <!-- Dropout control -->
+                <push>4 511</push>
+                <command name="SCANCTRL"/>
+                <command name="SCANTYPE"/>
+                </code>
+functions:
+  delta:
+    primitive: true
+    stack-safe: true
+    size:
+      type: int
+      val: 25
+    distance:
+      type: int
+      val: 0
+    pt:
+      type: point
+      subtype: target
+    code: |-
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+              <command name="SDB"/>
+              <command name="DUP"/>
+              <push>0</push>
+              <command name="NEQ"/>
+              <command name="IF"/>
+              <command name="DUP"/>
+              <push>0</push>
+              <command name="LT"/>
+              <command name="IF"/>
+              <push>8</push>
+              <command name="ADD"/>
+              <command name="ELSE"/>
+              <push>7</push>
+              <command name="ADD"/>
+              <command name="EIF"/>
+              <command name="SWAP"/>
+              <push>1</push>
+              <command name="DELTAP1"/>
+              <command name="ELSE"/>
+              <command name="POP"/>
+              <command name="POP"/>
+              <command name="EIF"/>
+              <push>8</push>
+              <command name="SDB"/>
+              </code>
+macros: {}
+glyphs:
+  tilde:
+    y:
+      points:
+      - ptid: '{273;502}'
+        pos: tilde-height
+        points:
+        - ptid: '{291;558}'
+          rel: blackdist
+        - ptid: '{124;548}'
+          rel: graydist
+          points:
+          - ptid: '{143;603}'
+            rel: blackdist
+  g:
+    y:
+      points:
+      - ptid: '{247;416}'
+        pos: xheight
+        points:
+        - ptid: '{249;386}'
+          rel: blackdist
+          round: false
+        - ptid: '{366;395}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{422;355}'
+            rel: blackdist
+            round: false
+      - ptid: '{108;-273}'
+        pos: lc-descender
+        points:
+        - ptid: '{153;-239}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{115;91}'
+        - '{120;-28}'
+        ref:
+        - '{247;416}'
+        - '{108;-273}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{131;121}'
+          ref: '{115;91}'
+          rel: blackdist
+          round: false
+        - ptid: '{131;-56}'
+          ref: '{120;-28}'
+          rel: graydist
+  h:
+    y:
+      points:
+      - ptid: '{259;725}'
+        pos: lc-ascender
+        points:
+        - ptid: '{146;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{146;673}'
+            rel: blackdist
+            round: false
+      - ptid: '{69;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{245;-13}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{277;29}'
+            rel: blackdist
+            round: false
+      - ptid: '{348;416}'
+        pos: xheight
+        points:
+        - ptid: '{324;363}'
+          rel: blackdist
+          round: false

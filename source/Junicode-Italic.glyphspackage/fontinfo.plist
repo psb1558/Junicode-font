@@ -1,5 +1,5 @@
 {
-.appVersion = "3131";
+.appVersion = "3192";
 .formatVersion = 3;
 axes = (
 {
@@ -188,7 +188,7 @@ name = "Use Typo Metrics";
 value = 1;
 }
 );
-date = "2023-04-13 11:06:29 +0000";
+date = "2023-06-01 12:51:22 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -2272,14 +2272,14 @@ lookup Q_swash {
   sub Q from [ Q.alt2 Q.swash ] ;
 } Q_swash ;
 
-lookup mecurl {
-  @meuncurled = [ c d f g k n r t ] ;
-  @mecurled = [ c.mecurl d.mecurl f.mecurl g.mecurl k.mecurl n.mecurl r.mecurl t.mecurl ] ;
-  lookupflag UseMarkFilteringSet @combining_above;
-  ignore sub @meuncurled' [ @AllLowerCaseexclf @LowerCase_f ] ;
-  ignore sub @meuncurled' @combining_above [ @AllLowerCaseexclf @LowerCase_f ] ;
-  sub @meuncurled' by @mecurled ;
-} mecurl ;
+#lookup mecurl {
+#  @meuncurled = [ c d f g k n r t ] ;
+#  @mecurled = [ c.mecurl d.mecurl f.mecurl g.mecurl k.mecurl n.mecurl r.mecurl t.mecurl ] ;
+#  lookupflag UseMarkFilteringSet @combining_above;
+#  ignore sub @meuncurled' [ @AllLowerCaseexclf @LowerCase_f ] ;
+#  ignore sub @meuncurled' @combining_above [ @AllLowerCaseexclf @LowerCase_f ] ;
+#  sub @meuncurled' by @mecurled ;
+#} mecurl ;
 ";
 tag = swsh;
 },
@@ -6463,12 +6463,21 @@ tag = hlig;
 code = "lookupflag IgnoreMarks;
 sub c t by c_t.dlig ;
 sub f f t by f_f_t;
+sub f f y by f_f_y ;
+sub f t y by f_t_y ;
 sub f f udieresis by f_f_udieresis;
 sub Q u by Q_u;
 sub f eth.loclENG by f_eth.loclENG;
 # sub f.alt f.alt by f_f.alt;
+sub f j by f_j ;
 sub f t by f_t;
+sub f r by f_r ;
+sub f t by f_t ;
+sub f y by f_y ;
+sub f odieresis by f_odieresis;
+sub f.alt odieresis by f_odieresis;
 sub f udieresis by f_udieresis;
+sub f.alt udieresis by f_udieresis;
 # sub longs longs by longs_longs;
 sub o rrotunda by o_rrotunda;
 sub a s by a_s.dlig ;
@@ -6548,15 +6557,12 @@ sub f f t by f_f_t ;
 # sub f f udieresis by f_f_udieresis ;
 # sub f f i by uniFB03 ;
 # sub f f l by uniFB04 ;
-sub f f y by f_f_y ;
-sub f t y by f_t_y ;
 sub longs t i by longs_t_i ;
 sub longs t r by longs_t_r ;
 sub longs longs t by longs_longs_t ;
 # sub Q u by Q_u ;
 # sub Q u.sc by Q_u.sc ;
 # sub Q u.pcap by Q_u.pcap ;
-sub f j by f_j ;
 sub f eth by f_eth ;
 sub f eth.loclENG by f_eth.loclENG ;
 # sub f thorn by f_thorn ;
@@ -6566,10 +6572,7 @@ sub f eth.loclENG by f_eth.loclENG ;
 # sub f i by uniFB01 ;
 # sub f l by uniFB02 ;
 # sub f odieresis by f_odieresis ;
-sub f r by f_r ;
-sub f t by f_t ;
 # sub f udieresis by f_udieresis ;
-sub f y by f_y ;
 # sub longs longs by longs_longs ;
 sub longs t by longs_t ;
 sub longs.alt2 t by longs_t.alt ;
@@ -6619,11 +6622,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 725;
+value = 860;
 },
 {
 name = typoDescender;
-value = -275;
+value = -410;
 },
 {
 name = typoLineGap;
@@ -6631,11 +6634,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 725;
+value = 860;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -410;
 },
 {
 name = hheaLineGap;
@@ -6912,11 +6915,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 725;
+value = 860;
 },
 {
 name = typoDescender;
-value = -275;
+value = -410;
 },
 {
 name = typoLineGap;
@@ -6924,11 +6927,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 725;
+value = 860;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -410;
 },
 {
 name = hheaLineGap;
@@ -7185,7 +7188,6 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -7196,11 +7198,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 725;
+value = 860;
 },
 {
 name = typoDescender;
-value = -275;
+value = -410;
 },
 {
 name = typoLineGap;
@@ -7208,11 +7210,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 725;
+value = 860;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -410;
 },
 {
 name = hheaLineGap;
@@ -7477,11 +7479,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 725;
+value = 860;
 },
 {
 name = typoDescender;
-value = -275;
+value = -410;
 },
 {
 name = typoLineGap;
@@ -7489,11 +7491,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 725;
+value = 860;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -410;
 },
 {
 name = hheaLineGap;
@@ -7757,11 +7759,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 725;
+value = 860;
 },
 {
 name = typoDescender;
-value = -275;
+value = -410;
 },
 {
 name = typoLineGap;
@@ -7769,11 +7771,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 725;
+value = 860;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -410;
 },
 {
 name = hheaLineGap;
@@ -8038,11 +8040,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 725;
+value = 860;
 },
 {
 name = typoDescender;
-value = -275;
+value = -410;
 },
 {
 name = typoLineGap;
@@ -8050,11 +8052,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 725;
+value = 860;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -410;
 },
 {
 name = hheaLineGap;
@@ -54914,5 +54916,5 @@ value = psbk;
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 57;
+versionMinor = 58;
 }

@@ -80,7 +80,7 @@ combining mark, but it is also possible to place any mark over any base characte
 the combining mark. It is also possible to place a combining mark over another combining mark. For example, to produce
 \textbf{\cvd[32]{84}{q\char"0363\char"0304}}, enter this sequence: q (\unic{U+0071}) + \unic{U+0363} + \unic{U+0304}.
 
-Junicode 2 contains many variants of combining marks: for example the curly zigzag {\char"25CC\char"035B} is a variant of
+Junicode 2 contains many variants of combining marks: for example the curly zigzag \cvd[1]{81}{\char"25CC\char"035B} is a variant of
 Unicode's angular zigzag {\char"25CC\char"035B} (\unic{U+035B}), produced by applying the OpenType feature \textbf{cv81[2]} to \textbf{both the base character and the combining mark}. Sometimes the combination of base + combining mark + OpenType
 feature will not produce the desired effect. When this happens, place \unic{U+034F} (a special invisible combining mark,
 included in Unicode for exactly this purpose) between the base and the (visible) mark.\\

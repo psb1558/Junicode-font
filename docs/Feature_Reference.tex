@@ -329,7 +329,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {1=\cvd{9}{E}, 2=\cvd[1]{9}{E}, \cvc{3=\cvd[2]{9}{E}}, 4=\cvd[3]{9}{E}}\\\hline
 \centering{e} &
 \centering{cv10} &
-{1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}, \cvc{4=\cvd[3]{10}{e}}}\\\hline
+{1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}, \cvc{4=\cvd[3]{10}{e}}, \cvc{5=\cvd[4]{10}{e}}}\\\hline
 \centering{F} &
 \centering{cv11} &
 {1=\cvd{11}{F},  \cvc{2=\cvd[1]{11}{F}, 3=\cvd[2]{11}{F}}}\\\hline
@@ -593,7 +593,7 @@ use \unic{U+0323}, combining dot below (\hspace{0.2em}ꝑ̣).
 
 \subsection{\textSourceText{ss08} --
 Contextual Long s}
-In English and French text only, varies \textex{s} and \textex{ſ} according to rules
+In English, French, and Latin text only, varies \textex{s} and \textex{ſ} according to rules
 followed by many early printers: {\colongs sports, essence, stormy, disheveled, transfusions, slyness, cliffside}. For this
 feature to work properly, \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by
 default: see \hyperlink{req}{Required Features} below). This feature does not work in {\ltech}, except in harf mode.
@@ -767,7 +767,6 @@ features. To disable it, place the character \unic{U+034F} \textUName{combining
 grapheme joiner} (don't waste time puzzling over the name) between the base
 character and the combining mark (or the first combining mark). For example, to produce
 the combination \textex{\cvd[1]{84}{u͏̄}}, enter \textex{u \unic{U+034F U+0304}}.
-(Without \unic{U+034F}, you would get \textex{\cvd[1]{84}{ū}}).
 
 These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
 \textSourceText{cv84} as providing more suitable fallbacks for applications that do not support Character Variant
@@ -851,6 +850,12 @@ with the diacritic properly positioned.
 33=\cvd[32]{84}{◌͏̄}
 
 34=\cvd[33]{84}{◌͏̄}
+
+35=\cvd[34]{84}{◌͏̄}
+
+36=\cvd[34]{84}{◌͏̄}
+
+37=\cvd[34]{84}{◌͏̄}
 \end{multicols}
 
 \subsection{\textSourceText{cv67} -- Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}
@@ -891,6 +896,9 @@ attention to them, since they will likely have their own method of representing 
 
 \&{\textcompwordmark}\_arsc; $\rightarrow $
 \textstyleEntityRef{◌\&\_arsc;}
+
+\&\_{\textcompwordmark}as; $\rightarrow $
+\textstyleEntityRef{◌\&\_as;}
 
 \&{\textcompwordmark}\_bsc; $\rightarrow $
 \textstyleEntityRef{◌\&\_bsc;}
@@ -939,6 +947,9 @@ attention to them, since they will likely have their own method of representing 
 
 \&\_{\textcompwordmark}ru; $\rightarrow $
 \textstyleEntityRef{◌\&\_ru;}
+
+\&\_{\textcompwordmark}sa; $\rightarrow $
+\textstyleEntityRef{◌\&\_sa;}
 
 \&\_{\textcompwordmark}tsc; $\rightarrow $
 \textstyleEntityRef{◌\&\_tsc;}
@@ -1354,8 +1365,6 @@ the second element of the digraph or type the diacritic after the second element
 \textex{a} + \textex{u} + \unic{U+0301} (combining acute accent). To produce a digraph +
 diacritic combination not covered by MUFI (e.g. \textex{ꜵ̀}), you may have to place \unic{U+034F}
 \textUName{combining grapheme joiner} (see \hyperlink{cv84}{cv84} above) between the second element of the digraph and the combining mark.
-Without \unic{U+034F}: \textex{\addfontfeature{StylisticSet=17}aō}.
-With \unic{U+034F}: \textex{\addfontfeature{StylisticSet=17}ao͏̄}.
 
 \section{Required Features}
 Required features, which provide some of the font’s most basic functionality---ligatures, support for

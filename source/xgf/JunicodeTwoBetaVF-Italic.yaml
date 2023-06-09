@@ -556,7 +556,7 @@ macros:
           <shift compile-if="nan(base-sh)">
             <set ref="base-sh"/>
           </shift>
-          <move distance="cap-serif"><point num="pt-b"/>
+          <move round="no"><point num="pt-b"/>
             <shift compile-if="not( nan(pt-b-sh) ) and pt-b-sh &gt;= 0"><point num="pt-b-sh"/></shift>
             <shift compile-if="nan(pt-b-sh)">
               <set ref="pt-b-sh"/>
@@ -786,6 +786,11 @@ glyphs:
           base: '{130;0}'
         function:
           nm: mid-stem-f
+      - ptid: '{424;356}'
+        ref:
+        - '{260;342}'
+        - '{268;370}'
+        rel: interpolate
   D:
     y:
       points:
@@ -1929,16 +1934,16 @@ glyphs:
   o:
     y:
       points:
-      - ptid: 9
+      - ptid: '{272;416}'
         pos: xheight
         points:
-        - ptid: 26
+        - ptid: '{272;375}'
           rel: blackdist
           round: false
-      - ptid: 0
+      - ptid: '{150;-13}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: 17
+        - ptid: '{164;33}'
           rel: blackdist
           round: false
   p:
@@ -26607,20 +26612,6 @@ glyphs:
   uni16AB.rtl:
     y:
       points:
-      - ptid: '{365;684}'
-        pos: rune-ascender
-      - ptid: '{235;0}'
-        pos: baseline
-      - ptid:
-        - '{101;481}'
-        - '{434;238}'
-        ref:
-        - '{235;0}'
-        - '{365;684}'
-        rel: interpolate
-  uni16AB.rtl:
-    y:
-      points:
       - ptid: '{458;684}'
         pos: rune-ascender
       - ptid: '{326;0}'
@@ -48805,6 +48796,266 @@ glyphs:
         - '{213;-13}'
         - '{332;677}'
         rel: interpolate
+  uni16D3:
+    y:
+      points:
+      - ptid: '{247;684}'
+        pos: rune-ascender
+      - ptid: '{115;0}'
+        pos: baseline
+      - ptid:
+        - '{132;266}'
+        - '{142;323}'
+        - '{160;423}'
+        - '{170;481}'
+        ref:
+        - '{115;0}'
+        - '{247;684}'
+        rel: interpolate
+  uni16A5:
+    y:
+      points:
+      - ptid: '{175;683}'
+        pos: rune-ascender
+      - ptid: '{115;0}'
+        pos: baseline
+      - ptid: '{274;-11}'
+        points:
+        - ptid: '{415;-11}'
+          rel: shift
+        pos: cap-baseline-undershoot
+      - ptid:
+        - '{216;584}'
+        - '{194;455}'
+        - '{166;313}'
+        ref:
+        - '{115;0}'
+        - '{175;683}'
+        rel: interpolate
+    props:
+      category: Lu
+  uni1E03:
+    y:
+      points:
+      - ptid: '{310;416}'
+        pos: xheight
+        points:
+        - ptid: '{280;368}'
+          rel: blackdist
+          round: false
+        - ptid: '{319;512}'
+          rel: whitedist
+          points:
+          - ptid: '{319;617}'
+            rel: blackdist
+            dist: period-width
+      - ptid: '{94;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{135;22}'
+          rel: blackdist
+          round: false
+      - ptid: '{223;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{109;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{109;673}'
+            rel: blackdist
+            round: false
+  uni204F:
+    y:
+      points:
+      - ptid: '{260;302}'
+        points:
+        - ptid: '{257;417}'
+          rel: blackdist
+          dist: period-width
+      - ptid: '{171;115}'
+        points:
+        - ptid: '{114;-179}'
+          rel: blackdist
+          round: false
+  uniF1E0:
+    y:
+      points:
+      - ptid: '{93;-12}'
+        pos: baseline
+        points:
+        - ptid: '{96;103}'
+          rel: blackdist
+          dist: period-width
+          points:
+          - ptid: '{108;173}'
+            rel: whitedist
+            points: []
+      - ptid: '{243;468}'
+  dollar.osf.BRACKET.varAlt01:
+    y:
+      points:
+      - ptid: '{79;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{123;27}'
+          rel: blackdist
+          round: false
+      - ptid: '{107;4}'
+        ref:
+        - '{79;-13}'
+        - '{123;27}'
+        rel: interpolate
+      - ptid: '{196;416}'
+        pos: xheight
+        points:
+        - ptid: '{166;385}'
+          rel: blackdist
+          round: false
+      - ptid: '{172;399}'
+        ref:
+        - '{196;416}'
+        - '{166;385}'
+        rel: interpolate
+    props:
+      category: Ll
+  dollar.tosf.BRACKET.varAlt01:
+    y:
+      points:
+      - ptid: '{79;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{123;27}'
+          rel: blackdist
+          round: false
+      - ptid: '{107;4}'
+        ref:
+        - '{79;-13}'
+        - '{123;27}'
+        rel: interpolate
+      - ptid: '{196;416}'
+        pos: xheight
+        points:
+        - ptid: '{166;385}'
+          rel: blackdist
+          round: false
+      - ptid: '{172;399}'
+        ref:
+        - '{196;416}'
+        - '{166;385}'
+        rel: interpolate
+    props:
+      category: Ll
+  uni16C5.rtl:
+    y:
+      points:
+      - ptid: '{295;684}'
+        pos: rune-ascender
+      - ptid: '{164;0}'
+        pos: baseline
+      - ptid:
+        - '{101;481}'
+        - '{434;238}'
+        ref:
+        - '{164;0}'
+        - '{295;684}'
+        rel: interpolate
+  u1019A:
+    y:
+      points:
+      - ptid: '{468;765}'
+      - ptid: '{-9;-101}'
+      - ptid: '{214;354}'
+        ref:
+        - '{-9;-101}'
+        - '{468;765}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{249;409}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{306;409}'
+            rel: shift
+        - ptid: '{271;354}'
+          rel: shift
+  e.alt4:
+    y:
+      points:
+      - ptid: '{103;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{134;36}'
+          rel: blackdist
+          round: false
+      - ptid: '{358;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{344;688}'
+          rel: blackdist
+          round: false
+  asubscriptcomb:
+    y:
+      points:
+      - ptid: '{-75;14}'
+        pos: baseline
+        points:
+        - ptid: '{-85;-285}'
+          rel: blackdist
+          points:
+          - ptid: '{-52;-234}'
+            rel: blackdist
+            round: false
+          - ptid: '{-209;-254}'
+            rel: graydist
+            points:
+            - ptid: '{-170;-205}'
+              rel: blackdist
+              round: false
+  spiritusasper:
+    y:
+      points:
+      - ptid: '{-226;728}'
+        points:
+        - ptid: '{-268;679}'
+          rel: blackdist
+          round: false
+        - ptid: '{51;692}'
+          rel: graydist
+          points:
+          - ptid: '{45;647}'
+            rel: blackdist
+            round: false
+  n.asubscript:
+    y:
+      points:
+      - ptid: '{355;416}'
+        pos: G-serif
+        points:
+        - ptid: '{326;363}'
+          rel: blackdist
+          round: false
+        - ptid: '{191;416}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{136;347}'
+            rel: blackdist
+            round: false
+      - ptid: '{83;-13}'
+        pos: lc-z-bottom
+      - ptid: '{258;-253}'
+        points:
+        - ptid: '{291;-202}'
+          rel: blackdist
+          round: false
+        - ptid: '{134;-222}'
+          rel: graydist
+          points:
+          - ptid: '{203;-178}'
+            rel: blackdist
+            round: false
 masters:
   wght-min:
     name: wght-min

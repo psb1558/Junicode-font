@@ -224,10 +224,6 @@ name = "Propagate Anchors";
 value = 1;
 },
 {
-name = versionString;
-value = "Version %d.%03d beta";
-},
-{
 name = blueFuzz;
 value = 0;
 },
@@ -263,10 +259,52 @@ pos = -200;
 size = 0;
 }
 );
+},
+{
+name = unicodeRanges;
+value = (
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+38,
+42,
+60,
+62,
+79,
+86
+);
+},
+{
+name = codePageRanges;
+value = (
+"1252",
+"1250",
+"1253",
+"1254",
+"1257",
+"1258",
+"bit 29",
+"bit 31",
+"852"
+);
 }
 );
-date = "2023-06-01 12:50:52 +0000";
-familyName = "Junicode Two Beta";
+date = "2023-06-06 22:41:30 +0000";
+familyName = "Junicode Two Beta VF";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -1329,6 +1367,8 @@ code = "lookup entities {
  sub ampersand underscore o r u semicolon by orumcomb ;
  sub ampersand underscore a n semicolon by ancomb ;
  sub ampersand underscore a r semicolon by arcomb ;
+ sub ampersand underscore s a semicolon by spiritusasper ;
+ sub ampersand underscore a s semicolon by asubscriptcomb ;
  sub ampersand underscore r u semicolon by rumrotundacomb ;
  sub ampersand underscore j semicolon by jcomb ;
  sub ampersand underscore q semicolon by qcomb ;
@@ -1431,6 +1471,9 @@ lookup tagligs {
  sub macroncomb three.tag two.tag by ogonekdotcomb ;
  sub macroncomb three.tag three.tag by macroncomb.narrow ;
  sub macroncomb three.tag four.tag by macroncomb.alt3 ;
+ sub macroncomb three.tag five.tag by etcomb ;
+ sub macroncomb three.tag six.tag by spiritusasper ;
+ sub macroncomb three.tag seven.tag by asubscriptcomb ;
  sub macroncomb.case zero.tag one.tag by macroncomb.alt1 ;
  sub macroncomb.case zero.tag two.tag by macroncomb.alt2 ;
  sub macroncomb.case zero.tag three.tag by overlinecomb.alt ;
@@ -1465,6 +1508,9 @@ lookup tagligs {
  sub macroncomb.case three.tag two.tag by ogonekdotcomb ;
  sub macroncomb.case three.tag three.tag by macroncomb.narrow ;
  sub macroncomb.case three.tag four.tag by macroncomb.alt3.case ;
+ sub macroncomb.case three.tag five.tag by etcomb ;
+ sub macroncomb.case three.tag six.tag by spiritusasper ;
+ sub macroncomb.case three.tag seven.tag by asubscriptcomb ;
  # The rest of them:
  sub A i.tag n.tag by A.alt1 ;
  sub A s.tag q.tag by A.alt2 ;
@@ -1498,6 +1544,7 @@ lookup tagligs {
  sub e u.tag n.tag by e.alt1 ;
  sub e b.tag a.tag by e.alt2 ;
  sub e b.tag h.tag by e.alt3 ;
+ sub e t.tag o.tag by e.alt4 ;
  sub e e.tag n.tag by e.enlarged ;
  sub F i.tag n.tag by Finsular ;
  sub F e.tag n.tag by F.enlarged ;
@@ -1527,7 +1574,7 @@ lookup tagligs {
  sub h d.tag e.tag by h.alt ;
  sub h a.tag u.tag by h.alt2 ;
  sub h e.tag n.tag by h.enlarged ;
- sub l s.tag h.tag by lhighstroke.alt ;
+# sub l s.tag i.tag by lhighstroke.alt ;
  sub I d.tag a.tag by Idotaccent ;
  sub I d.tag e.tag by uniA7FE ;
  sub I e.tag n.tag by I.enlarged ;
@@ -1570,6 +1617,7 @@ lookup tagligs {
  sub n c.tag u.tag by n.mecurl ;
  sub n e.tag n.tag by n.enlarged ;
  sub n s.tag d.tag by n.alt2 ;
+ sub n a.tag s.tag by n.asubscript ;
  sub O e.tag n.tag by O.enlarged ;
  sub o e.tag n.tag by o.enlarged ;
  sub P r.tag e.tag by uniA7FC ;
@@ -1924,6 +1972,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Combining et sign\"; # 35
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"spiritus asper\"; # 36
+#   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"Combining subscript a\"; # 37
+#   };
 #   Character 0x0304;
 # };
 sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1   # 1-4
@@ -1933,7 +1987,7 @@ sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagab
                        omacroncomb oogonekcomb oslashcomb qcomb rumrotundacomb                 # 20-24
                        tsmcpcomb ycomb thorncomb orrotcomb orumcomb                            # 25-29
                        diagonaldieresiscomb dotacutecomb ogonekdotcomb macroncomb.narrow macroncomb.alt3
-						etcomb ] ; # 35
+					   etcomb spiritusasper asubscriptcomb ] ; # 36
 sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1.case
                        zigzagabovecomb.alt2.case zigzagabovecomb.alt3.case ancomb ansmcpcomb arcomb
                        arsmcpcomb bsmcpcomb dsmcpcomb emacroncomb eogonekcomb
@@ -1941,7 +1995,7 @@ sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigz
                        omacroncomb oogonekcomb oslashcomb qcomb rumrotundacomb
                        tsmcpcomb ycomb thorncomb orrotcomb orumcomb
                        diagonaldieresiscomb dotacutecomb.case ogonekdotcomb macroncomb.narrow macroncomb.alt3.case
-					   etcomb ] ;
+					   etcomb spiritusasper asubscriptcomb ] ;
 ";
 tag = cv84;
 },
@@ -2663,6 +2717,15 @@ code = "lookup ss12_01 {
 } ss12_01 ;
 lookup ss12_02 {
   sub f by fehu-runic ;
+  sub f.rf by fehu-runic ;
+  sub f.rl by fehu-runic ;
+  sub f.rtall by fehu-runic ;
+  sub f.rij by fehu-runic ;
+  sub f.lf by fehu-runic ;
+  sub f.lfrij by fehu-runic ;
+  sub f.lfrl by fehu-runic ;
+  sub f.lfrtall by fehu-runic ;
+# sub f.lf.alt by fehu-runic ;
   sub F by fehu-runic ;
   sub v by fehu-runic ;
   sub V by fehu-runic ;
@@ -2696,6 +2759,7 @@ lookup ss12_02 {
   sub n by naudNNaudizNyd-runic ;
   sub N by naudNNaudizNyd-runic ;
   sub i by isazIsIssI-runic ;
+  sub i.lf by isazIsIssI-runic ;
   sub I by isazIsIssI-runic ;
   sub imacron by isazIsIssI-runic ;
   sub Imacron by isazIsIssI-runic ;
@@ -2720,6 +2784,7 @@ lookup ss12_02 {
   sub oe by othalanEthelO-runic ;
   sub OE by othalanEthelO-runic ;
   sub l by laukazLaguLogrL-runic ;
+  sub l.lf by laukazLaguLogrL-runic ;
   sub L by laukazLaguLogrL-runic ;
   sub d by stan-runic ;
   sub D by stan-runic ;
@@ -2736,6 +2801,7 @@ lookup ss12_02 {
   sub ymacron by yr-runic ;
   sub Ymacron by yr-runic ;
   sub j by ger-runic ;
+  sub j.lf by ger-runic ;
   sub J by ger-runic ;
   sub x by algizEolhx-runic ;
   sub X by algizEolhx-runic ;
@@ -2755,6 +2821,14 @@ tag = ss12;
 },
 {
 code = "  sub f by fehu-runic ;
+  sub f.rf by fehu-runic ;
+  sub f.rl by fehu-runic ;
+  sub f.rtall by fehu-runic ;
+  sub f.rij by fehu-runic ;
+  sub f.lf by fehu-runic ;
+  sub f.lfrij by fehu-runic ;
+  sub f.lfrl by fehu-runic ;
+  sub f.lfrtall by fehu-runic ;
   sub F by fehu-runic ;
   sub u by uruz-runic ;
   sub U by uruz-runic ;
@@ -2791,6 +2865,7 @@ code = "  sub f by fehu-runic ;
   sub n by naudNNaudizNyd-runic ;
   sub N by naudNNaudizNyd-runic ;
   sub j by jeranJ-runic ;
+  sub j.lf by jeranJ-runic ;
   sub J by jeranJ-runic ;
   sub ae by iwazEoh-runic ;
   sub AE by iwazEoh-runic ;
@@ -2813,6 +2888,7 @@ code = "  sub f by fehu-runic ;
   sub m by mannazManM-runic ;
   sub M by mannazManM-runic ;
   sub l by laukazLaguLogrL-runic ;
+  sub l.lf by laukazLaguLogrL-runic ;
   sub L by laukazLaguLogrL-runic ;
   sub eng by ingwaz-runic ;
   sub Eng by ingwaz-runic ;
@@ -2825,6 +2901,7 @@ code = "  sub f by fehu-runic ;
   sub d by dagazDaegD-runic ;
   sub D by dagazDaegD-runic ;
   sub i by isazIsIssI-runic ;
+  sub i.lf by isazIsIssI-runic ;
   sub I by isazIsIssI-runic ;
   sub iacute by isazIsIssI-runic ;
   sub Iacute by isazIsIssI-runic ;
@@ -2841,6 +2918,14 @@ tag = ss13;
 },
 {
 code = "sub f by fehu-runic ;
+  sub f.rf by fehu-runic ;
+  sub f.rl by fehu-runic ;
+  sub f.rtall by fehu-runic ;
+  sub f.rij by fehu-runic ;
+  sub f.lf by fehu-runic ;
+  sub f.lfrij by fehu-runic ;
+  sub f.lfrl by fehu-runic ;
+  sub f.lfrtall by fehu-runic ;
 sub F by fehu-runic ;
 sub v by fehu-runic ;
 sub V by fehu-runic ;
@@ -2888,10 +2973,12 @@ sub E by isazIsIssI-runic ;
 sub eacute by isazIsIssI-runic ;
 sub Eacute by isazIsIssI-runic ;
 sub i by isazIsIssI-runic ;
+sub i.lf by isazIsIssI-runic ;
 sub I by isazIsIssI-runic ;
 sub iacute by isazIsIssI-runic ;
 sub Iacute by isazIsIssI-runic ;
 sub j by isazIsIssI-runic ;
+sub j.lf by isazIsIssI-runic ;
 sub J by isazIsIssI-runic ;
 sub a by aeLongBranchAr-runic ;
 sub A by aeLongBranchAr-runic ;
@@ -2914,6 +3001,7 @@ sub P by berkananBeorcBjarkanB-runic ;
 sub m by mLongBranchMadr-runic ;
 sub M by mLongBranchMadr-runic ;
 sub l by laukazLaguLogrL-runic ;
+sub l.lf by laukazLaguLogrL-runic ;
 sub L by laukazLaguLogrL-runic ;
 ";
 labels = (
@@ -3266,9 +3354,13 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule e\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"Tall open e\";  # English US
+#   };
 #   Character 0x0065;
 # };
-sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged ] ;
+sub e.alt2 from [ e.alt1 e e.alt3 e.enlarged e.alt4 ] ;
+sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged e.alt4 ] ;
 ";
 tag = cv10;
 },
@@ -3690,9 +3782,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule n\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"n with attached subscript a\";  # English US
+#   };
 #   Character 0x006E;
 # };
-sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged ] ;
+sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript ] ;
 ";
 tag = cv28;
 },
@@ -6772,7 +6867,8 @@ lookup Q_cleanup {
 tag = calt;
 },
 {
-code = "sub one.circled zero.circled by one_zero.circled ;
+code = "lookup rlig_main {
+sub one.circled zero.circled by one_zero.circled ;
 sub one.circled one.circled by one_one.circled ;
 sub one.circled two.circled by one_two.circled ;
 sub one.circled three.circled by one_three.circled ;
@@ -6817,6 +6913,10 @@ sub one.paren seven.paren by one_seven.paren ;
 sub one.paren eight.paren by one_eight.paren ;
 sub one.paren nine.paren by one_nine.paren ;
 sub two.paren zero.paren by two_zero.paren ;
+} rlig_main ;
+
+# lookup subscript_a ;
+
 ";
 tag = rlig;
 },
@@ -6929,6 +7029,7 @@ code = "lookupflag IgnoreMarks;
 #    sub longs.alt1 c uniF23A by longs_c_h.alt ;
 #    sub longs.alt1 c h.alt by longs_c_h.alt ;
     sub f f udieresis by f_f_udieresis;
+    sub f.rf f.lf udieresis by f_f_udieresis;
 # two elements:
     sub I I  by uni2161 ;
     sub I V  by uni2163 ;
@@ -6945,6 +7046,8 @@ code = "lookupflag IgnoreMarks;
     sub f y by f_y;
     sub f odieresis by f_odieresis;
     sub f udieresis by f_udieresis;
+    sub f.alt odieresis by f_odieresis;
+    sub f.alt udieresis by f_udieresis;
     sub i i  by uni2171 ;
     sub i v  by uni2173 ;
     sub i x  by uni2178 ;
@@ -13817,6 +13920,29 @@ zcaron = -30;
 "@MMK_R_KO_z" = 16;
 "@MMK_R_KO_z.alt1" = -7;
 };
+"@MMK_L_e.alt4" = {
+"@MMK_R_KO_a" = -120;
+"@MMK_R_KO_c" = -150;
+"@MMK_R_KO_d" = -130;
+"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_e" = -150;
+"@MMK_R_KO_f" = -80;
+"@MMK_R_KO_g" = -130;
+"@MMK_R_KO_ginsular" = -130;
+"@MMK_R_KO_i" = -30;
+"@MMK_R_KO_j" = -30;
+"@MMK_R_KO_n" = -70;
+"@MMK_R_KO_o" = -140;
+"@MMK_R_KO_p" = -160;
+"@MMK_R_KO_rinsular" = -155;
+"@MMK_R_KO_s" = -105;
+"@MMK_R_KO_t" = -170;
+"@MMK_R_KO_tinsular" = -190;
+"@MMK_R_KO_u" = -170;
+"@MMK_R_KO_x" = -50;
+"@MMK_R_KO_y" = -150;
+"@MMK_R_KO_z" = -60;
+};
 A = {
 A.alt2 = 29;
 P.p02 = 27;
@@ -20603,6 +20729,30 @@ zcaron = -29;
 "@MMK_R_KO_y.alt" = 12;
 "@MMK_R_KO_z" = 8;
 "@MMK_R_KO_z.alt1" = -11;
+};
+"@MMK_L_e.alt4" = {
+"@MMK_R_KO_a" = -110;
+"@MMK_R_KO_c" = -130;
+"@MMK_R_KO_d" = -120;
+"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_e" = -130;
+"@MMK_R_KO_f" = -60;
+"@MMK_R_KO_g" = -124;
+"@MMK_R_KO_ginsular" = -100;
+"@MMK_R_KO_i" = -30;
+"@MMK_R_KO_j" = -5;
+"@MMK_R_KO_l" = 0;
+"@MMK_R_KO_n" = -50;
+"@MMK_R_KO_o" = -120;
+"@MMK_R_KO_p" = -140;
+"@MMK_R_KO_rinsular" = -145;
+"@MMK_R_KO_s" = -100;
+"@MMK_R_KO_t" = -145;
+"@MMK_R_KO_tinsular" = -170;
+"@MMK_R_KO_u" = -150;
+"@MMK_R_KO_x" = -40;
+"@MMK_R_KO_y" = -150;
+"@MMK_R_KO_z" = -50;
 };
 A = {
 A.alt2 = 13;
@@ -27551,6 +27701,29 @@ zcaron = -30;
 "@MMK_R_KO_y.alt2" = 19;
 "@MMK_R_KO_z" = 8;
 "@MMK_R_KO_z.alt1" = -10;
+};
+"@MMK_L_e.alt4" = {
+"@MMK_R_KO_a" = -100;
+"@MMK_R_KO_c" = -130;
+"@MMK_R_KO_d" = -110;
+"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_e" = -130;
+"@MMK_R_KO_f" = -80;
+"@MMK_R_KO_g" = -110;
+"@MMK_R_KO_ginsular" = -115;
+"@MMK_R_KO_i" = -40;
+"@MMK_R_KO_j" = -30;
+"@MMK_R_KO_n" = -60;
+"@MMK_R_KO_o" = -120;
+"@MMK_R_KO_p" = -130;
+"@MMK_R_KO_rinsular" = -160;
+"@MMK_R_KO_s" = -80;
+"@MMK_R_KO_t" = -150;
+"@MMK_R_KO_tinsular" = -170;
+"@MMK_R_KO_u" = -160;
+"@MMK_R_KO_x" = -40;
+"@MMK_R_KO_y" = -150;
+"@MMK_R_KO_z" = -60;
 };
 A = {
 A.alt2 = 39;
@@ -34618,6 +34791,29 @@ zcaron = -23;
 "@MMK_R_KO_y.alt" = 21;
 "@MMK_R_KO_y.alt2" = 10;
 "@MMK_R_KO_z" = 16;
+};
+"@MMK_L_e.alt4" = {
+"@MMK_R_KO_a" = -105;
+"@MMK_R_KO_c" = -130;
+"@MMK_R_KO_d" = -115;
+"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_e" = -130;
+"@MMK_R_KO_f" = -60;
+"@MMK_R_KO_g" = -110;
+"@MMK_R_KO_ginsular" = -100;
+"@MMK_R_KO_i" = -30;
+"@MMK_R_KO_j" = -20;
+"@MMK_R_KO_n" = -70;
+"@MMK_R_KO_o" = -130;
+"@MMK_R_KO_p" = -130;
+"@MMK_R_KO_rinsular" = -135;
+"@MMK_R_KO_s" = -90;
+"@MMK_R_KO_t" = -140;
+"@MMK_R_KO_tinsular" = -160;
+"@MMK_R_KO_u" = -150;
+"@MMK_R_KO_x" = -50;
+"@MMK_R_KO_y" = -110;
+"@MMK_R_KO_z" = -50;
 };
 A = {
 A.alt2 = 27;
@@ -42075,6 +42271,29 @@ zcaron = -39;
 "@MMK_R_KO_z" = 32;
 "@MMK_R_KO_z.alt1" = -13;
 };
+"@MMK_L_e.alt4" = {
+"@MMK_R_KO_a" = -90;
+"@MMK_R_KO_c" = -130;
+"@MMK_R_KO_d" = -100;
+"@MMK_R_KO_dinsular.alt" = -120;
+"@MMK_R_KO_e" = -130;
+"@MMK_R_KO_f" = -60;
+"@MMK_R_KO_g" = -110;
+"@MMK_R_KO_ginsular" = -110;
+"@MMK_R_KO_i" = -40;
+"@MMK_R_KO_j" = -50;
+"@MMK_R_KO_n" = -50;
+"@MMK_R_KO_o" = -120;
+"@MMK_R_KO_p" = -130;
+"@MMK_R_KO_rinsular" = -170;
+"@MMK_R_KO_s" = -80;
+"@MMK_R_KO_t" = -160;
+"@MMK_R_KO_tinsular" = -170;
+"@MMK_R_KO_u" = -160;
+"@MMK_R_KO_x" = -26;
+"@MMK_R_KO_y" = -180;
+"@MMK_R_KO_z" = -40;
+};
 A = {
 A.alt2 = 28;
 P.p02 = 27;
@@ -48920,6 +49139,29 @@ zcaron = -30;
 "@MMK_R_KO_z" = 16;
 "@MMK_R_KO_z.alt1" = -7;
 };
+"@MMK_L_e.alt4" = {
+"@MMK_R_KO_a" = -120;
+"@MMK_R_KO_c" = -150;
+"@MMK_R_KO_d" = -130;
+"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_e" = -150;
+"@MMK_R_KO_f" = -80;
+"@MMK_R_KO_g" = -130;
+"@MMK_R_KO_ginsular" = -130;
+"@MMK_R_KO_i" = -30;
+"@MMK_R_KO_j" = -30;
+"@MMK_R_KO_n" = -70;
+"@MMK_R_KO_o" = -140;
+"@MMK_R_KO_p" = -160;
+"@MMK_R_KO_rinsular" = -155;
+"@MMK_R_KO_s" = -105;
+"@MMK_R_KO_t" = -170;
+"@MMK_R_KO_tinsular" = -190;
+"@MMK_R_KO_u" = -170;
+"@MMK_R_KO_x" = -50;
+"@MMK_R_KO_y" = -150;
+"@MMK_R_KO_z" = -60;
+};
 A = {
 A.alt2 = 29;
 P.p02 = 27;
@@ -50218,5 +50460,5 @@ type = unicode;
 };
 };
 versionMajor = 1;
-versionMinor = 58;
+versionMinor = 59;
 }

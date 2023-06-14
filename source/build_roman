@@ -1,43 +1,88 @@
 #!/bin/bash
 
+# For this script to work properly for all flavors of the font, these
+# tools are needed:
+#
+# glyphspkg (Python -- install with pip)
+# xsltproc (probably already installed on Mac or Linux)
+# fontmake (and dependencies -- Python -- install with pip)
+# ttfautohint (for static truetype)
+# psautohint (for static otf -- Python -- install with pip)
+# xgridfit (for variable and static truetype -- Python -- install with pip)
+
+delete_tmp () {
+  if [ ! -z "$tmp_d" ]
+  then
+    echo "Deleting temporary file ${tmp_d}."
+    rm -fr $tmp_d
+  fi
+}
+
+rm -fr build
+mkdir build
+[ ! -d "dist" ] && mkdir dist
+cd build
+
 outputtype="ttf"
 
 instanceparam="-i"
+
+cleanupafter=true
 
 generateufo=true
 
 xslfile="fix_wdth_axis.xsl"
 
-for arg in $@
-do
-  if [ $arg == "otf" ]
-  then
-    outputtype=$arg
-  elif [ $arg == "variable" ]
-  then
-    outputtype=$arg
-    instanceparam=""
-  elif [ $arg == "variable-cff2" ]
-  then
-    outputtype=$arg
-    instanceparam=""
-  elif [ $arg == "u" ]
-  then
-    generateufo=false
-  elif [ $arg == "s"  ]
-  then
-    xslfile="fix_wdth_axis-shorter.xsl"
-  fi
+while getopts "csu" options; do
+  case "${options}" in
+    u)
+      generateufo=false
+      ;;
+    s)
+      xslfile="fix_wdth_axis-shorter.xsl"
+      ;;
+    c)
+      cleanupafter=false
+      ;;
+    esac
+  done
 
-done
+if [ $(( $# - $OPTIND )) -eq 0 ]
+then
+  outputtype=${@:$OPTIND:1}
+fi
+
+glyphspkg -o . ../Junicode-width.glyphspackage/
+glyphsfile="Junicode-width.glyphs"
+
+if [ $outputtype == "variable" ]
+then
+  instanceparam=""
+  tmp_d=$(mktemp -d)
+  tmp_f=$tmp_d/$glyphsfile
+  echo "Saving temporary file ${tmp_f}."
+  sed -e "s/familyName = Junicode Two Beta;/familyName = Junicode Two Beta VF;/" $glyphsfile > $tmp_f
+  glyphsfile=$tmp_f
+fi
+
+cp ../xgf/JunicodeTwoBetaVF-Roman.yaml .
+cp ../*.py .
+cp ../*.xsl .
+mkdir xgf_scripts
+cp ../xgf/Jun*.xgf xgf_scripts/
+
+pwd=`pwd`
 
 if [ "$generateufo" = true ]
 then
   echo "Generating UFOs and designspace file from Glyphs source"
-  glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF --write-public-skip-export-glyphs Junicode-width.glyphs
+  glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF \
+    --output-dir $pwd --designspace-path $pwd/Junicode-width.designspace \
+    --write-public-skip-export-glyphs $glyphsfile
   if [ $? -ne 0 ]
   then
     echo "glyphs2ufo failed"
+    delete_tmp
     exit 1
   fi
   echo "Cleaning up designspace file"
@@ -45,6 +90,7 @@ then
   if [ $? -ne 0 ]
   then
    echo "xsltproc failed"
+   delete_tmp
    exit 1
   fi
 fi
@@ -54,17 +100,49 @@ fontmake -o $outputtype $instanceparam -m "Junicode-width-fixed.designspace"
 if [ $? -ne 0 ]
 then
  echo "fontmake failed"
+ delete_tmp
  exit 1
+fi
+
+if [ $outputtype == "ttf" ]
+then
+  cd instance_ttf
+  mkdir hinted
+  for f in Jun*.ttf; do ttfautohint $f hinted/$f; done
+  cd hinted
+  for f in Jun*.ttf; do python ../../rmfleuroninstructions.py $f; done
+  mkdir fixed
+  for f in Jun*.ttf;
+    do
+      ff="$(basename -- $f)"
+      fff="${ff%.*}"
+      xgridfit -q -m -i $f -o fixed/$f ../../xgf_scripts/$fff.xgf
+  done
+  mv fixed/Jun*.ttf ../../../dist/
+  cd ../../../
+fi
+
+if [ $outputtype == "otf" ]
+then
+  cd instance_otf
+  mkdir hinted
+  for f in Jun*.otf; do psautohint -o hinted $f; done
+  mv hinted/Jun*.ttf ../../dist/
+  cd ../../
 fi
 
 if [ $outputtype == "variable" ]
 then
-  cp variable_ttf/Junicode-width-fixed-VF.ttf variable_ttf/JunicodeTwoBetaVF-Roman.ttf
-  rm variable_ttf/Junicode-width-fixed-VF.ttf
+  python mkstat.py variable_ttf/Junicode-width-fixed-VF.ttf JunicodeTwoBetaVF-Roman.ttf
+  echo "Compiling hints..."
+  xgridfit -q -i JunicodeTwoBetaVF-Roman.ttf -o JunicodeTwoBetaVF-Roman-hinted.ttf JunicodeTwoBetaVF-Roman.yaml
+  if [ $? -eq 0 ]
+  then
+    cp JunicodeTwoBetaVF-Roman-hinted.ttf ../dist/JunicodeTwoBetaVF-Roman.ttf
+    cd ..
+  fi
 fi
-if [ $outputtype == "variable-cff2" ]
-then
-  cp variable_otf/Junicode-width-fixed-VF.otf variable_otf/JunicodeTwoBetaVF-Roman.otf
-  rm -i variable_otf/Junicode-width-fixed-VF.otf
-fi
+
+delete_tmp
+
 exit 0

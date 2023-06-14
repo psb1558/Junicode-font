@@ -41,6 +41,29 @@ about 91% complete and still in a rough condition. It should not be relied upon
 for production work until the character set is complete (probably some time in
 2022).
 
+# Building Junicode
+
+To build Junicode, you'll need a Python environment with version 3.10.4 or higher and these apps:
+
+- fontmake (Python app -- install with pip)
+- glyphspkg (Python app -- install with pip)
+- psautohint (for `.otf` fonts -- Python app -- install with pip)
+- xgridfit (for `.ttf` fonts -- Python app -- install with pip)
+- [ttfautohint](http://freetype.org/ttfautohint/) (for static `.ttf` fonts)
+- xsltproc (already installed in Mac OS and Linux)
+- Various utilities standard on Unix-like systems (e.g. `sed`, `mktemp`)
+
+Make sure the Bash scripts `build_roman` and `build_italic` are executable and run them from the
+command line:
+
+- with no argument to create a collection of static `.ttf` fonts
+- with the argument “otf” to create `.otf` fonts
+- with the argument “variable” to create TrueType-flavored variable fonts
+
+The script will create two subdirectories of `source`: `build` (a temporary directory,
+which you may safely delete after
+the script has run) and `dist`, where you will find the finished fonts.
+
 # Resources
 
 A [specimen](https://psb1558.github.io/Junicode-font/) page.

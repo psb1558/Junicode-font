@@ -43,7 +43,8 @@ for production work until the character set is complete (probably some time in
 
 # Building Junicode
 
-To build Junicode, you'll need a Python environment with version 3.10.4 or higher and these apps:
+If you want to build Junicode for yourself, you'll need a Python environment with
+version 3.10.4 or higher and these Open Source apps:
 
 - fontmake (Python app -- install with pip)
 - glyphspkg (Python app -- install with pip)

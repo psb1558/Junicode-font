@@ -13,7 +13,7 @@
 delete_tmp () {
   if [ ! -z "$tmp_d" ]
   then
-    echo "Deleting temporary file ${tmp_d}."
+    echo "Deleting temporary file ${tmp_f}."
     rm -fr $tmp_d
   fi
 }
@@ -66,6 +66,8 @@ fi
 cp ../xgf/JunicodeTwoBetaVF-Italic.yaml .
 cp ../*.py .
 cp ../*.xsl .
+
+pwd=`pwd`
 
 if [ "$generateufo" = true ]
 then
@@ -122,7 +124,7 @@ if [ $outputtype == "variable" ]
 then
   python mkstat.py variable_ttf/Junicode-Italic-fixed-VF.ttf JunicodeTwoBetaVF-Italic.ttf
   echo "Compiling hints..."
-  xgridfit -q -i JunicodeTwoBetaVF-Italic.ttf -o JunicodeTwoBetaVF-Italic-hinted.ttf xgf/JunicodeTwoBetaVF-Italic.yaml
+  xgridfit -q -i JunicodeTwoBetaVF-Italic.ttf -o JunicodeTwoBetaVF-Italic-hinted.ttf JunicodeTwoBetaVF-Italic.yaml
   if [ $? -eq 0 ]
   then
     cp JunicodeTwoBetaVF-Italic-hinted.ttf ../dist/JunicodeTwoBetaVF-Italic.ttf

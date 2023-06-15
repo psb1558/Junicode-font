@@ -108,7 +108,7 @@ if [ $outputtype == "ttf" ]
 then
   cd instance_ttf
   mkdir hinted
-  for f in Jun*.ttf; do ttfautohint $f hinted/$f; done
+  for f in Jun*.ttf; do python code_pages.py $f && ttfautohint $f hinted/$f; done
   cd hinted
   for f in Jun*.ttf; do python ../../rmfleuroninstructions.py $f; done
   mkdir fixed
@@ -126,7 +126,7 @@ if [ $outputtype == "otf" ]
 then
   cd instance_otf
   mkdir hinted
-  for f in Jun*.otf; do psautohint -o hinted $f; done
+  for f in Jun*.otf; do python code_pages.py $f && psautohint -o hinted $f; done
   mv hinted/Jun*.ttf ../../dist/
   cd ../../
 fi
@@ -134,6 +134,7 @@ fi
 if [ $outputtype == "variable" ]
 then
   python mkstat.py variable_ttf/Junicode-width-fixed-VF.ttf JunicodeTwoBetaVF-Roman.ttf
+  python code_pages.py JunicodeTwoBetaVF-Roman.ttf
   echo "Compiling hints..."
   xgridfit -q -i JunicodeTwoBetaVF-Roman.ttf -o JunicodeTwoBetaVF-Roman-hinted.ttf JunicodeTwoBetaVF-Roman.yaml
   if [ $? -eq 0 ]

@@ -41,6 +41,21 @@ about 91% complete and still in a rough condition. It should not be relied upon
 for production work until the character set is complete (probably some time in
 2022).
 
+# Resources
+
+A [specimen](https://psb1558.github.io/Junicode-font/) page.
+
+~~My Twitter feed, where I'll share new developments from time to time.~~
+
+A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where you can post queries about the fonts and how to use them.
+
+An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with Junicode and JunicodeVF.
+
+An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
+
+[Test/demonstration](https://psb1558.github.io/Junicode-font/Junicode-2-feature-test.html) of
+high-level CSS font properties in Junicode 2
+
 # Building Junicode
 
 If you want to build Junicode for yourself, you'll need a Python environment with
@@ -64,18 +79,3 @@ command line:
 The script will create two subdirectories of `source`: `build` (a temporary directory,
 which you may safely delete after
 the script has run) and `dist`, where you will find the finished fonts.
-
-# Resources
-
-A [specimen](https://psb1558.github.io/Junicode-font/) page.
-
-~~My Twitter feed, where I'll share new developments from time to time.~~
-
-A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where you can post queries about the fonts and how to use them.
-
-An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with Junicode and JunicodeVF.
-
-An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
-
-[Test/demonstration](https://psb1558.github.io/Junicode-font/Junicode-2-feature-test.html) of
-high-level CSS font properties in Junicode 2

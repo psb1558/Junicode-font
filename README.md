@@ -69,13 +69,18 @@ version 3.10.4 or higher and these Open Source apps:
 - xsltproc (already installed in Mac OS and Linux)
 - Various utilities standard on Unix-like systems (e.g. `sed`, `mktemp`)
 
-Make sure the Bash scripts `build_roman` and `build_italic` are executable and run them from the
-command line:
+The Bash scripts `build_roman` and `build_italic` create two directories: `build` (a temporary directory,
+which you may safely delete after the script has run) and `dist`, where it will place the finished
+fonts. Make sure these scripts are executable and run them from the command line:
 
-- with no argument to create a collection of static `.ttf` fonts
-- with the argument “otf” to create `.otf` fonts
-- with the argument “variable” to create TrueType-flavored variable fonts
+- with no argument to create a collection of static `.ttf` fonts.
+- with the argument **otf** to create `.otf` fonts
+- with the argument **variable** to create TrueType-flavored variable fonts
 
-The script will create two subdirectories of `source`: `build` (a temporary directory,
-which you may safely delete after
-the script has run) and `dist`, where you will find the finished fonts.
+These options are available:
+
+- **-n** to skip hinting the fonts.
+- **-s** to produce a minimal set of fonts or instances: Regular, Italic, Bold, Bold Italic.
+- **-u** to skip the step of replacing the `build` directory and use previously generated UFOs in that directory.
+
+The script will create two subdirectories of `source`: `build`  and `dist`, where you will find the finished fonts.

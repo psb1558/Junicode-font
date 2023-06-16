@@ -83,4 +83,3 @@ These options are available:
 - **-s** to produce a minimal set of fonts or instances: Regular, Italic, Bold, Bold Italic.
 - **-u** to skip the step of replacing the `build` directory and use previously generated UFOs in that directory.
 
-The script will create two subdirectories of `source`: `build`  and `dist`, where you will find the finished fonts.

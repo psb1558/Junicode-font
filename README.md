@@ -70,7 +70,7 @@ version 3.10.4 or higher and these Open Source apps:
 - Various utilities standard on Unix-like systems (e.g. `sed`, `mktemp`)
 
 The Bash scripts `build_roman` and `build_italic` create two directories: `build` (a temporary directory,
-which you may safely delete after the script has run) and `dist`, where it will place the finished
+which will be replaced next time one of the build scripts is run) and `dist`, where it will place the finished
 fonts. Make sure these scripts are executable and run them from the command line:
 
 - with no argument to create a collection of static `.ttf` fonts.

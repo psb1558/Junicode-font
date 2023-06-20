@@ -82,5 +82,5 @@ These options are available:
 - **-n** to skip hinting the fonts.
 - **-s** to produce a minimal set of fonts or instances: Regular, Italic, Bold, Bold Italic.
 - **-u** to skip the step of replacing the `build` directory and use previously generated UFOs in that directory.
-- **-p dir** *prefix*: the directory (relative to the build directory) where various scripts (`*.py` `*.xsl` `*.yaml`) are located.
+- **-p dir** *prefix*: the directory (relative to the build directory) where various scripts (`*.py` `*.xsl` `*.yaml`) are located (the default is `../`).
 

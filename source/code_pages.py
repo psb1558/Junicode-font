@@ -19,7 +19,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         for i, f_name in enumerate(sys.argv):
             if i > 0:
-                print("Fixing " + f_name)
+                print("Fixing code pages in " + f_name)
                 ft_font = ttLib.TTFont(f_name)
                 ft_font["OS/2"].ulCodePageRange1 = cp1
                 ft_font["OS/2"].ulCodePageRange2 = cp2

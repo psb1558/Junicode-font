@@ -18,11 +18,11 @@ delete_tmp () {
   fi
 }
 
+PREFIX="../"
+
 outputtype="ttf"
 
 instanceparam="-i"
-
-cleanupafter=true
 
 hinting=true
 
@@ -30,7 +30,7 @@ generateufo=true
 
 xslfile="fix_wdth_axis.xsl"
 
-while getopts "cnsu" options; do
+while getopts "nsup:" options; do
   case "${options}" in
     n)
       hinting=false
@@ -41,8 +41,8 @@ while getopts "cnsu" options; do
     s)
       xslfile="fix_wdth_axis-shorter.xsl"
       ;;
-    c)
-      cleanupafter=false
+    p)
+      PREFIX=${OPTARG}
       ;;
     esac
   done
@@ -75,12 +75,6 @@ then
   glyphsfile=$tmp_f
 fi
 
-cp ../xgf/JunicodeTwoBetaVF-Roman.yaml .
-cp ../*.py .
-cp ../*.xsl .
-mkdir xgf_scripts
-cp ../xgf/Jun*.xgf xgf_scripts/
-
 pwd=`pwd`
 
 if [ "$generateufo" = true ]
@@ -96,7 +90,7 @@ then
     exit 1
   fi
   echo "Cleaning up designspace file"
-  xsltproc -o Junicode-width-fixed.designspace $xslfile Junicode-width.designspace
+  xsltproc -o Junicode-width-fixed.designspace $PREFIX$xslfile Junicode-width.designspace
   if [ $? -ne 0 ]
   then
    echo "xsltproc failed"
@@ -117,20 +111,20 @@ fi
 if [ $outputtype == "ttf" ]
 then
   cd instance_ttf
-  for f in Jun*.ttf; do python ../code_pages.py $f; done
+  for f in Jun*.ttf; do python ../${PREFIX}code_pages.py $f; done
   if [ $hinting == true ]
   then
     mkdir hinted
-    for f in Jun*.ttf; do ttfautohint $f hinted/$f; done
+    for f in Jun*.ttf; do echo "Hinting ${f}"; ttfautohint $f hinted/$f; done
     cd hinted
-    for f in Jun*.ttf; do python ../../rmfleuroninstructions.py $f; done
+    for f in Jun*.ttf; do python ../../${PREFIX}rmfleuroninstructions.py $f; done
     mkdir fixed
     for f in Jun*.ttf;
       do
         echo "Adding hints to ${f}."
         ff="$(basename -- $f)"
         fff="${ff%.*}"
-        xgridfit -q -m -i $f -o fixed/$f ../../xgf_scripts/$fff.xgf
+        xgridfit -q -m -i $f -o fixed/$f ../../${PREFIX}xgf/$fff.xgf
     done
     mv fixed/Jun*.ttf ../../../dist/
     cd ../../../
@@ -143,7 +137,7 @@ fi
 if [ $outputtype == "otf" ]
 then
   cd instance_otf
-  for f in Jun*.otf; do python ../code_pages.py $f; done
+  for f in Jun*.otf; do python ../${PREFIX}code_pages.py $f; done
   if [ $hinting == true ]
   then
     mkdir hinted
@@ -157,12 +151,12 @@ fi
 
 if [ $outputtype == "variable" ]
 then
-  python mkstat.py variable_ttf/Junicode-width-fixed-VF.ttf JunicodeTwoBetaVF-Roman.ttf
-  python code_pages.py JunicodeTwoBetaVF-Roman.ttf
+  python ${PREFIX}mkstat.py variable_ttf/Junicode-width-fixed-VF.ttf JunicodeTwoBetaVF-Roman.ttf
+  python ${PREFIX}code_pages.py JunicodeTwoBetaVF-Roman.ttf
   if [ $hinting == true ]
   then
     echo "Compiling hints..."
-    xgridfit -q -i JunicodeTwoBetaVF-Roman.ttf -o JunicodeTwoBetaVF-Roman-hinted.ttf JunicodeTwoBetaVF-Roman.yaml
+    xgridfit -q -i JunicodeTwoBetaVF-Roman.ttf -o JunicodeTwoBetaVF-Roman-hinted.ttf ${PREFIX}xgf/JunicodeTwoBetaVF-Roman.yaml
     if [ $? -eq 0 ]
     then
       cp JunicodeTwoBetaVF-Roman-hinted.ttf ../dist/JunicodeTwoBetaVF-Roman.ttf

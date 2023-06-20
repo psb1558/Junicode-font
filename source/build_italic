@@ -18,6 +18,8 @@ delete_tmp () {
   fi
 }
 
+PREFIX="../"
+
 outputtype="ttf"
 
 instanceparam="-i"
@@ -28,7 +30,7 @@ hinting=true
 
 xslfile="fix_wdth_axis.xsl"
 
-while getopts "cnsu" options; do
+while getopts "cnsup:" options; do
   case "${options}" in
     n)
       hinting=false
@@ -39,8 +41,8 @@ while getopts "cnsu" options; do
     s)
       xslfile="fix_wdth_axis-shorter.xsl"
       ;;
-    c)
-      cleanupafter=false
+    p)
+      PREFIX=${OPTARG}
       ;;
     esac
   done
@@ -73,10 +75,6 @@ then
   glyphsfile=$tmp_f
 fi
 
-cp ../xgf/JunicodeTwoBetaVF-Italic.yaml .
-cp ../*.py .
-cp ../*.xsl .
-
 pwd=`pwd`
 
 if [ "$generateufo" = true ]
@@ -92,7 +90,7 @@ then
     exit 1
   fi
   echo "Cleaning up designspace file"
-  xsltproc -o Junicode-Italic-fixed.designspace $xslfile Junicode-Italic.designspace
+  xsltproc -o Junicode-Italic-fixed.designspace $PREFIX$xslfile Junicode-Italic.designspace
   if [ $? -ne 0 ]
   then
    echo "xsltproc failed"
@@ -113,13 +111,13 @@ fi
 if [ $outputtype == "ttf" ]
 then
   cd instance_ttf
-  for f in Jun*.ttf; do python ../code_pages.py $f; done
+  for f in Jun*.ttf; do python ../${PREFIX}code_pages.py $f; done
   if [ $hinting == true ]
   then
     mkdir hinted
     for f in Jun*.ttf; do ttfautohint $f hinted/$f; done
     cd hinted
-    for f in Jun*.ttf; do python ../../rmfleuroninstructions.py $f; done
+    for f in Jun*.ttf; do python ../../${PREFIX}rmfleuroninstructions.py $f; done
     mv Jun*.ttf ../../../dist/
     cd ../../../
   else
@@ -131,7 +129,7 @@ fi
 if [ $outputtype == "otf" ]
 then
   cd instance_otf
-  for f in Jun*.otf; do python code_pages.py $f; done
+  for f in Jun*.otf; do python ../${PREFIX}code_pages.py $f; done
   if [ $hinting == true ]
   then
     mkdir hinted
@@ -146,12 +144,12 @@ fi
 
 if [ $outputtype == "variable" ]
 then
-  python mkstat.py variable_ttf/Junicode-Italic-fixed-VF.ttf JunicodeTwoBetaVF-Italic.ttf
-  python code_pages.py JunicodeTwoBetaVF-Italic.ttf
+  python ${PREFIX}mkstat.py variable_ttf/Junicode-Italic-fixed-VF.ttf JunicodeTwoBetaVF-Italic.ttf
+  python ${PREFIX}code_pages.py JunicodeTwoBetaVF-Italic.ttf
   if [ $hinting == true ]
   then
     echo "Compiling hints..."
-    xgridfit -q -i JunicodeTwoBetaVF-Italic.ttf -o JunicodeTwoBetaVF-Italic-hinted.ttf JunicodeTwoBetaVF-Italic.yaml
+    xgridfit -q -i JunicodeTwoBetaVF-Italic.ttf -o JunicodeTwoBetaVF-Italic-hinted.ttf ${PREFIX}xgf/JunicodeTwoBetaVF-Italic.yaml
     if [ $? -eq 0 ]
     then
       cp JunicodeTwoBetaVF-Italic-hinted.ttf ../dist/JunicodeTwoBetaVF-Italic.ttf

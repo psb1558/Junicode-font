@@ -86,15 +86,12 @@ if [ $fontstyle == "italic" ]
 then
   glyphsfilename="Junicode-Italic"
   fontbasename=${fontbasename}-Italic
-  echo "Got italic ${glyphsfilename}"
 else
   glyphsfilename="Junicode-width"
   fontbasename=${fontbasename}-Roman
-  echo "Got roman ${glyphsfilename}"
 fi
 glyphspackage=${glyphsfilename}.glyphspackage
 glyphsfile=${glyphsfilename}.glyphs
-echo "With extension ${glyphsfile}"
 
 if [ $generateufo == true ]
 then
@@ -120,7 +117,7 @@ fi
 
 if [ "$generateufo" = true ]
 then
-  echo "Generating UFOs and designspace file from Glyphs source "$glyphsfile
+  echo "Generating UFOs and designspace file from Glyphs source."
   glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF \
     --output-dir $BUILDDIR --designspace-path ${BUILDDIR}/${glyphsfilename}.designspace \
     --write-public-skip-export-glyphs $glyphsfile

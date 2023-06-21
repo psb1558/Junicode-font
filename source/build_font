@@ -1,0 +1,220 @@
+#!/bin/bash
+
+# This script is for building the Junicode font, version 2. It will not work
+# for Junicode 1 or other fonts.
+
+# For this script to work properly for all flavors of the font, these
+# tools are needed:
+#
+# glyphspkg (Python -- install with pip)
+# xsltproc (probably already installed on Mac or Linux)
+# fontmake (and dependencies -- Python -- install with pip)
+# ttfautohint (for static truetype)
+# psautohint (for static otf -- Python -- install with pip)
+# xgridfit (for variable and static truetype -- Python -- install with pip)
+
+delete_tmp () {
+  if [ ! -z "$tmp_d" ]
+  then
+    echo "Deleting temporary file ${tmp_d}."
+    rm -fr $tmp_d
+  fi
+}
+
+HOMEDIR=`pwd`
+
+SOURCEDIR=$HOMEDIR/
+
+DESTDIR=$HOMEDIR/dist/
+
+BUILDDIR=$HOMEDIR/build/
+
+outputtype="ttf"
+
+instanceparam="-i"
+
+hinting=true
+
+generateufo=true
+
+xslfile="fix_wdth_axis.xsl"
+
+fontstyle="roman"
+
+fontbasename="JunicodeTwoBeta"
+
+while getopts "nusird:o:b:" options; do
+  case "${options}" in
+    n)
+      hinting=false
+      ;;
+    u)
+      generateufo=false
+      ;;
+    s)
+      xslfile="fix_wdth_axis-shorter.xsl"
+      ;;
+    r)
+      fontstyle="roman"
+      ;;
+    i)
+      fontstyle="italic"
+      ;;
+    d)
+      SOURCEDIR=${OPTARG}
+      ;;
+    o)
+      DESTDIR=${OPTARG}
+      ;;
+    b)
+      BUILDDIR=${OPTARG}
+      ;;
+    esac
+  done
+
+if [ $(( $# - $OPTIND )) -eq 0 ]
+then
+  outputtype=${@:$OPTIND:1}
+fi
+
+if [ $outputtype == "variable" ]
+then
+  fontbasename=${fontbasename}VF
+fi
+
+if [ $fontstyle == "italic" ]
+then
+  glyphsfilename="Junicode-Italic"
+  fontbasename=${fontbasename}-Italic
+  echo "Got italic ${glyphsfilename}"
+else
+  glyphsfilename="Junicode-width"
+  fontbasename=${fontbasename}-Roman
+  echo "Got roman ${glyphsfilename}"
+fi
+glyphspackage=${glyphsfilename}.glyphspackage
+glyphsfile=${glyphsfilename}.glyphs
+echo "With extension ${glyphsfile}"
+
+if [ $generateufo == true ]
+then
+  rm -rf $BUILDDIR
+  mkdir -p $BUILDDIR
+else
+  [ ! -d $BUILDDIR ] && mkdir -p $BUILDDIR
+fi
+[ ! -d $DESTDIR ] && mkdir $DESTDIR
+cd $BUILDDIR
+
+glyphspkg -o $BUILDDIR $SOURCEDIR$glyphspackage/
+
+if [ $outputtype == "variable" ]
+then
+  instanceparam=""
+  tmp_d=$(mktemp -d)
+  tmp_f=$tmp_d/$glyphsfile
+  echo "Saving temporary file ${tmp_f}."
+  sed -e 's/familyName *= *"Junicode *Two *Beta";/familyName = "Junicode Two Beta VF";/' $glyphsfile > $tmp_f
+  glyphsfile=$tmp_f
+fi
+
+if [ "$generateufo" = true ]
+then
+  echo "Generating UFOs and designspace file from Glyphs source "$glyphsfile
+  glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF \
+    --output-dir $BUILDDIR --designspace-path ${BUILDDIR}/${glyphsfilename}.designspace \
+    --write-public-skip-export-glyphs $glyphsfile
+  if [ $? -ne 0 ]
+  then
+    echo "glyphs2ufo failed"
+    delete_tmp
+    exit 1
+  fi
+  echo "Cleaning up designspace file"
+  xsltproc -o ${glyphsfilename}-fixed.designspace $SOURCEDIR$xslfile ${glyphsfilename}.designspace
+  if [ $? -ne 0 ]
+  then
+   echo "xsltproc failed"
+   delete_tmp
+   exit 1
+  fi
+fi
+
+echo "building font(s)"
+fontmake -o $outputtype $instanceparam -m ${glyphsfilename}-fixed.designspace
+if [ $? -ne 0 ]
+then
+ echo "fontmake failed"
+ delete_tmp
+ exit 1
+fi
+
+if [ $outputtype == "ttf" ]
+then
+  cd instance_ttf
+  for f in Jun*.ttf; do python ${SOURCEDIR}code_pages.py $f; done
+  if [ $hinting == true ]
+  then
+    mkdir hinted
+    for f in Jun*.ttf; do echo "Hinting ${f}"; ttfautohint $f hinted/$f; done
+    cd hinted
+    for f in Jun*.ttf; do python ${SOURCEDIR}rmfleuroninstructions.py $f; done
+    if [ $fontstyle == "roman" ]
+    then
+      mkdir fixed
+      for f in Jun*.ttf;
+      do
+        echo "Adding hints to ${f}."
+        ff="$(basename -- $f)"
+        fff="${ff%.*}"
+        xgridfit -q -m -i $f -o fixed/$f ${SOURCEDIR}xgf/$fff.xgf
+      done
+      cp fixed/Jun*.ttf $DESTDIR
+    else
+      cp Jun*.ttf ${DESTDIR}
+    fi
+  else
+    cp Jun*.ttf ${DESTDIR}
+  fi
+  cd $HOMEDIR
+fi
+
+if [ $outputtype == "otf" ]
+then
+  cd instance_otf
+  for f in Jun*.otf; do python ${SOURCEDIR}code_pages.py $f; done
+  if [ $hinting == true ]
+  then
+    mkdir hinted
+    for f in Jun*.otf; do psautohint -o hinted/$f $f; done
+    mv hinted/Jun*.otf ${DESTDIR}
+  else
+    mv Jun*.otf ${DESTDIR}
+  fi
+  cd $HOMEDIR
+fi
+
+if [ $outputtype == "variable" ]
+then
+  python ${SOURCEDIR}mkstat.py variable_ttf/${glyphsfilename}-fixed-VF.ttf ${fontbasename}.ttf
+  python ${SOURCEDIR}code_pages.py ${fontbasename}.ttf
+  if [ $hinting == true ]
+  then
+    echo "Compiling hints..."
+    xgridfit -q -i ${fontbasename}.ttf -o ${fontbasename}-hinted.ttf ${SOURCEDIR}xgf/${fontbasename}.yaml
+    if [ $? -eq 0 ]
+    then
+      cp ${fontbasename}-hinted.ttf ${DESTDIR}${fontbasename}.ttf
+    else
+      echo "Hinting failed."
+      cp ${fontbasename}.ttf ${DESTDIR}
+    fi
+  else
+    cp ${fontbasename}.ttf ${DESTDIR}
+  fi
+  cd $HOMEDIR
+fi
+
+delete_tmp
+
+exit 0

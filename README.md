@@ -66,21 +66,26 @@ version 3.10.4 or higher and these Open Source apps:
 - psautohint (for `.otf` fonts -- Python app -- install with pip)
 - xgridfit (for `.ttf` fonts -- Python app -- install with pip)
 - [ttfautohint](http://freetype.org/ttfautohint/) (for static `.ttf` fonts)
-- xsltproc (already installed in Mac OS and Linux)
-- Various utilities standard on Unix-like systems (e.g. `sed`, `mktemp`)
+- Various utilities that should already be installed on Mac OS and Linux systems: the Bash shell, xsltproc, sed, mktemp, basename.
 
-The Bash scripts `build_roman` and `build_italic` create two directories: `build` (a temporary directory,
-which will be replaced next time one of the build scripts is run) and `dist`, where it will place the finished
-fonts. Make sure these scripts are executable and run them from the command line:
+The Bash script `build_font` must be run once for roman fonts and again for italic.
+It creates two directories: `build`, a temporary directory,
+which will be replaced next time the script is run (or you can delete it yourself),
+and `dist`, where it will place the finished
+fonts. Make sure the script is executable and run it from the command line:
 
-- with no argument to create a collection of static `.ttf` fonts.
+- with no argument (or **ttf**) to create a collection of static `.ttf` fonts.
 - with the argument **otf** to create `.otf` fonts
 - with the argument **variable** to create TrueType-flavored variable fonts
 
 These options are available:
 
-- **-n** to skip hinting the fonts.
-- **-s** to produce a minimal set of fonts or instances: Regular, Italic, Bold, Bold Italic.
-- **-u** to skip the step of replacing the `build` directory and use previously generated UFOs in that directory.
-- **-p dir** *prefix*: the directory (relative to the build directory) where various scripts (`*.py` `*.xsl` `*.yaml`) are located (the default is `../`).
+- **-r** build roman fonts (this is the default).
+- **-i** build italic fonts.
+- **-n** skip hinting the fonts.
+- **-s** produce a minimal set of fonts or instances: Regular, Italic, Bold, Bold Italic.
+- **-u** skip the step of replacing the `build` directory and use previously generated UFOs in that directory.
+- **-d &lt;dir&gt;** source directory (default is `./`).
+- **-b &lt;dir&gt;** build directory (default is `./build`).
+- **-o &lt;dir&gt;** output directory (default is `./dist`).
 

@@ -135,6 +135,11 @@ name = Lowercase_with_descender;
 {
 code = "a b c d e f h i k l m n o r s t u v w x z ae eth";
 name = Lowercase_no_descender;
+},
+{
+code = "Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb bcomb ccomb dcomb ecomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb pcomb rcomb rrotundacomb scomb tcomb ucomb tinsularcomb vcomb wcomb xcomb zcomb ccedillacomb ginsularcomb rinsularcomb urabovecomb dotlessicomb jdotlesscomb dotlessicomb.low 
+";
+name = Letterlike_diacritics;
 }
 );
 customParameters = (
@@ -287,24 +292,10 @@ value = (
 79,
 86
 );
-},
-{
-name = codePageRanges;
-value = (
-"1252",
-"1250",
-"1253",
-"1254",
-"1257",
-"1258",
-"bit 29",
-"bit 31",
-"852"
-);
 }
 );
 date = "2023-06-06 22:41:30 +0000";
-familyName = "Junicode Two Beta VF";
+familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -821,9 +812,13 @@ tag = locl;
 },
 {
 code = "lookup i_dot {
-  sub [ i j ]' @combining_above by [ dotlessi jdotless ] ;
+  sub [ i j icomb ]' @combining_above by [ dotlessi jdotless dotlessicomb ] ;
   sub @double_diacritics [ i j ]' by [ dotlessi jdotless ] ;
 } i_dot ;
+
+lookup narrow_macron {
+  sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;
+} narrow_macron ;
 
 lookup UpperCaseDiacritics {
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
@@ -7190,6 +7185,7 @@ sub i z.alt1 by i_z.alt1 ;
 sub l z.alt1 by l_z.alt1 ;
 sub longs z.alt1 by longs_z.alt1 ;
 # sub longs.alt1 z.alt1 by longs_z.alt1 ;
+sub e.alt4 ddotaccent.alt2 by e_ddotaccent.alt ;
 ";
 tag = liga;
 },
@@ -7378,6 +7374,7 @@ KernOnModels = (
 "r y"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -13924,7 +13921,7 @@ zcaron = -30;
 "@MMK_R_KO_a" = -120;
 "@MMK_R_KO_c" = -150;
 "@MMK_R_KO_d" = -130;
-"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_dinsular.alt" = -152;
 "@MMK_R_KO_e" = -150;
 "@MMK_R_KO_f" = -80;
 "@MMK_R_KO_g" = -130;
@@ -20734,7 +20731,7 @@ zcaron = -29;
 "@MMK_R_KO_a" = -110;
 "@MMK_R_KO_c" = -130;
 "@MMK_R_KO_d" = -120;
-"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_dinsular.alt" = -192;
 "@MMK_R_KO_e" = -130;
 "@MMK_R_KO_f" = -60;
 "@MMK_R_KO_g" = -124;
@@ -27706,7 +27703,7 @@ zcaron = -30;
 "@MMK_R_KO_a" = -100;
 "@MMK_R_KO_c" = -130;
 "@MMK_R_KO_d" = -110;
-"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_dinsular.alt" = -148;
 "@MMK_R_KO_e" = -130;
 "@MMK_R_KO_f" = -80;
 "@MMK_R_KO_g" = -110;
@@ -34796,7 +34793,7 @@ zcaron = -23;
 "@MMK_R_KO_a" = -105;
 "@MMK_R_KO_c" = -130;
 "@MMK_R_KO_d" = -115;
-"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_dinsular.alt" = -147;
 "@MMK_R_KO_e" = -130;
 "@MMK_R_KO_f" = -60;
 "@MMK_R_KO_g" = -110;
@@ -42275,7 +42272,7 @@ zcaron = -39;
 "@MMK_R_KO_a" = -90;
 "@MMK_R_KO_c" = -130;
 "@MMK_R_KO_d" = -100;
-"@MMK_R_KO_dinsular.alt" = -120;
+"@MMK_R_KO_dinsular.alt" = -170;
 "@MMK_R_KO_e" = -130;
 "@MMK_R_KO_f" = -60;
 "@MMK_R_KO_g" = -110;
@@ -49143,7 +49140,7 @@ zcaron = -30;
 "@MMK_R_KO_a" = -120;
 "@MMK_R_KO_c" = -150;
 "@MMK_R_KO_d" = -130;
-"@MMK_R_KO_dinsular.alt" = -82;
+"@MMK_R_KO_dinsular.alt" = -152;
 "@MMK_R_KO_e" = -150;
 "@MMK_R_KO_f" = -80;
 "@MMK_R_KO_g" = -130;

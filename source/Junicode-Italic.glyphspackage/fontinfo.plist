@@ -1,5 +1,5 @@
 {
-.appVersion = "3192";
+.appVersion = "3201";
 .formatVersion = 3;
 axes = (
 {
@@ -133,6 +133,11 @@ name = Lowercase_with_descender;
 code = "a b c d e f h i k l m n o r s t u v w x z ae eth
 ";
 name = Lowercase_no_descender;
+},
+{
+code = "Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb ccomb dcomb ecomb ethcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb rcomb rrotundacomb scomb tcomb ucomb vcomb xcomb zcomb bcomb ccedillacomb fcomb pcomb uni1ACC uni1ACD tinsularcomb urabovecomb wcomb dotlessicomb jdotlesscomb dotlessicomb.low 
+";
+name = Letterlike_diacritics;
 }
 );
 customParameters = (
@@ -250,7 +255,7 @@ value = (
 }
 );
 date = "2023-06-06 22:41:09 +0000";
-familyName = "Junicode Two Beta VF";
+familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -746,8 +751,12 @@ tag = locl;
 },
 {
 code = "lookup i_dot {
-  sub [ i j ]' @combining_above by [ dotlessi jdotless ] ;
+  sub [ i j icomb ]' @combining_above by [ dotlessi jdotless dotlessicomb ] ;
 } i_dot ;
+
+lookup narrow_macron {
+  sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;
+} narrow_macron ;
 
 lookup UpperCaseDiacritics {
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
@@ -6693,6 +6702,7 @@ sub longs t by longs_t ;
 sub longs.alt2 t by longs_t.alt ;
 # sub longs adieresis by longs_adieresis ;
 # sub longs udieresis by longs_udieresis ;
+sub e.alt4 ddotaccent.alt2 by e_ddotaccent.alt ;
 ";
 tag = liga;
 },
@@ -7029,7 +7039,6 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -14849,6 +14858,8 @@ j = 99;
 "@MMK_R_KO_u" = -150;
 "@MMK_R_KO_y" = -180;
 "@MMK_R_KO_z" = -153;
+cdotaccent = -70;
+ddotaccent.alt2 = 40;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_A" = -52;
@@ -22566,6 +22577,8 @@ j = 130;
 "@MMK_R_KO_u" = -150;
 "@MMK_R_KO_y" = -200;
 "@MMK_R_KO_z" = -113;
+cdotaccent = -70;
+ddotaccent.alt2 = 40;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -60;
@@ -30289,6 +30302,8 @@ j = 85;
 "@MMK_R_KO_u" = -150;
 "@MMK_R_KO_y" = -180;
 "@MMK_R_KO_z" = -177;
+cdotaccent = -80;
+ddotaccent.alt2 = 40;
 s = -203;
 };
 "@MMK_L_hyphen" = {
@@ -38010,6 +38025,8 @@ j = 126;
 "@MMK_R_KO_u" = -140;
 "@MMK_R_KO_y" = -180;
 "@MMK_R_KO_z" = -137;
+cdotaccent = -60;
+ddotaccent.alt2 = 20;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -70;
@@ -45729,6 +45746,8 @@ j = 100;
 "@MMK_R_KO_u" = -150;
 "@MMK_R_KO_y" = -200;
 "@MMK_R_KO_z" = -173;
+cdotaccent = -70;
+ddotaccent.alt2 = 80;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -100;
@@ -53451,6 +53470,8 @@ j = 99;
 "@MMK_R_KO_u" = -150;
 "@MMK_R_KO_y" = -180;
 "@MMK_R_KO_z" = -153;
+cdotaccent = -70;
+ddotaccent.alt2 = 40;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_A" = -52;

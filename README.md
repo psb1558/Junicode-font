@@ -11,10 +11,10 @@ and other electronic document formats.
 
 The Junicode 2 font
 
-- will, when complete, have the same character set in all faces;
+- has the same character set in all faces (unlike Junicode 1);
 - has five weights (Light, Regular, Medium, Semibold, Bold)
 - and five widths (Regular, SemiCondensed, Condensed, SemiExpanded, Expanded);
-- includes a variable font (in both tff and cff2 flavors) with three axes:
+- includes a ttf-flavored variable font with three axes:
   width, weight, and the custom
   [Enlarge](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) axis;
 - has improved outlines,
@@ -35,11 +35,10 @@ Junicode 1 is still (as of June 2023) the current stable version of the
 font. However, no new features will be added to Junicode 1, though bugs will be
 fixed when necessary.
 
-The roman face of Junicode 2 is in beta testing. Interested users are encouraged
-to try it out and report bugs by opening issues on this site. The italic face is
-about 95% complete and still in a rough condition. It should not be relied upon
-for production work until the character set is complete (probably some time in
-2023).
+Beginning with version 1.060, the glyph sets of the roman and italic fonts are
+the same (leaving aside face-specific features like italic swashes and certain
+discretionary ligatures). After a period of testing, the version number will
+skip to 2.0 and “Beta” will be removed from the font’s name.
 
 # Resources
 

@@ -767,6 +767,10 @@ lookup narrow_macron {
   sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;
 } narrow_macron ;
 
+lookup alt_zigzag {
+  sub @combining_above zigzagabovecomb' by zigzagabovecomb.mkmk ;
+} alt_zigzag ;
+
 lookup UpperCaseDiacritics {
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
 } UpperCaseDiacritics ;
@@ -4851,6 +4855,7 @@ sub zigzagabovecomb.sc     from [ zigzagabovecomb.alt1.sc   zigzagabovecomb.alt2
 sub zigzagabovecomb.d      from [ zigzagabovecomb.alt1.eth  zigzagabovecomb.alt2.d     zigzagabovecomb.alt3.eth  ] ;
 sub zigzagabovecomb.bh     from [ zigzagabovecomb.alt1.eth  zigzagabovecomb.alt2.bh    zigzagabovecomb.alt3.eth  ] ;
 sub zigzagabovecomb.ff     from [ zigzagabovecomb.alt1.ff   zigzagabovecomb.alt2.ff    zigzagabovecomb.alt3.ff   ] ;
+sub zigzagabovecomb.mkmk   from [ zigzagabovecomb.alt1.mkmk zigzagabovecomb.alt2.mkmk  zigzagabovecomb.alt3.mkmk ] ;
 ";
 tag = cv81;
 },
@@ -7343,6 +7348,29 @@ width = 0;
 );
 }
 );
+guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
+}
+);
 id = master01;
 metricValues = (
 {
@@ -7502,6 +7530,7 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -7635,6 +7664,29 @@ name = lcmacron;
 width = 107;
 }
 );
+}
+);
+guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
 }
 );
 iconName = Bold;
@@ -7929,6 +7981,29 @@ width = 90;
 );
 }
 );
+guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
+}
+);
 iconName = Light;
 id = "7904EAEE-2B64-409E-B923-0048172372BE";
 metricValues = (
@@ -8217,6 +8292,29 @@ name = lcmacron;
 width = 94;
 }
 );
+}
+);
+guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
 }
 );
 id = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -8508,6 +8606,29 @@ width = 94;
 );
 }
 );
+guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
+}
+);
 id = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
 metricValues = (
 {
@@ -8796,6 +8917,29 @@ name = lcmacron;
 width = 94;
 }
 );
+}
+);
+guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
 }
 );
 id = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";

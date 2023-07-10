@@ -767,9 +767,10 @@ lookup narrow_macron {
   sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;
 } narrow_macron ;
 
-lookup alt_zigzag {
-  sub @combining_above zigzagabovecomb' by zigzagabovecomb.mkmk ;
-} alt_zigzag ;
+lookup mkmk_subs {
+  sub @combining_above graphemejoinercomb [ zigzagabovecomb ogonekabovecomb ]' by [ zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
+  sub @combining_above [ zigzagabovecomb ogonekabovecomb ]' by [ zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
+} mkmk_subs ;
 
 lookup UpperCaseDiacritics {
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
@@ -2226,9 +2227,9 @@ code = "  sub zero by zero.zero;
 tag = zero;
 },
 {
-code = "    sub parenleft by parenleftsuperior ;
-    sub parenright by parenrightsuperior ;
-#    sub plus by uni207A ;
+code = "    sub parenleft by parenleft.sups ;
+    sub parenright by parenright.sups ;
+    sub plus by plussuperior ;
     sub zero by zero.sups ;
     sub zero.zero by zero.sups.zero ;
     sub one by one.sups ;
@@ -7530,7 +7531,6 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -8920,6 +8920,27 @@ width = 94;
 }
 );
 guides = (
+{
+pos = (36,284);
+},
+{
+pos = (49,276);
+},
+{
+pos = (451,683);
+},
+{
+pos = (411,675);
+},
+{
+pos = (354,585);
+},
+{
+pos = (314,590);
+},
+{
+pos = (205,741);
+},
 {
 pos = (36,284);
 },
@@ -14112,6 +14133,9 @@ j = 99;
 "@MMK_R_KO_z.alt1" = -52;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_KO_q.superscript" = {
+"@MMK_R_KO_a.superscript" = -20;
 };
 "@MMK_L_KO_quotedblbase" = {
 "@MMK_R_KO_A" = 0;
@@ -21835,6 +21859,9 @@ j = 130;
 "@MMK_R_KO_z.alt1" = -86;
 "@MMK_R_KO_zvisigothic" = -3;
 "@MMK_R_hyphen" = -12;
+};
+"@MMK_L_KO_q.superscript" = {
+"@MMK_R_KO_a.superscript" = -30;
 };
 "@MMK_L_KO_quotedblbase" = {
 "@MMK_R_KO_A" = 0;
@@ -29563,6 +29590,9 @@ j = 85;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -35;
 };
+"@MMK_L_KO_q.superscript" = {
+"@MMK_R_KO_a.superscript" = -20;
+};
 "@MMK_L_KO_quotedblbase" = {
 "@MMK_R_KO_A" = -22;
 "@MMK_R_KO_B.alt1" = -96;
@@ -37288,6 +37318,9 @@ j = 126;
 "@MMK_R_KO_z.alt1" = -52;
 "@MMK_R_KO_zvisigothic" = -8;
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_KO_q.superscript" = {
+"@MMK_R_KO_a.superscript" = -23;
 };
 "@MMK_L_KO_quotedblbase" = {
 "@MMK_R_KO_A" = -9;
@@ -45024,6 +45057,9 @@ j = 100;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -35;
 };
+"@MMK_L_KO_q.superscript" = {
+"@MMK_R_KO_a.superscript" = -15;
+};
 "@MMK_L_KO_quotedblbase" = {
 "@MMK_R_KO_A" = -10;
 "@MMK_R_KO_B.alt1" = -86;
@@ -52752,6 +52788,9 @@ j = 99;
 "@MMK_R_KO_z.alt1" = -52;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_KO_q.superscript" = {
+"@MMK_R_KO_a.superscript" = -20;
 };
 "@MMK_L_KO_quotedblbase" = {
 "@MMK_R_KO_A" = 0;

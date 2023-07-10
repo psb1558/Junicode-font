@@ -829,9 +829,11 @@ lookup narrow_macron {
   sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;
 } narrow_macron ;
 
-lookup alt_zigzag {
-  sub @combining_above zigzagabovecomb' by zigzagabovecomb.mkmk ;
-} alt_zigzag ;
+lookup mkmk_subs {
+  sub @combining_above graphemejoinercomb [ zigzagabovecomb ogonekabovecomb ]' by [ zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
+  sub @combining_above [ zigzagabovecomb ogonekabovecomb ]' by [ zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
+# graphemejoinercomb
+} mkmk_subs ;
 
 lookup UpperCaseDiacritics {
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;

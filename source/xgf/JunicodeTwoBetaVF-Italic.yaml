@@ -21843,18 +21843,13 @@ glyphs:
   uniA770:
     y:
       points:
-      - ptid: '{246;684}'
+      - ptid: '{125;252}'
+      - ptid: '{245;683}'
+        pos: mod-height-overshoot
         points:
-        - ptid: '{221;646}'
+        - ptid: '{220;645}'
           rel: blackdist
-          points:
-          - ptid: '{138;469}'
-            rel: graydist
           round: false
-      - ptid: '{126;253}'
-        points:
-        - ptid: '{115;283}'
-          rel: shift
   uniA771:
     y:
       points:
@@ -50971,6 +50966,41 @@ glyphs:
       - ptid: '{71;233}'
         points:
         - ptid: '{71;290}'
+          rel: blackdist
+          round: false
+  period.sups:
+    y:
+      points:
+      - ptid: '{117;274}'
+        pos: mod-baseline-undershoot
+        points:
+        - ptid: '{120;366}'
+          rel: blackdist
+    props:
+      category: Lm
+  comma.sups:
+    y:
+      points:
+      - ptid: '{103;286}'
+        points:
+        - ptid: '{127;376}'
+          rel: blackdist
+          round: false
+      - ptid: '{19;140}'
+  endash.sups:
+    y:
+      points:
+      - ptid: '{59;453}'
+        points:
+        - ptid: '{67;498}'
+          rel: blackdist
+          round: false
+  hyphen.sups:
+    y:
+      points:
+      - ptid: '{108;453}'
+        points:
+        - ptid: '{116;498}'
           rel: blackdist
           round: false
 masters:

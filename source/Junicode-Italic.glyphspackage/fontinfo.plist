@@ -262,7 +262,7 @@ value = (
 );
 }
 );
-date = "2023-06-29 11:13:38 +0000";
+date = "2023-07-10 17:52:23 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -2302,6 +2302,10 @@ code = "    sub parenleft by parenleft.sups ;
     sub nine.osf by ninesuperior.osf ;
     sub bracketleft by bracketleft.sups ;
     sub bracketright by bracketright.sups ;
+    sub period by period.sups ;
+    sub comma by comma.sups ;
+    sub hyphen by hyphen.sups ;
+    sub endash by endash.sups ;
 ";
 tag = sups;
 },
@@ -7664,29 +7668,6 @@ name = lcmacron;
 width = 107;
 }
 );
-}
-);
-guides = (
-{
-pos = (36,284);
-},
-{
-pos = (49,276);
-},
-{
-pos = (451,683);
-},
-{
-pos = (411,675);
-},
-{
-pos = (354,585);
-},
-{
-pos = (314,590);
-},
-{
-pos = (205,741);
 }
 );
 iconName = Bold;
@@ -55990,5 +55971,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 60;
+versionMinor = 61;
 }

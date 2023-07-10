@@ -303,7 +303,7 @@ value = (
 );
 }
 );
-date = "2023-06-29 11:13:17 +0000";
+date = "2023-07-10 17:52:43 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -2365,6 +2365,10 @@ code = "    sub parenleft by uni207D ;
     sub bracketright by bracketright.sups ;
     sub gamma by gammamod-latin ;
     sub phi by phimod ;
+    sub hyphen by hyphen.sups ;
+	sub period by period.sups ;
+    sub comma by comma.sups ;
+    sub endash by endash.sups ;
 ";
 tag = sups;
 },
@@ -7563,7 +7567,6 @@ KernOnModels = (
 "r y"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -7634,24 +7637,6 @@ guides = (
 {
 locked = 1;
 pos = (36,284);
-},
-{
-pos = (49,276);
-},
-{
-pos = (411,683);
-},
-{
-pos = (411,675);
-},
-{
-pos = (354,585);
-},
-{
-pos = (314,590);
-},
-{
-pos = (205,741);
 }
 );
 iconName = Bold;
@@ -50768,5 +50753,5 @@ type = unicode;
 };
 };
 versionMajor = 1;
-versionMinor = 60;
+versionMinor = 61;
 }

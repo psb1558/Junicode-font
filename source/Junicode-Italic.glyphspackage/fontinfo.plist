@@ -262,7 +262,7 @@ value = (
 );
 }
 );
-date = "2023-07-11 17:30:35 +0000";
+date = "2023-07-15 16:27:42 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -2241,6 +2241,39 @@ code = "    sub parenleft by parenleft.sups ;
     sub seven by seven.sups ;
     sub eight by eight.sups ;
     sub nine by nine.sups ;
+    sub zero.lf by zero.sups ;
+    sub zero.lf.zero by zero.sups.zero ;
+    sub one.lf by one.sups ;
+    sub two.lf by two.sups ;
+    sub three.lf by three.sups ;
+    sub four.lf by four.sups ;
+    sub five.lf by five.sups ;
+    sub six.lf by six.sups ;
+    sub seven.lf by seven.sups ;
+    sub eight.lf by eight.sups ;
+    sub nine.lf by nine.sups ;
+    sub zero.osf by zerosuperior.osf ;
+    sub zero.osf.zero by zerosuperior.osf.zero ;
+    sub one.osf by onesuperior.osf ;
+    sub two.osf by twosuperior.osf ;
+    sub three.osf by threesuperior.osf ;
+    sub four.osf by foursuperior.osf ;
+    sub five.osf by fivesuperior.osf ;
+    sub six.osf by sixsuperior.osf ;
+    sub seven.osf by sevensuperior.osf ;
+    sub eight.osf by eightsuperior.osf ;
+    sub nine.osf by ninesuperior.osf ;
+    sub zero.tosf by zerosuperior.osf ;
+    sub zero.tosf.zero by zerosuperior.osf.zero ;
+    sub one.tosf by onesuperior.osf ;
+    sub two.tosf by twosuperior.osf ;
+    sub three.tosf by threesuperior.osf ;
+    sub four.tosf by foursuperior.osf ;
+    sub five.tosf by fivesuperior.osf ;
+    sub six.tosf by sixsuperior.osf ;
+    sub seven.tosf by sevensuperior.osf ;
+    sub eight.tosf by eightsuperior.osf ;
+    sub nine.tosf by ninesuperior.osf ;
     sub equal by equalsuperior ;
     sub A by Amod ;
     sub AE by AEModifier ;
@@ -2260,6 +2293,7 @@ code = "    sub parenleft by parenleft.sups ;
     sub R by Rmod ;
     sub T by Tmod ;
     sub U by Umod ;
+    sub V by Vmod ;
     sub W by Wmod ;
     sub a by amod ;
     sub b by bmod ;
@@ -2289,17 +2323,6 @@ code = "    sub parenleft by parenleft.sups ;
     sub y by ymod ;
     sub z by zmod ;
     sub minus by minussuperior ;
-    sub zero.osf by zerosuperior.osf ;
-    sub zero.osf.zero by zerosuperior.zero ;
-    sub one.osf by onesuperior.osf ;
-    sub two.osf by twosuperior.osf ;
-    sub three.osf by threesuperior.osf ;
-    sub four.osf by foursuperior.osf ;
-    sub five.osf by fivesuperior.osf ;
-    sub six.osf by sixsuperior.osf ;
-    sub seven.osf by sevensuperior.osf ;
-    sub eight.osf by eightsuperior.osf ;
-    sub nine.osf by ninesuperior.osf ;
     sub bracketleft by bracketleft.sups ;
     sub bracketright by bracketright.sups ;
     sub period by period.sups ;
@@ -2593,6 +2616,7 @@ sub eogonek by eogonek.enlarged ;
 sub f by f.enlarged ;
 sub finsular by finsular.enlarged ;
 sub g by g.enlarged ;
+sub gormulum by gormulum.enlarged ;
 sub h by h.enlarged ;
 sub i by i.enlarged ;
 sub dotlessi by idotless.enlarged ;
@@ -2634,6 +2658,7 @@ sub Eogonek by Eogonek.enlarged ;
 sub F by F.enlarged ;
 sub Finsular by Finsular.enlarged ;
 sub G by G.enlarged ;
+sub Gormulum by Gormulum.enlarged ;
 sub H by H.enlarged ;
 sub I by I.enlarged ;
 sub J by J.enlarged ;
@@ -3488,9 +3513,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule g\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"Orm's hard G, enlarged\";  # English US
+#   };
 #   Character 0x0047;
 # };
-sub G from [ Ginsular Gormulum G.alt G.enlarged ] ;
+sub G from [ Ginsular Gormulum G.alt G.enlarged Gormulum.enlarged ] ;
 ";
 tag = cv13;
 },
@@ -3523,9 +3551,12 @@ code = "# cvParameters {
 #   ParamUILabelNameID {
 #     name 3 1 0x0409 \"Enlarged minuscule g\";  # English US
 #   };
+#   ParamUILabelNameID {
+#     name 3 1 0x0409 \"Orm's hard g, enlarged\";  # English US
+#   };
 #   Character 0x0067;
 # };
-sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged ] ;
+sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged gormulum.enlarged ] ;
 ";
 tag = cv14;
 },
@@ -8299,29 +8330,6 @@ width = 94;
 );
 }
 );
-guides = (
-{
-pos = (36,284);
-},
-{
-pos = (49,276);
-},
-{
-pos = (451,683);
-},
-{
-pos = (411,675);
-},
-{
-pos = (354,585);
-},
-{
-pos = (314,590);
-},
-{
-pos = (205,741);
-}
-);
 id = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
 metricValues = (
 {
@@ -8922,50 +8930,6 @@ name = lcmacron;
 width = 94;
 }
 );
-}
-);
-guides = (
-{
-pos = (36,284);
-},
-{
-pos = (49,276);
-},
-{
-pos = (451,683);
-},
-{
-pos = (411,675);
-},
-{
-pos = (354,585);
-},
-{
-pos = (314,590);
-},
-{
-pos = (205,741);
-},
-{
-pos = (36,284);
-},
-{
-pos = (49,276);
-},
-{
-pos = (451,683);
-},
-{
-pos = (411,675);
-},
-{
-pos = (354,585);
-},
-{
-pos = (314,590);
-},
-{
-pos = (205,741);
 }
 );
 id = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
@@ -56213,5 +56177,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 62;
+versionMinor = 63;
 }

@@ -4,10 +4,24 @@ kernLeft = KO_ssigmoid;
 kernRight = KO_k.mecurl;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (120,-229);
+},
+{
+name = top;
+pos = (280,415);
+}
+);
 guides = (
 {
 angle = 76.9323;
 pos = (714,228);
+},
+{
+angle = 256.9731;
+pos = (171,-55);
 }
 );
 layerId = master01;
@@ -97,6 +111,16 @@ nodes = (
 width = 462;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (120,-229);
+},
+{
+name = top;
+pos = (280,415);
+}
+);
 guides = (
 {
 angle = 76.524;
@@ -104,6 +128,10 @@ pos = (770,230);
 },
 {
 pos = (41,-551);
+},
+{
+angle = 256.9731;
+pos = (171,-55);
 }
 );
 layerId = "2438E31C-45B5-47A7-9B3D-1A0FEFB47671";
@@ -193,6 +221,22 @@ nodes = (
 width = 468;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (118,-229);
+},
+{
+name = top;
+pos = (278,415);
+}
+);
+guides = (
+{
+angle = 256.9731;
+pos = (169,-55);
+}
+);
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
 shapes = (
 {
@@ -280,10 +324,24 @@ nodes = (
 width = 460;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (108,-229);
+},
+{
+name = top;
+pos = (248,415);
+}
+);
 guides = (
 {
 pos = (815,-102);
 showMeasurement = 1;
+},
+{
+angle = 78.5978;
+pos = (154,-55);
 }
 );
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -373,6 +431,22 @@ nodes = (
 width = 397;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (153,-229);
+},
+{
+name = top;
+pos = (313,415);
+}
+);
+guides = (
+{
+angle = 256.9731;
+pos = (204,-55);
+}
+);
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
 shapes = (
 {
@@ -460,6 +534,16 @@ nodes = (
 width = 521;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (120,-229);
+},
+{
+name = top;
+pos = (280,415);
+}
+);
 guides = (
 {
 angle = 76.9323;

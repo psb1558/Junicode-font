@@ -1,6 +1,7 @@
 {
 glyphname = chook;
 kernLeft = KO_c;
+kernRight = hookupperright;
 layers = (
 {
 anchors = (
@@ -391,6 +392,13 @@ name = top;
 pos = (231,415);
 }
 );
+background = {
+shapes = (
+{
+ref = ghook;
+}
+);
+};
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
 metricWidth = "=399";
 shapes = (

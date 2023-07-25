@@ -262,7 +262,7 @@ value = (
 );
 }
 );
-date = "2023-07-23 14:12:51 +0000";
+date = "2023-07-25 20:46:24 +0000";
 familyName = "Junicode Two Beta";
 featurePrefixes = (
 {
@@ -1817,131 +1817,131 @@ value = Entities;
 tag = ss10;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining macron\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Curly bar\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Rising macron\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dotted overline\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Angular zigzag\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Curly zigzag\"; # 5
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Vertical zigzag\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"an ligature\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"a and cap n ligature\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"ar ligature\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"a and cap r ligature\"; #10
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining B\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining D\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"e with macron\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"e with ogonek\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining dotless i\"; #15
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining j\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining dotless j\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining K\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining uncial m\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining o with macron\"; # 20
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining o with ogonek\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining o with slash\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining q\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining r rotunda with slash\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining T\"; # 25
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining y\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"combining thorn\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"o and r rotunda ligature\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"o and r rotunda with slash ligature\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"diagonal dieresis\"; # 30
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"dot and acute\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"ogonek and dot\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Narrow macron\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Macron with serifs\"; # 34
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Combining et sign\"; # 35
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"spiritus asper\"; # 36
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Combining subscript a\"; # 37
-#   };
-#   Character 0x0304;
-# };
-sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1   # 1-4
-                       zigzagabovecomb.alt2 zigzagabovecomb.alt3 ancomb aNcomb arcomb      # 5-9
-                       aRcomb Bcomb Dcomb emacroncomb eogonekcomb                  # 10-14
-                       dotlessicomb jcomb jdotlesscomb Kcomb muncialcomb                   # 15-19
-                       omacroncomb oogonekcomb oslashcomb qcomb rumrotundacomb                 # 20-24
-                       Tcomb ycomb thorncomb orrotcomb orumrotundacomb                            # 25-29
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining macron\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curly bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Rising macron\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotted overline\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Angular zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curly zigzag\"; #5
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Vertical zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"an ligature\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"a and cap n ligature\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ar ligature\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"a and cap r ligature\"; #10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining B\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining D\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with macron\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with ogonek\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining dotless i\"; #15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining j\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining dotless j\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining K\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining uncial m\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining o with macron\"; #20
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining o with ogonek\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining o with slash\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining q\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining r rotunda with slash\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining T\"; #25
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining y\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"combining thorn\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o and r rotunda ligature\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o and r rotunda with slash ligature\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"diagonal dieresis\"; #30
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"dot and acute\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ogonek and dot\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Narrow macron\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Macron with serifs\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Combining et sign\"; #35
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"spiritus asper\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Combining subscript a\";
+  };
+  Character 0x0304;
+};
+sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1   #1-4
+                       zigzagabovecomb.alt2 zigzagabovecomb.alt3 ancomb aNcomb arcomb      #5-9
+                       aRcomb Bcomb Dcomb emacroncomb eogonekcomb                  #10-14
+                       dotlessicomb jcomb jdotlesscomb Kcomb muncialcomb                   #15-19
+                       omacroncomb oogonekcomb oslashcomb qcomb rumrotundacomb                 #20-24
+                       Tcomb ycomb thorncomb orrotcomb orumrotundacomb                            #25-29
                        diagonaldieresiscomb dotacutecomb ogonekdotcomb macroncomb.narrow macroncomb.alt3
-					   etcomb spiritusasper asubscriptcomb ] ; # 36
+					   etcomb spiritusasper asubscriptcomb ] ; #36
 sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1.case
                        zigzagabovecomb.alt2.case zigzagabovecomb.alt3.case ancomb aNcomb arcomb
                        aRcomb Bcomb Dcomb emacroncomb eogonekcomb
@@ -1954,23 +1954,23 @@ sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigz
 tag = cv84;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of double macron\";  # English US
-#   };
-#   Character 0x035E;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of double macron\";
+  };
+  Character 0x035E;
+};
 sub doublemacroncomb from [ doublemacroncomb.alt1 doublemacroncomb.alt2 ] ;
 ";
 tag = cv90;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of spacing macron\";  # English US
-#   };
-#   Character 0x00AF;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of spacing macron\";
+  };
+  Character 0x00AF;
+};
 sub macron from [ zigzagmod ] ;
 ";
 tag = cv67;
@@ -3225,267 +3225,267 @@ sub @all_figures [O o]' by ordmasculine;
 tag = ordn;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of A\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular A\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"A with top bar\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Antiphon\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule a\";  # English US
-#   };
-#   Character 0x0041;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of A\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular A\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"A with top bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Antiphon\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule a\";
+  };
+  Character 0x0041;
+};
 sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
 ";
 tag = cv01;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Carolingian open a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Gothic closed a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Neckless a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule a\";  # English US
-#   };
-#   Character 0x0061;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Carolingian open a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Gothic closed a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule a\";
+  };
+  Character 0x0061;
+};
 sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged ] ;
 ";
 tag = cv02;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of B\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule b\";  # English US
-#   };
-#   Character 0x0042;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of B\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule b\";
+  };
+  Character 0x0042;
+};
 sub B from [ B.enlarged B.alt1 ] ;
 ";
 tag = cv03;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of b\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule b\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"b with loop\";  # English US
-#   };
-#   Character 0x0062;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of b\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule b\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"b with loop\";
+  };
+  Character 0x0062;
+};
 sub b from [ b.enlarged b.alt2 ];
 ";
 tag = cv04;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of C\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Square C\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule c\";  # English US
-#   };
-#   Character 0x0043;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of C\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Square C\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule c\";
+  };
+  Character 0x0043;
+};
 sub C from [ C.alt C.enlarged ] ;
 ";
 tag = cv05;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of c\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"c with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule c\";  # English US
-#   };
-#   Character 0x0063;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of c\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"c with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule c\";
+  };
+  Character 0x0063;
+};
 sub c from [ c.mecurl c.enlarged ] ;
 ";
 tag = cv06;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of D\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular D\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule insular d\";  # English US
-#   };
-#   Character 0x0044;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of D\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular D\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular d\";
+  };
+  Character 0x0044;
+};
 sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
 ";
 tag = cv07;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Alternate insular d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"d with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule insular d\";  # English US
-#   };
-#   Character 0x0064;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate insular d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"d with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular d\";
+  };
+  Character 0x0064;
+};
 sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
 ";
 tag = cv08;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of E\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial E\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed uncial E\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule e\";  # English US
-#   };
-#   Character 0x0045;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of E\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial E\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed uncial E\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule e\";
+  };
+  Character 0x0045;
+};
 sub E from [ E.alt1 E.alt2 E.enlarged E.alt3 ] ;
 ";
 tag = cv09;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of e\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial e\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"e with bar\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Tall e with bar\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule e\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Tall open e\";  # English US
-#   };
-#   Character 0x0065;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of e\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial e\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tall e with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule e\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tall open e\";
+  };
+  Character 0x0065;
+};
 sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged e.alt4 ] ;
 ";
 tag = cv10;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of F\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular F\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule insular f\";  # English US
-#   };
-#   Character 0x0046;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of F\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular F\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular f\";
+  };
+  Character 0x0046;
+};
 sub F from [ Finsular F.enlarged Finsular.enlarged ] ;
-# sub Fdotbelow from [ Finsulardotbelow ] ;
+sub Fdotbelow from [ Finsulardotbelow ] ;
 
 ";
 tag = cv11;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular f with dotted hooks\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Semi-closed insular f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed insular f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Narrow f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"f with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule f\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule insular f\";  # English US
-#   };
-#   Character 0x0066;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular f with dotted hooks\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semi-closed insular f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed insular f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Narrow f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"f with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule f\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule insular f\";
+  };
+  Character 0x0066;
+};
 sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged ] ;
 
 
@@ -3497,153 +3497,153 @@ sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.en
 tag = cv12;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of G\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular G\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Orm's hard G\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Square G\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule g\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Orm's hard G, enlarged\";  # English US
-#   };
-#   Character 0x0047;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of G\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular G\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Orm's hard G\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Square G\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Orm's hard G, enlarged\";
+  };
+  Character 0x0047;
+};
 sub G from [ Ginsular Gormulum G.alt G.enlarged Gormulum.enlarged ] ;
 ";
 tag = cv13;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of g\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular g\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Orm's hard g\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Script g\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed g with separate loops\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed g with large loop\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed g with small loop\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"g with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule g\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Orm's hard g, enlarged\";  # English US
-#   };
-#   Character 0x0067;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Orm's hard g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Script g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with separate loops\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with large loop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with small loop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"g with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Orm's hard g, enlarged\";
+  };
+  Character 0x0067;
+};
 sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged gormulum.enlarged ] ;
 ";
 tag = cv14;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of H\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial H\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule h\";  # English US
-#   };
-#   Character 0x0048;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of H\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial H\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule h\";
+  };
+  Character 0x0048;
+};
 sub H from [ H.alt H.enlarged ] ;
 ";
 tag = cv15;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of h\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"h with right descender\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"autem abbreviation\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule h\";  # English US
-#   };
-#   Character 0x0068;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of h\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"h with right descender\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"autem abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule h\";
+  };
+  Character 0x0068;
+};
 sub h from [ h.alt h.alt2 h.enlarged ] ;
 ";
 tag = cv16;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of I\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"I with dot\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Epigraphic I Longa\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule i\";  # English US
-#   };
-#   Character 0x0049;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of I\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"I with dot\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Epigraphic I Longa\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule i\";
+  };
+  Character 0x0049;
+};
 sub I from [ Idotaccent Longaepigraphici I.enlarged ] ;
-# figure this out
-# sub Idotaccent    from [ I                                  ] ;
+#figure this out
+#sub Idotaccent    from [ I                                  ] ;
 ";
 tag = cv17;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of i\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dotless i\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Long i\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"i with two strokes\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"ii to ij at word-end\";  # English US
-#   };  
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"i to j at word-end\";  # English US
-#   };  
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule i\";  # English US
-#   };
-#   Character 0x0069;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of i\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotless i\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Long i\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"i with two strokes\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ii to ij at word-end\";
+  };  
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"i to j at word-end\";
+  };  
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule i\";
+  };
+  Character 0x0069;
+};
 sub i from [ i.alt2 i.alt i.alt1 i.romnum i.romnum1 i.enlarged i.alt3 ] ;
 # figure this out
 # sub dotlessi      from [ i                                  ] ;
@@ -3651,864 +3651,864 @@ sub i from [ i.alt2 i.alt i.alt1 i.romnum i.romnum1 i.enlarged i.alt3 ] ;
 tag = cv18;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of J\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dotted J\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule j\";  # English US
-#   };
-#   Character 0x004A;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of J\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotted J\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule j\";
+  };
+  Character 0x004A;
+};
 sub J from [ Jdotaccent J.enlarged ] ;
 ";
 tag = cv19;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of j\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dotless j\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"j with two strokes\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"j with dot accent\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule j\";  # English US
-#   };
-#   Character 0x006A;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of j\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotless j\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"j with two strokes\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"j with dot accent\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule j\";
+  };
+  Character 0x006A;
+};
 sub j from [ j.alt3 j.alt2 jdotaccent j.enlarged ] ;
 ";
 tag = cv20;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of K\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule k\";  # English US
-#   };
-#   Character 0x004B;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of K\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule k\";
+  };
+  Character 0x004B;
+};
 sub K from [ K.enlarged ] ;
 ";
 tag = cv21;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of k\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial k\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Semi-closed k\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed k\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"k with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule k\";  # English US
-#   };
-#   Character 0x006B;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of k\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial k\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semi-closed k\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed k\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"k with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule k\";
+  };
+  Character 0x006B;
+};
 sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged ] ;
 ";
 tag = cv22;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of L\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule l\";  # English US
-#   };
-#   Character 0x004C;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of L\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule l\";
+  };
+  Character 0x004C;
+};
 sub L from [ L.enlarged ] ;
 ";
 tag = cv23;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of l\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Descending l\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule l\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"l with high stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"l with curved high stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"l with loop\";  # English US
-#   };
-#   Character 0x006C;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of l\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Descending l\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule l\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with high stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with curved high stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with loop\";
+  };
+  Character 0x006C;
+};
 sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt l.alt2 l.alt3 ] ;
 ";
 tag = cv24;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of M\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial M\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial M with descender\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Epigraphic Archaic M\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule m\";  # English US
-#   };
-#   Character 0x004D;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of M\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial M\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial M with descender\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Epigraphic Archaic M\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule m\";
+  };
+  Character 0x004D;
+};
 sub M from [ M.alt1 M.alt2 Mepigraphicarchaic M.enlarged ] ;
 ";
 tag = cv25;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of m\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial m\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial m with descender\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"m with descender\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule m\";  # English US
-#   };
-#   Character 0x006D;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of m\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial m\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial m with descender\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"m with descender\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule m\";
+  };
+  Character 0x006D;
+};
 sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
 ";
 tag = cv26;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of N\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"N with descender\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule n\";  # English US
-#   };
-#   Character 0x004E;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of N\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"N with descender\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule n\";
+  };
+  Character 0x004E;
+};
 sub N from [ N.alt1 N.enlarged ] ;
 ";
 tag = cv27;
 },
 {
-code = "#cvParameters {
-#  FeatUILabelNameID {
-#    name 3 1 0x0409 \"Variants of n\";  # English US
-#  };
-#  ParamUILabelNameID {
-#    name 3 1 0x0409 \"n with descender\";  # English US
-#  };
-#  ParamUILabelNameID {
-#    name 3 1 0x0409 \"Petite cap n with descender\";  # English US
-#  };
-#  ParamUILabelNameID {
-#    name 3 1 0x0409 \"n with bar\";  # English US
-#  };
-#  ParamUILabelNameID {
-#    name 3 1 0x0409 \"n with flourish\";  # English US
-#  };
-#  ParamUILabelNameID {
-#    name 3 1 0x0409 \"Enlarged minuscule n\";  # English US
-#  };
-#  ParamUILabelNameID {
-#    name 3 1 0x0409 \"n with attached subscript a\";  # English US
-#  };
-#  Character 0x006E;
-#};
+code = "cvParameters {
+ FeatUILabelNameID {
+   name 3 1 0x0409 \"Variants of n\";
+ };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"n with descender\";
+ };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"Petite cap n with descender\";
+ };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"n with bar\";
+ };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"n with flourish\";
+ };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"Enlarged minuscule n\";
+ };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"n with attached subscript a\";
+ };
+ Character 0x006E;
+};
 sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript ] ;
 ";
 tag = cv28;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of O\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule o\";  # English US
-#   };
-#   Character 0x004F;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of O\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule o\";
+  };
+  Character 0x004F;
+};
 sub O from [ O.enlarged ] ;
 ";
 tag = cv29;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of o\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule o\";  # English US
-#   };
-#   Character 0x006F;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of o\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule o\";
+  };
+  Character 0x006F;
+};
 sub o from [ o.enlarged ] ;
 ";
 tag = cv30;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of P\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Reversed P\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule p\";  # English US
-#   };
-#   Character 0x0050;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of P\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Reversed P\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule p\";
+  };
+  Character 0x0050;
+};
 sub P from [ Pepigraphicreversed P.enlarged ] ;
 ";
 tag = cv31;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of p\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule p\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Alternate p for the Ormulum\";  # English US
-#   };
-#   Character 0x0070;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of p\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule p\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate p for the Ormulum\";
+  };
+  Character 0x0070;
+};
 sub p from [ p.enlarged p.alt1 ] ;
 ";
 tag = cv32;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of Q\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Q with stem\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule q\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Q with long tail\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Q with longer tail\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Swash Q\";  # English US
-#   };
-#   Character 0x0051;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Q\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Q with stem\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule q\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Q with long tail\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Q with longer tail\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Swash Q\";
+  };
+  Character 0x0051;
+};
 sub Q from [ Q.alt Q.enlarged Q.alt2 Q.alt3 Q.swash ] ;
 ";
 tag = cv33;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of q\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"q with slanted stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule q\";  # English US
-#   };
-#   Character 0x0071;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of q\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"q with slanted stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule q\";
+  };
+  Character 0x0071;
+};
 sub q from [ q.alt q.enlarged ] ;
 ";
 tag = cv34;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of R\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular R\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"R rotunda\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule r\";  # English US
-#   };
-#   Character 0x0052;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of R\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular R\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"R rotunda\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule r\";
+  };
+  Character 0x0052;
+};
 sub R from [ Rinsular Rrotunda R.enlarged ] ;
 ";
 tag = cv35;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of r\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular r\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"r rotunda\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"r with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule r\";  # English US
-#   };
-#   Character 0x0072;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of r\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular r\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"r rotunda\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"r with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule r\";
+  };
+  Character 0x0072;
+};
 sub r from [ rinsular rrotunda r.mecurl r.enlarged ] ;
 ";
 tag = cv36;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of S\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular S\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Sigmoid S\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Sanctus abbreviation\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Middle Scottish s\";  # English US
-#   };
-#   Character 0x0053;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of S\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular S\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Sigmoid S\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Sanctus abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Middle Scottish s\";
+  };
+  Character 0x0053;
+};
 sub S from [ Sinsular Ssigmoid S.enlarged Sanctus uniA7D6 ] ;
 ";
 tag = cv37;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Sigmoid s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Longs s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Descending longs s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Longs s with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Longs s with descending stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule s\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Middle Scottish s\";  # English US
-#   };
-#   Character 0x0073;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Sigmoid s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Longs s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Descending longs s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Longs s with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Longs s with descending stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Middle Scottish s\";
+  };
+  Character 0x0073;
+};
 sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 ] ;
 # check these over.
 ";
 tag = cv38;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of T\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular T\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule t\";  # English US
-#   };
-#   Character 0x0054;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of T\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular T\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule t\";
+  };
+  Character 0x0054;
+};
 sub T from [ Tinsular T.enlarged ] ;
 ";
 tag = cv39;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of t\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Insular t\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"t with flourish\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule t\";  # English US
-#   };
-#   Character 0x0074;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of t\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular t\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"t with flourish\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule t\";
+  };
+  Character 0x0074;
+};
 sub t from [ tinsular t.mecurl t.enlarged ] ;
 ";
 tag = cv40;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of U\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule u\";  # English US
-#   };
-#   Character 0x0055;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of U\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule u\";
+  };
+  Character 0x0055;
+};
 sub U from [ U.enlarged ] ;
 ";
 tag = cv41;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of u\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule u\";  # English US
-#   };
-#   Character 0x0075;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of u\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule u\";
+  };
+  Character 0x0075;
+};
 sub u from [ u.enlarged ] ;
 ";
 tag = cv42;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of V\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule v\";  # English US
-#   };
-#   Character 0x0056;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of V\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule v\";
+  };
+  Character 0x0056;
+};
 sub V from [ V.enlarged ] ;
 ";
 tag = cv43;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of v\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"v with short slash\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"v with slash above right\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"v with two slashes above right\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"v with bar\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule v\";  # English US
-#   };
-#   Character 0x0076;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of v\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with short slash\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with slash above right\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with two slashes above right\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"v with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule v\";
+  };
+  Character 0x0076;
+};
 sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
 ";
 tag = cv44;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of W\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule w\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"W Anglicana\";  # English US
-#   };
-#   Character 0x0057;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of W\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule w\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"W Anglicana\";
+  };
+  Character 0x0057;
+};
 sub W from [ W.enlarged uniA7C2 ] ;
 ";
 tag = cv45;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of w\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule w\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"w Anglicana\";  # English US
-#   };
-#   Character 0x0077;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of w\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule w\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"w Anglicana\";
+  };
+  Character 0x0077;
+};
 sub w from [ w.enlarged uniA7C3 ] ;
 ";
 tag = cv46;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of X\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule x\";  # English US
-#   };
-#   Character 0x0058;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of X\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule x\";
+  };
+  Character 0x0058;
+};
 sub X from [ X.enlarged ] ;
 ";
 tag = cv47;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of x\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"x with long left leg\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"x with slash above left\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"x with slash below right\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"x with two slashes below right\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule x\";  # English US
-#   };
-#   Character 0x0078;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of x\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with long left leg\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with slash above left\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with slash below right\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"x with two slashes below right\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule x\";
+  };
+  Character 0x0078;
+};
 sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
 ";
 tag = cv48;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of Y\";  # English US
-#   };
-# #  ParamUILabelNameID {
-# #    name 3 1 0x0409 \"Hymnus\";  # English US
-# #  };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule y\";  # English US
-#   };
-#   Character 0x0059;
-# };
-# sub Y from [ Y.alt Y.enlarged ] ; Need to add Y.alt
-sub Y from [ Y.alt Y.enlarged ] ;
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Y\";
+  };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"Hymnus\";
+ };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule y\";
+  };
+  Character 0x0059;
+};
+sub Y from [ Y.alt Y.enlarged ] ; # Need to add Y.alt
+
 ";
 tag = cv49;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of y\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"y with right main stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"y with bar\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule y\";  # English US
-#   };
-#   Character 0x0079;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of y\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"y with right main stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"y with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule y\";
+  };
+  Character 0x0079;
+};
 sub y from [ y.alt y.alt2 y.alt3 y.enlarged ] ;
 ";
 tag = cv50;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of Z\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Visigothic Z\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule z\";  # English US
-#   };
-#   Character 0x005A;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Z\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Visigothic Z\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule z\";
+  };
+  Character 0x005A;
+};
 sub Z from [ Zvisigothic Z.enlarged ] ;
 ";
 tag = cv51;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of z\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Visigothic z\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Middle High German z\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule z\";  # English US
-#   };
-#   Character 0x007A;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of z\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Visigothic z\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Middle High German z\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule z\";
+  };
+  Character 0x007A;
+};
 sub z from [ zvisigothic z.alt1 z.enlarged ] ;
 ";
 tag = cv52;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of A with ogonek\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"A with stroke through right leg\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"A with long stroke\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"A with curved stroke\";
-#   };
-#   Character 0x0104;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of A with ogonek\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"A with stroke through right leg\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"A with long stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"A with curved stroke\";
+  };
+  Character 0x0104;
+};
 sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
 
 ";
 tag = cv53;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of a with ogonek\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"a with stroke through foot\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"a with long stroke\";
-#   };
-#   Character 0x0105;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of a with ogonek\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"a with stroke through foot\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"a with long stroke\";
+  };
+  Character 0x0105;
+};
 sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
 ";
 tag = cv54;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of aa\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Uncial aa\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Closed aa\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule aa\";  # English US
-#   };
-#   Character 0xA733;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of aa\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Uncial aa\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed aa\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule aa\";
+  };
+  Character 0xA733;
+};
 sub aa from [ aa.alt2 aa.alt aa.enlarged ] ;
 ";
 tag = cv55;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of AE\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Neckless AE\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule ae\";  # English US
-#   };
-#   Character 0x00C6;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of AE\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless AE\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule ae\";
+  };
+  Character 0x00C6;
+};
 sub AE from [ AE.alt1 AE.enlarged ] ;
 ";
 tag = cv56;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of ae\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Neckless ae\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule ae\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"ae with open top loop\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"ae with uncial a\";  # English US
-#   };
-#   Character 0x00E6;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of ae\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless ae\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule ae\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with open top loop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with uncial a\";
+  };
+  Character 0x00E6;
+};
 sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
 ";
 tag = cv57;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of Ao\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Neckless Ao\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule ao\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule ao with smaller o\";  # English US
-#   };
-#   Character 0xA734;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Ao\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless Ao\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule ao\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule ao with smaller o\";
+  };
+  Character 0xA734;
+};
 sub Ao from [ Ao.alt AO.enlarged AO.enlarged.alt ] ;
 ";
 tag = cv58;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of ao\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Neckless ao\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"ao with uncial a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule ao\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Enlarged minuscule ao with smaller o\";  # English US
-#   };
-#   Character 0xA735;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of ao\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless ao\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ao with uncial a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule ao\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule ao with smaller o\";
+  };
+  Character 0xA735;
+};
 sub ao from [ ao.alt ao.alt2 ao.enlarged ao.enlarged.alt ] ;
 ";
 tag = cv59;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of av\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Neckless av\";  # English US
-#   };
-#   Character 0xA739;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of av\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Neckless av\";
+  };
+  Character 0xA739;
+};
 sub av from [ av.alt ] ;
 ";
 tag = cv60;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of crossed d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"d with curved cross\";  # English US
-#   };
-#   Character 0x0111;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of crossed d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"d with curved cross\";
+  };
+  Character 0x0111;
+};
 sub dcroat from [ dcroat.alt ] ;
 ";
 tag = cv61;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of e with ogonek\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"e with centered ogonek\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"e with stroke for ogonek\";  # English US
-#   };
-#   Character 0x0118;
-#   Character 0x0119;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of e with ogonek\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with centered ogonek\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with stroke for ogonek\";
+  };
+  Character 0x0118;
+  Character 0x0119;
+};
 sub eogonek            from [ eogonek.alt          eogonek.alt1          ] ;
 sub Eogonek            from [ Eogonek.alt          Eogonek.alt1          ] ;
 sub eogonekdotbelow    from [ eogonekdotbelow.alt  eogonekdotbelow.alt1  ] ;
@@ -4521,173 +4521,173 @@ sub eogonekcomb        from [ eogonekcomb.alt      eogonekcomb.alt1      ] ;
 tag = cv62;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of yogh\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Yogh with flat top\";  # English US
-#   };
-#   Character 0x021C;
-#   Character 0x021D;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of yogh\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Yogh with flat top\";
+  };
+  Character 0x021C;
+  Character 0x021D;
+};
     sub Yogh       from [ Yogh.alt Yogh.alt2 ] ;
     sub yogh       from [ yogh.alt yogh.alt2 ] ;
 ";
 tag = cv63;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of l with high stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"l with curved high stroke\";  # English US
-#   };
-#   Character 0xA749;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of l with high stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"l with curved high stroke\";
+  };
+  Character 0xA749;
+};
 sub lhighstroke from [ lhighstroke.alt ] ;
 ";
 tag = cv64;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of Old Polish o\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"o with broken diagonal stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"o with partial diagonal stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"o with lower-left stroke\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"o with upper-right stroke\";  # English US
-#   };
-#   Character 0x00F8;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Old Polish o\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with broken diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with partial diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with lower-left stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"o with upper-right stroke\";
+  };
+  Character 0x00F8;
+};
 sub uniA7C1 from [ uniA7C1.alt1 uniA7C1.alt2 uniA7C1.alt3 uniA7C1.alt4 ] ;
 ";
 tag = cv65;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of crossed thorn\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"thorn with variant cross stroke\";  # English US
-#   };
-#   Character 0xA765;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of crossed thorn\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"thorn with variant cross stroke\";
+  };
+  Character 0xA765;
+};
 sub thornstroke         from [ thornstroke.alt         ] ;
 sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
 ";
 tag = cv66;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of glottal stop\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Cursive glottal stop\";  # English US
-#   };
-#   Character 0x0294;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of glottal stop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Cursive glottal stop\";
+  };
+  Character 0x0294;
+};
 sub glottalstop from [ glottalstop.alt ] ;
 ";
 tag = cv68;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of Tironian et\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Short Tironian et\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Short Tironian et with stroke\";  # English US
-#   };
-#   Character 0x204A;
-#   Character 0x2E52;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of Tironian et\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short Tironian et\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short Tironian et with stroke\";
+  };
+  Character 0x204A;
+  Character 0x2E52;
+};
 sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
 sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     ] ;
 ";
 tag = cv69;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of period\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Distinctio\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Comma positura\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"High comma positura\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus versus\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus with comma positura\";  # 5
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Colon with middle comma positura\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Comma positura with two dots\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Comma positura with three dots\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus elevatus with high back\"; # 10
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus elevatus with onset\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus flexus\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus exclamativus\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus interrogativus\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus interrogativus with wavy stroke\"; #15
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Low wavy line\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Signe de renvoi\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Virgula suspensiva (dotted solidus)\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Short virgula\"; # 20
-#   };
-#   Character 0x002E;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of period\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Distinctio\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"High comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus versus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus with comma positura\";  #5
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Colon with middle comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with two dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with three dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with high back\"; #10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with onset\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus flexus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus exclamativus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with wavy stroke\"; #15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Low wavy line\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Signe de renvoi\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Virgula suspensiva (dotted solidus)\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short virgula\"; #20
+  };
+  Character 0x002E;
+};
 sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1                    # 1-4
                   semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 uni2E4E.alt1   # 5-9
                   uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2           # 10-14
@@ -4697,194 +4697,194 @@ sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1       
 tag = cv70;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of centered period\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Distinctio\";
-#   };
-#   Character 0x00B7;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of centered period\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Distinctio\";
+  };
+  Character 0x00B7;
+};
 sub periodcentered from [ periodcentered.alt ] ;
 ";
 tag = cv71;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of comma\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Comma positura\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"High comma positura\";
-#   };
-#   Character 0x002C;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of comma\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"High comma positura\";
+  };
+  Character 0x002C;
+};
 sub comma from [ comma.alt1 comma.alt2 ] ;
 ";
 tag = cv72;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of semicolon\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus versus\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus with comma positura\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Colon with middle comma positura\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Comma positura with two dots\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Comma positura with three dots\";
-#   };
-#   Character 0x003B;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of semicolon\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus versus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus with comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Colon with middle comma positura\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with two dots\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Comma positura with three dots\";
+  };
+  Character 0x003B;
+};
 sub semicolon from [ semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 ] ;
 ";
 tag = cv73;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of punctus elevatus\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus elevatus with high back\"; # 10
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus elevatus with onset\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus flexus\";
-#   };
-#   Character 0x2E4E;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of punctus elevatus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus diagonal stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with high back\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus elevatus with onset\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus flexus\";
+  };
+  Character 0x2E4E;
+};
 sub uni2E4E from [ uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 ] ;
 ";
 tag = cv74;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of exclamation mark\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus exclamativus\";
-#   };
-#   Character 0x0021;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of exclamation mark\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus exclamativus\";
+  };
+  Character 0x0021;
+};
 sub exclam from [ exclam.alt2 ] ;
 ";
 tag = cv75;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of question mark\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus interrogativus\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus interrogativus with wavy stroke\"; #15
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
-#   };
-#   Character 0x003F;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of question mark\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with wavy stroke\"; #15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
+  };
+  Character 0x003F;
+};
 sub question from [ question.alt2 question.alt3 question.alt4 ] ;
 ";
 tag = cv76;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of spacing tilde\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Low wavy line\";
-#   };
-#   Character 0x007E;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of spacing tilde\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Low wavy line\";
+  };
+  Character 0x007E;
+};
 sub asciitilde from [ asciitilde.alt ] ;
 ";
 tag = cv77;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of asterisk\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Signe de renvoi\";
-#   };
-#   Character 0x002A;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of asterisk\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Signe de renvoi\";
+  };
+  Character 0x002A;
+};
 sub asterisk from [ asterisk.alt ] ;
 ";
 tag = cv78;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of slash\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Virgula suspensiva (dotted solidus)\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Short virgula\"; # 20
-#   };
-#   Character 0x002F;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of slash\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Virgula suspensiva (dotted solidus)\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short virgula\";
+  };
+  Character 0x002F;
+};
 sub slash from [ uni2E4A slash.alt ] ;
 ";
 tag = cv79;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of -rum abbreviation\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Record-style -rum\";
-#   };
-#   Character 0xA75D;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of -rum abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Record-style -rum\";
+  };
+  Character 0xA75D;
+};
 sub rumrotunda from [ rumrotunda.alt ] ;
 ";
 tag = cv80;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining zigzag\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Angular form zigzag\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Curly zigzag\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Vertical zigzag\";
-#   };
-#   Character 0x035B;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Angular form zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curly zigzag\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Vertical zigzag\";
+  };
+  Character 0x035B;
+};
 sub zigzagabovecomb        from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2       zigzagabovecomb.alt3      ] ;
 sub zigzagabovecomb.eth    from [ zigzagabovecomb.alt2      zigzagabovecomb.alt1.eth   zigzagabovecomb.alt3.eth  ] ;
 sub zigzagabovecomb.case   from [ zigzagabovecomb.alt1.case zigzagabovecomb.alt2.case  zigzagabovecomb.alt3.case ] ;
@@ -4897,91 +4897,91 @@ sub zigzagabovecomb.mkmk   from [ zigzagabovecomb.alt1.mkmk zigzagabovecomb.alt2
 tag = cv81;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of spacing -us abbreviation\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Baseline -us abbreviation\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Capital -us abbreviation\";
-#   };
-#   Character 0xA770;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of spacing -us abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Baseline -us abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Capital -us abbreviation\";
+  };
+  Character 0xA770;
+};
 sub usmod from [ usmod.alt1 usmod.alt2 ] ;
 ";
 tag = cv82;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of et abbreviation\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Semicolon-like et\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Subscript et\";
-#   };
-#   Character 0xA76B;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of et abbreviation\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semicolon-like et\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Subscript et\";
+  };
+  Character 0xA76B;
+};
 sub et from [ et.alt et.alt1 ];
 ";
 tag = cv83;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining open a\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Combining open a with macron\";
-#   };
-#   Character 0x1DD3;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining open a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Combining open a with macron\";
+  };
+  Character 0x1DD3;
+};
 sub flattenedopenaabovecomb from [ flattenedopenaabovecomb.alt ] ;
 ";
 tag = cv85;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining insular d\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Alternate combining insular d\";
-#   };
-#   Character 0x1DD8;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining insular d\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate combining insular d\";
+  };
+  Character 0x1DD8;
+};
 sub insulardcomb from [ insulardcomb.alt ] ;
 ";
 tag = cv86;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining r rotunda\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Curly combining r rotunda\";
-#   };
-#   Character 0x1DE3;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining r rotunda\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curly combining r rotunda\";
+  };
+  Character 0x1DE3;
+};
 sub rrotundacomb from [ rrotundacomb.alt ] ;
 ";
 tag = cv87;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining dieresis\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Diagonal dieresis\";
-#   };
-#   Character 0x0308;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining dieresis\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Diagonal dieresis\";
+  };
+  Character 0x0308;
+};
 sub adieresis    from [ adieresis.alt        ] ;
 sub odieresis    from [ odieresis.alt        ] ;
 sub dieresiscomb from [ diagonaldieresiscomb ] ;
@@ -4989,121 +4989,121 @@ sub dieresiscomb from [ diagonaldieresiscomb ] ;
 tag = cv88;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining overline\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dotted overline\";
-#   };
-#   Character 0x0305;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining overline\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dotted overline\";
+  };
+  Character 0x0305;
+};
 sub overlinecomb from [ overlinecomb.alt ] ;
 ";
 tag = cv89;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of combining breve below\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Triple breve below\";
-#   };
-#   Character 0x032E;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of combining breve below\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Triple breve below\";
+  };
+  Character 0x032E;
+};
 sub brevebelowcomb from [ triplebrevebelowcomb ] ;
 ";
 tag = cv92;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of currency sign\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"As libralis sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Small cap x with bar\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Small cap y with bar\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Small cap d with slash\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Pharmaceutical dram sign\"; # 05
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Ecu sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Floren sign with loop\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Groschen sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Helbing sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Krone sign\"; # 10
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dutch libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"French libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Italian libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Flemish libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Lira nuova sign\"; # 15
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Lira sterlina sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Old mark sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Old flourish mark sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Marked small letter m sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Flourished small letter m sign\"; # 20
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Pharmaceutical obelus sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Penning sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Old Reichstaler sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"German Schilling sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"German script Schilling sign\"; # 25
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Scudi sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Script ounce sign\";
-#   };
-#   Character 0x00A4;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of currency sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"As libralis sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Small cap x with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Small cap y with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Small cap d with slash\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Pharmaceutical dram sign\"; # 05
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Ecu sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Floren sign with loop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Groschen sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Helbing sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Krone sign\"; # 10
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dutch libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"French libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Italian libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Flemish libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira nuova sign\"; # 15
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira sterlina sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old mark sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old flourish mark sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Marked small letter m sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Flourished small letter m sign\"; # 20
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Pharmaceutical obelus sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Penning sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Old Reichstaler sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"German Schilling sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"German script Schilling sign\"; # 25
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Scudi sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Script ounce sign\";
+  };
+  Character 0x00A4;
+};
 sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 currency.alt05 currency.alt06 currency.alt07
                     currency.alt08 currency.alt09 currency.alt10 currency.alt11 currency.alt12 currency.alt13 currency.alt14
                     currency.alt15 currency.alt16 currency.alt17 currency.alt18 currency.alt19 currency.alt20
@@ -5112,86 +5112,86 @@ sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 
 tag = cv93;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of lb with bar\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Italian libra sign\";
-#   };
-#   Character 0x2114;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of lb with bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Italian libra sign\";
+  };
+  Character 0x2114;
+};
 sub lbbarsymbol from [ currency.alt12 ] ;
 ";
 tag = cv94;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of pound sign\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Dutch libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"French libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Italian libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Flemish libra sign\";
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Lira nuova sign\"; # 15
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Lira sterlina sign\";
-#   };
-#   Character 0x00A3;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of pound sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Dutch libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"French libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Italian libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Flemish libra sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira nuova sign\"; # 5
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lira sterlina sign\";
+  };
+  Character 0x00A3;
+};
 sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
 ";
 tag = cv95;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of German penny sign\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Penning sign\";
-#   };
-#   Character 0x20B0;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of German penny sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Penning sign\";
+  };
+  Character 0x20B0;
+};
 sub germanpenny from [ currency.alt22 ] ;
 ";
 tag = cv96;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of florin sign\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Floren sign with loop\";
-#   };
-#   Character 0x0192;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of florin sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Floren sign with loop\";
+  };
+  Character 0x0192;
+};
 sub florin from [ currency.alt07 ] ;
 ";
 tag = cv97;
 },
 {
-code = "# cvParameters {
-#   FeatUILabelNameID {
-#     name 3 1 0x0409 \"Variants of ounce sign\";  # English US
-#   };
-#   ParamUILabelNameID {
-#     name 3 1 0x0409 \"Script ounce sign\";
-#   };
-#   Character 0x2125;
-# };
+code = "cvParameters {
+  FeatUILabelNameID {
+    name 3 1 0x0409 \"Variants of ounce sign\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Script ounce sign\";
+  };
+  Character 0x2125;
+};
 sub ounce from [ currency.alt27 ] ;
 ";
 tag = cv98;
@@ -7232,7 +7232,8 @@ lookup kern_Contextual_Kerning {
     @eye = [ dotlessi i ] ;
     @ayee = [ a e ] ;
     @essess = [ s ] ;
-    pos r' 10 quoteright' -20 a ;
+    pos [ n r ]' 10 quoteright' -20 a ;
+    pos u' 10 quoteright' -10 d ;
     pos @enohu @double_diacritics' <-28 0 0 0> @eye ;
     pos @ayee @double_diacritics' lookup Contextual_Kerning_01  @eye ;
     pos @enohu @double_diacritics' lookup Contextual_Kerning_02  @essess ;
@@ -9741,6 +9742,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 35;
 "@MMK_R_KO_zvisigothic" = 32;
 "@MMK_R_hyphen" = -40;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_E" = {
 "@MMK_R_KO_A" = 25;
@@ -9817,6 +9819,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 69;
 "@MMK_R_KO_zvisigothic" = 44;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_G" = {
 "@MMK_R_KO_A" = 32;
@@ -9885,6 +9888,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 34;
 "@MMK_R_KO_zvisigothic" = 15;
 "@MMK_R_hyphen" = 23;
+"@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_H" = {
 "@MMK_R_KO_B.alt1" = 0;
@@ -9958,6 +9962,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 81;
 "@MMK_R_KO_zvisigothic" = 26;
 "@MMK_R_hyphen" = -80;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_H_r.hlig" = {
 "@MMK_R_KO_A" = 55;
@@ -10104,6 +10109,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 14;
 "@MMK_R_hyphen" = -110;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_L" = {
 "@MMK_R_KO_A" = 42;
@@ -10253,6 +10259,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 30;
 "@MMK_R_hyphen" = -80;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_O" = {
 "@MMK_R_KO_A" = -16;
@@ -10478,6 +10485,7 @@ master01 = {
 "@MMK_R_KO_z" = 29;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 113;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_Q_u" = {
 "@MMK_R_KO_A" = 34;
@@ -10701,6 +10709,7 @@ master01 = {
 "@MMK_R_KO_z.alt1" = 30;
 "@MMK_R_KO_zvisigothic" = 19;
 "@MMK_R_hyphen" = -21;
+"@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_T" = {
 "@MMK_R_KO_A" = -64;
@@ -10785,6 +10794,7 @@ master01 = {
 "@MMK_R_odieresis" = -50;
 "@MMK_R_omacron" = -90;
 "@MMK_R_otilde" = -48;
+"@MMK_R_parenright.alt" = 80;
 acircumflexgrave = 51;
 adblgrave = -39;
 adieresismacron = -79;
@@ -10898,6 +10908,7 @@ ytilde = -9;
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 24;
 "@MMK_R_hyphen" = -70;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_V" = {
 "@MMK_R_KO_A" = -101;
@@ -10975,6 +10986,7 @@ ytilde = -9;
 "@MMK_R_abreve" = -40;
 "@MMK_R_ebreve" = -20;
 "@MMK_R_hyphen" = -98;
+"@MMK_R_parenright.alt" = 130;
 acaron = -60;
 acircumflexgrave = 99;
 adblgrave = 0;
@@ -11155,6 +11167,7 @@ ydieresis = -25;
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 58;
 "@MMK_R_hyphen" = -80;
+"@MMK_R_parenright.alt" = 140;
 };
 "@MMK_L_KO_Y" = {
 "@MMK_R_KO_A" = -83;
@@ -11233,6 +11246,7 @@ ydieresis = -25;
 "@MMK_R_abreve" = -80;
 "@MMK_R_ebreve" = -55;
 "@MMK_R_hyphen" = -140;
+"@MMK_R_parenright.alt" = 80;
 acaron = -107;
 acircumflexgrave = 50;
 ecaron = -84;
@@ -11334,6 +11348,7 @@ ydieresis = -62;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 104;
 "@MMK_R_KO_zvisigothic" = 62;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_a" = {
 "@MMK_R_KO_A" = 47;
@@ -11746,15 +11761,16 @@ ydieresis = -62;
 "@MMK_R_KO_e.alt3" = -61;
 "@MMK_R_KO_e_y.hlig" = -48;
 "@MMK_R_KO_exclam" = -56;
-"@MMK_R_KO_f" = 27;
+"@MMK_R_KO_f" = 147;
 "@MMK_R_KO_f.rl" = 28;
 "@MMK_R_KO_f_j" = 35;
-"@MMK_R_KO_g" = 49;
+"@MMK_R_KO_g" = 79;
 "@MMK_R_KO_g.alt1" = -16;
 "@MMK_R_KO_guillemotleft" = -79;
 "@MMK_R_KO_h_longshighstroke" = 51;
 "@MMK_R_KO_i" = -72;
 "@MMK_R_KO_i.alt" = 0;
+"@MMK_R_KO_j" = 100;
 "@MMK_R_KO_j.alt" = 46;
 "@MMK_R_KO_k_longshighstroke" = 35;
 "@MMK_R_KO_l" = -48;
@@ -12096,7 +12112,7 @@ ydieresis = -62;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 30;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 50;
 "@MMK_R_KO_c" = -4;
 "@MMK_R_KO_colon" = -13;
 "@MMK_R_KO_d_e.hlig" = 0;
@@ -12127,7 +12143,7 @@ ydieresis = -62;
 "@MMK_R_KO_n.alt2" = 0;
 "@MMK_R_KO_o" = 0;
 "@MMK_R_KO_p_p.hlig" = 0;
-"@MMK_R_KO_parenright" = -14;
+"@MMK_R_KO_parenright" = -34;
 "@MMK_R_KO_period" = -4;
 "@MMK_R_KO_quoteright" = -29;
 "@MMK_R_KO_r" = 0;
@@ -12146,6 +12162,7 @@ ydieresis = -62;
 "@MMK_R_KO_z.alt1" = 19;
 "@MMK_R_KO_zvisigothic" = 3;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_d_e.hlig" = {
 "@MMK_R_KO_A" = -14;
@@ -12435,7 +12452,7 @@ ydieresis = -62;
 "@MMK_R_KO_a.alt5" = -34;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 125;
-"@MMK_R_KO_bracketright" = 136;
+"@MMK_R_KO_bracketright" = 206;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -3;
 "@MMK_R_KO_d" = -5;
@@ -12471,7 +12488,7 @@ ydieresis = -62;
 "@MMK_R_KO_o" = 0;
 "@MMK_R_KO_o_c.hlig" = 0;
 "@MMK_R_KO_p_p.hlig" = 21;
-"@MMK_R_KO_parenright" = 88;
+"@MMK_R_KO_parenright" = 108;
 "@MMK_R_KO_period" = -28;
 "@MMK_R_KO_quoteright" = 151;
 "@MMK_R_KO_r" = 19;
@@ -12490,6 +12507,7 @@ ydieresis = -62;
 "@MMK_R_KO_z" = 15;
 "@MMK_R_KO_z.alt1" = 195;
 "@MMK_R_KO_zvisigothic" = 127;
+"@MMK_R_parenright.alt" = 250;
 };
 "@MMK_L_KO_f.alt" = {
 "@MMK_R_KO_A" = 0;
@@ -12694,7 +12712,7 @@ ydieresis = -62;
 "@MMK_R_KO_o" = -15;
 "@MMK_R_KO_o_c.hlig" = -15;
 "@MMK_R_KO_p_p.hlig" = 35;
-"@MMK_R_KO_parenright" = 73;
+"@MMK_R_KO_parenright" = 93;
 "@MMK_R_KO_period" = -63;
 "@MMK_R_KO_quoteright" = -64;
 "@MMK_R_KO_r" = 35;
@@ -13132,7 +13150,7 @@ j = 99;
 "@MMK_R_KO_a.alt5" = -11;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 25;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 30;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -18;
 "@MMK_R_KO_d" = 0;
@@ -13424,7 +13442,7 @@ j = 99;
 "@MMK_R_KO_a.alt1" = -4;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_b" = 24;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 50;
 "@MMK_R_KO_c" = -8;
 "@MMK_R_KO_colon" = -17;
 "@MMK_R_KO_d" = 0;
@@ -13479,6 +13497,7 @@ j = 99;
 "@MMK_R_KO_z.alt1" = 15;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 60;
 };
 "@MMK_L_KO_longs" = {
 "@MMK_R_KO_A" = -9;
@@ -13678,7 +13697,7 @@ j = 99;
 "@MMK_R_KO_p_p.hlig" = 2;
 "@MMK_R_KO_parenright" = -30;
 "@MMK_R_KO_period" = -9;
-"@MMK_R_KO_quoteright" = -75;
+"@MMK_R_KO_quoteright" = -65;
 "@MMK_R_KO_r" = 0;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = -8;
@@ -13920,7 +13939,7 @@ j = 99;
 "@MMK_R_KO_e.alt3" = -94;
 "@MMK_R_KO_e_y.hlig" = -110;
 "@MMK_R_KO_exclam" = -48;
-"@MMK_R_KO_f" = 0;
+"@MMK_R_KO_f" = 50;
 "@MMK_R_KO_f.rl" = 0;
 "@MMK_R_KO_f_j" = 0;
 "@MMK_R_KO_g" = -9;
@@ -13929,9 +13948,10 @@ j = 99;
 "@MMK_R_KO_h_longshighstroke" = 37;
 "@MMK_R_KO_i" = -60;
 "@MMK_R_KO_i.alt" = -38;
+"@MMK_R_KO_j" = 30;
 "@MMK_R_KO_j.alt" = -7;
 "@MMK_R_KO_k_longshighstroke" = 32;
-"@MMK_R_KO_l" = 0;
+"@MMK_R_KO_l" = 40;
 "@MMK_R_KO_longs" = 0;
 "@MMK_R_KO_longs.alt2" = 0;
 "@MMK_R_KO_longs.alt4" = 104;
@@ -14941,7 +14961,7 @@ j = 99;
 "@MMK_R_KO_p_p.hlig" = -15;
 "@MMK_R_KO_parenright" = -28;
 "@MMK_R_KO_period" = -7;
-"@MMK_R_KO_quoteright" = -66;
+"@MMK_R_KO_quoteright" = -56;
 "@MMK_R_KO_r" = 8;
 "@MMK_R_KO_r.mecurl" = 5;
 "@MMK_R_KO_rrotunda" = -3;
@@ -15477,6 +15497,10 @@ ddotaccent.alt2 = 40;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_gamma" = {
+"@MMK_R_alpha" = -30;
+"@MMK_R_parenright.alt" = -50;
+};
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_A" = -52;
 "@MMK_R_KO_H" = -70;
@@ -15511,6 +15535,18 @@ Eth = -30;
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_parenleft.alt" = {
+"@MMK_R_KO_O" = -30;
+"@MMK_R_KO_Sinsular" = 80;
+"@MMK_R_KO_f" = 190;
+"@MMK_R_KO_g" = 120;
+"@MMK_R_KO_j" = 190;
+"@MMK_R_KO_longs.alt2" = 50;
+"@MMK_R_KO_r" = 50;
+"@MMK_R_KO_uniA7D7" = 250;
+"@MMK_R_KO_y" = 100;
+"@MMK_R_beta" = 60;
 };
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
@@ -17507,6 +17543,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 24;
 "@MMK_R_hyphen" = -27;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_E" = {
 "@MMK_R_KO_A" = 23;
@@ -17583,6 +17620,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 84;
 "@MMK_R_KO_zvisigothic" = 30;
 "@MMK_R_hyphen" = -25;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_G" = {
 "@MMK_R_KO_A" = 16;
@@ -17651,6 +17689,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 59;
 "@MMK_R_KO_zvisigothic" = 18;
 "@MMK_R_hyphen" = 18;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_H" = {
 "@MMK_R_KO_B.alt1" = 0;
@@ -17724,6 +17763,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 65;
 "@MMK_R_KO_zvisigothic" = 10;
 "@MMK_R_hyphen" = -63;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_H_r.hlig" = {
 "@MMK_R_KO_A" = 54;
@@ -17870,6 +17910,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 63;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -79;
+"@MMK_R_parenright.alt" = 120;
 };
 "@MMK_L_KO_L" = {
 "@MMK_R_KO_A" = 42;
@@ -18019,6 +18060,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 66;
 "@MMK_R_KO_zvisigothic" = 18;
 "@MMK_R_hyphen" = -63;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_O" = {
 "@MMK_R_KO_A" = -21;
@@ -18243,6 +18285,7 @@ zero.zero = 48;
 "@MMK_R_KO_z" = 79;
 "@MMK_R_KO_z.alt1" = 8;
 "@MMK_R_KO_zvisigothic" = 157;
+"@MMK_R_parenright.alt" = 190;
 };
 "@MMK_L_KO_Q_u" = {
 "@MMK_R_KO_A" = 18;
@@ -18466,6 +18509,7 @@ zero.zero = 48;
 "@MMK_R_KO_z.alt1" = 39;
 "@MMK_R_KO_zvisigothic" = 4;
 "@MMK_R_hyphen" = -14;
+"@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_T" = {
 "@MMK_R_KO_A" = -62;
@@ -18550,6 +18594,7 @@ zero.zero = 48;
 "@MMK_R_odieresis" = -30;
 "@MMK_R_omacron" = -90;
 "@MMK_R_otilde" = -50;
+"@MMK_R_parenright.alt" = 120;
 acircumflexgrave = 100;
 adblgrave = -63;
 atilde = -63;
@@ -18662,6 +18707,7 @@ ytilde = -3;
 "@MMK_R_KO_z.alt1" = 61;
 "@MMK_R_KO_zvisigothic" = 8;
 "@MMK_R_hyphen" = -86;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_V" = {
 "@MMK_R_KO_A" = -94;
@@ -18739,6 +18785,7 @@ ytilde = -3;
 "@MMK_R_abreve" = -20;
 "@MMK_R_ebreve" = 5;
 "@MMK_R_hyphen" = -82;
+"@MMK_R_parenright.alt" = 160;
 acaron = -45;
 acircumflexgrave = 155;
 adblgrave = -15;
@@ -18919,6 +18966,7 @@ ydieresis = 26;
 "@MMK_R_KO_z.alt1" = 146;
 "@MMK_R_KO_zvisigothic" = 82;
 "@MMK_R_hyphen" = -70;
+"@MMK_R_parenright.alt" = 170;
 };
 "@MMK_L_KO_Y" = {
 "@MMK_R_KO_A" = -84;
@@ -18997,6 +19045,7 @@ ydieresis = 26;
 "@MMK_R_abreve" = -70;
 "@MMK_R_ebreve" = -40;
 "@MMK_R_hyphen" = -112;
+"@MMK_R_parenright.alt" = 130;
 acaron = -105;
 acircumflexgrave = 100;
 ecaron = -60;
@@ -19098,6 +19147,7 @@ ydieresis = -23;
 "@MMK_R_KO_z" = -5;
 "@MMK_R_KO_z.alt1" = 123;
 "@MMK_R_KO_zvisigothic" = 51;
+"@MMK_R_parenright.alt" = 140;
 };
 "@MMK_L_KO_a" = {
 "@MMK_R_KO_A" = 41;
@@ -19510,15 +19560,16 @@ ydieresis = -23;
 "@MMK_R_KO_e.alt3" = -49;
 "@MMK_R_KO_e_y.hlig" = -31;
 "@MMK_R_KO_exclam" = -39;
-"@MMK_R_KO_f" = 54;
+"@MMK_R_KO_f" = 174;
 "@MMK_R_KO_f.rl" = 54;
 "@MMK_R_KO_f_j" = 59;
-"@MMK_R_KO_g" = 68;
+"@MMK_R_KO_g" = 88;
 "@MMK_R_KO_g.alt1" = 0;
 "@MMK_R_KO_guillemotleft" = -61;
 "@MMK_R_KO_h_longshighstroke" = 58;
 "@MMK_R_KO_i" = -53;
 "@MMK_R_KO_i.alt" = 22;
+"@MMK_R_KO_j" = 150;
 "@MMK_R_KO_j.alt" = 67;
 "@MMK_R_KO_k_longshighstroke" = 58;
 "@MMK_R_KO_l" = -21;
@@ -19860,7 +19911,7 @@ ydieresis = -23;
 "@MMK_R_KO_a.alt5" = 7;
 "@MMK_R_KO_a_f.hlig" = 4;
 "@MMK_R_KO_b" = 33;
-"@MMK_R_KO_bracketright" = 54;
+"@MMK_R_KO_bracketright" = 84;
 "@MMK_R_KO_c" = -2;
 "@MMK_R_KO_colon" = -15;
 "@MMK_R_KO_d_e.hlig" = 3;
@@ -19910,6 +19961,7 @@ ydieresis = -23;
 "@MMK_R_KO_z.alt1" = 67;
 "@MMK_R_KO_zvisigothic" = 24;
 "@MMK_R_hyphen" = -12;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_d_e.hlig" = {
 "@MMK_R_KO_A" = -28;
@@ -20199,7 +20251,7 @@ ydieresis = -23;
 "@MMK_R_KO_a.alt5" = -24;
 "@MMK_R_KO_a_f.hlig" = 9;
 "@MMK_R_KO_b" = 166;
-"@MMK_R_KO_bracketright" = 231;
+"@MMK_R_KO_bracketright" = 251;
 "@MMK_R_KO_c" = 11;
 "@MMK_R_KO_colon" = 0;
 "@MMK_R_KO_d" = 0;
@@ -20235,7 +20287,7 @@ ydieresis = -23;
 "@MMK_R_KO_o" = 11;
 "@MMK_R_KO_o_c.hlig" = 11;
 "@MMK_R_KO_p_p.hlig" = 32;
-"@MMK_R_KO_parenright" = 111;
+"@MMK_R_KO_parenright" = 121;
 "@MMK_R_KO_period" = -33;
 "@MMK_R_KO_quoteright" = 190;
 "@MMK_R_KO_r" = 21;
@@ -20254,6 +20306,7 @@ ydieresis = -23;
 "@MMK_R_KO_z" = 20;
 "@MMK_R_KO_z.alt1" = 262;
 "@MMK_R_KO_zvisigothic" = 201;
+"@MMK_R_parenright.alt" = 280;
 };
 "@MMK_L_KO_f.alt" = {
 "@MMK_R_KO_A" = -3;
@@ -20458,7 +20511,7 @@ ydieresis = -23;
 "@MMK_R_KO_o" = -10;
 "@MMK_R_KO_o_c.hlig" = -10;
 "@MMK_R_KO_p_p.hlig" = 40;
-"@MMK_R_KO_parenright" = 75;
+"@MMK_R_KO_parenright" = 85;
 "@MMK_R_KO_period" = -69;
 "@MMK_R_KO_quoteright" = -54;
 "@MMK_R_KO_r" = 45;
@@ -20896,7 +20949,7 @@ j = 130;
 "@MMK_R_KO_a.alt5" = -7;
 "@MMK_R_KO_a_f.hlig" = 2;
 "@MMK_R_KO_b" = 14;
-"@MMK_R_KO_bracketright" = 16;
+"@MMK_R_KO_bracketright" = 46;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -16;
 "@MMK_R_KO_d" = -3;
@@ -21188,7 +21241,7 @@ j = 130;
 "@MMK_R_KO_a.alt1" = 0;
 "@MMK_R_KO_a.alt5" = 6;
 "@MMK_R_KO_b" = 19;
-"@MMK_R_KO_bracketright" = 38;
+"@MMK_R_KO_bracketright" = 78;
 "@MMK_R_KO_c" = -7;
 "@MMK_R_KO_colon" = -17;
 "@MMK_R_KO_d" = 0;
@@ -21243,6 +21296,7 @@ j = 130;
 "@MMK_R_KO_z.alt1" = 51;
 "@MMK_R_KO_zvisigothic" = 9;
 "@MMK_R_hyphen" = -12;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_longs" = {
 "@MMK_R_KO_A" = -5;
@@ -21442,7 +21496,7 @@ j = 130;
 "@MMK_R_KO_p_p.hlig" = -5;
 "@MMK_R_KO_parenright" = -34;
 "@MMK_R_KO_period" = -19;
-"@MMK_R_KO_quoteright" = -69;
+"@MMK_R_KO_quoteright" = -59;
 "@MMK_R_KO_r" = -4;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = -15;
@@ -21684,7 +21738,7 @@ j = 130;
 "@MMK_R_KO_e.alt3" = -66;
 "@MMK_R_KO_e_y.hlig" = -70;
 "@MMK_R_KO_exclam" = -35;
-"@MMK_R_KO_f" = 37;
+"@MMK_R_KO_f" = 67;
 "@MMK_R_KO_f.rl" = 46;
 "@MMK_R_KO_f_j" = 45;
 "@MMK_R_KO_g" = 0;
@@ -21693,9 +21747,10 @@ j = 130;
 "@MMK_R_KO_h_longshighstroke" = 96;
 "@MMK_R_KO_i" = -35;
 "@MMK_R_KO_i.alt" = -35;
+"@MMK_R_KO_j" = 40;
 "@MMK_R_KO_j.alt" = -2;
 "@MMK_R_KO_k_longshighstroke" = 73;
-"@MMK_R_KO_l" = 12;
+"@MMK_R_KO_l" = 42;
 "@MMK_R_KO_longs" = 42;
 "@MMK_R_KO_longs.alt2" = 0;
 "@MMK_R_KO_longs.alt4" = 132;
@@ -22705,7 +22760,7 @@ j = 130;
 "@MMK_R_KO_p_p.hlig" = -9;
 "@MMK_R_KO_parenright" = -32;
 "@MMK_R_KO_period" = -18;
-"@MMK_R_KO_quoteright" = -54;
+"@MMK_R_KO_quoteright" = -34;
 "@MMK_R_KO_r" = 5;
 "@MMK_R_KO_r.mecurl" = 7;
 "@MMK_R_KO_rrotunda" = -6;
@@ -23240,6 +23295,10 @@ ddotaccent.alt2 = 40;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_gamma" = {
+"@MMK_R_alpha" = -20;
+"@MMK_R_parenright.alt" = -20;
+};
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -60;
 "@MMK_R_KO_T" = -101;
@@ -23274,6 +23333,18 @@ Z = -50;
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_parenleft.alt" = {
+"@MMK_R_KO_O" = -10;
+"@MMK_R_KO_Sinsular" = 110;
+"@MMK_R_KO_f" = 250;
+"@MMK_R_KO_g" = 140;
+"@MMK_R_KO_j" = 250;
+"@MMK_R_KO_longs.alt2" = 100;
+"@MMK_R_KO_r" = 100;
+"@MMK_R_KO_uniA7D7" = 310;
+"@MMK_R_KO_y" = 140;
+"@MMK_R_beta" = 110;
 };
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
@@ -25273,6 +25344,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 39;
 "@MMK_R_KO_zvisigothic" = 44;
 "@MMK_R_hyphen" = -43;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_E" = {
 "@MMK_R_KO_A" = 32;
@@ -25349,6 +25421,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 69;
 "@MMK_R_KO_zvisigothic" = 58;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_G" = {
 "@MMK_R_KO_A" = 29;
@@ -25417,6 +25490,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 43;
 "@MMK_R_KO_zvisigothic" = 30;
 "@MMK_R_hyphen" = 18;
+"@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_H" = {
 "@MMK_R_KO_B.alt1" = 10;
@@ -25490,6 +25564,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 71;
 "@MMK_R_KO_zvisigothic" = 40;
 "@MMK_R_hyphen" = -61;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_H_r.hlig" = {
 "@MMK_R_KO_A" = 60;
@@ -25636,6 +25711,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 70;
 "@MMK_R_KO_zvisigothic" = 23;
 "@MMK_R_hyphen" = -126;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_L" = {
 "@MMK_R_KO_A" = 48;
@@ -25785,6 +25861,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 69;
 "@MMK_R_KO_zvisigothic" = 46;
 "@MMK_R_hyphen" = -61;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_O" = {
 "@MMK_R_KO_A" = -14;
@@ -26010,6 +26087,7 @@ zero.zero = 57;
 "@MMK_R_KO_z" = 20;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 108;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_Q_u" = {
 "@MMK_R_KO_A" = 39;
@@ -26233,6 +26311,7 @@ zero.zero = 57;
 "@MMK_R_KO_z.alt1" = 27;
 "@MMK_R_KO_zvisigothic" = 23;
 "@MMK_R_hyphen" = -31;
+"@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_T" = {
 "@MMK_R_KO_A" = -56;
@@ -26317,6 +26396,7 @@ zero.zero = 57;
 "@MMK_R_odieresis" = -60;
 "@MMK_R_omacron" = -70;
 "@MMK_R_otilde" = -48;
+"@MMK_R_parenright.alt" = 90;
 acircumflexgrave = 50;
 adblgrave = -89;
 atilde = -59;
@@ -26429,6 +26509,7 @@ ytilde = -7;
 "@MMK_R_KO_z.alt1" = 69;
 "@MMK_R_KO_zvisigothic" = 40;
 "@MMK_R_hyphen" = -85;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_V" = {
 "@MMK_R_KO_A" = -94;
@@ -26506,6 +26587,7 @@ ytilde = -7;
 "@MMK_R_abreve" = -40;
 "@MMK_R_ebreve" = -23;
 "@MMK_R_hyphen" = -110;
+"@MMK_R_parenright.alt" = 110;
 acaron = -75;
 acircumflexgrave = 80;
 adblgrave = -52;
@@ -26687,6 +26769,7 @@ ydieresis = -37;
 "@MMK_R_KO_z.alt1" = 88;
 "@MMK_R_KO_zvisigothic" = 79;
 "@MMK_R_hyphen" = -90;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_Y" = {
 "@MMK_R_KO_A" = -74;
@@ -26765,6 +26848,7 @@ ydieresis = -37;
 "@MMK_R_abreve" = -80;
 "@MMK_R_ebreve" = -60;
 "@MMK_R_hyphen" = -149;
+"@MMK_R_parenright.alt" = 70;
 acaron = -114;
 acircumflexgrave = 36;
 ecaron = -90;
@@ -26866,6 +26950,7 @@ ydieresis = -73;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 97;
 "@MMK_R_KO_zvisigothic" = 72;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_a" = {
 "@MMK_R_KO_A" = 49;
@@ -27278,15 +27363,16 @@ ydieresis = -73;
 "@MMK_R_KO_e.alt3" = -54;
 "@MMK_R_KO_e_y.hlig" = -39;
 "@MMK_R_KO_exclam" = -33;
-"@MMK_R_KO_f" = 16;
+"@MMK_R_KO_f" = 126;
 "@MMK_R_KO_f.rl" = 10;
 "@MMK_R_KO_f_j" = 24;
-"@MMK_R_KO_g" = 56;
+"@MMK_R_KO_g" = 76;
 "@MMK_R_KO_g.alt1" = -4;
 "@MMK_R_KO_guillemotleft" = -58;
 "@MMK_R_KO_h_longshighstroke" = 29;
 "@MMK_R_KO_i" = -57;
 "@MMK_R_KO_i.alt" = 0;
+"@MMK_R_KO_j" = 110;
 "@MMK_R_KO_j.alt" = 62;
 "@MMK_R_KO_k_longshighstroke" = 11;
 "@MMK_R_KO_l" = -30;
@@ -27628,7 +27714,7 @@ ydieresis = -73;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 38;
-"@MMK_R_KO_bracketright" = 32;
+"@MMK_R_KO_bracketright" = 42;
 "@MMK_R_KO_c" = -2;
 "@MMK_R_KO_colon" = -10;
 "@MMK_R_KO_d_e.hlig" = 0;
@@ -27678,6 +27764,7 @@ ydieresis = -73;
 "@MMK_R_KO_z.alt1" = 31;
 "@MMK_R_KO_zvisigothic" = 13;
 "@MMK_R_hyphen" = -35;
+"@MMK_R_parenright.alt" = 50;
 };
 "@MMK_L_KO_d_e.hlig" = {
 "@MMK_R_KO_A" = -12;
@@ -27967,7 +28054,7 @@ ydieresis = -73;
 "@MMK_R_KO_a.alt5" = -31;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 140;
-"@MMK_R_KO_bracketright" = 140;
+"@MMK_R_KO_bracketright" = 190;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -5;
 "@MMK_R_KO_d" = -8;
@@ -28022,6 +28109,7 @@ ydieresis = -73;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 201;
 "@MMK_R_KO_zvisigothic" = 140;
+"@MMK_R_parenright.alt" = 220;
 };
 "@MMK_L_KO_f.alt" = {
 "@MMK_R_KO_A" = -5;
@@ -28226,7 +28314,7 @@ ydieresis = -73;
 "@MMK_R_KO_o" = 0;
 "@MMK_R_KO_o_c.hlig" = 0;
 "@MMK_R_KO_p_p.hlig" = 39;
-"@MMK_R_KO_parenright" = 79;
+"@MMK_R_KO_parenright" = 99;
 "@MMK_R_KO_period" = -60;
 "@MMK_R_KO_quoteright" = -57;
 "@MMK_R_KO_r" = 39;
@@ -28956,7 +29044,7 @@ j = 85;
 "@MMK_R_KO_a.alt1" = 0;
 "@MMK_R_KO_a.alt5" = 2;
 "@MMK_R_KO_b" = 33;
-"@MMK_R_KO_bracketright" = 24;
+"@MMK_R_KO_bracketright" = 54;
 "@MMK_R_KO_c" = -3;
 "@MMK_R_KO_colon" = -16;
 "@MMK_R_KO_d" = 0;
@@ -29011,6 +29099,7 @@ j = 85;
 "@MMK_R_KO_z.alt1" = 27;
 "@MMK_R_KO_zvisigothic" = 8;
 "@MMK_R_hyphen" = -35;
+"@MMK_R_parenright.alt" = 50;
 };
 "@MMK_L_KO_longs" = {
 "@MMK_R_KO_A" = -8;
@@ -29210,7 +29299,7 @@ j = 85;
 "@MMK_R_KO_p_p.hlig" = 7;
 "@MMK_R_KO_parenright" = -13;
 "@MMK_R_KO_period" = -3;
-"@MMK_R_KO_quoteright" = -71;
+"@MMK_R_KO_quoteright" = -58;
 "@MMK_R_KO_r" = 5;
 "@MMK_R_KO_r.mecurl" = 5;
 "@MMK_R_KO_rrotunda" = -2;
@@ -29452,7 +29541,7 @@ j = 85;
 "@MMK_R_KO_e.alt3" = -65;
 "@MMK_R_KO_e_y.hlig" = -76;
 "@MMK_R_KO_exclam" = -35;
-"@MMK_R_KO_f" = 31;
+"@MMK_R_KO_f" = 51;
 "@MMK_R_KO_f.rl" = 37;
 "@MMK_R_KO_f_j" = 37;
 "@MMK_R_KO_g" = 0;
@@ -29461,9 +29550,10 @@ j = 85;
 "@MMK_R_KO_h_longshighstroke" = 61;
 "@MMK_R_KO_i" = -52;
 "@MMK_R_KO_i.alt" = -33;
+"@MMK_R_KO_j" = 30;
 "@MMK_R_KO_j.alt" = 5;
 "@MMK_R_KO_k_longshighstroke" = 58;
-"@MMK_R_KO_l" = 0;
+"@MMK_R_KO_l" = 30;
 "@MMK_R_KO_longs" = 35;
 "@MMK_R_KO_longs.alt2" = 10;
 "@MMK_R_KO_longs.alt4" = 91;
@@ -30473,7 +30563,7 @@ j = 85;
 "@MMK_R_KO_p_p.hlig" = -12;
 "@MMK_R_KO_parenright" = -11;
 "@MMK_R_KO_period" = 0;
-"@MMK_R_KO_quoteright" = -61;
+"@MMK_R_KO_quoteright" = -46;
 "@MMK_R_KO_r" = 11;
 "@MMK_R_KO_r.mecurl" = 11;
 "@MMK_R_KO_rrotunda" = 0;
@@ -31010,6 +31100,10 @@ s = -203;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_gamma" = {
+"@MMK_R_alpha" = -20;
+"@MMK_R_parenright.alt" = -40;
+};
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -90;
 "@MMK_R_KO_T" = -133;
@@ -31043,6 +31137,18 @@ Eth = -40;
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_parenleft.alt" = {
+"@MMK_R_KO_O" = -30;
+"@MMK_R_KO_Sinsular" = 80;
+"@MMK_R_KO_f" = 190;
+"@MMK_R_KO_g" = 100;
+"@MMK_R_KO_j" = 180;
+"@MMK_R_KO_longs.alt2" = 40;
+"@MMK_R_KO_r" = 60;
+"@MMK_R_KO_uniA7D7" = 230;
+"@MMK_R_KO_y" = 90;
+"@MMK_R_beta" = 40;
 };
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
@@ -33042,6 +33148,7 @@ zero.zero = 50;
 "@MMK_R_KO_z.alt1" = 36;
 "@MMK_R_KO_zvisigothic" = 29;
 "@MMK_R_hyphen" = -20;
+"@MMK_R_parenright.alt" = 60;
 };
 "@MMK_L_KO_E" = {
 "@MMK_R_KO_A" = 24;
@@ -33118,6 +33225,7 @@ zero.zero = 50;
 "@MMK_R_KO_z.alt1" = 74;
 "@MMK_R_KO_zvisigothic" = 40;
 "@MMK_R_hyphen" = -20;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_G" = {
 "@MMK_R_KO_A" = 24;
@@ -33185,6 +33293,7 @@ zero.zero = 50;
 "@MMK_R_KO_y.alt" = -6;
 "@MMK_R_KO_z.alt1" = 46;
 "@MMK_R_KO_zvisigothic" = 19;
+"@MMK_R_parenright.alt" = 60;
 };
 "@MMK_L_KO_H" = {
 "@MMK_R_KO_B.alt1" = 0;
@@ -33258,6 +33367,7 @@ zero.zero = 50;
 "@MMK_R_KO_z.alt1" = 78;
 "@MMK_R_KO_zvisigothic" = 21;
 "@MMK_R_hyphen" = -47;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_H_r.hlig" = {
 "@MMK_R_KO_A" = 42;
@@ -33404,6 +33514,7 @@ zero.zero = 50;
 "@MMK_R_KO_z.alt1" = 70;
 "@MMK_R_KO_zvisigothic" = 7;
 "@MMK_R_hyphen" = -87;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_L" = {
 "@MMK_R_KO_A" = 43;
@@ -33553,6 +33664,7 @@ zero.zero = 50;
 "@MMK_R_KO_z.alt1" = 75;
 "@MMK_R_KO_zvisigothic" = 25;
 "@MMK_R_hyphen" = -47;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_O" = {
 "@MMK_R_KO_A" = -14;
@@ -33778,6 +33890,7 @@ zero.zero = 50;
 "@MMK_R_KO_z" = 45;
 "@MMK_R_KO_z.alt1" = 30;
 "@MMK_R_KO_zvisigothic" = 116;
+"@MMK_R_parenright.alt" = 180;
 };
 "@MMK_L_KO_Q_u" = {
 "@MMK_R_KO_A" = 25;
@@ -34001,6 +34114,7 @@ zero.zero = 50;
 "@MMK_R_KO_z.alt1" = 37;
 "@MMK_R_KO_zvisigothic" = 14;
 "@MMK_R_hyphen" = -14;
+"@MMK_R_parenright.alt" = 30;
 };
 "@MMK_L_KO_T" = {
 "@MMK_R_KO_A" = -43;
@@ -34085,6 +34199,7 @@ zero.zero = 50;
 "@MMK_R_odieresis" = -10;
 "@MMK_R_omacron" = -40;
 "@MMK_R_otilde" = -27;
+"@MMK_R_parenright.alt" = 100;
 acircumflexgrave = 80;
 adblgrave = -50;
 atilde = -50;
@@ -34197,6 +34312,7 @@ ytilde = 1;
 "@MMK_R_KO_z.alt1" = 71;
 "@MMK_R_KO_zvisigothic" = 22;
 "@MMK_R_hyphen" = -53;
+"@MMK_R_parenright.alt" = 100;
 };
 "@MMK_L_KO_V" = {
 "@MMK_R_KO_A" = -66;
@@ -34274,6 +34390,7 @@ ytilde = 1;
 "@MMK_R_abreve" = -20;
 "@MMK_R_ebreve" = -10;
 "@MMK_R_hyphen" = -88;
+"@MMK_R_parenright.alt" = 140;
 acaron = -37;
 acircumflexgrave = 130;
 adblgrave = -17;
@@ -34454,6 +34571,7 @@ ydieresis = 1;
 "@MMK_R_KO_z.alt1" = 19;
 "@MMK_R_KO_zvisigothic" = 35;
 "@MMK_R_hyphen" = -70;
+"@MMK_R_parenright.alt" = 130;
 };
 "@MMK_L_KO_Y" = {
 "@MMK_R_KO_A" = -59;
@@ -34532,6 +34650,7 @@ ydieresis = 1;
 "@MMK_R_abreve" = -60;
 "@MMK_R_ebreve" = -50;
 "@MMK_R_hyphen" = -106;
+"@MMK_R_parenright.alt" = 100;
 acaron = -84;
 acircumflexgrave = 80;
 ecaron = -69;
@@ -34633,6 +34752,7 @@ ydieresis = -37;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 113;
 "@MMK_R_KO_zvisigothic" = 59;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_a" = {
 "@MMK_R_KO_A" = 43;
@@ -35045,15 +35165,16 @@ ydieresis = -37;
 "@MMK_R_KO_e.alt3" = -36;
 "@MMK_R_KO_e_y.hlig" = -23;
 "@MMK_R_KO_exclam" = -25;
-"@MMK_R_KO_f" = 39;
+"@MMK_R_KO_f" = 129;
 "@MMK_R_KO_f.rl" = 43;
 "@MMK_R_KO_f_j" = 36;
-"@MMK_R_KO_g" = 34;
+"@MMK_R_KO_g" = 64;
 "@MMK_R_KO_g.alt1" = 0;
 "@MMK_R_KO_guillemotleft" = -39;
 "@MMK_R_KO_h_longshighstroke" = 9;
 "@MMK_R_KO_i" = -36;
 "@MMK_R_KO_i.alt" = 0;
+"@MMK_R_KO_j" = 130;
 "@MMK_R_KO_j.alt" = 41;
 "@MMK_R_KO_k_longshighstroke" = 0;
 "@MMK_R_KO_l" = -21;
@@ -35395,7 +35516,7 @@ ydieresis = -37;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_a_f.hlig" = 3;
 "@MMK_R_KO_b" = 21;
-"@MMK_R_KO_bracketright" = 35;
+"@MMK_R_KO_bracketright" = 55;
 "@MMK_R_KO_c" = -3;
 "@MMK_R_KO_colon" = -15;
 "@MMK_R_KO_d_e.hlig" = 0;
@@ -35445,6 +35566,7 @@ ydieresis = -37;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -10;
+"@MMK_R_parenright.alt" = 90;
 };
 "@MMK_L_KO_d_e.hlig" = {
 "@MMK_R_KO_A" = -22;
@@ -35734,7 +35856,7 @@ ydieresis = -37;
 "@MMK_R_KO_a.alt5" = -29;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 61;
-"@MMK_R_KO_bracketright" = 117;
+"@MMK_R_KO_bracketright" = 167;
 "@MMK_R_KO_c" = -2;
 "@MMK_R_KO_colon" = -12;
 "@MMK_R_KO_d" = -17;
@@ -35789,6 +35911,7 @@ ydieresis = -37;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 30;
 "@MMK_R_KO_zvisigothic" = 55;
+"@MMK_R_parenright.alt" = 220;
 };
 "@MMK_L_KO_f.alt" = {
 "@MMK_R_KO_A" = 29;
@@ -35993,7 +36116,7 @@ ydieresis = -37;
 "@MMK_R_KO_o" = 0;
 "@MMK_R_KO_o_c.hlig" = 0;
 "@MMK_R_KO_p_p.hlig" = 17;
-"@MMK_R_KO_parenright" = 65;
+"@MMK_R_KO_parenright" = 95;
 "@MMK_R_KO_period" = -49;
 "@MMK_R_KO_quoteright" = -54;
 "@MMK_R_KO_r" = 18;
@@ -36012,6 +36135,7 @@ ydieresis = -37;
 "@MMK_R_KO_z.alt1" = -11;
 "@MMK_R_KO_zvisigothic" = 26;
 "@MMK_R_hyphen" = -40;
+"@MMK_R_parenright.alt" = 20;
 j = 126;
 };
 "@MMK_L_KO_g_d.hlig" = {
@@ -36431,7 +36555,7 @@ j = 126;
 "@MMK_R_KO_a.alt5" = -13;
 "@MMK_R_KO_a_f.hlig" = -2;
 "@MMK_R_KO_b" = 12;
-"@MMK_R_KO_bracketright" = 11;
+"@MMK_R_KO_bracketright" = 41;
 "@MMK_R_KO_c" = -3;
 "@MMK_R_KO_colon" = -22;
 "@MMK_R_KO_d" = -5;
@@ -36723,7 +36847,7 @@ j = 126;
 "@MMK_R_KO_a.alt1" = -3;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_b" = 13;
-"@MMK_R_KO_bracketright" = 24;
+"@MMK_R_KO_bracketright" = 64;
 "@MMK_R_KO_c" = -7;
 "@MMK_R_KO_colon" = -18;
 "@MMK_R_KO_d" = -2;
@@ -36778,6 +36902,7 @@ j = 126;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -10;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_longs" = {
 "@MMK_R_KO_A" = -15;
@@ -36977,7 +37102,7 @@ j = 126;
 "@MMK_R_KO_p_p.hlig" = 5;
 "@MMK_R_KO_parenright" = -10;
 "@MMK_R_KO_period" = -3;
-"@MMK_R_KO_quoteright" = -59;
+"@MMK_R_KO_quoteright" = -49;
 "@MMK_R_KO_r" = 0;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = 0;
@@ -37219,7 +37344,7 @@ j = 126;
 "@MMK_R_KO_e.alt3" = -45;
 "@MMK_R_KO_e_y.hlig" = -52;
 "@MMK_R_KO_exclam" = -24;
-"@MMK_R_KO_f" = 41;
+"@MMK_R_KO_f" = 71;
 "@MMK_R_KO_f.rl" = 43;
 "@MMK_R_KO_f_j" = 39;
 "@MMK_R_KO_g" = 0;
@@ -37228,9 +37353,10 @@ j = 126;
 "@MMK_R_KO_h_longshighstroke" = 35;
 "@MMK_R_KO_i" = -37;
 "@MMK_R_KO_i.alt" = -28;
+"@MMK_R_KO_j" = 50;
 "@MMK_R_KO_j.alt" = 0;
 "@MMK_R_KO_k_longshighstroke" = 41;
-"@MMK_R_KO_l" = 0;
+"@MMK_R_KO_l" = 20;
 "@MMK_R_KO_longs" = 0;
 "@MMK_R_KO_longs.alt2" = -20;
 "@MMK_R_KO_longs.alt4" = 117;
@@ -38240,7 +38366,7 @@ j = 126;
 "@MMK_R_KO_p_p.hlig" = 0;
 "@MMK_R_KO_parenright" = -9;
 "@MMK_R_KO_period" = -2;
-"@MMK_R_KO_quoteright" = -52;
+"@MMK_R_KO_quoteright" = -37;
 "@MMK_R_KO_r" = 3;
 "@MMK_R_KO_r.mecurl" = 9;
 "@MMK_R_KO_rrotunda" = 0;
@@ -38776,6 +38902,10 @@ ddotaccent.alt2 = 20;
 "@MMK_R_endash" = -20;
 "@MMK_R_hyphen" = -50;
 };
+"@MMK_L_gamma" = {
+"@MMK_R_alpha" = -20;
+"@MMK_R_parenright.alt" = -20;
+};
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -70;
 "@MMK_R_KO_T" = -105;
@@ -38809,6 +38939,18 @@ Eth = -20;
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_parenleft.alt" = {
+"@MMK_R_KO_O" = -5;
+"@MMK_R_KO_Sinsular" = 80;
+"@MMK_R_KO_f" = 210;
+"@MMK_R_KO_g" = 120;
+"@MMK_R_KO_j" = 220;
+"@MMK_R_KO_longs.alt2" = 70;
+"@MMK_R_KO_r" = 100;
+"@MMK_R_KO_uniA7D7" = 270;
+"@MMK_R_KO_y" = 110;
+"@MMK_R_beta" = 90;
 };
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
@@ -40808,6 +40950,7 @@ zero.zero = 47;
 "@MMK_R_KO_z.alt1" = 36;
 "@MMK_R_KO_zvisigothic" = 43;
 "@MMK_R_hyphen" = -53;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_E" = {
 "@MMK_R_KO_A" = 33;
@@ -40884,6 +41027,7 @@ zero.zero = 47;
 "@MMK_R_KO_z.alt1" = 71;
 "@MMK_R_KO_zvisigothic" = 62;
 "@MMK_R_hyphen" = -40;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_G" = {
 "@MMK_R_KO_A" = 17;
@@ -40951,6 +41095,7 @@ zero.zero = 47;
 "@MMK_R_KO_y.alt" = 0;
 "@MMK_R_KO_z.alt1" = 32;
 "@MMK_R_KO_zvisigothic" = 18;
+"@MMK_R_parenright.alt" = 30;
 };
 "@MMK_L_KO_H" = {
 "@MMK_R_KO_B.alt1" = 5;
@@ -41024,6 +41169,7 @@ zero.zero = 47;
 "@MMK_R_KO_z.alt1" = 87;
 "@MMK_R_KO_zvisigothic" = 31;
 "@MMK_R_hyphen" = -115;
+"@MMK_R_parenright.alt" = 120;
 };
 "@MMK_L_KO_H_r.hlig" = {
 "@MMK_R_KO_A" = 64;
@@ -41170,6 +41316,7 @@ zero.zero = 47;
 "@MMK_R_KO_z.alt1" = 85;
 "@MMK_R_KO_zvisigothic" = 11;
 "@MMK_R_hyphen" = -142;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_L" = {
 "@MMK_R_KO_A" = 47;
@@ -41319,6 +41466,7 @@ zero.zero = 47;
 "@MMK_R_KO_z.alt1" = 86;
 "@MMK_R_KO_zvisigothic" = 45;
 "@MMK_R_hyphen" = -115;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_O" = {
 "@MMK_R_KO_A" = -12;
@@ -41544,6 +41692,7 @@ zero.zero = 47;
 "@MMK_R_KO_z" = 6;
 "@MMK_R_KO_z.alt1" = -16;
 "@MMK_R_KO_zvisigothic" = 42;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_Q_u" = {
 "@MMK_R_KO_A" = 31;
@@ -41767,6 +41916,7 @@ zero.zero = 47;
 "@MMK_R_KO_z.alt1" = 27;
 "@MMK_R_KO_zvisigothic" = 35;
 "@MMK_R_hyphen" = -31;
+"@MMK_R_parenright.alt" = 30;
 };
 "@MMK_L_KO_T" = {
 "@MMK_R_KO_A" = -85;
@@ -41851,6 +42001,7 @@ zero.zero = 47;
 "@MMK_R_odieresis" = -110;
 "@MMK_R_omacron" = -130;
 "@MMK_R_otilde" = -90;
+"@MMK_R_parenright.alt" = 80;
 acircumflexgrave = 17;
 adblgrave = -73;
 atilde = -93;
@@ -41963,6 +42114,7 @@ ytilde = -28;
 "@MMK_R_KO_z.alt1" = 85;
 "@MMK_R_KO_zvisigothic" = 31;
 "@MMK_R_hyphen" = -116;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_V" = {
 "@MMK_R_KO_A" = -121;
@@ -42040,6 +42192,7 @@ ytilde = -28;
 "@MMK_R_abreve" = -90;
 "@MMK_R_ebreve" = -50;
 "@MMK_R_hyphen" = -118;
+"@MMK_R_parenright.alt" = 100;
 acaron = -112;
 acircumflexgrave = 50;
 adblgrave = -52;
@@ -42220,6 +42373,7 @@ ydieresis = -60;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -90;
+"@MMK_R_parenright.alt" = 130;
 };
 "@MMK_L_KO_Y" = {
 "@MMK_R_KO_A" = -99;
@@ -42298,6 +42452,7 @@ ydieresis = -60;
 "@MMK_R_abreve" = -120;
 "@MMK_R_ebreve" = -98;
 "@MMK_R_hyphen" = -180;
+"@MMK_R_parenright.alt" = 80;
 acaron = -149;
 acircumflexgrave = 0;
 ecaron = -118;
@@ -42398,6 +42553,7 @@ ydieresis = -107;
 "@MMK_R_KO_z" = -6;
 "@MMK_R_KO_z.alt1" = 94;
 "@MMK_R_KO_zvisigothic" = 63;
+"@MMK_R_parenright.alt" = 120;
 };
 "@MMK_L_KO_a" = {
 "@MMK_R_KO_A" = 45;
@@ -42812,15 +42968,16 @@ is = 5;
 "@MMK_R_KO_e.alt3" = -61;
 "@MMK_R_KO_e_y.hlig" = -53;
 "@MMK_R_KO_exclam" = -41;
-"@MMK_R_KO_f" = 0;
+"@MMK_R_KO_f" = 116;
 "@MMK_R_KO_f.rl" = 0;
 "@MMK_R_KO_f_j" = 13;
-"@MMK_R_KO_g" = 64;
+"@MMK_R_KO_g" = 84;
 "@MMK_R_KO_g.alt1" = -13;
 "@MMK_R_KO_guillemotleft" = -82;
 "@MMK_R_KO_h_longshighstroke" = 54;
 "@MMK_R_KO_i" = -73;
 "@MMK_R_KO_i.alt" = 0;
+"@MMK_R_KO_j" = 120;
 "@MMK_R_KO_j.alt" = 69;
 "@MMK_R_KO_k_longshighstroke" = 36;
 "@MMK_R_KO_l" = -42;
@@ -43163,7 +43320,7 @@ is = 5;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 16;
-"@MMK_R_KO_bracketright" = 15;
+"@MMK_R_KO_bracketright" = 35;
 "@MMK_R_KO_c" = -3;
 "@MMK_R_KO_colon" = -10;
 "@MMK_R_KO_d_e.hlig" = 0;
@@ -43214,6 +43371,7 @@ is = 5;
 "@MMK_R_KO_zvisigothic" = -10;
 "@MMK_R_hyphen" = -35;
 "@MMK_R_is" = -30;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_d_e.hlig" = {
 "@MMK_R_KO_A" = 0;
@@ -43503,7 +43661,7 @@ is = 5;
 "@MMK_R_KO_a.alt5" = -33;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 49;
-"@MMK_R_KO_bracketright" = 207;
+"@MMK_R_KO_bracketright" = 237;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -2;
 "@MMK_R_KO_d" = 0;
@@ -43558,6 +43716,7 @@ is = 5;
 "@MMK_R_KO_z" = 12;
 "@MMK_R_KO_z.alt1" = 18;
 "@MMK_R_KO_zvisigothic" = 47;
+"@MMK_R_parenright.alt" = 260;
 };
 "@MMK_L_KO_f.alt" = {
 "@MMK_R_KO_A" = -43;
@@ -43762,7 +43921,7 @@ is = 5;
 "@MMK_R_KO_o" = -25;
 "@MMK_R_KO_o_c.hlig" = -25;
 "@MMK_R_KO_p_p.hlig" = -4;
-"@MMK_R_KO_parenright" = 93;
+"@MMK_R_KO_parenright" = 113;
 "@MMK_R_KO_period" = -68;
 "@MMK_R_KO_quoteright" = -46;
 "@MMK_R_KO_r" = 0;
@@ -44202,7 +44361,7 @@ j = 100;
 "@MMK_R_KO_a.alt5" = -6;
 "@MMK_R_KO_a_f.hlig" = 15;
 "@MMK_R_KO_b" = 28;
-"@MMK_R_KO_bracketright" = 25;
+"@MMK_R_KO_bracketright" = 55;
 "@MMK_R_KO_c" = 9;
 "@MMK_R_KO_colon" = -15;
 "@MMK_R_KO_d" = 4;
@@ -44496,7 +44655,7 @@ j = 100;
 "@MMK_R_KO_a.alt1" = -5;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_b" = 14;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 40;
 "@MMK_R_KO_c" = -3;
 "@MMK_R_KO_colon" = -15;
 "@MMK_R_KO_d" = -2;
@@ -44552,6 +44711,7 @@ j = 100;
 "@MMK_R_KO_zvisigothic" = -13;
 "@MMK_R_hyphen" = -35;
 "@MMK_R_is" = -20;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_longs" = {
 "@MMK_R_KO_A" = -14;
@@ -44751,7 +44911,7 @@ j = 100;
 "@MMK_R_KO_p_p.hlig" = -9;
 "@MMK_R_KO_parenright" = -16;
 "@MMK_R_KO_period" = -14;
-"@MMK_R_KO_quoteright" = -81;
+"@MMK_R_KO_quoteright" = -71;
 "@MMK_R_KO_r" = 0;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = -9;
@@ -44995,7 +45155,7 @@ j = 100;
 "@MMK_R_KO_e.alt3" = -78;
 "@MMK_R_KO_e_y.hlig" = -95;
 "@MMK_R_KO_exclam" = -41;
-"@MMK_R_KO_f" = 0;
+"@MMK_R_KO_f" = 30;
 "@MMK_R_KO_f.rl" = 18;
 "@MMK_R_KO_f_j" = 0;
 "@MMK_R_KO_g" = 0;
@@ -45004,9 +45164,10 @@ j = 100;
 "@MMK_R_KO_h_longshighstroke" = 48;
 "@MMK_R_KO_i" = -44;
 "@MMK_R_KO_i.alt" = -51;
+"@MMK_R_KO_j" = 20;
 "@MMK_R_KO_j.alt" = 0;
 "@MMK_R_KO_k_longshighstroke" = 50;
-"@MMK_R_KO_l" = 36;
+"@MMK_R_KO_l" = 66;
 "@MMK_R_KO_longs" = 37;
 "@MMK_R_KO_longs.alt2" = 0;
 "@MMK_R_KO_longs.alt4" = 103;
@@ -46018,7 +46179,7 @@ j = 100;
 "@MMK_R_KO_p_p.hlig" = -33;
 "@MMK_R_KO_parenright" = -13;
 "@MMK_R_KO_period" = -12;
-"@MMK_R_KO_quoteright" = -61;
+"@MMK_R_KO_quoteright" = -51;
 "@MMK_R_KO_r" = 6;
 "@MMK_R_KO_r.mecurl" = 9;
 "@MMK_R_KO_rrotunda" = -5;
@@ -46554,6 +46715,10 @@ ddotaccent.alt2 = 80;
 "@MMK_R_endash" = -40;
 "@MMK_R_hyphen" = -70;
 };
+"@MMK_L_gamma" = {
+"@MMK_R_alpha" = -40;
+"@MMK_R_parenright.alt" = -50;
+};
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -100;
 "@MMK_R_KO_T" = -150;
@@ -46587,6 +46752,18 @@ Eth = -30;
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_parenleft.alt" = {
+"@MMK_R_KO_O" = -30;
+"@MMK_R_KO_Sinsular" = 80;
+"@MMK_R_KO_f" = 180;
+"@MMK_R_KO_g" = 130;
+"@MMK_R_KO_j" = 170;
+"@MMK_R_KO_longs.alt2" = 20;
+"@MMK_R_KO_r" = 40;
+"@MMK_R_KO_uniA7D7" = 240;
+"@MMK_R_KO_y" = 90;
+"@MMK_R_beta" = 60;
 };
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
@@ -48511,6 +48688,7 @@ zero.zero = 45;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 12;
 "@MMK_R_KO_zvisigothic" = 34;
+"@MMK_R_parenright.alt" = 50;
 };
 "@MMK_L_KO_C" = {
 "@MMK_R_KO_A" = 9;
@@ -48586,6 +48764,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 35;
 "@MMK_R_KO_zvisigothic" = 32;
 "@MMK_R_hyphen" = -40;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_E" = {
 "@MMK_R_KO_A" = 25;
@@ -48662,6 +48841,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 69;
 "@MMK_R_KO_zvisigothic" = 44;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 80;
 };
 "@MMK_L_KO_G" = {
 "@MMK_R_KO_A" = 32;
@@ -48730,6 +48910,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 34;
 "@MMK_R_KO_zvisigothic" = 15;
 "@MMK_R_hyphen" = 23;
+"@MMK_R_parenright.alt" = 50;
 };
 "@MMK_L_KO_H" = {
 "@MMK_R_KO_B.alt1" = 0;
@@ -48803,6 +48984,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 81;
 "@MMK_R_KO_zvisigothic" = 26;
 "@MMK_R_hyphen" = -80;
+"@MMK_R_parenright.alt" = 120;
 };
 "@MMK_L_KO_H_r.hlig" = {
 "@MMK_R_KO_A" = 55;
@@ -48949,6 +49131,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 14;
 "@MMK_R_hyphen" = -110;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_L" = {
 "@MMK_R_KO_A" = 42;
@@ -49098,6 +49281,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 30;
 "@MMK_R_hyphen" = -80;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_O" = {
 "@MMK_R_KO_A" = -16;
@@ -49247,6 +49431,7 @@ zero.zero = 45;
 "@MMK_R_KO_y.alt" = 0;
 "@MMK_R_KO_zvisigothic" = 49;
 "@MMK_R_hyphen" = -12;
+"@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_Q" = {
 "@MMK_R_KO_A" = 0;
@@ -49323,6 +49508,7 @@ zero.zero = 45;
 "@MMK_R_KO_z" = 29;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 113;
+"@MMK_R_parenright.alt" = 120;
 };
 "@MMK_L_KO_Q_u" = {
 "@MMK_R_KO_A" = 34;
@@ -49546,6 +49732,7 @@ zero.zero = 45;
 "@MMK_R_KO_z.alt1" = 30;
 "@MMK_R_KO_zvisigothic" = 19;
 "@MMK_R_hyphen" = -21;
+"@MMK_R_parenright.alt" = 50;
 };
 "@MMK_L_KO_T" = {
 "@MMK_R_KO_A" = -64;
@@ -49630,6 +49817,7 @@ zero.zero = 45;
 "@MMK_R_odieresis" = -50;
 "@MMK_R_omacron" = -90;
 "@MMK_R_otilde" = -48;
+"@MMK_R_parenright.alt" = 110;
 acircumflexgrave = 51;
 adblgrave = -39;
 adieresismacron = -79;
@@ -49743,6 +49931,7 @@ ytilde = -9;
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 24;
 "@MMK_R_hyphen" = -70;
+"@MMK_R_parenright.alt" = 130;
 };
 "@MMK_L_KO_V" = {
 "@MMK_R_KO_A" = -101;
@@ -49820,6 +50009,7 @@ ytilde = -9;
 "@MMK_R_abreve" = -40;
 "@MMK_R_ebreve" = -20;
 "@MMK_R_hyphen" = -98;
+"@MMK_R_parenright.alt" = 140;
 acaron = -60;
 acircumflexgrave = 99;
 adblgrave = 0;
@@ -50000,6 +50190,7 @@ ydieresis = -25;
 "@MMK_R_KO_z.alt1" = 79;
 "@MMK_R_KO_zvisigothic" = 58;
 "@MMK_R_hyphen" = -80;
+"@MMK_R_parenright.alt" = 160;
 };
 "@MMK_L_KO_Y" = {
 "@MMK_R_KO_A" = -83;
@@ -50078,6 +50269,7 @@ ydieresis = -25;
 "@MMK_R_abreve" = -80;
 "@MMK_R_ebreve" = -55;
 "@MMK_R_hyphen" = -140;
+"@MMK_R_parenright.alt" = 130;
 acaron = -107;
 acircumflexgrave = 50;
 ecaron = -84;
@@ -50179,6 +50371,7 @@ ydieresis = -62;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = 104;
 "@MMK_R_KO_zvisigothic" = 62;
+"@MMK_R_parenright.alt" = 140;
 };
 "@MMK_L_KO_a" = {
 "@MMK_R_KO_A" = 47;
@@ -50591,15 +50784,16 @@ ydieresis = -62;
 "@MMK_R_KO_e.alt3" = -61;
 "@MMK_R_KO_e_y.hlig" = -48;
 "@MMK_R_KO_exclam" = -56;
-"@MMK_R_KO_f" = 27;
+"@MMK_R_KO_f" = 157;
 "@MMK_R_KO_f.rl" = 28;
 "@MMK_R_KO_f_j" = 35;
-"@MMK_R_KO_g" = 49;
+"@MMK_R_KO_g" = 119;
 "@MMK_R_KO_g.alt1" = -16;
 "@MMK_R_KO_guillemotleft" = -79;
 "@MMK_R_KO_h_longshighstroke" = 51;
 "@MMK_R_KO_i" = -72;
 "@MMK_R_KO_i.alt" = 0;
+"@MMK_R_KO_j" = 170;
 "@MMK_R_KO_j.alt" = 46;
 "@MMK_R_KO_k_longshighstroke" = 35;
 "@MMK_R_KO_l" = -48;
@@ -50941,7 +51135,7 @@ ydieresis = -62;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 30;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 1;
 "@MMK_R_KO_c" = -4;
 "@MMK_R_KO_colon" = -13;
 "@MMK_R_KO_d_e.hlig" = 0;
@@ -50972,7 +51166,7 @@ ydieresis = -62;
 "@MMK_R_KO_n.alt2" = 0;
 "@MMK_R_KO_o" = 0;
 "@MMK_R_KO_p_p.hlig" = 0;
-"@MMK_R_KO_parenright" = -14;
+"@MMK_R_KO_parenright" = -54;
 "@MMK_R_KO_period" = -4;
 "@MMK_R_KO_quoteright" = -29;
 "@MMK_R_KO_r" = 0;
@@ -50991,6 +51185,7 @@ ydieresis = -62;
 "@MMK_R_KO_z.alt1" = 19;
 "@MMK_R_KO_zvisigothic" = 3;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_d_e.hlig" = {
 "@MMK_R_KO_A" = -14;
@@ -51280,7 +51475,7 @@ ydieresis = -62;
 "@MMK_R_KO_a.alt5" = -34;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 125;
-"@MMK_R_KO_bracketright" = 136;
+"@MMK_R_KO_bracketright" = 187;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -3;
 "@MMK_R_KO_d" = -5;
@@ -51335,6 +51530,7 @@ ydieresis = -62;
 "@MMK_R_KO_z" = 15;
 "@MMK_R_KO_z.alt1" = 195;
 "@MMK_R_KO_zvisigothic" = 127;
+"@MMK_R_parenright.alt" = 230;
 };
 "@MMK_L_KO_f.alt" = {
 "@MMK_R_KO_A" = 0;
@@ -51558,6 +51754,7 @@ ydieresis = -62;
 "@MMK_R_KO_z.alt1" = -27;
 "@MMK_R_KO_zvisigothic" = 38;
 "@MMK_R_hyphen" = -57;
+"@MMK_R_parenright.alt" = 40;
 j = 99;
 };
 "@MMK_L_KO_g_d.hlig" = {
@@ -51977,7 +52174,7 @@ j = 99;
 "@MMK_R_KO_a.alt5" = -11;
 "@MMK_R_KO_a_f.hlig" = 0;
 "@MMK_R_KO_b" = 25;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 30;
 "@MMK_R_KO_c" = 0;
 "@MMK_R_KO_colon" = -18;
 "@MMK_R_KO_d" = 0;
@@ -52032,6 +52229,7 @@ j = 99;
 "@MMK_R_KO_z" = 0;
 "@MMK_R_KO_z.alt1" = -2;
 "@MMK_R_KO_zvisigothic" = 31;
+"@MMK_R_parenright.alt" = 110;
 };
 "@MMK_L_KO_k" = {
 "@MMK_R_KO_A" = 92;
@@ -52269,7 +52467,7 @@ j = 99;
 "@MMK_R_KO_a.alt1" = -4;
 "@MMK_R_KO_a.alt5" = 0;
 "@MMK_R_KO_b" = 24;
-"@MMK_R_KO_bracketright" = 0;
+"@MMK_R_KO_bracketright" = 35;
 "@MMK_R_KO_c" = -8;
 "@MMK_R_KO_colon" = -17;
 "@MMK_R_KO_d" = 0;
@@ -52324,6 +52522,7 @@ j = 99;
 "@MMK_R_KO_z.alt1" = 15;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_hyphen" = -30;
+"@MMK_R_parenright.alt" = 70;
 };
 "@MMK_L_KO_longs" = {
 "@MMK_R_KO_A" = -9;
@@ -52523,7 +52722,7 @@ j = 99;
 "@MMK_R_KO_p_p.hlig" = 2;
 "@MMK_R_KO_parenright" = -30;
 "@MMK_R_KO_period" = -9;
-"@MMK_R_KO_quoteright" = -75;
+"@MMK_R_KO_quoteright" = -65;
 "@MMK_R_KO_r" = 0;
 "@MMK_R_KO_r.mecurl" = 0;
 "@MMK_R_KO_rrotunda" = -8;
@@ -52765,7 +52964,7 @@ j = 99;
 "@MMK_R_KO_e.alt3" = -94;
 "@MMK_R_KO_e_y.hlig" = -110;
 "@MMK_R_KO_exclam" = -48;
-"@MMK_R_KO_f" = 0;
+"@MMK_R_KO_f" = 70;
 "@MMK_R_KO_f.rl" = 0;
 "@MMK_R_KO_f_j" = 0;
 "@MMK_R_KO_g" = -9;
@@ -52774,9 +52973,10 @@ j = 99;
 "@MMK_R_KO_h_longshighstroke" = 37;
 "@MMK_R_KO_i" = -60;
 "@MMK_R_KO_i.alt" = -38;
+"@MMK_R_KO_j" = 80;
 "@MMK_R_KO_j.alt" = -7;
 "@MMK_R_KO_k_longshighstroke" = 32;
-"@MMK_R_KO_l" = 0;
+"@MMK_R_KO_l" = 70;
 "@MMK_R_KO_longs" = 0;
 "@MMK_R_KO_longs.alt2" = 0;
 "@MMK_R_KO_longs.alt4" = 104;
@@ -53786,7 +53986,7 @@ j = 99;
 "@MMK_R_KO_p_p.hlig" = -15;
 "@MMK_R_KO_parenright" = -28;
 "@MMK_R_KO_period" = -7;
-"@MMK_R_KO_quoteright" = -66;
+"@MMK_R_KO_quoteright" = -56;
 "@MMK_R_KO_r" = 8;
 "@MMK_R_KO_r.mecurl" = 5;
 "@MMK_R_KO_rrotunda" = -3;
@@ -54322,6 +54522,10 @@ ddotaccent.alt2 = 40;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_gamma" = {
+"@MMK_R_alpha" = -40;
+"@MMK_R_parenright.alt" = -30;
+};
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_A" = -52;
 "@MMK_R_KO_H" = -70;
@@ -54356,6 +54560,18 @@ Eth = -30;
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
 "@MMK_R_hyphen" = -30;
+};
+"@MMK_L_parenleft.alt" = {
+"@MMK_R_KO_O" = -30;
+"@MMK_R_KO_Sinsular" = 70;
+"@MMK_R_KO_f" = 190;
+"@MMK_R_KO_g" = 120;
+"@MMK_R_KO_j" = 190;
+"@MMK_R_KO_longs.alt2" = 30;
+"@MMK_R_KO_r" = 30;
+"@MMK_R_KO_uniA7D7" = 240;
+"@MMK_R_KO_y" = 80;
+"@MMK_R_beta" = 60;
 };
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
@@ -56182,5 +56398,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 67;
+versionMinor = 68;
 }

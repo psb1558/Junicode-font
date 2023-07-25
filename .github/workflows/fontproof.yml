@@ -1,0 +1,26 @@
+name: FontProof
+
+on: [ push, pull_request ]
+
+jobs:
+
+  fontproof:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: FontProof (demo)
+        uses: sile-typesetter/fontproof@v2
+        with:
+          args: docs/ProofsDemo.sil -o docs/ProofsDemo.pdf
+      - name: FontProof (default full template)
+        uses: sile-typesetter/fontproof@v2
+        with:
+          args: --filename=fonts/otf/JunicodeTwoBeta-Regular.otf -t full -o docs/FontProofFull.pdf
+      - name: Upload a proof sheet artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: FontProof
+          path: |
+            docs/ProofsDemo.pdf
+            docs/FontProofFull.pdf

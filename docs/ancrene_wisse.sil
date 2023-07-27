@@ -1,0 +1,66 @@
+\begin[class=fontproof]{document}
+%\setTestFont[filename=fonts/ttf/JunicodeTwoBeta-Italic.ttf]
+\setTestFont[filename=fonts/ttf/JunicodeTwoBeta-Regular.ttf]
+
+\section{Demo Proof}
+% Why is this command producing an insular s (cv38=1) instead of a round s (cv38 off)?
+% (It appears that if a cvNN is on (with any index), once can’t simply change it or
+% cancel it. So how do you turn it off or change to another index?)
+\define[command=rounds]{%
+\font[features="-cv38"]{s}%
+}
+% Why is this command producing an insular s instead of longs with stroke (cv38=6)?
+\define[command=longsstroke]{%
+\font[features="+cv38=6"]{s}%
+}
+\define[command=enl]{%
+\font[features="+ss06"]{\process}%
+}
+\define[command=labbrev]{%
+\font[features="+cv24=4"]{l}%
+}
+\define[command=muncial]{%
+\font[features="+cv26=2"]{m}%
+}
+\font[features="+cv38=3,+cv69=2,+ss16"]
+
+% I can't figure out how to supply an index for a character variant feature
+% using add-font-feature.
+
+%\use[module=packages.features]
+%\add-font-feature[CharacterVariant="38=3"]
+
+% Note: longs produced by cv38=3 does not ligature properly with following i.
+% This probably has to do with the order of lookups. Either figure out how to
+% reorder features or find a workaround.
+
+% Note: in magisterii, the er abbreviation is poorly positioned. Can anything
+% be done?
+
+% Note: in italic face, ss16 turns all r to rrotuna. It's not contexual as it should be.
+
+Lauerd seið godes spuse to hire deoreƿurðe spus. þe rihte luuieð þe. Þeo
+beoð rihte þe luuieð efter riƿle. \enl{A}nt ȝe mine leoue sustren habbeð moni dei icrauet
+on me efter riƿle. {\muncial}onie cunne riƿlen beoð. ah tƿa beoð bimong alle. ꝥ ich chulle
+speoken of þurh oƿer bone ƿið gode{\rounds} grace. \enl{þ}e an riƿleð þe heorte ⁊ makeð
+efne ⁊ smeðe. ƿiðute cnost ⁊ dolc of ƿoh inƿit ⁊ of ƿreiȝende þe segge her
+þu sunegest. oþer þis nis naƿt ibet ȝet ase ƿel a{\rounds} hit ahte. \enl{Þ}eos riƿle is eauer
+inƿið ⁊ rihteð þe heorte. Et hec ȝ̄ caritas quam describit ap{\labbrev}{\rounds}. de corde
+puro et consciencia bona et fide non ficta. \enl{þ}eos riƿle is chearite of schir heorte
+⁊ cleane inƿit ⁊ treoƿe bileaue. Pretende inquit p{\longsstroke}. mi͞am
+tuā scientibꝫ te ꝑ fidem nō fictā. et iusticiam tuam .i. uite
+rectitudinem hiis qͥ recto sunt corde. Qui .s. om̄es uoluntates suas
+dirigunt ad regulam diuine uoluntatis. Isti dicunt᷑ boni anto[no]masice.
+p{\longsstroke}. Benefac dn̄e bonis & rectis corde. istis dicitur ut glorient᷑
+testimonio uidel; bone conscientie. Gloriamini omnes recti corde. quos sci{\labbrev}.
+rectificauit regula illa supprema rectificans omnia. de qua Augustꝰ. \enl{n}ichil
+petendum p͛ter reg{\labbrev}am magist͛ii. Et Ap{\labbrev}{\rounds}. Om̄s in eadem regula
+ꝑmaneamꝰ. \enl{þ}e oþer riƿle is al ƿiðuten ⁊ riƿleð þe licome ⁊ licomliche
+deden. þe teacheð al hu me schal beoren him ƿiðuten. hu eoten. drinken. ƿerien.
+{\rounds}ingen. {\rounds}lepen. ƿakien. Et hec ȝ̄ exercitio corporis que iuxta ap{\labbrev}m modicum
+ualet. ⁊ est qᷓsi regula recti mechanici qđ geometri[c]o recto cōtinet᷑.
+\enl{a}nt þeos riƿle nis naƿt bute forte serui þe oþer. \enl{þ}e oþer is as leafdi. þeos as hire
+þuften. for al ꝥ me eauer deð of þe oðer ƿiðuten⹎ nis bute forte riƿlin þe heorte
+ƿiðinnen.
+
+\end{document}

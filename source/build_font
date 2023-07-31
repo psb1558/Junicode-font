@@ -41,7 +41,7 @@ xslfile="fix_wdth_axis.xsl"
 
 fontstyle="roman"
 
-fontbasename="JunicodeTwoBeta"
+fontbasename="Junicode"
 
 while getopts "nusird:o:b:" options; do
   case "${options}" in
@@ -111,14 +111,14 @@ then
   tmp_d=$(mktemp -d)
   tmp_f=$tmp_d/$glyphsfile
   echo "Saving temporary file ${tmp_f}."
-  sed -e 's/familyName *= *"Junicode *Two *Beta";/familyName = "Junicode Two Beta VF";/' $glyphsfile > $tmp_f
+  sed -e 's/familyName *= *Junicode;/familyName = "Junicode VF";/' $glyphsfile > $tmp_f
   glyphsfile=$tmp_f
 fi
 
 if [ "$generateufo" = true ]
 then
   echo "Generating UFOs and designspace file from Glyphs source."
-  glyphs2ufo --no-preserve-glyphsapp-metadata --propagate-anchors --generate-GDEF \
+  glyphs2ufo --propagate-anchors --no-preserve-glyphsapp-metadata --generate-GDEF \
     --output-dir $BUILDDIR --designspace-path ${BUILDDIR}/${glyphsfilename}.designspace \
     --write-public-skip-export-glyphs $glyphsfile
   if [ $? -ne 0 ]
@@ -183,7 +183,7 @@ then
   if [ $hinting == true ]
   then
     mkdir hinted
-    for f in Jun*.otf; do psautohint -o hinted/$f $f; done
+    for f in Jun*.otf; do psautohint -x `cat ${SOURCEDIR}no_hint_list` -o hinted/$f $f; done
     mv hinted/Jun*.otf ${DESTDIR}
   else
     mv Jun*.otf ${DESTDIR}
@@ -194,10 +194,13 @@ fi
 if [ $outputtype == "variable" ]
 then
   python ${SOURCEDIR}mkstat.py variable_ttf/${glyphsfilename}-fixed-VF.ttf ${fontbasename}.ttf
+  # cp variable_ttf/${glyphsfilename}-fixed-VF.ttf ${fontbasename}.ttf
   python ${SOURCEDIR}code_pages.py ${fontbasename}.ttf
   if [ $hinting == true ]
   then
     echo "Compiling hints..."
+    y_file=${SOURCEDIR}xgf/${fontbasename}.yaml
+    echo $y_file
     xgridfit -q -i ${fontbasename}.ttf -o ${fontbasename}-hinted.ttf ${SOURCEDIR}xgf/${fontbasename}.yaml
     if [ $? -eq 0 ]
     then

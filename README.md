@@ -31,14 +31,13 @@ documents that use the OpenType features of Junicode 1 (aside from basics like
 kerning and standard ligatures) may not be displayed properly when changed over
 to Junicode 2.
 
-Junicode 1 is still (as of June 2023) the current stable version of the
+Junicode 1 is still (as of July 2023) the current stable version of the
 font. However, no new features will be added to Junicode 1, though bugs will be
 fixed when necessary.
 
-Beginning with version 1.060, the glyph sets of the roman and italic fonts are
-the same (leaving aside face-specific features like italic swashes and certain
-discretionary ligatures). After a period of testing, the version number will
-skip to 2.0 and “Beta” will be removed from the font’s name.
+The development version of this font was formerly named **JunicodeTwoBeta**; it
+is now simply **Junicode**, and the version number is `2.000betaN`. The
+`betaN` suffix will be removed when the font is considered stable.
 
 # Resources
 
@@ -62,9 +61,9 @@ version 3.10.4 or higher and these Open Source apps:
 
 - fontmake (Python app -- install with pip)
 - glyphspkg (Python app -- install with pip)
-- psautohint (for `.otf` fonts -- Python app -- install with pip)
-- xgridfit (for `.ttf` fonts -- Python app -- install with pip)
-- [ttfautohint](http://freetype.org/ttfautohint/) (for static `.ttf` fonts)
+- psautohint (for hinting `.otf` fonts -- Python app -- install with pip)
+- xgridfit (for hinting `.ttf` fonts -- Python app -- install with pip)
+- [ttfautohint](http://freetype.org/ttfautohint/) (for hinting static `.ttf` fonts)
 - Various utilities that should already be installed on Mac OS and Linux systems: the Bash shell, xsltproc, sed, mktemp, basename.
 
 The Bash script `build_font` must be run once for roman fonts and again for italic.

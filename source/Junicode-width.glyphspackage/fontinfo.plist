@@ -303,8 +303,8 @@ value = (
 );
 }
 );
-date = "2023-07-26 17:22:22 +0000";
-familyName = "Junicode Two Beta";
+date = "2023-07-26 22:51:18 +0000";
+familyName = Junicode;
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -845,6 +845,16 @@ lookup Oddball_ligs {
   sub f tildeoverlaycomb f tildeoverlaycomb by f_tildeoverlaycomb_f_tildeoverlaycomb ;
   sub l tildeoverlaycomb l tildeoverlaycomb by l_tildeoverlaycomb_l_tildeoverlaycomb ;
 } Oddball_ligs ;
+
+lookup viet_mark_combos {
+  sub brevecomb gravecomb by brevegravecomb ;
+  sub brevecomb acutecomb by breveacutecomb ;
+  sub brevecomb hookabovecomb by brevehookcomb ;
+  sub circumflexcomb gravecomb by circumflexgravecomb ;
+  sub circumflexcomb acutecomb by circumflexacutecomb ;
+  sub circumflexcomb hookabovecomb by circumflexhookabovecomb ;
+  sub circumflexcomb tildecomb by circumflextildecomb ;
+} viet_mark_combos ;
 
 lookup ogonekdot {
 # 4-part
@@ -2059,8 +2069,14 @@ code = "  sub dotacutecomb by dotacutecomb.case ;
   sub acutecomb by acutecomb.case ;
   sub hungarumlautcomb by hungarumlautcomb.case ;
   sub circumflexcomb by circumflexcomb.case ;
+  sub circumflexhookabovecomb by circumflexhookcomb.case ;
+  sub circumflexacutecomb  by circumflexacutecomb.case ;
+  sub circumflexgravecomb  by circumflexgravecomb.case ;
   sub caroncomb by caroncomb.case ;
   sub brevecomb by brevecomb.case ;
+  sub brevegravecomb by brevegravecomb.case ;
+  sub breveacutecomb by breveacutecomb.case ;
+  sub brevehookcomb by brevehookcomb.case ;
   sub tildecomb by tildecomb.case ;
   sub macroncomb by macroncomb.case ;
   sub hookabovecomb by hookabovecomb.case ;
@@ -2073,9 +2089,6 @@ code = "  sub dotacutecomb by dotacutecomb.case ;
   sub strokeshortcomb by strokeshortcomb.case ;
   sub zigzagabovecomb by zigzagabovecomb.case ;
   sub ogonekabovecomb by ogonekabovecomb.case ;
-  sub circumflexacutecomb by circumflexacutecomb.case ;
-  sub circumflexgravecomb by circumflexgravecomb.case ;
-  sub circumflexhookabovecomb by circumflexhookcomb.case ;
 #  sub circumflexlowcomb by circumflexlowcomb.case ;
 #  sub dieresisacutecomb by dieresisacutecomb.case ;
   sub zigzagabovecomb.alt1 by zigzagabovecomb.alt1.case ;
@@ -5327,6 +5340,7 @@ sub ae by ae.pcap;
 sub aeacute by aeacute.pcap;
 sub aemacron by aemacron.pcap;
 sub b by b.pcap;
+sub b.lf by b.pcap ;
 sub bdotaccent by bdotaccent.pcap;
 sub c by c.pcap;
 sub cacute by cacute.pcap;
@@ -5369,6 +5383,15 @@ sub emacronacute by emacronacute.pcap;
 sub emacrongrave by emacrongrave.pcap;
 sub eogonek by eogonek.pcap;
 sub f by f.pcap;
+sub f.lf by f.pcap;
+sub f.lfrij by f.pcap;
+sub f.lfrl by f.pcap;
+sub f.lfrtall by f.pcap;
+sub f.lf.alt by f.pcap;
+sub f.rf by f.pcap ;
+sub f.rij by f.pcap ;
+sub f.rl by f.pcap ;
+sub f.rtall by f.pcap ;
 sub fdotaccent by fdotaccent.pcap;
 sub g by g.pcap;
 sub gbreve by gbreve.pcap;
@@ -5378,6 +5401,7 @@ sub gcommaaccent by gcommaaccent.pcap;
 sub gdotaccent by gdotaccent.pcap;
 sub gmacron by gmacron.pcap;
 sub h by h.pcap;
+sub h.lf by h.pcap ;
 sub hbrevebelow by hbrevebelow.pcap;
 sub hcaron by hcaron.pcap;
 sub hcedilla by hcedilla.pcap;
@@ -5387,6 +5411,7 @@ sub hdotaccent by hdotaccent.pcap;
 sub hdotbelow by hdotbelow.pcap;
 sub hmacronbelow by hmacronbelow.pcap;
 sub i by i.pcap;
+sub i.lf by i.pcap;
 sub iacute by iacute.pcap;
 sub ibreve by ibreve.pcap;
 sub icaron by icaron.pcap;
@@ -5405,14 +5430,17 @@ sub istroke by istroke.pcap;
 sub itilde by itilde.pcap;
 sub itildebelow by itildebelow.pcap;
 sub j by j.pcap;
+sub j.lf by j.pcap ;
 sub jcircumflex by jcircumflex.pcap;
 sub k by k.pcap;
+sub k.lf by k.pcap ;
 sub kacute by kacute.pcap;
 sub kcaron by kcaron.pcap;
 sub kcommaaccent by kcommaaccent.pcap;
 sub kdotbelow by kdotbelow.pcap;
 sub kmacronbelow by kmacronbelow.pcap;
 sub l by l.pcap;
+sub l.lf by l.pcap ;
 sub lacute by lacute.pcap;
 sub lcaron by lcaron.pcap;
 sub lcircumflexbelow by lcircumflexbelow.pcap;
@@ -5423,6 +5451,7 @@ sub ldotbelowmacron by ldotbelowmacron.pcap;
 sub lhighstroke by lhighstroke.pcap;
 sub lmacronbelow by lmacronbelow.pcap;
 sub lslash by lslash.pcap;
+sub lslash.lf by lslash.pcap ;
 sub m by m.pcap;
 sub macute by macute.pcap;
 sub mdotaccent by mdotaccent.pcap;
@@ -5500,6 +5529,8 @@ sub tcircumflexbelow by tcircumflexbelow.pcap;
 sub tcommaaccent by tcommaaccent.pcap;
 sub tdotaccent by tdotaccent.pcap;
 sub tdotbelow by tdotbelow.pcap;
+sub thorn.lf by thorn.pcap ;
+sub thorn.loclENG.lf by thorn.loclENG.pcap ;
 sub u by u.pcap;
 sub uacute by uacute.pcap;
 sub ubreve by ubreve.pcap;
@@ -6096,9 +6127,12 @@ sub commareversedabovecomb_perispomenicomb by commareversedabovecomb_perispomeni
 sub perispomenicomb by perispomenicomb.sc;
 sub dialytikatonoscomb by dialytikatonoscomb.sc;
 sub dieresiscomb_perispomenicomb.loclELL by dieresiscomb_perispomenicomb.loclELL.sc;
+sub breveacutecomb by breveacutecomb.sc;
+sub brevegravecomb by brevegravecomb.sc;
 sub circumflexacutecomb by circumflexacutecomb.sc;
 sub circumflexgravecomb by circumflexgravecomb.sc;
 sub circumflexhookabovecomb by circumflexhookabovecomb.sc;
+sub circumflextildecomb by circumflextildecomb.sc;
 sub dieresiscomb by dieresiscomb.sc;
 sub dotaccentcomb by dotaccentcomb.sc;
 sub gravecomb by gravecomb.sc;
@@ -6129,6 +6163,9 @@ sub gravecomb.loclELL by gravecomb.loclELL.sc;
 sub acutecomb.loclELL by acutecomb.loclELL.sc;
 sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.sc;
 sub caron by caron.sc;
+sub brevehookcomb by brevehookcomb.sc;
+sub tildeacutecomb by tildeacutecomb.sc;
+sub tildedieresiscomb by tildedieresiscomb.sc;
 ";
 tag = c2sc;
 },
@@ -6755,8 +6792,14 @@ sub gravecomb by gravecomb.sc;
 sub acutecomb by acutecomb.sc;
 sub hungarumlautcomb by hungarumlautcomb.sc;
 sub circumflexcomb by circumflexcomb.sc;
+  sub circumflexhookabovecomb by circumflexhookabovecomb.sc ;
+  sub circumflexacutecomb  by circumflexacutecomb.sc ;
+  sub circumflexgravecomb  by circumflexgravecomb.sc ;
 sub caroncomb by caroncomb.sc;
 sub brevecomb by brevecomb.sc;
+  sub brevegravecomb by brevegravecomb.sc ;
+  sub breveacutecomb by breveacutecomb.sc ;
+  sub brevehookcomb by brevehookcomb.sc ;
 sub ringcomb by ringcomb.sc;
 sub tildecomb by tildecomb.sc;
 sub macroncomb by macroncomb.sc;
@@ -14555,12 +14598,12 @@ Rrotunda = -49;
 };
 angleleft = {
 "@MMK_R_KO_Sinsular" = 100;
+"@MMK_R_KO_f" = 0;
 "@MMK_R_KO_j" = 90;
 J = 70;
+j.sc = 50;
 jdotlessstrokehook = 90;
 nhookleft = 90;
-"@MMK_R_KO_f" = 0;
-j.sc = 50;
 };
 ao = {
 l.alt2 = 5;
@@ -15049,12 +15092,12 @@ q.enlarged = {
 uniA7D7 = -12;
 };
 q.sc = {
-j.sc = 119;
-uniA7C2 = -90;
 "@MMK_R_KO_parenright" = -38;
-parenright = 52;
 "@MMK_R_angleright" = 0;
 angleright = 60;
+j.sc = 119;
+parenright = 52;
+uniA7C2 = -90;
 };
 qdotbelow = {
 xlongleftleg = 205;
@@ -21592,12 +21635,12 @@ Rrotunda = -59;
 };
 angleleft = {
 "@MMK_R_KO_Sinsular" = 100;
+"@MMK_R_KO_f" = 0;
 "@MMK_R_KO_j" = 110;
 "@MMK_R_KO_n" = 100;
 J = 90;
-jdotlessstrokehook = 90;
-"@MMK_R_KO_f" = 0;
 j.sc = 50;
+jdotlessstrokehook = 90;
 };
 ao = {
 l.alt2 = -4;
@@ -22250,12 +22293,12 @@ q.enlarged = {
 uniA7D7 = -28;
 };
 q.sc = {
-j.sc = 97;
-uniA7C2 = -99;
 "@MMK_R_KO_parenright" = -50;
-parenright = 70;
 "@MMK_R_angleright" = 0;
 angleright = 50;
+j.sc = 97;
+parenright = 70;
+uniA7C2 = -99;
 };
 qdotbelow = {
 xlongleftleg = 225;
@@ -28625,12 +28668,12 @@ Rrotunda = -66;
 };
 angleleft = {
 "@MMK_R_KO_Sinsular" = 70;
+"@MMK_R_KO_f" = 0;
 "@MMK_R_KO_j" = 70;
 "@MMK_R_KO_n" = 70;
 J = 70;
-jdotlessstrokehook = 80;
-"@MMK_R_KO_f" = 0;
 j.sc = 50;
+jdotlessstrokehook = 80;
 };
 ao = {
 l.alt2 = 6;
@@ -29223,12 +29266,12 @@ q.enlarged = {
 uniA7D7 = -16;
 };
 q.sc = {
-j.sc = 123;
-uniA7C2 = -89;
 "@MMK_R_KO_parenright" = -45;
-parenright = 55;
 "@MMK_R_angleright" = 0;
 angleright = 50;
+j.sc = 123;
+parenright = 55;
+uniA7C2 = -89;
 };
 qdotbelow = {
 xlongleftleg = 178;
@@ -35765,12 +35808,12 @@ Rrotunda = -83;
 };
 angleleft = {
 "@MMK_R_KO_Sinsular" = 60;
+"@MMK_R_KO_f" = 0;
 "@MMK_R_KO_j" = 70;
 "@MMK_R_KO_n" = 70;
 J = 80;
-jdotlessstrokehook = 80;
-"@MMK_R_KO_f" = 0;
 j.sc = 50;
+jdotlessstrokehook = 80;
 };
 ao = {
 l.alt2 = -7;
@@ -36387,12 +36430,12 @@ q.enlarged = {
 uniA7D7 = -5;
 };
 q.sc = {
-j.sc = 103;
-uniA7C2 = -79;
 "@MMK_R_KO_parenright" = -30;
-parenright = 50;
 "@MMK_R_angleright" = 0;
 angleright = 50;
+j.sc = 103;
+parenright = 50;
+uniA7C2 = -79;
 };
 qdotbelow = {
 xlongleftleg = 186;
@@ -43293,12 +43336,12 @@ Rrotunda = -65;
 };
 angleleft = {
 "@MMK_R_KO_Sinsular" = 100;
+"@MMK_R_KO_f" = 0;
 "@MMK_R_KO_j" = 90;
 "@MMK_R_KO_n" = 90;
 J = 70;
-jdotlessstrokehook = 80;
-"@MMK_R_KO_f" = 0;
 j.sc = 50;
+jdotlessstrokehook = 80;
 };
 ao = {
 l.alt2 = 13;
@@ -43963,12 +44006,12 @@ q.enlarged = {
 uniA7D7 = -31;
 };
 q.sc = {
-j.sc = 126;
-uniA7C2 = -96;
 "@MMK_R_KO_parenright" = -12;
-parenright = 58;
 "@MMK_R_angleright" = 0;
 angleright = 50;
+j.sc = 126;
+parenright = 58;
+uniA7C2 = -96;
 };
 qdotbelow = {
 xlongleftleg = 230;
@@ -50030,11 +50073,11 @@ Rrotunda = -49;
 angleleft = {
 "@MMK_R_KO_Sinsular" = 100;
 "@MMK_R_KO_U" = 70;
+"@MMK_R_KO_f" = 40;
 "@MMK_R_KO_j" = 110;
 "@MMK_R_KO_n" = 90;
-jdotlessstrokehook = 90;
-"@MMK_R_KO_f" = 40;
 j.sc = 50;
+jdotlessstrokehook = 90;
 };
 ao = {
 l.alt2 = 5;
@@ -50530,12 +50573,12 @@ q.enlarged = {
 uniA7D7 = -12;
 };
 q.sc = {
-j.sc = 119;
-uniA7C2 = -90;
 "@MMK_R_KO_parenright" = -38;
-parenright = 52;
 "@MMK_R_angleright" = 0;
 angleright = 60;
+j.sc = 119;
+parenright = 52;
+uniA7C2 = -90;
 };
 qdotbelow = {
 xlongleftleg = 205;
@@ -50961,6 +51004,10 @@ value = "http://scripts.sil.org/OFL";
 {
 key = vendorID;
 value = psbk;
+},
+{
+key = versionString;
+value = "Version 2.000beta1";
 }
 );
 stems = (
@@ -51010,6 +51057,6 @@ type = unicode;
 );
 };
 };
-versionMajor = 1;
-versionMinor = 69;
+versionMajor = 2;
+versionMinor = 0;
 }

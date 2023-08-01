@@ -146,6 +146,10 @@ zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf
 zero.osf one.osf two.osf three.osf four.osf five.osf six.osf seven.osf eight.osf nine.osf
 zero.tosf.zero";
 name = all_figures;
+},
+{
+code = "b o p eth eth.loclENG thorn thorn.loclENG wynn dinsular dinsular.alt b.sc o.sc p.sc eth.sc thorn.sc thorn.loclENG.sc uniE8D7";
+name = RoundOnRight;
 }
 );
 customParameters = (
@@ -262,7 +266,7 @@ value = (
 );
 }
 );
-date = "2023-07-26 17:22:12 +0000";
+date = "2023-08-01 13:12:22 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -363,12 +367,6 @@ lookup sub_low_diacritics {
   sub vcomb by vcomb.low ;
   sub zcomb by zcomb.low ;
 } sub_low_diacritics ;
-
-lookup ethdiacritic {
-  sub eth' @lowdiacritics by eth.withdiacritic ;
-  sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
-  sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
-} ethdiacritic ;
 
 # lookup shortstroke {
 #   sub [ b h k thorn thorn.loclENG uniF208 uniF221 uniF23A uniF209 h.alt k.alt1 k.alt2 k.alt3 ] strokeshortcomb.wide' by strokeshortcomb.wideright ;
@@ -529,24 +527,13 @@ lookup calt_j_alt {
   sub @g_and_ogonek @jay' by [ j.alt ] ;
 } calt_j_alt;
 
-# lookup alt_eth {
-#   sub @lc_with_diacritics_above eth.loclENG' by eth.loclENG.alt;
-# } alt_eth;
-
-# lookup calt_rrotunda {
-#   lookupflag UseMarkFilteringSet @combining_above;
-#   ignore sub @RoundOnRight [rrotunda.alt rrotunda.alt.sc]' ;
-#   ignore sub @RoundOnRight @combining_above [rrotunda.alt rrotunda.alt.sc]' ;
-#   sub [rrotunda.alt rrotunda.alt.sc]' by [r r.sc] ;
-# } calt_rrotunda;
+#lookup alt_eth {
+#  sub @lc_with_diacritics_above eth.loclENG' by eth.loclENG.alt;
+#} alt_eth;
 
 lookup calt_insular_st {
   sub sinsular' tinsular by longs;
 } calt_insular_st;
-
-lookup f_alt {
-  sub [ f longs ]' @lc_with_diacritics_above by [ f.alt longs.alt ];
-} f_alt;
 
 lookup calt_zzalt {
   # Allow zero or one mark between the base and the zigzag
@@ -1538,7 +1525,6 @@ lookup tagligs {
  sub h d.tag e.tag by h.alt ;
  sub h a.tag u.tag by h.alt2 ;
  sub h e.tag n.tag by h.enlarged ;
-# sub l s.tag h.tag by lhighstroke.alt ;
  sub I d.tag a.tag by Idotaccent ;
  sub I d.tag e.tag by Longaepigraphici ;
  sub I e.tag n.tag by I.enlarged ;
@@ -6844,7 +6830,7 @@ code = "    sub A by Adotbelow ;
     sub u.sc by udotbelow.sc ;
     sub v.sc by vdotbelow.sc ;
     sub w.sc by wdotbelow.sc ;
-#    sub x.sc by xdotsub.sc ;
+    sub x.sc by xdotsub.sc ;
     sub y.sc by ydotbelow.sc ;
     sub z.sc by zdotbelow.sc ;
     sub ohorn.sc by ohorndotbelow.sc ;
@@ -6926,22 +6912,38 @@ code = "lookup shortstroke {
 } shortstroke ;
 
 lookup widemacron {
-  sub [ m w ] [ macroncomb tildecomb macroncomb.alt3 ]' by [ macroncomb.wide tildecomb.wide macroncomb.alt3.wide ] ;
+  sub [ m w ae ae.square ] [ macroncomb tildecomb macroncomb.alt3 ]' by [ macroncomb.wide tildecomb.wide macroncomb.alt3.wide ] ;
   sub [ M W AE ] [ macroncomb.case tildecomb.case macroncomb.alt3.case ]' by
                  [ macroncomb.wide.case tildecomb.wide.case macroncomb.alt3.wide.case ] ;
 } widemacron ;
 
-# lookup zigzag {
-  lookup ethdiacritic ;
-# lookup shortstroke {
-  lookup f_alt ; # lookup is local in rom
+lookup f_alt {
+  sub [ f longs ]' @lc_with_diacritics_above by [ f.alt longs.alt ];
+} f_alt;
+
+lookup ethdiacritic {
+  sub eth' @lowdiacritics by eth.withdiacritic ;
+  sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
+  sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
+} ethdiacritic ;
+
   lookup calt_fligs_1 ;
   lookup calt_fligs_2 ;
   lookup calt_j_alt ;
-# lookup alt_eth {
-# lookup calt_rrotunda {
+
   lookup calt_insular_st ;
   lookup calt_zzalt ;
+
+lookup alt_eth {
+  sub @lc_with_diacritics_above eth.loclENG' by eth.loclENG.alt;
+} alt_eth;
+
+lookup calt_rrotunda {
+  lookupflag UseMarkFilteringSet @combining_above;
+  ignore sub @RoundOnRight [rrotunda.alt rrotunda.alt.sc]' ;
+  ignore sub @RoundOnRight @combining_above [rrotunda.alt rrotunda.alt.sc]' ;
+  sub [rrotunda.alt rrotunda.alt.sc]' by [r r.sc] ;
+} calt_rrotunda;
 
 lookup calt_is {
   sub f is' by is.lf ;
@@ -7225,11 +7227,14 @@ tag = ss17;
 },
 {
 code = "lookupflag IgnoreMarks;
+sub longs i z.alt1 by longs_i_z.alt1 ;
+sub longs.rij i.llongs z.alt1 by longs_i_z.alt1 ;
 sub f f t by f_f_t ;
 # sub f f udieresis by f_f_udieresis ;
 # sub f f i by uniFB03 ;
 # sub f f l by uniFB04 ;
 sub longs longs t by longs_longs_t ;
+sub longs.rlongs longs.llongs t by longs_longs_t ;
 # sub Q u by Q_u ;
 # sub Q u.sc by Q_u.sc ;
 # sub Q u.pcap by Q_u.pcap ;
@@ -9064,7 +9069,7 @@ master01 = 0.33333;
 };
 isItalic = 1;
 linkStyle = Semibold;
-name = "Semibold Italic";
+name = "Smbold Italic";
 weightClass = 600;
 },
 {
@@ -9097,7 +9102,7 @@ master01 = -0.33333;
 };
 isItalic = 1;
 linkStyle = "Condensed Light";
-name = "Condensed Light Italic";
+name = "Cond Light Italic";
 weightClass = 300;
 widthClass = 3;
 },
@@ -9112,7 +9117,7 @@ instanceInterpolations = {
 };
 isItalic = 1;
 linkStyle = Condensed;
-name = "Condensed Italic";
+name = "Cond Italic";
 widthClass = 3;
 },
 {
@@ -9129,7 +9134,7 @@ master01 = -0.16667;
 };
 isItalic = 1;
 linkStyle = "Condensed Medium";
-name = "Condensed Medium Italic";
+name = "Cond Medium Italic";
 weightClass = 500;
 widthClass = 3;
 },
@@ -9147,7 +9152,7 @@ master01 = -0.33333;
 };
 isItalic = 1;
 linkStyle = "Condensed Semibold";
-name = "Condensed Semibold Italic";
+name = "Cond Smbold Italic";
 weightClass = 600;
 widthClass = 3;
 },
@@ -9185,7 +9190,7 @@ master01 = 0.05556;
 };
 isItalic = 1;
 linkStyle = "SemiCondensed Light";
-name = "SemiCondensed Light Italic";
+name = "SmCond Light Italic";
 weightClass = 300;
 widthClass = 4;
 },
@@ -9201,7 +9206,7 @@ master01 = 0.5;
 };
 isItalic = 1;
 linkStyle = SemiCondensed;
-name = "SemiCondensed Italic";
+name = "SmCond Italic";
 widthClass = 4;
 },
 {
@@ -9217,7 +9222,7 @@ master01 = 0.16667;
 };
 isItalic = 1;
 linkStyle = "SemiCondensed Medium";
-name = "SemiCondensed Medium Italic";
+name = "SmCond Medium Italic";
 weightClass = 500;
 widthClass = 4;
 },
@@ -9236,7 +9241,7 @@ master01 = -0.05556;
 };
 isItalic = 1;
 linkStyle = "SemiCondensed Semibold";
-name = "SemiCondensed Semibold Italic";
+name = "SmCond Smbold Italic";
 weightClass = 600;
 widthClass = 4;
 },
@@ -9271,7 +9276,7 @@ instanceInterpolations = {
 };
 isItalic = 1;
 linkStyle = Expanded;
-name = "Expanded Italic";
+name = "Exp Italic";
 widthClass = 7;
 },
 {
@@ -9308,7 +9313,7 @@ master01 = -0.16667;
 };
 isItalic = 1;
 linkStyle = "Expanded Medium";
-name = "Expanded Medium Italic";
+name = "Exp Medium Italic";
 weightClass = 500;
 widthClass = 7;
 },
@@ -9326,7 +9331,7 @@ master01 = -0.33333;
 };
 isItalic = 1;
 linkStyle = "Expanded Semibold";
-name = "Expanded Semibold Italic";
+name = "Exp Smbold Italic";
 weightClass = 600;
 widthClass = 7;
 },
@@ -9344,7 +9349,7 @@ instanceInterpolations = {
 };
 isItalic = 1;
 linkStyle = "Expanded Bold";
-name = "Expanded Bold Italic";
+name = "Exp Bold Italic";
 weightClass = 700;
 widthClass = 7;
 },
@@ -9360,7 +9365,7 @@ master01 = 0.5;
 };
 isItalic = 1;
 linkStyle = SemiExpanded;
-name = "SemiExpanded Italic";
+name = "SmExp Italic";
 widthClass = 6;
 },
 {
@@ -9378,7 +9383,7 @@ master01 = 0.05556;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Light";
-name = "SemiExpanded Light Italic";
+name = "SmExp Light Italic";
 weightClass = 300;
 widthClass = 6;
 },
@@ -9395,7 +9400,7 @@ master01 = 0.16667;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Medium";
-name = "SemiExpanded Medium Italic";
+name = "SmExp Medium Italic";
 weightClass = 500;
 widthClass = 6;
 },
@@ -9414,7 +9419,7 @@ master01 = -0.05556;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Semibold";
-name = "SemiExpanded Semibold Italic";
+name = "SmExp Smbold Italic";
 weightClass = 600;
 widthClass = 6;
 },
@@ -9433,7 +9438,7 @@ master01 = 0.05556;
 };
 isItalic = 1;
 linkStyle = "SemiExpanded Bold";
-name = "SemiExpanded Bold Italic";
+name = "SmExp Bold Italic";
 weightClass = 700;
 widthClass = 6;
 },
@@ -56425,7 +56430,7 @@ value = psbk;
 },
 {
 key = versionString;
-value = "Version 2.000beta1";
+value = "Version 2.000beta2";
 }
 );
 stems = (

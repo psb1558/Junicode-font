@@ -303,7 +303,7 @@ value = (
 );
 }
 );
-date = "2023-07-26 22:51:18 +0000";
+date = "2023-08-01 13:12:49 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -588,10 +588,6 @@ lookup ArchaicIrish {
     sub t.sc by tinsular.sc ;
     sub r.sc by rinsular.sc ;
 } ArchaicIrish ;
-
-lookup calt_f_alt {
-  sub [ f longs ]' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
-} calt_f_alt;
 
 lookup calt_insular_st {
   sub sinsular' tinsular by longs;
@@ -1600,7 +1596,6 @@ lookup tagligs {
  sub h d.tag e.tag by h.alt ;
  sub h a.tag u.tag by h.alt2 ;
  sub h e.tag n.tag by h.enlarged ;
-# sub l s.tag i.tag by lhighstroke.alt ;
  sub I d.tag a.tag by Idotaccent ;
  sub I d.tag e.tag by uniA7FE ;
  sub I e.tag n.tag by I.enlarged ;
@@ -7051,8 +7046,6 @@ lookup ethdiacritic {
   sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
 } ethdiacritic ;
 
-#lookup ethdiacritic ;
-lookup calt_f_alt ; # is lookup here twice? Local and in prefix?
 lookup calt_fligs_1 ;
 lookup calt_fligs_2 ;
 
@@ -7394,6 +7387,8 @@ sub longs i z.alt1 by longs_i_z.alt1 ;
 # sub longs.alt1 longs.alt1 i by longs_longs_i;
 # sub longs longs l by longs_longs_l;
 # sub longs.alt1 longs.alt1 l by longs_longs_l;
+sub longs longs t by longs_longs_t ;
+sub longs.rlongs longs.llongs t by longs_longs_t ;
 # sub f f by f_f ;
 # sub f i by fi ;
 # sub f l by fl ;
@@ -8464,7 +8459,7 @@ instanceInterpolations = {
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.66667;
 master01 = 0.33333;
 };
-name = Semibold;
+name = Smbold;
 weightClass = 600;
 },
 {
@@ -8493,7 +8488,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.08333;
 master01 = -0.16667;
 };
-name = "Condensed Medium";
+name = "Cond Medium";
 visible = 0;
 weightClass = 500;
 widthClass = 3;
@@ -8511,7 +8506,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.5;
 master01 = -0.33333;
 };
-name = "Condensed Light";
+name = "Cond Light";
 weightClass = 300;
 widthClass = 3;
 },
@@ -8524,7 +8519,7 @@ axesValues = (
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 1;
 };
-name = Condensed;
+name = Cond;
 widthClass = 3;
 },
 {
@@ -8539,7 +8534,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.16667;
 master01 = -0.33333;
 };
-name = "Condensed Semibold";
+name = "Cond Smbold";
 weightClass = 600;
 widthClass = 3;
 },
@@ -8572,7 +8567,7 @@ instanceInterpolations = {
 "75918100-ED89-42A8-B0FE-888EB9C86810" = 0.33333;
 master01 = 0.16667;
 };
-name = "SemiCondensed Medium";
+name = "SmCond Medium";
 weightClass = 500;
 widthClass = 4;
 },
@@ -8589,7 +8584,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.19444;
 master01 = 0.05556;
 };
-name = "SemiCondensed Light";
+name = "SmCond Light";
 weightClass = 300;
 widthClass = 4;
 },
@@ -8609,7 +8604,7 @@ instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;
 master01 = 0.5;
 };
-name = SemiCondensed;
+name = SmCond;
 widthClass = 4;
 },
 {
@@ -8625,7 +8620,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = -0.02778;
 master01 = -0.05556;
 };
-name = "SemiCondensed Semibold";
+name = "SmCond Smbold";
 weightClass = 600;
 widthClass = 4;
 },
@@ -8661,7 +8656,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.30556;
 master01 = 0.05556;
 };
-name = "SemiExpanded Light";
+name = "SmExp Light";
 weightClass = 300;
 widthClass = 6;
 },
@@ -8675,7 +8670,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.5;
 master01 = 0.5;
 };
-name = SemiExpanded;
+name = SmExp;
 widthClass = 6;
 },
 {
@@ -8689,7 +8684,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.5;
 master01 = 0.16667;
 };
-name = "SemiExpanded Medium";
+name = "SmExp Medium";
 weightClass = 500;
 widthClass = 6;
 },
@@ -8706,7 +8701,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.47222;
 master01 = -0.05556;
 };
-name = "SemiExpanded Semibold";
+name = "SmExp Smbold";
 weightClass = 600;
 widthClass = 6;
 },
@@ -8724,7 +8719,7 @@ instanceInterpolations = {
 master01 = 0.05556;
 };
 linkStyle = SemiExpanded;
-name = "SemiExpanded Bold";
+name = "SmExp Bold";
 weightClass = 700;
 widthClass = 6;
 },
@@ -8755,7 +8750,7 @@ axesValues = (
 instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 1;
 };
-name = Expanded;
+name = Exp;
 widthClass = 7;
 },
 {
@@ -8770,7 +8765,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.91667;
 master01 = -0.16667;
 };
-name = "Expanded Medium";
+name = "Exp Medium";
 weightClass = 500;
 widthClass = 7;
 },
@@ -8786,7 +8781,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.83333;
 master01 = -0.33333;
 };
-name = "Expanded Semibold";
+name = "Exp Smbold";
 weightClass = 600;
 widthClass = 7;
 },
@@ -8803,7 +8798,7 @@ instanceInterpolations = {
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = 0.375;
 };
 linkStyle = Expanded;
-name = "Expanded Bold";
+name = "Exp Bold";
 weightClass = 700;
 widthClass = 7;
 },
@@ -51007,7 +51002,7 @@ value = psbk;
 },
 {
 key = versionString;
-value = "Version 2.000beta1";
+value = "Version 2.000beta2";
 }
 );
 stems = (

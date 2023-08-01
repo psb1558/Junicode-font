@@ -59,7 +59,7 @@ web page mentioned above:
 
 \small\begin{verbatim}
 #!/bin/zsh
-pyftsubset JunicodeTwoBetaVF-Roman.ttf \
+pyftsubset JunicodeVF-Roman.ttf \
 --flavor=woff2 --output-file=JunicodeVFsubset.woff2 \
 --recommended-glyphs \
 --text="jq" --text-file=Junicode-2-feature-test.html \
@@ -147,7 +147,7 @@ axis can be declared:
 
 \small\begin{verbatim}
 @font-face {
-    font-family: "Junicode Two Beta VF";
+    font-family: "Junicode VF";
     src: url("./webfiles/JunicodeVFsubset.woff2");
     font-weight: 300 700;
     font-stretch: 75% 125%;
@@ -164,13 +164,13 @@ For example:
 
 \small\begin{verbatim}
 body {
-  font-family: "Junicode Two Beta VF";
+  font-family: "Junicode VF";
   font-size: 28px;
   font-weight: normal; /* that is, 400 */
   font-stretch: 112.5%; /* that is, semiexpanded */
 }
 h1 {
-  font-family: "Junicode Two Beta VF";
+  font-family: "Junicode VF";
   font-size: 125%;
   font-weight: 600; /* that is, semibold */
   font-stretch: 112.5%; /* that is, semiexpanded */
@@ -188,12 +188,12 @@ instead of the high-level \texttt{font-weight} and \texttt{font-stretch}:
 
 \small\begin{verbatim}
 body {
-  font-family: "Junicode Two Beta VF";
+  font-family: "Junicode VF";
   font-size: 28px;
   font-variation-settings: "wght" 400, "wdth" 112.5;
 }
 h1 {
-  font-family: "Junicode Two Beta VF";
+  font-family: "Junicode VF";
   font-size: 125%;
   font-variation-settings: "wght" 600, "wdth" 112.5;
 }
@@ -210,21 +210,21 @@ if you need normal and bold weights of Junicode roman, your
 
 \small\begin{verbatim}
 @font-face {
-    font-family: "Junicode Two Beta VF";
+    font-family: "Junicode VF";
     src: url("./webfiles/JunicodeVFsubset.woff2");
     font-weight: 300 700;
     font-stretch: 75% 125%;
     font-style: normal;
 }
 @font-face {
-    font-family: "Junicode Two Beta";
-    src: url("./webfiles/JunicodeTwoBeta-Regular.woff2");
+    font-family: "Junicode";
+    src: url("./webfiles/Junicode-Regular.woff2");
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: "Junicode Two Beta";
-    src: url("./webfiles/JunicodeTwoBeta-Bold.woff2");
+    font-family: "Junicode";
+    src: url("./webfiles/Junicode-Bold.woff2");
     font-weight: 700;
     font-style: normal;
 }
@@ -235,11 +235,11 @@ font gets downloaded:
 
 \small\begin{verbatim}
 body {
-  font-family: "Junicode Two Beta", serif;
+  font-family: "Junicode", serif;
 }
 @supports (font-variation-settings: normal) {
   body {
-    font-family: "Junicode Two Beta VF", serif;
+    font-family: "Junicode VF", serif;
   }
 }
 b {

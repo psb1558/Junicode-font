@@ -329,7 +329,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {1=\cvd{9}{E}, 2=\cvd[1]{9}{E}, \cvc{3=\cvd[2]{9}{E}}, 4=\cvd[3]{9}{E}}\\\hline
 \centering{e} &
 \centering{cv10} &
-{1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}, \cvc{4=\cvd[3]{10}{e}}, \cvc{5=\cvd[4]{10}{e}}}\\\hline
+{1=\cvd{10}{e}, 2=\cvd[1]{10}{e}, 3=\cvd[2]{10}{e}, \cvc{4=\cvd[3]{10}{e}}, 5=\cvd[4]{10}{e}}\\\hline
 \centering{F} &
 \centering{cv11} &
 {1=\cvd{11}{F},  \cvc{2=\cvd[1]{11}{F}, 3=\cvd[2]{11}{F}}}\\\hline
@@ -413,11 +413,11 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {1=\cvd{36}{r}, 2=\cvd[1]{36}{r}, 3=\cvd[2]{36}{r}, \cvc{4=\cvd[3]{36}{r}}}\\\hline
 \centering{S} &
 \centering{cv37} &
-{1=\cvd{37}{S}, 2=\cvd[1]{37}{S}, \cvc{3=\cvd[2]{37}{S}}, \cvc{4=\cvd[3]{37}{S}}, \cvc{5=\cvd[4]{37}{S}}}\\\hline
+{1=\cvd{37}{S}, 2=\cvd[1]{37}{S}, \cvc{3=\cvd[2]{37}{S}}, \cvc{4=\cvd[3]{37}{S}}, 5=\cvd[4]{37}{S}}\\\hline
 \centering{s} &
 \centering{cv38} &
 {1=\cvd{38}{s}, 2=\cvd[1]{38}{s}, 3=\cvd[2]{38}{s}, 4=\cvd[3]{38}{s},
-            5=\cvd[4]{38}{s}, 6=\cvd[5]{38}{s}, \cvc{7=\cvd[6]{38}{s}}, \cvc{8=\cvd[7]{38}{s}}}\\\hline
+            5=\cvd[4]{38}{s}, 6=\cvd[5]{38}{s}, \cvc{7=\cvd[6]{38}{s}}, 8=\cvd[7]{38}{s}}\\\hline
 \centering{T} &
 \centering{cv39} &
 {1=\cvd{39}{T}, \cvc{2=\cvd[1]{39}{T}}}\\\hline
@@ -453,7 +453,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {1=\cvd{49}{Y}, \cvc{2=\cvd[1]{49}{Y}}}\\\hline
 \centering{y} &
 \centering{cv50} &
-{1=\cvd{50}{y}, 2=\cvd[1]{50}{y}, \cvc{3=\cvd[2]{50}{y}}}\\\hline
+{1=\cvd{50}{y}, 2=\cvd[1]{50}{y}, 3=\cvd[2]{50}{y}, \cvc{\cvd[3]{50}{y}}}\\\hline
 \centering{Z} &
 \centering{cv51} &
 {1=\cvd{51}{Z}, \cvc{2=\cvd[1]{51}{Z}}}\\\hline
@@ -478,7 +478,6 @@ the default only in the way it forms a double-p ligature with \textSourceText{hl
 Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
 combining \textex{e} with ogonek, accessible via \textSourceText{\hyperlink{ss10}{ss10}} with the
 entity reference \textSourceText{\&\_eogo;}.
-features.
 
 \begin{center}
 \tablefirsthead{\hline
@@ -1121,7 +1120,7 @@ In combination with \textSourceText{ss14}, converts long branch (the default for
 \subsection{\textSourceText{rtlm}
 -- Right to Left Mirrored Forms}
 Produces mirrored runes, e.g. {\addfontfeature{StylisticSet=12}ABCDEFG $\rightarrow $ \addfontfeature{MyStyle=mirrored}GFEDCBA}.
-This feature cannot change the direction of text.
+This feature cannot change the direction of text or reverse its order.
 
 \section{Ligatures and Digraphs}
 

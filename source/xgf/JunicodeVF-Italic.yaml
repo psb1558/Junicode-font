@@ -8078,15 +8078,16 @@ glyphs:
   uni0311:
     y:
       points:
-      - ptid: '{115;631}'
+      - ptid: '{-262;497}'
         points:
-        - ptid: '{116;578}'
-          rel: blackdist
+        - ptid: '{-41;497}'
+          rel: shift
+        - ptid: '{-139;578}'
+          rel: graydist
           points:
-          - ptid:
-            - '{-9;497}'
-            - '{212;497}'
-            rel: shift
+          - ptid: '{-130;631}'
+            rel: blackdist
+            round: false
   uni0312:
     y:
       points:
@@ -8774,9 +8775,9 @@ glyphs:
   uni0361:
     y:
       points:
-      - ptid: '{50;629}'
+      - ptid: '{123;629}'
         points:
-        - ptid: '{72;590}'
+        - ptid: '{101;590}'
           rel: blackdist
   uni0362:
     y:
@@ -16890,10 +16891,8 @@ glyphs:
   caron.alt:
     y:
       points:
-      - ptid: '{37;542}'
-        points:
-        - ptid: '{105;729}'
-          rel: blackdist
+      - ptid: '{66;542}'
+      - ptid: '{134;729}'
   caron.sc:
     y:
       points:
@@ -23496,27 +23495,26 @@ glyphs:
   uni1DD3.alt:
     y:
       points:
-      - ptid: '{-121;505}'
+      - ptid: '{-214;505}'
         points:
-        - ptid: '{23;505}'
-          rel: shift
+        - ptid: '{-70;505}'
+          rel: graydist
+          min: false
           points:
-          - ptid: '{64;551}'
+          - ptid: '{-29;551}'
             rel: blackdist
-        - ptid: '{-92;543}'
+            round: false
+        - ptid: '{-185;543}'
           rel: blackdist
           round: false
-        - ptid: '{-98;733}'
-          rel: graydist
+      - ptid: '{-191;733}'
+        points:
+        - ptid: '{-167;779}'
+          rel: whitedist
           points:
-          - ptid: '{57;679}'
-            rel: shift
-          - ptid: '{-74;779}'
-            rel: whitedist
-            points:
-            - ptid: '{-60;825}'
-              rel: blackdist
-              round: false
+          - ptid: '{-153;825}'
+            rel: blackdist
+            round: false
   uni1DE2.low:
     y:
       points:

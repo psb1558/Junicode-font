@@ -18833,55 +18833,6 @@ glyphs:
           points:
           - ptid: 13
             rel: shift
-  uniEBBD:
-    y:
-      points:
-      - ptid: 24
-        pos: xheight-overshoot
-        points:
-        - ptid: 68
-          rel: shift
-          points:
-          - ptid: 85
-            rel: blackdist
-            dist: lc-round-stem
-        - ptid: 10
-          rel: blackdist
-        - ptid: 104
-          rel: whitedist
-          points:
-          - ptid: 120
-            rel: shift
-          - ptid: 112
-            rel: graydist
-      - ptid: 0
-        pos: lc-baseline-undershoot
-      - ptid: 48
-        ref: 0
-        rel: blackdist
-        points:
-        - ptid: 34
-          rel: shift
-      - ptid:
-        - 42
-        - 60
-        ref: 0
-        rel: shift
-      - ptid: 94
-        ref: 60
-        rel: blackdist
-      - ptid:
-          pt-a: 78
-          pt-b: 77
-          ref1: 68
-          ref2: 60
-        macro:
-          nm: mid-stem
-      - ptid: 121
-        ref:
-        - 112
-        - 104
-        rel: interpolate
   uniEBE6:
     y:
       points:

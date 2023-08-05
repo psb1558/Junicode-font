@@ -76,8 +76,9 @@ if whichFont == "italic":
     print("Adding STAT table to italic font "  + inFont)
     builder.buildStatTable(ttfont,format2ItalicAxes)
     # Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).
-    ttfont['name'].setName("JunicodeVF", 25, 3, 1, 0x409)
-# Glyphs takes care of the naming table now.
+    psNamePrefix = "JunicodeVFItalic"
+    ttfont['name'].setName(psNamePrefix, 25, 3, 1, 0x409)
+    # Glyphs takes care of the naming table now.
     # Cycle through fvar, getting instance names, building a correct postscriptNameID,
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
@@ -88,8 +89,13 @@ if whichFont == "italic":
             inst.subfamilyNameID = 2
             inst.postscriptNameID = 6
         else:
-            subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-            inst.postscriptNameID = ttfont['name'].addName("JunicodeVF" + "-" + subfamilyName,
+            subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode()
+            if subfamilyName == "Italic":
+                subfamilyName = "Regular"
+            else:
+                subfamilyName = subfamilyName.replace("Italic", "").replace(" ", "")
+            # subfamilyName = subfamilyName.replace(" ", "")
+            inst.postscriptNameID = ttfont['name'].addName("JunicodeVFItalic-" + subfamilyName,
                                                        platforms=((3,1,0x409),))
     # We don't need platform 1 names. If there are any, remove them.
     ttfont['name'].removeNames(platformID=1)
@@ -99,18 +105,20 @@ elif whichFont == "roman":
     ttfont = ttLib.TTFont(inFont)
     builder.buildStatTable(ttfont,format2RomanAxes)
     # Add stuff to name table. First the Variations PostScript Name Prefix (table entry 25).
-    ttfont['name'].setName("JunicodeVF", 25, 3, 1, 0x409)
+    psNamePrefix = "JunicodeVFRoman"
+    ttfont['name'].setName(psNamePrefix, 25, 3, 1, 0x409)
     # Cycle through fvar, getting instance names, building a correct postscriptNameID,
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
     for inst in ttfont['fvar'].instances:
-        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
-            and inst.coordinates['ENLA'] == 0.0):
+        # if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
+        #     and inst.coordinates['ENLA'] == 0.0):
+        if False:
             inst.subfamilyNameID = 2
             inst.postscriptNameID = 6
         else:
             subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-            inst.postscriptNameID = ttfont['name'].addName("JunicodeVF" + "-" + subfamilyName,
+            inst.postscriptNameID = ttfont['name'].addName("JunicodeVFRoman" + "-" + subfamilyName,
                                                        platforms=((3,1,0x409),))
     # We don't need platform 1 names. If there are any, remove them.
     ttfont['name'].removeNames(platformID=1)

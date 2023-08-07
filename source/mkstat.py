@@ -22,11 +22,13 @@ weightDict = dict(
     tag="wght",
     name="Weight",
     values=[
-        dict(value=300, name="Light"),
+        dict(nominalValue=300, name="Light", rangeMinValue=300, rangeMaxValue=350),
+        # Glyphs includes both format 1 and 3 entries for Regular. Does not stop crash.
+        # dict(nominalValue=400, name="Regular", flags=0x2, rangeMinValue=350, rangeMaxValue=450),
         dict(value=400, name="Regular", linkedValue=700, flags=0x2),
-        dict(value=500, name="Medium"),
-        dict(value=600, name="SmBold"),
-        dict(value=700, name="Bold"),
+        dict(nominalValue=500, name="Medium", rangeMinValue=450, rangeMaxValue=550),
+        dict(nominalValue=600, name="SmBold", rangeMinValue=550, rangeMaxValue=650),
+        dict(nominalValue=700, name="Bold", rangeMinValue=650, rangeMaxValue=700),
         # dict(value=400, name="Regular", linkedValue=700, flags=0x2)
     ]
 )
@@ -35,11 +37,11 @@ widthDict = dict(
     tag="wdth",
     name="Width",
     values=[
-        dict(value=75, name="Cond"),
-        dict(value=87.5, name="SmCond"),
-        dict(value=100, name="Normal", flags=0x2),
-        dict(value=112.5, name="SmExp"),
-        dict(value=125, name="Exp"),
+        dict(nominalValue=75, name="Cond", rangeMinValue=75.0, rangeMaxValue=81.25),
+        dict(nominalValue=87.5, name="SmCond", rangeMinValue=81.25, rangeMaxValue=93.75),
+        dict(nominalValue=100, name="Normal", flags=0x2, rangeMinValue=93.75, rangeMaxValue=106.25),
+        dict(nominalValue=112.5, name="SmExp", rangeMinValue=106.25, rangeMaxValue=118.75),
+        dict(nominalValue=125, name="Exp", rangeMinValue=118.75, rangeMaxValue=125),
     ]
 )
 
@@ -47,9 +49,9 @@ enlargeDict = dict(
     tag="ENLA",
     name="Enlarge",
     values=[
-        dict(value=0, name="Normal", flags=0x2),
-        dict(value=47, name="Enlarged"),
-        dict(value=100, name="CapSize"),
+        dict(nominalValue=0, name="Normal", flags=0x2, rangeMinValue=0, rangeMaxValue=23.5),
+        dict(nominalValue=47, name="Enlarged", rangeMinValue=23.5, rangeMaxValue=73.5),
+        dict(nominalValue=100, name="CapSize", rangeMinValue=73.5, rangeMaxValue=100),
     ]
 )
 
@@ -83,9 +85,8 @@ if whichFont == "italic":
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
     for inst in ttfont['fvar'].instances:
-        # if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
-        #    and inst.coordinates['ENLA'] == 0.0):
-        if False:
+        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
+            and inst.coordinates['ENLA'] == 0.0):
             inst.subfamilyNameID = 2
             inst.postscriptNameID = 6
         else:
@@ -111,15 +112,14 @@ elif whichFont == "roman":
     # recording that in the name table, and adding the ID to the postscriptNameID field
     # of the fvar instance. Whew!
     for inst in ttfont['fvar'].instances:
-        # if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
-        #     and inst.coordinates['ENLA'] == 0.0):
-        if False:
+        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['wdth'] == 100.0
+            and inst.coordinates['ENLA'] == 0.0):
             inst.subfamilyNameID = 2
             inst.postscriptNameID = 6
         else:
             subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
             inst.postscriptNameID = ttfont['name'].addName("JunicodeVFRoman" + "-" + subfamilyName,
-                                                       platforms=((3,1,0x409),))
+                                                       platforms=((3,1,0x409),(1,0,0)))
     # We don't need platform 1 names. If there are any, remove them.
     ttfont['name'].removeNames(platformID=1)
     ttfont.save(outFont)

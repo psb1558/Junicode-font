@@ -24,8 +24,8 @@ weightDict = dict(
     values=[
         dict(nominalValue=300, name="Light", rangeMinValue=300, rangeMaxValue=350),
         # Glyphs includes both format 1 and 3 entries for Regular. Does not stop crash.
-        # dict(nominalValue=400, name="Regular", flags=0x2, rangeMinValue=350, rangeMaxValue=450),
-        dict(value=400, name="Regular", linkedValue=700, flags=0x2),
+        dict(nominalValue=400, name="Regular", flags=0x2, rangeMinValue=350, rangeMaxValue=450),
+        #dict(value=400, name="Regular", linkedValue=700, flags=0x2),
         dict(nominalValue=500, name="Medium", rangeMinValue=450, rangeMaxValue=550),
         dict(nominalValue=600, name="SmBold", rangeMinValue=550, rangeMaxValue=650),
         dict(nominalValue=700, name="Bold", rangeMinValue=650, rangeMaxValue=700),
@@ -69,7 +69,7 @@ format2ItalicAxes = [
     dict(
         tag="ital",
         name="Italic",
-        values=[dict(value=1, name="Italic")]
+        values=[dict(value=1, name="Italic", linkedValue=0.0)]
     )
 ]
 

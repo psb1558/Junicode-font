@@ -1,43 +1,10 @@
 {
-glyphname = f_t_y;
-kernLeft = KO_f;
-kernRight = KO_f_y;
+case = lower;
+category = Letter;
+color = 4;
+glyphname = f_t_y.dlig;
 layers = (
 {
-anchors = (
-{
-name = bottom_1;
-pos = (142,0);
-},
-{
-name = bottom_2;
-pos = (482,0);
-},
-{
-name = bottom_3;
-pos = (893,0);
-},
-{
-name = caret_1;
-pos = (291,0);
-},
-{
-name = caret_2;
-pos = (607,0);
-},
-{
-name = top_1;
-pos = (202,691);
-},
-{
-name = top_2;
-pos = (448,463);
-},
-{
-name = top_3;
-pos = (824,415);
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -185,40 +152,6 @@ nodes = (
 width = 1032;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (146,0);
-},
-{
-name = bottom_2;
-pos = (496,0);
-},
-{
-name = bottom_3;
-pos = (911,0);
-},
-{
-name = caret_1;
-pos = (310,0);
-},
-{
-name = caret_2;
-pos = (625,0);
-},
-{
-name = top_1;
-pos = (206,691);
-},
-{
-name = top_2;
-pos = (461,463);
-},
-{
-name = top_3;
-pos = (843,415);
-}
-);
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
 shapes = (
 {
@@ -366,40 +299,6 @@ nodes = (
 width = 1058;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (143,0);
-},
-{
-name = bottom_2;
-pos = (480,0);
-},
-{
-name = bottom_3;
-pos = (889,0);
-},
-{
-name = caret_1;
-pos = (287,0);
-},
-{
-name = caret_2;
-pos = (603,0);
-},
-{
-name = top_1;
-pos = (203,691);
-},
-{
-name = top_2;
-pos = (446,463);
-},
-{
-name = top_3;
-pos = (820,415);
-}
-);
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
 shapes = (
 {
@@ -547,40 +446,6 @@ nodes = (
 width = 1027;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (124,0);
-},
-{
-name = bottom_2;
-pos = (417,0);
-},
-{
-name = bottom_3;
-pos = (767,0);
-},
-{
-name = caret_1;
-pos = (255,0);
-},
-{
-name = caret_2;
-pos = (524,0);
-},
-{
-name = top_1;
-pos = (175,691);
-},
-{
-name = top_2;
-pos = (387,463);
-},
-{
-name = top_3;
-pos = (709,415);
-}
-);
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
 shapes = (
 {
@@ -728,40 +593,6 @@ nodes = (
 width = 886;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (162,0);
-},
-{
-name = bottom_2;
-pos = (550,0);
-},
-{
-name = bottom_3;
-pos = (1020,0);
-},
-{
-name = caret_1;
-pos = (329,0);
-},
-{
-name = caret_2;
-pos = (692,0);
-},
-{
-name = top_1;
-pos = (230,691);
-},
-{
-name = top_2;
-pos = (511,463);
-},
-{
-name = top_3;
-pos = (942,415);
-}
-);
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
 shapes = (
 {
@@ -909,43 +740,7 @@ nodes = (
 width = 1179;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (142,0);
-},
-{
-name = bottom_2;
-pos = (482,0);
-},
-{
-name = bottom_3;
-pos = (893,0);
-},
-{
-name = caret_1;
-pos = (291,0);
-},
-{
-name = caret_2;
-pos = (607,0);
-},
-{
-name = top_1;
-pos = (202,691);
-},
-{
-name = top_2;
-pos = (448,463);
-},
-{
-name = top_3;
-pos = (824,415);
-}
-);
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
-metricLeft = "=34";
-metricRight = "=-12";
 shapes = (
 {
 closed = 1;
@@ -1092,6 +887,12 @@ nodes = (
 width = 1032;
 }
 );
-metricLeft = f;
-metricRight = y;
+script = latin;
+subCategory = Ligature;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

@@ -1,32 +1,10 @@
 {
+case = lower;
 category = Letter;
+color = 4;
 glyphname = t_y.dlig;
-kernLeft = KO_t;
-kernRight = KO_f_y;
 layers = (
 {
-anchors = (
-{
-name = bottom_1;
-pos = (199,0);
-},
-{
-name = bottom_2;
-pos = (576,0);
-},
-{
-name = caret_1;
-pos = (355,0);
-},
-{
-name = top_1;
-pos = (165,463);
-},
-{
-name = top_2;
-pos = (507,415);
-}
-);
 layerId = master01;
 shapes = (
 {
@@ -125,28 +103,6 @@ nodes = (
 width = 713;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (193,0);
-},
-{
-name = bottom_2;
-pos = (631,0);
-},
-{
-name = caret_1;
-pos = (365,0);
-},
-{
-name = top_1;
-pos = (164,457);
-},
-{
-name = top_2;
-pos = (528,415);
-}
-);
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
 shapes = (
 {
@@ -245,28 +201,6 @@ nodes = (
 width = 744;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (202,0);
-},
-{
-name = bottom_2;
-pos = (571,0);
-},
-{
-name = caret_1;
-pos = (341,0);
-},
-{
-name = top_1;
-pos = (166,465);
-},
-{
-name = top_2;
-pos = (515,415);
-}
-);
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
 shapes = (
 {
@@ -365,28 +299,6 @@ nodes = (
 width = 713;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (164,-1);
-},
-{
-name = bottom_2;
-pos = (492,0);
-},
-{
-name = caret_1;
-pos = (288,0);
-},
-{
-name = top_1;
-pos = (136,459);
-},
-{
-name = top_2;
-pos = (423,415);
-}
-);
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
 shapes = (
 {
@@ -485,28 +397,6 @@ nodes = (
 width = 592;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (234,1);
-},
-{
-name = bottom_2;
-pos = (660,0);
-},
-{
-name = caret_1;
-pos = (422,0);
-},
-{
-name = top_1;
-pos = (194,467);
-},
-{
-name = top_2;
-pos = (592,415);
-}
-);
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
 shapes = (
 {
@@ -605,31 +495,7 @@ nodes = (
 width = 834;
 },
 {
-anchors = (
-{
-name = bottom_1;
-pos = (199,0);
-},
-{
-name = bottom_2;
-pos = (576,0);
-},
-{
-name = caret_1;
-pos = (355,0);
-},
-{
-name = top_1;
-pos = (165,463);
-},
-{
-name = top_2;
-pos = (507,415);
-}
-);
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
-metricLeft = "=32";
-metricRight = "=-12";
 shapes = (
 {
 closed = 1;
@@ -727,8 +593,12 @@ nodes = (
 width = 713;
 }
 );
-metricLeft = t;
-metricRight = y;
 script = latin;
 subCategory = Ligature;
+userData = {
+KernOnSpecialSpacing = {
+L = NoKerning;
+R = NoKerning;
+};
+};
 }

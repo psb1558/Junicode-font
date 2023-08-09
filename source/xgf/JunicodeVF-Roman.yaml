@@ -3983,48 +3983,6 @@ glyphs:
           points:
           - ptid: '{125;617}'
             rel: stem
-  k:
-    y:
-      points:
-      - ptid:
-          base: '{133;0}'
-          base-sh: '{401;0}'
-          pt-a: '{39;-4}'
-          pt-b: '{39;24}'
-        macro: lc-serif
-      - ptid:
-          base: '{375;415}'
-          pt-a: '{287;418}'
-          pt-a-sh: '{464;418}'
-          pt-b: '{287;392}'
-          pt-b-sh: '{464;392}'
-        macro:
-          base-cv: xheight
-          nm: lc-serif
-      - ptid:
-          p1: '{166;726}'
-          p2: '{50;668}'
-          p3: '{50;641}'
-        macro: lc-ascender-top
-      - ptid:
-        - '{228;24}'
-        - '{303;24}'
-        - '{499;24}'
-        ref: '{39;24}'
-        rel: shift
-      - ptid:
-        - '{228;-4}'
-        - '{303;-4}'
-        - '{499;-4}'
-        ref: '{39;-4}'
-        rel: shift
-      - ptid:
-          top: '{375;415}'
-          bar-top: '{192;234}'
-          bar-bot: '{186;201}'
-          base: '{133;0}'
-        function:
-          nm: mid-stem-f
   k.lf:
     names:
       a-sh:
@@ -25999,157 +25957,6 @@ glyphs:
   f_f_udieresis:
     y:
       points:
-      - ptid: '{538;726}'
-        pos: lc-ascender
-        points:
-        - ptid: '{499;680}'
-          rel: blackdist
-        - ptid: '{328;708}'
-          rel: graydist
-          points:
-          - ptid: '{279;662}'
-            rel: blackdist
-      - ptid: '{173;415}'
-        pos: xheight
-        points:
-        - ptid: '{434;417}'
-          rel: shift
-        - ptid: '{173;373}'
-          rel: blackdist
-          points:
-          - ptid: '{98;373}'
-            rel: shift
-          - ptid: '{434;369}'
-            rel: shift
-          round: false
-      - ptid:
-          base: '{136;0}'
-          pt-a: '{41;-4}'
-          pt-b: '{41;24}'
-          base-sh: '{404;0}'
-        macro:
-          nm: lc-serif
-      - ptid:
-        - '{231;24}'
-        - '{302;24}'
-        - '{506;24}'
-        ref: '{41;24}'
-        rel: shift
-      - ptid:
-        - '{231;-4}'
-        - '{302;-4}'
-        - '{506;-4}'
-        ref: '{41;-4}'
-        rel: shift
-      - ptid:
-          pt-a: '{750;-11}'
-          pt-b: '{774;36}'
-        macro:
-          nm: lc-round-stem
-      - ptid: '{952;418}'
-        pos: u-top-a
-        points:
-        - ptid: '{690;418}'
-          rel: shift
-      - ptid: '{830;410}'
-        pos: u-top-b
-        points:
-        - ptid: '{567;410}'
-          rel: shift
-        - ptid: '{830;382}'
-          rel: blackdist
-          dist: lc-serif
-          points:
-          - ptid: '{567;382}'
-            rel: shift
-      - ptid: '{892;-16}'
-        ref: '{750;-11}'
-        rel: shift
-      - ptid: '{696;512}'
-        pos: dot-height
-        points:
-        - ptid: '{883;512}'
-          rel: shift
-        - ptid: '{696;617}'
-          rel: blackdist
-          dist: dot-dist
-          points:
-          - ptid: '{883;617}'
-            rel: shift
-    props:
-      category: Ll
-  f_f_y:
-    y:
-      points:
-      - ptid: '{588;726}'
-        pos: lc-ascender
-        points:
-        - ptid: '{540;680}'
-          rel: blackdist
-        - ptid: '{328;708}'
-          rel: graydist
-          points:
-          - ptid: '{279;662}'
-            rel: blackdist
-      - ptid:
-          base: '{136;0}'
-          pt-a: '{41;-4}'
-          pt-b: '{41;24}'
-          base-sh: '{399;0}'
-        macro:
-          nm: lc-serif
-      - ptid:
-        - '{231;24}'
-        - '{302;24}'
-        - '{496;24}'
-        ref: '{41;24}'
-        rel: shift
-      - ptid:
-        - '{231;-4}'
-        - '{302;-4}'
-        - '{496;-4}'
-        ref: '{41;-4}'
-        rel: shift
-      - ptid: '{173;418}'
-        pos: xheight
-        points:
-        - ptid: '{434;418}'
-          rel: shift
-        - ptid: '{173;376}'
-          rel: blackdist
-          points:
-          - ptid: '{98;376}'
-            rel: shift
-          - ptid: '{434;379}'
-            rel: shift
-          round: false
-      - ptid:
-          base: '{889;415}'
-          pt-a: '{969;418}'
-          pt-b: '{969;392}'
-          base-sh: '{617;415}'
-        macro:
-          nm: lc-serif
-          base-cv: xheight
-          cup-cv: lc-serif-undershoot
-          ppem: '180'
-      - ptid: '{609;-270}'
-        pos: lc-descender
-        points:
-        - ptid: '{607;-196}'
-          rel: blackdist
-      - ptid:
-        - '{721;-28}'
-        - '{764;80}'
-        ref:
-        - '{889;415}'
-        - '{609;-270}'
-        rel: interpolate
-    props:
-      category: Ll
-  f_odieresis:
-    y:
-      points:
       - ptid: '{255;726}'
         pos: lc-ascender
         points:
@@ -26203,54 +26010,55 @@ glyphs:
           rel: shift
     props:
       category: Ll
+    f_odieresis: null
   f_r:
     y:
       points:
+      - ptid: '{173;415}'
+        pos: xheight
+        points:
+        - ptid: '{329;415}'
+          rel: shift
+        - ptid: '{98;373}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid:
+            - '{173;373}'
+            - '{329;373}'
+            rel: shift
+      - ptid: '{569;425}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{515;351}'
+          rel: blackdist
+          round: false
+      - ptid:
+          base: '{142;0}'
+          pt-a: '{41;-4}'
+          pt-b: '{41;24}'
+          base-sh: '{414;0}'
+          pt-a-sh: serif-sh-a
+          pt-b-sh: serif-sh-b
+        macro:
+          nm: lc-serif
       - ptid: '{324;726}'
         pos: lc-ascender
         points:
         - ptid: '{268;680}'
           rel: blackdist
-      - ptid: '{172;415}'
-        pos: xheight
-        points:
-        - ptid: '{325;415}'
-          rel: shift
-        - ptid: '{172;373}'
-          rel: blackdist
-          points:
-          - ptid: '{98;373}'
-            rel: shift
-          - ptid: '{325;373}'
-            rel: shift
           round: false
-      - ptid:
-          base: '{142;0}'
-          pt-a: '{41;-4}'
-          pt-a-sh: serif-a-sh
-          pt-b: '{41;24}'
-          pt-b-sh: serif-b-sh
-          base-sh: '{408;0}'
-        macro:
-          nm: lc-serif
-      - ptid: '{568;425}'
-        pos: xheight-overshoot
-        points:
-        - ptid: '{441;431}'
-          rel: shift
-        - ptid: '{515;351}'
-          rel: blackdist
     props:
       category: Ll
     names:
-      serif-b-sh:
-      - '{245;24}'
-      - '{312;24}'
-      - '{502;24}'
-      serif-a-sh:
+      serif-sh-a:
       - '{245;-4}'
-      - '{312;-4}'
-      - '{502;-4}'
+      - '{313;-4}'
+      - '{513;-4}'
+      serif-sh-b:
+      - '{245;24}'
+      - '{313;24}'
+      - '{513;24}'
   f_t:
     y:
       points:
@@ -26292,74 +26100,6 @@ glyphs:
         round: false
     props:
       category: Ll
-  f_t_y:
-    y:
-      points:
-      - ptid: 67
-        pos: lc-ascender
-        points:
-        - ptid: 79
-          rel: blackdist
-      - ptid: 84
-        pos: xheight
-        points:
-        - ptid: 98
-          rel: shift
-        - ptid: 55
-          rel: blackdist
-          points:
-          - ptid:
-            - 35
-            - 16
-            rel: shift
-          round: false
-      - ptid:
-          base: 45
-          pt-a: 48
-          pt-b: 52
-          pt-b-sh: 38
-          pt-a-sh: 42
-        macro:
-          nm: lc-serif
-      - ptid:
-          pt-a: 29
-          pt-b: 20
-        macro:
-          nm: lc-round-stem
-      - ptid:
-          base: 124
-          pt-a: 126
-          pt-b: 130
-          base-sh: 99
-        macro:
-          nm: lc-serif
-          base-cv: xheight
-          cup-cv: lc-serif-undershoot
-          ppem: '180'
-      - ptid:
-        - 101
-        - 122
-        ref: 126
-        rel: shift
-      - ptid:
-        - 105
-        - 118
-        - 13
-        ref: 130
-        rel: shift
-      - ptid: 0
-        pos: lc-descender
-        points:
-        - ptid: 6
-          rel: blackdist
-      - ptid:
-        - 10
-        - 112
-        ref:
-        - 0
-        - 124
-        rel: interpolate
-      - ptid: 94
   f_udieresis:
     y:
       points:
@@ -26423,67 +26163,6 @@ glyphs:
             rel: shift
         - ptid: 149
           rel: shift
-  f_y:
-    y:
-      points:
-      - ptid:
-          base: '{142;0}'
-          pt-a: '{41;-4}'
-          pt-b: '{41;24}'
-          pt-b-sh: '{245;24}'
-          pt-a-sh: '{245;-4}'
-        macro:
-          nm: lc-serif
-      - ptid:
-          base: '{628;415}'
-          pt-a: '{707;418}'
-          pt-b: '{707;392}'
-          pt-a-sh: top-serif-a
-          pt-b-sh: top-serif-b
-          base-sh: '{356;415}'
-        macro:
-          nm: lc-serif
-          base-cv: xheight
-          cup-cv: lc-serif-undershoot
-          ppem: '180'
-      - ptid: '{98;376}'
-        ref: '{172;418}'
-        rel: blackdist
-        round: false
-        points:
-        - ptid: '{43;403}'
-          rel: blackdist
-          round: false
-      - ptid: '{324;726}'
-        pos: lc-ascender
-        points:
-        - ptid: '{268;680}'
-          rel: blackdist
-          round: false
-      - ptid: '{348;-270}'
-        pos: lc-descender
-        points:
-        - ptid: '{346;-196}'
-          rel: blackdist
-          round: false
-      - ptid:
-        - '{503;80}'
-        - '{459;-28}'
-        ref:
-        - '{348;-270}'
-        - '{628;415}'
-        rel: interpolate
-    names:
-      top-serif-a:
-      - '{447;418}'
-      - '{548;418}'
-      - '{172;418}'
-      top-serif-b:
-      - '{548;392}'
-      - '{447;392}'
-      - '{266;392}'
-    props:
-      category: Ll
   five.lf:
     y:
       points:
@@ -54073,99 +53752,116 @@ glyphs:
   t_t_r.dlig:
     y:
       points:
-      - ptid: '{209;-11}'
-        pos: baseline
+      - ptid: '{369;415}'
+        pos: xheight
         points:
-        - ptid: '{516;-11}'
+        - ptid:
+          - '{478;415}'
+          - '{683;415}'
           rel: shift
-        - ptid: '{247;36}'
-          rel: blackdist
-          round: false
-          points:
-          - ptid: '{557;36}'
-            rel: shift
-      - ptid:
-          base: '{762;0}'
-          pt-a: '{666;-4}'
-          pt-b: '{666;24}'
-          pt-b-sh: '{856;24}'
-          pt-a-sh: '{856;-4}'
-        macro:
-          nm: lc-serif
-      - ptid: '{725;415}'
-        pos: dot-height
-        points:
-        - ptid: '{369;415}'
-          rel: shift
-        - ptid: '{682;371}'
+        - ptid: '{403;373}'
           rel: blackdist
           round: false
           points:
           - ptid:
-            - '{403;371}'
-            - '{94;371}'
+            - '{478;373}'
+            - '{683;373}'
+            - '{94;373}'
             rel: shift
-        - ptid: '{922;425}'
-          rel: graydist
-          min: false
+      - ptid: '{923;425}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{869;351}'
+          rel: blackdist
+          round: false
+      - ptid:
+          base: '{768;0}'
+          pt-a: '{667;-4}'
+          pt-b: '{667;24}'
+          pt-a-sh: '{867;-4}'
+          pt-b-sh: '{867;24}'
+        macro:
+          nm: lc-serif
+      - ptid: '{516;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{209;-11}'
+          rel: shift
+        - ptid: '{557;36}'
+          rel: blackdist
+          round: false
           points:
-          - ptid: '{869;351}'
-            rel: blackdist
-            round: false
+          - ptid: '{247;36}'
+            rel: shift
+    props:
+      category: Ll
   t_t_y.dlig:
     y:
       points:
-      - ptid: '{209;-11}'
-        pos: lc-baseline-undershoot
+      - ptid:
+          base: '{932;415}'
+          pt-a: '{1012;418}'
+          pt-b: '{1012;392}'
+          base-sh: '{660;415}'
+          pt-a-sh: '{852;418}'
+          pt-b-sh: serif-sh-b
+        macro:
+          nm: lc-serif
+      - ptid:
+        - '{464;415}'
+        - '{169;415}'
+        ref: '{932;415}'
+        rel: shift
         points:
-        - ptid: '{516;-11}'
-          rel: shift
-        - ptid: '{247;36}'
+        - ptid: '{464;371}'
+          ref: '{464;415}'
           rel: blackdist
           round: false
           points:
-          - ptid: '{557;36}'
+          - ptid:
+            - '{389;371}'
+            - '{94;371}'
             rel: shift
-      - ptid: '{667;-270}'
+            points:
+            - ptid: '{39;394}'
+              ref: '{94;371}'
+              rel: blackdist
+              round: false
+      - ptid: '{652;-270}'
         pos: lc-descender
         points:
-        - ptid: '{665;-196}'
+        - ptid: '{650;-196}'
           rel: blackdist
           round: false
-      - ptid:
-          base: '{947;415}'
-          pt-a: '{1027;418}'
-          pt-b: '{1027;392}'
-          base-sh: '{675;415}'
-        macro:
-          nm: lc-serif
-          base-cv: xheight
-          cup-cv: lc-serif-undershoot
-          ppem: '180'
-      - ptid: '{766;418}'
-        ref: '{1027;418}'
-        rel: shift
-      - ptid: '{369;415}'
-        ref: '{675;415}'
-        rel: shift
-      - ptid: '{616;371}'
-        ref: '{675;415}'
-        rel: blackdist
-        round: false
+      - ptid: '{501;-11}'
+        pos: lc-baseline-undershoot
         points:
-        - ptid:
-          - '{403;371}'
-          - '{94;371}'
+        - ptid: '{207;-11}'
           rel: shift
+        - ptid: '{543;36}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{248;36}'
+            rel: shift
       - ptid:
-        - '{779;-28}'
-        - '{822;80}'
+        - '{807;80}'
+        - '{764;-28}'
         ref:
-        - '{667;-270}'
-        - '{947;415}'
+        - '{652;-270}'
+        - '{932;415}'
         rel: interpolate
+      - ptid:
+        - '{449;493}'
+        - '{154;493}'
+        ref: '{932;415}'
+        rel: shift
     props:
       category: Ll
+    names:
+      serif-sh-b:
+      - '{751;392}'
+      - '{852;392}'
   uni0258.sc:
     y:
       points:
@@ -56152,6 +55848,118 @@ glyphs:
           points:
           - ptid: '{93;-201}'
             rel: shift
+  k:
+    y:
+      points:
+      - ptid:
+          base: '{133;0}'
+          pt-a: '{39;-4}'
+          pt-b: '{39;24}'
+          base-sh: '{384;0}'
+          pt-a-sh: serif-sh-a
+          pt-b-sh: serif-sh-b
+        macro:
+          nm: lc-serif
+      - ptid:
+          base: '{358;415}'
+          pt-a: '{270;418}'
+          pt-b: '{270;392}'
+          pt-a-sh: '{447;418}'
+          pt-b-sh: '{447;392}'
+        macro:
+          nm: lc-serif
+          base-cv: xheight
+          cup-cv: lc-serif-undershoot
+          ppem: '180'
+      - ptid:
+          p1: '{166;726}'
+          p2: '{50;668}'
+          p3: '{50;641}'
+        macro:
+          nm: lc-ascender-top
+      - ptid: '{169;201}'
+        ref:
+        - '{358;415}'
+        - '{133;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{169;234}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{254;242}'
+            rel: shift
+    names:
+      serif-sh-b:
+      - '{286;24}'
+      - '{228;24}'
+      - '{482;24}'
+      serif-sh-a:
+      - '{286;-4}'
+      - '{228;-4}'
+      - '{482;-4}'
+  f_y.dlig:
+    y:
+      points:
+      - ptid:
+          base: '{142;0}'
+          pt-a: '{41;-4}'
+          pt-b: '{41;24}'
+          pt-a-sh: '{245;-4}'
+          pt-b-sh: '{245;24}'
+        macro:
+          nm: lc-serif
+      - ptid: '{348;-270}'
+        pos: lc-descender
+        points:
+        - ptid: '{346;-196}'
+          rel: blackdist
+          round: false
+      - ptid:
+          base: '{628;415}'
+          pt-a: '{708;418}'
+          pt-b: '{708;392}'
+          base-sh: '{356;415}'
+          pt-a-sh: top-serif-sh-a
+          pt-b-sh: top-serif-sh-b
+        macro:
+          nm: lc-serif
+          base-cv: xheight
+          cup-cv: lc-serif-undershoot
+          ppem: '180'
+      - ptid: '{296;373}'
+        ref: '{356;415}'
+        rel: blackdist
+        round: false
+        points:
+        - ptid: '{98;373}'
+          rel: shift
+        - ptid: '{43;400}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{460;-28}'
+        - '{503;80}'
+        ref:
+        - '{628;415}'
+        - '{348;-270}'
+        rel: interpolate
+      - ptid: '{324;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{268;680}'
+          rel: blackdist
+          round: false
+    props:
+      category: Ll
+    names:
+      top-serif-sh-b:
+      - '{447;392}'
+      - '{548;392}'
+      top-serif-sh-a:
+      - '{447;418}'
+      - '{548;418}'
 uni01E5:
   y:
     points:

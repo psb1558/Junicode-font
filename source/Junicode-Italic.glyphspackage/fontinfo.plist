@@ -267,7 +267,7 @@ value = (
 }
 );
 date = "2023-08-05 03:14:33 +0000";
-familyName = Junicode;
+familyName = "Junicode VF";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -7114,14 +7114,15 @@ code = "lookupflag IgnoreMarks;
 sub longs t r by longs_t_r.dlig ;
 sub longs t i by longs_t_i.dlig ;
 sub t t r by t_t_r.dlig ;
-#sub t t y by t_t_y.dlig ;
+sub t t y by t_t_y.dlig ;
 sub c t by c_t.dlig ;
 sub f f t by f_f_t;
 sub f.rf f.lf t by f_f_t;
 sub f f r by f_f_r;
 sub f.rf f.lf r by f_f_r;
-#sub f f y by f_f_y ;
-#sub f t y by f_t_y ;
+sub f f y by f_f_y.dlig ;
+sub f.rf f.lf y by f_f_y.dlig ;
+sub f t y by f_t_y.dlig ;
 sub f f udieresis by f_f_udieresis;
 sub Q u by Q_u;
 sub f eth.loclENG by f_eth.loclENG;
@@ -7130,7 +7131,7 @@ sub f j by f_j ;
 sub f t by f_t;
 sub f r by f_r ;
 sub f t by f_t ;
-#sub f y by f_y ;
+sub f y by f_y.dlig ;
 sub f odieresis by f_odieresis;
 sub f.alt odieresis by f_odieresis;
 sub f udieresis by f_udieresis;
@@ -7143,7 +7144,7 @@ sub s t by s_t.dlig ;
 sub u s by u_s.dlig ;
 sub t r by t_r.dlig ;
 sub t t by t_t.dlig ;
-#sub t y by t_y.dlig ;
+sub t y by t_y.dlig ;
 ";
 tag = dlig;
 },

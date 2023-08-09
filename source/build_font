@@ -33,6 +33,8 @@ outputtype="ttf"
 
 instanceparam="-i"
 
+gvarparam=""
+
 hinting=true
 
 generateufo=true
@@ -80,6 +82,7 @@ fi
 if [ $outputtype == "variable" ]
 then
   fontbasename=${fontbasename}VF
+  gvarparam="--no-optimize-gvar"
 fi
 
 if [ $fontstyle == "italic" ]
@@ -138,7 +141,8 @@ then
 fi
 
 echo "building font(s)"
-fontmake -o $outputtype $instanceparam -m ${glyphsfilename}-fixed.designspace
+#fontmake -o $outputtype $instanceparam $gvarparam -m ${glyphsfilename}-fixed.designspace
+fontmake -m ${glyphsfilename}-fixed.designspace -o $outputtype $instanceparam $gvarparam 
 if [ $? -ne 0 ]
 then
  echo "fontmake failed"

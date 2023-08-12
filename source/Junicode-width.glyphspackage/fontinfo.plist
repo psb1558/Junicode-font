@@ -419,7 +419,6 @@ lookup  altgreek {
 
 lookup ss08_longs_init {
   sub s by longs ;
-#  sub longs by longs.alt1 ;
 } ss08_longs_init ;
 
 # Restore round s by language-specific rules (we only have them for English and French).
@@ -436,8 +435,11 @@ lookup ss08_longs_ENG {
 
 lookup ss08_longs_FRA {
   # French rules for long s
+  lookupflag UseMarkFilteringSet @combining_above;
   sub @LowerCase_f [ longs longs.enlarged ]' by [ s s.enlarged ] ;
+  sub @LowerCase_f @combining_above [ longs longs.enlarged ]' by [ s s.enlarged ] ;
   ignore sub [ longs longs.enlarged ]' @AllLowerCaseexclfbh ;
+  ignore sub [ longs longs.enlarged ]' @combining_above @AllLowerCaseexclfbh ;
   sub [ longs longs.enlarged ]' by [ s s.enlarged ] ;
 } ss08_longs_FRA ;
 
@@ -476,19 +478,26 @@ lookup lig_longs_right {
   sub [ i j ] by [ i.llongs j.llongs ] ;
 } lig_longs_right ;
 
+lookup f_before_dia {
+  sub f by f.alt ;
+  sub longs by longs.alt ;
+  sub longs.llongs by longs.llongs.alt ;
+  sub eth.loclENG by eth.loclENG.alt ;
+} f_before_dia ;
+
 # Here are the rules for pseudo-ligatures
 
-lookup calt_fligs_1 {
-  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dlb_f_right ;
-} calt_fligs_1 ;
+#lookup calt_fligs_1 {
+#  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dlb_f_right ;
+#} calt_fligs_1 ;
 
-lookup calt_fligs_2 {
-  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
-  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
-  sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
-  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
-  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
-} calt_fligs_2 ;
+#lookup calt_fligs_2 {
+#  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
+#  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
+#  sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
+#  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
+#  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
+#} calt_fligs_2 ;
 
 # Handle collision of j with preceding char with ogonek.
 
@@ -508,12 +517,6 @@ lookup calt_j_alt {
 #   ignore sub @RoundOnRight @combining_above [rrotunda.alt rrotunda.alt.sc]' ;
 #   sub [rrotunda.alt rrotunda.alt.sc]' by [r r.sc] ;
 # } calt_rrotunda;
-
-lookup f_before_dia {
-  sub f by f.alt ;
-  sub longs by longs.alt ;
-  sub eth.loclENG by eth.loclENG.alt ;
-} f_before_dia ;
 
 lookup OldEnglish {
     sub ampersand by etTironian ;
@@ -2651,9 +2654,9 @@ value = "Medium-high Overline";
 tag = ss05;
 },
 {
-code = "lookup ss06_dflt {
-script DFLT;
-language dflt;
+code = "#lookup ss06_dflt {
+#script DFLT;
+#language dflt;
 sub a by a.enlarged ;
 sub aa by aa.enlarged ;
 sub eogonek.alt by eogonek.enlarged.alt ;
@@ -2736,92 +2739,92 @@ sub Z by Z.enlarged ;
 sub Eogonek.alt by Eogonek.enlarged.alt ;
 sub Eogonek.alt1 by Eogonek.enlarged.alt1 ;
 sub Thorn.loclENG by Thorn.enlarged.loclENG ;
-} ss06_dflt ;
+#} ss06_dflt ;
 
-lookup ss06_eng {
-  script latn ;
-  language ENG ;
-sub a by a.enlarged ;
-sub aa by aa.enlarged ;
-sub eogonek.alt by eogonek.enlarged.alt ;
-sub ao by ao.enlarged ;
-sub ae by ae.enlarged ;
-sub b by b.enlarged ;
-sub c by c.enlarged ;
-sub d by d.enlarged ;
-sub eth by eth.enlarged ;
-sub dinsular by dinsular.enlarged ;
-sub e by e.enlarged ;
-sub eogonek by eogonek.enlarged ;
-sub f by f.enlarged ;
-sub finsular by finsular.enlarged ;
-sub g by g.enlarged ;
-sub h by h.enlarged ;
-sub i by i.enlarged ;
-sub dotlessi by dotlessi.enlarged ;
-sub j by j.enlarged ;
-sub jdotless by jdotless.enlarged ;
-sub k by k.enlarged ;
-sub l by l.enlarged ;
-sub m by m.enlarged ;
-sub n by n.enlarged ;
-sub eth.loclENG by eth.enlarged.loclENG ;
-sub thorn by thorn.enlarged ;
-sub o by o.enlarged ;
-sub oe by oe.enlarged ;
-sub p by p.enlarged ;
-sub thorn.loclENG by thorn.enlarged.loclENG ;
-sub q by q.enlarged ;
-sub r by r.enlarged ;
-sub s by s.enlarged ;
-sub longs by longs.enlarged ;
-sub t by t.enlarged ;
-sub u by u.enlarged ;
-sub v by v.enlarged ;
-sub w by w.enlarged ;
-sub x by x.enlarged ;
-sub y by y.enlarged ;
-sub z by z.enlarged ;
-sub Ao by AO.enlarged ;
-sub A by A.enlarged ;
-sub AA by AA.enlarged ;
-sub Aacute by Aacute.enlarged ;
-sub AE by AE.enlarged ;
-sub B by B.enlarged ;
-sub C by C.enlarged ;
-sub D by D.enlarged ;
-sub Eth by Eth.enlarged.loclENG ;
-sub Dinsular by Dinsular.enlarged ;
-sub E by E.enlarged ;
-sub Eogonek by Eogonek.enlarged ;
-sub F by F.enlarged ;
-sub Finsular by Finsular.enlarged ;
-sub G by G.enlarged ;
-sub H by H.enlarged ;
-sub I by I.enlarged ;
-sub J by J.enlarged ;
-sub K by K.enlarged ;
-sub L by L.enlarged ;
-sub M by M.enlarged ;
-sub N by N.enlarged ;
-sub O by O.enlarged ;
-sub OE by OE.enlarged ;
-sub P by P.enlarged ;
-sub Thorn by Thorn.enlarged ;
-sub Q by Q.enlarged ;
-sub R by R.enlarged ;
-sub S by S.enlarged ;
-sub T by T.enlarged ;
-sub U by U.enlarged ;
-sub V by V.enlarged ;
-sub W by W.enlarged ;
-sub X by X.enlarged ;
-sub Y by Y.enlarged ;
-sub Z by Z.enlarged ;
-sub Eogonek.alt by Eogonek.enlarged.alt ;
-sub Eogonek.alt1 by Eogonek.enlarged.alt1 ;
-sub Thorn.loclENG by Thorn.enlarged.loclENG ;
-} ss06_eng ;
+#lookup ss06_eng {
+#  script latn ;
+#  language ENG ;
+#sub a by a.enlarged ;
+#sub aa by aa.enlarged ;
+#sub eogonek.alt by eogonek.enlarged.alt ;
+#sub ao by ao.enlarged ;
+#sub ae by ae.enlarged ;
+#sub b by b.enlarged ;
+#sub c by c.enlarged ;
+#sub d by d.enlarged ;
+#sub eth by eth.enlarged ;
+#sub dinsular by dinsular.enlarged ;
+#sub e by e.enlarged ;
+#sub eogonek by eogonek.enlarged ;
+#sub f by f.enlarged ;
+#sub finsular by finsular.enlarged ;
+#sub g by g.enlarged ;
+#sub h by h.enlarged ;
+#sub i by i.enlarged ;
+#sub dotlessi by dotlessi.enlarged ;
+#sub j by j.enlarged ;
+#sub jdotless by jdotless.enlarged ;
+#sub k by k.enlarged ;
+#sub l by l.enlarged ;
+#sub m by m.enlarged ;
+#sub n by n.enlarged ;
+#sub eth.loclENG by eth.enlarged.loclENG ;
+#sub thorn by thorn.enlarged ;
+#sub o by o.enlarged ;
+#sub oe by oe.enlarged ;
+#sub p by p.enlarged ;
+#sub thorn.loclENG by thorn.enlarged.loclENG ;
+#sub q by q.enlarged ;
+#sub r by r.enlarged ;
+#sub s by s.enlarged ;
+#sub longs by longs.enlarged ;
+#sub t by t.enlarged ;
+#sub u by u.enlarged ;
+#sub v by v.enlarged ;
+#sub w by w.enlarged ;
+#sub x by x.enlarged ;
+#sub y by y.enlarged ;
+#sub z by z.enlarged ;
+#sub Ao by AO.enlarged ;
+#sub A by A.enlarged ;
+#sub AA by AA.enlarged ;
+#sub Aacute by Aacute.enlarged ;
+#sub AE by AE.enlarged ;
+#sub B by B.enlarged ;
+#sub C by C.enlarged ;
+#sub D by D.enlarged ;
+#sub Eth by Eth.enlarged.loclENG ;
+#sub Dinsular by Dinsular.enlarged ;
+#sub E by E.enlarged ;
+#sub Eogonek by Eogonek.enlarged ;
+#sub F by F.enlarged ;
+#sub Finsular by Finsular.enlarged ;
+#sub G by G.enlarged ;
+#sub H by H.enlarged ;
+#sub I by I.enlarged ;
+#sub J by J.enlarged ;
+#sub K by K.enlarged ;
+#sub L by L.enlarged ;
+#sub M by M.enlarged ;
+#sub N by N.enlarged ;
+#sub O by O.enlarged ;
+#sub OE by OE.enlarged ;
+#sub P by P.enlarged ;
+#sub Thorn by Thorn.enlarged ;
+#sub Q by Q.enlarged ;
+#sub R by R.enlarged ;
+#sub S by S.enlarged ;
+#sub T by T.enlarged ;
+#sub U by U.enlarged ;
+#sub V by V.enlarged ;
+#sub W by W.enlarged ;
+#sub X by X.enlarged ;
+#sub Y by Y.enlarged ;
+#sub Z by Z.enlarged ;
+#sub Eogonek.alt by Eogonek.enlarged.alt ;
+#sub Eogonek.alt1 by Eogonek.enlarged.alt1 ;
+#sub Thorn.loclENG by Thorn.enlarged.loclENG ;
+#} ss06_eng ;
 ";
 labels = (
 {
@@ -6230,6 +6233,7 @@ sub ddotaccent by ddotaccent.sc;
 sub ddotbelow by ddotbelow.sc;
 sub dhook by dhook.sc;
 sub dinsular by dinsular.sc;
+sub dinsular.alt by dinsular.sc;
 sub dmacronbelow by dmacronbelow.sc;
 sub dtopbar by dtopbar.sc;
 sub e by e.sc;
@@ -6315,7 +6319,9 @@ sub hdotbelow by hdotbelow.sc;
 sub hmacronbelow by hmacronbelow.sc;
 sub hv by hv.sc;
 sub i by i.sc;
+sub i.alt2 by i.sc ;
 sub iacute by iacute.sc;
+sub iacute.alt3 by iacute.sc ;
 sub ibreve by ibreve.sc;
 sub icaron by icaron.sc;
 sub icircumflex by icircumflex.sc;
@@ -6348,6 +6354,7 @@ sub kmacronbelow by kmacronbelow.sc;
 sub kstroke by kstroke.sc;
 sub kstrokediagonalstroke by kstrokediagonalstroke.sc;
 sub l by l.sc;
+sub l.alt2 by l.sc ;
 sub lacute by lacute.sc;
 sub lbar by lbar.sc;
 sub lbroken by lbroken.sc;
@@ -6460,6 +6467,14 @@ sub sdotbelowdotaccent by sdotbelowdotaccent.sc;
 sub germandbls by germandbls.sc;
 sub sinsular by sinsular.sc;
 sub longs by longs.sc;
+sub longs.rlongs by longs.sc ;
+sub longs.llongs by longs.sc ;
+sub longs.alt by longs.sc ;
+sub longs.alt2 by longs.sc ;
+sub longs.llongsrij by longs.sc ;
+sub longs.llongsrtall by longs.sc ;
+sub longs.rij by longs.sc ;
+sub longs.rtall by longs.sc ;
 sub t by t.sc;
 sub tbar by tbar.sc;
 sub tcaron by tcaron.sc;
@@ -6554,6 +6569,7 @@ sub ao.alt by ao.alt.sc;
 sub eogonek.alt by eogonek.alt.sc;
 sub rrotunda.alt by rrotunda.alt.sc;
 sub a.alt1 by a.alt1.sc;
+sub a.alt3 by a.alt3.sc;
 sub aogonek.alt1 by aogonek.alt1.sc;
 sub ae.alt1 by ae.alt1.sc;
 sub e.alt1 by e.alt1.sc;
@@ -7035,19 +7051,30 @@ lookup widemacron {
                  [ macroncomb.wide.case tildecomb.wide.case macroncomb.alt3.wide.case ] ;
 } widemacron ;
 
-lookup f_alt {
-#  sub f' [ @lc_with_diacritics_above eth ] by f.alt;
-  sub f' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
-} f_alt;
-
 lookup ethdiacritic {
   sub eth' @lowdiacritics by eth.withdiacritic ;
   sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
   sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
 } ethdiacritic ;
 
-lookup calt_fligs_1 ;
-lookup calt_fligs_2 ;
+#lookup calt_fligs_1 ;
+lookup calt_fligs_1 {
+  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dlb_f_right ;
+} calt_fligs_1 ;
+
+#lookup calt_fligs_2 ;
+lookup calt_fligs_2 {
+  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
+  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
+  sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
+  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
+  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
+} calt_fligs_2 ;
+
+lookup f_alt {
+#  sub f' [ @lc_with_diacritics_above eth ] by f.alt;
+  sub [f longs longs.llongs]' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
+} f_alt;
 
 lookup calt_j_alt ;
 
@@ -7620,6 +7647,7 @@ KernOnModels = (
 "r y"
 );
 };
+visible = 1;
 },
 {
 axesValues = (

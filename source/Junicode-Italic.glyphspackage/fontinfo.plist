@@ -267,7 +267,7 @@ value = (
 }
 );
 date = "2023-08-05 03:14:33 +0000";
-familyName = "Junicode VF";
+familyName = Junicode;
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -393,8 +393,11 @@ lookup ss08_longs_ENG {
 
 lookup ss08_longs_FRA {
   # French rules for long s
+  lookupflag UseMarkFilteringSet @combining_above;
   sub @LowerCase_f [ longs longs.enlarged ]' by [ s s.enlarged ] ;
+  sub @LowerCase_f @combining_above [ longs longs.enlarged ]' by [ s s.enlarged ] ;
   ignore sub [ longs longs.enlarged ]' @AllLowerCaseexclfbh ;
+  ignore sub [ longs longs.enlarged ]' @combining_above @AllLowerCaseexclfbh ;
   sub [ longs longs.enlarged ]' by [ s s.enlarged ] ;
 } ss08_longs_FRA ;
 
@@ -412,9 +415,9 @@ lookup f_l_right {
   sub [ f f.lf ] by [ f.rl f.lfrl ] ;
 } f_l_right ;
 
-lookup dlb_f_right {
+lookup dbl_f_right {
   sub [ f f.alt longs ] by [ f.lf f.alt.lf longs.llongs ] ;
-} dlb_f_right ;
+} dbl_f_right ;
 
 lookup lig_left {
   sub [ f longs ] by [ f.rij longs.rij ] ;
@@ -432,6 +435,13 @@ lookup lig_f_right {
 lookup lig_longs_right {
   sub [ i j ] by [ i.llongs j.llongs ] ;
 } lig_longs_right ;
+
+lookup f_before_dia {
+  sub f by f.alt ;
+  sub longs by longs.alt ;
+  sub longs.llongs by longs.llongs.alt ;
+  sub eth.loclENG by eth.loclENG.alt ;
+} f_before_dia ;
 
 lookup OldEnglish {
     sub ampersand by etTironian ;
@@ -488,6 +498,7 @@ lookup ArchaicIrish {
     sub g by ginsular ;
     sub gdotaccent by gdotaccent.alt1 ;
     sub i by i.alt2 ;
+    sub l by l.alt2 ;
     sub r by rinsular ;
     sub rdotaccent by rdotaccent.alt1 ;
     sub s by sinsular ;
@@ -507,17 +518,17 @@ lookup ArchaicIrish {
 
 # Here are the rules for pseudo-ligatures
 
-lookup calt_fligs_1 {
-  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dlb_f_right ;
-} calt_fligs_1 ;
+#lookup calt_fligs_1 {
+#  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dlb_f_right ;
+#} calt_fligs_1 ;
 
-lookup calt_fligs_2 {
-  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
-  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
-  sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
-  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
-  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
-} calt_fligs_2 ;
+#lookup calt_fligs_2 {
+#  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
+#  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
+#  sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
+#  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
+#  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
+#} calt_fligs_2 ;
 
 # Handle collision of j with preceding char with ogonek.
 
@@ -6134,6 +6145,7 @@ sub ddotaccent by ddotaccent.sc;
 sub ddotbelow by ddotbelow.sc;
 sub dhook by dhook.sc;
 sub dinsular by dinsular.sc;
+sub dinsular.alt by dinsular.sc;
 sub dmacronbelow by dmacronbelow.sc;
 sub dtopbar by dtopbar.sc;
 sub dz by dz.sc;
@@ -6188,6 +6200,7 @@ sub f.alt.lf by f.sc ;
 sub b.lf by b.sc ;
 sub h.lf by h.sc ;
 sub i.lf by i.sc ;
+sub i.alt2 by i.sc ;
 sub j.lf by j.sc ;
 sub jdotaccent by jdotaccent.sc ;
 sub jdotbelow by jdotbelow.sc ;
@@ -6227,6 +6240,7 @@ sub hdotbelow by hdotbelow.sc;
 sub hv by hv.sc;
 sub i by i.sc;
 sub iacute by iacute.sc;
+sub iacute.alt3 by iacute.sc ;
 sub ibreve by ibreve.sc;
 sub icaron by icaron.sc;
 sub icircumflex by icircumflex.sc;
@@ -6258,6 +6272,7 @@ sub khook by khook.sc;
 sub kstroke by kstroke.sc;
 sub kstrokediagonalstroke by kstrokediagonalstroke.sc;
 sub l by l.sc;
+sub l.alt2 by l.sc ;
 sub lacute by lacute.sc;
 sub lbar by lbar.sc;
 sub lbroken by lbroken.sc;
@@ -6370,6 +6385,14 @@ sub sdotbelowdotaccent by sdotbelowdotaccent.sc;
 sub germandbls by germandbls.sc;
 sub sinsular by sinsular.sc;
 sub longs by longs.sc;
+sub longs.rlongs by longs.sc ;
+sub longs.llongs by longs.sc ;
+sub longs.alt by longs.sc ;
+sub longs.alt2 by longs.sc ;
+sub longs.llongsrij by longs.sc ;
+sub longs.llongsrtall by longs.sc ;
+sub longs.rij by longs.sc ;
+sub longs.rtall by longs.sc ;
 sub t by t.sc;
 sub tbar by tbar.sc;
 sub tcaron by tcaron.sc;
@@ -6463,6 +6486,7 @@ sub eogonek.alt by eogonek.alt.sc;
 sub macute.alt by macute.alt.sc;
 sub rrotunda.alt by rrotunda.alt.sc;
 sub a.alt1 by a.alt1.sc;
+sub a.alt3 by a.alt1.sc;
 sub aogonek.alt1 by aogonek.alt1.sc;
 sub ae.alt1 by ae.alt1.sc;
 sub e.alt1 by e.alt1.sc;
@@ -6917,18 +6941,32 @@ lookup widemacron {
                  [ macroncomb.wide.case tildecomb.wide.case macroncomb.alt3.wide.case ] ;
 } widemacron ;
 
-lookup f_alt {
-  sub [ f longs ]' @lc_with_diacritics_above by [ f.alt longs.alt ];
-} f_alt;
-
 lookup ethdiacritic {
   sub eth' @lowdiacritics by eth.withdiacritic ;
   sub eth.loclENG' @lowdiacritics by eth.withdiacritic ;
   sub eth.loclENG.alt' @lowdiacritics by eth.withdiacritic ;
 } ethdiacritic ;
 
-  lookup calt_fligs_1 ;
-  lookup calt_fligs_2 ;
+#  lookup calt_fligs_1 ;
+#  lookup calt_fligs_2 ;
+
+lookup calt_fligs_1 {
+  sub [ f longs ]' lookup dbl_f_left [ f f.alt longs ]' lookup dbl_f_right ;
+} calt_fligs_1 ;
+
+lookup calt_fligs_2 {
+  sub [ f f.lf ]' lookup lig_left [ i j ]' lookup lig_f_right ;
+  sub [ longs longs.llongs ]' lookup lig_left [ i j ]' lookup lig_longs_right ;
+  sub [ f f.lf ]' lookup f_tall_right [ b h k thorn thorn.loclENG ]' lookup lig_right ;
+  sub [ f f.lf ]' lookup f_l_right [ l lslash ]' lookup lig_right ;
+  sub [ longs longs.llongs ]' lookup f_tall_right [ b h k l lslash thorn thorn.loclENG ]' lookup lig_right ;
+} calt_fligs_2 ;
+
+lookup f_alt {
+  sub [f longs longs.llongs]' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
+  # sub [ f longs ]' @lc_with_diacritics_above by [ f.alt longs.alt ];
+} f_alt;
+
   lookup calt_j_alt ;
 
   lookup calt_insular_st ;
@@ -8398,7 +8436,7 @@ pos = -275;
 pos = 458;
 },
 {
-pos = 9;
+pos = 11;
 }
 );
 name = "Narrow Italic";
@@ -9934,12 +9972,13 @@ master01 = {
 "@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_H" = {
+"@MMK_R_KO_A" = 15;
 "@MMK_R_KO_B.alt1" = 0;
 "@MMK_R_KO_Q.alt" = 0;
 "@MMK_R_KO_S" = 13;
 "@MMK_R_KO_Sinsular" = -9;
 "@MMK_R_KO_U" = 12;
-"@MMK_R_KO_V" = 7;
+"@MMK_R_KO_V" = 27;
 "@MMK_R_KO_Z" = 17;
 "@MMK_R_KO_a" = -39;
 "@MMK_R_KO_a.alt1" = -38;
@@ -15500,6 +15539,14 @@ j = 119;
 "@MMK_R_KO_y.alt" = 21;
 "@MMK_R_KO_z" = 3;
 };
+"@MMK_L_a.gothic" = {
+"@MMK_R_e.gothic" = -50;
+"@MMK_R_s.gothic" = -20;
+"@MMK_R_t.gothic" = -130;
+};
+"@MMK_L_b.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -200;
 "@MMK_R_KO_b" = 40;
@@ -15538,9 +15585,15 @@ ddotaccent.alt2 = 40;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_g.gothic" = {
+"@MMK_R_a.gothic" = -50;
+};
 "@MMK_L_gamma" = {
 "@MMK_R_alpha" = -30;
 "@MMK_R_parenright.alt" = -50;
+};
+"@MMK_L_h.gothic" = {
+"@MMK_R_t.gothic" = -50;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_A" = -52;
@@ -15561,6 +15614,9 @@ ddotaccent.alt2 = 40;
 "@MMK_R_one.osf" = -20;
 Eth = -30;
 };
+"@MMK_L_i.gothic" = {
+"@MMK_R_a.gothic" = -20;
+};
 "@MMK_L_ko_c.sc" = {
 "@MMK_R_ko_o.sc" = -10;
 };
@@ -15572,6 +15628,18 @@ Eth = -30;
 };
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
+};
+"@MMK_L_l.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
+"@MMK_L_m.gothic" = {
+"@MMK_R_a.gothic" = -20;
+};
+"@MMK_L_n.gothic" = {
+"@MMK_R_a.gothic" = -50;
+};
+"@MMK_L_olong.gothic" = {
+"@MMK_R_e.gothic" = -20;
 };
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
@@ -15596,11 +15664,18 @@ Eth = -30;
 "@MMK_L_question" = {
 "@MMK_R_KO_quoteright" = 40;
 };
+"@MMK_L_r.gothic" = {
+"@MMK_R_thorn.gothic" = -30;
+};
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
 };
 "@MMK_L_six.osf" = {
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_t.gothic" = {
+"@MMK_R_a.gothic" = -30;
+"@MMK_R_olong.gothic" = 30;
 };
 "@MMK_L_three.osf" = {
 "@MMK_R_endash" = -20;
@@ -17723,6 +17798,7 @@ zero.zero = 48;
 "@MMK_R_parenright.alt" = 40;
 };
 "@MMK_L_KO_H" = {
+"@MMK_R_KO_A" = 15;
 "@MMK_R_KO_B.alt1" = 0;
 "@MMK_R_KO_Q.alt" = 0;
 "@MMK_R_KO_S" = 13;
@@ -23287,6 +23363,14 @@ j = 150;
 "@MMK_R_KO_y.alt" = 28;
 "@MMK_R_KO_z" = 19;
 };
+"@MMK_L_a.gothic" = {
+"@MMK_R_e.gothic" = -40;
+"@MMK_R_s.gothic" = -10;
+"@MMK_R_t.gothic" = -120;
+};
+"@MMK_L_b.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -197;
 "@MMK_R_KO_b" = 40;
@@ -23324,9 +23408,15 @@ ddotaccent.alt2 = 40;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_g.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
 "@MMK_L_gamma" = {
 "@MMK_R_alpha" = -20;
 "@MMK_R_parenright.alt" = -20;
+};
+"@MMK_L_h.gothic" = {
+"@MMK_R_t.gothic" = -30;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -60;
@@ -23347,6 +23437,9 @@ ddotaccent.alt2 = 40;
 Eth = -10;
 Z = -50;
 };
+"@MMK_L_i.gothic" = {
+"@MMK_R_a.gothic" = -20;
+};
 "@MMK_L_ko_c.sc" = {
 "@MMK_R_ko_o.sc" = -16;
 };
@@ -23358,6 +23451,18 @@ Z = -50;
 };
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
+};
+"@MMK_L_l.gothic" = {
+"@MMK_R_a.gothic" = -25;
+};
+"@MMK_L_m.gothic" = {
+"@MMK_R_a.gothic" = -10;
+};
+"@MMK_L_n.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
+"@MMK_L_olong.gothic" = {
+"@MMK_R_e.gothic" = -12;
 };
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
@@ -23382,11 +23487,18 @@ Z = -50;
 "@MMK_L_question" = {
 "@MMK_R_KO_quoteright" = 40;
 };
+"@MMK_L_r.gothic" = {
+"@MMK_R_thorn.gothic" = -30;
+};
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
 };
 "@MMK_L_six.osf" = {
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_t.gothic" = {
+"@MMK_R_a.gothic" = -20;
+"@MMK_R_olong.gothic" = 30;
 };
 "@MMK_L_three.osf" = {
 "@MMK_R_endash" = -20;
@@ -25509,12 +25621,13 @@ zero.zero = 57;
 "@MMK_R_parenright.alt" = 20;
 };
 "@MMK_L_KO_H" = {
+"@MMK_R_KO_A" = 15;
 "@MMK_R_KO_B.alt1" = 10;
 "@MMK_R_KO_Q.alt" = 32;
 "@MMK_R_KO_S" = 22;
 "@MMK_R_KO_Sinsular" = 0;
 "@MMK_R_KO_U" = 18;
-"@MMK_R_KO_V" = 9;
+"@MMK_R_KO_V" = 29;
 "@MMK_R_KO_Z" = 17;
 "@MMK_R_KO_a" = -33;
 "@MMK_R_KO_a.alt1" = -35;
@@ -31077,6 +31190,14 @@ j = 115;
 "@MMK_R_KO_y.alt" = 29;
 "@MMK_R_KO_z" = 10;
 };
+"@MMK_L_a.gothic" = {
+"@MMK_R_e.gothic" = -60;
+"@MMK_R_s.gothic" = -23;
+"@MMK_R_t.gothic" = -140;
+};
+"@MMK_L_b.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -222;
 "@MMK_R_KO_b" = 40;
@@ -31116,9 +31237,15 @@ s = -203;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_g.gothic" = {
+"@MMK_R_a.gothic" = -60;
+};
 "@MMK_L_gamma" = {
 "@MMK_R_alpha" = -20;
 "@MMK_R_parenright.alt" = -40;
+};
+"@MMK_L_h.gothic" = {
+"@MMK_R_t.gothic" = -60;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -90;
@@ -31138,6 +31265,9 @@ s = -203;
 "@MMK_R_one.osf" = -20;
 Eth = -40;
 };
+"@MMK_L_i.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
 "@MMK_L_ko_c.sc" = {
 "@MMK_R_ko_o.sc" = -10;
 };
@@ -31149,6 +31279,18 @@ Eth = -40;
 };
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
+};
+"@MMK_L_l.gothic" = {
+"@MMK_R_a.gothic" = -45;
+};
+"@MMK_L_m.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
+"@MMK_L_n.gothic" = {
+"@MMK_R_a.gothic" = -60;
+};
+"@MMK_L_olong.gothic" = {
+"@MMK_R_e.gothic" = -25;
 };
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
@@ -31173,11 +31315,18 @@ Eth = -40;
 "@MMK_L_question" = {
 "@MMK_R_KO_quoteright" = 30;
 };
+"@MMK_L_r.gothic" = {
+"@MMK_R_thorn.gothic" = -40;
+};
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
 };
 "@MMK_L_six.osf" = {
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_t.gothic" = {
+"@MMK_R_a.gothic" = -40;
+"@MMK_R_olong.gothic" = 10;
 };
 "@MMK_L_three.osf" = {
 "@MMK_R_endash" = -20;
@@ -33299,12 +33448,13 @@ zero.zero = 50;
 "@MMK_R_parenright.alt" = 60;
 };
 "@MMK_L_KO_H" = {
+"@MMK_R_KO_A" = 15;
 "@MMK_R_KO_B.alt1" = 0;
 "@MMK_R_KO_Q.alt" = 12;
 "@MMK_R_KO_S" = 9;
 "@MMK_R_KO_Sinsular" = -8;
 "@MMK_R_KO_U" = 12;
-"@MMK_R_KO_V" = 0;
+"@MMK_R_KO_V" = 29;
 "@MMK_R_KO_Z" = 12;
 "@MMK_R_KO_a" = -32;
 "@MMK_R_KO_a.alt1" = -31;
@@ -38867,6 +39017,14 @@ j = 136;
 "@MMK_R_KO_y.alt" = 18;
 "@MMK_R_KO_z" = 3;
 };
+"@MMK_L_a.gothic" = {
+"@MMK_R_e.gothic" = -40;
+"@MMK_R_s.gothic" = -10;
+"@MMK_R_t.gothic" = -110;
+};
+"@MMK_L_b.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -198;
 "@MMK_R_KO_b" = 40;
@@ -38905,9 +39063,15 @@ ddotaccent.alt2 = 20;
 "@MMK_R_endash" = -20;
 "@MMK_R_hyphen" = -50;
 };
+"@MMK_L_g.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
 "@MMK_L_gamma" = {
 "@MMK_R_alpha" = -20;
 "@MMK_R_parenright.alt" = -20;
+};
+"@MMK_L_h.gothic" = {
+"@MMK_R_t.gothic" = -40;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -70;
@@ -38927,6 +39091,9 @@ ddotaccent.alt2 = 20;
 "@MMK_R_one.osf" = -20;
 Eth = -20;
 };
+"@MMK_L_i.gothic" = {
+"@MMK_R_a.gothic" = -20;
+};
 "@MMK_L_ko_c.sc" = {
 "@MMK_R_ko_o.sc" = -15;
 };
@@ -38938,6 +39105,18 @@ Eth = -20;
 };
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
+};
+"@MMK_L_l.gothic" = {
+"@MMK_R_a.gothic" = -25;
+};
+"@MMK_L_m.gothic" = {
+"@MMK_R_a.gothic" = -10;
+};
+"@MMK_L_n.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
+"@MMK_L_olong.gothic" = {
+"@MMK_R_e.gothic" = -12;
 };
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
@@ -38962,11 +39141,18 @@ Eth = -20;
 "@MMK_L_question" = {
 "@MMK_R_KO_quoteright" = 40;
 };
+"@MMK_L_r.gothic" = {
+"@MMK_R_thorn.gothic" = -30;
+};
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
 };
 "@MMK_L_six.osf" = {
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_t.gothic" = {
+"@MMK_R_a.gothic" = -20;
+"@MMK_R_olong.gothic" = 40;
 };
 "@MMK_L_three.osf" = {
 "@MMK_R_endash" = -20;
@@ -41088,6 +41274,7 @@ zero.zero = 47;
 "@MMK_R_parenright.alt" = 30;
 };
 "@MMK_L_KO_H" = {
+"@MMK_R_KO_A" = 15;
 "@MMK_R_KO_B.alt1" = 5;
 "@MMK_R_KO_Q.alt" = 5;
 "@MMK_R_KO_S" = 11;
@@ -46667,6 +46854,14 @@ j = 100;
 "@MMK_R_KO_y.alt" = 44;
 "@MMK_R_KO_z" = 21;
 };
+"@MMK_L_a.gothic" = {
+"@MMK_R_e.gothic" = -50;
+"@MMK_R_s.gothic" = -25;
+"@MMK_R_t.gothic" = -150;
+};
+"@MMK_L_b.gothic" = {
+"@MMK_R_a.gothic" = -70;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -236;
 "@MMK_R_KO_b" = 70;
@@ -46705,9 +46900,15 @@ ddotaccent.alt2 = 80;
 "@MMK_R_endash" = -40;
 "@MMK_R_hyphen" = -70;
 };
+"@MMK_L_g.gothic" = {
+"@MMK_R_a.gothic" = -70;
+};
 "@MMK_L_gamma" = {
 "@MMK_R_alpha" = -40;
 "@MMK_R_parenright.alt" = -50;
+};
+"@MMK_L_h.gothic" = {
+"@MMK_R_t.gothic" = -50;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_H" = -100;
@@ -46727,6 +46928,9 @@ ddotaccent.alt2 = 80;
 "@MMK_R_one.osf" = -20;
 Eth = -30;
 };
+"@MMK_L_i.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
 "@MMK_L_ko_c.sc" = {
 "@MMK_R_ko_o.sc" = -15;
 };
@@ -46738,6 +46942,18 @@ Eth = -30;
 };
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 6;
+};
+"@MMK_L_l.gothic" = {
+"@MMK_R_a.gothic" = -50;
+};
+"@MMK_L_m.gothic" = {
+"@MMK_R_a.gothic" = -30;
+};
+"@MMK_L_n.gothic" = {
+"@MMK_R_a.gothic" = -60;
+};
+"@MMK_L_olong.gothic" = {
+"@MMK_R_e.gothic" = -27;
 };
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
@@ -46762,11 +46978,18 @@ Eth = -30;
 "@MMK_L_question" = {
 "@MMK_R_KO_quoteright" = 40;
 };
+"@MMK_L_r.gothic" = {
+"@MMK_R_thorn.gothic" = -40;
+};
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
 };
 "@MMK_L_six.osf" = {
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_t.gothic" = {
+"@MMK_R_a.gothic" = -50;
+"@MMK_R_olong.gothic" = 30;
 };
 "@MMK_L_three.osf" = {
 "@MMK_R_endash" = -20;
@@ -48890,6 +49113,7 @@ zero.zero = 45;
 "@MMK_R_parenright.alt" = 50;
 };
 "@MMK_L_KO_H" = {
+"@MMK_R_KO_A" = 15;
 "@MMK_R_KO_B.alt1" = 0;
 "@MMK_R_KO_Q.alt" = 0;
 "@MMK_R_KO_S" = 13;
@@ -54460,6 +54684,11 @@ j = 99;
 "@MMK_R_KO_y.alt" = 21;
 "@MMK_R_KO_z" = 3;
 };
+"@MMK_L_a.gothic" = {
+"@MMK_R_e.gothic" = -50;
+"@MMK_R_s.gothic" = -20;
+"@MMK_R_t.gothic" = -130;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -200;
 "@MMK_R_KO_b" = 40;
@@ -54498,9 +54727,15 @@ ddotaccent.alt2 = 40;
 "@MMK_R_endash" = -30;
 "@MMK_R_hyphen" = -60;
 };
+"@MMK_L_g.gothic" = {
+"@MMK_R_a.gothic" = -50;
+};
 "@MMK_L_gamma" = {
 "@MMK_R_alpha" = -40;
 "@MMK_R_parenright.alt" = -30;
+};
+"@MMK_L_h.gothic" = {
+"@MMK_R_t.gothic" = -50;
 };
 "@MMK_L_hyphen" = {
 "@MMK_R_KO_A" = -52;
@@ -54521,6 +54756,9 @@ ddotaccent.alt2 = 40;
 "@MMK_R_one.osf" = -20;
 Eth = -30;
 };
+"@MMK_L_i.gothic" = {
+"@MMK_R_a.gothic" = -20;
+};
 "@MMK_L_ko_c.sc" = {
 "@MMK_R_ko_o.sc" = -10;
 };
@@ -54532,6 +54770,18 @@ Eth = -30;
 };
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
+};
+"@MMK_L_l.gothic" = {
+"@MMK_R_a.gothic" = -40;
+};
+"@MMK_L_m.gothic" = {
+"@MMK_R_a.gothic" = -20;
+};
+"@MMK_L_n.gothic" = {
+"@MMK_R_a.gothic" = -50;
+};
+"@MMK_L_olong.gothic" = {
+"@MMK_R_e.gothic" = -20;
 };
 "@MMK_L_one.osf" = {
 "@MMK_R_endash" = -10;
@@ -54556,11 +54806,18 @@ Eth = -30;
 "@MMK_L_question" = {
 "@MMK_R_KO_quoteright" = 30;
 };
+"@MMK_L_r.gothic" = {
+"@MMK_R_thorn.gothic" = -30;
+};
 "@MMK_L_seven.osf" = {
 "@MMK_R_hyphen" = -10;
 };
 "@MMK_L_six.osf" = {
 "@MMK_R_hyphen" = -10;
+};
+"@MMK_L_t.gothic" = {
+"@MMK_R_a.gothic" = -30;
+"@MMK_R_olong.gothic" = 30;
 };
 "@MMK_L_two.osf" = {
 "@MMK_R_endash" = -40;

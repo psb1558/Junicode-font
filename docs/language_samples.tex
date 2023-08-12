@@ -1,0 +1,817 @@
+\documentclass[12pt,letterpaper,openany]{article}
+
+\usepackage[quiet]{fontspec}
+
+\setmainfont{JunicodeVF-Roman.ttf}[
+  ItalicFont = JunicodeVF-Italic.ttf,
+  BoldFont = JunicodeVF-Roman.ttf,
+  BoldItalicFont =  JunicodeVF-Italic.ttf,
+  Contextuals=Alternate,
+  StylisticSet=10,
+  Numbers={Lowercase,Proportional},
+  RawFeature={mode=harf},
+  UprightFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=351,wdth=100}}}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=352,wdth=98}}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=100}}}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=98}}}
+    },
+  },
+]
+\setfontface\regular{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+\setfontface\cond{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=353,wdth=75}}}
+  },
+]
+\setfontface\condital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=353,wdth=75}}}
+  },
+]
+\setfontface\condlight{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=355,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=75}}}
+  },
+]
+\setfontface\condlightital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=355,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=75}}}
+  },
+]
+\setfontface\smcond{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
+  },
+]
+\setfontface\smcondital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
+  },
+]
+\setfontface\smcondlight{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=355,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=87.5}}}
+  },
+]
+\setfontface\smcondlightital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
+  },
+]
+\setfontface\seminarrowlight{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=355,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=87.5}}}
+  },
+]
+\setfontface\smexp{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=356,wdth=112.5}}}
+  },
+]
+\setfontface\smexpital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=356,wdth=112.5}}}
+  },
+]
+\setfontface\smexpmedium{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=112.5}}}
+  },
+]
+\setfontface\smexpmediumital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=112.5}}}
+  },
+]
+\setfontface\exp{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
+    {Size={22-},       RawFeature={axis={wght=357,wdth=125}}}
+  },
+]
+\setfontface\expital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
+    {Size={22-},       RawFeature={axis={wght=357,wdth=125}}}
+  },
+]
+\setfontface\lightital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=358,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
+  },
+]
+\setfontface\light{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=358,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
+  },
+]
+\setfontface\medium{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
+  },
+]
+\setfontface\mediumital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
+  },
+]
+\setfontface\smcondmedium{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=87.5}}}
+  },
+]
+\setfontface\smcondmediumital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=87.5}}}
+  },
+]
+\setfontface\smcondsmbold{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=650,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=600,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=600,wdth=87.5}}}
+  },
+]
+\setfontface\smcondsmboldital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=650,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=600,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=600,wdth=87.5}}}
+  },
+]
+\setfontface\smbold{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=650,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=600,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=600,wdth=100}}}
+  },
+]
+\setfontface\smboldital{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=650,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=600,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=600,wdth=100}}}
+  },
+]
+\setfontface\condmed{JunicodeVF-Roman.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=75}}}
+  },
+]
+\setfontface\stditalic{JunicodeVF-Italic.ttf}[
+    Contextuals=Alternate,
+    StylisticSet=10,
+    RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+\setmonofont{SourceCodePro-Regular.ttf}[Scale=MatchLowercase,Numbers=Lowercase]
+%\setmonofont{SourceCodeVariable-Roman.otf}[
+%  Scale = MatchLowercase,
+%  Numbers = Lowercase,
+%  SizeFeatures={
+%    {Size={-8},        RawFeature={axis={wght=500}}},
+%    {Size={8-11},      RawFeature={axis={wght=450}}},
+%    {Size={11-},       RawFeature={axis={wght=400}}}
+%  }
+%]
+%
+
+\newcommand{\eng}{\addfontfeature{Language=English}}
+\newcommand{\icel}{\addfontfeature{Language=Icelandic}}
+\newcommand{\lith}{\addfontfeature{Language=Lithuanian}}
+\newcommand{\iri}{\addfontfeature{Language=Irish}}
+\newcommand{\grk}{\addfontfeature{Language=Greek}}
+\newcommand{\viet}{\addfontfeature{Language=Vietnamese}}
+
+\newcommand{\medovl}[1]{{\addfontfeature{StylisticSet=5}#1}}
+\newcommand{\enla}[1]{{\addfontfeature{StylisticSet=6}#1}}
+\newcommand{\lowmk}[1]{{\addfontfeature{StylisticSet=20}#1}}
+
+\newcommand{\muncial}{{\addfontfeature{CharacterVariant=26:0}m}}
+\newcommand{\sround}{{\addfontfeature{RawFeature=-cv38}s}}
+\newcommand{\labbrev}{{\addfontfeature{CharacterVariant=24:3}l}}
+\newcommand{\longsstroke}{{\addfontfeature{CharacterVariant=38:5}s}}
+\newcommand{\zzspace}{{\addfontfeature{CharacterVariant=67:0}¯}}
+
+\tolerance=1500
+\widowpenalty=500
+\clubpenalty=500
+\frenchspacing
+\raggedbottom
+
+\newcommand{\annotation}[1]{\light\footnotesize [#1]}
+
+% Text from MENOTA, features many abbreviations and unusual combining marks.
+\newcommand{\icelandictext}{%
+  Ulfr het mͬ ⁊ vͬ bialfa ſon ⁊ \lowmk{hallb͛v} dott᷑ vlfſ hínſ v arga. \lowmk{hͦ} vͬ ſẏſtir
+  halbiarnͬ halftravllz oꝛ hrafniſtv. faðir ketilſ hǽngſ. vlfr vͬ ſvo mikill
+  ⁊ ſterkr at æ\&\_idotl; vͦ \medovl{h}ſ ȷafningíar i \medovl{þ}n tīa i ld̄inu en er \medovl{h} vͬ af vnga alld\&\_idotl;
+  la \medovl{h} i vikingu ⁊ \lowmk{h͛} naði. ; \medovl{h}m vͬ ſa mͬ i vikíngv ⁊ felag ſkap e͛ kari \lowmk{hͭ}
+  ⁊ uͬ kallaðꝛ berzlv kari. \medovl{h} vͬ gofug men̄i ⁊ hin̄ meſti afrekſ mͬ. \medovl{þ}r vlfr
+  ⁊ kari attu ein̄ ſeod ⁊ uͬ \medovl{þ}ra vinatta mikil. n er \medovl{þ}r reðuz oꝛ hernadi. þa foꝛ kari t
+  buſſ ſinſ i herðzlu. \medovl{h} vͬ ſt ⸠au⸡ ⸌o⸍ r auðigꝛ mͬ ⁊ atti þriu boꝛn. ẏvindꝛ lambi het ſ. \medovl{h}ſ \enla{a}n̄aʀ
+  het \enla{a}ulfv͛ hnufa. ꜱabioꝛg \lowmk{hͭ} d. \medovl{h}ſ. \lowmk{hͦ} vͬ f\&\_idotl;ð. \medovl{h}ar fekk vlfr ⁊ foꝛ m; \medovl{h}a heī t buſſ ſinſ
+  vlfr vͬ m‍ͬ auðigꝛ bædi at ldm ⁊ lauſa fé. \medovl{h} tok lendz mᷦ rett ſem \medovl{h}ſ langfedgͬ. g͛diz \medovl{h}
+  rikr ⁊ buriſnu mͬ mikill. vͬ \medovl{þ} ſidꝛ \medovl{h}ſ\{vͬþſiðꝛ\medovl{h}ſ\} at riſa u ꜳrdegíſſ ⁊ gg͏̄a ū ſẏſlur
+  at ſea v͛km̄. eðꝛ \medovl{þ}gat ſem ſmidir vͦ \enla{s}a \medovl{h} ẏf͛ tun ⁊ akra. \enla{e}n vͬ atali v\&\_idotl; vitᷓ m̄ þa er ra
+  ða \medovl{h}ſ þẏrftu. kun̄i \medovl{h} t\&\_idotl; flez god rad at leggͣ. n hv͛n dag e͛ at kuelldi kō þa g͛di
+  \medovl{h} sͣ ſtẏggꝛ at fair m̄ mattu orðū v\&\_idotl; \medovl{h} ſkipta \medovl{h} vͬ akafliga kuelldſuæfr ⁊ mẏrgín
+  vakr. \medovl{þ} vͬ mꜳl mͣ at \medovl{h} v͛i hamram̄r. \lowmk{þ\&\_idotl;} vͬ \medovl{h} kvelldulfr kallaðꝛ þau ulfr attu tua .ſſ.
+  het hin̄ ellri þoꝛolfr en hin̄ ẏng Grimr.%
+}
+
+% Psalter text as in the Eadui Psalter: moderate use of abbreviations.
+\newcommand{\latintext}{%
+B\textsc{eatvs vir qvi non abiit} in consilio impiorū· Et in uia peccatorum non stetit· Et in cathedra pestilentiae non sedit·
+Sed in lege Dn̄i fuit uoluntas eius⹎ \& in lege eius meditabitur die ac nocte.
+Et erit tamquam lignū· Quod plantattū ÷ secus decursus aquarum⹎ quod fructum suum dabit in tempore suo. Et folium eius non decidet⹎ 
+Et omnia quaecumque fecerit prosperabuntur· Non sic impii non sic⹎ sed tamquam puluis quem ꝓicit uentus a facie terrae. Ideo non 
+resurgunt impii in iudicio⹎ Neque peccatores in consilio iustorum· Qm̄ nouit dn͞s uiam iustorum⹎ Et iter impiorum ꝑibit·\\
+\textsc{Qvare frevervunt gentes}· Et populi meditate sunt inania· Adstiterunt reges terrae· Et principes conuenerunt in unum· Aduersus Dn͞m \&
+aduersus xp͞m eius· Dirumpamus uicula eorum⹎ \& proiciamus a nobis iugum ipsorum· Qui habitat in caelis irridebit eos⹎ \& dn͞s subsannabit
+eos· Tunc loquetur a deos in ira sua⹎ \& in furore suo conturbabit eos· Ego autem constitutus sum rex ab eos suꝑ sion montem sc͞m eius⹎
+prędicans praeceptum eius·%
+}
+
+% Clipped from an online biblical translation.
+\newcommand{\turkishtext}{%
+1 Başlangıçta Tanrı göğü ve yeri yarattı.
+2 Yer boştu, yeryüzü şekilleri yoktu; engin karanlıklarla kaplıydı. Tanrı’nın Ruhu suların üzerinde dalgalanıyordu.
+3 Tanrı, “Işık olsun” diye buyurdu ve ışık oldu.
+4 Tanrı ışığın iyi olduğunu gördü ve onu karanlıktan ayırdı.
+5 Işığa “Gündüz”, karanlığa “Gece” adını verdi. Akşam oldu, sabah oldu ve ilk gün oluştu.
+6 Tanrı, “Suların ortasında bir kubbe olsun, suları birbirinden ayırsın” diye buyurdu.
+7 Ve öyle oldu. Tanrı gökkubbeyi yarattı. Kubbenin altındaki suları üstündeki sulardan ayırdı.
+8 Kubbeye “Gök” adını verdi. Akşam oldu, sabah oldu ve ikinci gün oluştu.
+9 Tanrı, “Göğün altındaki sular bir yere toplansın, kuru toprak görünsün” diye buyurdu ve öyle oldu.
+10 Kuru alana “Kara”, toplanan sulara “Deniz” adını verdi. Tanrı bunun iyi olduğunu gördü.
+11 Tanrı, “Yeryüzü bitkiler, tohum veren otlar, türüne göre tohumu meyvesinde bulunan meyve ağaçları üretsin” diye buyurdu ve öyle oldu.
+12 Yeryüzü bitkiler, türüne göre tohum veren otlar, tohumu meyvesinde bulunan meyve ağaçları yetiştirdi. Tanrı bunun iyi olduğunu gördü.
+13 Akşam oldu, sabah oldu ve üçüncü gün oluştu.%
+}
+
+% From the Orosius, with modern editorial markup.
+\newcommand{\oldenglishtextone}{%
+Ōhthere sǣde his hlāforde, Ælfrede cyninge, þæt hē ealra Norðmonna norþmest būde. Hē cwæð þæt hē būde on þǣm lande
+norþweardum wiþ þā Westsǣ. Hē sǣde þēah þæt þæt land sīe swīþe lang norþ þonan, ac hit is eal wēste, būton on fēawum
+stōwum styċċemǣlum wīciað Finnas on huntoðe on wintra and on sumera on fiscaþe be þǣre sǣ. Hē sǣde þæt hē æt sumum
+ċirre wolde fandian hū longe þæt land norþryhte lǣġe, oþþe hwæðer ǣniġ mon benorðan þǣm wēstenne būde. Þā fōr hē
+norþryhte be þǣm lande. Lēt him ealne weġ þæt wēste land on ðæt stēorbord and þā wīdsǣ on ðæt bæcbord þrīe dagas;
+þā wæs hē swā feor norþ swā þā hwælhuntan firrest faraþ. Þā fōr hē þā ġīet norþryhte swā feor swā hē meahte on þǣm
+ōþrum þrim dagum ġesiġlan. Þā bēag þæt land þǣr ēastryhte, oþþe sēo sǣ in on ðæt lond, hē nysse hwæðer, būton hē
+wisse ðæt hē ðǣr bād westanwindes and hwōn norþan and siġlde ðā ēast be lande swā swā hē meahte on fēower dagum
+ġesiġlan. Þā sceolde hē ðǣr bīdan ryhtnorþanwindes, for ðǣm þæt land bēag þǣr sūþryhte, oþþe sēo sǣ in on ðæt land,
+hē nysse hwæþer. Þā siġlde hē þonan sūðryhte be lande swā swā hē mehte on fīf dagum ġesiġlan. Ðā læġ þǣr ān miċel ēa
+ūp in on þæt land. Þā ċirdon hīe ūp in on ðā ēa, for þǣm hīe ne dorston forþ bi þǣre ēa siġlan for unfriþe, for þǣm
+ðæt land wæs eall ġebūn on ōþre healfe þǣre ēas. Ne mētte hē ǣr nān ġebūn land siþþan hē from his āgnum hām fōr, ac
+him wæs ealne weġ wēste land on þæt stēorbord, būtan fiscerum and fugelerum and huntum, and þæt wǣron eall Finnas,
+and him wæs ā wīdsǣ on ðæt bæcbord.%
+}
+
+% Another Old English text, more or less diplomatic.
+\newcommand{\oldenglishtexttwo}{%
+Her Cynewulf benam Sigebryht his rices ⁊ westseaxna wiotan for unryhtum dędū buton Hamtunscire ⁊ he hæfde þa oþ
+he ofslog þone aldormon þe hī lengest wunode ⁊ hiene þa cynewulf on andred adræfde ⁊ ħ þær wunade oþ þæt hiene
+an swan ofstang æt pryfetesflodan ⁊ he wręc þone aldormon cumbran ⁊ se cynewulf oft miclum gefeohtum feaht uuiþ
+bretwalū ⁊ ȳb .xxxi. wint̄ þæs þe he rice hæfde ħ wolde adræfan anne ęþeling se was cyneheard haten ⁊ se
+cyneheard wæs þæs sigebryhtes broþur ⁊ þa ḡascode he þone cyning lytle werode on wifcyþþe on merantune ⁊ hine þær
+berad ⁊ þone bur utan beeode ær hine þa men onfunden þe mid þam kyninge wærun ⁊ þa ongeat se cyning þæt ⁊ he on
+þa duru eode ⁊ þa unheanlice hine werede oþ he on þone ęþeling locude ⁊ þa ut ræsde on hine ⁊ hine miclum gewundode
+⁊ hie alle on þone Cyning wærun feohtende oþ þæt hie hine ofslægenne hæfdon ⁊ þa on þæs wifes gebærum onfundon þæs
+cyninges þegnas þa unstilnesse ⁊ þa þider urnon swa hwelc swa þonne gearo wearþ ⁊ radost ⁊ hiera se ęþeling gehwelcum
+feoh ⁊ feorh gebead ⁊ hiera nænig hit geþicgean nolde: Ac hie simle feohtende wæran oþ hie alle lægon butan anū
+bryttiscū gisle ⁊ se swiþe gewundad wæs.%
+}
+
+% Ancrene Wisse: transcribed from online facsimile at the BL.
+\newcommand{\middleenglishtext}{%
+Lauerd seið godes spuse to hire deoreƿurðe spus. þe rihte luuieð þe. Þeo
+beoð rihte þe luuieð efter riƿle. \enla{A}nt ȝe mine leoue sustren habbeð moni dei icrauet
+on me efter riƿle. {\muncial}onie cunne riƿlen beoð. ah tƿa beoð bimong alle. ꝥ ich chulle
+speoken of þurh oƿer bone ƿið gode{\sround} grace. \enla{þ}e an riƿleð þe heorte ⁊ makeð
+efne ⁊ smeðe. ƿiðute cnost ⁊ dolc of ƿoh inƿit ⁊ of ƿreiȝende þe segge her
+þu sunegest. oþer þis nis naƿt ibet ȝet ase ƿel a{\sround} hit ahte. \enla{Þ}eos riƿle is eauer
+inƿið ⁊ rihteð þe heorte. Et hec ȝ̄ caritas quam describit ap{\labbrev}{\sround}. de corde
+puro et consciencia bona et fide non ficta. \enla{þ}eos riƿle is chearite of schir heorte
+⁊ cleane inƿit ⁊ treoƿe bileaue. Pretende inquit p{\longsstroke}. mi͞am
+tuā scientibꝫ te ꝑ fidem nō fictā. et iusticiam tuam .i. uite
+rectitudinem hiis qͥ recto sunt corde. Qui .s. om̄es uoluntates suas
+dirigunt ad regulam diuine uoluntatis. Isti dicunt᷑ boni anto[no]masice.
+p{\longsstroke}. Benefac dn̄e bonis \& rectis corde. istis dicitur ut glorient᷑
+testimonio uidel; bone conscientie. Gloriamini omnes recti corde. quos sci{\labbrev}.
+rectificauit regula illa supprema rectificans omnia. de qua Augustꝰ. \enla{n}ichil
+petendum p͛ter reg{\labbrev}am magist{\zzspace}ii. Et Ap{\labbrev}{\sround}. Om̄s in eadem regula
+ꝑmaneamꝰ. \enla{þ}e oþer riƿle is al ƿiðuten ⁊ riƿleð þe licome ⁊ licomliche
+deden. þe teacheð al hu me schal beoren him ƿiðuten. hu eoten. drinken. ƿerien.
+{\sround}ingen. {\sround}lepen. ƿakien. Et hec ȝ̄ exercitio corporis que iuxta ap{\labbrev}m modicum
+ualet. ⁊ est qᷓsi regula recti mechanici qđ geometri[c]o recto cōtinet᷑.
+\enla{a}nt þeos riƿle nis naƿt bute forte serui þe oþer. \enla{þ}e oþer is as leafdi. þeos as hire
+þuften. for al ꝥ me eauer deð of þe oðer ƿiðuten⹎ nis bute forte riƿlin þe heorte
+ƿiðinnen.%
+}
+
+\newcommand{\earlymodernenglishtext}{%
+Lastly, to beleeve themselves when they tell you they will make you immortal by their verses. Thus doing,
+your name shall florish in the Printers shops. Thus doing you shal be of kin to many a Poeticall Preface.
+Thus doing, you shal be most faire, most rich, most wise, most all: you shall dwel upon Superlatives. Thus
+doing, though you be Libertino patre natus, you shall sodeinly grow Herculea proles. Si quid mea Carmina
+possunt. Thus doing, your soule shall be placed with Dantes Beatrix, or Virgils Anchises. But if (fie of
+such a but) you bee borne so neare the dull-making Cataract of Nilus, that you cannot heare the Planet-like
+Musicke of Poetrie; if you have so earth-creeping a mind that it cannot lift it selfe up to looke to the
+skie of Poetrie, or rather by a certaine rusticall disdaine, wil become such a mome, as to bee a Momus of
+Poetrie: then though I will not wish unto you the Asses eares of Midas, nor to be driven by a Poets verses
+as Bubonax was, to hang himselfe, nor to be rimed to death as is said to be done in Ireland, yet thus much
+Curse I must send you in the behalfe of all Poets, that while you live, you live in love, and never get
+favour, for lacking skill of a Sonet, and when you die, your memorie die from the earth for want of an
+Epitaphe.%
+}
+
+\newcommand{\oldfrenchtext}{%
+L’an mil trois cens soixante et onze, en un jardin estoye sous l’ombre, comme à l’issue d’avril, tout morne et
+tout pensiz : mais un pou me resjouy du son et du chant que je ouy de ces oysillons sauvaiges qui chantoyent en
+leurz langaiges, le merle, la mauvis et la mésange, qui au printemps rendoient louanges, qui estoient gaiz et
+envoisiez. Ce doulz chant me fit envoisier et mon cuer sy esjoir que lors il me va souvenir du temps passé de ma
+jeunesce, comment amours en grant destresce m’avoient en ycellui temps tenu en son service, où je fu mainte heure
+liez et autre dolant, si comme elle fait à maint amant. Mes tous mes maulx me guerredonna pour ce que belle et
+bonne me donna, qui de honneur et de tout bien sçavoit et de bel maintien et de bonnes mœurs, et des bonnes estoit
+la meillour, se me sembloit, et la fleur. En elle tout me delitoye ; car en cellui temps je faisoye chançons,
+laiz et rondeaux, balades et virelayz, et chans nouveaux, le mieulx que je savoye. Mais la mort qui tous guerroye,
+la prist, dont mainte douleur en ay receu et mainte tristour. Si a plus de xx ans que j’en ay estè triste et doulent.
+Car le vray cuer de loyal amour, jamais à nul temps ne à nul jour, bonne amour ne oubliera et tous diz lui en
+souviendra.%
+}
+
+% Clipped from the Gutenberg text of Les Liaisons Dangereuses.
+\newcommand{\frenchtext}{%
+Tu vois, ma bonne amie, que je te tiens parole, et que les bonnets et
+les pompons ne prennent pas tout mon temps; il m’en restera toujours
+pour toi. J’ai pourtant vu plus de parures dans cette seule journée
+que dans les quatre ans que nous avons passés ensemble; et je crois
+que la superbe Tanville aura plus de chagrin à ma première visite,
+où je compte bien la demander, qu’elle n’a cru nous en faire toutes
+les fois qu’elle est venue nous voir in fiocchi. Maman m’a consultée
+sur tout; elle me traite beaucoup moins en pensionnaire que par le
+passé. J’ai une femme de chambre à moi; j’ai une chambre et un cabinet
+dont je dispose, et je t’écris à un secrétaire très joli, dont on m’a
+remis la clef, et où je peux renfermer tout ce que je veux. Maman m’a
+dit que je la verrais tous les jours à son lever; qu’il suffisait que
+je fusse coiffée pour dîner, parce que nous serions toujours seules,
+et qu’alors elle me dirait chaque jour l’heure où je devrais l’aller
+joindre l’après-midi. Le reste du temps est à ma disposition, et j’ai
+ma harpe, mon dessin et des livres comme au couvent, si ce n’est que la
+mère Perpétue n’est pas là pour me gronder, et qu’il ne tiendrait qu’à
+moi d’être toujours à rien faire; mais comme je n’ai pas ma Sophie pour
+causer et pour rire, j’aime autant m’occuper.%
+}
+
+% Clipped from an online biblical text.
+\newcommand{\vietnamesetext}{%
+1 Ban đầu, Đức Chúa
+Trời sáng tạo trời đất. 2 Lúc ấy, đất không có hình thể và còn trống không. Bóng tối, bao trùm vực thẳm và Thần Linh của Đức 
+Chúa Trời vận hành trên mặt nước. 3 Bấy giờ, Đức Chúa Trời phán: “Phải có ánh sáng!” Ánh sáng liền xuất hiện. 4 Đức Chúa Trời 
+thấy ánh sáng là tốt. Đức Chúa Trời phân rẽ ánh sáng khỏi bóng tối. 5 Đức Chúa Trời gọi sáng là Ngày và tối là Đêm. Đó là buổi 
+chiều và buổi sáng ngày thứ nhất. 6 Đức Chúa Trời phán: “Phải có khoảng không phân cách nước với nước”. 7 Vậy, Đức Chúa Trời tạo 
+khoảng không phân cách nước dưới khoảng không với nước trên khoảng không, thì có như vậy. 8 Đức Chúa Trời gọi khoảng không là 
+bầu trời. Đó là buổi chiều và buổi sáng ngày thứ nhì. 9 Đức Chúa Trời phán: “Nước dưới bầu trời hãy tụ lại một chỗ và đất khô 
+phải xuất hiện”, thì liền có như thế. 10 Đức Chúa Trời gọi đất khô là Đất, và vùng nước tụ lại là Biển. Đức Chúa Trời thấy điều 
+ấy là tốt. 11 Đức Chúa Trời phán: “Đất phải sinh cây cỏ; cỏ kết hạt và cây kết quả có hạt tùy theo loại” thì có như vậy. 12 Đất 
+sinh sản cây cỏ, cỏ kết hạt tùy theo loại, cây kết quả có hạt tùy theo loại. Đức Chúa Trời thấy điều ấy là tốt. 13 Đó là buổi 
+chiều và buổi sáng ngày thứ ba.%
+}
+
+\newcommand{\irishtext}{%
+Longuis Aedh adhaigh domhnaidh \& an rigraidh: \& cia ro
+loing Aed, ni sib digh, uair ní bai corn lais,
+or do baitheadh a cuirnn \& a cuaich ac Ath Enaigh uas Eas Ruaidh, oc tiachtain don t-sluadh thairis. As amlaid imorro
+robai Aed cona sibh digh a leastur aile o ra dealuigh re cich a mathar acht a curn namha. Ba bron tra do righ Corca
+Tri \& dia seithid, each ic ol \& righ Erenn gin ol. Togbuis Angal a lamha fri Dia, \& feicis gin codladh gin tomailt
+co madain, gu n-eabert a bean fris ara barach, ‘Eirg,’ ar si, ‘co Dirlus Guaire mic Colmain, uair ba tealach feile \&
+naire o aimsir Dathi anall, dus an fuigbithea corn tria firta na feile ann.’ Cechaing Angal righ Corca Tri tar dorus na
+ratha amach, \& tuisleas a cois deas, co ra tuisil cloch leis isin lis .i. an cloch do bai ar belaib an t-suirn a rabudar
+na tri cuirn as deach robai a n-Eirinn .i. an Cam-corn \& an Litan \& an Easgung. Cuirn sin tucad do Cormac u Cuinn dar
+muir, \& ro folaig Niamh mac Lugna Firtri an dara comalta do Cormac u Cuinn, iar n-dith Cormuic, co toracht Coirpri
+Lifeachuir dar muir \& cia ro fritha na cuirn aile la Cairpri, ni fritha na cuirn-siu co h-aimsir na næmh \& Aeda Oirdnidi
+mic Neill, or tucad cealtar tairsib o Dia, co ru-s-foillsid do righ Corca Tri tria firta na feile.%
+}
+
+% Transcribed from an online facsimile of an early edition of the Luther Bible.
+\newcommand{\earlymoderngermantext}{%
+Am anfang ſchuff Gott himel vnd erden / Vnd die erde war wuͤſt vnd leer / vnd eſ war finſter auff der
+tieffe / vnd der Geiſt Gottes ſchwebet auff dem waſſer. Vnd Gott ſprach / Es werde liecht / Vnd es ward liecht /
+vnd Gott ſahe das liecht fur gut an / Da ſcheidet Gott das liecht vom finſternis /vnd nennet das liecht Tag /
+vnd die finſternis / Nacht / Da ward aus abend vnd morgen der erſte tag. Vnd Gott ſprach / Es werde eine feſt
+zwiſſchen den waſſern / vnd die ſey ein vnterſcheid zwiſſchen den waſſern / Da macht Gott die Feſte / vnd ſcheidet
+das waſſer hunden / von dem waſſer droben an der Feſten / Vnd es ſchach alſo / Vnd Gott nennet die Feſten / Himel /
+Da ward aus abend vnd morgen der ander tag. Vnd Gott ſprach / Es ſamle ſich das waſſer vnter dem himel / an ſondere
+oͤrter / das man das trocken ſehe / vnd es geſchach alſo / Vnd Gott nennet das trocken / Erde / vnd die ſamlung
+der waſſer nennet er / Meere / vnd Gott ſahe es fur gut an. Vnd Gott ſprach / Es laſſe die erde auffgehen gras vnd
+kraut / das ſich beſame / vnd fruchtbare beume / da ein jglicher nach ſeiner art frucht trage / vnd habe ſeinen
+eigen ſamen bey jm ſelbs / auff erden / Vnd es geſchach alſo / vnd die Erde lies auff gehen / gras vnd kraut /
+das ſich beſamet / ein jglichs nach ſeiner art / und beume die da frucht trugen und jren eigen ſamen bey ſich ſelbs
+hatten / ein jglicher nach ſeiner art / Vnd Gott ſahe es fur gut an / Da ward aus abend vnd morgen der dritte tag.%
+}
+
+% Clipped from an online Bible.
+\newcommand{\greektext}{%
+1 Ὃ ἦν ἀπ’ ἀρχῆς, ὃ ἀκηκόαμεν, ὃ ἑωράκαμεν τοῖς ὀφθαλμοῖς ἡμῶν, ὃ ἐθεασάμεθα καὶ αἱ χεῖρες
+ἡμῶν ἐψηλάφησαν, περὶ τοῦ λόγου τῆς ζωῆς 2 καὶ ἡ ζωὴ ἐφανερώθη, καὶ ἑωράκαμεν καὶ μαρτυροῦμεν καὶ ἀπαγγέλλομεν
+ὑμῖν τὴν ζωὴν τὴν αἰώνιον ἥτις ἦν πρὸς τὸν πατέρα καὶ ἐφανερώθη ἡμῖν 3 ὃ ἑωράκαμεν καὶ ἀκηκόαμεν ἀπαγγέλλομεν
+καὶ ὑμῖν, ἵνα καὶ ὑμεῖς κοινωνίαν ἔχητε μεθ’ ἡμῶν. καὶ ἡ κοινωνία δὲ ἡ ἡμετέρα μετὰ τοῦ πατρὸς καὶ μετὰ τοῦ υἱοῦ
+αὐτοῦ Ἰησοῦ Χριστοῦ. 4 καὶ ταῦτα γράφομεν ἡμεῖς ἵνα ἡ χαρὰ ἡμῶν ᾖ πεπληρωμένη. 5 Καὶ ἔστιν αὕτη ἡ ἀγγελία ἣν
+ἀκηκόαμεν ἀπ’ αὐτοῦ καὶ ἀναγγέλλομεν ὑμῖν, ὅτι ὁ θεὸς φῶς ἐστιν καὶ σκοτία ἐν αὐτῷ οὐκ ἔστιν οὐδεμία. 6 Ἐὰν
+εἴπωμεν ὅτι κοινωνίαν ἔχομεν μετ’ αὐτοῦ καὶ ἐν τῷ σκότει περιπατῶμεν, ψευδόμεθα καὶ οὐ ποιοῦμεν τὴν ἀλήθειαν:
+7 ἐὰν δὲ ἐν τῷ φωτὶ περιπατῶμεν ὡς αὐτός ἐστιν ἐν τῷ φωτί, κοινωνίαν ἔχομεν μετ’ ἀλλήλων καὶ τὸ αἷμα Ἰησοῦ τοῦ
+υἱοῦ αὐτοῦ καθαρίζει ἡμᾶς ἀπὸ πάσης ἁμαρτίας. 8 ἐὰν εἴπωμεν ὅτι ἁμαρτίαν οὐκ ἔχομεν, ἑαυτοὺς πλανῶμεν καὶ ἡ
+ἀλήθεια οὐκ ἔστιν ἐν ἡμῖν. 9 ἐὰν ὁμολογῶμεν τὰς ἁμαρτίας ἡμῶν, πιστός ἐστιν καὶ δίκαιος ἵνα ἀφῇ ἡμῖν τὰς ἁμαρτίας
+καὶ καθαρίσῃ ἡμᾶς ἀπὸ πάσης ἀδικίας. 10 ἐὰν εἴπωμεν ὅτι οὐχ ἡμαρτήκαμεν, ψεύστην ποιοῦμεν αὐτὸν καὶ ὁ λόγος αὐτοῦ
+οὐκ ἔστιν ἐν ἡμῖν.%
+}
+
+% From online, just a modernized version of the Luther Bible.
+\newcommand{\moderngermantext}{%
+1 Am Anfang schuf Gott Himmel und Erde.
+2 Und die Erde war wüst und leer, und es war finster auf der Tiefe; und der Geist Gottes schwebte auf dem Wasser.
+3 Und Gott sprach: Es werde Licht! Und es ward Licht.
+4 Und Gott sah, daß das Licht gut war. Da schied Gott das Licht von der Finsternis
+5 und nannte das Licht Tag und die Finsternis Nacht. Da ward aus Abend und Morgen der erste Tag.
+6 Und Gott sprach: Es werde eine Feste zwischen den Wassern, die da scheide zwischen den Wassern.
+7 Da machte Gott die Feste und schied das Wasser unter der Feste von dem Wasser über der Feste. Und es geschah so.
+8 Und Gott nannte die Feste Himmel. Da ward aus Abend und Morgen der zweite Tag.
+9 Und Gott sprach: Es sammle sich das Wasser unter dem Himmel an besondere Orte, daß man das Trockene sehe. Und es geschah so.
+10 Und Gott nannte das Trockene Erde, und die Sammlung der Wasser nannte er Meer. Und Gott sah, daß es gut war.
+11 Und Gott sprach: Es lasse die Erde aufgehen Gras und Kraut, das Samen bringe, und fruchtbare Bäume auf Erden, die ein jeder
+nach seiner Art Früchte tragen, in denen ihr Same ist. Und es geschah so.
+12 Und die Erde ließ aufgehen Gras und Kraut, das Samen bringt, ein jedes nach seiner Art, und Bäume, die da Früchte tragen,
+in denen ihr Same ist, ein jeder nach seiner Art. Und Gott sah, daß es gut war.
+13 Da ward aus Abend und Morgen der dritte Tag.%
+}
+
+\newcommand{\gothictextone}{%
+11 warþ þan imma in siunai aggilus fraujins standands af taihswon hunslastadis þwmiamins.
+12 jah gadrobnoda Zakarias gasaiƕands, jah agis disdraus ina.
+13 qaþ þan du imma sa aggilus: ni ogs þus, Zakaria, duþe ei andhausida ist bida þeina, jah qens þeina Aileisabaiþ gabairid sunu þus, jah haitais namo is Iohannen.
+14 jah wairþiþ þus faheds jah swegniþa, jah managai in gabaurþai is faginond.
+15 wairþiþ auk mikils in andwairþja fraujins jah wein jah leiþu ni drigkid jah ahmins weihis gafulljada nauhþan in wambai aiþeins seinaizos,
+16 jah managans suniwe Israelis gawandeiþ du fraujin guda ize.
+17 jah silba fauraqimid in andwairþja is in ahmin jah mahtai Haileiins gawandjan hairtona attane du barnam jah untalans in frodein garaihtaize,
+manwjan fraujin managein gafahrida.
+18 jah qaþ Zakarias du þamma aggilau: biƕe kunnum þata? ik raihtis im sineigs, jah qens meina framaldrozei in dagam seinaim.
+19 jah andhafjands sa aggilus qaþ du imma: ik im Gabriel sa standands in andwairþja gudis, jah insandiþs im rodjan du þus jah wailamerjan þus þata.
+20 jah <sai> sijais þahands jah ni magands rodjan und þana dag ei wairþai þata, duþe ei ni galaubides waurdam meinaim, þoei usfulljanda in mela seinamma.%
+}
+
+\newcommand{\gothictexttwo}{%
+1 Unte raihtis managai dugunnun meljan insaht bi þos gafullaweisidons in uns waihtins,
+2 swaswe anafulhun unsis þaiei fram frumistin silbasiunjos jah andbahtos wesun þis waurdis;
+3 galeikaida jah mis [jah ahmin weihamma] fram anastodeinai allaim glaggwuba afarlaistjandin gahahjo þus meljan,
+batista Þaiaufeilu, 4 ei gakunnais þize bi þoei galaisiþs is waurde [a]staþ. 5 was in dagam Herodes þiudanis Iudaias
+gudja namin Zakarias, us afar〈am〉 Abijins, jah qeins is us dauhtrum Aharons, jah namo izos Aileisabaiþ. 6 wesunuh
+þan garaihta ba in andwairþja gudis, gaggandona in allaim anabusnim jah garaihteim fraujins unwaha.
+7 jah ni was im barne, unte was Aileisabaiþ stairo, jah ba framaldra dage seinaize wesun.
+8 warþ þan, miþþanei gudjinoda is in wikon kunjis seinis in andwairþja gudis,
+9 bi biuhtja gudjinassaus hlauts imma urrann du saljan, atgaggands in alh fraujins,
+10 jah alls hiuhma was manageins beidandans uta ƕeilai þwmiamins.
+11 warþ þan imma in siunai aggilus fraujins standands af taihswon hunslastadis þwmiamins.
+12 jah gadrobnoda Zakarias gasaiƕands, jah agis disdraus ina. 13 qaþ þan du imma sa aggilus: ni ogs þus,
+Zakaria, duþe ei andhausida ist bida þeina, jah qens þeina Aileisabaiþ gabairid sunu þus, jah haitais namo
+is Iohannen. 14 jah wairþiþ þus faheds jah swegniþa, jah managai in gabaurþai is faginond.
+15 wairþiþ auk mikils in andwairþja fraujins jah wein jah leiþu ni drigkid jah ahmins weihis
+gafulljada nauhþan in wambai aiþeins seinaizos, 16  jah managans suniwe Israelis gawandeiþ du fraujin guda ize.%
+}
+
+\newcommand{\lithuaniantext}{%
+1 Pradžioje Dievas sutvėrė dangų ir žemę.
+2 Žemė buvo be pavidalo ir tuščia, tamsa gaubė gelmes, ir Dievo Dvasia sklandė virš vandenų.
+3 Dievas tarė: “Teatsiranda šviesa!” Ir atsirado šviesa.
+4 Dievas matė šviesą ir, kad tai buvo gerai, ir Dievas atskyrė šviesą nuo tamsos.
+5 Dievas pavadino šviesą diena, o tamsą naktimi. Tai buvo vakaras ir rytas­ pirmoji diena.
+6 Dievas tarė: “Teatsiranda tvirtuma tarp vandenų, ir ji teatskiria vandenis nuo vandenų!”
+7 Dievas padarė tvirtumą ir atskyrė vandenis, kurie buvo po tvirtuma, nuo vandenų, kurie buvo virš tvirtumos.
+Ir taip įvyko. 8 Dievas pavadino tvirtumą dangumi. Tai buvo vakaras ir rytas­antroji diena.
+9 Dievas tarė: “Tesusirenka vandenys, kurie yra po dangumi, į vieną vietą ir tepasirodo sausuma!” Ir taip įvyko.
+10 Dievas pavadino sausumą žeme, o vandenų samplūdį­jūromis. Ir Dievas matė, kad tai buvo gerai.
+11 Dievas tarė: “Tegul žemė išaugina žolę, augalus, duodančius sėklą, ir vaismedžius, nešančius vaisių
+pagal jų rūšį, kuriuose yra jų sėkla!” Ir taip įvyko.
+12 Žemė išaugino žolę, augalus, duodančius sėklą pagal jų rūšį, ir medžius, nešančius vaisius pagal jų rūšį,
+kuriuose yra jų sėkla. Ir Dievas matė, kad tai buvo gerai.
+13 Tai buvo vakaras ir rytas­ trečioji diena.
+14 Dievas tarė: “Teatsiranda šviesos dangaus tvirtumoje dienai nuo nakties atskirti ir tebūna jos ženklai pažymėti laikus, dienas ir metus.
+15 Jos težiba dangaus tvirtumoje ir apšviečia žemę!” Ir taip įvyko.%
+}
+
+\begin{document}
+
+\regular
+
+\section*{Lithuanian}
+
+\noindent Regular: {\lith\lithuaniantext}\\
+
+\noindent Italic: {\stditalic\lith\lithuaniantext}\\
+
+\noindent Small caps: {\addfontfeatures{Letters=SmallCaps,Language=Lithuanian}\lithuaniantext}\\
+
+\section*{Gothic}
+
+\noindent Medium: {\medium\gothictextone}\\
+
+\noindent Medium Italic: {\mediumital\gothictextone}\\
+
+\noindent Medium small caps: {\medium\addfontfeature{Letters=SmallCaps}\gothictextone}\\
+\annotation{Feature: smcp.}\\
+
+\noindent SemiCondensed: {\smcond\addfontfeature{StylisticSet=19}\gothictexttwo}\\
+\annotation{Feature: ss19.}\\
+
+\noindent SemiCondensed Italic: {\smcondital\addfontfeature{StylisticSet=19}\gothictexttwo}\\
+\annotation{Feature: ss19.}\\
+
+\section*{Polytonic Greek}
+
+\noindent Light: {\light\grk\greektext}\\
+
+\noindent Light Italic: {\lightital\grk\greektext}\\
+
+\noindent Light small caps: {\light\addfontfeatures{Language=Greek,Letters=SmallCaps}\greektext}\\
+\annotation{Feature: smcp.}\\
+
+\section*{Early Modern German}
+
+\noindent Condensed: {\cond\earlymoderngermantext}\\
+
+\noindent Condensed Italic: {\condital\earlymoderngermantext}\\
+
+\noindent Condensed small caps: {\cond\addfontfeature{Letters=SmallCaps}\earlymoderngermantext}
+\annotation{Feature: smcp.}\\
+
+\section*{German}
+
+\noindent Condensed Light: {\condlight\addfontfeature{Language=German}\moderngermantext}\\
+
+\noindent Condensed Light Italic: {\condlightital\addfontfeature{Language=German}\moderngermantext}\\
+
+\section*{Old Irish}
+
+\noindent SemiExpanded: {\smexp\iri\addfontfeature{StylisticSet=2}\irishtext}\\
+\annotation{Feature: ss02.}\\
+
+\noindent SemiExpanded Italic: {\smexpital\iri\addfontfeature{StylisticSet=2}\irishtext}\\
+\annotation{Feature: ss02.}\\
+
+\noindent SemiExpanded small caps: {\smexp\iri\addfontfeature{StylisticSet=2,Letters=SmallCaps}\irishtext}\\
+\annotation{Features: ss02, smcp.}\\
+
+\section*{Vietnamese}
+
+\noindent SemiExpanded Medium: {\smexpmedium\viet\vietnamesetext}\\
+
+\noindent SemiExpanded Medium Italic: {\smexpmediumital\viet\vietnamesetext}\\
+
+\noindent SemiExpanded Medium small caps: {\smexpmedium\addfontfeatures{Language=Vietnamese,Letters=SmallCaps}\vietnamesetext}\\
+
+\section*{Old English}
+
+\noindent SemiBold: {\smbold\addfontfeatures{Language=English}\oldenglishtextone}\\
+
+\noindent SemiBold: {\smboldital\addfontfeatures{Language=English}\oldenglishtextone}\\
+
+\noindent SemiBold: {\smbold\addfontfeatures{Language=English,StylisticSet=2}\oldenglishtexttwo}
+\annotation{Feature: ss02.}\\
+
+\noindent SemiBold Italic: {\smboldital\addfontfeatures{Language=English,StylisticSet=2}\oldenglishtexttwo}
+\annotation{Feature: ss02.}\\
+
+\section*{Middle English}
+
+\noindent SemiCondensed Light: {\smcondlight\addfontfeatures{CharacterVariant={38:2,69:1},StylisticSet=16,Language=English}\middleenglishtext}\\
+\annotation{Features: cv24, cv26, cv38, cv67, cv69, ss16.}\\
+
+\noindent SemiCondensed Light Italic: {\smcondlightital\stditalic\addfontfeatures{CharacterVariant={38:2,69:1},StylisticSet=16,Language=English}\middleenglishtext}\\
+\annotation{Features: cv24, cv26, cv38, cv67, cv69, ss16.}\\
+
+\section*{Early Modern English}
+
+\noindent SemiCondensed: {\smcond\addfontfeatures{Language=English,StylisticSet=8}\earlymodernenglishtext}\\
+
+\noindent SemiCondensed Italic: {\smcondital\addfontfeatures{Language=English,StylisticSet=8}\earlymodernenglishtext}\\
+
+\section*{Old French}
+
+\noindent Regular: {\addfontfeatures{Language=French}\oldfrenchtext}\\
+
+\noindent Italic: {\stditalic\addfontfeatures{Language=French}\oldfrenchtext}\\
+
+\section*{Early Modern French}
+
+\noindent SemiCondensed SemiBold: {\smcondsmbold\addfontfeatures{Language=French,StylisticSet=8}\frenchtext}\\
+
+\noindent SemiCondensed SemiBold Italic: {\smcondsmboldital\addfontfeatures{Language=French,StylisticSet=8}\frenchtext}\\
+
+\section*{Turkish}
+
+\noindent Expanded: {\exp\addfontfeature{Language=Turkish}\small\turkishtext}\\
+
+\noindent Expanded Italic: {\expital\addfontfeature{Language=Turkish}\turkishtext}\\
+
+\section*{Old Icelandic}
+
+\noindent Medium: {\icel\medium\addfontfeatures{CharacterVariant={8:0,12:0,14:2,18:0,69:1}}\icelandictext}\\
+\annotation{Features: cv08, cv12, cv14, cv18, cv69.}\\
+
+\noindent Medium Italic: {\icel\mediumital\addfontfeatures{CharacterVariant={8:0,12:0,14:2,18:0,69:1}}\icelandictext}\\
+\annotation{Features: cv08, cv12, cv14, cv18, cv69.}\\
+
+\section*{Latin}
+
+\noindent SemiCondensed Medium: {\smcondmedium\latintext}\\
+
+\noindent SemiCondensed Medium Italic: {\smcondmediumital\latintext}\\
+
+\end{document}

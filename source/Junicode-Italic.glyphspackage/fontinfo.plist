@@ -5872,6 +5872,7 @@ sub Aogonek.alt2 by aogonek.alt2.sc;
 sub E.alt2 by e.alt2.sc;
 sub Yogh.alt2 by yogh.alt2.sc;
 sub M.alt2 by m.alt2.sc;
+sub E.alt3 by e.alt3.sc;
 sub Thorn.loclENG by thorn.loclENG.sc;
 sub Thornstroke.loclENG by thornstroke.loclENG.sc;
 sub O_Rrotunda by o_rrotunda.sc;
@@ -6151,6 +6152,7 @@ sub dtopbar by dtopbar.sc;
 sub dz by dz.sc;
 sub dzcaron by dzcaron.sc;
 sub e by e.sc;
+sub e.alt2 by e.alt3.sc ;
 sub eacute by eacute.sc;
 sub ebreve by ebreve.sc;
 sub ecaron by ecaron.sc;
@@ -7634,6 +7636,7 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -8087,9 +8090,6 @@ width = 90;
 guides = (
 {
 pos = (-64,284);
-},
-{
-pos = (-51,276);
 },
 {
 pos = (351,683);
@@ -9127,7 +9127,7 @@ instanceInterpolations = {
 master01 = 0.33333;
 };
 isItalic = 1;
-linkStyle = Smbold;
+linkStyle = SmBold;
 name = "SmBold Italic";
 weightClass = 600;
 },
@@ -9210,7 +9210,7 @@ instanceInterpolations = {
 master01 = -0.33333;
 };
 isItalic = 1;
-linkStyle = "Cond Smbold";
+linkStyle = "Cond SmBold";
 name = "Cond SmBold Italic";
 weightClass = 600;
 widthClass = 3;
@@ -9299,7 +9299,7 @@ instanceInterpolations = {
 master01 = -0.05556;
 };
 isItalic = 1;
-linkStyle = "SmCond Smbold";
+linkStyle = "SmCond SmBold";
 name = "SmCond SmBold Italic";
 weightClass = 600;
 widthClass = 4;
@@ -9389,7 +9389,7 @@ instanceInterpolations = {
 master01 = -0.33333;
 };
 isItalic = 1;
-linkStyle = "Exp Smbold";
+linkStyle = "Exp SmBold";
 name = "Exp SmBold Italic";
 weightClass = 600;
 widthClass = 7;
@@ -9478,7 +9478,7 @@ instanceInterpolations = {
 master01 = -0.05556;
 };
 isItalic = 1;
-linkStyle = "SmExp Smbold";
+linkStyle = "SmExp SmBold";
 name = "SmExp SmBold Italic";
 weightClass = 600;
 widthClass = 6;
@@ -17358,6 +17358,9 @@ zero.lf.zero = 48;
 zero.zero = {
 zero.zero = 48;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -6;
+};
 };
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = {
 "@MMK_L_KO_A" = {
@@ -25180,6 +25183,9 @@ zero.lf.zero = 57;
 };
 zero.zero = {
 zero.zero = 57;
+};
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = 0;
 };
 };
 "7904EAEE-2B64-409E-B923-0048172372BE" = {
@@ -33009,6 +33015,9 @@ zero.lf.zero = 50;
 zero.zero = {
 zero.zero = 50;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -1;
+};
 };
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = {
 "@MMK_L_KO_A" = {
@@ -40834,6 +40843,9 @@ zero.lf.zero = 47;
 };
 zero.zero = {
 zero.zero = 47;
+};
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -6;
 };
 };
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = {
@@ -48672,6 +48684,9 @@ zero.lf.zero = 45;
 zero.zero = {
 zero.zero = 45;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -4;
+};
 };
 "997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = {
 "@MMK_L_KO_A" = {
@@ -56493,6 +56508,9 @@ zero.lf.zero = 48;
 zero.zero = {
 zero.zero = 48;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -6;
+};
 };
 };
 metrics = (
@@ -56588,7 +56606,7 @@ value = psbk;
 },
 {
 key = versionString;
-value = "Version 2.000beta7";
+value = "Version 2.000beta8";
 }
 );
 stems = (

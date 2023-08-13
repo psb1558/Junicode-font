@@ -977,9 +977,10 @@ that accommodates the combining mark will be substituted for the normal base cha
 the other base characters). Examples:
 {\addfontfeature{StylisticSet=20}bͦ, ꝺᷦ, \cvd[14]{84}{h̄}, kͤ, {\th}ͭ, ðᷢ}.
 
-\textSourceText{ss20} affects only the diacritics and base characters listed here; other combinations (e.g.
-\textex{mͤ}, \textex{\'{h}}) are not affected. It will therefore probably be safe
-to apply this feature to the whole text if it is needed anywhere.
+\textSourceText{ss20} is intended for use only the diacritics and base characters listed here; other
+base+diacritic combinations may be disrupted by the feature. You should therefore apply it only to
+relevant base+diacritic pairs (e.g. via a style in InDesign or a word processor or a command in
+LuaTeX).
 
 \subsection{\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.

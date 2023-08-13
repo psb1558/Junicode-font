@@ -5962,6 +5962,8 @@ sub N.alt1 by n.alt1.sc;
 sub Aogonek.alt2 by aogonek.alt2.sc;
 sub E.alt2 by e.alt2.sc;
 sub Yogh.alt2 by yogh.alt2.sc;
+sub A.alt3 by a.alt3.sc;
+sub E.alt3 by e.alt3.sc;
 sub Thorn.loclENG by thorn.loclENG.sc;
 sub Thornstroke.loclENG by thornstroke.loclENG.sc;
 sub Macute.alt by macute.alt.sc;
@@ -6151,6 +6153,7 @@ sub commareversedabovecomb_acutecomb by commareversedabovecomb_acutecomb.sc;
 sub strokeshortcomb by strokeshortcomb.sc;
 sub slashshortcomb by slashshortcomb.sc;
 sub zigzagabovecomb by zigzagabovecomb.sc;
+sub tildeacutecomb by tildeacutecomb.sc;
 sub dieresiscomb_gravecomb.Greek by dieresiscomb_gravecomb.Greek.sc;
 sub commaabovecomb_acutecomb.loclELL by commaabovecomb_acutecomb.loclELL.sc;
 sub zigzagabovecomb.alt1 by zigzagabovecomb.alt1.sc;
@@ -6162,7 +6165,6 @@ sub acutecomb.loclELL by acutecomb.loclELL.sc;
 sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.sc;
 sub caron by caron.sc;
 sub brevehookcomb by brevehookcomb.sc;
-sub tildeacutecomb by tildeacutecomb.sc;
 sub tildedieresiscomb by tildedieresiscomb.sc;
 ";
 tag = c2sc;
@@ -6576,7 +6578,7 @@ sub e.alt1 by e.alt1.sc;
 sub eogonek.alt1 by eogonek.alt1.sc;
 sub n.alt1 by n.alt1.sc;
 sub aogonek.alt2 by aogonek.alt2.sc;
-sub e.alt2 by e.alt2.sc;
+sub e.alt2 by e.alt3.sc;
 sub n.alt2 by n.alt2.sc;
 sub eth.loclENG by eth.sc;
 sub thorn.loclENG by thorn.loclENG.sc;
@@ -29629,6 +29631,9 @@ etatonos = -9;
 mu = 21;
 parenright = 98;
 };
+"@MMK_L_ko_y.sc.sc" = {
+"@MMK_R_ko_o.sc" = 4;
+};
 };
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = {
 "@MMK_L_KO_A" = {
@@ -36778,6 +36783,9 @@ eta = -22;
 etatonos = -22;
 mu = 14;
 parenright = 84;
+};
+"@MMK_L_ko_y.sc.sc" = {
+"@MMK_R_ko_o.sc" = 4;
 };
 };
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = {
@@ -44347,6 +44355,9 @@ zeta = {
 mu = 28;
 parenright = 142;
 };
+"@MMK_L_ko_y.sc.sc" = {
+"@MMK_R_ko_o.sc" = 11;
+};
 };
 "00F4936D-6309-4DEC-83B3-42806ED1A477" = {
 "@MMK_L_KO_A" = {
@@ -51036,7 +51047,7 @@ value = psbk;
 },
 {
 key = versionString;
-value = "Version 2.000beta7";
+value = "Version 2.000beta8";
 }
 );
 stems = (

@@ -1,28 +1,480 @@
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-model
-    href="file:///Users/peterbaker/work/GitHub/xgridfit-3/xgridfit/Schemas/xgridfit-sh.rnc"
-    type="application/relax-ng-compact-syntax"?>
-<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
-	  xmlns:xi="http://www.w3.org/2001/XInclude">
-
-  <inputfont>JunicodeTwoBeta-Regular.ttf</inputfont>
-  <outputfont>JunicodeTwoBeta-Regular-hinted.ttf</outputfont>
-
-  <default type="init-graphics" val="no"/>
-  <default type="cleartype" val="yes"/>
-  <default type="assume-always-y" val="yes"/>
-
-  <cv nm="lc-mark-bottom" val="502"/>
-
-  <prep></prep>
-
-  <gl pnm="tilde">
-    <mv di="lc-mark-bottom" p="{247;502}">
-      <mv p="{98;548}">
-        <mv p="{105;616}"/>
-      </mv>
-      <mv p="{252;571}"/>
-    </mv>
-  </gl>
-
-  </xgridfit>
+<?xml version="1.0"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+  <inputfont>/Users/peterbaker/work/GitHub/Junicode-New/fonts/ttf/Junicode-ExpSmbold.ttf</inputfont>
+  <outputfont>/Users/peterbaker/work/GitHub/Junicode-New/fonts/ttf/Junicode-ExpSmbold-hinted.ttf</outputfont>
+  <default type="function-base" value="140"/>
+  <default type="cleartype" value="yes"/>
+  <default type="init-graphics" value="no"/>
+  <default type="assume-always-y" value="yes"/>
+  <control-value name="baseline" value="0"/>
+  <control-value name="cap-height" value="666"/>
+  <control-value name="xheight" value="418"/>
+  <control-value name="cap-height-overshoot" value="676"/>
+  <control-value name="cap-baseline-undershoot" value="-13"/>
+  <control-value name="xheight-overshoot" value="425"/>
+  <control-value name="lc-baseline-undershoot" value="-11"/>
+  <control-value name="lc-ascender" value="725"/>
+  <control-value name="lc-descender" value="-273"/>
+  <control-value name="num-round-top" value="651"/>
+  <control-value name="num-baseline-undershoot" value="-8"/>
+  <control-value name="num-flat-top" value="643"/>
+  <control-value name="tilde-dist" value="69"/>
+  <control-value name="f-left-top" value="710"/>
+  <control-value name="f-bar-top" value="415"/>
+  <pre-program>
+    <if test="pixels-per-em &lt; 40">
+      <set-control-value name="cap-height-overshoot" unit="pixel" value="control-value(cap-height)"/>
+      <set-control-value name="cap-baseline-undershoot" unit="pixel" value="control-value(baseline)"/>
+      <set-control-value name="xheight-overshoot" unit="pixel" value="control-value(xheight)"/>
+      <set-control-value name="lc-baseline-undershoot" unit="pixel" value="control-value(baseline)"/>
+      <set-control-value name="num-round-top" unit="pixel" value="control-value(num-flat-top)"/>
+      <set-control-value name="num-baseline-undershoot" unit="pixel" value="control-value(baseline)"/>
+      <set-control-value name="f-left-top" unit="pixel" value="control-value(lc-ascender)"/>
+      <set-control-value name="f-bar-top" unit="pixel" value="control-value(xheight)"/>
+    </if>
+  </pre-program>
+  <function name="delta" primitive="yes" stack-safe="yes">
+    <param name="size" value="25"/>
+    <param name="distance" value="0"/>
+    <param name="pt"/>
+    <command name="SDB"/>
+    <command name="DUP"/>
+    <push>0</push>
+    <command name="NEQ"/>
+    <command name="IF"/>
+    <command name="DUP"/>
+    <push>0</push>
+    <command name="LT"/>
+    <command name="IF"/>
+    <push>8</push>
+    <command name="ADD"/>
+    <command name="ELSE"/>
+    <push>7</push>
+    <command name="ADD"/>
+    <command name="EIF"/>
+    <command name="SWAP"/>
+    <push>1</push>
+    <command name="DELTAP1"/>
+    <command name="ELSE"/>
+    <command name="POP"/>
+    <command name="POP"/>
+    <command name="EIF"/>
+    <push>8</push>
+    <command name="SDB"/>
+  </function>
+  <glyph ps-name="tilde">
+    <set-vectors axis="y"/>
+    <move>
+      <point num="{247;502}"/>
+      <move color="black" distance="tilde-dist">
+        <point num="{252;571}"/>
+      </move>
+      <move>
+        <point num="{98;548}"/>
+        <move color="black" distance="tilde-dist">
+          <point num="{105;616}"/>
+        </move>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="tildecomb">
+    <set-vectors axis="y"/>
+    <move>
+      <point num="{-155;502}"/>
+      <move color="black">
+        <point num="{-150;571}"/>
+      </move>
+      <move>
+        <point num="{-304;548}"/>
+        <move color="black" distance="tilde-dist">
+          <point num="{-297;616}"/>
+        </move>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="tildecomb.case">
+    <set-vectors axis="y"/>
+    <move>
+      <point num="{-142;718}"/>
+      <move color="black" distance="tilde-dist">
+        <point num="{-137;787}"/>
+      </move>
+      <move>
+        <point num="{-291;764}"/>
+        <move color="black" distance="tilde-dist">
+          <point num="{-284;832}"/>
+        </move>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="tildecomb.sc">
+    <set-vectors axis="y"/>
+    <move>
+      <point num="{-141;512}"/>
+      <move color="black" distance="tilde-dist">
+        <point num="{-135;581}"/>
+      </move>
+      <move>
+        <point num="{-289;558}"/>
+        <move color="black" distance="tilde-dist">
+          <point num="{-282;626}"/>
+        </move>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.rf">
+    <set-vectors axis="y"/>
+    <move distance="f-left-top">
+      <point num="{367;710}"/>
+      <move color="black" round="no">
+        <point num="{346;662}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{209;415}"/>
+      <move color="black" round="no">
+        <point num="{209;367}"/>
+        <shift>
+          <point num="{110;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{160;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{275;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.alt.lf">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{307;726}"/>
+      <move color="black" round="no">
+        <point num="{271;687}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{211;415}"/>
+      <move color="black" round="no">
+        <point num="{211;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{169;0}"/>
+      <move color="black" round="no">
+        <point num="{43;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.lf">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{385;726}"/>
+      <move color="black" round="no">
+        <point num="{320;674}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{210;415}"/>
+      <move color="black" round="no">
+        <point num="{210;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.lf.alt">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{307;726}"/>
+      <move color="black" round="no">
+        <point num="{267;687}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{212;415}"/>
+      <move color="black" round="no">
+        <point num="{212;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{49;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.lfrij">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{402;726}"/>
+      <move color="black" round="no">
+        <point num="{332;677}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{210;415}"/>
+      <move color="black" round="no">
+        <point num="{210;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.lfrl">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{385;726}"/>
+      <move color="black" round="no">
+        <point num="{325;674}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{210;415}"/>
+      <move color="black" round="no">
+        <point num="{210;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.lfrtall">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{385;726}"/>
+      <move color="black" round="no">
+        <point num="{325;674}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{210;415}"/>
+      <move color="black" round="no">
+        <point num="{210;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.rij">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{407;726}"/>
+      <move color="black" round="no">
+        <point num="{337;677}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{215;415}"/>
+      <move color="black" round="no">
+        <point num="{215;368}"/>
+        <shift>
+          <point num="{111;368}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{49;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{166;0}"/>
+      <move color="black" round="no">
+        <point num="{44;27}"/>
+        <shift>
+          <point num="{287;27}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.rl">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{385;726}"/>
+      <move color="black" round="no">
+        <point num="{325;674}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{210;415}"/>
+      <move color="black" round="no">
+        <point num="{210;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="f.rtall">
+    <set-vectors axis="y"/>
+    <move distance="lc-ascender">
+      <point num="{385;726}"/>
+      <move color="black" round="no">
+        <point num="{325;674}"/>
+      </move>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{210;415}"/>
+      <move color="black" round="no">
+        <point num="{210;367}"/>
+        <shift>
+          <point num="{111;367}"/>
+        </shift>
+        <move color="black" round="no">
+          <point num="{48;400}"/>
+        </move>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{170;0}"/>
+      <move color="black" round="no">
+        <point num="{44;30}"/>
+        <shift>
+          <point num="{295;30}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="i.lf">
+    <set-vectors axis="y"/>
+    <move distance="xheight-overshoot">
+      <point num="{197;431}"/>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{40;415}"/>
+      <move color="black" round="no">
+        <point num="{40;367}"/>
+      </move>
+    </move>
+    <move distance="baseline">
+      <point num="{151;0}"/>
+      <move color="black" round="no">
+        <point num="{36;27}"/>
+        <shift>
+          <point num="{267;27}"/>
+        </shift>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+  <glyph ps-name="j.lf">
+    <set-vectors axis="y"/>
+    <move distance="xheight-overshoot">
+      <point num="{194;431}"/>
+    </move>
+    <move distance="f-bar-top">
+      <point num="{40;415}"/>
+      <move color="black" round="no">
+        <point num="{40;367}"/>
+      </move>
+    </move>
+    <move distance="lc-descender">
+      <point num="{-20;-271}"/>
+      <move color="black" round="no">
+        <point num="{45;-222}"/>
+      </move>
+    </move>
+    <interpolate-untouched-points axis="y"/>
+  </glyph>
+</xgridfit>

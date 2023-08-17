@@ -2,33 +2,57 @@
 \chapter{Getting Started with Junicode}\hypertarget{GettingStarted}{}
 %\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}getting started}
 
-When installing Junicode on your system, you must choose the kind of font that
-will work best for you you
-and which faces you are most likely to use. You can choose between TrueType
-and Compact Font Format (or CFF), and between static and variable.\footnote{\ TrueType is a font format developed by
-Apple Computer in the 1980s; it is still the most commonly used format. Compact Font Format
-(or CFF, often inaccurately called “OpenType”) was developed by Adobe Systems.
-Both TrueType and CFF fonts are capable of fully supporting the OpenType
-standard, developed in the late 1990s by Microsoft and Apple, which dramatically expanded the
-capabilities of computer fonts and continues to evolve. Static fonts are the ones
-users are most familiar with, each font file having a single set of outlines
-scalable to any size. By contrast, a single variable font file stores a set of
+Junicode comes in two flavors—static and variable. Static fonts are the ones
+users are most familiar with, each font file supplying a single set of outlines
+that do not change except in size. By contrast, a single
+\href{https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts}{variable font}
+file stores a set of
 outlines that can morph in various ways—for example, becoming bolder or lighter,
-narrower or wider.} Most users will prefer TrueType fonts, as
-these will look best on computer screens, and static fonts, as these will work
-best with programs like Microsoft Word. You can find static TrueType fonts in
-the fonts/ttf folder.
+narrower or wider, and sometimes undergoing more complex transformations. The static
+version of Junicode consists of thirty-eight font files (nineteen each for roman and
+italic), each providing a distinct variation of the font’s style; the variable version consists
+of only two (one each for roman and italic), but those two font files are capable of
+much more than the static version's thirty-eight.
 
-Use the CFF version (fonts/otf) if you run into problems with TrueType (for example,
-a few Mac printer drivers mess up the placement of diacritics when rendering
-these fonts). Use the TrueType variable version if you're using Junicode in a
-web page or {\ltech} document.\footnote{Several versions of Junicode 2
-included CFF variable versions, as these worked better in {\ltech} at that
-time. In recent versions of {\ltech} the TrueType variable version works best,
-and so the CFF variable version is no longer supplied.}
+Because the static and variable versions of Junicode are differently named
+(“Junicode” and “Junicode VF”), both can be installed on the same system. However,
+you should choose one or the other for any particular project. Choose the static
+version if the application you are using does not yet support variable fonts. Such
+applications include Microsoft Word, Apple Pages, Quark Xpress, Google Docs,
+Affinity Publisher, and most flavors of {\TeX} (except for {\LuaTeX}—see below). Another
+reason to choose the static version is its familiarity: if you don't need the
+advanced capabilities of the variable version, it is perfectly all right to stick
+with what you know.
 
-Junicode has five weights and five widths, which are combined in many ways
-for a total of twenty-two styles in
+All major web browsers (including browsers for mobile devices) support variable fonts,
+and there are good reasons to choose
+the variable version of Junicode for any web project. The greatest reason to go
+with the variable version is to speed the loading of web pages: users will never
+have to download more than two font files (the size of which can be radically
+reduced via subsetting, explained in Section 9 of this Manual). Additionally,
+however, variable fonts can make a page of text more dynamic and visually
+interesting. See Mozilla's
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide}%
+{Variable Fonts Guide} for more information about using variable fonts on the web.
+
+A growing number of desktop applications support variable fonts. Use the variable version of
+Junicode in Adobe InDesign (always with the World-Ready Paragraph Composer\footnote{%
+The choice of a Composer is well hidden in the “Justification” section of the
+“Paragraph Style Options” dialog. Use of the default “Adobe Paragraph Composer”
+with Junicode VF may cause InDesign to crash or otherwise misbehave.}). LibreOffice
+has supported variable fonts since version 7.5 (2023). {\LuaTeX} has excellent support
+for variable fonts: make sure your TeX installation is up to date (since in
+recent years support for variable fonts has improved with every release), and always choose “harf”
+mode in your font-selection code. For an example of font-selection code for a
+variable font, see the file
+\href{https://github.com/psb1558/Junicode-font/blob/master/docs/language_samples.tex}%
+{language\_samples.tex} in the “docs” directory of the GitHub Junicode site (you
+are welcome to copy and modify this code). A number of graphical design apps 
+also support variable fonts, including Adobe Illustrator and PhotoShop, Figma,
+Sketch, and CorelDRAW.
+
+The static version of Junicode has five weights and five widths, which are combined in many ways
+for a total of nineteen styles in
 both roman and italic. It is not necessary to install all of these; in fact,
 your life will be simplified (font menus easier to navigate) if you
 make a selection. You will probably want the traditional Regular, Bold, Italic, and Bold
@@ -141,6 +165,4 @@ If you have questions about any aspect of Junicode,
 post a query in the \href{https://github.com/psb1558/Junicode-font/discussions}%
 {Junicode discussion forum}. If you notice a bug, please open an
 \href{https://github.com/psb1558/Junicode-font/issues}{issue} at the font's
-\href{https://github.com/psb1558/Junicode-font}{development site}. If you need
-help with programming, subsetting or other tasks, contact the developer
-directly.\footnote{\ b dot tarde at gmail dot com.}
+\href{https://github.com/psb1558/Junicode-font}{development site}.

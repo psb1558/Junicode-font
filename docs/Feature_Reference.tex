@@ -44,8 +44,8 @@ readers see \textex{\cvd[4]{2}{a}}{}---the ``neckless a.'' And yet the letter wi
 This is the Junicode model for text display, but it is not peculiar to Junicode: it is widely considered to be the best
 practice for displaying text using current font technology.
 
-The full range of OpenType features listed in this document is supported by all major web browsers, LibreOffice, XeTeX,
-LuaTeX, and (presumably) other document processing applications. All characters listed here are available in Adobe
+The full range of OpenType features listed in this document is supported by all major web browsers, LibreOffice, {\XeTeX},
+{\LuaTeX}, and (presumably) other document processing applications. All characters listed here are available in Adobe
 InDesign, though that program supports only a selection of OpenType features. Microsoft Word, unfortunately, supports
 only Stylistic Sets, ligatures (all but the standard ones in peculiar and probably useless combinations), number
 variants, and the \hyperlink{req}{Required Features}. In terms of
@@ -89,7 +89,7 @@ font because a single diacritic is positioned over the glyphs as if they were di
 encoding.
 \end{itemize}
 \item Characters for which OpenType programming is not yet available. These will be added as they are located and
-studied. [Check: \unic{U+EBF1}, and smcp version.]
+studied.% [Check: \unic{U+EBF1}, and smcp version.]
 \end{itemize}
 These characters should be avoided, even if you are otherwise using MUFI’s PUA characters:
 
@@ -977,10 +977,10 @@ that accommodates the combining mark will be substituted for the normal base cha
 the other base characters). Examples:
 {\addfontfeature{StylisticSet=20}bͦ, ꝺᷦ, \cvd[14]{84}{h̄}, kͤ, {\th}ͭ, ðᷢ}.
 
-\textSourceText{ss20} is intended for use only the diacritics and base characters listed here; other
+\textSourceText{ss20} is intended for use only with the diacritics and base characters listed here; other
 base+diacritic combinations may be disrupted by the feature. You should therefore apply it only to
 relevant base+diacritic pairs (e.g. via a style in InDesign or a word processor or a command in
-LuaTeX).
+{\LuaTeX}).
 
 \subsection{\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.

@@ -266,7 +266,7 @@ value = (
 );
 }
 );
-date = "2023-08-12 12:59:37 +0000";
+date = "2023-08-17 15:50:42 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -7636,7 +7636,6 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -15626,6 +15625,9 @@ Eth = -30;
 "@MMK_L_ko_s.sc" = {
 "@MMK_R_ko_s.sc" = 7;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -6;
+};
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
 };
@@ -17357,9 +17359,6 @@ zero.lf.zero = 48;
 };
 zero.zero = {
 zero.zero = 48;
-};
-"@MMK_L_ko_v.sc.sc" = {
-"@MMK_R_ko_o.sc" = -6;
 };
 };
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = {
@@ -23452,6 +23451,9 @@ Z = -50;
 "@MMK_L_ko_s.sc" = {
 "@MMK_R_ko_s.sc" = 12;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = 0;
+};
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
 };
@@ -25183,9 +25185,6 @@ zero.lf.zero = 57;
 };
 zero.zero = {
 zero.zero = 57;
-};
-"@MMK_L_ko_v.sc.sc" = {
-"@MMK_R_ko_o.sc" = 0;
 };
 };
 "7904EAEE-2B64-409E-B923-0048172372BE" = {
@@ -31283,6 +31282,9 @@ Eth = -40;
 "@MMK_L_ko_s.sc" = {
 "@MMK_R_ko_s.sc" = 8;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -1;
+};
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
 };
@@ -33014,9 +33016,6 @@ zero.lf.zero = 50;
 };
 zero.zero = {
 zero.zero = 50;
-};
-"@MMK_L_ko_v.sc.sc" = {
-"@MMK_R_ko_o.sc" = -1;
 };
 };
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = {
@@ -39112,6 +39111,9 @@ Eth = -20;
 "@MMK_L_ko_s.sc" = {
 "@MMK_R_ko_s.sc" = 9;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -6;
+};
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
 };
@@ -40843,9 +40845,6 @@ zero.lf.zero = 47;
 };
 zero.zero = {
 zero.zero = 47;
-};
-"@MMK_L_ko_v.sc.sc" = {
-"@MMK_R_ko_o.sc" = -6;
 };
 };
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = {
@@ -46952,6 +46951,9 @@ Eth = -30;
 "@MMK_L_ko_s.sc" = {
 "@MMK_R_ko_s.sc" = 7;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -4;
+};
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 6;
 };
@@ -48683,9 +48685,6 @@ zero.lf.zero = 45;
 };
 zero.zero = {
 zero.zero = 45;
-};
-"@MMK_L_ko_v.sc.sc" = {
-"@MMK_R_ko_o.sc" = -4;
 };
 };
 "997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = {
@@ -54783,6 +54782,9 @@ Eth = -30;
 "@MMK_L_ko_s.sc" = {
 "@MMK_R_ko_s.sc" = 7;
 };
+"@MMK_L_ko_v.sc.sc" = {
+"@MMK_R_ko_o.sc" = -6;
+};
 "@MMK_L_ko_wynn.sc" = {
 "@MMK_R_ko_sinsular.sc" = 0;
 };
@@ -56508,9 +56510,6 @@ zero.lf.zero = 48;
 zero.zero = {
 zero.zero = 48;
 };
-"@MMK_L_ko_v.sc.sc" = {
-"@MMK_R_ko_o.sc" = -6;
-};
 };
 };
 metrics = (
@@ -56601,12 +56600,13 @@ key = licenseURL;
 value = "http://scripts.sil.org/OFL";
 },
 {
-key = vendorID;
-value = psbk;
-},
+key = designers;
+values = (
 {
-key = versionString;
-value = "Version 2.000beta8";
+language = dflt;
+value = "Peter S. Baker";
+}
+);
 }
 );
 stems = (

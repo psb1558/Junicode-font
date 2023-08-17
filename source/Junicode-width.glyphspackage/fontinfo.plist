@@ -303,7 +303,7 @@ value = (
 );
 }
 );
-date = "2023-08-12 12:59:14 +0000";
+date = "2023-08-17 18:30:00 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -7649,7 +7649,6 @@ KernOnModels = (
 "r y"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -28157,6 +28156,9 @@ angleright = 90;
 "@MMK_L_hooklowerright" = {
 angleright = 80;
 };
+"@MMK_L_ko_y.sc.sc" = {
+"@MMK_R_ko_o.sc" = 4;
+};
 "@MMK_L_one.lf" = {
 "@MMK_R_KO_endash" = -30;
 "@MMK_R_KO_hyphen" = -40;
@@ -29630,9 +29632,6 @@ eta = -11;
 etatonos = -9;
 mu = 21;
 parenright = 98;
-};
-"@MMK_L_ko_y.sc.sc" = {
-"@MMK_R_ko_o.sc" = 4;
 };
 };
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = {
@@ -35304,6 +35303,9 @@ angleright = 80;
 "@MMK_L_hooklowerright" = {
 angleright = 70;
 };
+"@MMK_L_ko_y.sc.sc" = {
+"@MMK_R_ko_o.sc" = 4;
+};
 "@MMK_L_one.lf" = {
 "@MMK_R_KO_endash" = -30;
 "@MMK_R_KO_hyphen" = -40;
@@ -36783,9 +36785,6 @@ eta = -22;
 etatonos = -22;
 mu = 14;
 parenright = 84;
-};
-"@MMK_L_ko_y.sc.sc" = {
-"@MMK_R_ko_o.sc" = 4;
 };
 };
 "9E6FDE2E-55A6-44A9-9556-F1822294BF26" = {
@@ -42833,6 +42832,9 @@ angleright = 90;
 "@MMK_L_hooklowerright" = {
 angleright = 70;
 };
+"@MMK_L_ko_y.sc.sc" = {
+"@MMK_R_ko_o.sc" = 11;
+};
 "@MMK_L_one.lf" = {
 "@MMK_R_KO_endash" = -30;
 "@MMK_R_KO_hyphen" = -40;
@@ -44354,9 +44356,6 @@ g.alt3 = 30;
 zeta = {
 mu = 28;
 parenright = 142;
-};
-"@MMK_L_ko_y.sc.sc" = {
-"@MMK_R_ko_o.sc" = 11;
 };
 };
 "00F4936D-6309-4DEC-83B3-42806ED1A477" = {
@@ -51012,23 +51011,6 @@ value = "Peter S. Baker";
 );
 },
 {
-key = designerURL;
-value = "http://junicode.sourceforge.net/";
-},
-{
-key = manufacturers;
-values = (
-{
-language = dflt;
-value = "Briery Creek Software";
-}
-);
-},
-{
-key = manufacturerURL;
-value = "https://github.com/psb1558/Junicode-New";
-},
-{
 key = licenses;
 values = (
 {
@@ -51040,14 +51022,6 @@ value = "Licensed under the SIL Open Font License, version 1.1";
 {
 key = licenseURL;
 value = "http://scripts.sil.org/OFL";
-},
-{
-key = vendorID;
-value = psbk;
-},
-{
-key = versionString;
-value = "Version 2.000beta8";
 }
 );
 stems = (

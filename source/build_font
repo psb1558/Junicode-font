@@ -39,6 +39,9 @@ hinting=true
 
 generateufo=true
 
+# cffoptions="--no-subroutinize"
+cffoptions=""
+
 xslfile="fix_wdth_axis.xsl"
 
 fontstyle="roman"
@@ -82,7 +85,12 @@ fi
 if [ $outputtype == "variable" ]
 then
   fontbasename=${fontbasename}VF
-  gvarparam="--no-optimize-gvar"
+  # gvarparam="--no-optimize-gvar"
+fi
+
+if [[ $outputtype == "otf" && $hinting == false ]]
+then
+    cffoptions=""
 fi
 
 if [ $fontstyle == "italic" ]
@@ -142,7 +150,7 @@ fi
 
 echo "building font(s)"
 #fontmake -o $outputtype $instanceparam $gvarparam -m ${glyphsfilename}-fixed.designspace
-fontmake -m ${glyphsfilename}-fixed.designspace -o $outputtype $instanceparam $gvarparam 
+fontmake -m ${glyphsfilename}-fixed.designspace -o $outputtype $instanceparam $gvarparam $cffoptions
 if [ $? -ne 0 ]
 then
  echo "fontmake failed"
@@ -160,20 +168,15 @@ then
     for f in Jun*.ttf; do echo "Hinting ${f}"; ttfautohint $f hinted/$f; done
     cd hinted
     for f in Jun*.ttf; do python ${SOURCEDIR}rmfleuroninstructions.py $f; done
-    if [ $fontstyle == "roman" ]
-    then
-      mkdir fixed
-      for f in Jun*.ttf;
-      do
-        echo "Adding hints to ${f}."
-        ff="$(basename -- $f)"
-        fff="${ff%.*}"
-        xgridfit -q -m -i $f -o fixed/$f ${SOURCEDIR}xgf/$fff.xgf
-      done
-      cp fixed/Jun*.ttf $DESTDIR
-    else
-      cp Jun*.ttf ${DESTDIR}
-    fi
+    mkdir fixed
+    for f in Jun*.ttf;
+    do
+      echo "Adding hints to ${f}."
+      ff="$(basename -- $f)"
+      fff="${ff%.*}"
+      xgridfit -q -m -i $f -o fixed/$f ${SOURCEDIR}xgf/$fff.xgf
+    done
+    cp fixed/Jun*.ttf $DESTDIR
   else
     cp Jun*.ttf ${DESTDIR}
   fi
@@ -187,7 +190,10 @@ then
   if [ $hinting == true ]
   then
     mkdir hinted
-    for f in Jun*.otf; do psautohint -x `cat ${SOURCEDIR}no_hint_list` -o hinted/$f $f; done
+    for f in Jun*.otf; do
+      psautohint -x `cat ${SOURCEDIR}no_hint_list` -o hinted/$f $f
+      cffsubr -i hinted/$f
+    done
     mv hinted/Jun*.otf ${DESTDIR}
   else
     mv Jun*.otf ${DESTDIR}

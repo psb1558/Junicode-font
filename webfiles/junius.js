@@ -146,7 +146,20 @@ langron huila.’   Thuo uuarth it san gilestid so,\n\
 giuuorđan te uuaron   so thar on them uuihe gisprak\n\
 engil thes alouualdon:  uuart ald gumo\n\
 spraka bilosid,   thuo hie spahan hugi\n\
-bari an is briostun."
+bari an is briostun.";
+
+var oldirishtext = "Longuis Aedh adhaigh domhnaidh & an rigraidh: & cia ro \
+loing Aed, ni sib digh, uair ní bai corn lais, \
+or do baitheadh a cuirnn & a cuaich ac Ath Enaigh uas Eas Ruaidh, oc tiachtain don t-sluadh thairis. As amlaid imorro \
+robai Aed cona sibh digh a leastur aile o ra dealuigh re cich a mathar acht a curn namha. Ba bron tra do righ Corca \
+Tri & dia seithid, each ic ol & righ Erenn gin ol. Togbuis Angal a lamha fri Dia, & feicis gin codladh gin tomailt \
+co madain, gu n-eabert a bean fris ara barach, ‘Eirg,’ ar si, ‘co Dirlus Guaire mic Colmain, uair ba tealach feile & \
+naire o aimsir Dathi anall, dus an fuigbithea corn tria firta na feile ann.’ Cechaing Angal righ Corca Tri tar dorus na \
+ratha amach, & tuisleas a cois deas, co ra tuisil cloch leis isin lis .i. an cloch do bai ar belaib an t-suirn a rabudar \
+na tri cuirn as deach robai a n-Eirinn .i. an Cam-corn & an Litan & an Easgung. Cuirn sin tucad do Cormac u Cuinn dar \
+muir, & ro folaig Niamh mac Lugna Firtri an dara comalta do Cormac u Cuinn, iar n-dith Cormuic, co toracht Coirpri \
+Lifeachuir dar muir & cia ro fritha na cuirn aile la Cairpri, ni fritha na cuirn-siu co h-aimsir na næmh & Aeda Oirdnidi \
+mic Neill, or tucad cealtar tairsib o Dia, co ru-s-foillsid do righ Corca Tri tria firta na feile.";
 
 	// Clear the menus and boxes (in case the page is being reloaded) and
 	// display the default (modern English) text.
@@ -183,6 +196,12 @@ bari an is briostun."
 				// lang code is ang, but we use en to trigger English thorn and eth.
 				t = oldenglishtext;
 				$( "input[type='checkbox']" ).not("#italbutton").prop("checked", false).first().change();
+				break;
+			case "OldIrish":
+				t = oldirishtext;
+				l = "ga";
+				$( "input[type='checkbox']" ).not("#italbutton").prop("checked", false).first().change();
+				$("#ss02").prop("checked",true).change();
 				break;
 			case "MiddleEnglish":
 				t = middleenglishtext;

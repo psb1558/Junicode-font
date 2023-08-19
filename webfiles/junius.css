@@ -1,11 +1,19 @@
 @font-face {
   font-family: JuniusVF;
-  src: url('./JuniusVF.woff2');
+  src: url('./JunicodeVF-Roman.woff2');
   font-weight: 300 700;
   font-stretch: 60% 100%;
   font-style: normal;
 }
 
+@font-face {
+    font-family: JuniusVF;
+    src: url('./JunicodeVF-Italic.woff2');
+    font-weight: 300 700;
+    font-stretch: 60% 100%;
+    font-style: italic;
+  }
+  
 body {
     width: 95%;
     padding: 20px;
@@ -117,6 +125,34 @@ body {
 
 .tbc-bold-semicompressed {
     font-variation-settings: "wght" 700, "wdth" 80;
+}
+
+.tbc-smexp-medium {
+    font-variation-settings: "wght" 500, "wdth" 113;
+}
+
+.tbc-smexp-smbold {
+    font-variation-settings: "wght" 600, "wdth" 113;
+}
+
+.tbc-smexp-bold {
+    font-variation-settings: "wght" 700, "wdth" 113;
+}
+
+.tbc-exp {
+    font-variation-settings: "wght" 400, "wdth" 125;
+}
+
+.tbc-exp-medium {
+    font-variation-settings: "wght" 500, "wdth" 125;
+}
+
+.tbc-exp-smbold {
+    font-variation-settings: "wght" 600, "wdth" 125;
+}
+
+.tbc-exp-bold {
+    font-variation-settings: "wght" 700, "wdth" 125;
 }
 
 h1 {

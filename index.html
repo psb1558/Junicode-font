@@ -20,40 +20,27 @@
       <h1><span class="smcp">Junicode 2</span></h1>
     </div>
     <p>
-      <span class="smcp semibold">Junicode 2</span> is a completely
-      rebuilt version of <a
-      href="https://junicode.sourceforge.io/">Junicode</a>, the font
-      for medievalists. When complete, it will offer the full MUFI (<a
-      href="https://skaldic.abdn.ac.uk/m.php?p=mufi">Medieval Unicode
-      Font Initiative, version 4.0</a>) character set in all faces, which will
-      include Light, Regular, Medium, Semibold and Bold weights,
-      Condensed, Semicondensed and Regular widths, and (of course)
-      roman and italic styles. All fonts will include an expanded
-      set of OpenType features—for
-      example, automated transliteration of Latin text to runic or
-      Gothic, mirrored runes, historical ligatures (easing access to
-      MUFI’s specialized ligatures), old-style figures, and many
-      variant letter-shapes.
-    </p>
+		Junicode 2 is a major reworking of the widely used font for students and scholars of medieval Europe
+		(though it also serves scholars in a number of other disciplines). This version continues to track the
+		development of the <a href="https://skaldic.abdn.ac.uk/m.php?p=mufi">Medieval Unicode
+		Font Initiative, version 4.0</a>, with its wealth of specialized medieval characters,
+		but it also provides many OpenType features that allow users to access MUFI characters in accessible ways.
+
+		In this new version, Junicode has become an extended font family, with five weights (Light, Regular, Medium,
+		SemiBold, and Bold) and five widths (Condensed, SemiCondensed, Regular, SemiExpanded, and Expanded). This
+		makes for a large number of font files (19 each for roman and italic, omitting a few unsuitable styles), but
+		the font also comes in a variable version, in which all the capabilities—and more!—of the traditional “static”
+		version are packaged in just two files. The variable version is especially suitable for web use,
+		but variable fonts can also be used in Adobe InDesign, LibreOffice, LuaTeX, and other text-processing apps.
+	</p>
     <p>
-      As of January 2022, the roman style is complete, with final refinement of
-      outlines, metrics, kerning and OpenType features ongoing. The
-      italic is about 91% complete, and development is proceeding
-      briskly. The project is hosted on <a
-      href="https://github.com/psb1558/Junicode-font">Github</a>, where
-      beta versions of the font can be downloaded.
+      Play with the font by
+      selecting a style from the drop-down menu below, selecting a language, and finally
+	  checking and unchecking boxes to try out a selection of the font’s many features,
+	  the effect of which will be displayed in the text box.
+      The box is editable: type or paste in some text of your
+      choosing to see how it looks in Junicode 2.
     </p>
-    <p>
-      Play with a generous selection of the many features of Junicode 2 by
-      selecting a style for
-      the box below from the drop-down menu and by selecting features.
-      The text box is editable: type or paste in some text of your
-      choosing to see how it will look in Junicode 2.
-    </p>
-	  <p>
-		  Check out the <a href="Searchability.html">guide to making searchable
-        web pages with Junicode 2</a>.
-	  </p>
     <div class="controlbox">
       <div class="dropdown">
 	      <label for="faces">Choose a style: </label>
@@ -63,16 +50,24 @@
             <option value="Medium">Medium</option>
             <option value="Semibold">Semibold</option>
             <option value="Bold">Bold</option>
-            <option value="SemicompressedLight">Semicompressed Light</option>
-            <option value="Semicompressed">Semicompressed</option>
-            <option value="SemicompressedMedium">Semicompressed Medium</option>
-            <option value="SemicompressedSemibold">Semicompressed Semibold</option>
-            <option value="SemicompressedBold">Semicompressed Bold</option>
-            <option value="CompressedLight">Compressed Light</option>
-            <option value="Compressed">Compressed</option>
-            <option value="CompressedMedium">Compressed Medium</option>
-            <option value="CompressedSemibold">Compressed Semibold</option>
-            <option value="CompressedBold">Compressed Bold</option>
+            <option value="SemicompressedLight">SemiCondensed Light</option>
+            <option value="Semicompressed">SemiCondensed</option>
+            <option value="SemicompressedMedium">SemiCondensed Medium</option>
+            <!-- <option value="SemicompressedSemibold">SemiCondensed Semibold</option>
+            <option value="SemicompressedBold">SemiCondensed Bold</option> -->
+            <option value="CompressedLight">Condensed Light</option>
+            <option value="Compressed">Condensed</option>
+            <option value="CompressedMedium">Condensed Medium</option>
+            <!-- <option value="CompressedSemibold">Condensed Semibold</option>
+            <option value="CompressedBold">Condensed Bold</option> -->
+			<option value="SmExp">SemiExpanded</option>
+			<option value="SmExpMedium">SemiExpanded Medium</option>
+			<option value="SmExpSmBold">SemiExpanded SemiBold</option>
+			<option value="SmExpBold">SemiExpanded Bold</option>
+			<option value="Exp">Expanded</option>
+			<option value="ExpMedium">Expanded Medium</option>
+			<option value="ExpSmBold">Expanded SemiBold</option>
+			<option value="ExpBold">Expanded Bold</option>
           </select>
         </div>
         <div class="dropdown">
@@ -95,6 +90,7 @@
 	  <option value="ModEnglish" selected="selected">Modern English</option>
 	  <option value="OldEnglish">Old English</option>
 	  <option value="MiddleEnglish">Middle English</option>
+	  <option value="Greek">Greek</option>
 	  <option value="Latin">Latin</option>
 	  <option value="Gothic">Gothic</option>
 	  <option value="OldIcelandic">Old Icelandic</option>
@@ -102,383 +98,351 @@
 	  <option value="German">Early New High German</option>
 	</select>
       </div>
-      <div class="checkboxes">
-	<span class="check"><input type="checkbox" id="smcp"
-	name="smcp"/><label for="smcp" data-tooltip="smcp"> Small caps</label></span>
+      	<div class="checkboxes">
+			<span class="check"><input type="checkbox" id="italbutton"
+				name="italbutton"/><label for="italbutton" data-tooltip="italic"> Italic</label></span>
 
-	<span class="check"><input type="checkbox" id="c2sc"
-	name="c2sc"/><label for="c2sc" data-tooltip="c2sc"> Small caps from
-		capitals</label></span>
+			<span class="check"><input type="checkbox" id="smcp"
+				name="smcp"/><label for="smcp" data-tooltip="smcp"> Small caps</label></span>
 
-  <span class="check"><input type="checkbox" id="pcap"
-    name="pcap"/><label for="pcap" data-tooltip="Petite Capitals (pcap)"> Petite Capitals</label></span>
+			<span class="check"><input type="checkbox" id="c2sc"
+				name="c2sc"/><label for="c2sc" data-tooltip="c2sc"> Small caps from capitals</label></span>
 
-	<span class="check"><input type="checkbox" id="onum"
-	name="onum"/><label for="onum" data-tooltip="onum"> Old-style
-	figures</label></span>
+			<span class="check"><input type="checkbox" id="pcap"
+    			name="pcap"/><label for="pcap" data-tooltip="Petite Capitals (pcap)"> Petite Capitals</label></span>
 
-	<span class="check"><input type="checkbox" id="zero"
-	name="zero"/><label for="zero" data-tooltip="zero"> Slashed zero</label></span>
+			<span class="check"><input type="checkbox" id="onum"
+				name="onum"/><label for="onum" data-tooltip="onum"> Old-style figures</label></span>
 
-	<span class="check"><input type="checkbox" id="sups"
-	name="sups"/><label for="sups" data-tooltip="sups"> Superscripts</label></span>
+			<span class="check"><input type="checkbox" id="pnum"
+				name="pnum"/><label for="pnum" data-tooltip="pnum"> Proportional figures</label></span>
+	
+			<span class="check"><input type="checkbox" id="zero"
+				name="zero"/><label for="zero" data-tooltip="zero"> Slashed zero</label></span>
 
-	<span class="check"><input type="checkbox" id="subs"
-	name="subs"/><label for="subs" data-tooltip="subs"> Subscripts</label></span>
+			<span class="check"><input type="checkbox" id="sups"
+				name="sups"/><label for="sups" data-tooltip="sups"> Superscripts</label></span>
 
-	<span class="check"><input type="checkbox" id="ss04"
-	name="ss04"/><label for="ss04" data-tooltip="For Roman numbers. Stylistic Set 4 (ss04)"> High
-	overline</label></span>
+			<span class="check"><input type="checkbox" id="subs"
+				name="subs"/><label for="subs" data-tooltip="subs"> Subscripts</label></span>
 
-	<span class="check"><input type="checkbox" id="ss05"
-	name="ss05"/><label for="ss05" data-tooltip="For Roman numbers. Stylistic Set 5 (ss05)"> Medium-high
-	overline</label></span>
+			<span class="check"><input type="checkbox" id="ss04" name="ss04"/><label for="ss04"
+				data-tooltip="For Roman numbers. Stylistic Set 4 (ss04)"> High overline</label></span>
 
-	<span class="check"><input type="checkbox" id="ss01"
-	name="ss01"/><label for="ss01" data-tooltip="Stylistic Set 1 (ss01)"> Alternate
-	thorn and eth</label></span>
+			<span class="check"><input type="checkbox" id="ss05" name="ss05"/><label for="ss05"
+				data-tooltip="For Roman numbers. Stylistic Set 5 (ss05)"> Medium-high overline</label></span>
 
-	<span class="check"><input type="checkbox" id="ss02"
-	name="ss02"/><label for="ss02" data-tooltip="Stylistic Set 2 (ss02)"> Insular
-	letter-forms</label></span>
+			<span class="check"><input type="checkbox" id="ss01" name="ss01"/><label for="ss01"
+				data-tooltip="Stylistic Set 1 (ss01)"> Alternate thorn and eth</label></span>
 
-	<span class="check"><input type="checkbox" id="cv401"
-	name="cv401"/><label for="cv401" data-tooltip="Character Variant 40/1 (cv40[1])"> Alternate Tironian
-	sign 1</label></span>
+			<span class="check"><input type="checkbox" id="ss02" name="ss02"/><label for="ss02"
+				data-tooltip="Stylistic Set 2 (ss02)"> Insular letter-forms</label></span>
 
-	<span class="check"><input type="checkbox" id="cv402"
-	name="cv402"/><label for="cv402" data-tooltip="Character Variant 2/2 (cv40[2])"> Alternate Tironian
-	sign 2</label></span>
+			<span class="check"><input type="checkbox" id="cv691" name="cv691"/><label for="cv691"
+				data-tooltip="Character Variant 69/1 (cv69[1])"> Alternate Tironian sign 1</label></span>
 
-	<span class="check"><input type="checkbox" id="hist"
-	name="hist"/><label for="hist" data-tooltip="Historical Forms (hist/ss03)"> Long s</label></span>
+			<span class="check"><input type="checkbox" id="cv692" name="cv692"/><label for="cv692"
+				data-tooltip="Character Variant 69/2 (cv69[2])"> Alternate Tironian sign 2</label></span>
 
-	<span class="check"><input type="checkbox" id="ss08"
-	name="ss08"/><label for="ss08" data-tooltip="Stylistic Set 8 (ss08)"> Contextual long s</label></span>
+			<span class="check"><input type="checkbox" id="cv383" name="cv383"/><label for="cv383"
+				data-tooltip="Character Variant 38/3 (cv38[3])"> Long s</label></span>
 
-	<span class="check"><input type="checkbox" id="ss11"
-	name="ss11"/><label for="ss11" data-tooltip="Stylistic Set 11 (ss11)"> r rotunda</label></span>
+			<span class="check"><input type="checkbox" id="ss08" name="ss08"/><label for="ss08"
+				data-tooltip="Stylistic Set 8 (ss08)"> Contextual long s</label></span>
 
-	<span class="check"><input type="checkbox" id="ss16"
-	name="ss16"/><label for="ss16" data-tooltip="Stylistic Set 16 (ss16)"> Contextual r rotunda</label></span>
+			<span class="check"><input type="checkbox" id="cv362" name="cv362"/><label for="cv362"
+				data-tooltip="Character Variant 36/2"> r rotunda</label></span>
 
-	<span class="check"><input type="checkbox" id="ss06"
-	name="ss06"/><label for="ss06" data-tooltip="Stylistic Set 6 (ss06)"> Enlarged minuscules</label></span>
+			<span class="check"><input type="checkbox" id="ss16" name="ss16"/><label for="ss16"
+				data-tooltip="Stylistic Set 16 (ss16)"> Contextual r rotunda</label></span>
 
-	<span class="check tooltip"><input type="checkbox" id="ss07"
-	name="ss07"/><label for="ss07" data-tooltip="Stylistic Set 7 (ss07)"> Underdotted	text</label><span
-  class="tooltiptext"></span></span>
+			<span class="check"><input type="checkbox" id="ss06" name="ss06"/><label for="ss06"
+				data-tooltip="Stylistic Set 6 (ss06)"> Enlarged minuscules</label></span>
 
-	<span class="check"><input type="checkbox" id="cv11"
-	name="cv04"/><label for="cv11" data-tooltip="Character Variant 11 (cv11)"> Flat-top yogh</label></span>
+			<span class="check tooltip"><input type="checkbox" id="ss07" name="ss07"/><label for="ss07"
+				data-tooltip="Stylistic Set 7 (ss07)"> Underdotted text</label><span class="tooltiptext"></span></span>
 
-	<span class="check"><input type="checkbox" id="ss12"
-	name="ss12"/><label for="ss12" data-tooltip="Stylistic Set 12 (ss12)"> Early English
-	futhorc</label></span>
+			<span class="check"><input type="checkbox" id="ss12" name="ss12"/><label for="ss12"
+				data-tooltip="Stylistic Set 12 (ss12)"> Early English futhorc</label></span>
 
-	<span class="check"><input type="checkbox" id="ss13"
-	name="ss13"/><label for="ss13" data-tooltip="Stylistic Set 13 (ss13)"> Elder futhark</label></span>
+			<span class="check"><input type="checkbox" id="ss13" name="ss13"/><label for="ss13"
+				data-tooltip="Stylistic Set 13 (ss13)"> Elder futhark</label></span>
 
-	<span class="check"><input type="checkbox" id="ss14"
-	name="ss14"/><label for="ss14" data-tooltip="Stylistic Set 14 (ss14)"> Younger futhark</label></span>
+			<span class="check"><input type="checkbox" id="ss14" name="ss14"/><label for="ss14"
+				data-tooltip="Stylistic Set 14 (ss14)"> Younger futhark</label></span>
 
-	<span class="check"><input type="checkbox" id="ss15"
-	name="ss15"/><label for="ss15" data-tooltip="Stylistic Set 15 (ss15)"> Long branch to short
-	twig</label></span>
+			<span class="check"><input type="checkbox" id="ss15" name="ss15"/><label for="ss15"
+				data-tooltip="Stylistic Set 15 (ss15)"> Long branch to short twig</label></span>
 
-	<span class="check"><input type="checkbox" id="rtlm"
-	name="rtlm"/><label for="rtlm" data-tooltip="Right-to-left mirrored forms (rtlm)"> Mirrored runes</label></span>
+			<span class="check"><input type="checkbox" id="rtlm" name="rtlm"/><label for="rtlm"
+				data-tooltip="Right-to-left mirrored forms (rtlm)"> Mirrored runes</label></span>
 
-	<span class="check"><input type="checkbox" id="ss18"
-	name="ss18"/><label for="ss18" data-tooltip="Stylistic Set 18 (ss18)"> Old-Style punctuation
-	spacing</label></span>
+			<span class="check"><input type="checkbox" id="ss18" name="ss18"/><label for="ss18"
+				data-tooltip="Stylistic Set 18 (ss18)"> Old-Style punctuation spacing</label></span>
 
-	<span class="check"><input type="checkbox" id="ss19"
-	name="ss19"/><label for="ss19" data-tooltip="Stylistic Set 19 (ss19)"> Latin to Gothic</label></span>
+			<span class="check"><input type="checkbox" id="ss19" name="ss19"/><label for="ss19"
+				data-tooltip="Stylistic Set 19 (ss19)"> Latin to Gothic</label></span>
 
-	<span class="check"><input type="checkbox" id="hlig"
-	name="hlig"/><label for="hlig" data-tooltip="hlig"> Historical ligatures</label></span>
+			<span class="check"><input type="checkbox" id="dlig" name="dlig"/><label for="dlig"
+				data-tooltip="dlig"> Discretionary ligatures</label></span>
+	
+			<span class="check"><input type="checkbox" id="hlig" name="hlig"/><label for="hlig"
+				data-tooltip="hlig"> Historical ligatures</label></span>
 
-	<span class="check"><input type="checkbox" id="dlig"
-	name="dlig"/><label for="dlig" data-tooltip="dlig"> Discretionary ligatures</label></span>
+			<span class="check tooltip"><input type="checkbox" id="ornm" name="ornm"/><label for="ornm"
+				data-tooltip="Ornaments (ornm)"> Fleurons</label></span>
 
-	<span class="check tooltip"><input type="checkbox" id="ornm"
-	name="ornm"/><label for="ornm" data-tooltip="Ornaments (ornm)"> Fleurons</label></span>
-
-	<span class="check"><input type="checkbox" id="morefeat"
-		name="morefeat"/><label for="morefeat" data-tooltip="Show less-used features">Show more</label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv011"
-		name="cv011"/><label for="cv011" data-tooltip="Character Variant 1/1 (cv01[1])"> aA →
-      <span style="font-feature-settings: 'cv01' 1">aA</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv012"
-		name="cv012"/><label for="cv012" data-tooltip="Character Variant 1/2 (cv01[2])"> a →
-      <span style="font-feature-settings: 'cv01' 2">a</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv013"
-		name="cv013"/><label for="cv013" data-tooltip="Character Variant 1/3 (cv01[3])"> a →
-      <span style="font-feature-settings: 'cv01' 3">a</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv014"
-		name="cv014"/><label for="cv014" data-tooltip="Character Variant 1/4 (cv01[4])"> a →
-      <span style="font-feature-settings: 'cv01' 4">a</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv015"
-		name="cv015"/><label for="cv015" data-tooltip="Character Variant 1/5 (cv01[5])"> a →
-    <span style="font-feature-settings: 'cv01' 5">a</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv021" name="cv021"/><label for="cv021"
-    data-tooltip="Character Variant 2/1 (cv02[1])"> ąĄ →
-    <span style="font-feature-settings: 'cv02' 1">ąĄ</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv022" name="cv022"/><label for="cv022"
-    data-tooltip="Character Variant 2/2 (cv02[2])"> ąĄ →
-    <span style="font-feature-settings: 'cv02' 2">ąĄ</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv023" name="cv023"/><label for="cv023"
-    data-tooltip="Character Variant 2/3 (cv02[3])"> Ą →
-    <span style="font-feature-settings: 'cv02' 3">Ą</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv042"
-		name="cv042"/><label for="cv042" data-tooltip="Character Variant 4 (cv04[2])"> C →
-      <span style="font-feature-settings: 'cv04' 2">C</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv051" name="cv051"/><label for="cv051"
-    data-tooltip="Character Variant 5/1 (cv05[1])">d → ꝺ</label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv052" name="cv052"/><label for="cv052"
-    data-tooltip="Character Variant 5/2 (cv05[2])"> d →
-    <span style="font-feature-settings: 'cv05' 2">d</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv071"
-		name="cv071"/><label for="cv071" data-tooltip="Character Variant 7/1 (cv07[1])"> eE →
-      <span style="font-feature-settings: 'cv07' 1">eE</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv072"
-		name="cv072"/><label for="cv072" data-tooltip="Character Variant 7/2 (cv07[2])"> eE →
-    <span style="font-feature-settings: 'cv07' 2">eE</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv073"
-		name="cv073"/><label for="cv073" data-tooltip="Character Variant 7/3 (cv07[3])"> e →
-      <span style="font-feature-settings: 'cv07' 3">e</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv081" name="cv081"/><label for="cv081"
-    data-tooltip="Character Variant 8/1 (cv08[1])">ęE →
-    <span style="font-feature-settings: 'cv08' 1">ęE</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv082" name="cv082"/><label for="cv082"
-    data-tooltip="Character Variant 8/2 (cv08[2])">ęĘ →
-    <span style="font-feature-settings: 'cv08' 2">ęĘ</span></label></span>
-<!--
-	<span class="hid check"><input type="checkbox" id="cv091"
-		name="cv091"/><label for="cv091" data-tooltip="Character Variant 9/1 (cv09=1)"> fF →
-    <span style="font-feature-settings: 'cv09' 1">fF</span></label></span>
--->
-	<span class="hid check"><input type="checkbox" id="cv092"
-		name="cv091"/><label for="cv092" data-tooltip="Character Variant 9/2 (cv09[2])"> f →
-    <span style="font-feature-settings: 'cv09' 2">f</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv093"
-		name="cv093"/><label for="cv093" data-tooltip="Character Variant 9/3 (cv09[3])"> f →
-    <span style="font-feature-settings: 'cv09' 3">f</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv094"
-		name="cv094"/><label for="cv094" data-tooltip="Character Variant 9/4 (cv09[4])"> f →
-    <span style="font-feature-settings: 'cv09' 4">f</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv095"
-		name="cv095"/><label for="cv095" data-tooltip="Character Variant 9/5 (cv09[5])"> f →
-		<span style="font-feature-settings: 'cv09' 5">f</span></label></span>
-<!--
-	<span class="hid check"><input type="checkbox" id="cv101"
-		name="cv102"/><label for="cv101" data-tooltip="Character Variant 10/1 (cv10=1)"> gG →
-    <span style="font-feature-settings: 'cv10' 1">gG</span></label></span>
--->
-	<span class="hid check"><input type="checkbox" id="cv102"
-		name="cv102"/><label for="cv102" data-tooltip="Character Variant 10/2 (cv10[2])"> g →
-    <span style="font-feature-settings: 'cv10' 2">g</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv103"
-		name="cv103"/><label for="cv103" data-tooltip="Character Variant 10/3 (cv10[3])"> g →
-    <span style="font-feature-settings: 'cv10' 3">g</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv105"
-		name="cv105"/><label for="cv105" data-tooltip="Character Variant 10/5 (cv10[5])"> g →
-    <span style="font-feature-settings: 'cv10' 5">g</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv107"
-  	name="cv107"/><label for="cv107" data-tooltip="Character Variant 10/7 (cv10[7])"> G →
-      <span style="font-feature-settings: 'cv10' 7">G</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv12"
-		name="cv10"/><label for="cv12" data-tooltip="Character Variant 12 (cv12)"> hH →
-    <span style="font-feature-settings: 'cv12' 1">hH</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv131"
-		name="cv131"/><label for="cv131" data-tooltip="Character Variant 13/1 (cv13[1])"> iI →
-    <span style="font-feature-settings: 'cv13' 1">iI</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv132"
-  		name="cv132"/><label for="cv132" data-tooltip="Character Variant 13/2 (cv13[2])"> iI →
-      <span style="font-feature-settings: 'cv13' 2">iI</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv151"
-		name="cv151"/><label for="cv151" data-tooltip="Character Variant 15/1 (cv15[1])"> k →
-    <span style="font-feature-settings: 'cv15' 1">k</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv152"
-		name="cv152"/><label for="cv152" data-tooltip="Character Variant 15/2 (cv15[2])"> k →
-    <span style="font-feature-settings: 'cv15' 2">k</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv153"
-		name="cv153"/><label for="cv153" data-tooltip="Character Variant 15/3 (cv15[3])"> k →
-    <span style="font-feature-settings: 'cv15' 3">k</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv16"
-		name="cv16"/><label for="cv16" data-tooltip="Character Variant 16 (cv16)"> l →
-    <span style="font-feature-settings: 'cv16' 1">l</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv181"
-		name="cv181"/><label for="cv181" data-tooltip="Character Variant 18/1 (cv18[1])"> mM →
-    <span style="font-feature-settings: 'cv18' 1">mM</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv182"
-		name="cv182"/><label for="cv182" data-tooltip="Character Variant 18/2 (cv18[2])"> mM →
-    <span style="font-feature-settings: 'cv18' 2">mM</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv183"
-		name="cv183"/><label for="cv183" data-tooltip="Character Variant 18/3 (cv18[3])"> m →
-    <span style="font-feature-settings: 'cv18' 1">m</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv191"
-		name="cv191"/><label for="cv191" data-tooltip="Character Variant 19/1 (cv19[1])"> nN →
-    <span style="font-feature-settings: 'cv19' 1">nN</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv192"
-		name="cv192"/><label for="cv192" data-tooltip="Character Variant 19/2 (cv19[2])"> n →
-    <span style="font-feature-settings: 'cv19' 2">n</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv193"
-		name="cv193"/><label for="cv193" data-tooltip="Character Variant 19/3 (cv19[3])"> n →
-    <span style="font-feature-settings: 'cv19' 3">n</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv211"
-		name="cv211"/><label for="cv211" data-tooltip="Character Variant 21/1 (cv21[1])"> ø →
-		<span style="font-feature-settings: 'cv21' 1">ø</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv212"
-		name="cv212"/><label for="cv212" data-tooltip="Character Variant 21/2 (cv21[2])"> ø →
-		<span style="font-feature-settings: 'cv21' 2">ø</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv213"
-		name="cv213"/><label for="cv213" data-tooltip="Character Variant 21/3 (cv21[3])"> ø →
-		<span style="font-feature-settings: 'cv21' 3">ø</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv214"
-		name="cv214"/><label for="cv214" data-tooltip="Character Variant 21/4 (cv21[4])"> ø →
-		<span style="font-feature-settings: 'cv21' 4">ø</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv22"
-		name="cv22"/><label for="cv22" data-tooltip="Character Variant 22 (cv22)"> P →
-    <span style="font-feature-settings: 'cv22' 1">P</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv232"
-  	name="cv232"/><label for="cv232" data-tooltip="Character Variant 23/2 (cv23[2])"> Q →
-    <span style="font-feature-settings: 'cv23' 2">Q</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv241"
-		name="cv241"/><label for="cv241" data-tooltip="Character Variant 24/1 (cv24[1])"> r →
-      <span style="font-feature-settings: 'cv24' 1">r</span></label></span>
-<!--
-	<span class="hid check"><input type="checkbox" id="cv251"
-		name="cv251"/><label for="cv251" data-tooltip="Character Variant 25/1 (cv25=1)"> s →
-      ꞅ</label></span>
--->
-	<span class="hid check"><input type="checkbox" id="cv252"
-		name="cv252"/><label for="cv252" data-tooltip="Character Variant 25/2 (cv25[2])"> sS →
-    <span style="font-feature-settings: 'cv25' 2">sS</span></label></span>
-<!--
-  <span class="hid check"><input type="checkbox" id="cv253"
-    name="cv253"/><label for="cv253" data-tooltip="Character Variant 25/3 (cv25=3)"> s → <span
-		style="font-feature-settings: 'ss03' on">s</span></label></span>
--->
-  <span class="hid check"><input type="checkbox" id="cv254"
-    name="cv254"/><label for="cv254" data-tooltip="Character Variant 25/4 (cv25[4])"> s → <span
-  	style="font-feature-settings: 'cv25' 4">s</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv262"
-		name="cv262"/><label for="cv262" data-tooltip="Character Variant 26/2 (cv26[2])"> tT →
-    <span style="font-feature-settings: 'cv26' 2">tT</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv281"
-		name="cv281"/><label for="cv281" data-tooltip="Character Variant 28/1 (cv28[1])"> v →
-      <span style="font-feature-settings: 'cv28' 1">v</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv282"
-		name="cv282"/><label for="cv282" data-tooltip="Character Variant 28/2 (cv28[2])"> v →
-      <span style="font-feature-settings: 'cv28' 2">v</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv283"
-    name="cv283"/><label for="cv283" data-tooltip="Character Variant 28/3 (cv28[3])"> v →
-      <span style="font-feature-settings: 'cv28' 3">v</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv284"
-    name="cv284"/><label for="cv284" data-tooltip="Character Variant 28/4 (cv28[4])"> v →
-      <span style="font-feature-settings: 'cv28' 4">v</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv301"
-		name="cv301"/><label for="cv301" data-tooltip="Character Variant 30/1 (cv30[1])"> x →
-    <span style="font-feature-settings: 'cv30' 1">x</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv302"
-		name="cv302"/><label for="cv302" data-tooltip="Character Variant 30/2 (cv30[2])"> x →
-    <span style="font-feature-settings: 'cv30' 2">x</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv303"
-  	name="cv303"/><label for="cv303" data-tooltip="Character Variant 30/3 (cv30[3])"> x →
-      <span style="font-feature-settings: 'cv30' 3">x</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv304"
-    name="cv304"/><label for="cv304" data-tooltip="Character Variant 30/4 (cv30[4])"> x →
-      <span style="font-feature-settings: 'cv30' 4">x</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv305"
-    name="cv305"/><label for="cv305" data-tooltip="Character Variant 30/5 (cv30[5])"> x →
-      <span style="font-feature-settings: 'cv30' 5">x</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv311"
-		name="cv311"/><label for="cv311" data-tooltip="Character Variant 31/1 (cv31[1])"> y →
-    <span style="font-feature-settings: 'cv31' 1">y</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv312"
-		name="cv312"/><label for="cv312" data-tooltip="Character Variant 31/2 (cv31[2])"> y →
-    <span style="font-feature-settings: 'cv31' 2">y</span></label></span>
-
-	<span class="hid check"><input type="checkbox" id="cv321"
-		name="cv321"/><label for="cv321" data-tooltip="Character Variant 32/1 (cv32[1])"> zZ →
-    <span style="font-feature-settings: 'cv32' 1">zZ</span></label></span>
-
-  <span class="hid check"><input type="checkbox" id="cv322"
-  	name="cv322"/><label for="cv322" data-tooltip="Character Variant 32/2 (cv32[2])"> z →
-      <span style="font-feature-settings: 'cv32' 2">z</span></label></span>
-  </div>
-  </div>
+			<span class="check"><input type="checkbox" id="morefeat" name="morefeat"/><label for="morefeat"
+				data-tooltip="Show less-used features">Show more</label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv011" name="cv011"/><label for="cv011"
+				data-tooltip="Character Variant 1/1 (cv01[1])"> A → <span style="font-feature-settings: 'cv01' 1">A</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv012" name="cv012"/><label for="cv012"
+				data-tooltip="Character Variant 1/2 (cv01[2])"> A → <span style="font-feature-settings: 'cv01' 2">A</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv013" name="cv013"/><label for="cv013"
+				data-tooltip="Character Variant 1/3 (cv01[3])"> A → <span style="font-feature-settings: 'cv01' 3">A</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv021" name="cv021"/><label for="cv021"
+				data-tooltip="Character Variant 2/1 (cv02[1])"> a → <span style="font-feature-settings: 'cv02' 1">a</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv022" name="cv022"/><label for="cv022"
+				data-tooltip="Character Variant 2/2 (cv02[2])"> a → <span style="font-feature-settings: 'cv02' 2">a</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv531" name="cv531"/><label for="cv531"
+				data-tooltip="Character Variant 53/1 (cv53[1])"> Ą → <span style="font-feature-settings: 'cv53' 1">Ą</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv532" name="cv532"/><label for="cv532"
+				data-tooltip="Character Variant 53/2 (cv53[2])"> Ą → <span style="font-feature-settings: 'cv53' 2">Ą</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv533" name="cv533"/><label for="cv533"
+    			data-tooltip="Character Variant 53/3 (cv53[3])"> Ą → <span style="font-feature-settings: 'cv53' 3">Ą</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv541" name="cv541"/><label for="cv541"
+				data-tooltip="Character Variant 54/1 (cv54[1])"> ą → <span style="font-feature-settings: 'cv54' 1">ą</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv542" name="cv542"/><label for="cv542"
+				data-tooltip="Character Variant 54/2 (cv54[2])"> ą → <span style="font-feature-settings: 'cv54' 2">ą</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv032" name="cv032"/><label for="cv032"
+				data-tooltip="Character Variant 3/2 (cv03[2])"> B → <span style="font-feature-settings: 'cv03' 2">B</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv042" name="cv042"/><label for="cv042"
+				data-tooltip="Character Variant 4/2 (cv04[2])"> b → <span style="font-feature-settings: 'cv04' 2">a</span></label></span>
+	
+  			<span class="hid check"><input type="checkbox" id="cv051" name="cv051"/><label for="cv051"
+				data-tooltip="Character Variant 5/1 (cv05[1])"> C → <span style="font-feature-settings: 'cv05' 1">C</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv061" name="cv061"/><label for="cv061"
+				data-tooltip="Character Variant 6/1 (cv06[1])"> c → <span style="font-feature-settings: 'cv06' 1">c</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv071" name="cv071"/><label for="cv071"
+				data-tooltip="Character Variant 7/1 (cv07[1])">D → Ꝺ</label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv081" name="cv081"/><label for="cv081"
+    			data-tooltip="Character Variant 8/1 (cv08[1])">d → ꝺ</label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv082" name="cv082"/><label for="cv082"
+    			data-tooltip="Character Variant 8/2 (cv08[2])"> d → <span style="font-feature-settings: 'cv08' 2">d</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv091" name="cv091"/><label for="cv091"
+				data-tooltip="Character Variant 9/1 (cv09[1])"> E → <span style="font-feature-settings: 'cv09' 1">E</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv092" name="cv092"/><label for="cv092"
+				data-tooltip="Character Variant 9/2 (cv09[2])"> E → <span style="font-feature-settings: 'cv09' 2">E</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv094" name="cv094"/><label for="cv094"
+				data-tooltip="Character Variant 9/4 (cv09[4])"> E → <span style="font-feature-settings: 'cv09' 4">E</span></label></span>
+		
+			<span class="hid check"><input type="checkbox" id="cv101" name="cv101"/><label for="cv101"
+				data-tooltip="Character Variant 10/1 (cv10[1])"> e → <span style="font-feature-settings: 'cv10' 1">e</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv102" name="cv102"/><label for="cv102"
+				data-tooltip="Character Variant 10/2 (cv10[2])"> e → <span style="font-feature-settings: 'cv10' 2">e</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv103" name="cv103"/><label for="cv103"
+				data-tooltip="Character Variant 10/3 (cv10[3])"> e → <span style="font-feature-settings: 'cv10' 3">e</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv621" name="cv621"/><label for="cv621"
+				data-tooltip="Character Variant 62/1 (cv62[1])">ęĘ → <span style="font-feature-settings: 'cv62' 1">ęĘ</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv622" name="cv622"/><label for="cv622"
+				data-tooltip="Character Variant 62/2 (cv62[2])">ęĘ → <span style="font-feature-settings: 'cv62' 2">ęĘ</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv111" name="cv111"/><label for="cv111"
+				data-tooltip="Character Variant 11/1 (cv11[1])"> F → <span style="font-feature-settings: 'cv11' 1">F</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv121" name="cv121"/><label for="cv121"
+				data-tooltip="Character Variant 12/1 (cv12[1])"> f → <span style="font-feature-settings: 'cv12' 1">f</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv122" name="cv122"/><label for="cv122"
+				data-tooltip="Character Variant 12/2 (cv12[2])"> f → <span style="font-feature-settings: 'cv12' 2">f</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv123" name="cv123"/><label for="cv123"
+				data-tooltip="Character Variant 12/3 (cv12[3])"> f → <span style="font-feature-settings: 'cv12' 3">f</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv131" name="cv131"/><label for="cv131"
+				data-tooltip="Character Variant 13/1 (cv13[1])"> G → <span style="font-feature-settings: 'cv13' 1">G</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv132" name="cv132"/><label for="cv132"
+				data-tooltip="Character Variant 13/2 (cv13[2])"> G → <span style="font-feature-settings: 'cv13' 2">G</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv133" name="cv133"/><label for="cv133"
+				data-tooltip="Character Variant 13/3 (cv13[3])"> G → <span style="font-feature-settings: 'cv13' 3">G</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv141" name="cv141"/><label for="cv141"
+				data-tooltip="Character Variant 14/1 (cv14[1])"> g → <span style="font-feature-settings: 'cv14' 1">g</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv142" name="cv142"/><label for="cv142"
+				data-tooltip="Character Variant 14/2 (cv14[2])"> g → <span style="font-feature-settings: 'cv14' 2">g</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv144" name="cv144"/><label for="cv144"
+				data-tooltip="Character Variant 14/4 (cv10[4])"> g → <span style="font-feature-settings: 'cv14' 4">g</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv631" name="cv631"/><label for="cv631"
+				data-tooltip="Character Variant 63/1"> Flat-top yogh</label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv151" name="cv151"/><label for="cv151"
+				data-tooltip="Character Variant 15/1 (cv15[1])"> H → <span style="font-feature-settings: 'cv15' 1">H</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv161" name="cv161"/><label for="cv161"
+				data-tooltip="Character Variant 16/1 (cv16[1])"> h → <span style="font-feature-settings: 'cv16' 1">h</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv162" name="cv162"/><label for="cv162"
+				data-tooltip="Character Variant 16/2 (cv16[2])"> h → <span style="font-feature-settings: 'cv16' 2">h</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv172" name="cv172"/><label for="cv172"
+				data-tooltip="Character Variant 17/2 (cv17[2])"> I → <span style="font-feature-settings: 'cv17' 2">I</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv181" name="cv181"/><label for="cv181"
+				data-tooltip="Character Variant 18/1 (cv18[1])"> i → <span style="font-feature-settings: 'cv18' 1">i</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv221" name="cv221"/><label for="cv221"
+				data-tooltip="Character Variant 22/1 (cv22[1])"> k → <span style="font-feature-settings: 'cv22' 1">k</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv222" name="cv222"/><label for="cv222"
+				data-tooltip="Character Variant 22/2 (cv22[2])"> k → <span style="font-feature-settings: 'cv22' 2">k</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv223" name="cv223"/><label for="cv223"
+				data-tooltip="Character Variant 22/3 (cv22[3])"> k → <span style="font-feature-settings: 'cv22' 3">k</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv241" name="cv241"/><label for="cv241"
+				data-tooltip="Character Variant 24/1 (cv24[1])"> l → <span style="font-feature-settings: 'cv24' 1">l</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv251" name="cv251"/><label for="cv251"
+				data-tooltip="Character Variant 25/1 (cv25[1])"> M → <span style="font-feature-settings: 'cv25' 1">M</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv252" name="cv252"/><label for="cv252"
+				data-tooltip="Character Variant 25/2 (cv25[2])"> M → <span style="font-feature-settings: 'cv25' 2">M</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv261" name="cv261"/><label for="cv261"
+				data-tooltip="Character Variant 26/1 (cv26[1])"> m → <span style="font-feature-settings: 'cv26' 1">m</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv262" name="cv262"/><label for="cv262"
+				data-tooltip="Character Variant 26/2 (cv26[2])"> m → <span style="font-feature-settings: 'cv26' 2">m</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv271" name="cv271"/><label for="cv271"
+				data-tooltip="Character Variant 27/1 (cv27[1])"> N → <span style="font-feature-settings: 'cv27' 1">N</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv281" name="cv281"/><label for="cv281"
+				data-tooltip="Character Variant 28/1 (cv28[1])"> n → <span style="font-feature-settings: 'cv28' 1">n</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv282" name="cv282"/><label for="cv282"
+				data-tooltip="Character Variant 28/2 (c238[2])"> n → <span style="font-feature-settings: 'cv28' 2">n</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv311" name="cv311"/><label for="cv311"
+				data-tooltip="Character Variant 31/1 (cv31[1])"> P → <span style="font-feature-settings: 'cv31' 1">P</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv331" name="cv331"/><label for="cv331"
+				data-tooltip="Character Variant 33/1 (cv33[1])"> Q → <span style="font-feature-settings: 'cv33' 1">Q</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv351" name="cv351"/><label for="cv351"
+				data-tooltip="Character Variant 35/1 (cv35[1])"> R → <span style="font-feature-settings: 'cv35' 1">R</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv352" name="cv352"/><label for="cv352"
+				data-tooltip="Character Variant 35/2 (cv35[2])"> R → <span style="font-feature-settings: 'cv35' 2">R</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv361" name="cv361"/><label for="cv361"
+				data-tooltip="Character Variant 36/1 (cv36[1])"> r → <span style="font-feature-settings: 'cv36' 1">r</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv363" name="cv363"/><label for="cv363"
+				data-tooltip="Character Variant 36/3 (cv36[3])"> r → <span style="font-feature-settings: 'cv36' 3">r</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv371" name="cv371"/><label for="cv371"
+				data-tooltip="Character Variant 37/1 (cv37[1])"> S → <span style="font-feature-settings: 'cv37' 1">S</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv372" name="cv372"/><label for="cv372"
+				data-tooltip="Character Variant 37/2 (cv37[2])"> S → <span style="font-feature-settings: 'cv37' 2">S</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv381" name="cv381"/><label for="cv381"
+				data-tooltip="Character Variant 38/1 (cv38[1])"> s → <span style="font-feature-settings: 'cv38' 1">s</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv382" name="cv382"/><label for="cv382"
+				data-tooltip="Character Variant 38/2 (cv38[2])"> s → <span style="font-feature-settings: 'cv38' 2">s</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv391" name="cv391"/><label for="cv391"
+				data-tooltip="Character Variant 39/1 (cv39[1])"> T → <span style="font-feature-settings: 'cv39' 1">T</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv401" name="cv401"/><label for="cv401"
+				data-tooltip="Character Variant 40/1 (cv40[1])"> t → <span style="font-feature-settings: 'cv40' 1">t</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv441" name="cv441"/><label for="cv441"
+				data-tooltip="Character Variant 44/1 (cv44[1])"> v → <span style="font-feature-settings: 'cv44' 1">v</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv442" name="cv442"/><label for="cv442"
+				data-tooltip="Character Variant 44/2 (cv44[2])"> v → <span style="font-feature-settings: 'cv44' 2">v</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv443" name="cv443"/><label for="cv443"
+				data-tooltip="Character Variant 44/3 (cv44[3])"> v → <span style="font-feature-settings: 'cv44' 3">v</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv452" name="cv452"/><label for="cv452"
+				data-tooltip="Character Variant 45/2 (cv45[2])"> W → <span style="font-feature-settings: 'cv45' 2">W</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv462" name="cv462"/><label for="cv462"
+				data-tooltip="Character Variant 46/2 (cv46[2])"> w → <span style="font-feature-settings: 'cv46' 2">w</span></label></span>
+			
+			<span class="hid check"><input type="checkbox" id="cv481" name="cv481"/><label for="cv481"
+				data-tooltip="Character Variant 48/1 (cv48[1])"> x → <span style="font-feature-settings: 'cv48' 1">x</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv482" name="cv482"/><label for="cv482"
+				data-tooltip="Character Variant 48/2 (cv48[2])"> x → <span style="font-feature-settings: 'cv48' 2">x</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv483" name="cv483"/><label for="cv483"
+				data-tooltip="Character Variant 48/3 (cv48[3])"> x → <span style="font-feature-settings: 'cv48' 3">x</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv484" name="cv484"/><label for="cv484"
+				data-tooltip="Character Variant 48/4 (cv48[4])"> x → <span style="font-feature-settings: 'cv48' 4">x</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv501" name="cv501"/><label for="cv501"
+				data-tooltip="Character Variant 50/1 (cv50[1])"> y → <span style="font-feature-settings: 'cv50' 1">y</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv502" name="cv502"/><label for="cv502"
+				data-tooltip="Character Variant 50/2 (cv50[2])"> y → <span style="font-feature-settings: 'cv50' 2">y</span></label></span>
+
+			<span class="hid check"><input type="checkbox" id="cv503" name="cv503"/><label for="cv503"
+				data-tooltip="Character Variant 50/3 (cv50[3])"> y → <span style="font-feature-settings: 'cv50' 3">y</span></label></span>
+	
+			<span class="hid check"><input type="checkbox" id="cv511" name="cv511"/><label for="cv511"
+				data-tooltip="Character Variant 51/1 (cv51[1])"> Z → <span style="font-feature-settings: 'cv51' 1">Z</span></label></span>
+
+  			<span class="hid check"><input type="checkbox" id="cv521" name="cv521"/><label for="cv521"
+				data-tooltip="Character Variant 52/1 (cv52[1])"> z → <span style="font-feature-settings: 'cv52' 1">z</span></label></span>
+  		</div>
+  	</div>
     <div id="textbox" contenteditable="true">
     </div>
-    <div style="clear: both; padding: 20px; background-color:
-		lightgray">
+    <div style="clear: both; padding: 20px; background-color: lightgray">
     <p>
-      Junicode 2 font copyright © 1998–2022 by Peter
-      S. Baker.
+      	Junicode 2 font copyright © 1998–2023 by Peter S. Baker.
     </p>
     <p>
-      <a href="https://github.com/psb1558/Junicode-New">Development Site</a>
-         ·   <a href="Searchability.html">Making Searchable Web Pages</a>
-         ·   <a href="EnlargedAxis.html">The Enlarge Axis</a>
+      	<a href="https://github.com/psb1558/Junicode-New">Development Site</a>
+      	   ·   <a href="Searchability.html">Making Searchable Web Pages</a>
+      	   ·   <a href="EnlargedAxis.html">The Enlarge Axis</a>
     </p>
     <p>
-      Licensed under the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License, v. 1.1</a>.
+      	Licensed under the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License, v. 1.1</a>.
     </p>
     </div>
     <script src="./webfiles/jquery-3.5.0.min.js" type="text/javascript"></script>

@@ -34885,51 +34885,53 @@ glyphs:
   arrowleft:
     y:
       points:
-      - ptid: 19
+      - ptid: 20
         points:
         - ptid: 0
           rel: shift
-        - ptid: 13
+        - ptid: 15
           rel: blackdist
           points:
-          - ptid: 10
+          - ptid: 11
             rel: shift
+          round: false
   arrowup:
     y:
       points:
-      - ptid: 0
-      - ptid: 11
+      - ptid: 12
         points:
-        - ptid:
-          - 3
-          - 4
-          - 19
-          - 20
-          rel: shift
+        - ptid: 5
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 20
+            rel: shift
+      - ptid: 0
   arrowright:
     y:
       points:
-      - ptid: 3
+      - ptid: 5
         points:
         - ptid: 0
           rel: shift
         - ptid: 10
           rel: blackdist
           points:
-          - ptid: 13
+          - ptid: 14
             rel: shift
+          round: false
   arrowdown:
     y:
       points:
-      - ptid: 11
       - ptid: 0
         points:
-        - ptid:
-          - 7
-          - 8
-          - 14
-          - 15
-          rel: shift
+        - ptid: 8
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 19
+            rel: shift
+      - ptid: 14
   uni21A9:
     y:
       points:
@@ -56361,6 +56363,33 @@ glyphs:
         - ptid: '{439;468}'
           rel: graydist
           min: false
+  uniA71B:
+    y:
+      points:
+      - ptid: 11
+        pos: mod-lc-ascender
+        points:
+        - ptid: 2
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 20
+            rel: shift
+      - ptid: 0
+        pos: mod-baseline
+  uniA71C:
+    y:
+      points:
+      - ptid: 0
+        pos: mod-baseline-undershoot
+        points:
+        - ptid: 9
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 18
+            rel: shift
+      - ptid: 11
 uni01E5:
   y:
     points:

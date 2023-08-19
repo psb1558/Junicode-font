@@ -12300,13 +12300,13 @@ glyphs:
   arrowup:
     y:
       points:
-      - ptid: '{250;-209}'
-      - ptid: '{253;713}'
+      - ptid: '{304;-209}'
+      - ptid: '{307;713}'
         points:
-        - ptid: '{74;467}'
+        - ptid: '{128;460}'
           rel: graydist
           points:
-          - ptid: '{426;469}'
+          - ptid: '{480;461}'
             rel: shift
   partialdiff:
     y:
@@ -38934,15 +38934,15 @@ glyphs:
   arrowleft:
     y:
       points:
-      - ptid: 18
+      - ptid: 20
         points:
         - ptid: 0
           rel: shift
-        - ptid: 14
+        - ptid: 15
           rel: blackdist
           round: false
           points:
-          - ptid: 10
+          - ptid: 11
             rel: shift
   arrowright:
     y:
@@ -38964,9 +38964,9 @@ glyphs:
         points:
         - ptid:
           - 8
-          - 15
+          - 19
           rel: shift
-      - ptid: 12
+      - ptid: 13
   uni21A9:
     y:
       points:
@@ -51798,6 +51798,34 @@ glyphs:
           - ptid: '{-206;603}'
             rel: blackdist
             round: false
+  uniA71C:
+    y:
+      points:
+      - ptid: 0
+        pos: mod-baseline-undershoot
+        points:
+        - ptid: 9
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 20
+            rel: shift
+      - ptid: 12
+        pos: mod-lc-ascender
+  uniA71B:
+    y:
+      points:
+      - ptid: 24
+        pos: mod-baseline
+      - ptid: 12
+        pos: mod-lc-ascender
+        points:
+        - ptid: 3
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 21
+            rel: shift
 masters:
   wght-min:
     name: wght-min

@@ -2,8 +2,8 @@
 
 This is the development site for Junicode 2, a radically rebuilt version of the
 widely used free font for medievalists, linguists, and specialists in many academic
-disciplines. (Versions of Junicode 1 are also hosted here, beginning with version
-1.03.) Junicode 2 features full compliance with the recommendation of the
+disciplines. (Junicode 1.003, the last in the Junicode 1 series, can also be
+downloaded here.) Junicode 2 features full compliance with the recommendation of the
 [Medieval Unicode Font Initiative](https://skaldic.abdn.ac.uk/m.php?p=mufi),
 version 4.0, plus later additions and revisions, and its OpenType programming has
 been rebuilt with a view to promoting accessibility and searchability in web pages
@@ -31,13 +31,7 @@ documents that use the OpenType features of Junicode 1 (aside from basics like
 kerning and standard ligatures) may not be displayed properly when changed over
 to Junicode 2.
 
-Junicode 1 is still (as of July 2023) the current stable version of the
-font. However, no new features will be added to Junicode 1, though bugs will be
-fixed when necessary.
-
-The development version of this font was formerly named **JunicodeTwoBeta**; it
-is now simply **Junicode**, and the version number is `2.000betaN`. The
-`betaN` suffix will be removed when the font is considered stable.
+The latest version of Junicode can be downloaded [here](https://github.com/psb1558/Junicode-font/releases)
 
 # Resources
 
@@ -45,9 +39,9 @@ A [specimen](https://psb1558.github.io/Junicode-font/) page.
 
 ~~My Twitter feed, where I'll share new developments from time to time.~~
 
-A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where you can post queries about the fonts and how to use them.
+A [discussion forum](https://github.com/psb1558/Junicode-font/discussions) where you can post queries about Junicode and how to use it.
 
-An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with Junicode and JunicodeVF.
+An [essay](https://psb1558.github.io/Junicode-font/Searchability.html) on making Searchable and accessible texts with Junicode.
 
 An [introduction](https://psb1558.github.io/Junicode-font/EnlargedAxis.html) to the Enlarge axis: what it's for and how to use it.
 

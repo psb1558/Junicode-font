@@ -234,6 +234,9 @@
     </move>
     <move distance="f-right-bottom">
       <point num="{-56;-255}"/>
+      <move color="black" round="no">
+        <point num="{-22;-209}"/>
+      </move>
     </move>
     <interpolate-untouched-points axis="y"/>
   </glyph>
@@ -323,28 +326,28 @@
   </glyph>
   <glyph ps-name="f.rij">
     <set-vectors axis="y"/>
-    <move distance="lc-ascender">
-      <point num="{407;715}"/>
+    <move distance="lc-descender">
+      <point num="{-47;-269}"/>
       <move color="black" round="no">
-        <point num="{377;679}"/>
+        <point num="{-13;-224}"/>
+      </move>
+    </move>
+    <move distance="lc-ascender">
+      <point num="{424;715}"/>
+      <move color="black" round="no">
+        <point num="{394;679}"/>
       </move>
     </move>
     <move distance="f-bar-top">
-      <point num="{225;412}"/>
+      <point num="{242;412}"/>
       <shift>
-        <point num="{142;412}"/>
+        <point num="{159;412}"/>
       </shift>
       <move color="black" round="no">
-        <point num="{216;364}"/>
+        <point num="{233;364}"/>
         <shift>
-          <point num="{133;364}"/>
+          <point num="{149;364}"/>
         </shift>
-      </move>
-    </move>
-    <move distance="lc-descender">
-      <point num="{-64;-269}"/>
-      <move color="black" round="no">
-        <point num="{-30;-224}"/>
       </move>
     </move>
     <interpolate-untouched-points axis="y"/>

@@ -18020,6 +18020,14 @@ glyphs:
         - ptid: '{34;373}'
           rel: blackdist
           round: false
+          points:
+          - ptid: '{182;373}'
+            rel: shift
+      - ptid: '{127;394}'
+        ref:
+        - '{34;373}'
+        - '{303;411}'
+        rel: interpolate
   f.mecurl:
     y:
       points:
@@ -18506,23 +18514,22 @@ glyphs:
   h.lf:
     y:
       points:
-      - ptid: 11
-        pos: lc-ascender
-      - ptid: 20
-        pos: xheight
-        points:
-        - ptid: 48
-          rel: blackdist
-          round: false
-      - ptid: 0
+      - ptid: '{226;-13}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: 27
+        - ptid: '{49;-13}'
           rel: shift
-          points:
-          - ptid: 39
-            rel: blackdist
-            round: false
+        - ptid: '{258;29}'
+          rel: blackdist
+          round: false
+      - ptid: '{329;416}'
+        pos: xheight
+        points:
+        - ptid: '{304;363}'
+          rel: blackdist
+          round: false
+      - ptid: '{240;725}'
+        pos: lc-ascender
   h.medhighoverline:
     y:
       points:
@@ -20744,23 +20751,24 @@ glyphs:
   thorn.loclENG.lf:
     y:
       points:
-      - ptid: '{225;725}'
+      - ptid: '{231;725}'
         pos: lc-ascender
-      - ptid: '{312;416}'
-        pos: xheight
-        points:
-        - ptid: '{287;382}'
-          rel: blackdist
-          round: false
-      - ptid: '{99;-12}'
-        points:
-        - ptid: '{103;15}'
-          rel: blackdist
-          round: false
-      - ptid: '{-55;-273}'
+      - ptid: '{-49;-273}'
         pos: lc-descender
         points:
-        - ptid: '{-62;-250}'
+        - ptid: '{-56;-250}'
+          rel: blackdist
+          round: false
+      - ptid: '{318;416}'
+        pos: xheight
+        points:
+        - ptid: '{293;382}'
+          rel: blackdist
+          round: false
+      - ptid: '{105;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{109;15}'
           rel: blackdist
           round: false
   thorn.loclENG.pcap:
@@ -39976,22 +39984,22 @@ glyphs:
   f.rij:
     y:
       points:
-      - ptid: '{357;411}'
-        pos: f-bar-top
-        points:
-        - ptid: '{35;373}'
-          rel: blackdist
-          round: false
-      - ptid: '{365;715}'
+      - ptid: '{372;715}'
         pos: lc-f-top
         points:
-        - ptid: '{338;681}'
+        - ptid: '{345;681}'
           rel: blackdist
           round: false
-      - ptid: '{-73;-269}'
+      - ptid: '{-66;-269}'
         pos: lc-descender
         points:
-        - ptid: '{-42;-228}'
+        - ptid: '{-35;-228}'
+          rel: blackdist
+          round: false
+      - ptid: '{55;411}'
+        pos: f-bar-top
+        points:
+        - ptid: '{42;373}'
           rel: blackdist
           round: false
   f_f_y.dlig:
@@ -51826,6 +51834,233 @@ glyphs:
           points:
           - ptid: 21
             rel: shift
+  Eng.alt1:
+    y:
+      points:
+      - ptid:
+          base: 37
+          pt-a: 34
+          pt-b: 30
+          pt-a-sh: 41
+          pt-b-sh: 45
+        macro:
+          nm: cap-serif
+      - ptid: 62
+        pos: cap-height-overshoot
+        points:
+        - ptid: 56
+          rel: graydist
+          min: false
+          points:
+          - ptid: 52
+            rel: blackdist
+            round: false
+        - ptid: 71
+          rel: graydist
+          min: false
+          points:
+          - ptid: 21
+            rel: blackdist
+            round: false
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+  Eng.alt2:
+    y:
+      points:
+      - ptid:
+          base: 28
+          pt-a: 32
+          pt-b: 36
+        macro:
+          nm: cap-serif
+      - ptid: 0
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 53
+        pos: cap-height-overshoot
+        points:
+        - ptid: 47
+          rel: graydist
+          min: false
+          points:
+          - ptid: 43
+            rel: blackdist
+            round: false
+        - ptid: 63
+          rel: graydist
+          min: false
+          points:
+          - ptid: 19
+            rel: blackdist
+            round: false
+  eng.pcap:
+    y:
+      points:
+      - ptid: 28
+        pos: baseline
+        points:
+        - ptid: 35
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 21
+            rel: shift
+      - ptid: 65
+        pos: xheight
+        points:
+        - ptid: 49
+          rel: shift
+        - ptid: 72
+          rel: blackdist
+          round: false
+          points:
+          - ptid:
+            - 58
+            - 42
+            rel: shift
+      - ptid:
+        - 16
+        - 53
+        - 15
+        ref:
+        - 65
+        - 28
+        rel: interpolate
+  eng.alt1.sc:
+    y:
+      points:
+      - ptid: 35
+        pos: baseline
+        points:
+        - ptid: 43
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 28
+            rel: shift
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 60
+        pos: sc-height-overshoot
+        points:
+        - ptid: 54
+          rel: graydist
+          min: false
+          points:
+          - ptid: 50
+            rel: blackdist
+            round: false
+        - ptid: 70
+          rel: graydist
+          min: false
+          points:
+          - ptid: 19
+            rel: blackdist
+            round: false
+  eng.alt1.pcap:
+    y:
+      points:
+      - ptid: 34
+        points:
+        - ptid: 42
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 27
+            rel: shift
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 59
+        pos: xheight-overshoot
+        points:
+        - ptid: 53
+          rel: graydist
+          points:
+          - ptid: 49
+            rel: blackdist
+            round: false
+        - ptid: 69
+          rel: graydist
+          min: false
+          points:
+          - ptid: 19
+            rel: blackdist
+            round: false
+  eng.alt2.sc:
+    y:
+      points:
+      - ptid: 26
+        pos: baseline
+        points:
+        - ptid: 33
+          rel: blackdist
+          round: false
+      - ptid: 0
+        pos: sc-baseline-undershoot
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 50
+        pos: sc-height-overshoot
+        points:
+        - ptid: 45
+          rel: graydist
+          min: false
+          points:
+          - ptid: 41
+            rel: blackdist
+            round: false
+        - ptid: 59
+          rel: graydist
+          min: false
+          points:
+          - ptid: 18
+            rel: blackdist
+            round: false
+  eng.alt2.pcap:
+    y:
+      points:
+      - ptid: 26
+        pos: baseline
+        points:
+        - ptid: 33
+          rel: blackdist
+          round: false
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 50
+        pos: xheight-overshoot
+        points:
+        - ptid: 45
+          rel: graydist
+          min: false
+          points:
+          - ptid: 41
+            rel: blackdist
+            round: false
+        - ptid: 59
+          rel: graydist
+          points:
+          - ptid: 18
+            rel: blackdist
+            round: false
 masters:
   wght-min:
     name: wght-min

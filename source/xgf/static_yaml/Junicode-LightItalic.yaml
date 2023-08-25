@@ -451,8 +451,6 @@ glyphs:
   f.lfrtall:
     y:
       points:
-      - ptid: '{362;715}'
-        pos: lc-ascender
       - ptid: '{181;411}'
         pos: f-bar-top
         points:
@@ -470,32 +468,38 @@ glyphs:
         - ptid: '{-39;-217}'
           rel: blackdist
           round: false
-  f.rij:
-    y:
-      points:
       - ptid: '{362;715}'
         pos: lc-ascender
         points:
-        - ptid: '{335;683}'
+        - ptid: '{333;683}'
           rel: blackdist
           round: false
-      - ptid: '{181;411}'
+  f.rij:
+    y:
+      points:
+      - ptid: '{-73;-269}'
+        pos: lc-descender
+        points:
+        - ptid: '{-40;-231}'
+          rel: blackdist
+          round: false
+      - ptid: '{365;715}'
+        pos: lc-ascender
+        points:
+        - ptid: '{338;683}'
+          rel: blackdist
+          round: false
+      - ptid: '{184;411}'
         pos: f-bar-top
         points:
-        - ptid: '{134;411}'
+        - ptid: '{137;411}'
           rel: shift
-        - ptid: '{174;377}'
+        - ptid: '{177;377}'
           rel: blackdist
           round: false
           points:
-          - ptid: '{128;377}'
+          - ptid: '{131;377}'
             rel: shift
-      - ptid: '{-76;-269}'
-        pos: lc-descender
-        points:
-        - ptid: '{-43;-231}'
-          rel: blackdist
-          round: false
   f.rl:
     y:
       points:

@@ -17766,25 +17766,30 @@ glyphs:
       - ptid: 24
         pos: cap-height-overshoot
         points:
-        - ptid: 37
-          ref: 24
+        - ptid: 34
           rel: graydist
           points:
-          - ptid: 68
-            ref: 37
+          - ptid: 59
             pos: cap-round-stem
             rel: blackdist
+          min: false
+        - ptid: 17
+          rel: graydist
+          min: false
+          points:
+          - ptid: 13
+            rel: blackdist
+            round: false
       - ptid:
-          base: 54
-          pt-a: 56
-          pt-b: 60
-          pt-b-sh: 48
-          pt-a-sh: 52
+          base: 46
+          pt-a: 48
+          pt-b: 52
+          pt-b-sh: 40
+          pt-a-sh: 44
         macro: cap-serif
       - ptid: 0
         points:
         - ptid: 5
-          ref: 0
           rel: shift
   uniA783:
     y:
@@ -56422,6 +56427,244 @@ glyphs:
         points:
         - ptid: '{260;115}'
           rel: shift
+  Eng.alt1:
+    y:
+      points:
+      - ptid:
+          base: 32
+          pt-a: 34
+          pt-b: 38
+          pt-b-sh: 26
+          pt-a-sh: 30
+        macro:
+          nm: cap-serif
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 56
+        pos: cap-height-overshoot
+        points:
+        - ptid: 65
+          rel: graydist
+          min: false
+          points:
+          - ptid: 19
+            rel: blackdist
+            round: false
+        - ptid: 49
+          rel: graydist
+          min: false
+          points:
+          - ptid: 45
+            rel: blackdist
+            round: false
+  Eng.alt2:
+    y:
+      points:
+      - ptid:
+          base: 26
+          pt-a: 28
+          pt-b: 32
+        macro:
+          nm: cap-serif
+      - ptid: 50
+        pos: cap-height-overshoot
+        points:
+        - ptid: 59
+          rel: graydist
+          min: false
+          points:
+          - ptid: 18
+            rel: blackdist
+            round: false
+        - ptid: 43
+          rel: graydist
+          min: false
+          points:
+          - ptid: 39
+            rel: blackdist
+            round: false
+      - ptid: 0
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+  eng.pcap:
+    y:
+      points:
+      - ptid:
+          base: 28
+          pt-a: 26
+          pt-b: 22
+          pt-a-sh: 30
+          pt-b-sh: 34
+        macro:
+          nm: lc-serif
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid:
+          base: 63
+          pt-a: 60
+          pt-b: 56
+          base-sh: 47
+          pt-a-sh: top-serif-sh-a
+          pt-b-sh: top-serif-sh-b
+        macro:
+          nm: lc-serif
+          base-cv: u-top-a
+          cup-cv: lc-serif-undershoot
+          ppem: '180'
+      - ptid:
+        - 16
+        - 51
+        - 17
+        ref:
+        - 63
+        - 28
+        rel: interpolate
+    names:
+      top-serif-sh-a:
+      - 66
+      - 44
+      top-serif-sh-b:
+      - 70
+      - 40
+  eng.alt1.sc:
+    y:
+      points:
+      - ptid: 32
+        pos: baseline
+        points:
+        - ptid: 39
+          rel: blackdist
+          round: false
+          points:
+          - ptid: 25
+            rel: shift
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 66
+        pos: sc-height-overshoot
+        points:
+        - ptid: 18
+          rel: blackdist
+          round: false
+        - ptid: 56
+          rel: graydist
+          min: false
+          points:
+          - ptid: 49
+            rel: graydist
+            min: false
+            points:
+            - ptid: 45
+              rel: blackdist
+              round: false
+  eng.alt2.sc:
+    y:
+      points:
+      - ptid: 25
+        pos: baseline
+        points:
+        - ptid: 32
+          rel: blackdist
+          round: false
+      - ptid: 59
+        pos: sc-height-overshoot
+        points:
+        - ptid: 17
+          rel: blackdist
+          round: false
+        - ptid: 49
+          rel: graydist
+          min: false
+          points:
+          - ptid: 42
+            rel: graydist
+            min: false
+            points:
+            - ptid: 38
+              rel: blackdist
+              round: false
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+  eng.alt1.pcap:
+    y:
+      points:
+      - ptid:
+          base: 31
+          pt-a: 28
+          pt-b: 24
+          pt-a-sh: 34
+          pt-b-sh: 38
+        macro:
+          nm: lc-serif
+      - ptid: 65
+        pos: xheight-overshoot
+        points:
+        - ptid: 55
+          rel: graydist
+          min: false
+          points:
+          - ptid: 48
+            rel: graydist
+            points:
+            - ptid: 44
+              rel: blackdist
+              round: false
+        - ptid: 17
+          rel: blackdist
+          round: false
+      - ptid: 0
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+  eng.alt2.pcap:
+    y:
+      points:
+      - ptid:
+          base: 25
+          pt-a: 28
+          pt-b: 32
+        macro:
+          nm: lc-serif
+      - ptid: 0
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: 6
+          rel: blackdist
+          round: false
+      - ptid: 59
+        pos: xheight-overshoot
+        points:
+        - ptid: 17
+          rel: blackdist
+          round: false
+        - ptid: 49
+          rel: graydist
+          min: false
+          points:
+          - ptid: 42
+            rel: graydist
+            min: false
+            points:
+            - ptid: 38
+              rel: blackdist
+              round: false
 uni01E5:
   y:
     points:

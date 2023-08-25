@@ -4,11 +4,41 @@ glyphname = b.lf;
 kernRight = KO_b;
 layers = (
 {
-guides = (
+anchors = (
 {
-angle = 256.8938;
-pos = (211,713);
+name = bottom;
+pos = (156,0);
 },
+{
+name = center;
+pos = (176,553);
+},
+{
+name = center_left;
+pos = (108,530);
+},
+{
+name = top;
+pos = (297,691);
+},
+{
+name = top_dot;
+pos = (303,645);
+},
+{
+name = top_xheight;
+pos = (338,416);
+},
+{
+name = us;
+pos = (393,415);
+},
+{
+name = zzcurly;
+pos = (169,548);
+}
+);
+guides = (
 {
 pos = (285,1380);
 }
@@ -75,6 +105,40 @@ nodes = (
 width = 408;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (183,0);
+},
+{
+name = center;
+pos = (199,553);
+},
+{
+name = center_left;
+pos = (116,530);
+},
+{
+name = top;
+pos = (324,691);
+},
+{
+name = top_dot;
+pos = (342,645);
+},
+{
+name = top_xheight;
+pos = (369,416);
+},
+{
+name = us;
+pos = (401,415);
+},
+{
+name = zzcurly;
+pos = (187,548);
+}
+);
 guides = (
 {
 angle = 256.5389;
@@ -146,13 +210,38 @@ nodes = (
 width = 449;
 },
 {
-guides = (
+anchors = (
 {
-angle = 256.9799;
-pos = (142,706);
+name = bottom;
+pos = (141,0);
 },
 {
-pos = (263,1379);
+name = center;
+pos = (161,553);
+},
+{
+name = center_left;
+pos = (99,530);
+},
+{
+name = top;
+pos = (281,691);
+},
+{
+name = top_dot;
+pos = (295,645);
+},
+{
+name = top_xheight;
+pos = (308,416);
+},
+{
+name = us;
+pos = (384,415);
+},
+{
+name = zzcurly;
+pos = (155,548);
 }
 );
 layerId = "7904EAEE-2B64-409E-B923-0048172372BE";
@@ -217,13 +306,47 @@ nodes = (
 width = 387;
 },
 {
-guides = (
+anchors = (
 {
-angle = 259.3162;
-pos = (119,722);
+name = bottom;
+pos = (94,0);
 },
 {
-pos = (238,1381);
+name = center;
+pos = (136,553);
+},
+{
+name = center_left;
+pos = (100,530);
+},
+{
+name = top;
+pos = (247,691);
+},
+{
+name = top_dot;
+pos = (258,645);
+},
+{
+name = top_xheight;
+pos = (274,416);
+},
+{
+name = us;
+pos = (380,415);
+},
+{
+name = zzcurly;
+pos = (123,548);
+}
+);
+guides = (
+{
+angle = 90;
+pos = (114,541);
+},
+{
+pos = (86,582);
 }
 );
 layerId = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -231,70 +354,95 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(224,-13,o),
-(333,149,o),
-(333,314,cs),
-(333,382,o),
-(309,416,o),
-(262,416,cs),
-(225,416,o),
-(182,376,o),
-(133,297,c),
-(126,300,l),
+(185,-13,o),
+(313,156,o),
+(313,328,cs),
+(313,386,o),
+(291,416,o),
+(247,416,cs),
+(210,416,o),
+(165,376,o),
+(112,297,c),
+(105,300,l),
 (202,705,ls),
-(203,710,o),
-(203,713,o),
-(203,718,cs),
-(203,722,o),
-(201,725,o),
-(197,725,cs),
-(195,725,o),
-(190,725,o),
-(183,721,cs),
-(163,711,o),
+(203,709,o),
+(204,714,o),
+(204,719,cs),
+(204,722,o),
+(202,725,o),
+(198,725,cs),
+(196,725,o),
+(192,725,o),
+(184,721,cs),
+(164,711,o),
 (139,704,o),
 (118,700,c),
-(137,674,l),
-(32,116,ls),
-(28,98,o),
-(27,83,o),
-(27,71,cs),
-(27,15,o),
-(48,-13,o),
-(90,-13,cs)
+(136,674,l),
+(1,116,ls),
+(-3,100,o),
+(-6,79,o),
+(-6,71,cs),
+(-6,15,o),
+(11,-13,o),
+(53,-13,cs)
 );
 },
 {
 closed = 1;
 nodes = (
-(101,22,o),
-(89,42,o),
-(89,84,cs),
-(89,104,o),
-(94,130,o),
-(102,166,cs),
-(116,226,o),
-(186,368,o),
-(235,368,cs),
-(255,368,o),
-(265,344,o),
-(265,296,cs),
-(265,193,o),
-(202,22,o),
-(124,22,cs)
+(67,22,o),
+(56,39,o),
+(56,74,cs),
+(56,100,o),
+(63,127,o),
+(74,166,cs),
+(91,226,o),
+(169,368,o),
+(218,368,cs),
+(235,368,o),
+(244,349,o),
+(244,313,cs),
+(244,198,o),
+(166,22,o),
+(88,22,cs)
 );
 }
 );
-width = 338;
+width = 313;
 },
 {
-guides = (
+anchors = (
 {
-angle = 256.4048;
-pos = (152,703);
+name = bottom;
+pos = (186,0);
 },
 {
-pos = (264,1379);
+name = center;
+pos = (195,553);
+},
+{
+name = center_left;
+pos = (109,530);
+},
+{
+name = top;
+pos = (327,691);
+},
+{
+name = top_dot;
+pos = (328,645);
+},
+{
+name = top_xheight;
+pos = (374,416);
+},
+{
+name = us;
+pos = (394,415);
+},
+{
+name = zzcurly;
+pos = (190,548);
 }
 );
 layerId = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -359,6 +507,40 @@ nodes = (
 width = 473;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (156,0);
+},
+{
+name = center;
+pos = (176,553);
+},
+{
+name = center_left;
+pos = (108,530);
+},
+{
+name = top;
+pos = (297,691);
+},
+{
+name = top_dot;
+pos = (303,645);
+},
+{
+name = top_xheight;
+pos = (338,416);
+},
+{
+name = us;
+pos = (393,415);
+},
+{
+name = zzcurly;
+pos = (169,548);
+}
+);
 layerId = "997BDFA1-EC67-4686-8CFE-E56BDBE179FE";
 shapes = (
 {

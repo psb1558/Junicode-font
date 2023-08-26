@@ -68,7 +68,7 @@ diacritics. For example, instead of MUFI \unic{U+E498} \textUName{latin small le
 downwards, then continue with any marks above the character and work upwards. For example, to make
 \textex{ǭ̣́}, place characters in this order: \textex{o},
 \textUName{combining ogonek} \unic{U+0328}, \textUName{combining dot below} \unic{U+0323}, \textUName{combining
-macron} \unic{U+0304}, \textUName{combining acute} \unic{U+0301}). Some MUFI characters have marks in unconventional locations,
+macron} \unic{U+0304}, \textUName{combining acute} \unic{U+0301}). Some MUFI characters have marks in unconventional positions,
 e.g. \textex{ȯ́} \textUName{latin small letter o with dot above and acute}, where the
 acute appears beside the dot instead of above. This and other characters like it should still be entered as a sequence
 of base character + marks (here \textex{o}, \textUName{combining dot above} \unic{U+0307},
@@ -116,10 +116,21 @@ acute} (\unic{U+0301}) will change \textex{t̨́} to \textex{\textsc{t̨́}}.
 \subsection{\textSourceText{c2sc} -- Small Capitals from Capitals}
 Use with \textSourceText{smcp} for all-small-cap text. ABCDE $\rightarrow $ {\addfontfeature{Letters = UppercaseSmallCaps}ABCDE}.
 
+Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters} below) have no lowercase equivalents. Their small capital forms can be
+accessed only through this feature.
+
 \subsection{\textSourceText{pcap} -- Petite Capitals}
 Produces small caps in a smaller size than \textSourceText{smcp}. Use these when small caps have to be mixed with
-lowercase letters. The whole of the basic Latin alphabet is covered, plus several other letters. klmno{\th}
+lowercase letters. The whole of the basic Latin alphabet is covered, plus a number of other letters, but fewer than
+half of Junicode’s small caps have petite cap equivalents. klmno{\th}
 $\rightarrow $ {\addfontfeature{Letters = PetiteCaps}klmno\th}.
+
+\subsection{\textSourceText{c2pc} -- Petite Capitals from Capitals}}
+Produces petite capitals from capitals. Use with \textSourceText{pcap} to convert mixed-case texts to petite capitals.
+PQRST $\rightarrow $ {\addfontfeature{Letters=UppercasePetiteCaps}PQRST}.
+
+Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters} below) have no lowercase equivalents. Their petite capital forms can be
+accessed only through this feature.
 
 \subsection{\textSourceText{case} -- Case-Sensitive Forms}
 Produces combining marks that harmonize with capital letters: {\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
@@ -188,7 +199,7 @@ Figures in a uniform height, harmonizing with uppercase letters: \ltab{012345678
 Produces slashed zero in all number styles:
 {\addfontfeature{Numbers=SlashedZero}\ltab{0} \otab{0} \lprop{0} \oprop{0}. Includes superscripts, subscripts, and
 fractions formed with \textSourceText{frac}:
-\sups{\ltab{0}~\oprop{0}}~\subs{\ltab{0}~\oprop{0}} \addfontfeature{Fractions=On} 10/30}.\pagebreak
+\sups{\ltab{0}~\oprop{0}}~\subs{\ltab{0}~\oprop{0}} \addfontfeature{Fractions=On} 10/30}.
 
 \section{Superscripts and Subscripts}
 \subsection{\textSourceText{sups} -- Superscripts}
@@ -204,7 +215,7 @@ Produces subscript numbers. Only affects lining tabular (the default numbers) an
 \section{Ornaments}
 \subsection{\textSourceText{ornm} -- Ornaments}
 Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (\unic{U+2022}) or as
-variants of a-z, A-C (all fleurons are available by either method):
+variants of a-z, A-C:
 
 \begin{multicols}{4}
 a, 1{\tabto{4em}}\ornm{a}
@@ -269,6 +280,15 @@ C, 29{\tabto{4em}}\ornm{C}
 \noindent The method with letters of the alphabet is easier, but the method with bullets will produce a more satisfactory result
 when text is displayed in an environment where Junicode is not available or \textSourceText{ornm} is not
 implemented.
+
+\subsection{Lady Junicode}
+Lady Junicode cannot be produced by an OpenType feature, believing that it would be vulgar to make herself so accessible. She has, indeed,
+commanded that the author of this document not publish her code point, located in one of the more private corners of the 
+Private Use Area. She has, however, given permission to publish her miniature:
+\begin{center}
+{\huge\char"0F19F}
+\end{center}
+If you encounter her while adventuring in her domains, greet her respectfully, and she will welcome you graciously.
 
 \section{Alphabetic Variants}
 \subsection{\textSourceText{cv01-cv52} -- Basic Latin Variants}
@@ -474,7 +494,7 @@ quotation of the \textit{Ormulum}. The feature produces a p that differs from
 the default only in the way it forms a double-p ligature with \textSourceText{hlig}:
 \cvd[1]{32}{\hlig{pp}}, not \hlig{pp}.
 
-\subsection{\textSourceText{cv53-cv66} -- Other Latin Letters}\hypertarget{OtherLatin}{}
+\subsection{\textSourceText{cv53-cv66}, \textSourceText{cv91} -- Other Latin Letters}\hypertarget{OtherLatin}{}
 Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
 combining \textex{e} with ogonek, accessible via \textSourceText{\hyperlink{ss10}{ss10}} with the
 entity reference \textSourceText{\&\_eogo;}.
@@ -527,6 +547,9 @@ entity reference \textSourceText{\&\_eogo;}.
 \centering {\narrow Ȝ, ȝ (U+021C, U+021D)} &
 \centering cv63 &
 {1=\cvd{63}{Ȝȝ}, 2=\cvd[1]{63}{Ȝȝ}}\\\hline
+\centering Ŋ (U+014A) &
+\centering cv91 &
+{1=\cvd{91}{Ŋ}, 2=\cvd[1]{91}{Ŋ}}\\\hline
 \centering {\char"0A7C1} (\unic{U+A7C1}) &
 \centering cv65 &
 {1=\cvd{65}{\char"0A7C1}, 2=\cvd[1]{65}{\char"0A7C1}, 3=\cvd[2]{65}{\char"0A7C1}, 4=\cvd[3]{65}{\char"0A7C1}}\\\hline
@@ -962,7 +985,7 @@ attention to them, since they will likely have their own method of representing 
 
 \noindent For another function of Stylistic Set 10, see \hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
 
-\subsection{ss20 -- Low Diacritics}
+\subsection{\textSourceText{ss20} -- Low Diacritics}
 The MUFI recommendation includes a number of precomposed characters with base letters b, h, k, {\th}, ꝺ and {\dh}
 and combining marks ◌ͣ (\unic{U+0363}), ◌ͤ (\unic{U+0364}), \cvd[14]{84}{◌͏̄}
 (\unic{U+0304}\slash\textSourceText{cv84[15]}), ◌ͦ (\unic{U+0366}), ◌ͬ (\unic{U+036C}), ◌ᷢ (\unic{U+1DE2}),
@@ -1003,7 +1026,7 @@ combining overline)}
 \subsection{\textSourceText{cv}\textSourceText{90} -- Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}
 1=\cvd{90}{◌͞◌}, 2=\cvd[1]{90}{◌͞◌}.
 
-\subsection{cv92 -- Variant of breve
+\subsection{\textSourceText{cv92} -- Variant of breve
 below (\unic{U+032E})}
 1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
 to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
@@ -1086,7 +1109,7 @@ F2EE, F2EF}, pound signs from various locales.
 1=\cvd{97}{ƒ}. Same as MUFI \unic{U+F2E8}.
 
 \subsection{\textSourceText{cv98} -- Variant of ℥ (\unic{U+2125}, Ounce sign)}
-1=\cvd{98}{℥}. Same as MUFI \unic{U+F2FD}, Script ounce sign.\pagebreak
+1=\cvd{98}{℥}. Same as MUFI \unic{U+F2FD}, Script ounce sign.
 
 \section{Gothic}
 \subsection{\textSourceText{ss19} -- Latin to Gothic Transliteration}

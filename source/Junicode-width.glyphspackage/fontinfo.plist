@@ -1990,7 +1990,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Combining subscript a\"; # 37
   };
-  Character 0x0304;
+#  Character 0x0304;
 };
 sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1   # 1-4
                        zigzagabovecomb.alt2 zigzagabovecomb.alt3 ancomb aNcomb arcomb      # 5-9
@@ -2022,7 +2022,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Short double macron with serifs\";
   };
-  Character 0x035E;
+#  Character 0x035E;
 };
 sub doublemacroncomb from [ doublemacroncomb.alt1 doublemacroncomb.alt2 ] ;
 ";
@@ -2036,7 +2036,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Spacing zigzag\";
   };
-  Character 0x00AF;
+#  Character 0x00AF;
 };
 sub macron from [ zigzagmod ] ;
 ";
@@ -3325,7 +3325,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule A\";  # English US
   };
-  Character 0x0041;
+#  Character 0x0041;
 };
 sub A from [ A.alt1 A.alt2 A.alt3 A.enlarged ];
 ";
@@ -3354,7 +3354,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule a\";  # English US
   };
-  Character 0x0061;
+#  Character 0x0061;
 };
 sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged ] ;
 ";
@@ -3371,7 +3371,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Insular B\";  # English US
   };
-  Character 0x0042;
+#  Character 0x0042;
 };
 sub B from [ B.enlarged B.alt1 ] ;
 ";
@@ -3388,7 +3388,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"b with loop\"; 
   };
-  Character 0x0062;
+#  Character 0x0062;
 };
 sub b from [ b.enlarged b.alt2 ];
 ";
@@ -3405,7 +3405,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule c\";
   };
-  Character 0x0043;
+#  Character 0x0043;
 };
 sub C from [ C.alt C.enlarged ] ;
 ";
@@ -3422,7 +3422,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule c\";
   };
-  Character 0x0063;
+#  Character 0x0063;
 };
 sub c from [ c.mecurl c.enlarged ] ;
 ";
@@ -3442,7 +3442,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule insular D\";
   };
-  Character 0x0044;
+#  Character 0x0044;
 };
 sub D from [ Dinsular D.enlarged Dinsular.enlarged ] ;
 
@@ -3469,7 +3469,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule insular d\";
   };
-  Character 0x0064;
+#  Character 0x0064;
 };
 sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
 ";
@@ -3492,7 +3492,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Insular E\";
   };
-  Character 0x0045;
+#  Character 0x0045;
 };
 sub E from [ E.alt1 E.alt2 E.enlarged E.alt3 ] ;
 ";
@@ -3518,7 +3518,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Tall open e\";
   };
-  Character 0x0065;
+#  Character 0x0065;
 };
 sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged e.alt4 ] ;
 ";
@@ -3538,7 +3538,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule insular F\";
   };
-  Character 0x0046;
+#  Character 0x0046;
 };
 sub F from [ Finsular F.enlarged Finsular.enlarged ] ;
 # sub Fdotbelow from [ Finsulardotbelow ] ;
@@ -3575,7 +3575,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule insular f\";
   };
-  Character 0x0066;
+#  Character 0x0066;
 };
 sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged ] ;
 
@@ -3607,7 +3607,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Orm's hard G, enlarged\";
   };
-  Character 0x0047;
+#  Character 0x0047;
 };
 sub G from [ Ginsular Gormulum G.alt G.enlarged Gormulum.enlarged ] ;
 ";
@@ -3645,7 +3645,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Orm's hard g, enlarged\";
   };
-  Character 0x0067;
+#  Character 0x0067;
 };
 sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged gormulum.enlarged ] ;
 ";
@@ -3662,7 +3662,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule H\";
   };
-  Character 0x0048;
+#  Character 0x0048;
 };
 sub H from [ H.alt H.enlarged ] ;
 ";
@@ -3682,7 +3682,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule h\";
   };
-  Character 0x0068;
+#  Character 0x0068;
 };
 sub h from [ h.alt h.alt2 h.enlarged ] ;
 ";
@@ -3702,7 +3702,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule I\";
   };
-  Character 0x0049;
+#  Character 0x0049;
 };
 sub I from [ Idotaccent uniA7FE I.enlarged ] ;
 # figure this out
@@ -3736,7 +3736,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"iota-like i\";
   };
-  Character 0x0069;
+#  Character 0x0069;
 };
 sub i from [ i.alt2 i.alt i.alt1 i.romnum i.romnum1 i.enlarged i.alt3 ] ;
 ";
@@ -3753,7 +3753,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule J\";
   };
-  Character 0x004A;
+#  Character 0x004A;
 };
 sub J from [ Jdotaccent J.enlarged ] ;
 ";
@@ -3776,7 +3776,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule j\";
   };
-  Character 0x006A;
+#  Character 0x006A;
 };
 sub j from [ j.alt3 j.alt2 jdotaccent j.enlarged ] ;
 ";
@@ -3790,7 +3790,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule k\";
   };
-  Character 0x004B;
+#  Character 0x004B;
 };
 sub K from [ K.enlarged ] ;
 ";
@@ -3816,7 +3816,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule k\";
   };
-  Character 0x006B;
+#  Character 0x006B;
 };
 sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged ] ;
 ";
@@ -3830,7 +3830,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule l\";
   };
-  Character 0x004C;
+#  Character 0x004C;
 };
 sub L from [ L.enlarged ] ;
 ";
@@ -3859,7 +3859,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"l with loop\";
   };
-  Character 0x006C;
+#  Character 0x006C;
 };
 sub l from [ l.alt l.enlarged lhighstroke lhighstroke.alt l.alt2 l.alt3 ] ;
 ";
@@ -3882,7 +3882,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule m\";
   };
-  Character 0x004D;
+#  Character 0x004D;
 };
 sub M from [ M.alt1 M.alt2 uniA7FF M.enlarged ] ;
 ";
@@ -3905,7 +3905,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule m\";
   };
-  Character 0x006D;
+#  Character 0x006D;
 };
 sub m from [ m.alt1 m.alt2 m.alt3 m.enlarged ] ;
 ";
@@ -3922,7 +3922,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule n\";
   };
-  Character 0x004E;
+#  Character 0x004E;
 };
 sub N from [ N.alt1 N.enlarged ] ;
 ";
@@ -3951,7 +3951,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"n with attached subscript a\";
   };
-  Character 0x006E;
+#  Character 0x006E;
 };
 sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript ] ;
 ";
@@ -3965,7 +3965,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule o\";
   };
-  Character 0x004F;
+#  Character 0x004F;
 };
 sub O from [ O.enlarged ] ;
 ";
@@ -3979,7 +3979,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule o\";
   };
-  Character 0x006F;
+#  Character 0x006F;
 };
 sub o from [ o.enlarged ] ;
 ";
@@ -3996,7 +3996,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule p\";
   };
-  Character 0x0050;
+#  Character 0x0050;
 };
 sub P from [ Pepigraphicreversed P.enlarged ] ;
 ";
@@ -4013,7 +4013,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Alternate p for the Ormulum\";
   };
-  Character 0x0070;
+#  Character 0x0070;
 };
 sub p from [ p.enlarged p.alt ] ;
 ";
@@ -4036,7 +4036,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Q with longer tail\";
   };
-  Character 0x0051;
+#  Character 0x0051;
 };
 sub Q from [ Q.alt Q.enlarged Q.alt2 Q.alt3 ] ;
 ";
@@ -4053,7 +4053,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule q\";
   };
-  Character 0x0071;
+#  Character 0x0071;
 };
 sub q from [ q.alt q.enlarged ] ;
 ";
@@ -4073,7 +4073,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule r\";
   };
-  Character 0x0052;
+#  Character 0x0052;
 };
 sub R from [ Rinsular Rrotunda R.enlarged ] ;
 ";
@@ -4096,7 +4096,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule r\";
   };
-  Character 0x0072;
+#  Character 0x0072;
 };
 sub r from [ rinsular rrotunda r.mecurl r.enlarged ] ;
 ";
@@ -4122,7 +4122,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Middle Scottish S\";
   };
-  Character 0x0053;
+#  Character 0x0053;
 };
 sub S from [ Sinsular Ssigmoid S.enlarged Sanctus uniA7D6 ] ;
 ";
@@ -4157,7 +4157,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Middle Scottish s\";
   };
-  Character 0x0073;
+#  Character 0x0073;
 };
 sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 ] ;
 ";
@@ -4174,7 +4174,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule t\";
   };
-  Character 0x0054;
+#  Character 0x0054;
 };
 sub T from [ Tinsular T.enlarged ] ;
 ";
@@ -4194,7 +4194,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule t\";
   };
-  Character 0x0074;
+#  Character 0x0074;
 };
 sub t from [ tinsular t.mecurl t.enlarged ] ;
 ";
@@ -4208,7 +4208,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule u\";
   };
-  Character 0x0055;
+#  Character 0x0055;
 };
 sub U from [ U.enlarged ] ;
 ";
@@ -4222,7 +4222,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule u\";
   };
-  Character 0x0075;
+#  Character 0x0075;
 };
 sub u from [ u.enlarged ] ;
 ";
@@ -4236,7 +4236,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule v\";
   };
-  Character 0x0056;
+#  Character 0x0056;
 };
 sub V from [ V.enlarged ] ;
 ";
@@ -4262,7 +4262,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule v\";
   };
-  Character 0x0076;
+	#  Character 0x0076;
 };
 sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
 ";
@@ -4279,7 +4279,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"W Anglicana\";
   };
-  Character 0x0057;
+#  Character 0x0057;
 };
 sub W from [ W.enlarged uniA7C2 ] ;
 ";
@@ -4296,7 +4296,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"w Anglicana\";
   };
-  Character 0x0077;
+#  Character 0x0077;
 };
 sub w from [ w.enlarged uniA7C3 ] ;
 ";
@@ -4310,7 +4310,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule x\";
   };
-  Character 0x0058;
+#  Character 0x0058;
 };
 sub X from [ X.enlarged ] ;
 ";
@@ -4336,7 +4336,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule x\";
   };
-  Character 0x0078;
+#  Character 0x0078;
 };
 sub x from [ xlongleftleg x.alt2 x.alt3 x.alt4 x.enlarged ] ;
 ";
@@ -4353,7 +4353,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule y\";
   };
-  Character 0x0059;
+#  Character 0x0059;
 };
 sub Y from [ Y.alt Y.enlarged ] ;
 ";
@@ -4376,7 +4376,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule y\";
   };
-  Character 0x0079;
+#  Character 0x0079;
 };
 sub y from [ y.alt y.alt2 y.alt3 y.enlarged ] ;
 ";
@@ -4393,7 +4393,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule z\";
   };
-  Character 0x005A;
+#  Character 0x005A;
 };
 sub Z from [ Zvisigothic Z.enlarged ] ;
 ";
@@ -4413,7 +4413,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule z\";
   };
-  Character 0x007A;
+#  Character 0x007A;
 };
 sub z from [ zvisigothic z.alt1 z.enlarged ] ;
 ";
@@ -4433,7 +4433,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"A with curved stroke\";
   };
-  Character 0x0104;
+#  Character 0x0104;
 };
 sub Aogonek from [ Aogonek.alt1 Aogonek.alt2 Aogonek.alt3 ] ;
 
@@ -4451,7 +4451,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"a with long stroke\";
   };
-  Character 0x0105;
+#  Character 0x0105;
 };	
 sub aogonek from [ aogonek.alt1 aogonek.alt2 ] ;
 ";
@@ -4471,7 +4471,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule aa\";
   };
-  Character 0xA733;
+#   Character 0xA733;
 };
 sub aa from [ aa.alt2 aa.alt aa.enlarged ] ;
 ";
@@ -4488,7 +4488,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule ae\";
   };
-  Character 0x00C6;
+#  Character 0x00C6;
 };
 sub AE from [ AE.alt1 AE.enlarged ] ;
 ";
@@ -4511,7 +4511,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"ae with uncial a\";
   };
-  Character 0x00E6;
+#  Character 0x00E6;
 };
 sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
 ";
@@ -4531,7 +4531,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule ao with smaller o\";
   };
-  Character 0xA734;
+#  Character 0xA734;
 };
 sub Ao from [ Ao.alt AO.enlarged AO.enlarged.alt ] ;
 ";
@@ -4554,7 +4554,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule ao with smaller o\";
   };
-  Character 0xA735;
+#  Character 0xA735;
 };
 sub ao from [ ao.alt ao.alt2 ao.enlarged ao.enlarged.alt ] ;
 ";
@@ -4568,7 +4568,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Neckless av\";
   };
-  Character 0xA739;
+#  Character 0xA739;
 };
 sub av from [ av.alt ] ;
 ";
@@ -4582,7 +4582,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"d with curved cross\";
   };
-  Character 0x0111;
+#  Character 0x0111;
 };
 sub dcroat from [ dcroat.alt ] ;
 ";
@@ -4599,8 +4599,8 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"e with stroke for ogonek\";
   };
-  Character 0x0118;
-  Character 0x0119;
+#  Character 0x0118;
+#  Character 0x0119;
 };
 sub eogonek            from [ eogonek.alt          eogonek.alt1          ] ;
 sub Eogonek            from [ Eogonek.alt          Eogonek.alt1          ] ;
@@ -4624,8 +4624,8 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Insular minuscule yogh\";
   };
-  Character 0x021C;
-  Character 0x021D;
+#  Character 0x021C;
+#  Character 0x021D;
 };
     sub Yogh       from [ Yogh.alt Yogh.alt2 ] ;
     sub yogh       from [ yogh.alt yogh.alt2 ] ;
@@ -4640,7 +4640,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"l with curved high stroke\";
   };
-  Character 0xA749;
+#  Character 0xA749;
 };
 sub lhighstroke from [ lhighstroke.alt ] ;
 ";
@@ -4663,7 +4663,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"o with upper-right stroke\";
   };
-  Character 0xA7C1;
+#  Character 0xA7C1;
 };
 sub uniA7C1 from [ uniA7C1.alt1 uniA7C1.alt2 uniA7C1.alt3 uniA7C1.alt4 ] ;
 ";
@@ -4677,7 +4677,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"thorn with variant cross stroke\";
   };
-  Character 0xA765;
+#  Character 0xA765;
 };
 sub thornstroke         from [ thornstroke.alt         ] ;
 sub thornstroke.loclENG from [ thornstroke.alt.loclENG ] ;
@@ -4692,7 +4692,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Cursive glottal stop\";
   };
-  Character 0x0294;
+#  Character 0x0294;
 };
 sub glottalstop from [ glottalstop.alt ] ;
 ";
@@ -4709,8 +4709,8 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Short Tironian et with stroke\";
   };
-  Character 0x204A;
-  Character 0x2E52;
+#  Character 0x204A;
+#  Character 0x2E52;
 };
 sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
 sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     ] ;
@@ -4782,7 +4782,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Short virgula\"; # 20
   };
-  Character 0x002E;
+#  Character 0x002E;
 };
 sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1                    # 1-4
                   semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 uni2E4E.alt1   # 5-9
@@ -4800,7 +4800,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Distinctio\";
   };
-  Character 0x00B7;
+#  Character 0x00B7;
 };
 sub periodcentered from [ periodcentered.alt ] ;
 ";
@@ -4817,7 +4817,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"High comma positura\";
   };
-  Character 0x002C;
+#  Character 0x002C;
 };
 sub comma from [ comma.alt1 comma.alt2 ] ;
 ";
@@ -4843,7 +4843,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Comma positura with three dots\";
   };
-  Character 0x003B;
+#  Character 0x003B;
 };
 sub semicolon from [ semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 ] ;
 ";
@@ -4866,7 +4866,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Punctus flexus\";
   };
-  Character 0x2E4E;
+#  Character 0x2E4E;
 };
 sub uni2E4E from [ uni2E4E.alt1 uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 ] ;
 ";
@@ -4880,7 +4880,7 @@ code = " cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Punctus exclamativus\";
   };
-  Character 0x0021;
+#  Character 0x0021;
 };
 sub exclam from [ exclam.alt2 ] ;
 ";
@@ -4900,7 +4900,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Punctus interrogativus with figure eight\";
   };
-  Character 0x003F;
+#  Character 0x003F;
 };
 sub question from [ question.alt2 question.alt3 question.alt4 ] ;
 ";
@@ -4914,7 +4914,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Low wavy line\";
   };
-  Character 0x007E;
+#  Character 0x007E;
 };
 sub asciitilde from [ asciitilde.alt ] ;
 ";
@@ -4928,7 +4928,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Signe de renvoi\";
   };
-  Character 0x002A;
+#  Character 0x002A;
 };
 sub asterisk from [ asterisk.alt ] ;
 ";
@@ -4945,7 +4945,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Short virgula\";
   };
-  Character 0x002F;
+#  Character 0x002F;
 };
 sub slash from [ dottedsolidus slash.alt ] ;
 ";
@@ -4959,7 +4959,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Record-style -rum\";
   };
-  Character 0xA75D;
+#  Character 0xA75D;
 };
 sub rumrotunda from [ rumrotunda.alt ] ;
 ";
@@ -4979,7 +4979,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Vertical zigzag\";
   };
-  Character 0x035B;
+#  Character 0x035B;
 };
 sub zigzagabovecomb        from [ zigzagabovecomb.alt1      zigzagabovecomb.alt2       zigzagabovecomb.alt3      ] ;
 sub zigzagabovecomb.eth    from [ zigzagabovecomb.alt2      zigzagabovecomb.alt1.eth   zigzagabovecomb.alt3.eth  ] ;
@@ -5003,7 +5003,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Capital -us abbreviation\";
   };
-  Character 0xA770;
+#  Character 0xA770;
 };
 sub usmod from [ usmod.alt1 usmod.alt2 ] ;
 ";
@@ -5020,7 +5020,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Subscript et\";
   };
-  Character 0xA76B;
+#  Character 0xA76B;
 };
 sub et from [ et.alt et.alt1 ];
 ";
@@ -5034,7 +5034,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Combining open a with macron\";
   };
-  Character 0x1DD3;
+#  Character 0x1DD3;
 };
 sub flattenedopenaabovecomb from [ flattenedopenaabovecomb.alt ] ;
 ";
@@ -5048,7 +5048,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Alternate combining insular d\";
   };
-  Character 0x1DD8;
+#  Character 0x1DD8;
 };
 sub insulardcomb from [ insulardcomb.alt ] ;
 ";
@@ -5062,7 +5062,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Curly combining r rotunda\";
   };
-  Character 0x1DE3;
+#  Character 0x1DE3;
 };
 sub rrotundacomb from [ rrotundacomb.alt ] ;
 ";
@@ -5076,7 +5076,9 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Diagonal dieresis\";
   };
-  Character 0x0308;
+#  Character 0x00E4;
+#  Character 0x00F6;
+#  Character 0x0308;
 };
 sub adieresis    from [ adieresis.alt        ] ;
 sub odieresis    from [ odieresis.alt        ] ;
@@ -5092,7 +5094,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Dotted overline\";
   };
-  Character 0x0305;
+#  Character 0x0305;
 };
 sub overlinecomb from [ overlinecomb.alt ] ;
 ";
@@ -5109,7 +5111,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Eng with baseline hook\";
   };
-  Character 0x014A;
+#  Character 0x014A;
 };
 sub Eng from [Eng.alt1 Eng.alt2];
 ";
@@ -5123,7 +5125,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Triple breve below\";
   };
-  Character 0x032E;
+#  Character 0x032E;
 };
 sub brevebelowcomb from [ triplebrevebelowcomb ] ;
 ";
@@ -5215,12 +5217,13 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Script ounce sign\";
   };
-  Character 0x00A4;
+#  Character 0x00A4;
 };
 sub currency from [ currency.alt01 currency.alt02 currency.alt03 currency.alt04 currency.alt05 currency.alt06 currency.alt07
                     currency.alt08 currency.alt09 currency.alt10 currency.alt11 currency.alt12 currency.alt13 currency.alt14
                     currency.alt15 currency.alt16 currency.alt17 currency.alt18 currency.alt19 currency.alt20
-                    currency.alt21 currency.alt22 currency.alt23 currency.alt24 currency.alt25 currency.alt26 currency.alt27 ] ;
+                    currency.alt21 currency.alt22 currency.alt23 currency.alt24 currency.alt25 currency.alt26
+                    currency.alt27 ] ;
 ";
 tag = cv93;
 },
@@ -5232,7 +5235,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Italian libra sign\";
   };
-  Character 0x2114;
+#  Character 0x2114;
 };
 sub lbbarsymbol from [ currency.alt12 ] ;
 ";
@@ -5261,7 +5264,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Lira sterlina sign\";
   };
-  Character 0x00A3;
+#  Character 0x00A3;
 };
 sub sterling from [ currency.alt11 currency.alt12 currency.alt13 currency.alt14 currency.alt15 currency.alt16 ] ;
 ";
@@ -5275,7 +5278,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Penning sign\";
   };
-  Character 0x20B0;
+#  Character 0x20B0;
 };
 sub uni20B0 from [ currency.alt22 ] ;
 ";
@@ -5289,7 +5292,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Floren sign with loop\";
   };
-  Character 0x0192;
+#  Character 0x0192;
 };
 sub florin from [ currency.alt07 ] ;
 ";
@@ -5303,7 +5306,7 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Script ounce sign\";
   };
-  Character 0x2125;
+#  Character 0x2125;
 };
 sub uni2125 from [ currency.alt27 ] ;
 ";

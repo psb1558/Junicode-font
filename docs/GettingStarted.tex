@@ -39,7 +39,12 @@ A growing number of desktop applications support variable fonts. Use the variabl
 Junicode in Adobe InDesign (always with the World-Ready Paragraph Composer\footnote{%
 The choice of a Composer is well hidden in the “Justification” section of the
 “Paragraph Style Options” dialog. Use of the default “Adobe Paragraph Composer”
-with Junicode VF may cause InDesign to crash or otherwise misbehave.}). LibreOffice
+with Junicode VF may cause InDesign to crash or otherwise misbehave. To prevent crashes
+when using the variable version of Junicode,
+it is also advisable to delete InDesign's preferences when launching the program after
+a font upgrade. To do this, press Shift-Alt-Control (on Windows) or
+Shift-Control-Option-Command (on the Mac) all together, \textit{immediately} after
+clicking to launch InDesign.} LibreOffice
 has supported variable fonts since version 7.5 (2023). {\LuaTeX} has excellent support
 for variable fonts: make sure your TeX installation is up to date (since in
 recent years support for variable fonts has improved with every release), and always choose “harf”

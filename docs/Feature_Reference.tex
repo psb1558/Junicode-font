@@ -72,7 +72,7 @@ macron} \unic{U+0304}, \textUName{combining acute} \unic{U+0301}). Some MUFI cha
 e.g. \textex{ȯ́} \textUName{latin small letter o with dot above and acute}, where the
 acute appears beside the dot instead of above. This and other characters like it should still be entered as a sequence
 of base character + marks (here \textex{o}, \textUName{combining dot above} \unic{U+0307},
-\textUName{combining acute} \unic{U+0301}). Junicode will position the marks correctly.
+\textUName{combining acute} \unic{U+0301}). Junicode will position the marks in the manner prescribed by MUFI.
 \item Characters for which a base character (a Unicode character to which it can be linked) cannot be identified, or for
 which there may be an inconsistency in the MUFI recommendation. These include:
 
@@ -1352,8 +1352,8 @@ u{\textcompwordmark}u$\rightarrow $uu}
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 \revthorn{{\th}{\textcompwordmark}r$\rightarrow ${\th}r}}
 
-{\color[rgb]{0.38039216,0.09019608,0.16078432}
-\revthorn{{\th}{\textcompwordmark}s$\rightarrow ${\th}s}}
+%{\color[rgb]{0.38039216,0.09019608,0.16078432}
+%\revthorn{{\th}{\textcompwordmark}s$\rightarrow ${\th}s}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 \revthorn{{\th}{\textcompwordmark}ẝ$\rightarrow ${\th}ẝ}}
@@ -1369,8 +1369,7 @@ work properly, \unic{U+017F} \textex{ſ} must be entered directly, not by applyi
 
 \subsection{\textSourceText{dlig} --
 Discretionary Ligatures}
-Produces lesser-used ligatures, but also roman numbers, e.g.
-{\addfontfeature{Ligatures=Rare}ii, II, xi, XI}. The lesser-used ligatures:
+Produces lesser-used ligatures:
 \textex{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, ſp, str, st, tr, tt, ty}}.
 
 \subsection{\textSourceText{ss17} -- Rare

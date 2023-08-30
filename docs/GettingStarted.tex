@@ -67,6 +67,11 @@ only those. A reasonable selection for many users will include the traditional f
 styles for main text, several SemiExpanded styles for footnotes, and
 SemiCondensed for titles.
 
+Junicode’s static fonts come in two types, TrueType (files with a .ttf extension) and
+CFF (files with an .otf extension). These are functionally identical, but they may look
+subtly different on your computer’s screen because of the different technologies used to
+render glyphs. Choose the one you find most appealing.
+
 With around 5,000 characters, Junicode is a large font. Finding the things you
 want in a collection that size can be a challenge, and then entering them in your
 documents is another challenge. This document will help, but it
@@ -135,8 +140,10 @@ that support Junicode’s features fully include the free word processor
 \href{https://www.libreoffice.org/}{LibreOffice Writer}, all major browsers
 (Firefox, Chrome, Safari and Edge), and
 the typesetting programs {\LuaLaTeX} and {\XeLaTeX}. Adobe InDesign supports
-OpenType features only partially, but provides access to all of Junicode's characters
-through its own interface.
+OpenType features only partially, but all features can be accessed via
+Roland Dreger’s \href{https://github.com/RolandDreger/open-type-features}{open-type-features}
+script, and InDesign provides access to
+all of Junicode's characters via its “Glyphs” dialog.
 
 Microsoft Word, unfortunately, provides only limited support for OpenType
 features. It supports the \hyperlink{req}{Required Features} discussed below, and also

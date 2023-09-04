@@ -1,6 +1,6 @@
 ![Sample Image](junicode-banner.jpg)
 
-This is the development site for Junicode 2, a radically rebuilt version of the
+This is the development and distribution site for Junicode 2, a radically rebuilt version of the
 widely used free font for medievalists, linguists, and specialists in many academic
 disciplines. (Junicode 1.003, the last in the Junicode 1 series, can also be
 downloaded here.) Junicode 2 features full compliance with the recommendation of the

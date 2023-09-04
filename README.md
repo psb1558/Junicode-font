@@ -1,4 +1,4 @@
-# Junicode – The Font for Medievalists
+![Sample Image](junicode-banner.jpg)
 
 This is the development site for Junicode 2, a radically rebuilt version of the
 widely used free font for medievalists, linguists, and specialists in many academic
@@ -22,8 +22,6 @@ The Junicode 2 font
 - a more comprehensive set of anchors for mark positioning,
 - and an expanded collection of OpenType features—carefully chosen and organized to promote
 the display of accessible text.
-
-![Sample Image](sample-image.jpg)
 
 Users of the various versions of Junicode 1 need to be aware that documents
 originally set in Junicode 1 may reflow when set in Junicode 2. Further,

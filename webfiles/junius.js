@@ -350,22 +350,17 @@ mic Neill, or tucad cealtar tairsib o Dia, co ru-s-foillsid do righ Corca Tri tr
 
 	$(".check").change(function() {
 
-		if ($("#italbutton").is(":checked")) {
-			// $("#textbox").css("font-style", "italic");
-			font_style = "italic"
-		}
-		else {
-			// $("#textbox").css("font-style", "normal");
-			font_style = "normal"
-		}
-
 		fstring = "";
+		font_style = "normal"
 
 		$("input").each(function() {
 			var tag = $(this).attr("id");
 			if ($( this ).is(":checked")) {
 				if ( tag === "morefeat" ) {
 					$(".hid").css("display", "inline");
+				}
+				else if (tag === "italbutton") {
+					font_style = "italic"
 				}
 				else if ( tag.length == 5 ) {
 					var basetag = tag.substring(0,4);

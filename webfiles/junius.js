@@ -303,7 +303,7 @@ mic Neill, or tucad cealtar tairsib o Dia, co ru-s-foillsid do righ Corca Tri tr
 				newClass = "tbc-medium-compressed";
 				break;
 			case  "SmExp":
-				newClass = "";
+				newClass = "tbc-smexp";
 				break
 			case  "SmExpMedium":
 				newClass = "tbc-smexp-medium";

@@ -2262,7 +2262,8 @@ tag = dnom;
 },
 {
 code = "sub @FIGURES_LINING by @FIGURES_LINING_TABULAR;
-sub @FIGURES_OLDSTYLE by @FIGURES_OLDSTYLE_TABULAR;";
+sub @FIGURES_OLDSTYLE by @FIGURES_OLDSTYLE_TABULAR;
+";
 tag = tnum;
 },
 {
@@ -2278,7 +2279,9 @@ tag = pnum;
 },
 {
 code = "sub @FIGURES_OLDSTYLE by @FIGURES_LINING;
-sub @FIGURES_OLDSTYLE_TABULAR by @FIGURES_LINING_TABULAR;";
+sub @FIGURES_OLDSTYLE_TABULAR by @FIGURES_LINING_TABULAR;
+sub [ zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior ] by [ zeroinferior.lt oneinferior.lt twoinferior.lt threeinferior.lt fourinferior.lt fiveinferior.lt sixinferior.lt seveninferior.lt eightinferior.lt nineinferior.lt ] ;
+";
 tag = lnum;
 },
 {
@@ -7865,6 +7868,11 @@ width = 0;
 );
 }
 );
+guides = (
+{
+pos = (343,-167);
+}
+);
 id = master01;
 metricValues = (
 {
@@ -8024,6 +8032,7 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -8174,6 +8183,9 @@ pos = (354,585);
 },
 {
 pos = (205,741);
+},
+{
+pos = (343,-167);
 }
 );
 iconName = Bold;
@@ -8486,6 +8498,9 @@ pos = (214,590);
 },
 {
 pos = (105,741);
+},
+{
+pos = (343,-167);
 }
 );
 iconName = Light;
@@ -8790,6 +8805,9 @@ pos = (451,683);
 },
 {
 pos = (411,675);
+},
+{
+pos = (343,-167);
 }
 );
 id = "E06D8587-1A71-4EC2-BD94-397D882F5FC1";
@@ -9083,25 +9101,28 @@ width = 94;
 );
 guides = (
 {
-pos = (36,284);
+pos = (36,274);
 },
 {
-pos = (49,276);
+pos = (49,266);
 },
 {
-pos = (501,683);
+pos = (501,673);
 },
 {
-pos = (411,675);
+pos = (411,665);
 },
 {
-pos = (354,585);
+pos = (354,575);
 },
 {
-pos = (314,590);
+pos = (314,580);
 },
 {
-pos = (375,741);
+pos = (375,731);
+},
+{
+pos = (343,-167);
 }
 );
 id = "8F7CDE40-C368-4484-AA71-76B7ABD5539F";
@@ -56773,7 +56794,7 @@ value = "Peter S. Baker";
 },
 {
 key = versionString;
-value = "Version 2.100 RC 2";
+value = "Version 2.100 RC 3";
 }
 );
 stems = (

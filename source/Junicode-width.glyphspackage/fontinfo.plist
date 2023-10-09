@@ -59,12 +59,12 @@ euro.lt perthousand.lt pertenthousand.lt minus.lt
 name = FIGURES_LINING_TABULAR;
 },
 {
-code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf dollar percent numbersign euro perthousand pertenthousand minus
+code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf dollar.tosf percent numbersign euro perthousand pertenthousand minus
 ";
 name = FIGURES_OLDSTYLE_TABULAR;
 },
 {
-code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf dollar.lt percent.lt numbersign.lt euro.lt
+code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf dollar.lf percent.lt numbersign.lt euro.lt
 perthousand.lt pertenthousand.lt minus.lt
 ";
 name = FIGURES_LINING;
@@ -297,9 +297,13 @@ pos = -200;
 size = 0;
 }
 );
+},
+{
+name = "Feature for Feature Variations";
+value = rclt;
 }
 );
-date = "2023-09-22 12:43:25 +0000";
+date = "2023-10-08 19:33:38 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -8128,6 +8132,7 @@ KernOnModels = (
 "r y"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -51239,10 +51244,6 @@ value = "Licensed under the SIL Open Font License, version 1.1";
 {
 key = licenseURL;
 value = "http://scripts.sil.org/OFL";
-},
-{
-key = versionString;
-value = "Version 2.100 RC 4";
 }
 );
 stems = (

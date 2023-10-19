@@ -499,7 +499,7 @@ lookup ArchaicIrish {
     sub D by Dinsular ;
     sub Ddotaccent by Ddotaccent.alt1 ;
     sub d by dinsular.alt ;
-    sub ddotaccent by ddotaccent.alt2 ;
+    sub ddotaccent by dinsulardotaccent.alt ;
     sub E by E.alt3 ;
     sub Eacute by Eacute.alt3 ;
     sub e by e.alt2 ;
@@ -3319,6 +3319,8 @@ code = "cvParameters {
 #  Character 0x0064;
 };
 sub d from [ dinsular dinsular.alt d.mecurl d.enlarged dinsular.enlarged ] ;
+sub ddotaccent from [ dinsulardotaccent dinsulardotaccent.alt ddotaccent.mecurl ddotaccent.enlarged
+                      dinsulardotaccent.enlarged ];
 ";
 tag = cv08;
 },
@@ -3364,7 +3366,8 @@ code = "cvParameters {
   };
 #  Character 0x0065;
 };
-sub e from [ e.alt1 e.alt2 e.alt3 e.enlarged e.alt4 ] ;
+sub e from      [ e.alt1 e.alt2 e.alt3 e.enlarged      e.alt4 ] ;
+sub e.alt2 from [ e.alt1 e      e.alt3 e.alt2.enlarged e.alt4 ] ;
 ";
 tag = cv10;
 },
@@ -5422,6 +5425,8 @@ sub Eng.alt1 by eng.alt1.pcap;
 sub Eng.alt2 by eng.alt2.pcap;
 sub Thorn.loclENG by thorn.loclENG.pcap;
 sub Q_u by Q_u.pcap;
+sub Softsign-cy by softsign-cy.pcap;
+sub Hardsign-cy by hardsign-cy.pcap;
 ";
 tag = c2pc;
 },
@@ -5709,6 +5714,8 @@ sub zdotbelow by zdotbelow.pcap;
 sub zmacronbelow by zmacronbelow.pcap;
 sub zstroke by zstroke.pcap;
 sub thorn.loclENG by thorn.loclENG.pcap;
+sub softsign-cy by softsign-cy.pcap ;
+sub hardsign-cy by hardsign-cy.pcap ;
 ";
 tag = pcap;
 },
@@ -6097,6 +6104,8 @@ sub O_Rrotunda by o_rrotunda.sc;
 sub O_RumRotunda by o_rumrotunda.sc;
 sub Q_Rrotunda.hlig by q_rrotunda.hlig.sc;
 sub Q_u by Q_u.sc;
+sub Softsign-cy by softsign-cy.sc;
+sub Hardsign-cy by hardsign-cy.sc;
 sub Alpha by alpha.sc;
 sub Beta by beta.sc;
 sub Gamma by gamma.sc;
@@ -6951,6 +6960,8 @@ sub zigzagabovecomb.alt3.ff by zigzagabovecomb.alt3.sc;
 sub zigzagabovecomb.alt3 by zigzagabovecomb.alt3.sc;
 sub wynndotsub by wynndotsub.sc ;
 sub xdotsub by xdotsub.sc ;
+sub softsign-cy by softsign-cy.sc ;
+sub hardsign-cy by hardsign-cy.sc ;
 ";
 tag = smcp;
 },
@@ -6969,6 +6980,7 @@ sub d by d.enlarged ;
 sub eth by eth.enlarged ;
 sub dinsular by dinsular.enlarged ;
 sub e by e.enlarged ;
+sub e.alt2 by e.alt2.enlarged ;
 sub eogonek by eogonek.enlarged ;
 sub f by f.enlarged ;
 sub finsular by finsular.enlarged ;
@@ -7691,7 +7703,7 @@ sub longs t by longs_t ;
 sub longs.alt2 t by longs_t.alt ;
 # sub longs adieresis by longs_adieresis ;
 # sub longs udieresis by longs_udieresis ;
-sub e.alt4 ddotaccent.alt2 by e_ddotaccent.alt ;
+sub e.alt4 dinsulardotaccent.alt by e_ddotaccent.alt ;
 ";
 tag = liga;
 },
@@ -8206,9 +8218,6 @@ pos = (205,741);
 },
 {
 pos = (343,-167);
-},
-{
-pos = (49,276);
 }
 );
 iconName = Bold;
@@ -16963,6 +16972,9 @@ i_s.dlig = 0;
 rinsular = 10;
 uniA7D7 = 0;
 };
+"hardsign-cy" = {
+"@MMK_R_KO_u" = -20;
+};
 i = {
 b = 23;
 j.alt = 3;
@@ -24746,6 +24758,9 @@ h_r.hlig = {
 i_s.dlig = 0;
 rinsular = 0;
 uniA7D7 = 0;
+};
+"hardsign-cy" = {
+"@MMK_R_KO_u" = -10;
 };
 i = {
 b = 20;
@@ -32540,6 +32555,9 @@ i_s.dlig = 0;
 rinsular = 14;
 uniA7D7 = 0;
 };
+"hardsign-cy" = {
+"@MMK_R_KO_u" = -20;
+};
 i = {
 b = 24;
 j.alt = 14;
@@ -40331,6 +40349,9 @@ h_r.hlig = {
 i_s.dlig = 0;
 rinsular = 2;
 uniA7D7 = 4;
+};
+"hardsign-cy" = {
+"@MMK_R_KO_u" = -20;
 };
 i = {
 b = 18;
@@ -48135,6 +48156,9 @@ i_s.dlig = 0;
 rinsular = 14;
 uniA7D7 = -17;
 };
+"hardsign-cy" = {
+"@MMK_R_KO_u" = -30;
+};
 i = {
 b = 18;
 j.alt = 3;
@@ -55926,6 +55950,9 @@ h_r.hlig = {
 i_s.dlig = 0;
 rinsular = 10;
 uniA7D7 = 0;
+};
+"hardsign-cy" = {
+"@MMK_R_KO_u" = -20;
 };
 i = {
 b = 23;

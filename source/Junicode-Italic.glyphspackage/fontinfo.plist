@@ -281,7 +281,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2023-10-21 18:47:14 +0000";
+date = "2023-10-28 12:38:36 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -4046,9 +4046,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Middle Scottish s\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Ascending and descending S\";
+  };
 #  Character 0x0053;
 };
-sub S from [ Sinsular Ssigmoid S.enlarged Sanctus uniA7D6 ] ;
+sub S from [ Sinsular Ssigmoid S.enlarged Sanctus uniA7D6 S.alt1 ] ;
 ";
 tag = cv37;
 },
@@ -4081,10 +4084,21 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Middle Scottish s\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular s with split top\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Ascending and descending s\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Long s with loop\";
+  };
 #  Character 0x0073;
 };
-sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 ] ;
-# check these over.
+sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5 ] ;
+sub sinsular from [ s ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5 ] ;
+sub longs from [ sinsular ssigmoid s longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5 ] ;
+
 ";
 tag = cv38;
 },
@@ -7572,6 +7586,7 @@ sub U U by U_U.hlig ;
 sub U cross D by U_cross_D ;
 sub a f by a_f.hlig ;
 sub a finsular by a_finsular.hlig ;
+sub e c by e_c.hlig ;
 sub a g by a_g.hlig ;
 sub a l by a_l.hlig ;
 sub a n by a_n.hlig ;
@@ -7579,11 +7594,25 @@ sub a p by a_p.hlig ;
 sub a thorn by a_thorn.hlig ;
 sub a r by a_r.hlig ;
 sub b b by b_b.hlig ;
+sub b o by b_o.hlig ;
 sub c h by c_h.hlig ;
 sub c k by c_k.hlig ;
 sub d e by d_e.hlig ;
 sub dinsular dinsular by dinsular_dinsular.hlig ;
+sub dinsular e by dinsular_e.hlig ;
+sub e a by e_a.hlig ;
+sub e c by e_c.hlig ;
+sub e finsular by e_finsular.hlig ;
+sub e ginsular by e_ginsular.hlig ;
+sub e m by e_m.hlig ;
+sub e n by e_n.hlig ;
+sub e o by e_o.hlig ;
+sub e rinsular by e_rinsular.hlig ;
+sub e sinsular by e_sinsular.hlig ;
+sub e tinsular by e_tinsular.hlig ;
+sub e x by e_x.hlig ;
 sub e y by e_y.hlig ;
+sub eth.loclENG eth.loclENG by eth_eth.loclENG.hlig ;
 sub f adieresis by f_adieresis ;
 sub f.alt adieresis by f_adieresis ;
 sub g d by g_d.hlig ;
@@ -7631,6 +7660,7 @@ sub thorn longs by thorn_longs.hlig ;
 sub thorn longshighstroke by thorn_longshighstroke.hlig ;
 sub thorn thorn by thorn_thorn.hlig ;
 sub thorn.loclENG thorn.loclENG by thorn_thorn.hlig ;
+sub thornstroke.loclENG thornstroke.loclENG by thornstroke_thornstroke.loclENG.hlig ;
 sub wynn wynn by wynn_wynn.hlig ;
 sub longs wynn by longs_wynn.hlig ;
 ";
@@ -7766,6 +7796,9 @@ sub f f t by f_f_t ;
 # sub f f l by uniFB04 ;
 sub longs longs t by longs_longs_t ;
 sub longs.rlongs longs.llongs t by longs_longs_t ;
+sub longs tinsular by longs_tinsular ;
+sub longs.alt5 tinsular by longs_tinsular.alt ;
+sub longs.alt5 wynn by longs_wynn.alt ;
 # sub Q u by Q_u ;
 # sub Q u.sc by Q_u.sc ;
 # sub Q u.pcap by Q_u.pcap ;
@@ -8595,7 +8628,7 @@ width = 90;
 );
 guides = (
 {
-pos = (-64,284);
+pos = (-424,284);
 },
 {
 pos = (351,683);
@@ -8608,9 +8641,6 @@ pos = (254,585);
 },
 {
 pos = (214,590);
-},
-{
-pos = (105,741);
 },
 {
 pos = (343,-167);
@@ -8911,7 +8941,7 @@ guides = (
 pos = (36,284);
 },
 {
-pos = (49,276);
+pos = (-73,276);
 },
 {
 pos = (451,683);
@@ -9218,9 +9248,6 @@ pos = (36,274);
 },
 {
 pos = (49,266);
-},
-{
-pos = (501,673);
 },
 {
 pos = (354,575);
@@ -57670,5 +57697,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 200;
+versionMinor = 201;
 }

@@ -325,7 +325,8 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 \centering{a} &
 \centering{cv02} &
 {1=\cvd{2}{a}, 2=\cvd[1]{2}{a}, 3=\cvd[2]{2}{a}, 4=\cvd[3]{2}{a},
-5=\cvd[4]{2}{a}, \cvc{6=\cvd[5]{2}{a}}}\\\hline
+5=\cvd[4]{2}{a}, \cvc{6=\cvd[5]{2}{a}}, 7=\cvd[6]{2}{a}, 8=\cvd[7]{2}{a}, 9=\cvd[8]{2}{a},
+10=\cvd[9]{2}{a}}\\\hline
 \centering{B} &
 \centering{cv03} &
 {\cvc{1=\cvd{3}{B}}, 2=\cvd[1]{3}{B}}\\\hline
@@ -357,17 +358,18 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 \centering{f} &
 \centering{cv12} &
 {1=\cvd{12}{f}, 2=\cvd[1]{12}{f}, 3=\cvd[2]{12}{f}, 4=\cvd[3]{12}{f}, 5=\cvd[4]{12}{f},
-6=\cvd[5]{12}{f}, \cvc{7=\cvd[6]{12}{f}, 8=\cvd[7]{12}{f}}}\\\hline
+6=\cvd[5]{12}{f}, \cvc{7=\cvd[6]{12}{f}, 8=\cvd[7]{12}{f}}, 9=\cvd[8]{12}{f}}
+\\\hline
 \centering{G} &
 \centering{cv13} &
 {1=\cvd{13}{G}, 2=\cvd[1]{13}{G}, 3=\cvd[2]{13}{G}, \cvc{4=\cvd[3]{13}{G}}}\\\hline
 \centering{g} &
 \centering{cv14} &
 {1=\cvd{14}{g}, 2=\cvd[1]{14}{g}, 3=\cvd[2]{14}{g}, 4=\cvd[3]{14}{g}, 5=\cvd[4]{14}{g},
-6=\cvd[5]{14}{g}, 7=\cvd[6]{14}{g}, \cvc{8=\cvd[7]{14}{g}}}\\\hline
+6=\cvd[5]{14}{g}, 7=\cvd[6]{14}{g}, \cvc{8=\cvd[7]{14}{g}, 9=\cvd[8]{14}{g}}}\\\hline
 \centering{H} &
 \centering{cv15} &
-{1=\cvd{15}{H}, \cvc{2=\cvd[1]{15}{H}}}\\\hline
+{1=\cvd{15}{H}, \cvc{2=\cvd[1]{15}{H}}, 3=\cvd[2]{15}{H}}\\\hline
 \centering{h} &
 \centering{cv16} &
 {1=\cvd{16}{h}, 2=\cvd[1]{16}{h}, \cvc{3=\cvd[2]{16}{h}}}\\\hline
@@ -388,7 +390,7 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {\cvc{1=\cvd{21}{K}}}\\\hline
 \centering{k} &
 \centering{cv22} &
-{1=\cvd{22}{k}, 2=\cvd[1]{22}{k}, 3=\cvd[2]{22}{k}, 4=\cvd[3]{22}{k}, \cvc{5=\cvd[4]{22}{k}}}\\\hline
+{1=\cvd{22}{k}, 2=\cvd[1]{22}{k}, 3=\cvd[2]{22}{k}, 4=\cvd[3]{22}{k}, \cvc{5=\cvd[4]{22}{k}}, 6=\cvd[5]{22}{k}}\\\hline
 \centering{L} &
 \centering{cv23} &
 {\cvc{1=\cvd{23}{L}}}\\\hline
@@ -434,11 +436,14 @@ enlarged minuscule for a capital (or, less likely, a lowercase) letter everywher
 {1=\cvd{36}{r}, 2=\cvd[1]{36}{r}, 3=\cvd[2]{36}{r}, \cvc{4=\cvd[3]{36}{r}}}\\\hline
 \centering{S} &
 \centering{cv37} &
-{1=\cvd{37}{S}, 2=\cvd[1]{37}{S}, \cvc{3=\cvd[2]{37}{S}}, \cvc{4=\cvd[3]{37}{S}}, 5=\cvd[4]{37}{S}}\\\hline
+{1=\cvd{37}{S}, 2=\cvd[1]{37}{S}, \cvc{3=\cvd[2]{37}{S}}, 4=\cvd[3]{37}{S}, 5=\cvd[4]{37}{S},
+6=\cvd[5]{37}{S}, 7=\cvd[6]{37}{S}}\\\hline
 \centering{s} &
 \centering{cv38} &
 {1=\cvd{38}{s}, 2=\cvd[1]{38}{s}, 3=\cvd[2]{38}{s}, 4=\cvd[3]{38}{s},
-            5=\cvd[4]{38}{s}, 6=\cvd[5]{38}{s}, \cvc{7=\cvd[6]{38}{s}}, 8=\cvd[7]{38}{s}}\\\hline
+            5=\cvd[4]{38}{s}, 6=\cvd[5]{38}{s}, \cvc{7=\cvd[6]{38}{s}}, 8=\cvd[7]{38}{s},
+            9=\cvd[8]{38}{s}, 10=\cvd[9]{38}{s}, 11=\cvd[10]{38}{s}
+            }\\\hline
 \centering{T} &
 \centering{cv39} &
 {1=\cvd{39}{T}, \cvc{2=\cvd[1]{39}{T}}}\\\hline
@@ -627,6 +632,16 @@ Converts \textex{r} to \textex{ꝛ} (lowercase only) following the
 most common rules of medieval manuscripts: {\addfontfeature{StylisticSet=16,Contextuals=Alternate}priest, firmer, frost, ornament}. For this feature to work properly,
 \textSourceText{calt} ``Contextual Alternates'' must also be enabled (as it should be by default: see
 \hyperlink{req}{Required Features} below).  This feature does not work in {\ltech}, except in harf mode.
+
+\subsection{\textSourceText{salt} --
+Stylistic Variants (medieval capitals)}\hypertarget{salt}{}
+Junicode has two series of decorative capitals in medieval scripts. These affect only the letters
+A-Z and a-z. \textSourceText{salt[1]} provides rustic capitals, a script used for text in the late
+ancient and early medieval periods and for display until around the eleventh century:
+{\addfontfeature{StylisticAlternates=0}Gazifrequens Libycos duxit Karthago triumphos}. \textSourceText{salt[2]}
+provides Lombardic capitals, a style used mainly for what are now called drop caps. Junicode’s Lombardic capitals
+are not suitable for running text, titles, or headers:
+{\addfontfeature{StylisticAlternates=1}A\,B\,C\,D\,E\,F}
 
 \subsection{\textSourceText{cv68} -- Variant of ʔ (\unic{U+0294}, glottal stop)}
 1=\cvd{68}{ʔ}.
@@ -1149,6 +1164,17 @@ This feature cannot change the direction of text or reverse its order.
 
 \section{Ligatures and Digraphs}
 
+Old-style fonts typically contain a standard collection of ligatures (conjoined letters), including
+fi, fl, ff, ffi, and ffl. Most software will display these ligatures automatically (except
+Microsoft Word, for which they must be enabled explicitly). Junicode has a large number of ligatures,
+including the standard f-ligatures, a similar set for long s, e.g. ſl, ſſ, ſſi, but also more
+specialized forms like ſꞇ, 
+{\addfontfeatures{StylisticSet=2,CharacterVariant=38:10}st},
+{\addfontfeatures{StylisticSet=2,CharacterVariant=38:10}sw}
+(the last two with \textSourceText{ss02} and \textSourceText{cv38[11]}), and a few more. Most of Junicode’s
+ligatures, however, are not automatic, but belong to the set of either Historic Ligatures
+or Discretionary Ligatures, both of which must be invoked explicitly. These are listed in the following sections.
+
 \subsection{\textSourceText{hlig} -- Historic Ligatures}
 
 Produces ligatures for combinations that should not ordinarily be rendered as
@@ -1204,6 +1230,9 @@ b{\textcompwordmark}b$\rightarrow $bb}
 b{\textcompwordmark}g$\rightarrow $bg}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+b{\textcompwordmark}o$\rightarrow $bo}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 c{\textcompwordmark}h$\rightarrow $ch}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1211,6 +1240,45 @@ c{\textcompwordmark}k$\rightarrow $ck}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 ꝺ{\textcompwordmark}ꝺ$\rightarrow $ꝺꝺ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+d{\textcompwordmark}e$\rightarrow $de}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+ꝺ{\textcompwordmark}e$\rightarrow $ꝺe}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}a$\rightarrow $ea}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}c$\rightarrow $ec}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}ꝼ$\rightarrow $eꝼ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}ᵹ$\rightarrow $eᵹ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}m$\rightarrow $em}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}n$\rightarrow $en}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}o$\rightarrow $eo}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}ꞃ$\rightarrow $eꞃ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}ꞅ$\rightarrow $eꞅ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}ꞇ$\rightarrow $eꞇ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}x$\rightarrow $ex}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 e{\textcompwordmark}y$\rightarrow $ey}
@@ -1267,6 +1335,9 @@ k{\textcompwordmark}ẝ$\rightarrow $kẝ}
 l{\textcompwordmark}l$\rightarrow $ll}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+n{\textcompwordmark}a$\rightarrow $na}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 \textsc{n}{\textcompwordmark}ſ$\rightarrow $\textsc{nſ}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1295,6 +1366,9 @@ p{\textcompwordmark}p$\rightarrow $pp}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 P{\textcompwordmark}s$\rightarrow $Ps}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+p{\textcompwordmark}e$\rightarrow $pe}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 p{\textcompwordmark}s$\rightarrow $ps}
@@ -1333,6 +1407,9 @@ q{\textcompwordmark}ꝛ$\rightarrow $qꝛ}
 ſ{\textcompwordmark}ꝩ$\rightarrow $ſꝩ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+ſ{\textcompwordmark}ƿ$\rightarrow $ſƿ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 ꞇ{\textcompwordmark}ꞇ$\rightarrow $ꞇꞇ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1360,7 +1437,17 @@ u{\textcompwordmark}u$\rightarrow $uu}
 \revthorn{{\th}{\textcompwordmark}ẝ$\rightarrow ${\th}ẝ}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+ð{\textcompwordmark}ð$\rightarrow $ðð}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 {\th}\textcompwordmark{\th}$\rightarrow ${\th}{\th}}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+ƿ{\textcompwordmark}ƿ$\rightarrow $ƿƿ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}\addfontfeature{Language=English}
+ꝥ{\textcompwordmark}ꝥ$\rightarrow $ꝥꝥ}
+
 \end{multicols}
 
 \noindent\addfontfeatures{Ligatures=histoff}
@@ -1503,4 +1590,148 @@ U+F001E 󰀞}
 
 {\color[rgb]{0.13333334,0.29411766,0.07058824}
 U+F001F 󰀟}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0020 \char"0F0020}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0021 \char"0F0021}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0030 \char"0F0030}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0031 \char"0F0031}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0032 \char"0F0032}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0033 \char"0F0033}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0034 \char"0F0034}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0035 \char"0F0035}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0036 \char"0F0036}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0037 \char"0F0037}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0038 \char"0F0038}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0039 \char"0F0039}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F003A \char"0F003A}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F003B \char"0F003B}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F003C \char"0F003C}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F003D \char"0F003D}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F003E \char"0F003E}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F003F \char"0F003F}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0040 \char"0F0040}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0041 \char"0F0041}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0042 \char"0F0042}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0043 \char"0F0043}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0044 \char"0F0044}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0045 \char"0F0045}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0046 \char"0F0046}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0047 \char"0F0047}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0048 \char"0F0048}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0049 \char"0F0049}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F004A \char"0F004A}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F004B \char"0F004B}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F004C \char"0F004C}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F004D \char"0F004D}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F004E \char"0F004E}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F004F \char"0F004F}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0050 \char"0F0050}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0051 \char"0F0051}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0052 \char"0F0052}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0053 \char"0F0053}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0054 \char"0F0054}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0055 \char"0F0055}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0056 \char"0F0056}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0057 \char"0F0057}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0058 \char"0F0058}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F0059 \char"0F0059}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F005A \char"0F005A}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F005B \char"0F005B}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F005C \char"0F005C}
+
+{\color[rgb]{0.13333334,0.29411766,0.07058824}
+U+F005D \char"0F005D}
 \end{multicols}

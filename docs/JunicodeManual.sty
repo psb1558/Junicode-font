@@ -4,196 +4,207 @@
 \usepackage{fancyhdr}
 %\usepackage[english,greek,lithuanian,polish,latin]{babel}
 \usepackage[quiet]{fontspec}
-\setmainfont{Junicode}[
-  UprightFont = {*-Regular},
-  ItalicFont = {*-Italic},
-  BoldFont = {*-Smbold},
-  BoldItalicFont = {*-Bold Italic},
-  Numbers={Lowercase,Proportional},
-  RawFeature={mode=harf},
-  StylisticSet=10,
-  UprightFeatures={
-    SizeFeatures={
-      {Size={-8.5},      Font={*-SmExp Medium}},
-      {Size={8.6-10.99}, Font=*-Medium},
-      {Size={11-21.59},  Font=*-Regular},
-      {Size={21.6-},     Font=*-Light}
-    },
-  },
-  ItalicFeatures={
-    SizeFeatures={
-      {Size={-7.5},      Font={*-SmExp Medium Italic}},
-      {Size={7.6-10.99}, Font={*-Medium Italic}},
-      {Size={11-21.59},  Font=*-Italic},
-      {Size={21.6-},     Font={*-Light Italic}}
-    },
-  },
-  BoldFeatures={
-    SizeFeatures={
-      {Size={-8.5},      Font={*-SmExp Bold}},
-      {Size={8.6-10.99}, Font=*-Bold},
-      {Size={11-21.59},  Font=*-Smbold},
-      {Size={21.6-},     Font=*-Medium}
-    },
-  },
-  BoldItalicFeatures={
-    SizeFeatures={
-      {Size={-7.5},      Font={*-SmExp Bold Italic}},
-      {Size={7.6-10.99}, Font={*-Bold Italic}},
-      {Size={11-21.59},  Font={*-Smbold Italic}},
-      {Size={21.6-},     Font={*-Medium Italic}}
-    },
-  },
-]
-%\setmainfont{JunicodeVF-Roman.ttf}[
-%  ItalicFont = JunicodeVF-Italic.ttf,
-%  BoldFont = JunicodeVF-Roman.ttf,
-%  BoldItalicFont =  JunicodeVF-Italic.ttf,
-%  Contextuals=Alternate,
-%  StylisticSet=10,
+%\setmainfont{Junicode}[
+%  UprightFont = {*-Regular},
+%  ItalicFont = {*-Italic},
+%  BoldFont = {*-Smbold},
+%  BoldItalicFont = {*-Bold Italic},
 %  Numbers={Lowercase,Proportional},
+%  RawFeature={mode=harf},
+%  StylisticSet=10,
 %  UprightFeatures={
 %    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=115}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=112.5}}},
-%      {Size={21.6-},     RawFeature={axis={wght=351,wdth=100}}}
+%      {Size={-8.5},      Font={*-SmExp Medium}},
+%      {Size={8.6-10.99}, Font=*-Medium},
+%      {Size={11-21.59},  Font=*-Regular},
+%      {Size={21.6-},     Font=*-Light}
 %    },
 %  },
 %  ItalicFeatures={
 %    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=550,wdth=118}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=114}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=111}}},
-%      {Size={21.6-},     RawFeature={axis={wght=352,wdth=98}}}
+%      {Size={-7.5},      Font={*-SmExp Medium Italic}},
+%      {Size={7.6-10.99}, Font={*-Medium Italic}},
+%      {Size={11-21.59},  Font=*-Italic},
+%      {Size={21.6-},     Font={*-Light Italic}}
 %    },
 %  },
 %  BoldFeatures={
 %    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=700,wdth=120}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=115}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=112.5}}},
-%      {Size={21.6-},     RawFeature={axis={wght=600,wdth=100}}}
+%      {Size={-8.5},      Font={*-SmExp Bold}},
+%      {Size={8.6-10.99}, Font=*-Bold},
+%      {Size={11-21.59},  Font=*-Smbold},
+%      {Size={21.6-},     Font=*-Medium}
 %    },
 %  },
 %  BoldItalicFeatures={
 %    SizeFeatures={
-%      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
-%      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=114}}},
-%      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=111}}},
-%      {Size={21.6-},     RawFeature={axis={wght=600,wdth=98}}}
+%      {Size={-7.5},      Font={*-SmExp Bold Italic}},
+%      {Size={7.6-10.99}, Font={*-Bold Italic}},
+%      {Size={11-21.59},  Font={*-Smbold Italic}},
+%      {Size={21.6-},     Font={*-Medium Italic}}
 %    },
 %  },
 %]
-\newfontface\regular{Junicode}
-%\setfontface\regular{JunicodeVF-Roman.ttf}[
-%\setfontface\regular{Junicode VF}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
-%  },
-%]
-\newfontface\narrow{Junicode Cond}
-%\setfontface\narrow{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
-%    {Size={22-},       RawFeature={axis={wght=353,wdth=75}}}
-%  },
-%]
-\newfontface\seminarrow{Junicode SmCond}
-%\setfontface\seminarrow{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
-%    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
-%  },
-%]
-\newfontface\seminarrowlight{Junicode SmCond Light}
-%\setfontface\seminarrowlight{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=355,wdth=87.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=301,wdth=87.5}}},
-%    {Size={22-},       RawFeature={axis={wght=301,wdth=87.5}}}
-%  },
-%]
-\newfontface\semiwide{Junicode SmExp}
-%\setfontface\semiwide{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
-%    {Size={22-},       RawFeature={axis={wght=356,wdth=112.5}}}
-%  },
-%]
-\newfontface\wide{Junicode Exp}
-%\setfontface\wide{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
-%    {Size={22-},       RawFeature={axis={wght=357,wdth=125}}}
-%  },
-%]
-\newfontface\light{Junicode Light}
-%\setfontface\light{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=358,wdth=120}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
-%    {Size={11-22},     RawFeature={axis={wght=301,wdth=112.5}}},
-%    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
-%  },
-%]
-\newfontface\medium{Junicode SmExp Medium}
-%\setfontface\medium{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
-%    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
-%    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
-%  },
-%]
-\newfontface\semicondmedium{Junicode SmCond Medium}
-%\setfontface\semicondsemibold{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=650,wdth=87.5}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=625,wdth=87.5}}},
-%    {Size={11-22},     RawFeature={axis={wght=600,wdth=87.5}}},
-%    {Size={22-},       RawFeature={axis={wght=600,wdth=87.5}}}
-%  },
-%]
-\newfontface\condmed{Junicode Cond Medium}
-%\setfontface\condmed{JunicodeVF-Roman.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=75}}},
-%    {Size={11-22},     RawFeature={axis={wght=500,wdth=75}}},
-%    {Size={22-},       RawFeature={axis={wght=500,wdth=75}}}
-%  },
-%]
-\newfontface\stditalic{Junicode Italic}
-%\setfontface\stditalic{JunicodeVF-Italic .ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
-%  },
-%]
-\newfontface\semiconditalic{Junicode SmCond Italic}
-%\setfontface\semiconditalic{JunicodeVF-Italic.ttf}[
-%  SizeFeatures={
-%    {Size={-8.5},      RawFeature={axis={wght=550,wdth=100}}},
-%    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=100}}},
-%    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
-%    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
-%  },
-%]
+\setmainfont{JunicodeVF-Roman.ttf}[
+  ItalicFont = JunicodeVF-Italic.ttf,
+  BoldFont = JunicodeVF-Roman.ttf,
+  BoldItalicFont =  JunicodeVF-Italic.ttf,
+  Contextuals=Alternate,
+  StylisticSet=10,
+  RawFeature={mode=harf},
+  UprightFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=351,wdth=100}}}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=352,wdth=98}}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=100}}}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=98}}}
+    },
+  },
+]
+%\newfontface\regular{Junicode}
+\setfontface\regular{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+%\newfontface\narrow{Junicode Cond}
+\setfontface\narrow{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=353,wdth=75}}}
+  },
+]
+%\newfontface\seminarrow{Junicode SmCond}
+\setfontface\seminarrow{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
+  },
+]
+%\newfontface\seminarrowlight{Junicode SmCond Light}
+\setfontface\seminarrowlight{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=355,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=87.5}}}
+  },
+]
+%\newfontface\semiwide{Junicode SmExp}
+\setfontface\semiwide{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=356,wdth=112.5}}}
+  },
+]
+%\newfontface\wide{Junicode Exp}
+\setfontface\wide{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
+    {Size={22-},       RawFeature={axis={wght=357,wdth=125}}}
+  },
+]
+%\newfontface\light{Junicode Light}
+\setfontface\light{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=358,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
+  },
+]
+%\newfontface\medium{Junicode SmExp Medium}
+\setfontface\medium{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
+  },
+]
+%\newfontface\semicondmedium{Junicode SmCond Medium}
+\setfontface\semicondmedium{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=87.5}}}
+  },
+]
+%\newfontface\condmed{Junicode Cond Medium}
+\setfontface\condmed{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=75}}}
+  },
+]
+%\newfontface\stditalic{Junicode Italic}
+\setfontface\stditalic{JunicodeVF-Italic .ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+%\newfontface\semiconditalic{Junicode SmCond Italic}
+\setfontface\semiconditalic{JunicodeVF-Italic.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
+  },
+]
 \setmonofont{SourceCodePro-Regular.ttf}[Scale=MatchLowercase,Numbers=Lowercase]
 %\setmonofont{SourceCodeVariable-Roman.otf}[
 %  Scale = MatchLowercase,

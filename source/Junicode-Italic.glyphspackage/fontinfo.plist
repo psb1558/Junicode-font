@@ -281,7 +281,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2023-10-28 12:38:36 +0000";
+date = "2023-11-03 18:16:55 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -605,7 +605,6 @@ feature ss01;
 feature ss04;
 feature ss05;
 feature ss09;
-feature ss11;
 feature ss12;
 feature ss13;
 feature ss14;
@@ -614,6 +613,7 @@ feature ss16;
 feature ss18;
 feature ss19;
 feature ss20;
+feature salt;
 feature ordn;
 feature cv01;
 feature cv02;
@@ -1533,6 +1533,11 @@ lookup tagligs {
  sub a o.tag p.tag by a.alt2 ;
  sub a c.tag l.tag by a.alt4 ;
  sub a n.tag e.tag by a.alt5 ;
+ sub a o.tag c.tag by a.alt6 ;
+ sub a o.tag n.tag by a.alt6.enlarged ;
+ sub a h.tag c.tag by a.alt7 ;
+ sub a s.tag q.tag by a.alt8 ;
+ sub a p.tag o.tag by a.alt9 ;
  sub a e.tag n.tag by a.enlarged ;
  sub B e.tag n.tag by B.enlarged ;
  sub B i.tag n.tag by B.alt1 ;
@@ -1562,6 +1567,7 @@ lookup tagligs {
  sub F e.tag n.tag by F.enlarged ;
  sub F i.tag e.tag by Finsular.enlarged ;
  sub f i.tag n.tag by finsular ;
+ sub f i.tag s.tag by f.alt4 ;
  sub f i.tag one.tag by f.alt1 ;
  sub f i.tag two.tag by f.alt2 ;
  sub f i.tag three.tag by f.alt3 ;
@@ -1578,11 +1584,13 @@ lookup tagligs {
  sub g s.tag c.tag by g.alt4 ;
  sub g c.tag u.tag by g.mecurl ;
  sub g e.tag n.tag by g.enlarged ;
+ sub g n.tag e.tag by ginsular.enlarged ;
  sub g c.tag one.tag by g.alt1 ;
  sub g c.tag two.tag by g.alt2 ;
  sub g c.tag three.tag by g.alt3 ;
  sub H u.tag n.tag by H.alt ;
  sub H e.tag n.tag by H.enlarged ;
+ sub H h.tag l.tag by H.alt2 ;
  sub h d.tag e.tag by h.alt ;
  sub h a.tag u.tag by h.alt2 ;
  sub h e.tag n.tag by h.enlarged ;
@@ -1607,6 +1615,7 @@ lookup tagligs {
  sub k c.tag two.tag by k.alt3 ;
  sub k c.tag u.tag by k.mecurl ;
  sub k e.tag n.tag by k.enlarged ;
+ sub k u.tag d.tag by k.alt4 ;
  sub L e.tag n.tag by L.enlarged ;
  sub l d.tag e.tag by l.alt ;
  sub l e.tag n.tag by l.enlarged ;
@@ -1655,13 +1664,18 @@ lookup tagligs {
  sub S e.tag n.tag by S.enlarged ;
  sub S s.tag d.tag by Sanctus ;
  sub S m.tag s.tag by uniA7D6 ;
+ sub S a.tag d.tag by S.alt1 ;
+ sub S r.tag z.tag by S.alt2 ;
  sub s i.tag n.tag by sinsular ;
+ sub s i.tag s.tag by s.alt1 ;
  sub s s.tag g.tag by ssigmoid ;
+ sub s a.tag d.tag by s.alt2 ;
  sub s l.tag o.tag by longs ;
  sub s e.tag n.tag by s.enlarged ;
  sub s l.tag d.tag by longs.alt2 ;
  sub s l.tag f.tag by longs.alt3 ;
  sub s l.tag s.tag by longs.alt4 ;
+ sub s l.tag l.tag by longs.alt5 ;
  sub s m.tag s.tag by uniA7D7 ;
  sub T i.tag n.tag by Tinsular ;
  sub T e.tag n.tag by T.enlarged ;
@@ -1680,6 +1694,7 @@ lookup tagligs {
  sub w e.tag n.tag by w.enlarged ;
  sub W a.tag n.tag by uniA7C2 ; # W Anglicana
  sub w a.tag n.tag by uniA7C3 ; # w Anglicana
+ sub wynn e.tag n.tag by wynn.enlarged ;
  sub X e.tag n.tag by X.enlarged ;
  sub x e.tag n.tag by x.enlarged ;
  sub x l.tag o.tag by xlongleftleg ;
@@ -3160,7 +3175,7 @@ sub B from [  B.rustic B.lombardic ]  ;
 sub C from [  C.rustic C.lombardic ]  ;
 sub D from [  D.rustic D.lombardic ]  ;
 sub E from [  E.rustic E.lombardic ]  ;
-sub F from [  F.rustic F.lombardic ]  ;
+sub F from [  F.rustic F.lombardic F.lombardic.alt ]  ;
 sub G from [  G.rustic G.lombardic ]  ;
 sub H from [  H.rustic H.lombardic ]  ;
 sub I from [  I.rustic I.lombardic ]  ;
@@ -3174,7 +3189,7 @@ sub P from [  P.rustic P.lombardic ]  ;
 sub Q from [  Q.rustic Q.lombardic ]  ;
 sub R from [  R.rustic R.lombardic ]  ;
 sub S from [  S.rustic S.lombardic ]  ;
-sub T from [  T.rustic T.lombardic ]  ;
+sub T from [  T.rustic T.lombardic T.lombardic.alt ]  ;
 sub U from [  U.rustic U.lombardic ]  ;
 sub V from [  V.rustic V.lombardic ]  ;
 sub W from [  W.rustic W.lombardic ]  ;
@@ -3207,6 +3222,7 @@ sub w from [  w.rustic w.lombardic ]  ;
 sub x from [  x.rustic x.lombardic ]  ;
 sub y from [  y.rustic y.lombardic ]  ;
 sub z from [  z.rustic z.lombardic ]  ;
+sub eth.loclENG from [ eth.loclENG.enlarged.alt ] ;
 ";
 tag = salt;
 },
@@ -3595,9 +3611,15 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule h\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Caroline h\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Caroline h with right descender and bar\";
+  };
 #  Character 0x0068;
 };
-sub h from [ h.alt h.alt2 h.enlarged ] ;
+sub h from [ h.alt h.alt2 h.enlarged h.alt3 hbar.alt ] ;
 ";
 tag = cv16;
 },
@@ -3615,9 +3637,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule i\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Unserifed i\";
+  };
 #  Character 0x0049;
 };
-sub I from [ Idotaccent Longaepigraphici I.enlarged ] ;
+sub I from [ Idotaccent Longaepigraphici I.enlarged I.alt ] ;
 #figure this out
 #sub Idotaccent    from [ I                                  ] ;
 ";
@@ -3837,9 +3862,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule n\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"N with low stroke and descender\";
+  };
 #  Character 0x004E;
 };
-sub N from [ N.alt1 N.enlarged ] ;
+sub N from [ N.alt1 N.enlarged N.alt2 ] ;
 ";
 tag = cv27;
 },
@@ -3866,9 +3894,12 @@ code = "cvParameters {
  ParamUILabelNameID {
    name 3 1 0x0409 \"n with attached subscript a\";
  };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"wide petite cap n with descender\";
+ };
 # Character 0x006E;
 };
-sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript ] ;
+sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript n.alt4 ] ;
 ";
 tag = cv28;
 },
@@ -4141,9 +4172,15 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule u\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lowercase-shaped U\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Lowercase-shaped U with descender\";
+  };
 #  Character 0x0055;
 };
-sub U from [ U.enlarged ] ;
+sub U from [ U.enlarged U.alt1 U.alt2 ] ;
 ";
 tag = cv41;
 },
@@ -4195,9 +4232,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule v\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged minuscule v with low point\";
+  };
 #  Character 0x0076;
 };
-sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged ];
+sub v from [ v.alt1 v.alt2 v.alt3 v.alt4 v.enlarged v.enlarged.alt ];
 ";
 tag = cv44;
 },
@@ -4442,9 +4482,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"ae with uncial a\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with round a\";
+  };
 #  Character 0x00E6;
 };
-sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ] ;
+sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ae.alt4 ] ;
 ";
 tag = cv57;
 },
@@ -4637,11 +4680,14 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Short Tironian et with stroke\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tironian et without descender\";
+  };
 #  Character 0x204A;
 #  Character 0x2E52;
 };
-sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 ] ;
-sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     ] ;
+sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 etTironian.alt3 ] ;
+sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     EtTironian.alt3 ] ;
 ";
 tag = cv69;
 },
@@ -4728,9 +4774,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Distinctio\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Slightly raised period\";
+  };
 #  Character 0x00B7;
 };
-sub periodcentered from [ periodcentered.alt ] ;
+sub periodcentered from [ periodcentered.alt periodcentered.alt ] ;
 ";
 tag = cv71;
 },
@@ -4948,9 +4997,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Subscript et\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Colon-like et\";
+  };
 #  Character 0xA76B;
 };
-sub et from [ et.alt et.alt1 ];
+sub et from [ et.alt et.alt1 et.alt2 ];
 ";
 tag = cv83;
 },
@@ -7072,6 +7124,8 @@ sub g by g.enlarged ;
 sub ginsular by ginsular.enlarged ;
 sub gormulum by gormulum.enlarged ;
 sub h by h.enlarged ;
+sub h.alt by h.alt.enlarged ;
+sub h.alt3 by h.alt3.enlarged ;
 sub i by i.enlarged ;
 sub dotlessi by idotless.enlarged ;
 sub j by j.enlarged ;
@@ -7621,6 +7675,8 @@ sub h r by h_r.hlig ;
 sub H r by H_r.hlig ;
 sub k r by k_r ;
 sub l l by l_l ;
+sub n a by n_a.hlig ;
+sub n i by n_i.hlig ;
 sub o c by o_c.hlig ;
 sub p p by p_p.hlig ;
 sub p.alt1 p.alt1 by p_p.hlig.alt ;
@@ -8933,9 +8989,6 @@ width = 94;
 guides = (
 {
 pos = (36,284);
-},
-{
-pos = (-73,276);
 },
 {
 pos = (451,683);
@@ -57691,5 +57744,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 201;
+versionMinor = 202;
 }

@@ -59255,21 +59255,6 @@ glyphs:
         - ptid: '{116;-186}'
           rel: blackdist
           round: false
-    names:
-      bottom-serif-sh-a:
-      - '{517;-4}'
-      - '{416;-4}'
-      - '{709;-4}'
-      bottom-serif-sh-b:
-      - '{517;24}'
-      - '{416;24}'
-      - '{709;24}'
-      top-serif-sh-a:
-      - '{472;418}'
-      - '{548;418}'
-      top-serif-sh-b:
-      - '{472;392}'
-      - '{548;392}'
     props:
       category: Ll
   uni0065A77C.hlig:
@@ -60609,6 +60594,158 @@ glyphs:
         - ptid: '{130;232}'
           rel: blackdist
           dist: period-width
+  ae.alt5:
+    y:
+      points:
+      - ptid: '{215;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{510;-11}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{544;46}'
+            rel: blackdist
+            round: false
+        - ptid: '{242;36}'
+          rel: blackdist
+          round: false
+      - ptid: '{258;425}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{507;425}'
+          rel: shift
+        - ptid: '{251;396}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{505;396}'
+            rel: shift
+      - ptid: '{405;268}'
+        ref:
+        - '{258;425}'
+        - '{215;-11}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{412;301}'
+          rel: blackdist
+          round: false
+  longs.alt6:
+    y:
+      points:
+      - ptid: '{54;-118}'
+        points:
+        - ptid: '{42;-94}'
+          rel: blackdist
+          round: false
+      - ptid: '{325;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{275;680}'
+          rel: blackdist
+          round: false
+      - ptid: '{95;348}'
+        ref:
+        - '{325;726}'
+        - '{54;-118}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{41;375}'
+          rel: blackdist
+          round: false
+  t.alt:
+    y:
+      points:
+      - ptid: '{136;725}'
+        pos: lc-ascender
+        points:
+        - ptid: '{98;694}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{173;694}'
+            rel: shift
+      - ptid: '{59;-272}'
+        pos: lc-descender
+        points:
+        - ptid: '{48;-246}'
+          rel: shift
+  semicolon.alt6:
+    y:
+      points:
+      - ptid: '{127;-12}'
+        pos: baseline
+        points:
+        - ptid: '{127;103}'
+          rel: blackdist
+          dist: period-width
+        - ptid: '{269;-59}'
+          rel: graydist
+          points:
+          - ptid: '{474;-36}'
+            rel: graydist
+      - ptid: '{524;367}'
+        points:
+        - ptid: '{525;272}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{319;227}'
+            rel: whitedist
+            points:
+            - ptid: '{320;132}'
+              rel: blackdist
+              round: false
+  y.alt6:
+    y:
+      points:
+      - ptid: '{503;424}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{479;377}'
+          rel: blackdist
+          round: false
+        - ptid: '{195;417}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{170;363}'
+            rel: blackdist
+            round: false
+      - ptid: '{114;-195}'
+        points:
+        - ptid: '{170;-152}'
+          rel: blackdist
+          round: false
+  y.alt4:
+    y:
+      points:
+      - ptid: '{503;424}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{484;377}'
+          rel: blackdist
+          round: false
+        - ptid: '{195;417}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{170;363}'
+            rel: blackdist
+            round: false
+      - ptid: '{175;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{200;36}'
+          rel: blackdist
+          round: false
+      - ptid: '{339;294}'
+        ref:
+        - '{175;-13}'
+        - '{503;424}'
+        rel: interpolate
 uni01E5:
   y:
     points:

@@ -1,0 +1,257 @@
+
+\chapter{Junicode on the Web}\hypertarget{OnTheWeb}{}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}on the web}
+
+If you are using Junicode on a web page, you should prefer the variable fonts
+(those with “VF” in the family name and filename) to the static fonts. One
+variable font file can do the work of many traditional font files. For example,
+the \href{https://psb1558.github.io/Junicode-font/Junicode-2-feature-test.html}%
+{Test of High-Level CSS Properties} web page displays Junicode in regular,
+bold and semicondensed styles. It used
+to be that your user would have to download three font files, one for each
+style, but one variable font will display all three.
+
+But you may be thinking, \textit{That font is big}! It's true: even the
+compressed webfont (.woff2) is nearly a megabyte in size—enough to seriously
+slow down the loading of a web page.
+
+To solve this problem, you'll need to subset the font—that is, produce a copy
+that contains only what you need. The subsetted font that downloads
+with the property test web page
+is approximately 275k in size—almost thirty percent of the
+size of the full webfont. It's still a pretty big download, but that's because the page
+displays a lot of the font's features. If I were displaying, say, a diplomatic
+transcript of a Latin text, the font would be much smaller.
+
+So the first section of this chapter will talk about how to subset the Junicode
+font.
+
+\section{Subsetting Junicode}
+
+First the legalities. It is perfectly all right to create a modified version
+of Junicode via subsetting, compress it into a webfont (almost certainly in
+woff2 format), and host it on your web server. This is because “Junicode” is
+not a “Reserved Font Name” (which complicates web use of
+many fonts licensed under the Open Font License). If you are nervous about the
+legal requirements of the Open Font License, you can change the font name to
+something arbitrary with the \texttt{-‌-obfuscate-names} option
+of the pyftsubset program, and you can embed the Open Font License, or a
+link to it, in your CSS. These steps should settle any ambiguity about whether
+you are in compliance with the license.
+
+Generating a subsetted version of Junicode should be one of the last tasks you
+perform before deploying your web page(s). Until then, it is recommended that
+you work with the unmodified font. After subsetting, review your
+pages thoroughly to make sure everything is displayed properly. If you have
+forgotten to include a glyph in your subsetted font, you will see little boxes
+where characters should be or, perhaps, the correct characters
+displayed in the wrong typeface. If you have omitted features, you will see
+default instead of transformed characters.
+
+There are many subsetting programs, some online and very easy to use. But for
+maximum control (and thus the smallest fonts), you should choose pyftsubset, a
+part of the \href{https://github.com/fonttools/fonttools}{fontTools} library,
+which runs under Python 3.7 or higher. This is a command-line tool which
+takes a long list of arguments; you should create a shell script to run it.
+
+Here is the script used to create the subsetted font for the property test
+web page mentioned above:
+
+\small\begin{verbatim}
+#!/bin/zsh
+pyftsubset JunicodeVF-Roman.ttf \
+--flavor=woff2 --output-file=JunicodeVFsubset.woff2 \
+--recommended-glyphs \
+--text="jq" --text-file=Junicode-2-feature-test.html \
+--layout-features+=liga,ss01,ss02,ss03,ss04,ss05,ss06,ss07,ss08,\
+ss10,ss12,ss13,ss14,ss15,ss16,ss17,ss18,ss19,ss20,cv01,cv02,cv05,\
+cv06,cv07,cv08,cv09,cv10,dlig,hlig,onum,pnum,pcap,smcp,c2sc,subs,\
+sups,zero \
+--layout-features-=rlig
+\end{verbatim}
+
+\normalsize\noindent For those unfamiliar with shell scripts, the first line specifies the shell
+the script is to run under (in this case the default shell for Mac OS, but
+\texttt{bash} is another possible choice), and the backslashes mean
+that the command continues on the next line. The rest of the file is a list
+of arguments passed to pyftsubset. Let's walk through them.
+
+First after the program name comes the name of the unsubsetted, uncompressed
+font file. After that,
+the \texttt{--flavor} argument tells the program that you want a webfont in
+woff2 format, and \texttt{--output} is the name of the font file you want the
+program to save.
+
+Having taken care of this preliminary business, we tell pyftsubset what we
+want the font to contain.
+
+\texttt{--recommended-glyphs} includes a few characters that
+every font should have, according to the OpenType specification---though in
+fact modern browsers don't care. It's best, however, to conform to the specification,
+since it's impossible to say with absolute certainty that no program will
+ever reject the font
+because of the absence of these few characters.
+
+\texttt{--text-file} is the name of a file to treat as a list of characters
+that \textit{must} be included in the font. In this case I have simply used
+the html file for the web page for this purpose. If your site contains
+multiple web pages, your job will be more complicated. You must make sure the
+text file contains all the characters used on the site---either that or
+supplement the text file with a \texttt{--text} argument (which here adds
+two lowercase letters that don't appear in the web page---just in case).
+The text file will
+contain only encoded characters—you don't have to worry here about unencoded
+characters produced by OpenType features.
+
+\texttt{--layout-features+} tells the program which OpenType features you
+want to retain in the font. All others, except for the
+\hyperlink{req}{Required Features}, are discarded. All of the characters
+referenced in these features will also be included in the output file, as long
+as those characters are variants of characters in your text file. For example,
+the \textSourceText{smcp} (Small Caps) feature has many more small caps than there are letters
+of the alphabet, but most of them are not included in the subsetted font. The
+program's parsimony with characters keeps the font file as small as possible.
+Note that some features are included automatically: \textSourceText{ccmp},
+\textSourceText{locl}, \textSourceText{calt}, \textSourceText{liga}, \textSourceText{rlig},
+\textSourceText{kern}, \textSourceText{mark}, and \textSourceText{mkmk}.
+
+
+\texttt{--layout-features-} tells the program which OpenType features to omit.
+Normally, \textSourceText{rlig} (Required Ligtures) is automatically
+included in fonts by pyftsubset, but as it has no relevance to this web page,
+it can be omitted.
+
+These are the most useful arguments, but there are many more. Type
+\texttt{pyftsubset --help} for a complete list. Once you have written your
+script, run it (in Mac OS or Linux you need to make the file executable
+by typing \texttt{chmod +x mysubsetscript} on the command line).
+
+Before you put your subsetted font to work, check it carefully in a program
+like \href{https://github.com/justvanrossum/fontgoggles}{FontGoggles},
+which lets you preview the font and test all its OpenType features. If you
+find errors, revise your script and run it again.
+
+\section{Junicode and CSS/HTML}
+
+This section assumes a basic knowledge of HTML (Hypertext Markup Language, used
+to construct web pages) and CSS (Cascading Style Sheets, used to format them).
+If you want to learn about these subjects, the number of good books and online
+tutorials is so great that it makes no sense to try to list them. Just make sure
+that the instructional materials you choose are of recent vintage, because the
+relevant standards are always changing.
+
+In the CSS for your web page, the \texttt{@font-face} at-rule for a variable
+font is a little different
+from the one for a static font in that the range of possible values for each
+axis can be declared:
+
+\small\begin{verbatim}
+@font-face {
+    font-family: "Junicode VF";
+    src: url("./webfiles/JunicodeVFsubset.woff2");
+    font-weight: 300 700;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+\end{verbatim}
+
+\normalsize\noindent These ranges are not strictly necessary, but they will prevent your
+supplying invalid values for \texttt{font-weight} and \texttt{font-stretch}
+(that is, \texttt{width}) in other CSS rules.
+
+Once you have declared the font, you can invoke it in setting up classes.
+For example:
+
+\small\begin{verbatim}
+body {
+  font-family: "Junicode VF";
+  font-size: 28px;
+  font-weight: normal; /* that is, 400 */
+  font-stretch: 112.5%; /* that is, semiexpanded */
+}
+h1 {
+  font-family: "Junicode VF";
+  font-size: 125%;
+  font-weight: 600; /* that is, semibold */
+  font-stretch: 112.5%; /* that is, semiexpanded */
+}
+.annotation {
+  font-size: 90%;
+  font-weight: 300; /* that is, light */
+  font-stretch: 87.5%; /* that is, semicondensed */
+}
+\end{verbatim}
+
+\normalsize\noindent These classes should be tested in all browsers. If any fail to
+display text properly, you can use \texttt{font-variation-settings}
+instead of the high-level \texttt{font-weight} and \texttt{font-stretch}:
+
+\small\begin{verbatim}
+body {
+  font-family: "Junicode VF";
+  font-size: 28px;
+  font-variation-settings: "wght" 400, "wdth" 112.5;
+}
+h1 {
+  font-family: "Junicode VF";
+  font-size: 125%;
+  font-variation-settings: "wght" 600, "wdth" 112.5;
+}
+.annotation {
+  font-size: 90%;
+  font-variation-settings: "wght" 300, "wdth" 87.5;
+}
+\end{verbatim}
+
+\normalsize\noindent To accommodate older browsers, you should make a selection of
+Junicode static fonts, subset them, and include them in your CSS. For example,
+if you need normal and bold weights of Junicode roman, your
+\texttt{@font-face} at-rule may look like this:
+
+\small\begin{verbatim}
+@font-face {
+    font-family: "Junicode VF";
+    src: url("./webfiles/JunicodeVFsubset.woff2");
+    font-weight: 300 700;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Junicode";
+    src: url("./webfiles/Junicode-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Junicode";
+    src: url("./webfiles/Junicode-Bold.woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+\end{verbatim}
+
+\normalsize\noindent Now use \texttt{@supports} in your CSS rules to determine which
+font gets downloaded:
+
+\small\begin{verbatim}
+body {
+  font-family: "Junicode", serif;
+}
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Junicode VF", serif;
+  }
+}
+b {
+  font-weight: 700;
+}
+@supports (font-variation-settings: "wght" 700) {
+  b {
+    font-variation-settings: "wght" 700;
+  }
+}
+\end{verbatim}
+
+\normalsize\noindent The variable version of Junicode will be downloaded only if
+the browser supports it, and the static version will be downloaded only if
+needed.

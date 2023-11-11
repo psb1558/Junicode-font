@@ -56620,6 +56620,148 @@ glyphs:
         - '{522;-13}'
         - '{671;511}'
         rel: interpolate
+  ae.alt5:
+    y:
+      points:
+      - ptid: '{158;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{365;-13}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{393;35}'
+            rel: blackdist
+            round: false
+        - ptid: '{174;39}'
+          rel: blackdist
+          round: false
+      - ptid: '{276;417}'
+        pos: xheight
+        points:
+        - ptid: '{276;384}'
+          rel: blackdist
+          round: false
+        - ptid: '{514;416}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{477;377}'
+            rel: blackdist
+            round: false
+      - ptid:
+        - '{339;174}'
+        - '{348;205}'
+        ref:
+        - '{276;417}'
+        - '{158;-13}'
+        rel: interpolate
+  longs.alt6:
+    y:
+      points:
+      - ptid: '{-16;-118}'
+        points:
+        - ptid: '{-21;-93}'
+          rel: shift
+      - ptid: '{366;715}'
+        pos: lc-f-top
+        points:
+        - ptid: '{339;681}'
+          rel: blackdist
+          round: false
+  t.alt:
+    y:
+      points:
+      - ptid: '{274;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{251;698}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{284;698}'
+            rel: shift
+      - ptid: '{-74;-271}'
+        pos: lc-descender
+        points:
+        - ptid: '{-82;-246}'
+          rel: shift
+  semicolon.alt6:
+    y:
+      points:
+      - ptid: '{98;-12}'
+        pos: period-bottom
+        points:
+        - ptid: '{98;103}'
+          rel: blackdist
+          dist: period-width
+        - ptid: '{223;-59}'
+          rel: graydist
+          points:
+          - ptid: '{435;-34}'
+            rel: graydist
+            min: false
+      - ptid: '{553;367}'
+        points:
+        - ptid: '{537;272}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{323;227}'
+            rel: whitedist
+            points:
+            - ptid: '{307;132}'
+              rel: blackdist
+              round: false
+            round: false
+  y.alt6:
+    y:
+      points:
+      - ptid: '{538;424}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{229;417}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{187;366}'
+            rel: blackdist
+            round: false
+        - ptid: '{510;379}'
+          rel: blackdist
+          round: false
+      - ptid: '{28;-195}'
+        points:
+        - ptid: '{78;-155}'
+          rel: blackdist
+          round: false
+      - ptid: '{343;271}'
+        ref:
+        - '{28;-195}'
+        - '{538;424}'
+        rel: interpolate
+  y.alt4:
+    y:
+      points:
+      - ptid: '{544;424}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{234;417}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{198;363}'
+            rel: blackdist
+            round: false
+        - ptid: '{515;377}'
+          rel: blackdist
+          round: false
+      - ptid: '{123;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{158;36}'
+          rel: blackdist
+          round: false
 masters:
   wght-min:
     name: wght-min

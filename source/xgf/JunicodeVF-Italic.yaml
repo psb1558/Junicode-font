@@ -7381,36 +7381,35 @@ glyphs:
   uni02A7:
     y:
       points:
-      - ptid: '{502;715}'
-        pos: lc-ascender
-        points:
-        - ptid: '{488;681}'
-          rel: blackdist
-          round: false
-      - ptid: '{107;-269}'
-        pos: lc-descender
-        points:
-        - ptid: '{139;-228}'
-          rel: blackdist
       - ptid: '{105;-13}'
         pos: lc-baseline-undershoot
         points:
         - ptid: '{149;50}'
           rel: blackdist
-      - ptid: '{209;499}'
-        round: false
+          round: false
       - ptid: '{219;395}'
-        pos: xheight
         points:
+        - ptid: '{159;399}'
+          rel: shift
         - ptid: '{209;356}'
           rel: blackdist
+          round: false
           points:
           - ptid: '{149;356}'
             rel: shift
-            points:
-            - ptid: '{77;385}'
-              rel: blackdist
-              dist: lc-serif
+      - ptid: '{209;499}'
+      - ptid: '{525;711}'
+        pos: lc-f-left-top
+        points:
+        - ptid: '{473;668}'
+          rel: blackdist
+          round: false
+      - ptid: '{69;-273}'
+        pos: lc-descender
+        points:
+        - ptid: '{127;-230}'
+          rel: blackdist
+          round: false
   uni02A8:
     y:
       points:
@@ -43245,16 +43244,6 @@ glyphs:
   uniA765:
     y:
       points:
-      - ptid: '{279;725}'
-        pos: lc-f-top
-        points:
-        - ptid: '{166;698}'
-          rel: graydist
-          min: false
-          points:
-          - ptid: '{166;673}'
-            rel: blackdist
-            round: false
       - ptid: '{28;-269}'
         pos: lc-descender
         points:
@@ -43276,14 +43265,24 @@ glyphs:
         - ptid: '{242;374}'
           rel: blackdist
           round: false
-      - ptid: '{96;523}'
+      - ptid: '{279;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{166;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{166;673}'
+            rel: blackdist
+            round: false
+      - ptid: '{354;523}'
         ref:
         - '{279;725}'
         - '{268;416}'
         rel: interpolate
         round: true
         points:
-        - ptid: '{107;570}'
+        - ptid: '{366;570}'
           rel: blackdist
           round: false
   uniA766:
@@ -56760,6 +56759,194 @@ glyphs:
         pos: lc-baseline-undershoot
         points:
         - ptid: '{158;36}'
+          rel: blackdist
+          round: false
+  uni02A7.rij:
+    y:
+      points:
+      - ptid: '{105;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{149;50}'
+          rel: blackdist
+          round: false
+      - ptid: '{219;395}'
+        pos: f-bar-top
+        points:
+        - ptid: '{159;399}'
+          rel: shift
+        - ptid: '{209;356}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{149;356}'
+            rel: shift
+      - ptid: '{209;499}'
+      - ptid: '{69;-273}'
+        pos: lc-descender
+        points:
+        - ptid: '{127;-230}'
+          rel: blackdist
+          round: false
+      - ptid: '{525;711}'
+        pos: lc-f-left-top
+        points:
+        - ptid: '{473;668}'
+          rel: blackdist
+          round: false
+  dcroat:
+    y:
+      points:
+      - ptid: '{95;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{315;-13}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{366;55}'
+            rel: blackdist
+            round: false
+        - ptid: '{136;40}'
+          rel: blackdist
+          round: false
+      - ptid: '{491;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{377;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{377;673}'
+            rel: blackdist
+            round: false
+      - ptid: '{299;416}'
+        pos: xheight
+        points:
+        - ptid: '{286;384}'
+          rel: blackdist
+          round: false
+      - ptid: '{517;524}'
+        ref:
+        - '{491;725}'
+        - '{299;416}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{529;571}'
+          rel: blackdist
+          round: false
+  hbar:
+    y:
+      points:
+      - ptid: '{245;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{69;-13}'
+          rel: shift
+        - ptid: '{277;29}'
+          rel: blackdist
+          round: false
+      - ptid: '{259;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{146;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{146;673}'
+            rel: blackdist
+            round: false
+      - ptid: '{348;416}'
+        pos: xheight
+        points:
+        - ptid: '{324;363}'
+          rel: blackdist
+          round: false
+      - ptid: '{335;524}'
+        ref:
+        - '{348;416}'
+        - '{259;725}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{347;571}'
+          rel: blackdist
+          round: false
+  hbar.alt:
+    y:
+      points:
+      - ptid: '{68;-13}'
+        pos: lc-baseline-undershoot
+      - ptid: '{189;-175}'
+        points:
+        - ptid: '{167;-154}'
+          rel: shift
+      - ptid: '{325;416}'
+        pos: xheight
+        points:
+        - ptid: '{296;363}'
+          rel: blackdist
+          round: false
+      - ptid: '{259;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{146;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{146;673}'
+            rel: blackdist
+            round: false
+      - ptid: '{335;524}'
+        ref:
+        - '{259;725}'
+        - '{325;416}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{347;571}'
+          rel: blackdist
+          round: false
+  uniA765.alt.loclENG:
+    y:
+      points:
+      - ptid: '{-66;-273}'
+        pos: lc-descender
+        points:
+        - ptid: '{-73;-250}'
+          rel: blackdist
+          round: false
+      - ptid: '{88;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{92;15}'
+          rel: blackdist
+          round: false
+      - ptid: '{301;416}'
+        pos: xheight
+        points:
+        - ptid: '{276;382}'
+          rel: blackdist
+          round: false
+      - ptid: '{214;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{110;698}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{110;673}'
+            rel: blackdist
+            round: false
+      - ptid: '{294;490}'
+        ref:
+        - '{214;725}'
+        - '{301;416}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{306;537}'
           rel: blackdist
           round: false
 masters:

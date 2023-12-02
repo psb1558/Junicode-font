@@ -1,0 +1,285 @@
+\chapter{Transcribing records}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}transcribing records}
+
+This chapter provides guidance for persons transcribing records (laws and other
+public documents) in the style of Charles Trice Martin’s
+\textit{The Record Interpreter}, \textit{Statutes of the Realm}, and similar guides
+and editions.
+Unlike most editions of early texts, these retain (or recommend retaining) the capitalization,
+punctuation, and abbreviations of their manuscript sources.
+
+\section{A preliminary note on transcription}
+Here are a few observations, based on a long career as a scholarly editor of medieval and eighteenth-century texts.
+
+Before embarking on the task of transcribing an old document, ask yourself what value you want to add to the document as
+it already exists, because different kinds of transcription add different kinds of value. The kind of transcription
+that adds the least is that which aims at the exact \textit{visual} reproduction of a document. A transcript is not a
+facsimile: it needs to do something that a photograph can't do.
+
+Converting a document from visual image to Unicode-encoded text adds a good bit of value all by itself, but only if done
+with due regard for the semantics of Unicode characters. Every Unicode character has a meaning, and that meaning is a
+help to readers. Using the wrong character is a hinderance to readers, even it if \textit{looks} right.
+
+For example, in transcribing a Middle English text, you may decide that the Unicode ezh (\char"0292,~\unic{U+0292}) looks more like
+the yogh in your source than the Unicode yogh (\kern+1.5pt\char"021D,~\unic{U+021D}) and therefore decide to use it for yogh. But the ezh is
+not a yogh! It is a character in the International Phonetic Alphabet and a letter in the alphabets of several minor
+languages---but not a letter in the Middle English language. If you use it where the yogh is called for, it will make
+your text less accessible and less searchable. Indexing, concordance and bibliographical programs may be misled by it;
+screen readers will misinterpret it. To solve one problem (that of visual representation), you may well have introduced
+a host of far more serious problems.
+
+Fortunately, Junicode offers a solution for this particular problem. The OpenType feature \textbf{cv63} substitutes for
+the yogh a character that \textit{looks} like the ezh but is semantically a yogh and therefore will be
+handled correctly by applications. But neither Junicode nor any other font can solve every problem of this kind.
+Sometimes you will have to call to mind the important principle stated above: \textit{A transcript is not a
+facsimile}. It is much more important that it should have the same \textit{meaning} as the original than
+that it should have the same \textit{look}.
+
+This document concerns the transcription of texts in Latin (and to some extent, other archaic languages, e.g. Old and
+Middle English, Old French). It is long-standing custom, when transcribing certain kinds of documents, to retain marks
+of abbreviation---for example, the \textbf{\hlig{\char"0A753p\char"0363}} you may find in a manuscript or printed edition representing
+the word \textit{propterea}. This is okay---and Junicode can help with the task. But when dealing with the
+abbreviations, punctuation, and diacritics of an old text it is more important than ever that you use semantically
+correct characters for your transcription, as this will help readers who already face significant challenges.
+
+For example, the abbreviation \textbf{\hlig{\char"0A753p\char"0363}} as printed here consists of an underlying sequence of Unicode
+characters: \textbf{\char"0A753} (\unic{U+A753}, the common abbreviation for \textit{pro}) + \textbf{p} + \textbf{\char"25CC\char"0363}
+(\unic{U+0363}, the combining small \textit{a}). The OpenType feature \textbf{hlig} (Historical Ligatures) has been
+applied to this sequence, changing its appearance but not its underlying value. That underlying value is intelligible
+to computer applications in the sense that they can recognize each character.
+
+This doesn't mean, though, that computer programs can correctly interpret \textbf{\hlig{\char"0A753p\char"0363}} as
+\textit{propterea}. Many (probably \textit{most}) Latin abbreviations are ambiguous: this one,
+for example, can mean \textit{propterea} or \textit{propria}. Some abbreviations (most
+notoriously \textbf{\char"25CC\char"035B} \unic{U+035B}) can mean many things, depending on context. It takes a human being with a
+knowledge of Latin to interpret them correctly.
+
+So another way you can add value in your transcript is by interpreting abbreviations like
+\textbf{\hlig{\char"0A753p\char"0363}} and
+supplying expansions of them. Fortunately, systems for representing texts often offer ways to handle this task
+gracefully. For example, in a TEI (Text Encoding Initiative) text, you would use this construction:\\[1ex]
+
+\noindent\verb!<choice>!\newline
+\verb!  <abbr rend="hlig">!\textrm{\hlig{\char"0A753p\char"0363}}\verb!</abbr>!\newline
+\verb!  <expan>propterea</expan>!\newline
+\verb!</choice>!\\[1ex]
+
+\noindent This kind of structure can be approximated in HTML, with supporting CSS and scripting to allow readers to choose between
+a ``diplomatic'' version, with unexpanded abbreviations, and a ``reading'' version, with expanded abbreviations and
+perhaps other amenities, such as modern punctuation and capitalization.
+
+There are other ways to add value to a transcript---for example, by correcting errors, annotating the content, or
+writing textual notes. Each of these operations takes your transcript farther from the facsimile and closer to the
+edition.
+
+\section[Common combining marks]{Common combining marks}
+A \textbf{combining mark} is a character that combines with another character (called the \textbf{base}) to form a
+character with accent (e.g. \textbf{\'e}) or an abbreviation (e.g. \textbf{\cvd[1]{81}{p\char"035B}} for \textit{prae}).
+Unicode and the Medieval Unicode Font Initiative (MUFI) offer code points for many precomposed combinations of base +
+combining mark, but it is also possible to place any mark over any base character by entering first the base and then
+the combining mark. It is also possible to place a combining mark over another combining mark. For example, to produce
+\textbf{\cvd[32]{84}{q\char"0363\char"0304}}, enter this sequence: q (\unic{U+0071}) + \unic{U+0363} + \unic{U+0304}.
+
+Junicode 2 contains many variants of combining marks: for example the curly zigzag \cvd[1]{81}{\char"25CC\char"035B} is a variant of
+Unicode's angular zigzag {\char"25CC\char"035B} (\unic{U+035B}), produced by applying the OpenType feature \textbf{cv81[2]} to \textbf{both the base character and the combining mark}. Sometimes the combination of base + combining mark + OpenType
+feature will not produce the desired effect. When this happens, place \unic{U+034F} (a special invisible combining mark,
+included in Unicode for exactly this purpose) between the base and the (visible) mark.\\
+
+\noindent\secletter{a.}\ \ For a straight stroke over any letter, use the \textsc{combining macron} (\unic{U+0304}):
+\begin{quote}
+\=onis \textit{omnis}; o\={m}is \textit{omnis}; d\=apna \textit{dampna}; dam\={p}a
+\textit{dampna}.
+\end{quote}
+The combining macron can also be applied above superscripts and combining marks. Apply the OpenType feature
+\textbf{cv84[33]} for a narrower macron:
+\begin{quote}
+\cvd[32]{84}{antiqua\char"034F\char"0304} \textit{antiquam}; \cvd[32]{84}{q\char"0363\char"0304} \textit{quam}.
+\end{quote}
+For the superscript \textit{a}, use the OpenType feature \textbf{sups} (see r. below).\\[1ex]
+
+\noindent\secletter{b.}\ \ For a straight stroke through a tall letter, use the \textsc{combining short stroke overlay} (\unic{U+0335}): \textex{f\char"0335\ d\char"0335\ l\char"0335}. But Unicode also has precomposed versions of
+\textex{d}, \textex{l} and other characters \mbox{with} stroke, e.g.
+\textex{{\dj}} (\unic{U+0111}), \textex{\char"019A} (\unic{U+019A}).\\[1ex]
+
+\noindent\secletter{c.}\ \ For \textex{\~{}} above any character, use the \textsc{combining tilde} (\unic{U+0303}):
+\begin{quote}
+\~a \textit{ac}, \textit{apud}; \~a \textit{alias}.\newline
+d\~ns \textit{dominus}; ca\~{r}ina \textit{carmina}; \cvd[4]{12}{f\~{c}is} \textit{factis}.\newline
+p\~oita \textit{posita}.
+\end{quote}
+
+\noindent\secletter{d.}\ \ For \textex{\~{}} through a vertical stroke, use the \textsc{tilde overlay} (\unic{U+0334}):
+\textex{l\char"0334\ d\char"0334} (\unic{U+0303} would be positioned above the letter, e.g.
+\textex{\~{l}}, \textex{\~{d}}). For the ligatures
+\textex{l̴l̴}, \textex{b\char"0334b\char"0334}, and \textex{f\char"0334f\char"0334}, type the
+sequence for \textex{l\char"0334}, etc. twice.\\[1ex]
+
+\noindent\secletter{e.}\ \ For the tilde positioned above two letters, use \textsc{combining double tilde}
+(\unic{U+0360}) between the letters. It is
+automatically repositioned to clear tall characters: c\char"0360o t\char"0360o d\char"0360o o\char"0360l. The same is true of
+\textsc{double breve} (\unic{U+035D}) c\char"035Do d\char"035Do, \textsc{double macron} (\unic{U+035E}) c\char"035Eo d\char"035Eo,
+\textsc{double inverted breve} (\unic{U+0361}) c\char"0361o d\char"0361o, and \textsc{double circumflex} (\unic{U+1DCD})
+c\char"1DCDo d\char"1DCDo.\\[1ex]
+
+\noindent\secletter{f.}\ \ The figure used to represent \textit{er\textup{ }}(and other similar combinations) is a common medieval
+abbreviation which takes many forms. The semantically correct Unicode character is the \textsc{combining
+zigzag} (\char"25CC\char"035B, \unic{U+035B}), but the best match in Junicode 2 for the figure as it appears in the
+\textit{Record Interpreter} and the \textit{Statutes} is a gothic variant of this, which MUFI
+encodes as \unic{U+F1C8} (the curly form zigzag). However, because for technical reasons many applications will not position
+the MUFI character correctly over the base, that code point should be avoided. The best way to access this variant is
+to apply \textsc{\textbf{cv81[2]}} to \unic{U+035B}, as here:
+\begin{quote}
+\cvd[1]{81}{deb\char"035Be \textit{debere}; int\char"035B\ \textit{inter}; f\char"035B\hspace{0.2em}r\=u \textit{ferrum}; gn\char"035Bo
+\textit{generatio}; p\char"035B; \textit{prae}; seru\char"035Be \textit{servire}}.
+\end{quote}
+The curly form of the combining zigzag may be attached to any letter, and it may change shape depending on the letter it
+is attached to (including caps, for which use the \textbf{case} feature, and small caps:
+\cvd[1]{81}{A\char"035B B\char"035B \textsc{c\char"035B
+d\char"035B\hspace{0.2em}}}).\\[1ex]
+
+\noindent\secletter{g.}\ \ All letters a--z, and several others too, have combining forms.
+You may access these via their code points, when they are standard Unicode, via the
+\textbf{\textsc{cv84}} feature, or via
+Junicode's special entity references. For details, see \hyperlink{ss10}{4.10.3, Character Entities
+for Combining Marks}.
+\begin{quote}
+q\char"0366\ \textit{quo}; q\char"0365\ \textit{qui}; quatt\&\_orr; \textit{quattuor}.
+\end{quote}
+\section{Spacing characters}
+\secletter{h.}\ \ The symbol for \textit{is}, \textit{es} and a number of other abbreviations is the
+\textsc{is-sign} (\unic{U+A76D}):
+\begin{quote}
+for\char"0A76D\ \textit{foris}; o\={m}\char"0A76D\ \textit{omnes}; \char"0A76Ft\char"0A76D\
+\textit{competentes}; inf\char"0A76D\ \textit{infortunium}.
+\end{quote}
+This character will sometimes ligature with the preceding letter. The italic version differs from the roman
+stylistically (\textit{for\char"0A76D\ o\={m}\char"0A76D\ \char"0A76Ft\char"0A76D\ inf\char"0A76D}), but it will be
+intelligible to informed readers.\\[1ex]
+
+\noindent\secletter{i.}\ \ There are two characters for \textit{{}-us} in Unicode:
+\textsc{spacing us} \unic{U+A770} (do not
+confuse this with \textsc{con} \unic{U+A76F}) and \textsc{combining us} \unic{U+1DD2}. The \textit{Record
+Interpreter} and \textit{Statutes} appear to use only the spacing character:
+\begin{quote}
+\cvd[1]{81}{i\~{p}i\char"0A770\ \textit{ipsius}; u\char"035Bs\char"0A770\ \textit{uersus}; p\char"0A770tea
+\textit{postea}; p\char"0A770\ \textit{post}.}
+\end{quote}
+\noindent\secletter{j.}\ \ The three-like sign is the \textsc{et sign} (\char"25CC\char"0A76B, \unic{U+A76B}, also used for
+\textit{us}{}---do not confuse this with Middle English yogh: \textex{\char"021D}, \unic{U+021D}):
+\begin{quote}
+quib\char"0A76B\ \textit{quibus}; lic\char"0A76B\ \textit{licet}; s\char"0A76B\ \textit{sed}.
+\end{quote}
+\noindent\secletter{k.}\ \ For \textit{{}-rum} the Unicode \textsc{rum rotunda} (\unic{U+A75D}) is like the one in MUFI/Junicode.
+The one in the \textit{Record Interpreter} and \textit{Statutes} is a late stylized version of
+this. Use \unic{U+A75D} and apply OpenType feature \textsc{\textbf{cv80}} to obtain the correct shape:
+\begin{quote}
+\cvd{80}{a\~{i}a\char"0A75D\ \textit{animarum}; co\char"0A75Dpere \textit{corrumpere}; beato\char"0A75D\
+\textit{beatorum}}.
+\end{quote}
+\noindent\secletter{l.}\ \ For \textit{cum}, \textit{con}, etc. use \textsc{small letter con} (\unic{U+A76F}):
+\begin{quote}
+\char"0A76Fputus \textit{computus}; \char"0A76Fa \textit{contra}; \char"0A76Fnouit \textit{cognouit}.
+\end{quote}
+\noindent\secletter{m.}\ \ For \textit{per} (or sometimes \textit{par} and other similar sequences), use
+\textsc{p with stroke} \unic{U+A751}:
+\begin{quote}
+\char"0A751s\={o}a \textit{persona}; \char"0A76F\char"0A751et \textit{comparet}.
+\end{quote}
+\noindent\secletter{n.}\ \  For \textit{pro,} use \textsc{p with flourish} \unic{U+A753}:
+\begin{quote}
+\char"0A753ceres \textit{proceres}.
+\end{quote}
+\noindent\secletter{o.}\ \ For \textit{prae}, \textit{pr{\ae}}, \textit{pre}, there is no separate character;
+use a variant of the \textsc{zigzag} (f. above) with \textex{p}:
+\begin{quote}
+\cvd[1]{81}{p\char"035Bs\~{e}s \textit{praesens}}.
+\end{quote}
+\noindent\secletter{p.}\ \ For \textex{q} with stroke through the descender, there are two Unicode points: \unic{U+A757} for a
+straight stroke, and \unic{U+A759} for a diagonal stroke (the \textit{Record Interpreter} appears to use only the
+former, and neither is listed among the \textit{Statutes} abbreviations):
+\begin{quote}
+\char"0A757\ \textit{quod}; \char"0A757d \textit{quid}; \char"0A757b\char"0A76B\ \textit{quibus}.
+\end{quote}
+\noindent\secletter{q.}\ \ For \textit{quae}, \textit{que}, use \textex{q}
+followed by \textsc{et} (\unic{U+A76B}) with or without \textbf{hlig}: \textex{q\char"0A76B}
+\textex{\hlig{q\char"0A76B}}. For the semicolon-like \textsc{et} sign (\textbf{\cvd{83}{q\char"0A76B}}), use
+\textbf{cv83[1]}; for the subscripted version (which can also form a ligature via \textbf{hlig}), use \textbf{cv83[2]}:
+\textex{\cvd[1]{83}{q\char"0A76B\ \hlig{q\char"0A76B}}}.\\[1ex]
+
+\noindent\secletter{r.}\ \ All of the letters a-z are available in superscript form. Access with the \textex{sups}
+OpenType feature:
+\begin{quote}
+q\sups{o}s \textit{quos}; c\sups{i}lo \textit{circulo}; cap\sups{i} \textit{capituli}.
+\end{quote}
+The basic Latin letters a--z have anchors that allow you to position combining marks over them (see a. above)\\[1ex]
+
+\noindent\secletter{s.}\ \ Tironian \textsc{et} sign \char"204A\ \unic{U+204A}, cap \char"2E52\ \unic{U+2E52}. With \textbf{cv69[1]} \cvd{69}{\char"204A\char"2E52}; with
+\textbf{cv69[2]} \cvd[1]{69}{\char"204A\char"2E52}.\\[1ex]
+
+\noindent\secletter{t.}\ \ For \textit{est}, use \textex{\char"223B} \unic{U+223B} \textsc{homothetic}. Use of a mathematical sign for this
+purpose is not ideal, but Unicode offers no better solution.\\[1ex]
+
+\noindent\secletter{u.}\ \ For \textit{tz} (Old French), use \textex{\char"01B6} \unic{U+01B6} \textsc{z with stroke}.\\[1ex]
+
+\noindent\secletter{v.}\ \ For an abbreviation for \textit{Rex},
+use \textex{\textrecipe} \unic{U+211E} or \textex{\char"211F} \unic{U+211F}.\\[1ex]
+
+\noindent\secletter{w.}\ \ At least one edition uses a spacing version of the \textsc{combining zigzag}
+(\textbf{f.} above).
+Neither Unicode nor MUFI has a matching character: with Junicode, apply \textbf{cv67} to the spacing
+\textsc{macron} (\unic{U+00AF}): \textex{\cvd{67}{\char"25CC\char"00AF}}.
+
+\section[Other formatting]{Other formatting}
+\secletter{x.}\ \ For underdotted text, use Stylistic Set 7, Underdotted. For letters that lack an underdotted form, use \unic{U+0323} \textsc{combining dot below}.
+
+\section[On the web]{On the web}
+Because Junicode is a very large font, web pages should use a subsetted version to speed loading
+(see \hyperlink{OnTheWeb}{Chapter 9, Junicode on the Web}, for instructions).
+The variable version of the font is better for web use than the
+static fonts, since one variable font file can do the work of many static font files.
+
+All major web browsers (Firefox, Chrome, Safari, Edge) are capable of accessing all of Junicode's characters via
+OpenType features, use of which promotes accessibility and searchability. When building a web page, study which
+features will be needed and write them into the appropriate element or class definition of the page's CSS style sheet.
+For example, if you use the curly form of the zigzag (\unic{U+035B}) anywhere, you are likely to want it everywhere, and so it
+should be included in the CSS styling for the <body> element:
+\begin{verbatim}
+body {
+  font-family: Junicode;
+  font-feature-settings: "cv81" 2;
+}
+\end{verbatim}
+
+\noindent But the \textbf{hlig} feature, if applied to the whole text, will produce many unwanted effects, so it should be
+included in a class definition to be used in a <span> applied just to the target sequence:
+\begin{verbatim}
+.que {
+  font-feature-settings: "hlig" on;
+}
+filio<span class="que">q&#xA76B;</span>
+\end{verbatim}
+
+\noindent The illustrations here use the low-level CSS font-feature-settings property.
+There are higher-level properties for some
+OpenType features, but as these are not (yet) universally supported by browsers, and some implementations are buggy, it
+is best to stick with font-feature-settings for now.
+
+For the purposes addressed in this document, the font-feature-settings for the <body> element
+should probably be as follows:
+\begin{verbatim}
+font-feature-settings: 'cv69' 2, 'cv80' 1, 'cv81' 2;
+\end{verbatim}
+\noindent And the following classes should be defined:
+\begin{verbatim}
+.super {
+  font-feature-settings: 'sups' on, 'cv84' 39;
+}
+
+.que {
+  font-feature-settings: 'hlig' on;
+}
+
+.deleted {
+  font-feature-settings: 'ss07' on;
+}
+\end{verbatim}

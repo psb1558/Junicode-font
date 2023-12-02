@@ -1,0 +1,425 @@
+% Options
+%
+%   fonttype:      Choose otf (the default) or ttf
+%
+%   lining:        Default numbers will be lining (uppecase)
+%   oldstyle:      Default numbers will be oldstyle (lowercase)
+%   proportional:  Default numbers will be proportional
+%   tabular:       Default numbers will be tabular (monospaced)
+%
+%   light:         Regular style will be light
+%   medium:        Regular style will be medium
+%   semibold:      Bold style will be semibold
+%
+%   condensed:     Glyphs (except bold, semibold) will be condensed
+%   semicondensed: Glyphs (except bold, semibold) will be semicondensed
+%   expanded:      Glyphs will be expanded (can't be used with light)
+%   semiexpanded:  Glyphs will be semiexpanded (can't be used with light)
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Junicode}[2023/11/24 (Peter Baker) Supports Junicode (2.204 and up) static fonts for XeLaTeX and LuaLaTeX.]
+
+\RequirePackage{ifxetex,ifluatex,xkeyval}
+
+% Choose the type of font: otf or ttf.
+
+\newcommand*{\junicode@fonttype}{otf}
+\DeclareOptionX{fonttype}{\renewcommand*{\junicode@fonttype}{#1}}
+
+% Figures: default is OldStyle Proportional
+
+\newif\ifjunicode@lining \junicode@liningfalse
+\newif\ifjunicode@tabular \junicode@tabularfalse
+
+\DeclareOptionX{lining}{\junicode@liningtrue}
+\DeclareOptionX{tabular}{\junicode@tabulartrue}
+\DeclareOptionX{proportional}{\junicode@tabularfalse}
+\DeclareOptionX{oldstyle}{\junicode@liningfalse}
+
+% OPTIONS FOR WEIGHT AND WIDTH
+
+\newif\ifjunicode@regular \junicode@regulartrue
+\def\junicode@regularname{Regular}
+\newif\ifjunicode@bold \junicode@boldtrue
+
+% Declare the boolean variables for weights.
+
+\newif\ifjunicode@light \junicode@lightfalse
+\newif\ifjunicode@medium \junicode@mediumfalse
+\newif\ifjunicode@semibold \junicode@semiboldfalse
+
+% Declare the weight options
+
+\DeclareOptionX{light}{\junicode@lighttrue}
+\DeclareOptionX{medium}{\junicode@mediumtrue}
+\DeclareOptionX{semibold}{\junicode@semiboldtrue}
+
+% Width: default is Regular
+
+% Declare the boolean variables for regular and bold widths.
+
+\newif\ifjunicode@condensed \junicode@condensedfalse
+\newif\ifjunicode@semicondensed \junicode@semicondensedfalse
+\newif\ifjunicode@expanded \junicode@expandedfalse
+\newif\ifjunicode@semiexpanded \junicode@semiexpandedfalse
+
+\newif\ifjunicode@boldcondensed \junicode@boldcondensedfalse
+\newif\ifjunicode@boldsemicondensed \junicode@boldsemicondensedfalse
+\newif\ifjunicode@boldexpanded \junicode@boldexpandedfalse
+\newif\ifjunicode@boldsemiexpanded \junicode@boldsemiexpandedfalse
+
+% Declare the width options.
+
+\DeclareOptionX{condensed}{\junicode@condensedtrue}
+\DeclareOptionX{semicondensed}{\junicode@semicondensedtrue}
+\DeclareOptionX{expanded}{\junicode@expandedtrue}
+\DeclareOptionX{semiexpanded}{\junicode@semiexpandedtrue}
+
+\DeclareOptionX*{\PackageWarning{Junicode}{Unknown option `\CurrentOption' ignored}}
+\ProcessOptionsX\relax
+
+% Number strings for fontspec.
+
+\def\junicode@figurestyle{Lowercase}
+\ifjunicode@lining\def\junicode@figurestyle{Uppercase}\fi
+\def\junicode@figurealign{Proportional}
+\ifjunicode@tabular\def\junicode@figurealign{Monospaced}\fi
+
+% Copy widths to bold variables (only if expanded or semiexpanded).
+
+\ifjunicode@expanded\junicode@boldexpandedtrue\fi
+\ifjunicode@semiexpanded\junicode@boldsemiexpandedtrue\fi
+
+% Weight strings for regular.
+
+\def\junicode@regstyle{Regular}
+\ifjunicode@light\junicode@regularfalse\def\junicode@regstyle{Light}\fi
+\ifjunicode@medium\junicode@regularfalse\def\junicode@regstyle{Medium}\fi
+
+% Width strings for regular.
+
+\def\junicode@widthstyle{Regular}
+\ifjunicode@condensed\junicode@regularfalse\def\junicode@widthstyle{Cond}\fi
+\ifjunicode@semicondensed\junicode@regularfalse\def\junicode@widthstyle{SmCond}\fi
+\ifjunicode@expanded\junicode@regularfalse\def\junicode@widthstyle{Exp}\fi
+\ifjunicode@semiexpanded\junicode@regularfalse\def\junicode@widthstyle{SmExp}\fi
+
+% Width strings for bold.
+
+\def\junicode@boldwidthstyle{}
+\ifjunicode@expanded\junicode@boldfalse\def\junicode@boldwidthstyle{Exp}\fi
+\ifjunicode@semiexpanded\junicode@boldfalse\def\junicode@boldwidthstyle{SmExp}\fi
+
+% Weight strings for bold.
+
+\def\junicode@boldstyle{Bold}
+\ifjunicode@semibold\junicode@boldfalse\def\junicode@boldstyle{SmBold}\fi
+
+% Build style names.
+
+\def\junicode@regstylename{%
+\ifjunicode@regular Regular%
+\else%
+\ifx\junicode@widthstyle\junicode@regularname \junicode@regstyle%
+\else%
+\ifx\junicode@regstyle\junicode@regularname \junicode@widthstyle%
+\else%
+\junicode@widthstyle \junicode@regstyle\fi\fi\fi%
+}
+
+\def\junicode@boldstylename{\ifjunicode@bold Bold\else\junicode@boldwidthstyle\junicode@boldstyle\fi}
+
+\def\junicode@italstylename{\ifjunicode@regular Italic\else\junicode@regstylename Italic\fi}
+
+% load fonspec and select the fonts.
+
+\RequirePackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX, Extension=.\junicode@fonttype}
+
+\setmainfont
+  [Renderer =          HarfBuzz,
+   Numbers =           {\junicode@figurealign,\junicode@figurestyle},
+   SmallCapsFeatures = {Letters=SmallCaps},
+   UprightFont =       *-\junicode@regstylename,
+   ItalicFont =        *-\junicode@italstylename,
+   BoldFont =          *-\junicode@boldstylename,
+   BoldItalicFont =    *-\junicode@boldstylename Italic,
+  ]{Junicode}
+
+% These commands let you access any style, despite the options passed to
+% this package.
+
+\newcommand{\junicode@newfont}[2]{
+    \newfontface#1{#2}[
+        Renderer =          HarfBuzz,
+        Numbers =           {\junicode@figurealign,\junicode@figurestyle},
+        SmallCapsFeatures = {Letters=SmallCaps},
+    ]
+}
+
+\junicode@newfont{\jBold}{Junicode-Bold}
+
+\junicode@newfont{\jBoldItalic}{Junicode-BoldItalic}
+
+\junicode@newfont{\jCond}{Junicode-Cond}
+
+\junicode@newfont{\jCondItalic}{Junicode-CondItalic}
+
+\junicode@newfont{\jCondLight}{Junicode-CondLight}
+
+\junicode@newfont{\jCondLightItalic}{Junicode-CondLightItalic}
+
+\junicode@newfont{\jCondMedium}{Junicode-CondMedium}
+
+\junicode@newfont{\jCondMediumItalic}{Junicode-CondMediumItalic}
+
+\junicode@newfont{\jExp}{Junicode-Exp}
+
+\junicode@newfont{\jExpBold}{Junicode-ExpBold}
+
+\junicode@newfont{\jExpBoldItalic}{Junicode-ExpBoldItalic}
+
+\junicode@newfont{\jExpItalic}{Junicode-ExpItalic}
+
+\junicode@newfont{\jExpMedium}{Junicode-ExpMedium}
+
+\junicode@newfont{\jExpMediumItalic}{Junicode-ExpMediumItalic}
+
+\junicode@newfont{\jExpSmbold}{Junicode-ExpSmbold}
+
+\junicode@newfont{\jExpSmboldItalic}{Junicode-ExpSmboldItalic}
+
+\junicode@newfont{\jItalic}{Junicode-Italic}
+
+\junicode@newfont{\jLight}{Junicode-Light}
+
+\junicode@newfont{\jLightItalic}{Junicode-LightItalic}
+
+\junicode@newfont{\jMedium}{Junicode-Medium}
+
+\junicode@newfont{\jMediumItalic}{Junicode-MediumItalic}
+
+\junicode@newfont{\jRegular}{Junicode-Regular}
+
+\junicode@newfont{\jSmbold}{Junicode-Smbold}
+
+\junicode@newfont{\jSmboldItalic}{Junicode-SmboldItalic}
+
+\junicode@newfont{\jSmCond}{Junicode-SmCond}
+
+\junicode@newfont{\jSmCondItalic}{Junicode-SmCondItalic}
+
+\junicode@newfont{\jSmCondLight}{Junicode-SmCondLight}
+
+\junicode@newfont{\jSmCondLightItalic}{Junicode-SmCondLightItalic}
+
+\junicode@newfont{\jSmCondMedium}{Junicode-SmCondMedium}
+
+\junicode@newfont{\jSmCondMediumItalic}{Junicode-SmCondMediumItalic}
+
+\junicode@newfont{\jSmExp}{Junicode-SmExp}
+
+\junicode@newfont{\jSmExpBold}{Junicode-SmExpBold}
+
+\junicode@newfont{\jSmExpBoldItalic}{Junicode-SmExpBoldItalic}
+
+\junicode@newfont{\jSmExpItalic}{Junicode-SmExpItalic}
+
+\junicode@newfont{\jSmExpMedium}{Junicode-SmExpMedium}
+
+\junicode@newfont{\jSmExpMediumItalic}{Junicode-SmExpMediumItalic}
+
+\junicode@newfont{\jSmExpSmbold}{Junicode-SmExpSmbold}
+
+\junicode@newfont{\jSmExpSmboldItalic}{Junicode-SmExpSmboldItalic}
+
+% Convenience commands for non-verbose access to the cvNN features.
+% See also the "jcv" mnemonics below.
+
+\newcommand{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+
+\newcommand{\jcv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
+
+% Convenience commands for accessing the Stylistic Sets. These are
+% intended to be mnemonic.
+
+\newcommand{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
+
+\newcommand{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
+
+\newcommand{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
+
+\newcommand{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
+
+\newcommand{\IPAAlternates}{\addfontfeature{StylisticSet=3}} % ss03
+
+\newcommand{\textIPAAlternates}[1]{{\addfontfeature{StylisticSet=3}#1}}
+
+\newcommand{\HighOverline}{\addfontfeature{StylisticSet=4}} % ss04
+
+\newcommand{\textHighOverline}[1]{{\addfontfeature{StylisticSet=4}#1}}
+
+\newcommand{\MediumHighOverline}{\addfontfeature{StylisticSet=5}} % ss05
+
+\newcommand{\textMediumHighOverline}[1]{{\addfontfeature{StylisticSet=5}#1}}
+
+\newcommand{\EnlargedMinuscules}{\addfontfeature{StylisticSet=6}} % ss06
+
+\newcommand{\textEnlargedMinuscules}[1]{\addfontfeature{{StylisticSet=6}#1}}
+
+\newcommand{\Underdotted}{\addfontfeature{StylisticSet=7}} % ss07
+
+\newcommand{\textUnderdotted}[1]{{\addfontfeature{StylisticSet=7}#1}}
+
+\newcommand{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
+
+\newcommand{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
+
+\newcommand{\AlternateFigures}{\addfontfeature{StylisticSet=9}} % ss09
+
+\newcommand{\textAlternateFigures}[1]{{\addfontfeature{StylisticSet=9}#1}}
+
+\newcommand{\EntitiesAndTags}{\addfontfeature{StylisticSet=10}} % ss10
+
+\newcommand{\textEntitiesAndTags}[1]{{\addfontfeature{StylisticSet=10}#1}}
+
+% \newcommand{\}{} % ss11 not yet used
+
+\newcommand{\EarlyEnglishFuthorc}{\addfontfeature{StylisticSet=12}} % ss12
+
+\newcommand{\textEarlyEnglishFuthorc}[1]{{\addfontfeature{StylisticSet=12}#1}}
+
+\newcommand{\ElderFuthark}{\addfontfeature{StylisticSet=13}} % ss13
+
+\newcommand{\textElderFuthark}[1]{{\addfontfeature{StylisticSet=13}#1}}
+
+\newcommand{\YoungerFuthark}{\addfontfeature{StylisticSet=14}} % ss14
+
+\newcommand{\textYoungerFuthark}[1]{{\addfontfeature{StylisticSet=14}#1}}
+
+\newcommand{\LongBranchToShortTwig}{\addfontfeature{StylisticSet=15}} % ss15
+
+\newcommand{\textLongBranchToShortTwig}[1]{{\addfontfeature{StylisticSet=15}#1}}
+
+\newcommand{\ContextualRRotunda}{\addfontfeature{StylisticSet=16}} % ss16
+
+\newcommand{\textContextualRRotunda}[1]{{\addfontfeature{StylisticSet=16}#1}}
+
+\newcommand{\RareDigraphs}{\addfontfeature{StylisticSet=17}} % ss17
+
+\newcommand{\textRareDigraphs}[1]{{\addfontfeature{StylisticSet=17}#1}}
+
+\newcommand{\OldStylePunctuation}{\addfontfeature{StylisticSet=18}} % ss18
+
+\newcommand{\textOldStylePunctuation}[1]{{\addfontfeature{StylisticSet=18}#1}}
+
+\newcommand{\LatinToGothic}{\addfontfeature{StylisticSet=19}} % ss19
+
+\newcommand{\textLatinToGothic}[1]{{\addfontfeature{StylisticSet=19}#1}}
+
+\newcommand{\LowDiacritics}{\addfontfeature{StylisticSet=20}} % ss20
+
+\newcommand{\textLowDiacritics}[1]{{\addfontfeature{StylisticSet=20}#1}}
+
+% Tiny macros for providing mnemonic access to the cvNN features.
+
+\def\jcvA{1}
+\def\jcva{2}
+\def\jcvB{3}
+\def\jcvb{4}
+\def\jcvC{5}
+\def\jcvc{6}
+\def\jcvD{7}
+\def\jcvd{8}
+\def\jcvE{9}
+\def\jcve{10}
+\def\jcvF{11}
+\def\jcvf{12}
+\def\jcvG{13}
+\def\jcvg{14}
+\def\jcvH{15}
+\def\jcvh{16}
+\def\jcvI{17}
+\def\jcvi{18}
+\def\jcvJ{19}
+\def\jcvj{20}
+\def\jcvK{21}
+\def\jcvk{22}
+\def\jcvL{23}
+\def\jcvl{24}
+\def\jcvM{25}
+\def\jcvm{26}
+\def\jcvN{27}
+\def\jcvn{28}
+\def\jcvO{29}
+\def\jcvo{30}
+\def\jcvP{31}
+\def\jcvp{32}
+\def\jcvQ{33}
+\def\jcvq{34}
+\def\jcvR{35}
+\def\jcvr{36}
+\def\jcvS{37}
+\def\jcvs{38}
+\def\jcvT{39}
+\def\jcvt{40}
+\def\jcvU{41}
+\def\jcvu{42}
+\def\jcvV{43}
+\def\jcvv{44}
+\def\jcvW{45}
+\def\jcvw{46}
+\def\jcvX{47}
+\def\jcvx{48}
+\def\jcvY{49}
+\def\jcvy{50}
+\def\jcvZ{51}
+\def\jcvz{52}
+\def\jcvAogonek{53}
+\def\jcvaogonek{54}
+\def\jcvaa{55}
+\def\jcvAE{56}
+\def\jcvae{57}
+\def\jcvAO{58}
+\def\jcvao{59}
+\def\jcvav{60}
+\def\jcvdbar{61}
+\def\jcvdcroat{61}
+\def\jcvEogonek{62}
+\def\jcvYogh{63}
+\def\jcvlhighstroke{64} %somehow escaped the documentation
+\def\jcvoPolish{65}
+\def\jcvthorncrossed{66}
+\def\jcvspacingzigzag{67}
+\def\jcvglottal{68}
+\def\jcvTironianEt{69}
+\def\jcvperiod{70}
+\def\jcvmiddot{71}
+\def\jcvcomma{72}
+\def\jcvsemicolon{73}
+\def\jcvpunctuselevatus{74}
+\def\jcvexclam{75}
+\def\jcvquestion{76}
+\def\jcvASCIItilde{77}
+\def\jcvasterisk{78}
+\def\jcvslash{79}
+\def\jcvrum{80}
+\def\jcvcombiningzigzag{81}
+\def\jcvspacingusabbrev{82}
+\def\jcvetabbrev{83}
+\def\jcvmacron{84}
+\def\jcvcombiningopena{85}
+\def\jcvcombininginsulard{86}
+\def\jcvcombiningrrotunda{87}
+\def\jcvcombiningdieresis{88}
+\def\jcvcombiningoverline{89}
+\def\jcvHcombiningdoublemacron{90}
+\def\jcvEng{91}
+\def\jcvbrevebelow{92}
+\def\jcvcurrency{93}
+\def\jcvlb{94}
+\def\jcvsterling{95}
+\def\jcvGermanpenny{96}
+\def\jcvflorin{97}
+\def\jcvounce{98}
+%\def\notyetused{99}

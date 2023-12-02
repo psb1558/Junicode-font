@@ -1,0 +1,372 @@
+\ProvidesPackage{JunicodeManual}
+
+\usepackage{microtype}
+\usepackage{fancyhdr}
+%\usepackage[english,greek,lithuanian,polish,latin]{babel}
+\usepackage[quiet]{fontspec}
+%\setmainfont{Junicode}[
+%  UprightFont = {*-Regular},
+%  ItalicFont = {*-Italic},
+%  BoldFont = {*-Smbold},
+%  BoldItalicFont = {*-Bold Italic},
+%  Numbers={Lowercase,Proportional},
+%  RawFeature={mode=harf},
+%  StylisticSet=10,
+%  UprightFeatures={
+%    SizeFeatures={
+%      {Size={-8.5},      Font={*-SmExp Medium}},
+%      {Size={8.6-10.99}, Font=*-Medium},
+%      {Size={11-21.59},  Font=*-Regular},
+%      {Size={21.6-},     Font=*-Light}
+%    },
+%  },
+%  ItalicFeatures={
+%    SizeFeatures={
+%      {Size={-7.5},      Font={*-SmExp Medium Italic}},
+%      {Size={7.6-10.99}, Font={*-Medium Italic}},
+%      {Size={11-21.59},  Font=*-Italic},
+%      {Size={21.6-},     Font={*-Light Italic}}
+%    },
+%  },
+%  BoldFeatures={
+%    SizeFeatures={
+%      {Size={-8.5},      Font={*-SmExp Bold}},
+%      {Size={8.6-10.99}, Font=*-Bold},
+%      {Size={11-21.59},  Font=*-Smbold},
+%      {Size={21.6-},     Font=*-Medium}
+%    },
+%  },
+%  BoldItalicFeatures={
+%    SizeFeatures={
+%      {Size={-7.5},      Font={*-SmExp Bold Italic}},
+%      {Size={7.6-10.99}, Font={*-Bold Italic}},
+%      {Size={11-21.59},  Font={*-Smbold Italic}},
+%      {Size={21.6-},     Font={*-Medium Italic}}
+%    },
+%  },
+%]
+\setmainfont{JunicodeVF-Roman.ttf}[
+  ItalicFont = JunicodeVF-Italic.ttf,
+  BoldFont = JunicodeVF-Roman.ttf,
+  BoldItalicFont =  JunicodeVF-Italic.ttf,
+  Contextuals=Alternate,
+  StylisticSet=10,
+  Renderer=HarfBuzz,
+  %RawFeature={mode=harf},
+  UprightFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=351,wdth=100}}}
+    },
+  },
+  ItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=550,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=475,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=400,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=352,wdth=98}}}
+    },
+  },
+  BoldFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=120}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=115}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=112.5}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=100}}}
+    },
+  },
+  BoldItalicFeatures={
+    SizeFeatures={
+      {Size={-8.5},      RawFeature={axis={wght=700,wdth=118}}},
+      {Size={8.6-10.99}, RawFeature={axis={wght=700,wdth=114}}},
+      {Size={11-21.59},  RawFeature={axis={wght=650,wdth=111}}},
+      {Size={21.6-},     RawFeature={axis={wght=600,wdth=98}}}
+    },
+  },
+]
+%\newfontface\regular{Junicode}
+\setfontface\regular{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+\setfontface\enlarged{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100,ENLA=32}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100,ENLA=32}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100,ENLA=32}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100,ENLA=32}}}
+  },
+]
+\setfontface\enlargedx{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100,ENLA=47}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100,ENLA=47}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100,ENLA=47}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100,ENLA=47}}}
+  },
+]
+%\newfontface\narrow{Junicode Cond}
+\setfontface\narrow{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=353,wdth=75}}}
+  },
+]
+%\newfontface\seminarrow{Junicode SmCond}
+\setfontface\seminarrow{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=354,wdth=87.5}}}
+  },
+]
+%\newfontface\seminarrowlight{Junicode SmCond Light}
+\setfontface\seminarrowlight{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=355,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=87.5}}}
+  },
+]
+%\newfontface\semiwide{Junicode SmExp}
+\setfontface\semiwide{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=112.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=112.5}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=356,wdth=112.5}}}
+  },
+]
+%\newfontface\wide{Junicode Exp}
+\setfontface\wide{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=125}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=125}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=125}}},
+    {Size={22-},       RawFeature={axis={wght=357,wdth=125}}}
+  },
+]
+%\newfontface\light{Junicode Light}
+\setfontface\light{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=358,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=325,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=301,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
+  },
+]
+%\newfontface\medium{Junicode SmExp Medium}
+\setfontface\medium{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=115}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=112.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=100}}}
+  },
+]
+%\newfontface\semicondmedium{Junicode SmCond Medium}
+\setfontface\semicondmedium{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=87.5}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=87.5}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=87.5}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=87.5}}}
+  },
+]
+%\newfontface\condmed{Junicode Cond Medium}
+\setfontface\condmed{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=75}}},
+    {Size={8.5-11},    RawFeature={axis={wght=525,wdth=75}}},
+    {Size={11-22},     RawFeature={axis={wght=500,wdth=75}}},
+    {Size={22-},       RawFeature={axis={wght=500,wdth=75}}}
+  },
+]
+%\newfontface\stditalic{Junicode Italic}
+\setfontface\stditalic{JunicodeVF-Italic .ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+%\newfontface\semiconditalic{Junicode SmCond Italic}
+\setfontface\semiconditalic{JunicodeVF-Italic.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=550,wdth=100}}},
+    {Size={8.5-11},    RawFeature={axis={wght=475,wdth=100}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
+    {Size={22-},       RawFeature={axis={wght=301,wdth=100}}}
+  },
+]
+\setmonofont{SourceCodePro-Regular.ttf}[Scale=MatchLowercase,Numbers=Lowercase]
+%\setmonofont{SourceCodeVariable-Roman.otf}[
+%  Scale = MatchLowercase,
+%  Numbers = Lowercase,
+%  SizeFeatures={
+%    {Size={-8},        RawFeature={axis={wght=500}}},
+%    {Size={8-11},      RawFeature={axis={wght=450}}},
+%    {Size={11-},       RawFeature={axis={wght=400}}}
+%  }
+%]
+\usepackage{graphicx}
+\usepackage[table,dvipsnames]{xcolor}
+\definecolor{BrickRed}{RGB}{146,18,6}
+\definecolor{SlateGray}{RGB}{112,128,144}
+\definecolor{GGOrange}{RGB}{240,74,6}
+\definecolor{RViolet}{RGB}{70,18,87}
+\definecolor{myRed}{rgb}{0.5,0,0}
+\definecolor{myBlue}{rgb}{0,0,0.5}
+\definecolor{myLightRed}{RGB}{255,232,244}
+\definecolor{myLightYellow}{RGB}{239,249,218}
+\definecolor{myLightBlue}{RGB}{203,228,249}
+\definecolor{myLightGreen}{RGB}{234,255,244}
+\definecolor{myLightPurple}{RGB}{214,205,234}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tabto}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{metalogo}
+\usepackage{hyperref}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,%
+  urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+% Footnotes configuration
+\makeatletter
+\renewcommand\thefootnote{\arabic{footnote}}
+\makeatother
+% Text styles
+\linespread{1.1}
+\newopentypefeature{MyStyle}{insular}{+ss02}
+\newopentypefeature{MyStyle}{altogonek}{+cv62}
+\newopentypefeature{MyStyle}{mirrored}{+rtlm}
+\newopentypefeature{MyStyle}{gothic}{+ss19}
+\newopentypefeature{MyStyle}{contextualr}{+ss16}
+\newopentypefeature{MyStyle}{contextuals}{+ss08}
+\newopentypefeature{MyStyle}{IPA}{+ss03}
+\newopentypefeature{MyStyle}{thornswap}{+ss01}
+\newopentypefeature{MyStyle}{noentities}{-ss10}
+%\newopentypefeature{Ligatures}{histon}{+hlig}
+\newopentypefeature{Ligatures}{histoff}{-hlig}
+\newcommand{\noent}[1]{{\addfontfeature{MyStyle=noentities}#1}}
+\newcommand\textex[1]{\textrm{\textbf{\color{BrickRed}#1}}}
+\newcommand\textUName[1]{\textsc{#1}}
+\newcommand\textSourceText[1]{{\color{GGOrange}\texttt{#1}}}
+\newcommand\cvc[1]{{\color{magenta}#1}}
+\newcommand\textstyleEmphasis[1]{\textit{#1}}
+\newcommand\textstyleEntityRef[1]{\textrm{#1}}
+\newcommand{\cvd}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+\newcommand{\hlig}[1]{{\addfontfeature{Ligatures=Historic}#1}}
+\newcommand{\sups}[1]{{\addfontfeature{VerticalPosition = Superior}#1}}
+\newcommand{\subs}[1]{{\addfontfeature{VerticalPosition = Inferior}#1}}
+\newcommand{\oprop}[1]{{\addfontfeature{Numbers={Lowercase,Proportional}}#1}}
+\newcommand{\lprop}[1]{{\addfontfeature{Numbers={Uppercase,Proportional}}#1}}
+\newcommand{\otab}[1]{{\addfontfeature{Numbers={Lowercase,Monospaced}}#1}}
+\newcommand{\ltab}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
+\newcommand{\ornm}[2][0]{{\addfontfeature{Ornament=#1}#2}}
+\newcommand{\revthorn}[1]{{\addfontfeature{StylisticSet=1}#1}}
+\newcommand{\grk}{\addfontfeature{Script=Greek,Language=Greek}}
+\newcommand{\eng}{\addfontfeature{Language=English}}
+\newcommand{\icel}{\addfontfeature{Language=Icelandic}}
+\newcommand{\unic}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
+\newcommand{\colongs}{\addfontfeature{Language=English,StylisticSet=8}}
+%\newcommand{\enla}[1]{{\addfontfeature{StylisticSet=6}#1}}
+\newcommand{\enla}[1]{{\enlarged#1}}
+\newcommand{\enlax}[1]{{\enlargedx#1}}
+\newcommand{\ltech}{Lua\kern-1.5pt\TeX}
+\newcommand{\restag}[1]{{\addfontfeature{StylisticSet=10}#1}}
+\newcommand{\mufi}{\rowcolor{myLightGreen}}
+\newcommand{\prob}{\cellcolor{myLightPurple}}
+\newcommand{\opua}{\rowcolor{myLightYellow}}
+\newcommand{\stdu}{\rowcolor{myLightBlue}}
+\newcommand{\bluerow}{\rowcolor{myLightBlue}}
+\newcommand{\nuni}{\rowcolor{myLightRed}}
+\newcommand{\ctosc}[1]{{\addfontfeature{Letters=UppercaseSmallCaps}#1}}
+\newcommand{\charvar}{\textSourceText{cvNN}}
+\newcommand{\secletter}[1]{\textbf{#1}}
+% Outline numbering
+%\setcounter{secnumdepth}{0}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)
+%\setlength\voffset{-1in}
+%\setlength\hoffset{-0.75in}
+%\setlength\topmargin{1in}
+%\setlength\oddsidemargin{1in}
+%\setlength\textheight{8.000001in}
+%\setlength\textwidth{6in}
+%\setlength\footskip{0.0cm}
+\setlength\headheight{15pt}
+%\setlength\headsep{0.2in}
+% Footnote rule
+%\setlength{\skip\footins}{14pt}
+%\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
+% Pages styles
+\pagestyle{fancy}
+\footskip = 30pt
+\headsep = 30pt
+\renewcommand{\headrule}{}
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+% Headers
+%\usepackage{sectsty}
+%\subsectionfont{\color{BrickRed}}
+%\sectionfont{\color{SlateGray}}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\huge\seminarrowlight\color{RViolet}}{\thechapter.}{1em}{}
+\titleformat{\section}[hang]{\Large\seminarrow\color{SlateGray}}{\thesection.}{1em}{}
+\titleformat{\subsection}[hang]{\large\color{BrickRed}}{\thesubsection.}{1em}{}
+% List styles
+\newcommand\liststyleLi{%
+\renewcommand\labelitemi{{\textbullet}}
+\renewcommand\labelitemii{{\textbullet}}
+\renewcommand\labelitemiii{{\textbullet}}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+\newcommand\liststyleLii{%
+\renewcommand\labelitemi{{\textbullet}}
+\renewcommand\labelitemii{{\textbullet}}
+\renewcommand\labelitemiii{{\textbullet}}
+\renewcommand\labelitemiv{{\textbullet}}
+}
+\newcounter{Feature}
+\renewcommand\theFeature{\arabic{Feature}}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+\tolerance=1500
+\widowpenalty=500
+\clubpenalty=500
+\frenchspacing
+\raggedbottom
+\usepackage{unicodefonttable}

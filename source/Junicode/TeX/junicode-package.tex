@@ -1,0 +1,383 @@
+\documentclass{article}
+\usepackage[medium,semiexpanded]{Junicode}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{supertabular}
+\linespread{1.1}
+\title{Junicode}
+\author{Peter S. Baker}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This package supports the Junicode static fonts (version 2.204 or higher)
+for XeLaTeX and LuaLaTeX. The current version of the Junicode font should
+be installed in your system. If the font is included in your TeX installation,
+it is an obsolete version: you should remove it if possible. This package loads
+fontspec, so it is not necessary to load it separately, even if you are using
+other fonts alongside Junicode.
+
+\section{Loading Junicode}
+
+Load Junicode in the usual way, with {\small\verb|\usepackage{Junicode}|}. Several options are available:
+
+\begin{description}
+\item[fonttype] The type of font to look for, CFF or TrueType. These font types differ in the
+way they draw outlines, and their hinting technologies are very different. Values may be otf
+(the default) or ttf, e.g.\\
+\hspace*{1in}{\small\verb|\usepackage[fonttype=ttf]{Junicode}|}
+\item[light] The weight of the type for the main text is Light instead of Regular.
+\item[medium] The weight of the type for the main text is Medium, somewhat heavier than Regular.
+\item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
+good choice if you have selected the light option.
+\item[condensed] The width of the type is narrow. Note that bold type cannot be condensed: when
+this option is selected, any bold type in the text will have normal width.
+\item[semicondensed] The width of the type is wider than condensed but narrower than the default.
+Note that bold type cannot be semicondensed: when this option is selected, any bold type in the
+text will have normal width.
+\item[expanded] The width of the type is wide. Note that light type cannot be expanded: using
+both the light and the expanded options will produce an error.
+\item[semiexpanded] The width of the type is wider than the default but narrower than expanded.
+Note that light type cannot be semiexpanded: using both the light and the semiexpanded options
+will produce an error.
+\end{description}
+
+\section{Selecting Alternate Styles}
+
+The Junicode font comes in thirty-eight styles: nineteen roman and nineteen italic. You can
+switch to any of these styles with one of the following commands, which will be self-explanatory
+if you keep these abbreviations in mind: Sm = Semi, Cond = Condensed, Exp = Expanded.
+
+\begin{multicols}{3}
+    \jCond\textbackslash jBold
+
+    \textbackslash jBoldItalic
+    
+    \textbackslash jCond
+    
+    \textbackslash jCondItalic
+    
+    \textbackslash jCondLight
+    
+    \textbackslash jCondLightItalic
+    
+    \textbackslash jCondMedium
+    
+    \textbackslash jCondMediumItalic
+    
+    \textbackslash jExp
+    
+    \textbackslash jExpItalic
+    
+    \textbackslash jExpBold
+    
+    \textbackslash jExpBoldItalic
+    
+    \textbackslash jExpMedium
+    
+    \textbackslash jExpMediumItalic
+    
+    \textbackslash jExpSmbold
+    
+    \textbackslash jExpSmboldItalic
+    
+    \textbackslash jItalic
+    
+    \textbackslash jLight
+    
+    \textbackslash jLightItalic
+    
+    \textbackslash jMedium
+    
+    \textbackslash jMediumItalic
+    
+    \textbackslash jRegular
+    
+    \textbackslash jSmbold
+    
+    \textbackslash jSmboldItalic
+    
+    \textbackslash jSmCond
+    
+    \textbackslash jSmCondItalic
+    
+    \textbackslash jSmCondLight
+    
+    \textbackslash jSmCondLightItalic
+    
+    \textbackslash jSmCondMedium
+    
+    \textbackslash jSmCondMediumItalic
+    
+    \textbackslash jSmExp
+    
+    \textbackslash jSmExpItalic
+    
+    \textbackslash jSmExpBold
+    
+    \textbackslash jSmExpBoldItalic
+    
+    \textbackslash jSmExpMedium
+    
+    \textbackslash jSmExpMediumItalic
+    
+    \textbackslash jSmExpSmbold
+    
+    \textbackslash jSmExpSmboldItalic    
+\end{multicols}
+
+\section{Other Commands}
+
+These commands do nothing more than wrap fontspec commands, which can still be
+used with the Junicode package and are actually needed if you want to take full
+advantage of the Junicode font’s features. Some of these commands are more mnemonic
+than the corresponding fontspec commands, and others are more compact. Each command
+also has a corresponding “text” command that works like 
+{\small\verb|\textit{}|}—that is, it takes
+as its sole argument the text to which the command will be applied. Each “text” command
+consists of the main command with “text” prefixed—for example,
+{\small\verb|\textInsularLetterForms{}|}
+corresponding to {\small\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
+applied by these commands, see Chapter 4, Feature Reference.
+
+\begin{center}
+\tablehead{\hline}
+\tabletail{\hline}
+\begin{supertabular}{| l | p{2.75in} |}
+\textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\\hline
+\textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.
+This has an effect only with English and Irish text.\\\hline
+\textbackslash IPAAlternates & Applies ss03, IPA alternates.\\\hline
+\textbackslash HighOverline & Applies ss04, High Overline.\\\hline
+\textbackslash MediumHighOverline & Applies ss05, Medium-high Overline.\\\hline
+\textbackslash EnlargedMinuscules & Applies ss06, Enlarged minuscules.\\\hline
+\textbackslash Underdotted & Applies ss07, Underdotted.\\\hline
+\textbackslash ContextualLongS & Applies ss08, Contextual long s. This should be used only in English or
+French text. With other languages it simply converts all instances of s to ſ.\\\hline
+\textbackslash AlternateFigures & Applies ss09, Alternate Figures.\\\hline
+\textbackslash EntitiesAndTags & Applies ss10, Entities and Tags.\\\hline
+\textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\\hline
+\textbackslash ElderFuthark & Applies ss13, Elder Futhark.\\\hline
+\textbackslash YoungerFuthark & Applies ss14, Younger Futhark.\\\hline
+\textbackslash LongBranchToShortTwig & Applies ss15, Long Branch to Short Twig.\\\hline
+\textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\\hline
+\textbackslash RareDigraphs & Applies ss17, Rare Digraphs.\\\hline
+\textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\\hline
+\textbackslash LatinToGothic & Applies ss19, Latin to Gothic.\\\hline
+\textbackslash LowDiacritics & Applies ss20, Low Diacritics.\\\hline
+\textbackslash jcv, \textbackslash textcv & Applies any Character Variant feature (see below).\\
+\end{supertabular}
+\end{center}
+
+\noindent The syntax of \textbackslash jcv
+is {\small\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
+and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
+\textbackslash textcv takes an additional required argument ({\small\verb|\textcv[num]{num}{text}|}—the text to which the
+feature should be applied.
+
+Character Variant features can also be selected with mnemonics, listed below. For example, a feature for
+lowercase \textbf{a} can be expressed as {\small\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
+
+\begin{multicols}{3}
+\jCond\textbackslash jcvA
+
+\textbackslash jcva
+
+\textbackslash jcvB
+
+\textbackslash jcvb
+
+\textbackslash jcvC
+
+\textbackslash jcvc
+
+\textbackslash jcvD
+
+\textbackslash jcvd
+
+\textbackslash jcvE
+
+\textbackslash jcve
+
+\textbackslash jcvF
+
+\textbackslash jcvf
+
+\textbackslash jcvG
+
+\textbackslash jcvg
+
+\textbackslash jcvH
+
+\textbackslash jcvh
+
+\textbackslash jcvI
+
+\textbackslash jcvi
+
+\textbackslash jcvJ
+
+\textbackslash jcvj
+
+\textbackslash jcvK
+
+\textbackslash jcvk
+
+\textbackslash jcvL
+
+\textbackslash jcvl
+
+\textbackslash jcvM
+
+\textbackslash jcvm
+
+\textbackslash jcvN
+
+\textbackslash jcvn
+
+\textbackslash jcvO
+
+\textbackslash jcvo
+
+\textbackslash jcvP
+
+\textbackslash jcvp
+
+\textbackslash jcvQ
+
+\textbackslash jcvq
+
+\textbackslash jcvR
+
+\textbackslash jcvr
+
+\textbackslash jcvS
+
+\textbackslash jcvs
+
+\textbackslash jcvT
+
+\textbackslash jcvt
+
+\textbackslash jcvU
+
+\textbackslash jcvu
+
+\textbackslash jcvV
+
+\textbackslash jcvv
+
+\textbackslash jcvW
+
+\textbackslash jcvw
+
+\textbackslash jcvX
+
+\textbackslash jcvx
+
+\textbackslash jcvY
+
+\textbackslash jcvy
+
+\textbackslash jcvZ
+
+\textbackslash jcvz
+
+\textbackslash jcvaa
+
+\textbackslash jcvAE
+
+\textbackslash jcvae
+
+\textbackslash jcvAO
+
+\textbackslash jcvao
+
+\textbackslash jcvAogonek
+
+\textbackslash jcvaogonek
+
+\textbackslash jcvASCIItilde
+
+\textbackslash jcvasterisk
+
+\textbackslash jcvav
+
+\textbackslash jcvbrevebelow
+
+\textbackslash jcvcombiningdieresis
+
+\textbackslash jcvcombiningdoublemacron
+
+\textbackslash jcvcombininginsulard
+
+\textbackslash jcvcombiningopena
+
+\textbackslash jcvcombiningoverline
+
+\textbackslash jcvcombiningrrotunda
+
+\textbackslash jcvcombiningzigzag
+
+\textbackslash jcvcomma
+
+\textbackslash jcvcurrency
+
+\textbackslash jcvdbar
+
+\textbackslash jcvdcroat
+
+\textbackslash jcvEng
+
+\textbackslash jcvEogonek
+
+\textbackslash jcvetabbrev
+
+\textbackslash jcvexclam
+
+\textbackslash jcvflorin
+
+\textbackslash jcvGermanpenny
+
+\textbackslash jcvglottal
+
+\textbackslash jcvlb
+
+\textbackslash jcvlhighstroke %somehow escaped the documentation
+
+\textbackslash jcvmacron
+
+\textbackslash jcvmiddot
+
+\textbackslash jcvoPolish
+
+\textbackslash jcvounce
+
+\textbackslash jcvperiod
+
+\textbackslash jcvpunctuselevatus
+
+\textbackslash jcvquestion
+
+\textbackslash jcvrum
+
+\textbackslash jcvsemicolon
+
+\textbackslash jcvslash
+
+\textbackslash jcvspacingusabbrev
+
+\textbackslash jcvspacingzigzag
+
+\textbackslash jcvsterling
+
+\textbackslash jcvthorncrossed
+
+\textbackslash jcvTironianEt
+
+\textbackslash jcvYogh
+\end{multicols}
+
+\end{document}

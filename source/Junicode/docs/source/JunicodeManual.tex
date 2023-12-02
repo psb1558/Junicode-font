@@ -1,0 +1,55 @@
+\documentclass[12pt,letterpaper,openany]{book}
+%
+\usepackage{JunicodeManual}
+%
+\begin{document}
+
+\addfontfeature{Script=Latin,Language=English,Contextuals=Alternate}
+
+\begin{titlepage}
+\huge\noindent
+{\color{myRed}}\\[5cm]
+\Huge \centering {\color{myBlue}Junicode} \\[1cm]
+\huge \centering the font for medievalists \\[1cm]
+ \Huge\centering {\color{myRed}} \\[1cm]
+ \huge\centering {\stditalic specimens and user manual} \\[1ex]
+ \Large\centering{\regular for version 2.204}\\
+\vfill
+{\color{myRed}}
+\end{titlepage}
+\cleardoublepage
+\thispagestyle{plain}
+
+\tableofcontents
+
+\mainmatter
+
+\input{About.tex}
+
+\input{Specimens.tex}
+
+\input{GettingStarted.tex}
+
+\input{Feature_Reference.tex}
+
+\input{tag_key_ins.tex}
+
+\input{Record_Interpreter_notes.tex}
+
+\input{EnlargeAxis.tex}
+
+\input{OnTheWeb.tex}
+
+\input{encoded-glyphs.tex}
+
+\vspace*{\fill}
+\begin{center}
+{\stditalic{This document was set in 12pt Junicode VF\\
+using the {\LuaLaTeX} typesetting system with fontspec for font management.\\
+The source for the document, JunicodeManual.tex, is available at}}\\
+{\color{BrickRed}https://github.com/psb1558/Junicode-font.}
+\end{center}
+%\thispagestyle{plain}
+
+
+\end{document}

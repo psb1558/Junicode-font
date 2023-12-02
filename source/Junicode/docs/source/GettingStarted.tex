@@ -1,0 +1,181 @@
+
+\chapter{Getting Started with Junicode}\hypertarget{GettingStarted}{}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}getting started}
+
+Junicode comes in two flavors—static and variable. Static fonts are the ones
+users are most familiar with, each font file supplying a single set of outlines
+that do not change except in size. By contrast, a single
+\href{https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts}{variable font}
+file stores a set of
+outlines that can morph in various ways—for example, becoming bolder or lighter,
+narrower or wider, and sometimes undergoing more complex transformations. The static
+version of Junicode consists of thirty-eight font files,
+each providing a distinct variation of the font’s style; the variable version consists
+of only two (one each for roman and italic), but those two font files are capable of
+much more than the static version's thirty-eight.
+
+Because the static and variable versions of Junicode are differently named
+(“Junicode” and “Junicode VF”), both can be installed on the same system. However,
+you should choose one or the other for any particular project. Choose the static
+version if the application you are using does not yet support variable fonts. Such
+applications include Microsoft Word, Apple Pages, Quark Xpress, Google Docs,
+Affinity Publisher, and most flavors of {\TeX} (except for {\LuaTeX}—see below). Another
+reason to choose the static version is its familiarity: if you don't need the
+advanced capabilities of the variable version, it is perfectly all right to stick
+with what you know.
+
+All major web browsers (including browsers for mobile devices) support variable fonts,
+and there are good reasons to choose
+the variable version of Junicode for any web project. The greatest reason to go
+with the variable version is to speed the loading of web pages: users will never
+have to download more than two font files (the size of which can be radically
+reduced via subsetting, explained in Section 9 of this Manual). Additionally,
+however, variable fonts can make a page of text more dynamic and visually
+interesting. See Mozilla's
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide}%
+{Variable Fonts Guide} for more information about using variable fonts on the web.
+
+A growing number of desktop applications support variable fonts. Use the variable version of
+Junicode in Adobe InDesign (always with the World-Ready Paragraph Composer).\footnote{%
+The choice of a Composer is well hidden in the “Justification” section of the
+“Paragraph Style Options” dialog. Use of the default “Adobe Paragraph Composer”
+with Junicode VF may cause InDesign to crash or otherwise misbehave. To prevent crashes
+when using the variable version of Junicode,
+it is also advisable to delete InDesign's preferences when launching the program after
+a font upgrade. To do this, press Shift-Alt-Control (on Windows) or
+Shift-Control-Option-Command (on the Mac) all together, \textit{immediately} after
+clicking to launch InDesign.} LibreOffice
+has supported variable fonts since version 7.5 (2023). {\LuaTeX} has excellent support
+for variable fonts: make sure your TeX installation is up to date (since in
+recent years support for variable fonts has improved with every release), and always choose “harf”
+mode in your font-selection code. For an example of font-selection code for a
+variable font, see the file
+\href{https://github.com/psb1558/Junicode-font/blob/master/docs/JunicodeManual.sty}%
+{JunicodeManual.sty} (part of the source for this manual) in the “docs” directory of the GitHub Junicode site.
+You are welcome to copy and modify this code. A number of graphical design apps 
+also support variable fonts, including Adobe Illustrator, PhotoShop, Figma,
+Sketch, and CorelDRAW.
+
+The static version of Junicode has five weights and five widths, which are combined in many ways
+for a total of nineteen styles in
+both roman and italic. It is not necessary to install all of these; in fact,
+your life will be simplified (font menus easier to navigate) if you
+make a selection. You will probably want the traditional Regular, Bold, Italic, and Bold
+Italic fonts, but you should survey the styles displayed in the Specimen
+section of this booklet, choose the ones that look best to you, and install
+only those. A reasonable selection for many users will include the traditional four
+styles for main text, several SemiExpanded styles for footnotes, and
+SemiCondensed for titles.
+
+Junicode’s static fonts come in two types, TrueType (files with a .ttf extension) and
+CFF (files with an .otf extension). These are functionally identical, but they may look
+subtly different on your computer’s screen because of the different technologies used to
+render glyphs. Choose the one you find most appealing.
+
+With around 5,000 characters, Junicode is a large font. Finding the things you
+want in a collection that size can be a challenge, and then entering them in your
+documents is another challenge. This document will help, but it
+presupposes a certain amount of knowledge—for example, how to install a font in
+Windows, Mac OS or Linux and how to install and use different kinds of software.
+
+Medievalists will find the \href{https://bora.uib.no/bora-xmlui/handle/1956/10699}%
+{\textit{MUFI Character Recommendation}}, version 4.0 (2015)
+an essential supplement to this document. The \textit{Recommendation} lists
+thousands of characters identified by the
+Medieval Unicode Font Initiative as being of interest to medievalists. Junicode
+contains all of these characters. There are two versions of the \textit{Recommendation}:
+you will probably find the “Alphabetical Order” version most helpful.
+
+From the \textit{MUFI Character Recommendation} and Chapter 10 (“Encoded Glyphs in
+Junicode”) of this manual, you can find out
+the \textbf{code points}\footnote{\ A Unicode code point is a numerical identifier for a character.
+It is generally expressed as a
+four-digit hexadecimal (or base-16) number with a prefix of ``U+''. The letter
+capital ``A,'' for example, is \unic{U+0041} (65
+in decimal notation), and lowercase ``ȝ'' (Middle English yogh) is \unic{U+021D}.}
+of the characters you need. These code points can be used to enter
+characters in your documents when they cannot be typed on the keyboard.
+
+To enter any Unicode character in a Windows application, type its four-digit
+code, followed by Alt-X. To do the same in the Mac OS, first install and switch
+to the “Unicode Hex Input” keyboard, then type the code while holding down the Option
+key. In most Linux distributions you can enter a code by typing Shift-Control-U,
+then the code followed by Return or Enter.
+
+\textbf{Combining marks} (diacritics and certain abbreviation signs) can pose special problems for
+medievalists. Unicode contains a great
+many \textbf{precomposed characters} consisting of a base letter plus one or more marks.
+If these are all you need you're fortunate---especially if they can be
+typed on an international keyboard (not all can).\footnote{\ Both
+Windows and the Mac OS come with international keyboards that make it easy to
+type special letters and diacritics. To find out how to enable these, search
+online for “Mac OS International Keyboard” or “Windows International Keyboard.”}
+But medieval manuscripts frequently contain
+combinations of base + mark that are not used in modern written languages.
+For these, you'll have to
+enter bases and marks separately.
+
+To position a mark correctly over a base character, first enter the base,
+followed by the mark or marks.
+The sequence \textbf{m} + \textbf{◌ᷙ} (\unic{U+1DD9})
+will make \textbf{mᷙ}; \textbf{y} + \textbf{◌̄} (\unic{U+0304}) + \textbf{◌̆} (\unic{U+0306}) will make \textbf{ȳ̆};
+\textbf{e} + \textbf{◌̣} (\unic{U+0323}) + \textbf{◌ᷠ} (\unic{U+1DE0}) will make \textbf{ẹᷠ}.
+
+More than sixteen hundred characters in Junicode can only be accessed via OpenType features—that is,
+by way of the programming built into the font—and many others \textit{should} be
+accessed that way for reasons explained in the Introduction
+to the Feature Reference section of this document.
+
+For example, some programs (including Microsoft Word) produce small caps by
+scaling capitals down to approximately the height of lowercase letters.
+These always look too thin and light.
+But Junicode contains hundreds of \textsc{true small caps} designed to harmonize with
+the surrounding text. These can only be accessed via the OpenType \textSourceText{smcp} feature,
+which you can apply to a run of text much as you apply italic or bold styles:
+select some text and then apply the feature.
+
+Unfortunately, not every program supports OpenType features, and some that do
+either support only a few or make them difficult to access. Programs
+that support Junicode’s features fully include the free word processor
+\href{https://www.libreoffice.org/}{LibreOffice Writer}, all major browsers
+(Firefox, Chrome, Safari and Edge), and
+the typesetting programs {\LuaLaTeX} and {\XeLaTeX}. Adobe InDesign supports
+OpenType features only partially, but all features can be accessed via
+Roland Dreger’s \href{https://github.com/RolandDreger/open-type-features}{open-type-features}
+script, and InDesign provides access to
+all of Junicode's characters via its “Glyphs” dialog.
+
+Microsoft Word, unfortunately, provides only limited support for OpenType
+features. It supports the \hyperlink{req}{Required Features} discussed below, and also
+variant number forms and Stylistic Sets (though only one at a time). Many characters
+(for example, \textsc{true small caps} and those accessible only via Character
+Variant features) cannot be accessed at all. To activate Word's OpenType
+support, you must open the “Font” dialog, click over to the “Advanced” tab,
+and check the “Kerning” box. (Oddly, the “Kerning” box enables all other
+OpenType features.) Then, in the same tab, select Standard Ligatures, Contextual
+Alternates, and any other features you want.
+OpenType features are best applied to character styles rather than
+directly to text: this will
+save you from having to perform this operation repeatedly.
+
+It is also good to set the language properly for the text you're working on.
+Programs like Word will automatically set the language to the default for your system. If you
+change to a language other than your own for a passage (or even a single word),
+you should set the language for that passage appropriately. This will unlock
+a number of capabilities. For example, in Old and Middle English, Word and
+other programs will use the English form of thorn and eth ({\eng þð}) instead of
+the modern Icelandic ({\icel þð}), and in ancient
+Greek you will be able to type accents after vowels instead of looking up
+the codes for hundreds of polytonic vowel + accent combinations. But these and other capabilities
+are only available when you set the language correctly.
+
+In LibreOffice and InDesign you can set the language with a drop-down menu
+in the “Character” dialog. In Word there is a separate “Language” dialog,
+accessible from the “Tools” menu.
+
+If you have questions about any aspect of Junicode,
+post a query in the \href{https://github.com/psb1558/Junicode-font/discussions}%
+{Junicode discussion forum}. If you notice a bug, or wish to
+request an enhancement or other change, please open an
+\href{https://github.com/psb1558/Junicode-font/issues}{issue} at the font's
+\href{https://github.com/psb1558/Junicode-font}{development site}.

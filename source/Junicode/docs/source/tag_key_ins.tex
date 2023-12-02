@@ -1,0 +1,2108 @@
+
+\chapter{Entering characters with tags}\hypertarget{tagchapter}{}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}entering characters with tags}
+\addfontfeature{MyStyle=noentities}
+
+Any character in Junicode that can be rendered using a Character Variant ({\charvar}) feature can also be rendered using a
+sequence consisting of a base character and two Unicode tags---that is, characters from the Unicode tag range. This range
+duplicates the ASCII character set (which consists, roughly, of things that can be typed on a U.S. English keyboard),
+but the characters it contains are normally invisible. They are used as modifiers
+for a preceding character (in other fonts, usually a flag symbol). Junicode contains a partial collection of tag
+characters:
+
+\begin{center}
+\tablefirsthead{}\tablehead{}\tabletail{}\tablelasttail{}
+\setlength\tabcolsep{15pt}
+%\begin{supertabular}{m{1.7545599in}m{1.7545599in}m{1.7545599in}}
+\begin{supertabular}{ccc}
+{\&\_\_a; U+E0061} &
+{\&\_\_b; U+E0062} &
+{\&\_\_c; U+E0063}\\
+{\&\_\_d; U+E0064} &
+{\&\_\_e; U+E0065} &
+{\&\_\_f; U+E0066}\\
+{\&\_\_g; U+E0067} &
+{\&\_\_h; U+E0068} &
+{\&\_\_i; U+E0069}\\
+{\&\_\_j; U+E006A} &
+{\&\_\_k; U+E006B} &
+{\&\_\_l; U+E006C}\\
+{\&\_\_m; U+E006D} &
+{\&\_\_n; U+E006E} &
+{\&\_\_o; U+E006F}\\
+{\&\_\_p; U+E0070} &
+{\&\_\_q; U+E0071} &
+{\&\_\_r; U+E0072}\\
+{\&\_\_s; U+E0073} &
+{\&\_\_t; U+E0074} &
+{\&\_\_u; U+E0075}\\
+{\&\_\_v; U+E0076} &
+{\&\_\_w; U+E0077} &
+{\&\_\_x; U+E0078}\\
+{\&\_\_y; U+E0079} &
+{\&\_\_z; U+E007A} &
+{\&\_\_0; U+E0030}\\
+{\&\_\_1; U+E0031} &
+{\&\_\_2; U+E0032} &
+{\&\_\_3; U+E0033}\\
+{\&\_\_4; U+E0034} &
+{\&\_\_5; U+E0035} &
+{\&\_\_6; U+E0036}\\
+{\&\_\_7; U+E0037} &
+{\&\_\_8; U+E0038} &
+{\&\_\_9; U+E0039}\\
+\end{supertabular}
+\end{center}
+
+\noindent When creating web pages or XML documents,
+you can enter these using character entities (e.g. \textSourceText{\&\#xE0073;} for \textex{\noent{\&\_\_s;}});
+along the same lines, you can use the \textSourceText{{\textbackslash}char} command
+(e.g. \textSourceText{{\textbackslash}char{\textquotedbl}0E0073}) when
+composing TeX documents. But such entities and commands are not generally available in editors and word processors, and
+entering the tags themselves can be tricky because they are not only invisible, but also ignored by the application
+(the cursor
+skips over them). Instead of attempting to enter the code points for tags directly, use character entities consisting
+of \textbf{an ampersand, two underscores, the tag character, and a semicolon}. These will yield visible tags. For
+example, typing \textSourceText{\&\_\_6;} will yield the tag \textex{\noent{\&\_\_6;}}.
+
+To use the tag method of entering characters, first type the base character from the table below, then the two tags.
+For example, to make a square C (\textex{\restag{C\&\_\_s;\&\_\_q;}}), enter one of these sequences:
+
+\begin{center}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{1.2969599in}m{2.54416in}}
+{\bfseries Web page:} &
+C\&\#xE0073;\&\#xE0071;\\
+{\bfseries TeX:} &
+C{\textbackslash}char{\textquotedbl}0E0073{\textbackslash}char{\textquotedbl}0E0071\\
+{\bfseries Word processor:} &
+C\&\_\_s\textcompwordmark;\&\_\_q\textcompwordmark; (appears as C\&\_\_s;\&\_\_q;)\\
+\end{supertabular}
+\end{center}
+
+\noindent Then apply the OpenType feature \textSourceText{ss10} (Stylistic Set 10) to the passage or passages containing the tags or, if tags occur
+throughout, to the whole document. The tags will disappear and the preceding characters (the base characters) will be
+transformed.
+
+For variants of the combining macron (\unic{U+0304}) and perhaps other combining marks, it will often be necessary to place the
+\ctosc{COMBINING GRAPHEME JOINER} (\unic{U+034F}) between the macron and the base character that precedes it. This will prevent
+normalization (the shaping engine changing sequences of character + combining mark into precomposed characters),
+which interferes with the operation of tags.
+
+Most of the two-tag sequences documented here are designed to be mnemonic. For example, the
+\textex{\&\_\_s;\&\_\_q;} sequence in the example
+above stands for ``square.'' However, two-tag sequences are not capable of describing characters in any detail, and in
+some cases, where the number of variants is large (especially for period, combining macron, and currency), the tags are
+not descriptive at all, but rather an index (the same numbers used in the corresponding {\charvar} features).
+
+These tags are compatible with Junicode's other OpenType features, including the {\charvar} features, and can be mixed with
+them. They will not interfere with the placement of combining marks, which can come either before or after the tag-pair. Use a {\charvar} feature when a variant should appear
+throughout the text, repeatedly in a particular passage (for example, a block quotation), or in a style. A tag sequence may be preferable for isolated forms or to override an OpenType feature.
+
+In the list below, records for each character are color-coded as follows:
+
+\begin{center}
+  \tablefirsthead{}
+  \tablehead{}
+  \tabletail{\hline}
+  \tablelasttail{\hline}
+  \begin{supertabular}{|m{13mm}|m{72mm}|}
+    \hline
+    \mufi{green} & MUFI characters with PUA code points\\\hline
+    \opua{yellow} & Other characters with PUA code points\\\hline
+    \stdu{blue} & Characters with Unicode code points\\\hline
+    \nuni{red} & Characters without code points\\
+  \end{supertabular}
+\end{center}
+
+\noindent Tags or {\charvar} features are usually to be preferred to PUA code points,
+which should be used only where accessibility and searchability are
+not issues (mainly in printed texts). Unicode code points can safely be
+entered directly. Junicode makes a few of them accessible via {\charvar} features and tags because it may often
+be desirable to associate these characters with their bases rather than the Unicode code points. For
+example, the insular T (\textex{\restag{T\&\_\_i;\&\_\_n;}}) is sure to be searchable as T if entered with the sequence
+\textex{\noent{T\&\_\_i;\&\_\_n;}}, but if entered as \textex{U+A786} it may or may not be searchable as T,
+depending on the application.
+
+Characters without code points can only be entered via tags or OpenType features.
+
+\begin{center}
+  \addfontfeature{Numbers={Uppercase,Monospaced}}
+\tablefirsthead{\hline\rowcolor{Goldenrod}
+{Base} &
+{Sequence} &
+{Result} &
+\arraybslash Description / Code point\\}
+\tablehead{\hline\rowcolor{Goldenrod}
+{Base} &
+{Sequence} &
+{Result} &
+\arraybslash Description / Code point\\}
+\tabletail{\hline}
+\tablelasttail{}
+\begin{supertabular}{|c|c|c|c|}
+%\begin{supertabular}{|m{0.9872598in}|m{0.97815984in}|m{0.9254598in}|m{2.79556in}|}
+\hline
+\mufi{period} &
+{.\&\_\_0;\&\_\_1;} &
+{\restag{.\char"0E0030\char"0E0031}} &
+\arraybslash Distinctio / F1F8 \\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_2;} &
+{.\char"0E0030\char"0E0032} &
+\arraybslash Comma positura / F1E2\\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_3;} &
+{\restag{.\char"0E0030\char"0E0033}} &
+\arraybslash High comma positura / F1E3\\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_4;} &
+{\restag{.\char"0E0030\char"0E0034}} &
+\arraybslash Punctus versus / F1EA\\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_5;} &
+{\restag{.\char"0E0030\char"0E0035}} &
+\arraybslash Punctus with comma positura / F1E4\\\hline
+\mufi{period} &
+{.\&\_\_0;\&\_\_6;} &
+{\restag{.\char"0E0030\char"0E0036}} &
+\arraybslash Colon with middle comma positura / F1E5\\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_7;} &
+{\restag{.\char"0E0030\char"0E0037}} &
+\arraybslash Two dots over comma positura / F1F2\\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_8;} &
+{\restag{.\char"0E0030\char"0E0038}} &
+\arraybslash Three dots over comma positura / F1E6\\\hline
+%
+\mufi{period} &
+{.\&\_\_0;\&\_\_9;} &
+{\restag{.\char"0E0030\char"0E0039}} &
+\arraybslash Punctus elevatus diagonal stroke / F1F0\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_0;} &
+{\restag{.\char"0E0031\char"0E0030}} &
+\arraybslash Punctus elevatus with high back / F1FA\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_1;} &
+{\restag{.\char"0E0031\char"0E0031}} &
+\arraybslash Punctus elevatus with onset / F1FB\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_2;} &
+{\restag{.\char"0E0031\char"0E0032}} &
+\arraybslash Punctus flexus / F1F5\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_3;} &
+{\restag{.\char"0E0031\char"0E0033}} &
+\arraybslash Punctus exclamativus / F1E7\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_4;} &
+{\restag{.\char"0E0031\char"0E0034}} &
+\arraybslash Punctus interrogativus / F160\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_5;} &
+{\restag{.\char"0E0031\char"0E0035}} &
+\arraybslash {\narrow Punctus interrogativus horizontal tilde / \ltab{F1E8}}\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_6;} &
+{\restag{.\char"0E0031\char"0E0036}} &
+\arraybslash {\narrow Punctus interrogativus lemniskate / \ltab{F1F1}}\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_7;} &
+{\restag{.\char"0E0031\char"0E0037}} &
+\arraybslash Wavy line / F1F9\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_8;} &
+{\restag{.\char"0E0031\char"0E0038}} &
+\arraybslash Signe de renvoi / F1EC\\\hline
+%
+\mufi{period} &
+{.\&\_\_1;\&\_\_9;} &
+{\restag{.\char"0E0031\char"0E0039}} &
+\arraybslash Virgula suspensiva / F1F4\\\hline
+%
+\mufi{period} &
+{.\&\_\_2;\&\_\_0;} &
+{\restag{.\char"0E0032\char"0E0030}} &
+\arraybslash Short virgula / F1F7\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_1;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0031}} &
+\arraybslash Combining curly bar above / F1CC\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_2;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0032}} &
+\arraybslash Combining diagonal macron\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_3;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0033}} &
+\arraybslash Combining bar above with dot / F1C0\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_4;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0034}} &
+\arraybslash Combining angular zigzag / F1C7\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_5;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0035}} &
+\arraybslash Combining curly zigzag / F1C8\\\hline
+%
+\stdu{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_6;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0036}} &
+\arraybslash Combining vertical tilde / 033E\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_7;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0037}} &
+\arraybslash Combining ligature an / F036\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_8;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0038}} &
+\arraybslash Combining ligature aN / F03A\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_0;\&\_\_9;} &
+{\restag{\char"25CC\char"0304\char"0E0030\char"0E0039}} &
+\arraybslash Combining ligature ar / F038\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_0;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0030}} &
+\arraybslash Combining ligature aR / F130\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_1;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0031}} &
+\arraybslash Combining B / F013\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_2;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0032}} &
+\arraybslash Combining D / F016\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_3;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0033}} &
+\arraybslash Combining e with macron / F136\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_4;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0034}} &
+\arraybslash Combining e with ogonek / F135\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_5;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0035}} &
+\arraybslash Combining dotless i / F02F\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_6;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0036}} &
+\arraybslash Combining j / F030\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_7;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0037}} &
+\arraybslash Combining dotless j / F031\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_8;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0038}} &
+\arraybslash Combining K / F01C\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_1;\&\_\_9;} &
+{\restag{\char"25CC\char"0304\char"0E0031\char"0E0039}} &
+\arraybslash Combining uncial m / F01F\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_0;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0030}} &
+\arraybslash Combining o with macron / F13F\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_1;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0031}} &
+\arraybslash Combining o with ogonek / F13E\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_2;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0032}} &
+\arraybslash Combining o with stroke / F032\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_3;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0033}} &
+\arraybslash Combining q / F033\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_4;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0034}} &
+\arraybslash Combining rum abbreviation / F040\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_5;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0035}} &
+\arraybslash Combining T / F02A\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_6;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0036}} &
+\arraybslash Combining y / F02B\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_7;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0037}} &
+\arraybslash Combining thorn / F03D\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_8;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0038}} &
+\arraybslash {\narrow Combining ligature o r rotunda / \tab{F03E}}\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_2;\&\_\_9;} &
+{\restag{\char"25CC\char"0304\char"0E0032\char"0E0039}} &
+\arraybslash {\narrow Combining ligature letter o rum / \ltab{F03F}}\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_0;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0030}} &
+\arraybslash Combining diagonal dieresis\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_1;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0031}} &
+\arraybslash Combining dot and acute\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_2;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0032}} &
+\arraybslash Combining ogonek and dot\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_3;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0033}} &
+\arraybslash Combining narrow macron\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_4;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0034}} &
+\arraybslash Combining macron with serifs\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_5;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0035}} &
+\arraybslash Combining et sign\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_6;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0036}} &
+\arraybslash Combining spiritus asper sign\\\hline
+%
+\nuni{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_7;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0037}} &
+\arraybslash Attached subscript a\\\hline
+%
+\mufi{A} &
+{A\&\_\_i;\&\_\_n;} &
+{\restag{A\char"0E0069\char"0E006E}} &
+\arraybslash Insular A / F201\\\hline
+%
+\mufi{A} &
+{A\&\_\_s;\&\_\_q;} &
+{\restag{A\char"0E0073\char"0E0071}} &
+\arraybslash Square A / F13A\\\hline
+%
+\mufi{A} &
+{A\&\_\_s;\&\_\_d;} &
+{\restag{A\char"0E0073\char"0E0064}} &
+\arraybslash A with diagonal stroke / E8DA\\\hline
+%
+\nuni{A} &
+{A\&\_\_e;\&\_\_n;} &
+{\restag{A\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule A\\\hline
+%
+\mufi{a} &
+{a\&\_\_i;\&\_\_n;} &
+{\restag{a\char"0E0069\char"0E006E}} &
+\arraybslash Insular a / F200\\\hline
+%
+\mufi{a} &
+{a\&\_\_u;\&\_\_n;} &
+{\restag{a\char"0E0075\char"0E006E}} &
+\arraybslash Uncial a / F214\\\hline
+%
+\mufi{a} &
+{a\&\_\_o;\&\_\_p;} &
+{\restag{a\char"0E006F\char"0E0070}} &
+\arraybslash Open a / F202\\\hline
+%
+\mufi{a} &
+{a\&\_\_c;\&\_\_l;} &
+{\restag{a\char"0E0063\char"0E006C}} &
+\arraybslash Closed a / F203\\\hline
+%
+\mufi{a} &
+{a\&\_\_n;\&\_\_e;} &
+{\restag{a\char"0E006E\char"0E0065}} &
+\arraybslash Neckless a / F215\\\hline
+%
+\mufi{a} &
+{a\&\_\_o;\&\_\_c;} &
+{\restag{a\char"0E006F\char"0E0063}} &
+\arraybslash oc-shaped a / TBD\\\hline
+%
+\mufi{a} &
+{a\&\_\_h;\&\_\_c;} &
+{\restag{a\char"0E0068\char"0E0063}} &
+\arraybslash high caroline a / TBD\\\hline
+%
+\mufi{a} &
+{a\&\_\_s;\&\_\_q;} &
+{\restag{a\char"0E0073\char"0E0071}} &
+\arraybslash Square a / TBD\\\hline
+%
+\mufi{a} &
+{a\&\_\_p;\&\_\_o;} &
+{\restag{a\char"0E0070\char"0E006F}} &
+\arraybslash Pointed a / TBD\\\hline
+%
+\mufi{a} &
+{a\&\_\_e;\&\_\_n;} &
+{\restag{a\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule a / EEE0\\\hline
+%
+\mufi{a} &
+{a\&\_\_o;\&\_\_n;} &
+{\restag{a\char"0E006F\char"0E006E}} &
+\arraybslash Enlarged oc-shaped a / TBD\\\hline
+%
+\nuni{B} &
+{B\&\_\_e;\&\_\_n;} &
+{\restag{B\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule B\\\hline
+%
+\nuni{B} &
+{B\&\_\_i;\&\_\_n;} &
+{\restag{B\char"0E0069\char"0E006E}} &
+\arraybslash Insular B\\\hline
+%
+\mufi{b} &
+{b\&\_\_e;\&\_\_n;} &
+{\restag{b\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule b / EEE1\\\hline
+%
+\mufi{C} &
+{C\&\_\_s;\&\_\_q;} &
+{\restag{C\char"0E0073\char"0E0071}} &
+\arraybslash Square C / F106\\\hline
+%
+\nuni{C} &
+{C\&\_\_e;\&\_\_n;} &
+{\restag{C\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule C\\\hline
+%
+\mufi{c} &
+{c\&\_\_c;\&\_\_u;} &
+{\restag{c\char"0E0063\char"0E0075}} &
+\arraybslash c with curl / F198\\\hline
+%
+\mufi{c} &
+{c\&\_\_e;\&\_\_n;} &
+{\restag{c\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule c / EEE2\\\hline
+%
+\nuni{D} &
+{D\&\_\_i;\&\_\_e;} &
+{\restag{D\char"0E0069\char"0E0065}} &
+\arraybslash Enlarged minuscule insular D\\\hline
+%
+\stdu{D} &
+{D\&\_\_i;\&\_\_n;} &
+{\restag{D\char"0E0069\char"0E006E}} &
+\arraybslash Insular D / A779\\\hline
+%
+\nuni{D} &
+{D\&\_\_e;\&\_\_n;} &
+{\restag{D\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule D\\\hline
+%
+\stdu{d} &
+{d\&\_\_i;\&\_\_1;} &
+{\restag{d\char"0E0069\char"0E0031}} &
+\arraybslash Insular d default form / A77A\\\hline
+%
+\nuni{d} &
+{d\&\_\_i;\&\_\_2;} &
+{\restag{d\char"0E0069\char"0E0032}} &
+\arraybslash Insular d second form\\\hline
+%
+\mufi{d} &
+{d\&\_\_i;\&\_\_e;} &
+{\restag{d\char"0E0069\char"0E0065}} &
+\arraybslash Enlarged minuscule insular d / EEE4\\\hline
+%
+\mufi{d} &
+{d\&\_\_c;\&\_\_u;} &
+{\restag{d\char"0E0063\char"0E0075}} &
+\arraybslash d with curl / F193\\\hline
+%
+\mufi{d} &
+{d\&\_\_e;\&\_\_n;} &
+{\restag{d\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule d / EEE3\\\hline
+%
+\mufi{E} &
+{E\&\_\_u;\&\_\_c;} &
+{\restag{E\char"0E0075\char"0E0063}} &
+\arraybslash Uncial closed E / F217\\\hline
+%
+\mufi{E} &
+{E\&\_\_u;\&\_\_n;} &
+{\restag{E\char"0E0075\char"0E006E}} &
+\arraybslash Uncial E / F10A\\\hline
+%
+\nuni{E} &
+{E\&\_\_e;\&\_\_n;} &
+{\restag{E\char"0E0069\char"0E006E}} &
+\arraybslash Insular E\\\hline
+%
+\nuni{E} &
+{E\&\_\_e;\&\_\_n;} &
+{\restag{E\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule E\\\hline
+%
+\mufi{e} &
+{e\&\_\_u;\&\_\_n;} &
+{\restag{e\char"0E0075\char"0E006E}} &
+\arraybslash Uncial e / F218\\\hline
+%
+\mufi{e} &
+{e\&\_\_b;\&\_\_a;} &
+{\restag{e\char"0E0062\char"0E0061}} &
+\arraybslash e with bar / F219\\\hline
+%
+\mufi{e} &
+{e\&\_\_b;\&\_\_h;} &
+{\restag{e\char"0E0062\char"0E0068}} &
+\arraybslash High e with bar / F21A\\\hline
+%
+\mufi{e} &
+{e\&\_\_e;\&\_\_n;} &
+{\restag{e\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule e / EEE6\\\hline
+%
+\stdu{F} &
+{F\&\_\_i;\&\_\_n;} &
+{\restag{F\char"0E0069\char"0E006E}} &
+\arraybslash Insular F / A77B\\\hline
+%
+\mufi{F} &
+{F\&\_\_e;\&\_\_n;} &
+{\restag{F\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule F / EEE7\\\hline
+%
+\nuni{F} &
+{F\&\_\_i;\&\_\_e;} &
+{\restag{F\char"0E0069\char"0E0065}} &
+\arraybslash Enlarged minuscule insular F\\\hline
+%
+\stdu{f} &
+{f\&\_\_i;\&\_\_n;} &
+{\restag{f\char"0E0069\char"0E006E}} &
+\arraybslash Insular f / A77C\\\hline
+%
+\mufi{f} &
+{f\&\_\_i;\&\_\_s;} &
+{\restag{f\char"0E0069\char"0E0073}} &
+\arraybslash Insular f with split top / TBD\\\hline
+%
+\mufi{f} &
+{f\&\_\_i;\&\_\_1;} &
+{\restag{f\char"0E0069\char"0E0031}} &
+\arraybslash Insular f with dotted hooks / F21C\\\hline
+%
+\mufi{f} &
+{f\&\_\_i;\&\_\_2;} &
+{\restag{f\char"0E0069\char"0E0032}} &
+\arraybslash Semi-closed insular f / EBD5\\\hline
+%
+\mufi{f} &
+{f\&\_\_i;\&\_\_3;} &
+{\restag{f\char"0E0069\char"0E0033}} &
+\arraybslash Closed insular f / EBD6\\\hline
+%
+\mufi{f} &
+{f\&\_\_i;\&\_\_e;} &
+{\restag{f\char"0E0069\char"0E0065}} &
+\arraybslash Enlarged minuscule insular f / EEFF\\\hline
+%
+\opua{f} &
+{f\&\_\_n;\&\_\_a;} &
+{\restag{f\char"0E006E\char"0E0061}} &
+\arraybslash Narrow f / F000B\\\hline
+%
+\mufi{f} &
+{f\&\_\_c;\&\_\_u;} &
+{\restag{f\char"0E0063\char"0E0075}} &
+\arraybslash f with curl / F194\\\hline
+%
+\mufi{f} &
+{f\&\_\_e;\&\_\_n;} &
+{\restag{f\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule f / EEE7\\\hline
+%
+\stdu{G} &
+{G\&\_\_i;\&\_\_n;} &
+{\restag{G\char"0E0069\char"0E006E}} &
+\arraybslash Insular G / A77D\\\hline
+%
+\stdu{G} &
+{G\&\_\_o;\&\_\_r;} &
+{\restag{G\char"0E006F\char"0E0072}} &
+\arraybslash Ormulum G with bar / A7D0\\\hline
+%
+\mufi{G} &
+{G\&\_\_s;\&\_\_q;} &
+{\restag{G\char"0E0073\char"0E0071}} &
+\arraybslash Square G / F10E\\\hline
+%
+\nuni{G} &
+{G\&\_\_e;\&\_\_n;} &
+{\restag{G\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule G\\\hline
+%
+\stdu{g} &
+{g\&\_\_i;\&\_\_n;} &
+{\restag{g\char"0E0069\char"0E006E}} &
+\arraybslash Insular g / 1D79\\\hline
+%
+\stdu{g} &
+{g\&\_\_o;\&\_\_r;} &
+{\restag{g\char"0E006F\char"0E0072}} &
+\arraybslash Ormulum g with bar / A7D1\\\hline
+%
+\stdu{g} &
+{g\&\_\_s;\&\_\_c;} &
+{\restag{g\char"0E0073\char"0E0063}} &
+\arraybslash Script g / 0261 \\\hline
+%
+\mufi{g} &
+{g\&\_\_c;\&\_\_u;} &
+{\restag{g\char"0E0063\char"0E0075}} &
+\arraybslash g with curl / F196\\\hline
+%
+\mufi{g} &
+{g\&\_\_e;\&\_\_n;} &
+{\restag{g\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule g / EEE8 \\\hline
+%
+\mufi{g} &
+{g\&\_\_n;\&\_\_e;} &
+{\restag{g\char"0E006E\char"0E0065}} &
+\arraybslash Enlarged insular g / TBD \\\hline
+%
+\mufi{g} &
+{g\&\_\_c;\&\_\_1;} &
+{\restag{g\char"0E0063\char"0E0031}} &
+\arraybslash Closed g with separate loops / F21D\\\hline
+%
+\mufi{g} &
+{g\&\_\_c;\&\_\_2;} &
+{\restag{g\char"0E0063\char"0E0032}} &
+\arraybslash Closed g with large lower loop / F21E\\\hline
+%
+\mufi{g} &
+{g\&\_\_c;\&\_\_3;} &
+{\restag{g\char"0E0063\char"0E0033}} &
+\arraybslash Closed g with small lower loop / F21F\\\hline
+%
+\mufi{H} &
+{H\&\_\_u;\&\_\_n;} &
+{\restag{H\char"0E0075\char"0E006E}} &
+\arraybslash Uncial H / F110\\\hline
+%
+\nuni{H} &
+{H\&\_\_e;\&\_\_n;} &
+{\restag{H\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule H\\\hline
+%
+\mufi{H} &
+{H\&\_\_h;\&\_\_l;} &
+{\restag{H\char"0E0068\char"0E006C}} &
+\arraybslash H with high left stem / TBD\\\hline
+%
+\mufi{h} &
+{h\&\_\_d;\&\_\_e;} &
+{\restag{h\char"0E0064\char"0E0065}} &
+\arraybslash h with descender / F23A\\\hline
+%
+\mufi{h} &
+{h\&\_\_a;\&\_\_u;} &
+{\restag{h\char"0E0061\char"0E0075}} &
+\arraybslash h-shaped \textit{autem} abbreviation / E8A3\\\hline
+%
+\mufi{h} &
+{h\&\_\_e;\&\_\_n;} &
+{\restag{h\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule h / EEE9\\\hline
+%
+\nuni{h} &
+{h\&\_\_e;\&\_\_d;} &
+{\restag{h\char"0E0065\char"0E0064}} &
+\arraybslash Enlarged minuscule h with descender\\\hline
+%
+\nuni{h} &
+{h\&\_\_c;\&\_\_a;} &
+{\restag{h\char"0E0063\char"0E0061}} &
+\arraybslash Caroline a\\\hline
+%
+\mufi{h} &
+{h\&\_\_e;\&\_\_c;} &
+{\restag{h\char"0E0065\char"0E0063}} &
+\arraybslash Enlarged Caroline h / TBD\\\hline
+%
+\mufi{h} &
+{h\&\_\_d;\&\_\_b;} &
+{\restag{h\char"0E0064\char"0E0062}} &
+\arraybslash{\narrow Caroline h with right descender and bar / TBD}\\\hline
+%
+\stdu{I} &
+{I\&\_\_d;\&\_\_a;} &
+{\restag{I\char"0E0064\char"0E0061}} &
+\arraybslash I with dot above / 0130\\\hline
+%
+\stdu{I} &
+{I\&\_\_d;\&\_\_e;} &
+{\restag{I\char"0E0064\char"0E0065}} &
+\arraybslash I with descender / A7FE\\\hline
+%
+\nuni{I} &
+{I\&\_\_e;\&\_\_n;} &
+{\restag{I\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule I\\\hline
+%
+\mufi{I} &
+{I\&\_\_u;\&\_\_s;} &
+{\restag{I\char"0E0075\char"0E0073}} &
+\arraybslash I without serif / TBD\\\hline
+%
+\stdu{i} &
+{i\&\_\_d;\&\_\_l;} &
+{\restag{i\char"0E0064\char"0E006C}} &
+\arraybslash Dotless i / 0131\\\hline
+%
+\mufi{i} &
+{i\&\_\_l;\&\_\_o;} &
+{\restag{i\char"0E006C\char"0E006F}} &
+\arraybslash Long I / F220\\\hline
+%
+\mufi{i} &
+{i\&\_\_b;\&\_\_d;} &
+{\restag{i\char"0E0062\char"0E0064}} &
+\arraybslash i with double bar / E8A1\\\hline
+%
+\nuni{i} &
+{i\&\_\_f;\&\_\_1;} &
+{\restag{ii\char"0E0066\char"0E0031}} &
+\arraybslash i final form (when i precedes)\\\hline
+%
+\nuni{i} &
+{i\&\_\_f;\&\_\_2;} &
+{\restag{i\char"0E0066\char"0E0032}} &
+\arraybslash i final form\\\hline
+%
+\mufi{i} &
+{i\&\_\_e;\&\_\_n;} &
+{\restag{i\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule i / EEEA\\\hline
+%
+\mufi{J} &
+{J\&\_\_d;\&\_\_a;} &
+{\restag{J\char"0E0064\char"0E0061}} &
+\arraybslash J with dot above / E15C\\\hline
+%
+\nuni{J} &
+{J\&\_\_e;\&\_\_n;} &
+{\restag{J\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule J\\\hline
+%
+\stdu{j} &
+{j\&\_\_d;\&\_\_l;} &
+{\restag{j\char"0E0064\char"0E006C}} &
+\arraybslash Dotless j / 0237\\\hline
+%
+\mufi{j} &
+{j\&\_\_s;\&\_\_d;} &
+\restag{j\char"0E0073\char"0E0064} &
+\arraybslash j with double bar / E8A2\\\hline
+%
+\opua{j} &
+{j\&\_\_d;\&\_\_a;} &
+{\restag{j\char"0E0064\char"0E0061}} &
+\arraybslash j with dot accent / F000D\\\hline
+%
+\mufi{j} &
+{j\&\_\_e;\&\_\_n;} &
+{\restag{j\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule j / EEEB\\\hline
+%
+\nuni{K} &
+{K\&\_\_e;\&\_\_n;} &
+{\restag{K\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule K\\\hline
+%
+\mufi{k} &
+{k\&\_\_u;\&\_\_n;} &
+{\restag{k\char"0E0075\char"0E006E}} &
+\arraybslash Uncial k / F208\\\hline
+%
+\mufi{k} &
+{k\&\_\_u;\&\_\_d;} &
+{\restag{k\char"0E0075\char"0E0064}} &
+\arraybslash Uncial k with descender / TBD\\\hline
+%
+\mufi{k} &
+{k\&\_\_c;\&\_\_1;} &
+{\restag{k\char"0E0063\char"0E0031}} &
+\arraybslash Closed k, one / F221\\\hline
+%
+\mufi{k} &
+{k\&\_\_c;\&\_\_2;} &
+{\restag{k\char"0E0063\char"0E0032}} &
+\arraybslash Closed k, two / F209 \\\hline
+%
+\mufi{k} &
+{k\&\_\_c;\&\_\_u;} &
+{\restag{k\char"0E0063\char"0E0075}} &
+\arraybslash k with curl / F195\\\hline
+%
+\mufi{k} &
+{k\&\_\_e;\&\_\_n;} &
+{\restag{k\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule k / EEEC\\\hline
+%
+\nuni{L} &
+{L\&\_\_e;\&\_\_n;} &
+{\restag{L\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule L\\\hline
+%
+\mufi{l} &
+{l\&\_\_d;\&\_\_e;} &
+{\restag{l\char"0E0064\char"0E0065}} &
+\arraybslash Descending l / F222\\\hline
+%
+\mufi{l} &
+{l\&\_\_e;\&\_\_n;} &
+{\restag{l\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule l / EEED\\\hline
+%
+\stdu{l} &
+{l\&\_\_s;\&\_\_h;} &
+{\restag{l\char"0E0073\char"0E0068}} &
+\arraybslash l with high stroke / A749\\\hline
+%
+\opua{l} &
+{l\&\_\_s;\&\_\_f;} &
+{\restag{l\char"0E0073\char"0E0066}} &
+\arraybslash {\narrow l with high stroke ending with flourish / \ltab{F000F}}\\\hline
+%
+\nuni{l} &
+{l\&\_\_i;\&\_\_n;} &
+{\restag{l\char"0E0069\char"0E006E}} &
+\arraybslash {Insular l}\\\hline
+%
+\mufi{M} &
+{M\&\_\_u;\&\_\_d;} &
+{\restag{M\char"0E0075\char"0E0064}} &
+\arraybslash Uncial M with descender / F224\\\hline
+%
+\mufi{M} &
+{M\&\_\_u;\&\_\_n;} &
+{\restag{M\char"0E0075\char"0E006E}} &
+\arraybslash Uncial M / F11A\\\hline
+%
+\stdu{M} &
+{M\&\_\_a;\&\_\_1;} &
+{\restag{M\char"0E0061\char"0E0031}} &
+\arraybslash Epigraphic M / \ A7FF\\\hline
+%
+\nuni{M} &
+{M\&\_\_e;\&\_\_n;} &
+{\restag{M\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule M\\\hline
+%
+\mufi{m} &
+{m\&\_\_u;\&\_\_d;} &
+{\restag{m\char"0E0075\char"0E0064}} &
+\arraybslash Uncial m with descender / F23D\\\hline
+%
+\mufi{m} &
+{m\&\_\_u;\&\_\_n;} &
+{\restag{m\char"0E0075\char"0E006E}} &
+\arraybslash Uncial m / F23C\\\hline
+%
+\mufi{m} &
+{m\&\_\_d;\&\_\_e;} &
+{\restag{m\char"0E0064\char"0E0065}} &
+\arraybslash m with descender / F223\\\hline
+%
+\mufi{m} &
+{m\&\_\_e;\&\_\_n;} &
+{\restag{m\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule m / EEEE\\\hline
+%
+\mufi{N} &
+{N\&\_\_d;\&\_\_e;} &
+{\restag{N\char"0E0064\char"0E0065}} &
+\arraybslash N with descender / F229\\\hline
+%
+\mufi{N} &
+{N\&\_\_e;\&\_\_n;} &
+{\restag{N\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule n / EEEF\\\hline
+%
+\mufi{N} &
+{N\&\_\_l;\&\_\_d;} &
+{\restag{N\char"0E006C\char"0E0064}} &
+\arraybslash {\narrow N with low bar and descender / TBD}\\\hline
+%
+\mufi{n} &
+{n\&\_\_d;\&\_\_e;} &
+{\restag{n\char"0E0064\char"0E0065}} &
+\arraybslash n with descender / F228\\\hline
+%
+\mufi{n} &
+{n\&\_\_b;\&\_\_a;} &
+{\restag{n\char"0E0062\char"0E0061}} &
+\arraybslash n with bar / E7B2\\\hline
+%
+\mufi{n} &
+{n\&\_\_c;\&\_\_u;} &
+{\restag{n\char"0E0063\char"0E0075}} &
+\arraybslash n with curl / F19A\\\hline
+%
+\mufi{n} &
+{n\&\_\_e;\&\_\_n;} &
+{\restag{n\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule n / EEEF\\\hline
+%
+\mufi{n} &
+{n\&\_\_s;\&\_\_d;} &
+{\restag{n\char"0E0073\char"0E0064}} &
+\arraybslash Small cap n with descender / F22A\\\hline
+%
+\nuni{n} &
+{n\&\_\_a;\&\_\_s;} &
+{\restag{n\char"0E0061\char"0E0073}} &
+\arraybslash n with attached subscript a\\\hline
+%
+\mufi{n} &
+{n\&\_\_w;\&\_\_p;} &
+{\restag{n\char"0E0077\char"0E0070}} &
+\arraybslash {Wide petite cap n with descender / TBD}\\\hline
+%
+\nuni{O} &
+{O\&\_\_e;\&\_\_n;} &
+{\restag{O\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule O\\\hline
+%
+\mufi{o} &
+{o\&\_\_e;\&\_\_n;} &
+{\restag{o\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule o / EEF0\\\hline
+%
+\stdu{P} &
+{P\&\_\_r;\&\_\_e;} &
+{\restag{P\char"0E0072\char"0E0065}} &
+\arraybslash Reversed P / A7FC\\\hline
+%
+\nuni{P} &
+{P\&\_\_e;\&\_\_n;} &
+{\restag{P\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule P\\\hline
+%
+\mufi{p} &
+{p\&\_\_e;\&\_\_n;} &
+{\restag{p\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule p / EEF1\\\hline
+%
+\nuni{p} &
+{p\&\_\_a;\&\_\_1;} &
+{\restag{p\char"0E0061\char"0E0031}} &
+\arraybslash Alternate p for Ormulum\\\hline
+%
+\mufi{Q} &
+{Q\&\_\_s;\&\_\_m;} &
+{\restag{Q\char"0E0073\char"0E006D}} &
+\arraybslash Q with stem / F22C\\\hline
+%
+\nuni{Q} &
+{Q\&\_\_l;\&\_\_1;} &
+{\restag{Q\char"0E006C\char"0E0031\char"25CC}} &
+\arraybslash Q with long tail, one\\\hline
+%
+\nuni{Q} &
+{Q\&\_\_l;\&\_\_2;} &
+{\restag{Q\char"0E006C\char"0E0032\char"25CC\char"25CC}} &
+\arraybslash Q with long tail, two\\\hline
+%
+\nuni{Q} &
+{Q\&\_\_e;\&\_\_n;} &
+{\restag{Q\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule Q\\\hline
+%
+\mufi{q} &
+{q\&\_\_s;\&\_\_d;} &
+{\restag{q\char"0E0073\char"0E0064}} &
+\arraybslash q with diagonal stroke / E8B4\\\hline
+%
+\mufi{q} &
+{q\&\_\_e;\&\_\_n;} &
+{\restag{q\char"0E0065\char"0E006E}} &
+\arraybslash Enlarged minuscule q / EEF2\\\hline
+%
+\stdu{R} &
+{R\&\_\_i;\&\_\_n;} &
+\restag{R\char"0E0069\char"0E006E} &
+\arraybslash Insular R / A783\\\hline
+%
+\stdu{R} &
+{R\&\_\_r;\&\_\_o;} &
+\restag{R\char"0E0072\char"0E006F} &
+\arraybslash R rotunda / A75A\\\hline
+%
+\nuni{R} &
+{R\&\_\_e;\&\_\_n;} &
+\restag{R\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule R\\\hline
+%
+\stdu{r} &
+{r\&\_\_i;\&\_\_n;} &
+\restag{r\char"0E0069\char"0E006E} &
+\arraybslash Insular r / A782\\\hline
+%
+\stdu{r} &
+{r\&\_\_r;\&\_\_o;} &
+\restag{r\char"0E0072\char"0E006F} &
+\arraybslash r rotunda / A75B\\\hline
+%
+\mufi{r} &
+{r\&\_\_c;\&\_\_u;} &
+\restag{r\char"0E0063\char"0E0075} &
+\arraybslash r with curl / F19B\\\hline
+%
+\mufi{r} &
+{r\&\_\_e;\&\_\_n;} &
+\restag{r\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule r / EEF3\\\hline
+%
+\stdu{S} &
+{S\&\_\_i;\&\_\_n;} &
+\restag{S\char"0E0069\char"0E006E} &
+\arraybslash Insular S / A784\\\hline
+%
+\stdu{S} &
+{S\&\_\_s;\&\_\_g;} &
+\restag{S\char"0E0073\char"0E0067} &
+\arraybslash Sigmoid S / A7D8\\\hline
+%
+\mufi{S} &
+{S\&\_\_a;\&\_\_d;} &
+\restag{S\char"0E0061\char"0E0064} &
+\arraybslash Ascending and descending S / TBD\\\hline
+%
+\mufi{S} &
+{S\&\_\_r;\&\_\_z;} &
+\restag{S\char"0E0072\char"0E007A} &
+\arraybslash Reverse Z-shaped S / TBD\\\hline
+%
+\nuni{S} &
+{S\&\_\_e;\&\_\_n;} &
+\restag{S\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule S\\\hline
+%
+\nuni{S} &
+{S\&\_\_s;\&\_\_d;} &
+\restag{S\char"0E0073\char"0E0064} &
+\arraybslash {\narrow S with diagonal stroke (Sanctus abbrev)}\\\hline
+%
+\stdu{S} &
+{S\&\_\_m;\&\_\_s;} &
+\restag{S\char"0E006D\char"0E0073} &
+\arraybslash {Middle Scots S}\\\hline
+%
+\stdu{s} &
+{s\&\_\_i;\&\_\_n;} &
+\restag{s\char"0E0069\char"0E006E} &
+\arraybslash Insular s / A785\\\hline
+%
+\mufi{s} &
+{s\&\_\_i;\&\_\_s;} &
+\restag{s\char"0E0069\char"0E0073} &
+\arraybslash Insular s with split top / TBD\\\hline
+%
+\stdu{s} &
+{s\&\_\_s;\&\_\_g;} &
+\restag{s\char"0E0073\char"0E0067} &
+\arraybslash Sigmoid s / A7D9\\\hline
+%
+\mufi{s} &
+{s\&\_\_a;\&\_\_d;} &
+\restag{s\char"0E0061\char"0E0064} &
+\arraybslash Ascending and descending s / TBD\\\hline
+%
+\stdu{s} &
+{s\&\_\_l;\&\_\_o;} &
+\restag{s\char"0E006C\char"0E006F} &
+\arraybslash Long s / 017F\\\hline
+%
+\mufi{s} &
+{s\&\_\_e;\&\_\_n;} &
+\restag{s\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule s / EEF4\\\hline
+%
+\mufi{s} &
+{s\&\_\_l;\&\_\_d;} &
+\restag{s\char"0E006C\char"0E0064} &
+\arraybslash Long s with descender / F127\\\hline
+%
+\mufi{s} &
+{s\&\_\_l;\&\_\_f;} &
+\restag{s\char"0E006C\char"0E0066} &
+\arraybslash Long s with flourish / E8B7\\\hline
+%
+\mufi{s} &
+{s\&\_\_l;\&\_\_s;} &
+\restag{s\char"0E006C\char"0E0073} &
+\arraybslash Long s with diagonal stroke / E8B8\\\hline
+%
+\nuni{s} &
+{s\&\_\_l;\&\_\_l;} &
+\restag{s\char"0E006C\char"0E006C} &
+\arraybslash Long s with loop\\\hline
+%
+\mufi{s} &
+{s\&\_\_s;\&\_\_t;} &
+\restag{s\char"0E0073\char"0E0074} &
+\arraybslash Long s with short tail / TBD\\\hline
+%
+\stdu{s} &
+{s\&\_\_m;\&\_\_s;} &
+\restag{s\char"0E006D\char"0E0073} &
+\arraybslash {Middle Scots s}\\\hline
+%
+\stdu{T} &
+{T\&\_\_i;\&\_\_n;} &
+\restag{T\char"0E0069\char"0E006E} &
+\arraybslash Insular T / A786\\\hline
+%
+\nuni{T} &
+{T\&\_\_e;\&\_\_n;} &
+\restag{T\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule T\\\hline
+%
+\stdu{t} &
+{t\&\_\_i;\&\_\_n;} &
+\restag{t\char"0E0069\char"0E006E} &
+\arraybslash Insular t / A787\\\hline
+%
+\mufi{t} &
+{t\&\_\_c;\&\_\_u;} &
+\restag{t\char"0E0063\char"0E0075} &
+\arraybslash t with curl / F199\\\hline
+%
+\mufi{t} &
+{t\&\_\_e;\&\_\_n;} &
+\restag{t\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule t / EEF5\\\hline
+%
+\mufi{t} &
+{t\&\_\_c;\&\_\_d;} &
+\restag{t\char"0E0063\char"0E0064} &
+\arraybslash Cap-like t with descender / TBD\\\hline
+%
+\nuni{U} &
+{U\&\_\_e;\&\_\_n;} &
+\restag{U\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule U\\\hline
+%
+\nuni{U} &
+{U\&\_\_l;\&\_\_c;} &
+\restag{U\char"0E006C\char"0E0063} &
+\arraybslash Lowercase-shaped U\\\hline
+%
+\mufi{U} &
+{U\&\_\_l;\&\_\_d;} &
+\restag{U\char"0E006C\char"0E0064} &
+\arraybslash {\narrow Lowercase-shaped U with descender / TBD}\\\hline
+%
+\mufi{u} &
+{u\&\_\_e;\&\_\_n;} &
+\restag{u\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule u / EEF7\\\hline
+%
+\nuni{V} &
+{V\&\_\_e;\&\_\_n;} &
+\restag{V\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule V\\\hline
+%
+\mufi{v} &
+{v\&\_\_s;\&\_\_1;} &
+\restag{v\char"0E0073\char"0E0031} &
+\arraybslash Enlarged minuscule v / EEF8\\\hline
+%
+\mufi{v} &
+{v\&\_\_s;\&\_\_d;} &
+\restag{v\char"0E0073\char"0E0064} &
+\arraybslash v with diagonal stroke / E8BA\\\hline
+%
+\mufi{v} &
+{v\&\_\_b;\&\_\_a;} &
+\restag{v\char"0E0062\char"0E0061} &
+\arraybslash v with bar / E74E\\\hline
+%
+\mufi{v} &
+{v\&\_\_e;\&\_\_n;} &
+\restag{v\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule v / EEF8\\\hline
+%
+\mufi{v} &
+{v\&\_\_s;\&\_\_2;} &
+\restag{v\char"0E0073\char"0E0032} &
+\arraybslash v with two bars / E8BC\\\hline
+%
+\mufi{v} &
+{v\&\_\_e;\&\_\_l;} &
+\restag{v\char"0E0065\char"0E006C} &
+\arraybslash {\narrow Enlarged minuscule v with low point / TBD}\\\hline
+%
+\nuni{W} &
+{W\&\_\_e;\&\_\_n;} &
+\restag{W\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule W\\\hline
+%
+\stdu{W} &
+{W\&\_\_a;\&\_\_n;} &
+\restag{W\char"0E0061\char"0E006E} &
+\arraybslash {W Anglicana}\\\hline
+%
+\mufi{w} &
+{w\&\_\_e;\&\_\_n;} &
+\restag{w\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule w / EEF9\\\hline
+%
+\stdu{w} &
+{w\&\_\_a;\&\_\_n;} &
+\restag{w\char"0E0061\char"0E006E} &
+\arraybslash {w Anglicana}\\\hline
+%
+\mufi{ƿ} &
+{ƿ\&\_\_e;\&\_\_n;} &
+\restag{ƿ\char"0E0065\char"0E006E} &
+\arraybslash Enlarged wynn / TBD\\\hline
+%
+\nuni{X} &
+{X\&\_\_e;\&\_\_n;} &
+\restag{X\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule X\\\hline
+%
+\mufi{x} &
+{x\&\_\_e;\&\_\_n;} &
+\restag{x\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule x / EEFA\\\hline
+%
+\stdu{x} &
+{x\&\_\_l;\&\_\_o;} &
+\restag{x\char"0E006C\char"0E006F} &
+\arraybslash x with long left leg / AB57\\\hline
+%
+\mufi{x} &
+{x\&\_\_s;\&\_\_1;} &
+\restag{x\char"0E0073\char"0E0031} &
+\arraybslash x with diagonal stroke (upper left) / E8BD\\\hline
+%
+\mufi{x} &
+{x\&\_\_s;\&\_\_2;} &
+\restag{x\char"0E0073\char"0E0032} &
+\arraybslash x with diagonal stroke (lower right) / E8BE\\\hline
+%
+\mufi{x} &
+{x\&\_\_s;\&\_\_3;} &
+\restag{x\char"0E0073\char"0E0033} &
+\arraybslash {\narrow x with two diagonal strokes (lower right) / \ltab{E8CE}}\\\hline
+%
+\mufi{Y} &
+{Y\&\_\_s;\&\_\_d;} &
+\restag{Y\char"0E0073\char"0E0064} &
+\arraybslash {\narrow Y with diagonal stroke (Hymnus abbrev) / \ltab{E8DB}}\\\hline
+%
+\nuni{Y} &
+{Y\&\_\_e;\&\_\_n;} &
+\restag{Y\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule Y\\\hline
+%
+\mufi{y} &
+{y\&\_\_r;\&\_\_m;} &
+\restag{y\char"0E0072\char"0E006D} &
+\arraybslash y with main right stroke / F233\\\hline
+%
+\mufi{y} &
+{y\&\_\_b;\&\_\_a;} &
+\restag{y\char"0E0062\char"0E0061} &
+\arraybslash y with bar / E77B\\\hline
+%
+\mufi{y} &
+{y\&\_\_e;\&\_\_n;} &
+\restag{y\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule y / EEFB\\\hline
+%
+\mufi{y} &
+{y\&\_\_c;\&\_\_u;} &
+\restag{y\char"0E0063\char"0E0075} &
+\arraybslash Curved y / TBD\\\hline
+%
+\mufi{y} &
+{y\&\_\_s;\&\_\_c;} &
+\restag{y\char"0E0073\char"0E0063} &
+\arraybslash Short curved y / TBD\\\hline
+%
+\stdu{Z} &
+{Z\&\_\_v;\&\_\_i;} &
+\restag{Z\char"0E0076\char"0E0069} &
+\arraybslash Visigothic Z / A762\\\hline
+%
+\nuni{Z} &
+{Z\&\_\_e;\&\_\_n;} &
+\restag{Z\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule Z\\\hline
+%
+\stdu{z} &
+{z\&\_\_v;\&\_\_i;} &
+\restag{z\char"0E0076\char"0E0069} &
+\arraybslash Visigothic z / A763\\\hline
+%
+\mufi{z} &
+{z\&\_\_m;\&\_\_g;} &
+\restag{z\char"0E006D\char"0E0067} &
+\arraybslash Middle High German z / F238\\\hline
+%
+\mufi{z} &
+{z\&\_\_e;\&\_\_n;} &
+\restag{z\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule z / EEFC\\\hline
+%
+\opua{U+0104} &
+{\char"0104\&\_\_s;\&\_\_1;} &
+\restag{\char"0104\char"0E0073\char"0E0031} &
+\arraybslash A with short diagonal stroke / F0000\\\hline
+%
+\opua{U+0104} &
+{\char"0104\&\_\_s;\&\_\_2;} &
+\restag{\char"0104\char"0E0073\char"0E0032} &
+\arraybslash A with long diagonal stroke / F001E\\\hline
+%
+\opua{U+0104} &
+{\char"0104\&\_\_f;\&\_\_l;} &
+\restag{\char"0104\char"0E0066\char"0E006C} &
+\arraybslash A with flourish / F0002\\\hline
+%
+\opua{U+0105} &
+{\char"0105\&\_\_s;\&\_\_1;} &
+\restag{\char"0105\char"0E0073\char"0E0031} &
+\arraybslash a with short diagonal stroke / F0001\\\hline
+%
+\opua{U+0105} &
+{\char"0105\&\_\_s;\&\_\_2;} &
+\restag{\char"0105\char"0E0073\char"0E0032} &
+\arraybslash a with long diagonal stroke / F001F\\\hline
+%
+\nuni{U+A733} &
+{\char"0A733\&\_\_u;\&\_\_n;} &
+\restag{\char"0A733\char"0E0075\char"0E006E} &
+\arraybslash Uncial aa\\\hline
+%
+\mufi{U+A733} &
+{\char"0A733\&\_\_c;\&\_\_l;} &
+\restag{\char"0A733\char"0E0063\char"0E006C} &
+\arraybslash Closed aa / EFA0\\\hline
+%
+\mufi{U+A733} &
+{\char"0A733\&\_\_e;\&\_\_n;} &
+\restag{\char"0A733\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule aa / EFDF\\\hline
+%
+\mufi{U+00C6} &
+{Æ\&\_\_n;\&\_\_e;} &
+\restag{Æ\char"0E006E\char"0E0065} &
+\arraybslash Neckless {\AE} / EFAE\\\hline
+%
+\mufi{U+00C6} &
+{Æ\&\_\_e;\&\_\_n;} &
+\restag{Æ\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule {\AE}\\\hline
+%
+\mufi{U+00E6} &
+{æ\&\_\_n;\&\_\_e;} &
+\restag{æ\char"0E006E\char"0E0065} &
+\arraybslash Neckless æ / EFA1\\\hline
+%
+\mufi{U+00E6} &
+{æ\&\_\_e;\&\_\_n;} &
+\restag{æ\char"0E0065\char"0E006E} &
+\arraybslash Enlarged minuscule æ / \ EAF1\\\hline
+%
+\mufi{U+00E6} &
+{æ\&\_\_o;\&\_\_p;} &
+\restag{æ\char"0E006F\char"0E0070} &
+\arraybslash Open æ / F204\\\hline
+%
+\mufi{U+00E6} &
+{æ\&\_\_s;\&\_\_q;} &
+\restag{æ\char"0E0073\char"0E0071} &
+\arraybslash æ with square a / TBD\\\hline
+%
+\mufi{U+00E6} &
+{æ\&\_\_r;\&\_\_o;} &
+\restag{æ\char"0E0072\char"0E006F} &
+\arraybslash æ with round a / TBD\\\hline
+%
+\nuni{U+00E6} &
+{æ\&\_\_r;\&\_\_o;} &
+\restag{æ\char"0E0075\char"0E006E} &
+\arraybslash Uncial æ\\\hline
+%
+\mufi{U+A734} &
+{\char"0A734\&\_\_n;\&\_\_e;} &
+\restag{\char"0A734\char"0E006E\char"0E0065} &
+\arraybslash Neckless AO / F205\\\hline
+%
+\nuni{U+A734} &
+{\char"0A734\&\_\_e;\&\_\_1;} &
+\restag{\char"0A734\char"0E0065\char"0E0031} &
+\arraybslash Enlarged minuscule AO\\\hline
+%
+\nuni{U+A734} &
+{\char"0A734\&\_\_e;\&\_\_2;} &
+\restag{\char"0A734\char"0E0065\char"0E0032} &
+\arraybslash Enlarged minuscule AO with smaller O\\\hline
+%
+\mufi{U+A735} &
+{\char"0A735\&\_\_e;\&\_\_1;} &
+\restag{\char"0A735\char"0E0065\char"0E0031} &
+\arraybslash Enlarged minuscule ao / EFDE\\\hline
+%
+\mufi{U+A735} &
+{\char"0A735\&\_\_e;\&\_\_2;} &
+\restag{\char"0A735\char"0E0065\char"0E0032} &
+\arraybslash {\narrow Enlarged minuscule ao with smaller o / \ltab{EAF2}}\\\hline
+%
+\mufi{U+A735} &
+{\char"0A735\&\_\_n;\&\_\_e;} &
+\restag{\char"0A735\char"0E006E\char"0E0065} &
+\arraybslash Neckless ao / F206\\\hline
+%
+\nuni{U+A735} &
+{\char"0A735\&\_\_u;\&\_\_n;} &
+\restag{\char"0A735\char"0E0075\char"0E006E} &
+\arraybslash Uncial ao\\\hline
+%
+\mufi{U+A739} &
+{\char"0A739\&\_\_n;\&\_\_e;} &
+\restag{\char"0A739\char"0E006E\char"0E0065} &
+\arraybslash Neckless av / EFA2\\\hline
+%
+\opua{U+0111} &
+{\char"0111\&\_\_f;\&\_\_l;} &
+\restag{\char"0111\char"0E0066\char"0E006C} &
+\arraybslash d with flourish / F0007\\\hline
+%
+\mufi{U+00F0} &
+{ð\&\_\_e;\&\_\_a;} &
+\restag{ð\char"0E0065\char"0E0061} &
+\arraybslash Enlarged eth alternate form / TBD\\\hline
+%
+\nuni{U+0118} &
+{Ę\&\_\_c;\&\_\_e;} &
+\restag{Ę\char"0E0063\char"0E0065} &
+\arraybslash E with centered ogonek\\\hline
+%
+\opua{U+0118} &
+{Ę\&\_\_s;\&\_\_t;} &
+\restag{Ę\char"0E0073\char"0E0074} &
+\arraybslash E with diagonal stroke / F0009\\\hline
+%
+\nuni{U+0118} &
+{Ę\char"0307\char"0301\&\_\_c;\&\_\_e;} &
+\restag{Ę\char"0307\char"0301\char"0E0063\char"0E0065} &
+\arraybslash E with dot, acute, and centered ogonek\\\hline
+%
+\nuni{U+0118} &
+{Ę\char"0307\char"0301\&\_\_s;\&\_\_t;} &
+\restag{Ę\char"0307\char"0301\char"0E0073\char"0E0074} &
+\arraybslash E with dot, acute, and diagonal stroke\\\hline
+%
+\nuni{U+0119} &
+{ę\&\_\_c;\&\_\_e;} &
+\restag{ę\char"0E0063\char"0E0065} &
+\arraybslash e with centered ogonek\\\hline
+%
+\opua{U+0119} &
+{ę\&\_\_s;\&\_\_t;} &
+\restag{ę\char"0E0073\char"0E0074} &
+\arraybslash e with diagonal stroke / F000A\\\hline
+%
+\nuni{U+0119} &
+{ę\char"0307\char"0301\&\_\_c;\&\_\_e;} &
+\restag{ę\char"0307\char"0301\char"0E0063\char"0E0065} &
+\arraybslash e with dot, acute, and centered ogonek\\\hline
+%
+\nuni{U+0119} &
+{ę\char"0307\char"0301\&\_\_s;\&\_\_t;} &
+\restag{ę\char"0307\char"0301\char"0E0073\char"0E0074} &
+\arraybslash e with dot, acute, and diagonal stroke\\\hline
+%
+\nuni{\&\_eogo;} &
+{{\narrow \char"25CC\&\_eogo;}\&\_\_c;\&\_\_e;} &
+\restag{\char"25CC\&\_eogo;\char"0E0063\char"0E0065} &
+\arraybslash Combining e with centered ogonek\\\hline
+%
+\nuni{\&\_eogo;} &
+{{\narrow \char"25CC\&\_eogo;}\&\_\_s;\&\_\_t;} &
+\restag{\char"25CC\&\_eogo;\char"0E0073\char"0E0074} &
+\arraybslash Combining e with diagonal stroke\\\hline
+%
+\nuni{U+021C} &
+{Ȝ\&\_\_f;\&\_\_l;} &
+\restag{Ȝ\char"0E0066\char"0E006C} &
+\arraybslash Yogh with flat top\\\hline
+%
+\nuni{U+021C} &
+{Ȝ\&\_\_i;\&\_\_n;} &
+\restag{Ȝ\char"0E0069\char"0E006E} &
+\arraybslash Yogh with insular shape\\\hline
+%
+\nuni{U+021D} &
+{\char"021D\&\_\_f;\&\_\_l;} &
+\restag{\char"021D\char"0E0066\char"0E006C} &
+\arraybslash yogh with flat top\\\hline
+%
+\nuni{U+021D} &
+{\char"021D\&\_\_i;\&\_\_n;} &
+\restag{\char"021D\char"0E0069\char"0E006E} &
+\arraybslash yogh with insular shape\\\hline
+%
+\nuni{U+014A} &
+{Ŋ\&\_\_l;\&\_\_h;} &
+{\restag{Ŋ\char"0E006C\char"0E0068}} &
+\arraybslash Rounded Ŋ with low hook\\\hline
+%
+\nuni{U+014A} &
+{Ŋ\&\_\_b;\&\_\_h;} &
+{\restag{Ŋ\char"0E0062\char"0E0068}} &
+\arraybslash Rounded Ŋ with baseline hook\\\hline
+%
+\opua{U+A7C1} &
+{\prob\&\_\_a;\&\_\_1;\footnotemark{}} &
+{\prob\restag{\char"0A7C1\char"0E0061\char"0E0031}} &
+\arraybslash {\narrow Old Polish o with broken slash / \ltab{F0011}}\\\hline
+%
+\opua{U+A7C1} &
+{\prob\&\_\_a;\&\_\_2;} &
+{\prob\restag{\char"0A7C1\char"0E0061\char"0E0032}} &
+\arraybslash {\narrow Old Polish o with short slash / \ltab{F0012}}\\\hline
+%
+\opua{U+A7C1} &
+{\prob\&\_\_a;\&\_\_3;} &
+{\prob\restag{\char"0A7C1\char"0E0061\char"0E0033}} &
+\arraybslash {\narrow Old Polish o with lower left slash / \ltab{F0013}}\\\hline
+%
+\opua{U+A7C1} &
+{\prob\&\_\_a;\&\_\_4;} &
+{\prob\restag{\char"0A7C1\char"0E0061\char"0E0034}} &
+\arraybslash {\narrow Old Polish o with upper right slash / \ltab{F0014}}\\\hline
+%
+\mufi{U+1E8F} &
+{\char"1E8F\&\_\_s;\&\_\_d;} &
+\restag{\char"1E8F\char"0E0073\char"0E0064} &
+\arraybslash Short curved y with dot / TBD\\\hline
+%
+\mufi{U+A765} &
+{\addfontfeature{Language=Icelandic} \char"0A765\&\_\_a;\&\_\_1;} &
+{\addfontfeature{Language=Icelandic}\restag{\char"0A765\char"0E0061\char"0E0031}} &
+\arraybslash \ {\narrow thorn with stroke with different slant / \ltab{F149}}\\\hline
+%
+\nuni{U+A765/ENG} &
+{\char"0A765\&\_\_a;\&\_\_1;} &
+{\restag{\char"0A765\char"0E0061\char"0E0031}} &
+\arraybslash \ thorn with stroke with different slant\\\hline
+%
+\opua{U+0241} &
+{\char"0294\&\_\_a;\&\_\_1;} &
+\restag{\char"0294\char"0E0061\char"0E0031} &
+\arraybslash Alternate glottal stop / F001B\\\hline
+%
+\opua{U+204A} &
+{\char"204A\&\_\_a;\&\_\_1;} &
+\restag{\char"204A\char"0E0061\char"0E0031} &
+\arraybslash Tironian et sign later form / F001D\\\hline
+%
+\nuni{U+204A} &
+{\char"204A\&\_\_a;\&\_\_2;} &
+\restag{\char"204A\char"0E0061\char"0E0032} &
+\arraybslash Tironian et sign later form with bar\\\hline
+%
+\mufi{U+204A} &
+{\char"204A\&\_\_a;\&\_\_3;} &
+\restag{\char"204A\char"0E0061\char"0E0033} &
+\arraybslash {\narrow Tironian et sign without descender / TBD}\\\hline
+%
+\opua{U+2E52} &
+{\char"2E52\&\_\_a;\&\_\_1;} &
+\restag{\char"2E52\char"0E0061\char"0E0031} &
+\arraybslash Tironian Et sign later form / F001C\\\hline
+%
+\nuni{U+2E52} &
+{\char"2E52\&\_\_a;\&\_\_2;} &
+\restag{\char"2E52\char"0E0061\char"0E0032} &
+\arraybslash Tironian Et sign later form with bar\\\hline
+%
+\mufi{U+2E52} &
+{\char"2E52\&\_\_a;\&\_\_3;} &
+\restag{\char"2E52\char"0E0061\char"0E0033} &
+\arraybslash {\narrow Tironian Et sign without descender / TBD}\\\hline
+%
+\nuni{U+00AF} &
+{{\textasciimacron}\&\_\_0;\&\_\_1;} &
+\restag{{\textasciimacron}\char"0E0030\char"0E0031} &
+\arraybslash Spacing zigzag\\\hline
+%
+\nuni{U+035E} &
+{\char"25CC\char"035E\&\_\_a;\&\_\_1;\char"25CC} &
+\restag{\char"25CC\char"035E\char"0E0061\char"0E0031\char"25CC} &
+\arraybslash Double macron with serifs\\\hline
+%
+\nuni{U+035E} &
+{\char"25CC\char"035E\&\_\_a;\&\_\_2;\char"25CC} &
+\restag{\char"25CC\char"035E\char"0E0061\char"0E0032\char"25CC} &
+\arraybslash Shorter double macron with serifs\\\hline
+%
+\mufi{U+00B7} &
+{{\textperiodcentered}\&\_\_h;\&\_\_i;} &
+\restag{{\textperiodcentered}\char"0E0068\char"0E0069} &
+\arraybslash Distinctio / \ F1F8\\\hline
+%
+\mufi{U+00B7} &
+{{\textperiodcentered}\&\_\_s;\&\_\_r;} &
+\restag{{\textperiodcentered}\char"0E0073\char"0E0072} &
+\arraybslash Slightly raised period / \ TBD\\\hline
+%
+\mufi{comma} &
+{,\&\_\_a;\&\_\_1;} &
+\restag{,\char"0E0061\char"0E0031} &
+\arraybslash Comma positura / F1E2\\\hline
+%
+\mufi{comma} &
+{,\&\_\_a;\&\_\_2;} &
+\restag{,\char"0E0061\char"0E0032} &
+\arraybslash High comma positura / F1E3\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_1;} &
+\restag{;\char"0E0061\char"0E0031} &
+\arraybslash Punctus versus / F1EA\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_2;} &
+\restag{;\char"0E0061\char"0E0032} &
+\arraybslash Punctus with comma positura / F1E4\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_3;} &
+\restag{;\char"0E0061\char"0E0033} &
+\arraybslash {\narrow Colon with middle comma positura / \ltab{F1E5}}\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_4;} &
+\restag{;\char"0E0061\char"0E0034} &
+\arraybslash Two dots over comma positura / F1F2\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_5;} &
+\restag{;\char"0E0061\char"0E0035} &
+\arraybslash Three dots over comma positura / F1E6\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_6;} &
+\restag{;\char"0E0061\char"0E0036} &
+\arraybslash {\narrow Punctus with double comma positura / TBD}\\\hline
+%
+\mufi{semicolon} &
+{;\&\_\_a;\&\_\_7;} &
+\restag{;\char"0E0061\char"0E0037} &
+\arraybslash Hexagonal positura / TBD\\\hline
+%
+\mufi{U+2E4E} &
+{\char"2E4E\&\_\_a;\&\_\_1;} &
+\restag{\char"2E4E\char"0E0061\char"0E0031} &
+\arraybslash Punctus elevatus diagonal stroke / F1F0\\\hline
+%
+\mufi{U+2E4E} &
+{\char"2E4E\&\_\_a;\&\_\_2;} &
+\restag{\char"2E4E\char"0E0061\char"0E0032} &
+\arraybslash Punctus elevatus with high back / F1FA\\\hline
+%
+\mufi{U+2E4E} &
+{\char"2E4E\&\_\_a;\&\_\_3;} &
+\restag{\char"2E4E\char"0E0061\char"0E0033} &
+\arraybslash Punctus elevatus with onset / F1FB\\\hline
+%
+\mufi{U+2E4E} &
+{\char"2E4E\&\_\_a;\&\_\_4;} &
+\restag{\char"2E4E\char"0E0061\char"0E0034} &
+\arraybslash Punctus flexus / F1F5\\\hline
+%
+\mufi{exclam} &
+{!\&\_\_a;\&\_\_1;} &
+\restag{!\char"0E0061\char"0E0031} &
+\arraybslash Punctus exlamativus / F1E7\\\hline
+%
+\mufi{question} &
+{?\&\_\_a;\&\_\_1;} &
+\restag{?\char"0E0061\char"0E0031} &
+\arraybslash Punctus interrogativus / F160\\\hline
+%
+\mufi{question} &
+{?\&\_\_a;\&\_\_2;} &
+\restag{?\char"0E0061\char"0E0032} &
+\arraybslash Punctus interrogativus horizontal tilde / F1E8\\\hline
+%
+\mufi{question} &
+{?\&\_\_a;\&\_\_3;} &
+\restag{?\char"0E0061\char"0E0033} &
+\arraybslash Punctus interrogativus lemniskate / F1F1\\\hline
+%
+\mufi{asciitilde} &
+{\~{}\&\_\_a;\&\_\_1;} &
+\restag{\~{}\char"0E0061\char"0E0031} &
+\arraybslash Wavy line / F1F9\\\hline
+%
+\mufi{asterisk} &
+{*\&\_\_a;\&\_\_1;} &
+\restag{*\char"0E0061\char"0E0031} &
+\arraybslash Signe de renvoi / F1EC\\\hline
+%
+\mufi{slash} &
+{/\&\_\_a;\&\_\_1;} &
+\restag{/\char"0E0061\char"0E0031} &
+\arraybslash Virgula suspensiva / F1F4\\\hline
+%
+\mufi{slash} &
+{/\&\_\_a;\&\_\_2;} &
+\restag{/\char"0E0061\char"0E0032} &
+\arraybslash Short virgula / F1F7\\\hline
+%
+\opua{U+A75D} &
+{\char"0A75D\&\_\_a;\&\_\_1;} &
+\restag{\char"0A75D\char"0E0061\char"0E0031} &
+\arraybslash Alternate rum abbreviation / F0016\\\hline
+%
+\mufi{U+035B} &
+{\char"25CC\char"035B\&\_\_a;\&\_\_n;} &
+\restag{\char"25CC\char"035B\char"0E0061\char"0E006E} &
+\arraybslash Combining angular zigzag / F1C7\\\hline
+%
+\mufi{U+035B} &
+{\char"25CC\char"035B\&\_\_c;\&\_\_u;} &
+\restag{\char"25CC\char"035B\char"0E0063\char"0E0075} &
+\arraybslash Combining curly zigzag / F1C8\\\hline
+%
+\stdu{U+035B} &
+{\char"25CC\char"035B\&\_\_v;\&\_\_e;} &
+\restag{\char"25CC\char"035B\char"0E0076\char"0E0065} &
+\arraybslash Combining vertical zigzag (tilde) / 033E\\\hline
+%
+\mufi{U+A770} &
+{\char"0A770\&\_\_a;\&\_\_1;} &
+\restag{\char"0A770\char"0E0061\char"0E0031} &
+\arraybslash Baseline spacing us abbreviation / F1A6\\\hline
+%
+\mufi{U+A770} &
+{\char"0A770\&\_\_a;\&\_\_2;} &
+\restag{\char"0A770\char"0E0061\char"0E0032} &
+\arraybslash Uppercase us abbreviation / F1A5\\\hline
+%
+\mufi{U+A76B} &
+{\char"0A76B\&\_\_a;\&\_\_1;} &
+\restag{\char"0A76B\char"0E0061\char"0E0031} &
+\arraybslash Semicolon-like et abbreviation / F1AC\\\hline
+%
+\nuni{U+A76B} &
+{\char"0A76B\&\_\_a;\&\_\_2;} &
+\restag{\char"0A76B\char"0E0061\char"0E0032} &
+\arraybslash Subscript et abbreviation\\\hline
+%
+\mufi{U+A76B} &
+{\char"0A76B\&\_\_a;\&\_\_3;} &
+\restag{\char"0A76B\char"0E0061\char"0E0033} &
+\arraybslash Colon-like et abbreviation / TBD\\\hline
+%
+\mufi{U+1DD3} &
+{\char"25CC\char"1DD3\&\_\_a;\&\_\_1;} &
+\restag{\char"25CC\char"1DD3\char"0E0061\char"0E0031} &
+\arraybslash Combining flattened \ a with macron / F1C1\\\hline
+%
+\opua{U+1DD8} &
+{\char"25CC\char"1DD8\&\_\_a;\&\_\_1;} &
+\restag{\char"25CC\char"1DD8\char"0E0061\char"0E0031} &
+\restag\arraybslash Alternate combining insular d / F0005\\\hline
+%
+\mufi{U+1DE3} &
+{\char"25CC\char"1DE3\&\_\_a;\&\_\_1;} &
+\restag{\char"25CC\char"1DE3\char"0E0061\char"0E0031} &
+\arraybslash Combining ur abbreviation lemniskate / F1C2\\\hline
+%
+\mufi{U+00E4} &
+{ä\&\_\_d;\&\_\_i;} &
+\restag{ä\char"0E0064\char"0E0069} &
+\arraybslash a with diagonal dieresis / E8D5\\\hline
+%
+\mufi{U+00F6} &
+{ö\&\_\_d;\&\_\_i;} &
+\restag{ö\char"0E0064\char"0E0069} &
+\arraybslash o with diagonal dieresis / E8D7\\\hline
+%
+\nuni{U+0308} &
+{\char"25CC\char"0308\&\_\_d;\&\_\_i;} &
+\restag{\char"25CC\char"0308\char"0E0064\char"0E0069} &
+\arraybslash Combining diagonal dieresis\\\hline
+%
+\mufi{U+0305} &
+{\char"25CC\char"0305\&\_\_a;\&\_\_1;} &
+\restag{\char"25CC\char"0305\char"0E0061\char"0E0031} &
+\arraybslash Combining horizontal stroke with dot / F1C0\\\hline
+%
+\mufi{U+032E} &
+{\char"25CC\char"25CC\char"032E\&\_\_a;\&\_\_1;\char"25CC} &
+\restag{\char"25CC\char"25CC\char"032E\char"0E0061\char"0E0031\char"25CC} &
+\arraybslash Breve below three letters / F1FC\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_1;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0031} &
+\arraybslash Latin as libralis sign / F2E0\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_2;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0032} &
+\arraybslash Latin small capital letter x with bar / F2E2\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_3;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0033} &
+\arraybslash Latin small capital letter y with bar / F2E3\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_4;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0034} &
+\arraybslash Latin small capital letter d with slash / F2E4\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_5;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0035} &
+\arraybslash Pharmaceutical dram sign / F2E6\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_6;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0036} &
+\arraybslash Ecu sign / F2E7\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_7;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0037} &
+\arraybslash Floren sign with loop / F2E8\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_8;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0038} &
+\arraybslash Groschen sign / F2E9\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_0;\&\_\_9;} &
+\restag{{\textcurrency}\char"0E0030\char"0E0039} &
+\arraybslash Helbing sign / F2FB\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_0;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0030} &
+\arraybslash Krone sign / F2FA\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_1;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0031} &
+\arraybslash Dutch libra sign / F2EA\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_2;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0032} &
+\arraybslash French libra sign / F2EB\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_3;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0033} &
+\arraybslash Italian libra sign / F2EC\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_4;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0034} &
+\arraybslash Flemish libra sign / F2ED\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_5;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0035} &
+\arraybslash Lira nuova sign / F2EE\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_6;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0036} &
+\arraybslash Lira sterlina sign / F2EF\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_7;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0037} &
+\arraybslash Old mark sign / F2F0\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_8;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0038} &
+\arraybslash Old flourish mark sign / F2F1\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_1;\&\_\_9;} &
+\restag{{\textcurrency}\char"0E0031\char"0E0039} &
+\arraybslash Marked small letter m sign / F2F2\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_0;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0030} &
+\arraybslash Flourished small letter m sign / F2F3\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_1;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0031} &
+\arraybslash Pharmaceutical obelus sign / F2F4\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_2;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0032} &
+\arraybslash Penning sign / F2F5\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_3;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0033} &
+\arraybslash Old Reichstaler sign / F2F6\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_4;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0034} &
+\arraybslash German schilling sign / F2F7\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_5;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0035} &
+\arraybslash German script schilling sign / F2F8\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_6;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0036} &
+\arraybslash Scudi sign / F2F9\\\hline
+%
+\mufi{U+00A4} &
+{{\textcurrency}\&\_\_2;\&\_\_7;} &
+\restag{{\textcurrency}\char"0E0032\char"0E0037} &
+\arraybslash Script ounce sign / F2FD\\\hline
+%
+\mufi{U+2114} &
+{\char"2114\&\_\_a;\&\_\_1;} &
+\restag{\char"2114\char"0E0061\char"0E0031} &
+\arraybslash French libra sign / F2EB\\\hline
+%
+\mufi{U+00A3} &
+{{\pounds}\&\_\_a;\&\_\_1;} &
+\restag{{\pounds}\char"0E0061\char"0E0031} &
+\arraybslash Dutch libra sign / F2EA\\\hline
+%
+\mufi{U+00A3} &
+{{\pounds}\&\_\_a;\&\_\_2;} &
+\restag{{\pounds}\char"0E0061\char"0E0032} &
+\arraybslash French libra sign / F2EB\\\hline
+%
+\mufi{U+00A3} &
+{{\pounds}\&\_\_a;\&\_\_3;} &
+\restag{{\pounds}\char"0E0061\char"0E0033} &
+\arraybslash Italian libra sign / F2EC\\\hline
+%
+\mufi{U+00A3} &
+{{\pounds}\&\_\_a;\&\_\_4;} &
+\restag{{\pounds}\char"0E0061\char"0E0034} &
+\arraybslash Flemish libra sign / F2ED\\\hline
+%
+\mufi{U+00A3} &
+{{\pounds}\&\_\_a;\&\_\_5;} &
+\restag{{\pounds}\char"0E0061\char"0E0035} &
+\arraybslash Lira nuova sign / F2EE\\\hline
+%
+\mufi{U+00A3} &
+{{\pounds}\&\_\_a;\&\_\_6;} &
+\restag{{\pounds}\char"0E0061\char"0E0036} &
+\arraybslash Lira sterlina sign / F2EF\\\hline
+%
+\mufi{U+20B1} &
+{\char"20B0\&\_\_a;\&\_\_1;} &
+\restag{\char"20B0\char"0E0061\char"0E0031} &
+\arraybslash Penning sign / F2F5\\\hline
+%
+\mufi{U+0192} &
+{\char"0192\&\_\_a;\&\_\_1;} &
+\restag{\char"0192\char"0E0061\char"0E0031} &
+\arraybslash Floren sign with loop / F2E8\\\hline
+%
+\mufi{U+2125} &
+{\char"2125\&\_\_a;\&\_\_1;} &
+\restag{\char"2125\char"0E0061\char"0E0031} &
+\arraybslash Script ounce sign / F2FD\\\hline
+\end{supertabular}
+\end{center}
+\footnotetext{Junicode entities (like \&\_\_a\textcompwordmark;) following U+A7C1 (Old Polish o) are not properly
+displayed or resolved for technical reasons related to U+A7C1 having very recently been added to Unicode. However, tags
+entered directly (as here) or via HTML/XML entity references and TeX commands will still work, and the Junicode entity
+will work once applications are updated with the latest additions to the Unicode standard.}
+\addfontfeature{StylisticSet=10}

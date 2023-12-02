@@ -1,0 +1,219 @@
+\chapter{The Enlarge Axis}\hypertarget{enlarge}{}
+%\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}the enlarge axis}
+
+The character recommendation of the Medieval Unicode Font Initiative (MUFI) includes a class of characters called
+“Enlarged Minuscules,” for representing characters that are lowercase in shape but intermediate between lowercase 
+and uppercase in size: these are often used to begin sentences in medieval manuscripts. MUFI encodes these characters 
+in the Private Use Area, posing accessibility and searchability problems, as explained in the introduction to the 
+“Feature Reference” chapter of this manual.
+
+Junicode provides a solution to these problems via the OpenType feature Stylistic Set 6 (ss06, “Enlarged minuscules”). 
+This feature also works in Junicode VF, the variable version of Junicode, which in addition offers a far more flexible 
+way of representing enlarged minuscules—the Enlarge axis.
+
+An “axis” is an aspect of a font that can be varied along a numerical range. A family of traditional fonts like Times 
+New Roman has a weight axis with a font file on either end: Regular and Bold. Other font families have more weights 
+along this axis: for example, Light, Medium, ExtraBold. Most variable fonts also have a weight axis, but all weights 
+are contained in a single file, and users are not restricted to just a few weights, but can select any weight between 
+the extremes.
+
+Because almost every font family has at least two weights, Weight is the most familiar axis. But several other axes are 
+frequently found in both variable fonts and extended font families. Junicode has Weight and Width axes (Width varying 
+from {\narrow 75 Condensed} to {\wide 125 Expanded}, with 100 Regular in the middle), and the variable font also has 
+an Enlarge axis, which can vary the size of many lowercase letters from that of the font's capitals to that of the 
+lowercase letters:
+\begin{figure}[h!]
+  \centering\includegraphics[width=4in]{dns.png}
+\end{figure}
+Just as the size of these sentence-initial letters varies widely in manuscripts, so it can vary on web pages and in 
+print (though few applications for producing printed documents currently support variable fonts). Notice that the letters 
+are not simply scaled: the proportions change and the weight remains consistent (a lowercase letter scaled up would look 
+too heavy, but a letter scaled via the Enlarged axis will have its original weight at the lower end of the axis and the 
+same weight as a capital at the top).
+
+The Enlarge axis runs from 0 to 100. You can choose any number in that range: to match the effect of ss06 precisely, choose 32.
+To ensure that the xheight of all letters matches, choose 47 or less: above that value, the xheight of letters like \textex{e} 
+increases at a higher rate than that of letters like \textex{b}.
+
+To use the axis in a web page, declare a CSS class specifying the value for the axis. For example, the second of the examples
+in the figure above has the axis set to 75:
+\begin{verbatim}
+  .SentenceInitial {
+    font-variation-settings: "wght" 400, "wdth" 100, "ENLA" 75;
+  }
+\end{verbatim}
+\noindent In the text, enclose the first letter of a sentence in a \verb!<span>! with the class “Sentence\-Initial” (the entity 
+is for insular d):
+\begin{verbatim}
+  <span class="SentenceInitial">&#xA77A;</span>ñs
+\end{verbatim}
+\noindent The result will be an abbreviation that begins with an “Enlarged Minuscule” insular d, precisely matching the look 
+of the second example in the figure above.
+
+These lowercase letters are affected by the Enlarge axis:\footnote{Note that all composite characters (e.g. \textex{á}, \textex{ü})
+based on these are also affected, so that the actual number of affected characters is much greater than shown here.}
+\begin{multicols}{6}
+  a\hfill→\hfill\enlax{a}
+
+  \cvd[1]{2}{a}\hfill→\hfill\enlax{\cvd[1]{2}{a}}
+
+  ꜳ\hfill→\hfill\enlax{ꜳ}
+
+  \cvd{55}{ꜳ}\hfill→\hfill\enlax{\cvd{55}{ꜳ}}
+
+  æ\hfill→\hfill\enlax{æ}
+
+  \cvd[3]{57}{æ}\hfill→\hfill\enlax{\cvd[3]{57}{æ}}
+
+  ꜵ\hfill→\hfill\enlax{ꜵ}
+
+  \cvd{59}{ꜵ}\hfill→\hfill\enlax{\cvd{59}{ꜵ}}
+
+  \cvd[1]{59}{ꜵ}\hfill→\hfill\enlax{\cvd[1]{59}{ꜵ}}
+
+  ꜷ\hfill→\hfill\enlax{ꜷ}
+
+  ꜹ\hfill→\hfill\enlax{ꜹ}
+
+  ꜻ\hfill→\hfill\enlax{ꜻ}
+
+  ꜽ\hfill→\hfill\enlax{ꜽ}
+
+  b\hfill→\hfill\enlax{b}
+
+  c\hfill→\hfill\enlax{c}
+
+  d\hfill→\hfill\enlax{d}
+
+  đ\hfill→\hfill\enlax{đ}
+
+  ꝺ\hfill→\hfill\enlax{ꝺ}
+
+  {\addfontfeature{Language=Icelandic}ð}\hfill→\hfill\enlax{{\addfontfeature{Language=Icelandic}ð}}
+
+  {\addfontfeature{Language=English}ð}\hfill→\hfill\enlax{{\addfontfeature{Language=English}ð}}
+
+  e\hfill→\hfill\enlax{e}
+
+  ȩ\hfill→\hfill\enlax{ȩ}
+
+  ę\hfill→\hfill\enlax{ę}
+
+  \cvd{62}{ę}\hfill→\hfill\enlax{\cvd{62}{ę}}
+
+  \cvd[1]{62}{ę}\hfill→\hfill\enlax{\cvd[1]{62}{ę}}
+
+  f\hfill→\hfill\enlax{f}
+
+  \cvd[4]{12}{f}\hfill→\hfill\enlax{\cvd[4]{12}{f}}
+
+  ꝼ\hfill→\hfill\enlax{ꝼ}
+
+  g\hfill→\hfill\enlax{g}
+
+  ꟑ\hfill→\hfill\enlax{ꟑ}
+
+  ᵹ\hfill→\hfill\enlax{ᵹ}
+
+  h\hfill→\hfill\enlax{h}
+
+  \cvd{16}{h}\hfill→\hfill\enlax{\cvd{16}{h}}
+
+  \cvd[3]{16}{h}\hfill→\hfill\enlax{\cvd[3]{16}{h}}
+
+  ħ\hfill→\hfill\enlax{ħ}
+
+  \cvd[4]{16}{h}\hfill→\hfill\enlax{\cvd[4]{16}{h}}
+
+  i\hfill→\hfill\enlax{i}
+
+  ı\hfill→\hfill\enlax{ı}
+
+  j\hfill→\hfill\enlax{j}
+
+  ȷ\hfill→\hfill\enlax{ȷ}
+
+  k\hfill→\hfill\enlax{k}
+
+  l\hfill→\hfill\enlax{l}
+
+  ł\hfill→\hfill\enlax{ł}
+
+  m\hfill→\hfill\enlax{m}
+
+  n\hfill→\hfill\enlax{n}
+
+  o\hfill→\hfill\enlax{o}
+
+  ɵ\hfill→\hfill\enlax{ɵ}
+
+  ơ\hfill→\hfill\enlax{ơ}
+
+  ƣ\hfill→\hfill\enlax{ƣ}
+
+  ꝋ\hfill→\hfill\enlax{ꝋ}
+
+  ꝏ\hfill→\hfill\enlax{ꝏ}
+
+  ǫ\hfill→\hfill\enlax{ǫ}
+
+  ø\hfill→\hfill\enlax{ø}
+
+  œ\hfill→\hfill\enlax{œ}
+
+  p\hfill→\hfill\enlax{p}
+
+  ꝓ\hfill→\hfill\enlax{ꝓ}
+
+  ꝕ\hfill→\hfill\enlax{ꝕ}
+
+  ꝑ\hfill→\hfill\enlax{ꝑ}
+
+  q\hfill→\hfill\enlax{q}
+
+  ꝙ\hfill→\hfill\enlax{ꝙ}
+
+  r\hfill→\hfill\enlax{r}
+
+  ꞃ\hfill→\hfill\enlax{ꞃ}
+
+  ꝛ\hfill→\hfill\enlax{ꝛ}
+
+  ꝝ\hfill→\hfill\enlax{ꝝ}
+
+  s\hfill→\hfill\enlax{s}
+
+  ꞅ\hfill→\hfill\enlax{ꞅ}
+
+  t\hfill→\hfill\enlax{t}
+
+  ꞇ\hfill→\hfill\enlax{ꞇ}
+
+  u\hfill→\hfill\enlax{u}
+
+  v\hfill→\hfill\enlax{v}
+
+  w\hfill→\hfill\enlax{w}
+
+  ƿ\hfill→\hfill\enlax{ƿ}
+
+  x\hfill→\hfill\enlax{x}
+
+  y\hfill→\hfill\enlax{y}
+
+  z\hfill→\hfill\enlax{z}
+
+  {\addfontfeature{Language=Icelandic}þ}\hfill→\hfill\enlax{{\addfontfeature{Language=Icelandic}þ}}
+
+  {\addfontfeature{Language=English}þ}\hfill→\hfill\enlax{{\addfontfeature{Language=English}þ}}
+
+  {\addfontfeature{Language=Icelandic}ꝥ}\hfill→\hfill\enlax{{\addfontfeature{Language=Icelandic}ꝥ}}
+
+  {\addfontfeature{Language=English}ꝥ}\hfill→\hfill\enlax{{\addfontfeature{Language=English}ꝥ}}
+
+  {\addfontfeature{Language=Icelandic,CharacterVariant=66}ꝥ}\hfill→\hfill\enlax{{\addfontfeature{Language=Icelandic,CharacterVariant=66}ꝥ}}
+
+  {\addfontfeature{Language=English,CharacterVariant=66}ꝥ}\hfill→\hfill\enlax{{\addfontfeature{Language=English,CharacterVariant=66}ꝥ}}
+
+  ꝧ\hfill→\hfill\enlax{ꝧ}
+\end{multicols}

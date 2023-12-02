@@ -31523,20 +31523,20 @@ glyphs:
   upsilon:
     y:
       points:
-      - ptid: '{146;-13}'
+      - ptid: 0
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{162;70}'
+        - ptid: 31
           rel: blackdist
           round: false
-      - ptid: '{117;425}'
+      - ptid: 19
         pos: xheight-overshoot
         points:
-        - ptid: '{70;283}'
+        - ptid: 39
+          rel: shift
+        - ptid: 13
           rel: blackdist
-        - ptid: '{338;423}'
-          rel: graydist
-          min: false
+          round: false
   phi:
     y:
       points:
@@ -39702,27 +39702,6 @@ glyphs:
         - ptid: '{151;176}'
           rel: blackdist
           round: false
-  sigma.sc:
-    y:
-      points:
-      - ptid: '{313;0}'
-        pos: baseline
-        points:
-        - ptid: '{352;69}'
-          rel: blackdist
-          round: false
-      - ptid: '{108;437}'
-        points:
-        - ptid: '{203;407}'
-          rel: blackdist
-          round: false
-      - ptid:
-        - '{296;219}'
-        - '{367;215}'
-        ref:
-        - '{108;437}'
-        - '{313;0}'
-        rel: interpolate
   seven.tosf:
     y:
       points:

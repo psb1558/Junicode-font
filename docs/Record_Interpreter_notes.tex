@@ -21,7 +21,7 @@ with due regard for the semantics of Unicode characters. Every Unicode character
 help to readers. Using the wrong character is a hinderance to readers, even it if \textit{looks} right.
 
 For example, in transcribing a Middle English text, you may decide that the Unicode ezh (\char"0292,~\unic{U+0292}) looks more like
-the yogh in your source than the Unicode yogh (\char"021D,~\unic{U+021D}) and therefore decide to use it for yogh. But the ezh is
+the yogh in your source than the Unicode yogh (\kern+1.5pt\char"021D,~\unic{U+021D}) and therefore decide to use it for yogh. But the ezh is
 not a yogh! It is a character in the International Phonetic Alphabet and a letter in the alphabets of several minor
 languages---but not a letter in the Middle English language. If you use it where the yogh is called for, it will make
 your text less accessible and less searchable. Indexing, concordance and bibliographical programs may be misled by it;
@@ -72,7 +72,7 @@ There are other ways to add value to a transcript---for example, by correcting e
 writing textual notes. Each of these operations takes your transcript farther from the facsimile and closer to the
 edition.
 
-\section[1. Common combining marks]{1. Common combining marks}
+\section[Common combining marks]{Common combining marks}
 A \textbf{combining mark} is a character that combines with another character (called the \textbf{base}) to form a
 character with accent (e.g. \textbf{\'e}) or an abbreviation (e.g. \textbf{\cvd[1]{81}{p\char"035B}} for \textit{prae}).
 Unicode and the Medieval Unicode Font Initiative (MUFI) offer code points for many precomposed combinations of base +
@@ -145,7 +145,7 @@ for Combining Marks}.
 \begin{quote}
 q\char"0366\ \textit{quo}; q\char"0365\ \textit{qui}; quatt\&\_orr; \textit{quattuor}.
 \end{quote}
-\section{2. Spacing characters}
+\section{Spacing characters}
 \secletter{h.}\ \ The symbol for \textit{is}, \textit{es} and a number of other abbreviations is the
 \textsc{is-sign} (\unic{U+A76D}):
 \begin{quote}
@@ -229,10 +229,10 @@ use \textex{\textrecipe} \unic{U+211E} or \textex{\char"211F} \unic{U+211F}.\\[1
 Neither Unicode nor MUFI has a matching character: with Junicode, apply \textbf{cv67} to the spacing
 \textsc{macron} (\unic{U+00AF}): \textex{\cvd{67}{\char"25CC\char"00AF}}.
 
-\section[3. Other formatting]{3. Other formatting}
+\section[Other formatting]{Other formatting}
 \secletter{x.}\ \ For underdotted text, use Stylistic Set 7, Underdotted. For letters that lack an underdotted form, use \unic{U+0323} \textsc{combining dot below}.
 
-\section[4. On the web]{4. On the web}
+\section[On the web]{On the web}
 Because Junicode is a very large font, web pages should use a subsetted version to speed loading
 (see \hyperlink{OnTheWeb}{Chapter 9, Junicode on the Web}, for instructions).
 The variable version of the font is better for web use than the

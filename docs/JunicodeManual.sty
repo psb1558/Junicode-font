@@ -51,7 +51,8 @@
   BoldItalicFont =  JunicodeVF-Italic.ttf,
   Contextuals=Alternate,
   StylisticSet=10,
-  RawFeature={mode=harf},
+  Renderer=HarfBuzz,
+  %RawFeature={mode=harf},
   UprightFeatures={
     SizeFeatures={
       {Size={-8.5},      RawFeature={axis={wght=550,wdth=120}}},
@@ -93,6 +94,24 @@
     {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100}}},
     {Size={11-22},     RawFeature={axis={wght=400,wdth=100}}},
     {Size={22-},       RawFeature={axis={wght=400,wdth=100}}}
+  },
+]
+\setfontface\enlarged{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100,ENLA=32}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100,ENLA=32}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100,ENLA=32}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100,ENLA=32}}}
+  },
+]
+\setfontface\enlargedx{JunicodeVF-Roman.ttf}[
+  RawFeature={mode=harf},
+  SizeFeatures={
+    {Size={-8.5},      RawFeature={axis={wght=400,wdth=100,ENLA=47}}},
+    {Size={8.5-11},    RawFeature={axis={wght=400,wdth=100,ENLA=47}}},
+    {Size={11-22},     RawFeature={axis={wght=400,wdth=100,ENLA=47}}},
+    {Size={22-},       RawFeature={axis={wght=400,wdth=100,ENLA=47}}}
   },
 ]
 %\newfontface\narrow{Junicode Cond}
@@ -276,12 +295,16 @@
 \newcommand{\icel}{\addfontfeature{Language=Icelandic}}
 \newcommand{\unic}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
 \newcommand{\colongs}{\addfontfeature{Language=English,StylisticSet=8}}
+%\newcommand{\enla}[1]{{\addfontfeature{StylisticSet=6}#1}}
+\newcommand{\enla}[1]{{\enlarged#1}}
+\newcommand{\enlax}[1]{{\enlargedx#1}}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
 \newcommand{\restag}[1]{{\addfontfeature{StylisticSet=10}#1}}
 \newcommand{\mufi}{\rowcolor{myLightGreen}}
 \newcommand{\prob}{\cellcolor{myLightPurple}}
 \newcommand{\opua}{\rowcolor{myLightYellow}}
 \newcommand{\stdu}{\rowcolor{myLightBlue}}
+\newcommand{\bluerow}{\rowcolor{myLightBlue}}
 \newcommand{\nuni}{\rowcolor{myLightRed}}
 \newcommand{\ctosc}[1]{{\addfontfeature{Letters=UppercaseSmallCaps}#1}}
 \newcommand{\charvar}{\textSourceText{cvNN}}
@@ -322,8 +345,8 @@
 %\subsectionfont{\color{BrickRed}}
 %\sectionfont{\color{SlateGray}}
 \usepackage{titlesec}
-\titleformat{\chapter}[hang]{\huge\color{RViolet}}{\thechapter.}{1em}{}
-\titleformat{\section}[hang]{\Large\color{SlateGray}}{\thesection.}{1em}{}
+\titleformat{\chapter}[hang]{\huge\seminarrowlight\color{RViolet}}{\thechapter.}{1em}{}
+\titleformat{\section}[hang]{\Large\seminarrow\color{SlateGray}}{\thesection.}{1em}{}
 \titleformat{\subsection}[hang]{\large\color{BrickRed}}{\thesubsection.}{1em}{}
 % List styles
 \newcommand\liststyleLi{%
@@ -346,3 +369,4 @@
 \clubpenalty=500
 \frenchspacing
 \raggedbottom
+\usepackage{unicodefonttable}

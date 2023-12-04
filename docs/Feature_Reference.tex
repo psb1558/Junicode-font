@@ -116,7 +116,7 @@ acute} (\unic{U+0301}) will change \textex{t̨́} to \textex{\textsc{t̨́}}.
 \subsection{\textSourceText{c2sc} -- Small Capitals from Capitals}
 Use with \textSourceText{smcp} for all-small-cap text. ABCDE $\rightarrow $ {\addfontfeature{Letters = UppercaseSmallCaps}ABCDE}.
 
-Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters} below) have no lowercase equivalents. Their small capital forms can be
+Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters}) have no lowercase equivalents. Their small capital forms can be
 accessed only through this feature.
 
 \subsection{\textSourceText{pcap} -- Petite Capitals}
@@ -129,7 +129,7 @@ $\rightarrow $ {\addfontfeature{Letters = PetiteCaps}klmno\th}.
 Produces petite capitals from capitals. Use with \textSourceText{pcap} to convert mixed-case texts to petite capitals.
 PQRST $\rightarrow $ {\addfontfeature{Letters=UppercasePetiteCaps}PQRST}.
 
-Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters} below) have no lowercase equivalents. Their petite capital forms can be
+Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters}) have no lowercase equivalents. Their petite capital forms can be
 accessed only through this feature.
 
 \subsection{\textSourceText{case} -- Case-Sensitive Forms}
@@ -139,157 +139,6 @@ feature on automatically for runs of capitals, and precomposed characters
 (e.g. \textex{É} \unic{U+00C9}, \textex{Ū} \unic{U+016A})
 already use case-appropriate combining marks. This feature also changes oldstyle to 
 lining figures, since these harmonize better with uppercase letters.
-
-\section{Numbers and Sequencing}
-\subsection{\textSourceText{frac} -- Fractions}
-Applied to a slash and surrounding numbers, produces fractions with diagonal
-slashes. 6/9 becomes {\addfontfeature{Fractions=On}6/9}, 16/91 becomes {\addfontfeature{Fractions=On}16/91}.
-
-\subsection{\textSourceText{numr} -- Numerators}
-Changes numbers to those suitable for use on the left/upper side of fractions
-with diagonal stroke (\unic{U+2044}). This can be used, with \textSourceText{dnom}, to manually construct
-fractions, but for most users \textSourceText{frac} will be a better solution.
-
-\subsection{\textSourceText{dnom} -- Denominators}
-Changes numbers to those suitable for use on the right/lower side of fractions
-with diagonal stroke (\unic{U+2044}). This can be used, with \textSourceText{numr}, to manually construct
-fractions, but for most users \textSourceText{frac} will be a better solution.
-
-\subsection{\textSourceText{nalt} -- Alternate Annotation Forms}
-Produces letters and numbers circled, in parenthesis, or followed by periods, as follows:
-
-\textSourceText{nalt[1]}, circled letters or numbers: {\addfontfeature{Annotation=0}a b .~.~. z; 0 1 2 .~.~. 20}.
-
-\textSourceText{nalt[2]}, letter or numbers in parentheses: {\addfontfeature{Annotation=1}a .~.~. z; 0 1 .~.~. 20}.
-
-\textSourceText{nalt[3]}, double-circled numbers: {\addfontfeature{Annotation=2}0 1 .~.~. 10}.
-
-\textSourceText{nalt[4]}, white numbers in black circles: {\addfontfeature{Annotation=3}0 1 2 3 . . . 20}.
-
-\textSourceText{nalt[5]}, numbers followed by period: {\addfontfeature{Numbers={Monospaced,Uppercase},Annotation=4}0 1 . . . 20}
-
-\noindent For enclosed figures 10 and higher, \textSourceText{rlig} (Required Ligatures) must also be enabled (as it should
-be by default: see \hyperlink{req}{Required Features} below).
-
-\subsection{\textSourceText{tnum} -- Tabular
-Figures}
-Fixed-width figures: \ltab{0123456789} (with \textSourceText{lnum}), \otab{0123456789} (default or with
-\textSourceText{onum}).
-
-\subsection{\textSourceText{onum} -- Oldstyle Figures}
-Junicode's default figures are oldstyle and proportional, harmonizing with lowercase characters:
-0123456789. Use this feature to switch temporarily to oldstyle figures in a context where
-\textSourceText{lnum} is active.
-
-\subsection{\textSourceText{pnum} -- Proportional Figures}
-Junicode's default figures are proportionally spaced: unlike tabular figures, they are not
-all the same width: 0123456789. Use this feature to switch temporarily to proportional figures in a context where
-\textSourceText{tnum} is active.
-
-\subsection{\textSourceText{lnum} -- Lining Figures}
-Figures in a uniform height, harmonizing with uppercase letters: \ltab{0123456789} (with
-\textSourceText{tnum}), \lprop{0123456789} (default or with \textSourceText{pnum}).
-
-\subsection{\textSourceText{zero} -- Slashed Zero}
-Produces slashed zero in all number styles, including superscripts, subscripts, and fractions made with
-\textSourceText{frac}: {\addfontfeature{Numbers=SlashedZero}\ltab{0} \otab{0} \lprop{0} \oprop{0},
-\addfontfeature{Fractions=On} 10/30}.
-
-\subsection{\textSourceText{ss09} -- Alternate Figures}
-In the manner of old typefaces, Junicode's default number one is shaped like a small capital I and
-its zero is a plain ring. This feature provides more modern-looking figures:
-{\addfontfeature{StylisticSet=9}01}. Only oldstyle figures
-are affected by this feature.
-
-\section{Superscripts and Subscripts}
-\subsection{\textSourceText{sups} -- Superscripts}
-Produces superscript numbers and letters. Superscript numbers are in one of two styles: oldstyle proportional
-(from oldstyle numbers) and lining tabular (from lining numbers). All lowercase
-letters of the basic Latin alphabet are covered, and most uppercase letters: \sups{\ltab{0123} \oprop{4567} abcde ABDEG}. Wherever
-superscripts are needed (e.g. for footnote numbers), use \textSourceText{sups} instead of the raised and scaled
-characters generated by some programs. With sups: \sups{4567}. Scaled: \textsuperscript{4567}.
-
-\subsection{\textSourceText{subs} -- Subscripts}
-Produces subscript numbers. Only produces oldstyle proportional and lining tabular figures:
-\subs{\oprop{2345} \ltab{8901}}.
-
-\section{Ornaments}
-\subsection{\textSourceText{ornm} -- Ornaments}
-Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (\unic{U+2022}) or as
-variants of a-z, A-C:
-
-\begin{multicols}{4}
-a, 1{\tabto{4em}}\ornm{a}
-
-b, 2{\tabto{4em}}\ornm{b}
-
-c, 3{\tabto{4em}}\ornm{c}
-
-d, 4{\tabto{4em}}\ornm{d}
-
-e, 5{\tabto{4em}}\ornm{e}
-
-f, 6{\tabto{4em}}\ornm{f}
-
-g, 7{\tabto{4em}}\ornm{g}
-
-h, 8{\tabto{4em}}\ornm{h}
-
-i, 9{\tabto{4em}}\ornm{i}
-
-j, 10{\tabto{4em}}\ornm{j}
-
-k, 11{\tabto{4em}}\ornm{k}
-
-l, 12{\tabto{4em}}\ornm{l}
-
-m, 13{\tabto{4em}}\ornm{m}
-
-n, 14{\tabto{4em}}\ornm{n}
-
-o, 15{\tabto{4em}}\ornm{o}
-
-p, 16{\tabto{4em}}\ornm{p}
-
-q, 17{\tabto{4em}}\ornm{q}
-
-r, 18{\tabto{4em}}\ornm{r}
-
-s, 19{\tabto{4em}}\ornm{s}
-
-t, 20{\tabto{4em}}\ornm{t}
-
-u, 21{\tabto{4em}}\ornm{u}
-
-v, 22{\tabto{4em}}\ornm{v}
-
-w, 23{\tabto{4em}}\ornm{w}
-
-x, 24{\tabto{4em}}\ornm{x}
-
-y, 25{\tabto{4em}}\ornm{y}
-
-z, 26{\tabto{4em}}\ornm{z}
-
-A, 27{\tabto{4em}}\ornm{A}
-
-B, 28{\tabto{4em}}\ornm{B}
-
-C, 29{\tabto{4em}}\ornm{C}
-\end{multicols}
-
-\noindent The method with letters of the alphabet is easier, but the method with bullets will produce a more satisfactory result
-when text is displayed in an environment where Junicode is not available or \textSourceText{ornm} is not
-implemented.
-
-\subsection{Lady Junicode}
-Lady Junicode cannot be produced by an OpenType feature, believing that it would be vulgar to make herself so accessible. She has, indeed,
-commanded that the author of this document not publish her code point, located in one of the more private corners of the 
-Private Use Area. She has, however, given permission to publish her miniature:
-\begin{center}
-{\huge\char"0F19F}
-\end{center}
-If you encounter her while adventuring in her domains, greet her respectfully, and she will welcome you graciously.
 
 \section{Alphabetic Variants}
 \subsection{\textSourceText{cv01-cv52} -- Basic Latin Variants}
@@ -495,7 +344,8 @@ the default only in the way it forms a double-p ligature with \textSourceText{hl
 
 \subsection{\textSourceText{cv53-cv66}, \textSourceText{cv91} -- Other Latin Letters}\hypertarget{OtherLatin}{}
 Some features affect both upper- and lowercase forms. \textSourceText{cv62} also affects
-combining \textex{e} with ogonek, accessible via \textSourceText{\hyperlink{ss10}{ss10}} with the
+combining \textex{e} with ogonek, accessible via either \textSourceText{\hyperlink{cv84}{cv84}} or
+\textSourceText{\hyperlink{ss10}{ss10}} with the
 entity reference \textSourceText{\&\_eogo;}.
 
 \begin{center}
@@ -550,7 +400,7 @@ cv61 &
 %
 {\narrow Ę, ę ... (U+0118, U+0119)} &
 cv62 &
-{1=\cvd{62}{Ę, ę ...}; 2=\cvd[1]{62}{Ę, ę ...}}*\\
+{1=\cvd{62}{Ę, ę ...}; 2=\cvd[1]{62}{Ę, ę ...}}\\
 %
 \bluerow{\narrow Ȝ, ȝ (U+021C, U+021D)} &
 cv63 &
@@ -569,10 +419,6 @@ cv66 &
 {1=\cvd{66}{ꝥ, \revthorn{ꝥ}}}\\
 \end{supertabular}
 \end{center}
-
-\noindent * \textSourceText{cv62} affects upper- and lowercase ę, and also dotted forms, enlarged forms,
-and the combining mark ◌\&\_eogo;, accessible via \textSourceText{cv84} and as entity 
-\textSourceText{\&\_\char"200C{}eogo;}.
 
 \subsection{\textSourceText{ss01} -- Alternate thorn and eth}
 Produces Nordic thorn and eth (\textex{\eng\revthorn{{\th}{\dh}{\TH}}}) when the language is English, and English thorn and eth
@@ -736,13 +582,11 @@ z\hfill→\hfill\enla{z}
 instead, for reasons of flexibility and accessibility.
 
 \subsection{\textSourceText{ss07} -- Underdotted Text}
-Produces underdotted text (indicating deletion in medieval manuscripts) for many
-letters (including
-the whole of the basic Latin alphabet and a number of other letters), e.g.
-\textex{\addfontfeature{StylisticSet=7}abcdefg HIJKLM}. This also affects small
-caps, e.g. \textex{\textsc{abcdef} $\rightarrow $ {\addfontfeature{StylisticSet=7}\textsc{abcdef}}}.
-For letters without corresponding underdotted forms (e.g. \unic{U+A751}, ꝑ),
-use \unic{U+0323}, combining dot below (\textex{\hspace{0.05em}ꝑ̣}).
+Produces underdotted text (indicating deletion in medieval manuscripts) for most
+Latin and Greek letters, e.g.
+\textex{\addfontfeature{StylisticSet=7}abcdefg HIJKLM αβγδεζη ΑΒΓΔΕΖΗ}. This also affects small
+caps, e.g. \textex{{\addfontfeature{StylisticSet=7}\textsc{hijklmn θικλμνξ}}}.
+If this feature fails for any letter, use \unic{U+0323}, combining dot below.
 
 \subsection{\textSourceText{ss08} -- Contextual Long s}
 In English, French, and Latin text only, varies \textex{s} and \textex{ſ} according to rules
@@ -830,451 +674,6 @@ to make \textex{\grk Ὤ͏ͅ}.
 Provides alternate shapes of {\addfontfeature{Language=Greek}β γ θ π φ χ ω}:
 \textex{\addfontfeature{StylisticSet=3}β γ θ π φ χ ω}.
 These are chiefly useful in linguistics, as they harmonize with IPA characters.
-
-\section{Punctuation}
-MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
-either of two ways: all are indexed variants of \textex{.} (period), and all are associated with the Unicode marks of
-punctuation they most resemble (but it should not be inferred that the medieval marks are semantically identical with
-the Unicode marks, or that there is an etymological relationship between them). The first method will be easier for
-most to use, but the second is more likely to yield acceptable fallbacks in environments where Junicode is not
-available.
-
-Marks with Unicode encoding are not included here, as they can safely be entered directly. In MUFI 4.0 several marks
-have PUA encodings, but have since that release been assigned Unicode code points: \textit{paragraphus} (⹍
-\unic{U+2E4D}), medieval comma (⹌~\unic{U+2E4C}), \textit{punctus elevatus} (⹎ \unic{U+2E4E}), \textit{virgula suspensiva}
-(⹊ \unic{U+2E4A}), triple dagger (⹋ \unic{U+2E4B}).
-
-\subsection{\textSourceText{ss18} -- Old-Style Punctuation Spacing}
-Colons, semicolons, parentheses, quotation marks and several other glyphs are spaced as in early printed books.
-
-\subsection{\textSourceText{cv69} -- Variants of ⁊⹒
-(\unic{U+204A / U+2E52}, Tironian nota)}
-1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}, 3=\cvd[2]{69}{⁊⹒}.
-
-\subsection{\textSourceText{cv70} --
-  Variants of . (period)}
-1=\cvd{70}{.}, 2=\cvd[1]{70}{.}, 3=\cvd[2]{70}{.}, 4=\cvd[3]{70}{.}, 5=\cvd[4]{70}{.}, 6=\cvd[5]{70}{.},
-7=\cvd[6]{70}{.}, 8=\cvd[7]{70}{.}, 9=\cvd[8]{70}{.}, 10=\cvd[9]{70}{.}, 11=\cvd[10]{70}{.}, 12=\cvd[11]{70}{.},
-13=\cvd[12]{70}{.}, 14=\cvd[13]{70}{.}, 15=\cvd[14]{70}{.}, 16=\cvd[15]{70}{.}, 17=\cvd[16]{70}{.},
-18=\cvd[17]{70}{.}, 19=\cvd[18]{70}{.}, 20=\cvd[19]{70}{.}. This
-feature provides access to all non-Unicode MUFI punctuation marks. Some of them are available via other features (see
-below).
-
-\subsection{\textSourceText{cv71} -- Variant of {\textperiodcentered} (\unic{U+00B7}, middle dot)}
-1=\cvd{71}{\char"25CC\textperiodcentered} (\textit{distinctio}), 2=\cvd[1]{71}{\char"25CC\textperiodcentered}.
-
-\subsection{\textSourceText{cv72} --
-Variants of , (comma)}
-1=\cvd{72}{,}, 2=\cvd[1]{72}{,}.
-
-\subsection{\textSourceText{cv73} --
-Variants of ; (semicolon)}
-1=\cvd{73}{;} (\textit{punctus versus}), 2=\cvd[1]{73}{;}, 3=\cvd[2]{73}{;}, 4=\cvd[3]{73}{;},
-5=\cvd[4]{73}{;}, 6=\cvd[5]{73}{;}, 7=\cvd[6]{73}{;}.
-
-\subsection{\textSourceText{cv74} -- Variants of ⹎ (\unic{U+2E4E}, \textit{punctus elevatus})}
-1=\cvd{74}{⹎}, 2=\cvd[1]{74}{⹎}, 3=\cvd[2]{74}{⹎}, 4=\cvd[3]{74}{⹎} (\textit{punctus flexus}).
-
-\subsection{\textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
-1=\cvd{75}{!} (\textit{punctus exclamativus}).
-
-\subsection{\textSourceText{cv76}
--- Variants of ? (question mark)}
-1=\cvd{76}{?}, 2=\cvd[1]{76}{?}, 3=\cvd[2]{76}{?}. Shapes of the \textit{punctus interrogativus}.
-
-\subsection{\textSourceText{cv77}
--- Variant of \~{} (ASCII tilde)}
-1=\cvd{77}{\~{}} (same as MUFI \unic{U+F1F9}, ``wavy line'').
-
-\subsection{\textSourceText{cv78} --
-Variant of * (asterisk)}
-1=\cvd{78}{*}. MUFI defines \unic{U+F1EC} as a \textit{signe de renvoi}. Manuscripts employ a number of shapes (of which this is one) for
-this purpose. Junicode defines it as a variant of the asterisk---the most common modern \textit{signe de renvoi}.
-
-\subsection{\textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
-1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, \unic{U+2E4E}.
-
-\section{Abbreviations}
-\subsection{\textSourceText{cv80} -- Variant of ꝝ (\unic{U+A75D}, rum
-abbreviation)}
-1=\cvd{80}{ꝝ}.
-
-\subsection{\textSourceText{cv81} -- Variants of ◌͛ (\unic{U+035B}, combining
-zigzag above)}
-1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
-marks, e.g. \textex{b͛ f͛ d͛}. If \textSourceText{calt} ``Contextual Alternates'' is enabled (as it is by
-default in most apps), variant forms of \textSourceText{cv81[2]} will be used with several letters, e.g.
-\textex{\cvd[1]{81}{d͛ \ f͛ \ k͛}}. Enable \textSourceText{case} for forms that harmonize with capitals
-(\textex{\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}),
-\textSourceText{smcp} for forms that harmonize with small caps
-(\textex{\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}}).
-
-\subsection{\textSourceText{cv82} -- Variants of spacing ꝰ (\unic{U+A770})}
-1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
-\unic{U+F1A6}). MUFI also has an uppercase baseline \textit{{}-us} abbreviation (\unic{U+F1A5}), but as there is no uppercase version
-of \unic{U+A770} to pair it with, it is indexed separately here.
-
-\subsection{\textSourceText{cv83} -- Variants of ꝫ (\unic{U+A76B}, ``et'' abbreviation)}
-1=\cvd{83}{ꝫ}, 2=\cvd[1]{83}{ꝫ}, 3=\cvd[2]{83}{ꝫ}. \textSourceText{[1]} and \textSourceText{[3]} are
-identical in shape to a semicolon and a colon, but as they are semantically the same as \unic{U+A76B},
-it is preferable to use those
-characters with this feature. \textSourceText{[2]} produces a subscript version of
-the character, a common variant in early printed books.
-
-\section{Combining Marks}
-\subsection{\textSourceText{cv84} -- MUFI combining marks (variants of \unic{U+0304})}
-MUFI encodes a number of combining marks in the PUA (with code points between \unic{E000} and \unic{F8FF}), but when these characters
-are entered directly, they can interfere with searching and accessibility, and some important applications fail to
-position them correctly over their base characters. To avoid these problems, enter \unic{U+0304} (◌̄, \textUName{combining
-macron}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character. This
-collection of marks does not include any Unicode-encoded marks (from the ``Combining Diacritical Marks'' ranges), as
-these can safely be entered directly. It does include three marks (\textSourceText{cv84[30]},
-\textSourceText{[31]} and \textSourceText{[32]}) that lack MUFI code points but are used to form MUFI
-characters, and three more (\textSourceText{[2]}, \textSourceText{[33]},
-and \textSourceText{[34]}) that have no code points in Unicode or MUFI.
-
-This feature may often appear to have no effect. When this happens it is because
-an application replaced a sequence like \textex{a \unic{U+0304}} with a precomposed character
-like \textex{ā} (\unic{U+0101}) before Junicode's OpenType programming had a chance to work.
-This process is called normalization, and it usually has the effect of simplifying
-text processing tasks, but can sometimes prevent the proper functioning of OpenType
-features. To disable it, place the character \unic{U+034F} \textUName{combining
-grapheme joiner} between the base
-character and the combining mark (or the first combining mark). For example, to produce
-the combination \textex{\cvd[1]{84}{u͏̄}}, enter \textex{u \unic{U+034F U+0304}}.
-
-These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
-\textSourceText{cv84} as providing more suitable fallbacks for applications that do not support Character Variant
-(\textSourceText{cvNN}) features.
-
-For some marks with PUA code points, users may find it easier to use \hyperlink{ss10}{entities} than this feature.
-
-These marks are not affected by most other features. This is to preserve flexibility, given the rule that the feature
-that produces them must be applied to both the mark and the base character. For example, if you had to
-apply \textSourceText{smcp} ``Small Caps'' to \textSourceText{U+1DE8} ◌͏ᷨ to get
-\textSourceText{cv84[11]} \cvd[10]{84}{◌͏̄}, it would be impossible to produce the sequence
-\textex{\cvd[10]{84}{na͏{\char"34F\char"304}a}}
-(or the reverse case \textex{\textsc{na{\char"1DE8}a}})
-with the diacritic properly positioned.
-
-\begin{multicols}{6}
-\color{BrickRed}1\hfill=\hfill\cvd{84}{◌͏̄}
-
-2\hfill=\hfill\cvd[1]{84}{◌͏̄}
-
-3\hfill=\hfill\cvd[2]{84}{◌͏̄}
-
-4\hfill=\hfill\cvd[3]{84}{◌͏̄}
-
-5\hfill=\hfill\cvd[4]{84}{◌͏̄}
-
-6\hfill=\hfill\cvd[5]{84}{◌͏̄}
-
-7\hfill=\hfill\cvd[6]{84}{◌͏̄}
-
-8\hfill=\hfill\cvd[7]{84}{◌͏̄}
-
-9\hfill=\hfill\cvd[8]{84}{◌͏̄}
-
-10\hfill=\hfill\cvd[9]{84}{◌͏̄}
-
-11\hfill=\hfill\cvd[10]{84}{◌͏̄}
-
-12\hfill=\hfill\cvd[11]{84}{◌͏̄}
-
-13\hfill=\hfill\cvd[12]{84}{◌͏̄}
-
-14\hfill=\hfill\cvd[13]{84}{◌͏̄}
-
-15\hfill=\hfill\cvd[14]{84}{◌͏̄}
-
-16\hfill=\hfill\cvd[15]{84}{◌͏̄}
-
-17\hfill=\hfill\cvd[16]{84}{◌͏̄}
-
-18\hfill=\hfill\cvd[17]{84}{◌͏̄}
-
-19\hfill=\hfill\cvd[18]{84}{◌͏̄}
-
-20\hfill=\hfill\cvd[19]{84}{◌͏̄}
-
-21\hfill=\hfill\cvd[20]{84}{◌͏̄}
-
-22\hfill=\hfill\cvd[21]{84}{◌͏̄}
-
-23\hfill=\hfill\cvd[22]{84}{◌͏̄}
-
-24\hfill=\hfill\cvd[23]{84}{◌͏̄}
-
-25\hfill=\hfill\cvd[24]{84}{◌͏̄}
-
-26\hfill=\hfill\cvd[25]{84}{◌͏̄}
-
-27\hfill=\hfill\cvd[26]{84}{◌͏̄}
-
-28\hfill=\hfill\cvd[27]{84}{◌͏̄}
-
-29\hfill=\hfill\cvd[28]{84}{◌͏̄}
-
-30\hfill=\hfill\cvd[29]{84}{◌͏̄}
-
-31\hfill=\hfill\cvd[30]{84}{◌͏̄}
-
-32\hfill=\hfill\cvd[31]{84}{◌͏̄}
-
-33\hfill=\hfill\cvd[32]{84}{◌͏̄}
-
-34\hfill=\hfill\cvd[33]{84}{◌͏̄}
-
-35\hfill=\hfill\cvd[34]{84}{◌͏̄}
-
-36\hfill=\hfill\cvd[34]{84}{◌͏̄}
-
-37\hfill=\hfill\cvd[34]{84}{◌͏̄}
-\end{multicols}
-
-\subsection{\textSourceText{cv67} -- Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}
-A spacing version of ◌͛ (\unic{U+035B}, combining zigzag) appears in John Hutchins,
-\textit{The History and Antiquities of the County of Dorset} (London, 1774). It
-is not in Unicode or MUFI. In the future this feature may be used, as necessary,
-for other spacing marks of abbreviation.
-
-\subsection{\textSourceText{ss10} -- Character Entities for Combining Marks}\hypertarget{ss10}{}
-Instead of \textSourceText{\hyperlink{cv84}{cv84}} for representing non-Unicode combining marks, some users may
-wish to use XML/HTML-style entities. When \textSourceText{ss10} is turned on (preferably for the entire
-text), these entities appear as combining marks and are correctly positioned over base characters.
-For example, the letter \textex{e} followed by
-\textex{\&{\textcompwordmark}\_eogo;} will yield \textex{e\&\_eogo;}. An advantage of entities is that
-they are (unlike the PUA code points or the indexes of \textSourceText{cv84}) mnemonic and thus easy to use.
-A disadvantage is that
-searches cannot ignore combining marks entered by this method as they can using the \textSourceText{cv84} method.
-(Every method of entering non-Unicode combining marks has disadvantages: users should weigh these, choose a method,
-and stick with it.)
-
-If you use any of these entities in a work intended for print publication, you should call your publisher’s
-attention to them, since they will likely have their own method of representing them.
-
-\begin{multicols}{4}
-\color{RViolet}%
-% Some of the marks in this table are made with cv84. It appears that the
-% program may be calculating column width using the width of the unresolved
-% entity, and that is causing some cells to wrap. We use cv84 for those
-% cells.
-\&{\textcompwordmark}\_ansc;\hfill→\hfill\textstyleEntityRef{◌\&\_ansc;}
-
-\&{\textcompwordmark}\_an;\hfill→\hfill\textstyleEntityRef{◌\&\_an;}
-
-\&{\textcompwordmark}\_ar;\hfill→\hfill\textstyleEntityRef{◌\&\_ar;}
-
-\&{\textcompwordmark}\_arsc;\hfill→\hfill\textstyleEntityRef{◌\&\_arsc;}
-
-\&\_{\textcompwordmark}as;\hfill→\hfill\textstyleEntityRef{◌\&\_as;}
-
-\&{\textcompwordmark}\_bsc;\hfill→\hfill\textstyleEntityRef{◌\&\_bsc;}
-
-\&{\textcompwordmark}\_dsc;\hfill→\hfill\textstyleEntityRef{◌\&\_dsc;}
-
-\&{\textcompwordmark}\_eogo;\hfill→\hfill\textstyleEntityRef{◌\&\_eogo;}
-
-\&{\textcompwordmark}\_emac;\hfill→\hfill\cvd[12]{84}{◌\char"0304}
-
-\&\_{\textcompwordmark}idotl;\hfill→\hfill\textstyleEntityRef{◌\&\_idotl;}
-
-\&\_{\textcompwordmark}j;\hfill→\hfill\textstyleEntityRef{◌\&\_j;}
-
-\&\_{\textcompwordmark}jdotl;\hfill→\hfill\textstyleEntityRef{◌\&\_jdotl;}
-
-\&\_{\textcompwordmark}ksc;\hfill→\hfill\textstyleEntityRef{◌\&\_ksc;}
-
-{\narrow\&\_{\textcompwordmark}munc;\hfill→\hfill\cvd[18]{84}{◌\char"0304}}
-
-\&\_{\textcompwordmark}oogo;\hfill→\hfill\cvd[20]{84}{◌\char"0304}
-
-{\narrow\&\_{\textcompwordmark}oslash;\hfill→\hfill\cvd[21]{84}{◌\char"0304}}
-
-\&\_{\textcompwordmark}omac;\hfill→\hfill\cvd{84}{◌\char"0304}
-
-\&\_{\textcompwordmark}orr;\hfill→\hfill\textstyleEntityRef{◌\&\_orr;}
-
-\&\_{\textcompwordmark}oru;\hfill→\hfill\textstyleEntityRef{◌\&\_oru;}
-
-\&\_{\textcompwordmark}q;\hfill→\hfill\textstyleEntityRef{◌\&\_q;}
-
-\&\_{\textcompwordmark}ru;\hfill→\hfill\textstyleEntityRef{◌\&\_ru;}
-
-\&\_{\textcompwordmark}sa;\hfill→\hfill\textstyleEntityRef{◌\&\_sa;}
-
-\&\_{\textcompwordmark}tsc;\hfill→\hfill\textstyleEntityRef{◌\&\_tsc;}
-
-\&\_{\textcompwordmark}y;\hfill→\hfill\textstyleEntityRef{◌\&\_y;}
-
-{\narrow\&\_{\textcompwordmark}thorn;\hfill→\hfill\textstyleEntityRef{◌\&\_thorn;}}
-\end{multicols}
-
-\noindent For another function of Stylistic Set 10, see \hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
-
-\subsection{\textSourceText{ss20} -- Low Diacritics}
-The MUFI recommendation includes a number of precomposed characters with base letters
-{\addfontfeature{Language=Icelandic}b, h, k, {\th}, ꝺ and {\dh}} and a number of combining
-marks. Instead of being positioned above ascender height as usual (e.g.
-\textex{hͣ}), the MUFI glyphs have the marks positioned above the x-height
-(e.g. \textex{\addfontfeature{StylisticSet=20}hͣ}).
-Using the MUFI code points for these precomposed glyphs can interfere with searching
-and drastically reduce accessibility. Users of Junicode should instead use a sequence of base character + combining
-mark, and apply \textSourceText{ss20} to the two glyphs. Variant shapes of \textex{ꝺ} and \textex{{\dh}}
-that accommodate the combining mark will be substituted for the normal base characters (but this is not necessary for
-the other base characters). Examples:
-\textex{\addfontfeature{StylisticSet=20}bͦ ꝺᷦ \cvd[14]{84}{h̄} kͤ {\th}ͭ ðᷢ}. These marks are affected by this
-feature:
-
-\begin{multicols}{3}
-  \seminarrow\color{BrickRed}◌ͣ (\unic{U+0363})
-
-  ◌ᷓ (\unic{U+1DD3})
-
-  ◌ͤ (\unic{U+0364})
-
-  \cvd[14]{84}{◌͏̄} (\unic{U+0304}\slash\textSourceText{cv84[15]})
-
-  ◌ᷞ (\unic{U+1DDE})
-
-  \cvd[18]{84}{◌͏̄} (\unic{U+0304}\slash\textSourceText{cv84[19]}).
-
-  ◌ͦ (\unic{U+0366})
-
-  ◌ͬ (\unic{U+036C})
-
-  ◌ᷢ (\unic{U+1DE2})
-
-  ◌ᷣ (\unic{U+1DE3})
-
-  \cvd{87}{◌ᷣ} (\unic{U+1DE3}\slash\textSourceText{cv87[1]})
-
-  ◌ͭ (\unic{U+036D})
-
-  ◌ᫎ (\unic{U+1ACE})
-
-  ◌ͧ (\unic{U+0367})
-
-  ◌ͮ (\unic{U+036E})
-
-  ◌ᷦ (\unic{U+1DE6})
-
-  ◌͛ (\unic{U+035B})
-  \end{multicols}
-  
-\noindent\textSourceText{ss20} is intended for use only with the diacritics and base characters listed here; other
-base+diacritic combinations may be disrupted by the feature. You should therefore apply it only to
-relevant base+diacritic pairs (e.g. via a style in InDesign or a word processor or a command in
-{\LuaTeX}).
-
-
-
-\subsection{\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
-1=\cvd{85}{◌ᷓ}.
-
-\subsection{\textSourceText{cv86} -- Variant of ◌ᷘ (\unic{U+1DD8}, combining insular
-d)}
-1=\cvd{86}{◌ᷘ}.
-
-\subsection{\textSourceText{cv87} -- Variant of ◌ᷣ (\unic{U+1DE3}, combining r rotunda)}
-1=\cvd{87}{◌ᷣ}.
-
-\subsection{\textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (\unic{U+0308})}
-1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
-\textex{\cvd{88}{\"a}}.
-
-\subsection{\textSourceText{cv89} -- Variant of ◌̅ (\unic{U+0305},
-combining overline)}
-1=\cvd{89}{◌̅}.
-
-\subsection{\textSourceText{cv}\textSourceText{90} -- Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}
-1=\cvd{90}{◌͞◌}, 2=\cvd[1]{90}{◌͞◌}.
-
-\subsection{\textSourceText{cv92} -- Variant of breve
-below (\unic{U+032E})}
-1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
-to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
-
-\section{Currency and Weights}
-\subsection{\textSourceText{cv93} -- Variants of {\textcurrency} (\unic{U+0044}, generic
-currency sign)}
-
-\begin{multicols}{6}
-\color{RViolet}1\hfill=\hfill\cvd{93}{\textcurrency}
-
-2\hfill=\hfill\cvd[1]{93}{\textcurrency}
-
-3\hfill=\hfill\cvd[2]{93}{\textcurrency}
-
-4\hfill=\hfill\cvd[3]{93}{\textcurrency}
-
-5\hfill=\hfill\cvd[4]{93}{\textcurrency}
-
-6\hfill=\hfill\cvd[5]{93}{\textcurrency}
-
-7\hfill=\hfill\cvd[6]{93}{\textcurrency}
-
-8\hfill=\hfill\cvd[7]{93}{\textcurrency}
-
-9\hfill=\hfill\cvd[8]{93}{\textcurrency}
-
-10\hfill=\hfill\cvd[9]{93}{\textcurrency}
-
-11\hfill=\hfill\cvd[10]{93}{\textcurrency}
-
-12\hfill=\hfill\cvd[11]{93}{\textcurrency}
-
-13\hfill=\hfill\cvd[12]{93}{\textcurrency}
-
-14\hfill=\hfill\cvd[13]{93}{\textcurrency}
-
-15\hfill=\hfill\cvd[14]{93}{\textcurrency}
-
-16\hfill=\hfill\cvd[15]{93}{\textcurrency}
-
-17\hfill=\hfill\cvd[16]{93}{\textcurrency}
-
-18\hfill=\hfill\cvd[17]{93}{\textcurrency}
-
-19\hfill=\hfill\cvd[18]{93}{\textcurrency}
-
-20\hfill=\hfill\cvd[19]{93}{\textcurrency}
-
-21\hfill=\hfill\cvd[20]{93}{\textcurrency}
-
-22\hfill=\hfill\cvd[21]{93}{\textcurrency}
-
-23\hfill=\hfill\cvd[22]{93}{\textcurrency}
-
-24\hfill=\hfill\cvd[23]{93}{\textcurrency}
-
-25\hfill=\hfill\cvd[24]{93}{\textcurrency}
-
-26\hfill=\hfill\cvd[25]{93}{\textcurrency}
-
-27\hfill=\hfill\cvd[26]{93}{\textcurrency}
-\end{multicols}
-
-\noindent All of MUFI’s currency and weight symbols (those that do
-not have Unicode code points) are gathered here, but some are also variants of other currency signs (see below).
-
-\subsection{\textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (\unic{U+2114})}
-1=\cvd{94}{℔}. Same as MUFI \unic{U+F2EB} (French Libra sign).
-
-\subsection{\textSourceText{cv95} -- Variants of {\pounds} (\unic{U+00A3}, British pound sign)}
-1=\cvd{95}{\pounds}, 2=\cvd[1]{95}{\pounds}, 3=\cvd[2]{95}{\pounds}, 4=\cvd[3]{95}{\pounds},
-5=\cvd[4]{95}{\pounds}, 6=\cvd[5]{95}{\pounds}. Same as MUFI \unic{U+F2EA, F2EB, F2EC, F2ED,
-F2EE, F2EF}, pound signs from various locales.
-
-\subsection{\textSourceText{cv96} -- Variant of ₰ (\unic{U+20B0}, German penny sign)}
-1=\cvd{96}{₰}. Same as MUFI \unic{U+F2F5}.
-
-\subsection{\textSourceText{cv97} -- Variant of ƒ (\unic{U+0192}, florin)}
-1=\cvd{97}{ƒ}. Same as MUFI \unic{U+F2E8}.
-
-\subsection{\textSourceText{cv98} -- Variant of ℥ (\unic{U+2125}, Ounce sign)}
-1=\cvd{98}{℥}. Same as MUFI \unic{U+F2FD}, Script ounce sign.
 
 \section{Gothic}
 \subsection{\textSourceText{ss19} -- Latin to Gothic Transliteration}
@@ -1622,7 +1021,7 @@ Discretionary Ligatures}
 Produces lesser-used ligatures:
 \textex{\textcolor[rgb]{0.5529412,0.15686275,0.11764706}{\addfontfeature{Ligatures=Rare}ct, ſp, str, st, tr, tt, ty}}.
 The collection of discretionary ligatures in the italic face also includes
-{\textit{\addfontfeature{Ligatures=Rare}as, is, us}}.
+\textex{\textit{\addfontfeature{Ligatures=Rare}as, is, us}}.
 
 
 \subsection{\textSourceText{ss17} -- Rare
@@ -1641,9 +1040,603 @@ the second element of the digraph or type the diacritic after the second element
 \textex{a} + \textex{\'u} yields \textex{\addfontfeature{StylisticSet=17}a\'u}, and so does
 \textex{a} + \textex{u} + \unic{U+0301} (combining acute accent). To produce a digraph +
 diacritic combination not covered by MUFI (e.g. \textex{ꜵ̀}), you may have to place \unic{U+034F}
-\textUName{combining grapheme joiner} (see \hyperlink{cv84}{cv84} above) between the second element of the digraph and the combining mark.
+\textUName{combining grapheme joiner} (see \hyperlink{cv84}{cv84}) between the second element of the digraph and the combining mark.
 
-\section{Required Features}
+\section{Numbers and Sequencing}
+\subsection{\textSourceText{frac} -- Fractions}
+Applied to a slash and surrounding numbers, produces fractions with diagonal
+slashes. 6/9 becomes {\addfontfeature{Fractions=On}6/9}, 16/91 becomes {\addfontfeature{Fractions=On}16/91}.
+
+\subsection{\textSourceText{numr} -- Numerators}
+Changes numbers to those suitable for use on the left/upper side of fractions
+with diagonal stroke (\unic{U+2044}). This can be used, with \textSourceText{dnom}, to manually construct
+fractions, but for most users \textSourceText{frac} will be a better solution.
+
+\subsection{\textSourceText{dnom} -- Denominators}
+Changes numbers to those suitable for use on the right/lower side of fractions
+with diagonal stroke (\unic{U+2044}). This can be used, with \textSourceText{numr}, to manually construct
+fractions, but for most users \textSourceText{frac} will be a better solution.
+
+\subsection{\textSourceText{nalt} -- Alternate Annotation Forms}
+Produces letters and numbers circled, in parenthesis, or followed by periods, as follows:
+
+\textSourceText{nalt[1]}, circled letters or numbers: {\addfontfeature{Annotation=0}a b .~.~. z; 0 1 2 .~.~. 20}.
+
+\textSourceText{nalt[2]}, letter or numbers in parentheses: {\addfontfeature{Annotation=1}a .~.~. z; 0 1 .~.~. 20}.
+
+\textSourceText{nalt[3]}, double-circled numbers: {\addfontfeature{Annotation=2}0 1 .~.~. 10}.
+
+\textSourceText{nalt[4]}, white numbers in black circles: {\addfontfeature{Annotation=3}0 1 2 3 . . . 20}.
+
+\textSourceText{nalt[5]}, numbers followed by period: {\addfontfeature{Numbers={Monospaced,Uppercase},Annotation=4}0 1 . . . 20}
+
+\noindent For enclosed figures 10 and higher, \textSourceText{rlig} (Required Ligatures) must also be enabled (as it should
+be by default: see \hyperlink{req}{Required Features} below).
+
+\subsection{\textSourceText{tnum} -- Tabular Figures}
+Fixed-width figures: \ltab{0123456789} (with \textSourceText{lnum}), \otab{0123456789} (default or with
+\textSourceText{onum}).
+
+\subsection{\textSourceText{onum} -- Oldstyle Figures}
+Junicode's default figures are oldstyle and proportional, harmonizing with lowercase characters:
+0123456789. Use this feature to switch temporarily to oldstyle figures in a context where
+\textSourceText{lnum} is active.
+
+\subsection{\textSourceText{pnum} -- Proportional Figures}
+Junicode's default figures are proportionally spaced: unlike tabular figures, they are not
+all the same width: 0123456789. Use this feature to switch temporarily to proportional figures in a context where
+\textSourceText{tnum} is active.
+
+\subsection{\textSourceText{lnum} -- Lining Figures}
+Figures in a uniform height, harmonizing with uppercase letters: \ltab{0123456789} (with
+\textSourceText{tnum}), \lprop{0123456789} (default or with \textSourceText{pnum}).
+
+\subsection{\textSourceText{zero} -- Slashed Zero}
+Produces slashed zero in all number styles, including superscripts, subscripts, and fractions made with
+\textSourceText{frac}: {\addfontfeature{Numbers=SlashedZero}\ltab{0} \otab{0} \lprop{0} \oprop{0}
+\addfontfeature{Fractions=On} 10/30}.
+
+\subsection{\textSourceText{ss09} -- Alternate Figures}
+In the manner of old typefaces, Junicode's default number one is shaped like a small capital I and
+its zero is a plain ring. This feature provides more modern-looking figures:
+{\addfontfeature{StylisticSet=9}01}. Only oldstyle figures
+are affected by this feature.
+
+\section{Superscripts and Subscripts}
+\subsection{\textSourceText{sups} -- Superscripts}
+Produces superscript numbers and letters. Superscript numbers are in one of two styles: oldstyle proportional
+(from oldstyle numbers) and lining tabular (from lining numbers). All lowercase
+letters of the basic Latin alphabet are covered, and most uppercase letters: \sups{\ltab{0123} \oprop{4567} abcde ABDEG}. Wherever
+superscripts are needed (e.g. for footnote numbers), use \textSourceText{sups} instead of the raised and scaled
+characters generated by some programs. With sups: \sups{4567}. Scaled: \textsuperscript{4567}.
+
+\subsection{\textSourceText{subs} -- Subscripts}
+Produces subscript numbers. Only produces oldstyle proportional and lining tabular figures:
+\subs{\oprop{2345} \ltab{8901}}.
+
+\section{Punctuation}
+MUFI encodes nearly twenty marks of punctuation in the PUA. In Junicode these can be accessed in
+either of two ways: all are indexed variants of \textex{.} (period), and all are associated with the Unicode marks of
+punctuation they most resemble (but it should not be inferred that the medieval marks are semantically identical with
+the Unicode marks, or that there is an etymological relationship between them). The first method will be easier for
+most to use, but the second is more likely to yield acceptable fallbacks in environments where Junicode is not
+available.
+
+Marks with Unicode encoding are not included here, as they can safely be entered directly. In MUFI 4.0 several marks
+have PUA encodings, but have since that release been assigned Unicode code points: \textit{paragraphus} (⹍
+\unic{U+2E4D}), medieval comma (⹌~\unic{U+2E4C}), \textit{punctus elevatus} (⹎ \unic{U+2E4E}), \textit{virgula suspensiva}
+(⹊ \unic{U+2E4A}), triple dagger (⹋ \unic{U+2E4B}).
+
+\subsection{\textSourceText{ss18} -- Old-Style Punctuation Spacing}
+Colons, semicolons, parentheses, quotation marks and several other glyphs are spaced as in early printed books.
+
+\subsection{\textSourceText{cv69} -- Variants of ⁊⹒
+(\unic{U+204A / U+2E52}, Tironian nota)}
+1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}, 3=\cvd[2]{69}{⁊⹒}.
+
+\subsection{\textSourceText{cv70} --
+  Variants of . (period)}
+1=\cvd{70}{.}, 2=\cvd[1]{70}{.}, 3=\cvd[2]{70}{.}, 4=\cvd[3]{70}{.}, 5=\cvd[4]{70}{.}, 6=\cvd[5]{70}{.},
+7=\cvd[6]{70}{.}, 8=\cvd[7]{70}{.}, 9=\cvd[8]{70}{.}, 10=\cvd[9]{70}{.}, 11=\cvd[10]{70}{.}, 12=\cvd[11]{70}{.},
+13=\cvd[12]{70}{.}, 14=\cvd[13]{70}{.}, 15=\cvd[14]{70}{.}, 16=\cvd[15]{70}{.}, 17=\cvd[16]{70}{.},
+18=\cvd[17]{70}{.}, 19=\cvd[18]{70}{.}, 20=\cvd[19]{70}{.}. This
+feature provides access to all non-Unicode MUFI punctuation marks. Some of them are available via other features (see
+below).
+
+\subsection{\textSourceText{cv71} -- Variant of {\textperiodcentered} (\unic{U+00B7}, middle dot)}
+1=\cvd{71}{\char"25CC\textperiodcentered} (\textit{distinctio}), 2=\cvd[1]{71}{\char"25CC\textperiodcentered}.
+
+\subsection{\textSourceText{cv72} --
+Variants of , (comma)}
+1=\cvd{72}{,}, 2=\cvd[1]{72}{,}.
+
+\subsection{\textSourceText{cv73} --
+Variants of ; (semicolon)}
+1=\cvd{73}{;} (\textit{punctus versus}), 2=\cvd[1]{73}{;}, 3=\cvd[2]{73}{;}, 4=\cvd[3]{73}{;},
+5=\cvd[4]{73}{;}, 6=\cvd[5]{73}{;}, 7=\cvd[6]{73}{;}.
+
+\subsection{\textSourceText{cv74} -- Variants of ⹎ (\unic{U+2E4E}, \textit{punctus elevatus})}
+1=\cvd{74}{⹎}, 2=\cvd[1]{74}{⹎}, 3=\cvd[2]{74}{⹎}, 4=\cvd[3]{74}{⹎} (\textit{punctus flexus}).
+
+\subsection{\textSourceText{cv7}\textSourceText{5} -- Variant of ! (exclamation mark)}
+1=\cvd{75}{!} (\textit{punctus exclamativus}).
+
+\subsection{\textSourceText{cv76}
+-- Variants of ? (question mark)}
+1=\cvd{76}{?}, 2=\cvd[1]{76}{?}, 3=\cvd[2]{76}{?}. Shapes of the \textit{punctus interrogativus}.
+
+\subsection{\textSourceText{cv77}
+-- Variant of \~{} (ASCII tilde)}
+1=\cvd{77}{\~{}} (same as MUFI \unic{U+F1F9}, ``wavy line'').
+
+\subsection{\textSourceText{cv78} --
+Variant of * (asterisk)}
+1=\cvd{78}{*}. MUFI defines \unic{U+F1EC} as a \textit{signe de renvoi}. Manuscripts employ a number of shapes (of which this is one) for
+this purpose. Junicode defines it as a variant of the asterisk---the most common modern \textit{signe de renvoi}.
+
+\subsection{\textSourceText{cv7}\textSourceText{9} -- Variants of / (slash)}
+1=\cvd{79}{/}, 2=\cvd[1]{79}{/}. The first of these is Unicode, \unic{U+2E4E}.
+
+\section{Spacing Abbreviations}
+\subsection{\textSourceText{cv80} -- Variant of ꝝ (\unic{U+A75D}, rum
+abbreviation)}
+1=\cvd{80}{ꝝ}.
+
+\subsection{\textSourceText{cv82} -- Variants of spacing ꝰ (\unic{U+A770})}
+1=\cvd{82}{ꝰ}, 2=\cvd[1]{82}{ꝰ}. \textSourceText{cv82[1]} produces the baseline \textit{{}-us} abbreviation (same as MUFI
+\unic{U+F1A6}). MUFI also has an uppercase baseline \textit{{}-us} abbreviation (\unic{U+F1A5}), but as there is no uppercase version
+of \unic{U+A770} to pair it with, it is indexed separately here.
+
+\subsection{\textSourceText{cv83} -- Variants of ꝫ (\unic{U+A76B}, ``et'' abbreviation)}
+1=\cvd{83}{ꝫ}, 2=\cvd[1]{83}{ꝫ}, 3=\cvd[2]{83}{ꝫ}. \textSourceText{[1]} and \textSourceText{[3]} are
+identical in shape to a semicolon and a colon, but as they are semantically the same as \unic{U+A76B},
+it is preferable to use those
+characters with this feature. \textSourceText{[2]} produces a subscript version of
+the character, a common variant in early printed books.
+
+\subsection{\textSourceText{cv67} -- Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}
+A spacing version of ◌͛ (\unic{U+035B}, combining zigzag) appears in John Hutchins,
+\textit{The History and Antiquities of the County of Dorset} (London, 1774). It
+is not in Unicode or MUFI. In the future this feature may be used, as necessary,
+for other spacing marks of abbreviation.
+
+\section{Combining Marks}
+\subsection{\textSourceText{cv84} -- MUFI combining marks (variants of \unic{U+0304})}\hypertarget{cv84}{}
+MUFI encodes a number of combining marks in the PUA (with code points between \unic{E000} and \unic{F8FF}), but when these characters
+are entered directly, they can interfere with searching and accessibility, and some important applications fail to
+position them correctly over their base characters. To avoid these problems, enter \unic{U+0304} (◌̄, \textUName{combining
+macron}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character. This
+collection of marks does not include any Unicode-encoded marks (from the ``Combining Diacritical Marks'' ranges), as
+these can safely be entered directly. It does include three marks (\textSourceText{cv84[30]},
+\textSourceText{[31]} and \textSourceText{[32]}) that lack MUFI code points but are used to form MUFI
+characters, and three more (\textSourceText{[2]}, \textSourceText{[33]},
+and \textSourceText{[34]}) that have no code points in Unicode or MUFI.
+
+This feature may often appear to have no effect. When this happens it is because
+an application replaced a sequence like \textex{a \unic{U+0304}} with a precomposed character
+like \textex{ā} (\unic{U+0101}) before Junicode's OpenType programming had a chance to work.
+This process is called normalization, and it usually has the effect of simplifying
+text processing tasks, but can sometimes prevent the proper functioning of OpenType
+features. To disable it, place the character \unic{U+034F} \textUName{combining
+grapheme joiner} between the base
+character and the combining mark (or the first combining mark). For example, to produce
+the combination \textex{\cvd[1]{84}{u͏̄}}, enter \textex{u \unic{U+034F U+0304}}.
+
+These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
+\textSourceText{cv84} as providing more suitable fallbacks for applications that do not support Character Variant
+(\textSourceText{cvNN}) features.
+
+For some marks with PUA code points, users may find it easier to use \hyperlink{ss10}{entities} than this feature.
+
+These marks are not affected by most other features. This is to preserve flexibility, given the rule that the feature
+that produces them must be applied to both the mark and the base character. For example, if you had to
+apply \textSourceText{smcp} ``Small Caps'' to \textSourceText{U+1DE8} ◌͏ᷨ to get
+\textSourceText{cv84[11]} \cvd[10]{84}{◌͏̄}, it would be impossible to produce the sequence
+\textex{\cvd[10]{84}{na͏{\char"34F\char"304}a}}
+(or the reverse case \textex{\textsc{na{\char"1DE8}a}})
+with the diacritic properly positioned.
+
+\begin{multicols}{6}
+\color{BrickRed}1\hfill=\hfill\cvd{84}{◌͏̄}
+
+2\hfill=\hfill\cvd[1]{84}{◌͏̄}
+
+3\hfill=\hfill\cvd[2]{84}{◌͏̄}
+
+4\hfill=\hfill\cvd[3]{84}{◌͏̄}
+
+5\hfill=\hfill\cvd[4]{84}{◌͏̄}
+
+6\hfill=\hfill\cvd[5]{84}{◌͏̄}
+
+7\hfill=\hfill\cvd[6]{84}{◌͏̄}
+
+8\hfill=\hfill\cvd[7]{84}{◌͏̄}
+
+9\hfill=\hfill\cvd[8]{84}{◌͏̄}
+
+10\hfill=\hfill\cvd[9]{84}{◌͏̄}
+
+11\hfill=\hfill\cvd[10]{84}{◌͏̄}
+
+12\hfill=\hfill\cvd[11]{84}{◌͏̄}
+
+13\hfill=\hfill\cvd[12]{84}{◌͏̄}
+
+14\hfill=\hfill\cvd[13]{84}{◌͏̄}
+
+15\hfill=\hfill\cvd[14]{84}{◌͏̄}
+
+16\hfill=\hfill\cvd[15]{84}{◌͏̄}
+
+17\hfill=\hfill\cvd[16]{84}{◌͏̄}
+
+18\hfill=\hfill\cvd[17]{84}{◌͏̄}
+
+19\hfill=\hfill\cvd[18]{84}{◌͏̄}
+
+20\hfill=\hfill\cvd[19]{84}{◌͏̄}
+
+21\hfill=\hfill\cvd[20]{84}{◌͏̄}
+
+22\hfill=\hfill\cvd[21]{84}{◌͏̄}
+
+23\hfill=\hfill\cvd[22]{84}{◌͏̄}
+
+24\hfill=\hfill\cvd[23]{84}{◌͏̄}
+
+25\hfill=\hfill\cvd[24]{84}{◌͏̄}
+
+26\hfill=\hfill\cvd[25]{84}{◌͏̄}
+
+27\hfill=\hfill\cvd[26]{84}{◌͏̄}
+
+28\hfill=\hfill\cvd[27]{84}{◌͏̄}
+
+29\hfill=\hfill\cvd[28]{84}{◌͏̄}
+
+30\hfill=\hfill\cvd[29]{84}{◌͏̄}
+
+31\hfill=\hfill\cvd[30]{84}{◌͏̄}
+
+32\hfill=\hfill\cvd[31]{84}{◌͏̄}
+
+33\hfill=\hfill\cvd[32]{84}{◌͏̄}
+
+34\hfill=\hfill\cvd[33]{84}{◌͏̄}
+
+35\hfill=\hfill\cvd[34]{84}{◌͏̄}
+
+36\hfill=\hfill\cvd[34]{84}{◌͏̄}
+
+37\hfill=\hfill\cvd[34]{84}{◌͏̄}
+\end{multicols}
+
+\subsection{\textSourceText{cv81} -- Variants of ◌͛ (\unic{U+035B}, combining
+zigzag above)}
+1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
+marks, e.g. \textex{b͛ f͛ d͛}. If \textSourceText{calt} ``Contextual Alternates'' is enabled (as it is by
+default in most apps), variant forms of \textSourceText{cv81[2]} will be used with several letters, e.g.
+\textex{\cvd[1]{81}{d͛ \ f͛ \ k͛}}. Enable \textSourceText{case} for forms that harmonize with capitals
+(\textex{\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}),
+\textSourceText{smcp} for forms that harmonize with small caps
+(\textex{\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}}).
+
+\subsection{\textSourceText{ss10} -- Character Entities for Combining Marks}\hypertarget{ss10}{}
+Instead of \textSourceText{\hyperlink{cv84}{cv84}} for representing non-Unicode combining marks, some users may
+wish to use XML/HTML-style entities. When \textSourceText{ss10} is turned on (preferably for the entire
+text), these entities appear as combining marks and are correctly positioned over base characters.
+For example, the letter \textex{e} followed by
+\textex{\&{\textcompwordmark}\_eogo;} will yield \textex{e\&\_eogo;}. An advantage of entities is that
+they are (unlike the PUA code points or the indexes of \textSourceText{cv84}) mnemonic and thus easy to use.
+A disadvantage is that
+searches cannot ignore combining marks entered by this method as they can using the \textSourceText{cv84} method.
+(Every method of entering non-Unicode combining marks has disadvantages: users should weigh these, choose a method,
+and stick with it.)
+
+If you use any of these entities in a work intended for print publication, you should call your publisher’s
+attention to them, since they will likely have their own method of representing them.
+
+\begin{multicols}{4}
+\color{RViolet}%
+% Some of the marks in this table are made with cv84. It appears that the
+% program may be calculating column width using the width of the unresolved
+% entity, and that is causing some cells to wrap. We use cv84 for those
+% cells.
+\&{\textcompwordmark}\_ansc;\hfill→\hfill\textstyleEntityRef{◌\&\_ansc;}
+
+\&{\textcompwordmark}\_an;\hfill→\hfill\textstyleEntityRef{◌\&\_an;}
+
+\&{\textcompwordmark}\_ar;\hfill→\hfill\textstyleEntityRef{◌\&\_ar;}
+
+\&{\textcompwordmark}\_arsc;\hfill→\hfill\textstyleEntityRef{◌\&\_arsc;}
+
+\&\_{\textcompwordmark}as;\hfill→\hfill\textstyleEntityRef{◌\&\_as;}
+
+\&{\textcompwordmark}\_bsc;\hfill→\hfill\textstyleEntityRef{◌\&\_bsc;}
+
+\&{\textcompwordmark}\_dsc;\hfill→\hfill\textstyleEntityRef{◌\&\_dsc;}
+
+\&{\textcompwordmark}\_eogo;\hfill→\hfill\textstyleEntityRef{◌\&\_eogo;}
+
+\&{\textcompwordmark}\_emac;\hfill→\hfill\cvd[12]{84}{◌\char"0304}
+
+\&\_{\textcompwordmark}idotl;\hfill→\hfill\textstyleEntityRef{◌\&\_idotl;}
+
+\&\_{\textcompwordmark}j;\hfill→\hfill\textstyleEntityRef{◌\&\_j;}
+
+\&\_{\textcompwordmark}jdotl;\hfill→\hfill\textstyleEntityRef{◌\&\_jdotl;}
+
+\&\_{\textcompwordmark}ksc;\hfill→\hfill\textstyleEntityRef{◌\&\_ksc;}
+
+{\narrow\&\_{\textcompwordmark}munc;\hfill→\hfill\cvd[18]{84}{◌\char"0304}}
+
+\&\_{\textcompwordmark}oogo;\hfill→\hfill\cvd[20]{84}{◌\char"0304}
+
+{\narrow\&\_{\textcompwordmark}oslash;\hfill→\hfill\cvd[21]{84}{◌\char"0304}}
+
+\&\_{\textcompwordmark}omac;\hfill→\hfill\cvd{84}{◌\char"0304}
+
+\&\_{\textcompwordmark}orr;\hfill→\hfill\textstyleEntityRef{◌\&\_orr;}
+
+\&\_{\textcompwordmark}oru;\hfill→\hfill\textstyleEntityRef{◌\&\_oru;}
+
+\&\_{\textcompwordmark}q;\hfill→\hfill\textstyleEntityRef{◌\&\_q;}
+
+\&\_{\textcompwordmark}ru;\hfill→\hfill\textstyleEntityRef{◌\&\_ru;}
+
+\&\_{\textcompwordmark}sa;\hfill→\hfill\textstyleEntityRef{◌\&\_sa;}
+
+\&\_{\textcompwordmark}tsc;\hfill→\hfill\textstyleEntityRef{◌\&\_tsc;}
+
+\&\_{\textcompwordmark}y;\hfill→\hfill\textstyleEntityRef{◌\&\_y;}
+
+{\narrow\&\_{\textcompwordmark}thorn;\hfill→\hfill\textstyleEntityRef{◌\&\_thorn;}}
+\end{multicols}
+
+\noindent For another function of Stylistic Set 10, see \hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
+
+\subsection{\textSourceText{ss20} -- Low Diacritics}
+The MUFI recommendation includes a number of precomposed characters with base letters
+{\addfontfeature{Language=Icelandic}b, h, k, {\th}, ꝺ and {\dh}} and a number of combining
+marks. Instead of being positioned above ascender height as usual (e.g.
+\textex{hͣ}), the MUFI glyphs have the marks positioned above the x-height
+(e.g. \textex{\addfontfeature{StylisticSet=20}hͣ}).
+Using the MUFI code points for these precomposed glyphs can interfere with searching
+and drastically reduce accessibility. Users of Junicode should instead use a sequence of base character + combining
+mark, and apply \textSourceText{ss20} to the two glyphs. Variant shapes of \textex{ꝺ} and \textex{{\dh}}
+that accommodate the combining mark will be substituted for the normal base characters (but this is not necessary for
+the other base characters). Examples:
+\textex{\addfontfeature{StylisticSet=20}bͦ ꝺᷦ \cvd[14]{84}{h̄} kͤ {\th}ͭ ðᷢ}. These marks are affected by this
+feature:
+
+\begin{multicols}{3}
+  \seminarrow\color{BrickRed}◌ͣ (\unic{U+0363})
+
+  ◌ᷓ (\unic{U+1DD3})
+
+  ◌ͤ (\unic{U+0364})
+
+  \cvd[14]{84}{◌͏̄} (\unic{U+0304}\slash\textSourceText{cv84[15]})
+
+  ◌ᷞ (\unic{U+1DDE})
+
+  \cvd[18]{84}{◌͏̄} (\unic{U+0304}\slash\textSourceText{cv84[19]}).
+
+  ◌ͦ (\unic{U+0366})
+
+  ◌ͬ (\unic{U+036C})
+
+  ◌ᷢ (\unic{U+1DE2})
+
+  ◌ᷣ (\unic{U+1DE3})
+
+  \cvd{87}{◌ᷣ} (\unic{U+1DE3}\slash\textSourceText{cv87[1]})
+
+  ◌ͭ (\unic{U+036D})
+
+  ◌ᫎ (\unic{U+1ACE})
+
+  ◌ͧ (\unic{U+0367})
+
+  ◌ͮ (\unic{U+036E})
+
+  ◌ᷦ (\unic{U+1DE6})
+
+  ◌͛ (\unic{U+035B})
+  \end{multicols}
+  
+\noindent\textSourceText{ss20} is intended for use only with the diacritics and base characters listed here; other
+base+diacritic combinations may be disrupted by the feature. You should therefore apply it only to
+relevant base+diacritic pairs (e.g. via a style in InDesign or a word processor or a command in
+{\LuaTeX}).
+
+
+
+\subsection{\textSourceText{cv85} -- Variant of ◌ᷓ (U+1DD3, combining open a)}
+1=\cvd{85}{◌ᷓ}.
+
+\subsection{\textSourceText{cv86} -- Variant of ◌ᷘ (\unic{U+1DD8}, combining insular
+d)}
+1=\cvd{86}{◌ᷘ}.
+
+\subsection{\textSourceText{cv87} -- Variant of ◌ᷣ (\unic{U+1DE3}, combining r rotunda)}
+1=\cvd{87}{◌ᷣ}.
+
+\subsection{\textSourceText{cv8}\textSourceText{8} -- Variant of combining dieresis (\unic{U+0308})}
+1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.
+\textex{\cvd{88}{\"a}}.
+
+\subsection{\textSourceText{cv89} -- Variant of ◌̅ (\unic{U+0305},
+combining overline)}
+1=\cvd{89}{◌̅}.
+
+\subsection{\textSourceText{cv}\textSourceText{90} -- Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}
+1=\cvd{90}{◌͞◌}, 2=\cvd[1]{90}{◌͞◌}.
+
+\subsection{\textSourceText{cv92} -- Variant of combining breve below (\unic{U+032E})}
+1=\cvd{92}{◌◌̮◌}. Position the mark after the middle of three glyphs, and apply \textSourceText{cv92}
+to both the mark and (at least) the middle glyph. This mark is not available via \textSourceText{cv84}.
+
+\section{Currency and Weights}
+\subsection{\textSourceText{cv93} -- Variants of {\textcurrency} (\unic{U+0044}, generic
+currency sign)}
+
+\begin{multicols}{6}
+\color{RViolet}1\hfill=\hfill\cvd{93}{\textcurrency}
+
+2\hfill=\hfill\cvd[1]{93}{\textcurrency}
+
+3\hfill=\hfill\cvd[2]{93}{\textcurrency}
+
+4\hfill=\hfill\cvd[3]{93}{\textcurrency}
+
+5\hfill=\hfill\cvd[4]{93}{\textcurrency}
+
+6\hfill=\hfill\cvd[5]{93}{\textcurrency}
+
+7\hfill=\hfill\cvd[6]{93}{\textcurrency}
+
+8\hfill=\hfill\cvd[7]{93}{\textcurrency}
+
+9\hfill=\hfill\cvd[8]{93}{\textcurrency}
+
+10\hfill=\hfill\cvd[9]{93}{\textcurrency}
+
+11\hfill=\hfill\cvd[10]{93}{\textcurrency}
+
+12\hfill=\hfill\cvd[11]{93}{\textcurrency}
+
+13\hfill=\hfill\cvd[12]{93}{\textcurrency}
+
+14\hfill=\hfill\cvd[13]{93}{\textcurrency}
+
+15\hfill=\hfill\cvd[14]{93}{\textcurrency}
+
+16\hfill=\hfill\cvd[15]{93}{\textcurrency}
+
+17\hfill=\hfill\cvd[16]{93}{\textcurrency}
+
+18\hfill=\hfill\cvd[17]{93}{\textcurrency}
+
+19\hfill=\hfill\cvd[18]{93}{\textcurrency}
+
+20\hfill=\hfill\cvd[19]{93}{\textcurrency}
+
+21\hfill=\hfill\cvd[20]{93}{\textcurrency}
+
+22\hfill=\hfill\cvd[21]{93}{\textcurrency}
+
+23\hfill=\hfill\cvd[22]{93}{\textcurrency}
+
+24\hfill=\hfill\cvd[23]{93}{\textcurrency}
+
+25\hfill=\hfill\cvd[24]{93}{\textcurrency}
+
+26\hfill=\hfill\cvd[25]{93}{\textcurrency}
+
+27\hfill=\hfill\cvd[26]{93}{\textcurrency}
+\end{multicols}
+
+\noindent All of MUFI’s currency and weight symbols (those that do
+not have Unicode code points) are gathered here, but some are also variants of other currency signs (see below).
+
+\subsection{\textSourceText{cv9}\textSourceText{4} -- Variant of ℔ (\unic{U+2114})}
+1=\cvd{94}{℔}. Same as MUFI \unic{U+F2EB} (French Libra sign).
+
+\subsection{\textSourceText{cv95} -- Variants of {\pounds} (\unic{U+00A3}, British pound sign)}
+1=\cvd{95}{\pounds}, 2=\cvd[1]{95}{\pounds}, 3=\cvd[2]{95}{\pounds}, 4=\cvd[3]{95}{\pounds},
+5=\cvd[4]{95}{\pounds}, 6=\cvd[5]{95}{\pounds}. Same as MUFI \unic{U+F2EA, F2EB, F2EC, F2ED,
+F2EE, F2EF}, pound signs from various locales.
+
+\subsection{\textSourceText{cv96} -- Variant of ₰ (\unic{U+20B0}, German penny sign)}
+1=\cvd{96}{₰}. Same as MUFI \unic{U+F2F5}.
+
+\subsection{\textSourceText{cv97} -- Variant of ƒ (\unic{U+0192}, florin)}
+1=\cvd{97}{ƒ}. Same as MUFI \unic{U+F2E8}.
+
+\subsection{\textSourceText{cv98} -- Variant of ℥ (\unic{U+2125}, Ounce sign)}
+1=\cvd{98}{℥}. Same as MUFI \unic{U+F2FD}, Script ounce sign.
+
+\section{Ornaments}
+\subsection{\textSourceText{ornm} -- Ornaments}\hypertarget{ornm}{}
+Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (\unic{U+2022}) or as
+variants of a-z, A-C:
+
+\begin{multicols}{4}
+a, 1{\tabto{4em}}\ornm{a}
+
+b, 2{\tabto{4em}}\ornm{b}
+
+c, 3{\tabto{4em}}\ornm{c}
+
+d, 4{\tabto{4em}}\ornm{d}
+
+e, 5{\tabto{4em}}\ornm{e}
+
+f, 6{\tabto{4em}}\ornm{f}
+
+g, 7{\tabto{4em}}\ornm{g}
+
+h, 8{\tabto{4em}}\ornm{h}
+
+i, 9{\tabto{4em}}\ornm{i}
+
+j, 10{\tabto{4em}}\ornm{j}
+
+k, 11{\tabto{4em}}\ornm{k}
+
+l, 12{\tabto{4em}}\ornm{l}
+
+m, 13{\tabto{4em}}\ornm{m}
+
+n, 14{\tabto{4em}}\ornm{n}
+
+o, 15{\tabto{4em}}\ornm{o}
+
+p, 16{\tabto{4em}}\ornm{p}
+
+q, 17{\tabto{4em}}\ornm{q}
+
+r, 18{\tabto{4em}}\ornm{r}
+
+s, 19{\tabto{4em}}\ornm{s}
+
+t, 20{\tabto{4em}}\ornm{t}
+
+u, 21{\tabto{4em}}\ornm{u}
+
+v, 22{\tabto{4em}}\ornm{v}
+
+w, 23{\tabto{4em}}\ornm{w}
+
+x, 24{\tabto{4em}}\ornm{x}
+
+y, 25{\tabto{4em}}\ornm{y}
+
+z, 26{\tabto{4em}}\ornm{z}
+
+A, 27{\tabto{4em}}\ornm{A}
+
+B, 28{\tabto{4em}}\ornm{B}
+
+C, 29{\tabto{4em}}\ornm{C}
+\end{multicols}
+
+\noindent The method with letters of the alphabet is easier, but the method with bullets will produce a more satisfactory result
+when text is displayed in an environment where Junicode is not available or \textSourceText{ornm} is not
+implemented.
+
+\subsection{Lady Junicode}
+Lady Junicode cannot be produced by an OpenType feature, believing that it would be vulgar to make herself so accessible. She has, indeed,
+commanded that the author of this document not publish her code point, located in one of the more private corners of the 
+Private Use Area. She has, however, given permission to publish her miniature:
+\begin{center}
+{\huge\char"0F19F}
+\end{center}
+If you encounter her while adventuring in her domains, greet her respectfully, and she will welcome you graciously.
+
+\section{Required Features}\hypertarget{req}{}
 Required features, which provide some of the font’s most basic functionality---ligatures, support for
 other features, kerning, and more---include \textSourceText{ccmp} (Glyph Composition/Decomposition),
 \textSourceText{calt} (Contextual Alternates), \textSourceText{liga} (Standard Ligatures),

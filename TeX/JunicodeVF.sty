@@ -1,0 +1,724 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{JunicodeVF}[2023/11/24 (Peter Baker) Supports Junicode VF (2.204 and up) variable fonts for LuaLaTeX.]
+
+\RequirePackage{ifluatex,xkeyval,fontspec}
+
+\RequireLuaTeX
+
+% Figures: default is OldStyle Proportional
+
+\newif\ifjunicode@lining \junicode@liningfalse
+\newif\ifjunicode@tabular \junicode@tabularfalse
+
+\DeclareOptionX{lining}{\junicode@liningtrue}
+\DeclareOptionX{tabular}{\junicode@tabulartrue}
+\DeclareOptionX{proportional}{\junicode@tabularfalse}
+\DeclareOptionX{oldstyle}{\junicode@liningfalse}
+
+% Defaults for the four standard styles
+
+\newcommand{\MainRegDef}{}
+
+\newcommand{\MainRegSizeDef}{
+    SizeFeatures={
+        {Size={-8.5},        RawFeature={axis={wght=490,wdth=115}}},
+        {Size={8.5-10.99},   RawFeature={axis={wght=440,wdth=107.5}}},
+        {Size={10.99-17.99}, RawFeature={axis={wght=390,wdth=100}}},
+        {Size={17.99-23.99}, RawFeature={axis={wght=370,wdth=95}}},
+        {Size={23.99-},      RawFeature={axis={wght=350,wdth=90}}}
+    }
+}
+
+\newcommand{\MainItalicDef}{}
+
+\newcommand{\MainItalicSizeDef}{
+    SizeFeatures={
+        {Size={-8.5},        RawFeature={axis={wght=525,wdth=115}}},
+        {Size={8.5-10.99},   RawFeature={axis={wght=475,wdth=107.5}}},
+        {Size={10.99-17.99}, RawFeature={axis={wght=425,wdth=100}}},
+        {Size={17.99-23.99}, RawFeature={axis={wght=370,wdth=95}}},
+        {Size={23.99-},      RawFeature={axis={wght=350,wdth=90}}}
+    }
+}
+
+\newcommand{\MainBoldDef}{}
+
+\newcommand{\MainBoldSizeDef}{
+    SizeFeatures={
+        {Size={-8.5},        RawFeature={axis={wght=700,wdth=115}}},
+        {Size={8.5-10.99},   RawFeature={axis={wght=700,wdth=107.5}}},
+        {Size={10.99-17.99}, RawFeature={axis={wght=650,wdth=100}}},
+        {Size={17.99-23.99}, RawFeature={axis={wght=650,wdth=95}}},
+        {Size={23.99-},      RawFeature={axis={wght=600,wdth=90}}}
+    }
+}
+
+\newcommand{\MainBoldItalicDef}{}
+
+\newcommand{\MainBoldItalicSizeDef}{
+    SizeFeatures={
+        {Size={-8.5},        RawFeature={axis={wght=700,wdth=115}}},
+        {Size={8.5-10.99},   RawFeature={axis={wght=700,wdth=107.5}}},
+        {Size={10.99-17.99}, RawFeature={axis={wght=650,wdth=100}}},
+        {Size={17.99-23.99}, RawFeature={axis={wght=650,wdth=95}}},
+        {Size={23.99-},      RawFeature={axis={wght=600,wdth=90}}}
+      }  
+}
+
+% These empty commands are for adding features: \MainDef to the four styles
+% of the main text font, the others for the alternate styles.
+
+\newcommand{\MainDef}{}
+
+\newcommand{\RegDef}{}
+
+\newcommand{\CondDef}{}
+
+\newcommand{\SmCondDef}{}
+
+\newcommand{\SmExpDef}{}
+
+\newcommand{\ExpDef}{}
+
+
+\newcommand{\LtDef}{}
+
+\newcommand{\LtCondDef}{}
+
+\newcommand{\LtSmCondDef}{}
+
+\newcommand{\LtSmExpDef}{}
+
+\newcommand{\LtExpDef}{}
+
+
+\newcommand{\MmDef}{}
+
+\newcommand{\MmCondDef}{}
+
+\newcommand{\MmSmCondDef}{}
+
+\newcommand{\MmSmExpDef}{}
+
+\newcommand{\MmExpDef}{}
+
+
+\newcommand{\SmBdDef}{}
+
+\newcommand{\SmBdCondDef}{}
+
+\newcommand{\SmBdSmCondDef}{}
+
+\newcommand{\SmBdSmExpDef}{}
+
+\newcommand{\SmBdExpDef}{}
+
+
+\newcommand{\BdDef}{}
+
+\newcommand{\BdCondDef}{}
+
+\newcommand{\BdSmCondDef}{}
+
+\newcommand{\BdSmExpDef}{}
+
+\newcommand{\BdExpDef}{}
+
+% The SizeDef commands store the defaults for each of the alternate styles.
+
+\newcommand{\RegSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100}}}}}
+
+\newcommand{\CondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=75}}}}}
+
+\newcommand{\SmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=87.5}}}}}
+
+\newcommand{\SmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=112.5}}}}}
+
+\newcommand{\ExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=125}}}}}
+
+
+\newcommand{\LtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=100}}}}}
+
+\newcommand{\LtCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=75}}}}}
+
+\newcommand{\LtSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=87.5}}}}}
+
+\newcommand{\LtSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=112.5}}}}}
+
+\newcommand{\LtExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=125}}}}}
+
+
+\newcommand{\MmSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=100}}}}}
+
+\newcommand{\MmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=75}}}}}
+
+\newcommand{\MmSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=87.5}}}}}
+
+\newcommand{\MmSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=112.5}}}}}
+
+\newcommand{\MmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=125}}}}}
+
+
+\newcommand{\SmBdSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=100}}}}}
+
+\newcommand{\SmBdCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=75}}}}}
+
+\newcommand{\SmBdSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=87.5}}}}}
+
+\newcommand{\SmBdSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=112.5}}}}}
+
+\newcommand{\SmBdExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=125}}}}}
+
+
+\newcommand{\BdSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=100}}}}}
+
+\newcommand{\BdCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=75}}}}}
+
+\newcommand{\BdSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=87.5}}}}}
+
+\newcommand{\BdSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=112.5}}}}}
+
+\newcommand{\BdExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=125}}}}}
+
+
+\newcommand{\ENLAOneDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=32}}}}}
+
+\newcommand{\ENLATwoDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=47}}}}}
+
+\newcommand{\ENLAThreeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=75}}}}}
+
+\newcommand{\ENLAFourDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=100}}}}}
+
+
+\DeclareOptionX{MainFeatures}{\renewcommand*{\MainDef}{#1}}
+
+\DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
+
+\DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
+
+\DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
+
+\DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
+
+
+%\DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
+
+%\DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
+
+%\DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
+
+%\DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
+
+
+\DeclareOptionX{MainRegularSizeFeatures}{\renewcommand*{\MainRegSizeDef}{#1}}
+
+\DeclareOptionX{MainItalicSizeFeatures}{\renewcommand*{\MainItalicSizeDef}{#1}}
+
+\DeclareOptionX{MainBoldSizeFeatures}{\renewcommand*{\MainBoldSizeDef}{#1}}
+
+\DeclareOptionX{MainBoldItalicSizeFeatures}{\renewcommand*{\MainBoldItalicSizeDef}{#1}}
+
+% Alternate styles
+
+\DeclareOptionX{RegularFeatures}{\renewcommand*{\RegDef}{#1,}}
+
+\DeclareOptionX{CondFeatures}{\renewcommand*{\CondDef}{#1,}}
+
+\DeclareOptionX{SmCondFeatures}{\renewcommand*{\SmCondDef}{#1,}}
+
+\DeclareOptionX{SmExpFeatures}{\renewcommand*{\SmExpDef}{#1,}}
+
+\DeclareOptionX{ExpFeatures}{\renewcommand*{\ExpDef}{#1,}}
+
+
+\DeclareOptionX{LightFeatures}{\renewcommand*{\LtDef}{#1,}}
+
+\DeclareOptionX{LightCondFeatures}{\renewcommand*{\LtCondDef}{#1,}}
+
+\DeclareOptionX{LightSmCondFeatures}{\renewcommand*{\LtSmCondDef}{#1,}}
+
+\DeclareOptionX{LighttSmExpFeatures}{\renewcommand*{\LtSmExpDef}{#1,}}
+
+\DeclareOptionX{LightExpFeatures}{\renewcommand*{\LtExpDef}{#1,}}
+
+
+\DeclareOptionX{MediumFeatures}{\renewcommand*{\MmDef}{#1,}}
+
+\DeclareOptionX{MediumCondFeatures}{\renewcommand*{\MmCondDef}{#1,}}
+
+\DeclareOptionX{MediumSmCondFeatures}MmSmCondDef{\renewcommand*{\MmSmCondDef}{#1,}}
+
+\DeclareOptionX{MediumSmExpFeatures}{\renewcommand*{\MmSmExpDef}{#1,}}
+
+\DeclareOptionX{MediumExpFeatures}{\renewcommand*{\MmExpDef}{#1,}}
+
+
+\DeclareOptionX{SmBoldFeatures}{\renewcommand*{\SmBdDef}{#1,}}
+
+\DeclareOptionX{SmBoldCondFeatures}{\renewcommand*{\SmBdCondDef}{#1,}}
+
+\DeclareOptionX{SmBoldSmCondFeatures}{\renewcommand*{\SmBdSmCondDef}{#1,}}
+
+\DeclareOptionX{SmBoldSmExpFeatures}{\renewcommand*{\SmBdSmExpDef}{#1,}}
+
+\DeclareOptionX{SmBoldExpFeatures}{\renewcommand*{\SmBdExpDef}{#1,}}
+
+
+\DeclareOptionX{BoldFeatures}{\renewcommand*{\BdDef}{#1,}}
+
+\DeclareOptionX{BoldCondFeatures}{\renewcommand*{\BdCondDef}{#1,}}
+
+\DeclareOptionX{BoldSmCondFeatures}{\renewcommand*{\BdSmCondDef}{#1,}}
+
+\DeclareOptionX{BoldSmExpFeatures}{\renewcommand*{\BdSmExpDef}{#1,}}
+
+\DeclareOptionX{BoldExpFeatures}{\renewcommand*{\BdExpDef}{#1,}}
+
+% Alternate style size features
+
+\DeclareOptionX{CondSizeFeatures}{\renewcommand*{\CondSizeDef}{#1}}
+
+\DeclareOptionX{SmCondSizeFeatures}{\renewcommand*{\SmCondSizeDef}{#1}}
+
+\DeclareOptionX{SmExpSizeFeatures}{\renewcommand*{\SmExpSizeDef}{#1}}
+
+\DeclareOptionX{ExpSizeFeatures}{\renewcommand*{\ExpSizeDef}{#1}}
+
+
+\DeclareOptionX{LightSizeFeatures}{\renewcommand*{\LtSizeDef}{#1}}
+
+\DeclareOptionX{LightCondSizeFeatures}{\renewcommand*{\LtCondSizeDef}{#1}}
+
+\DeclareOptionX{LightSmCondSizeFeatures}{\renewcommand*{\LtSmCondSizeDef}{#1}}
+
+\DeclareOptionX{LighttSmExpSizeFeatures}{\renewcommand*{\LtSmExpSizeDef}{#1}}
+
+\DeclareOptionX{LightExpSizeFeatures}{\renewcommand*{\LtExpSizeDef}{#1}}
+
+
+\DeclareOptionX{MediumSizeFeatures}{\renewcommand*{\MmSizeDef}{#1}}
+
+\DeclareOptionX{MediumCondSizeFeatures}{\renewcommand*{\MmCondSizeDef}{#1}}
+
+\DeclareOptionX{MediumSmCondSizeFeatures}{\renewcommand*{\MmSmCondSizeDef}{#1}}
+
+\DeclareOptionX{MediumSmExpSizeFeatures}{\renewcommand*{\MmSmExpSizeDef}{#1}}
+
+\DeclareOptionX{MediumExpSizeFeatures}{\renewcommand*{\MmExpSizeDef}{#1}}
+
+
+\DeclareOptionX{SmBoldSizeFeatures}{\renewcommand*{\SmBdSizeDef}{#1}}
+
+\DeclareOptionX{SmBoldCondSizeFeatures}{\renewcommand*{\SmBdCondSizeDef}{#1}}
+
+\DeclareOptionX{SmBoldSmCondSizeFeatures}{\renewcommand*{\SmBdSmCondSizeDef}{#1}}
+
+\DeclareOptionX{SmBoldSmExpSizeFeatures}{\renewcommand*{\SmBdSmExpSizeDef}{#1}}
+
+\DeclareOptionX{SmBoldExpSizeFeatures}{\renewcommand*{\SmBdExpSizeDef}{#1}}
+
+
+\DeclareOptionX{BoldSizeFeatures}{\renewcommand*{\BdSizeDef}{#1}}
+
+\DeclareOptionX{BoldCondSizeFeatures}{\renewcommand*{\BdCondSizeDef}{#1}}
+
+\DeclareOptionX{BoldSmCondSizeFeatures}{\renewcommand*{\BdSmCondSizeDef}{#1}}
+
+\DeclareOptionX{BoldSmExpSizeFeatures}{\renewcommand*{\BdSmExpSizeDef}{#1}}
+
+\DeclareOptionX{BoldExpSizeFeatures}{\renewcommand*{\BdExpSizeDef}{#1}}
+
+
+
+\DeclareOptionX{ENLAOneFeatures}{\renewcommand*{\ENLAOneDef}{#1}}
+
+\DeclareOptionX{ENLATwoFeatures}{\renewcommand*{\ENLATwoDef}{#1}}
+
+\DeclareOptionX{ENLAThreeFeatures}{\renewcommand*{\ENLAThreeDef}{#1}}
+
+\DeclareOptionX{ENLAFourFeatures}{\renewcommand*{\ENLAThreeDef}{#1}}
+
+
+\DeclareOptionX*{\PackageWarning{JunicodeVF}{Unknown option `\CurrentOption' ignored}}
+\ProcessOptionsX\relax
+
+% Number strings for fontspec.
+
+\def\junicode@figurestyle{Lowercase}
+\ifjunicode@lining\def\junicode@figurestyle{Uppercase}\fi
+\def\junicode@figurealign{Proportional}
+\ifjunicode@tabular\def\junicode@figurealign{Monospaced}\fi
+
+% \RequirePackage{fontspec}
+
+\typeout{\RegDef}
+
+\setmainfont{Junicode VF}[
+    ItalicFont =         {*-Italic},
+    BoldFont =           {*},
+    BoldItalicFont =     {*-Italic},
+    Renderer =           HarfBuzz,
+    Numbers =            {\junicode@figurealign,\junicode@figurestyle},
+    \MainDef,
+    UprightFeatures =    {\MainRegDef
+                          \MainRegSizeDef},
+    BoldFeatures =       {\MainBoldDef
+                          \MainBoldSizeDef},
+    ItalicFeatures =     {\MainItalicDef
+                          \MainItalicSizeDef},
+    BoldItalicFeatures = {\MainBoldItalicDef
+                          \MainBoldItalicSizeDef}
+]
+
+\newcommand{\junicodevf@newfont}[4]{
+    \setfontface#1{#2}[
+        Renderer =          HarfBuzz,
+        Numbers =           {\junicode@figurealign,\junicode@figurestyle},
+        SmallCapsFont =     {*},
+        SmallCapsFeatures = {Letters=SmallCaps},
+        #3
+        #4
+    ]
+}
+
+\junicodevf@newfont{\jRegular}{JunicodeVF}{\RegDef}{\RegSizeDef}
+
+\junicodevf@newfont{\jItalic}{JunicodeVF-Italic}{\RegDef}{\RegSizeDef}
+
+\junicodevf@newfont{\jCond}{JunicodeVF}{\CondDef}{\CondSizeDef}
+
+\junicodevf@newfont{\jCondItalic}{JunicodeVF-Italic}{\CondDef}{\CondSizeDef}
+
+\junicodevf@newfont{\jSmCond}{JunicodeVF}{\SmCondDef}{\SmCondSizeDef}
+
+\junicodevf@newfont{\jSmCondItalic}{JunicodeVF-Italic}{\SmCondDef}{\SmCondSizeDef}
+
+\junicodevf@newfont{\jSmExp}{JunicodeVF}{\SmExpDef}{\SmExpSizeDef}
+
+\junicodevf@newfont{\jSmExpItalic}{JunicodeVF-Italic}{\SmExpDef}{\SmExpSizeDef}
+
+\junicodevf@newfont{\jExp}{JunicodeVF}{\ExpDef}{\ExpSizeDef}
+
+\junicodevf@newfont{\jExpItalic}{JunicodeVF-Italic}{\ExpDef}{\ExpSizeDef}
+
+% Light faces
+
+\junicodevf@newfont{\jLight}{JunicodeVF}{\LtDef}{\LtSizeDef}
+
+\junicodevf@newfont{\jLightItalic}{JunicodeVF-Italic}{\LtDef}{\LtSizeDef}
+
+\junicodevf@newfont{\jLightCond}{JunicodeVF}{\LtCondDef}{\LtCondSizeDef}
+
+\junicodevf@newfont{\jLightCondItalic}{JunicodeVF-Italic}{\LtCondDef}{\LtCondSizeDef}
+
+\junicodevf@newfont{\jLightSmCond}{JunicodeVF}{\LtSmCondDef}{\LtSmCondSizeDef}
+
+\junicodevf@newfont{\jLightSmCondItalic}{JunicodeVF-Italic}{\LtSmCondDef}{\LtSmCondSizeDef}
+
+\junicodevf@newfont{\jLightSmExp}{JunicodeVF}{\LtSmExpDef}{\LtSmExpSizeDef}
+
+\junicodevf@newfont{\jLightSmExpItalic}{JunicodeVF-Italic}{\LtSmExpDef}{\LtSmExpSizeDef}
+
+\junicodevf@newfont{\jLightExp}{JunicodeVF}{\LtExpDef}{\LtExpSizeDef}
+
+\junicodevf@newfont{\jLightExpItalic}{JunicodeVF-Italic}{\LtExpDef}{\LtExpSizeDef}
+
+% Medium faces
+
+\junicodevf@newfont{\jMedium}{JunicodeVF}{\MmDef}{\MmSizeDef}
+
+\junicodevf@newfont{\jMediumItalic}{JunicodeVF-Italic}{\MmDef}{\MmSizeDef}
+
+\junicodevf@newfont{\jMediumCond}{JunicodeVF}{\MmCondDef}{\MmCondSizeDef}
+
+\junicodevf@newfont{\jMediumCond}{JunicodeVF-Italic}{\MmCondDef}{\MmCondSizeDef}
+
+\junicodevf@newfont{\jMediumSmCond}{JunicodeVF}{\MmSmCondDef}{\MmSmCondSizeDef}
+
+\junicodevf@newfont{\jMediumSmCondItalic}{JunicodeVF-Italic}{\MmSmCondDef}{\MmSmCondSizeDef}
+
+\junicodevf@newfont{\jMediumSmExp}{JunicodeVF}{\MmSmExpDef}{\MmSmExpSizeDef}
+
+\junicodevf@newfont{\jMediumSmExpItalic}{JunicodeVF-Italic}{\MmSmExpDef}{\MmSmExpSizeDef}
+
+\junicodevf@newfont{\jMediumExp}{JunicodeVF}{\MmExpDef}{\MmExpSizeDef}
+
+\junicodevf@newfont{\jMediumExpItalic}{JunicodeVF-Italic}{\MmExpDef}{\MmExpSizeDef}
+
+% Semibold faces
+
+\junicodevf@newfont{\jSmbold}{JunicodeVF}{\SmBdDef}{\SmBdSizeDef}
+
+\junicodevf@newfont{\jSmboldItalic}{JunicodeVF-Italic}{\SmBdDef}{\SmBdSizeDef}
+
+\junicodevf@newfont{\jSmboldCond}{JunicodeVF}{\SmBdCondDef}{\SmBdCondSizeDef}
+
+\junicodevf@newfont{\jSmboldCondItalic}{JunicodeVF-Italic}{\SmBdCondDef}{\SmBdCondSizeDef}
+
+\junicodevf@newfont{\jSmboldSmCond}{JunicodeVF}{\SmBdSmCondDef}{\SmBdSmCondSizeDef}
+
+\junicodevf@newfont{\jSmboldSmCondItalic}{JunicodeVF-Italic}{\SmBdSmCondDef}{\SmBdSmCondSizeDef}
+
+\junicodevf@newfont{\jSmboldSmExp}{JunicodeVF}{\SmBdSmExpDef}{\SmBdSmExpSizeDef}
+
+\junicodevf@newfont{\jSmboldSmExpItalic}{JunicodeVF-Italic}{\SmBdSmExpDef}{\SmBdSmExpSizeDef}
+
+\junicodevf@newfont{\jSmboldExp}{JunicodeVF}{\SmBdExpDef}{\SmBdExpSizeDef}
+
+\junicodevf@newfont{\jSmboldExpItalic}{JunicodeVF-Italic}{\SmBdExpDef}{\SmBdExpSizeDef}
+
+% Bold faces
+
+\junicodevf@newfont{\jBold}{JunicodeVF}{\BdDef}{\BdSizeDef}
+
+\junicodevf@newfont{\jBoldItalic}{JunicodeVF-Italic}{\BdDef}{\BdSizeDef}
+
+\junicodevf@newfont{\jBoldCond}{JunicodeVF}{\BdCondDef}{\BdCondSizeDef}
+
+\junicodevf@newfont{\jBoldCondItalic}{JunicodeVF-Italic}{\BdCondDef}{\BdCondSizeDef}
+
+\junicodevf@newfont{\jBoldSmCond}{JunicodeVF}{\BdSmCondDef}{\BdSmCondSizeDef}
+
+\junicodevf@newfont{\jBoldSmCondItalic}{JunicodeVF-Italic}{\BdSmCondDef}{\BdSmCondSizeDef}
+
+\junicodevf@newfont{\jBoldSmExp}{JunicodeVF}{\BdSmExpDef}{\BdSmExpSizeDef}
+
+\junicodevf@newfont{\jBoldSmExpItalic}{JunicodeVF-Italic}{\BdSmExpDef}{\BdSmExpSizeDef}
+
+\junicodevf@newfont{\jBoldExp}{JunicodeVF}{\BdExpDef}{\BdExpSizeDef}
+
+\junicodevf@newfont{\jBoldExpItalic}{JunicodeVF-Italic}{\BdExpDef}{\BdExpSizeDef}
+
+% Enlarged faces
+
+\setfontface\EnlargedOne{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLAOneDef
+]
+
+\setfontface\EnlargedOneItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLAOneDef
+]
+
+\setfontface\EnlargedTwo{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLATwoDef
+]
+
+\setfontface\EnlargedTwoItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLATwoDef
+]
+
+\setfontface\EnlargedThree{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLAThreeDef
+]
+
+\setfontface\EnlargedThreeItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLAThreeDef
+]
+
+%\setfontface\EnlargedFour{JunicodeVF}[
+%    Renderer = HarfBuzz,
+%    \ENLAThreeDef
+%]
+
+%\setfontface\EnlargedFourItalic{JunicodeVF-Italic}[
+%    Renderer = HarfBuzz,
+%    \ENLAThreeDef
+%]
+
+
+% Convenience commands for non-verbose access to the cvNN features.
+% See also the "jcv" mnemonics below.
+
+\newcommand{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+
+\newcommand{\jcv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
+
+% Convenience commands for accessing the Stylistic Sets. These are
+% intended to be mnemonic.
+
+\newcommand{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
+
+\newcommand{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
+
+\newcommand{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
+
+\newcommand{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
+
+\newcommand{\IPAAlternates}{\addfontfeature{StylisticSet=3}} % ss03
+
+\newcommand{\textIPAAlternates}[1]{{\addfontfeature{StylisticSet=3}#1}}
+
+\newcommand{\HighOverline}{\addfontfeature{StylisticSet=4}} % ss04
+
+\newcommand{\textHighOverline}[1]{{\addfontfeature{StylisticSet=4}#1}}
+
+\newcommand{\MediumHighOverline}{\addfontfeature{StylisticSet=5}} % ss05
+
+\newcommand{\textMediumHighOverline}[1]{{\addfontfeature{StylisticSet=5}#1}}
+
+\newcommand{\EnlargedMinuscules}{\addfontfeature{StylisticSet=6}} % ss06
+
+\newcommand{\textEnlargedMinuscules}[1]{\addfontfeature{{StylisticSet=6}#1}}
+
+\newcommand{\Underdotted}{\addfontfeature{StylisticSet=7}} % ss07
+
+\newcommand{\textUnderdotted}[1]{{\addfontfeature{StylisticSet=7}#1}}
+
+\newcommand{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
+
+\newcommand{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
+
+\newcommand{\AlternateFigures}{\addfontfeature{StylisticSet=9}} % ss09
+
+\newcommand{\textAlternateFigures}[1]{{\addfontfeature{StylisticSet=9}#1}}
+
+\newcommand{\EntitiesAndTags}{\addfontfeature{StylisticSet=10}} % ss10
+
+\newcommand{\textEntitiesAndTags}[1]{{\addfontfeature{StylisticSet=10}#1}}
+
+% \newcommand{\}{} % ss11 not yet used
+
+\newcommand{\EarlyEnglishFuthorc}{\addfontfeature{StylisticSet=12}} % ss12
+
+\newcommand{\textEarlyEnglishFuthorc}[1]{{\addfontfeature{StylisticSet=12}#1}}
+
+\newcommand{\ElderFuthark}{\addfontfeature{StylisticSet=13}} % ss13
+
+\newcommand{\textElderFuthark}[1]{{\addfontfeature{StylisticSet=13}#1}}
+
+\newcommand{\YoungerFuthark}{\addfontfeature{StylisticSet=14}} % ss14
+
+\newcommand{\textYoungerFuthark}[1]{{\addfontfeature{StylisticSet=14}#1}}
+
+\newcommand{\LongBranchToShortTwig}{\addfontfeature{StylisticSet=15}} % ss15
+
+\newcommand{\textLongBranchToShortTwig}[1]{{\addfontfeature{StylisticSet=15}#1}}
+
+\newcommand{\ContextualRRotunda}{\addfontfeature{StylisticSet=16}} % ss16
+
+\newcommand{\textContextualRRotunda}[1]{{\addfontfeature{StylisticSet=16}#1}}
+
+\newcommand{\RareDigraphs}{\addfontfeature{StylisticSet=17}} % ss17
+
+\newcommand{\textRareDigraphs}[1]{{\addfontfeature{StylisticSet=17}#1}}
+
+\newcommand{\OldStylePunctuation}{\addfontfeature{StylisticSet=18}} % ss18
+
+\newcommand{\textOldStylePunctuation}[1]{{\addfontfeature{StylisticSet=18}#1}}
+
+\newcommand{\LatinToGothic}{\addfontfeature{StylisticSet=19}} % ss19
+
+\newcommand{\textLatinToGothic}[1]{{\addfontfeature{StylisticSet=19}#1}}
+
+\newcommand{\LowDiacritics}{\addfontfeature{StylisticSet=20}} % ss20
+
+\newcommand{\textLowDiacritics}[1]{{\addfontfeature{StylisticSet=20}#1}}
+
+% Tiny macros for providing mnemonic access to the cvNN features.
+
+\def\jcvA{1}
+\def\jcva{2}
+\def\jcvB{3}
+\def\jcvb{4}
+\def\jcvC{5}
+\def\jcvc{6}
+\def\jcvD{7}
+\def\jcvd{8}
+\def\jcvE{9}
+\def\jcve{10}
+\def\jcvF{11}
+\def\jcvf{12}
+\def\jcvG{13}
+\def\jcvg{14}
+\def\jcvH{15}
+\def\jcvh{16}
+\def\jcvI{17}
+\def\jcvi{18}
+\def\jcvJ{19}
+\def\jcvj{20}
+\def\jcvK{21}
+\def\jcvk{22}
+\def\jcvL{23}
+\def\jcvl{24}
+\def\jcvM{25}
+\def\jcvm{26}
+\def\jcvN{27}
+\def\jcvn{28}
+\def\jcvO{29}
+\def\jcvo{30}
+\def\jcvP{31}
+\def\jcvp{32}
+\def\jcvQ{33}
+\def\jcvq{34}
+\def\jcvR{35}
+\def\jcvr{36}
+\def\jcvS{37}
+\def\jcvs{38}
+\def\jcvT{39}
+\def\jcvt{40}
+\def\jcvU{41}
+\def\jcvu{42}
+\def\jcvV{43}
+\def\jcvv{44}
+\def\jcvW{45}
+\def\jcvw{46}
+\def\jcvX{47}
+\def\jcvx{48}
+\def\jcvY{49}
+\def\jcvy{50}
+\def\jcvZ{51}
+\def\jcvz{52}
+\def\jcvAogonek{53}
+\def\jcvaogonek{54}
+\def\jcvaa{55}
+\def\jcvAE{56}
+\def\jcvae{57}
+\def\jcvAO{58}
+\def\jcvao{59}
+\def\jcvav{60}
+\def\jcvdbar{61}
+\def\jcvdcroat{61}
+\def\jcvEogonek{62}
+\def\jcvYogh{63}
+\def\jcvlhighstroke{64} %somehow escaped the documentation
+\def\jcvoPolish{65}
+\def\jcvthorncrossed{66}
+\def\jcvspacingzigzag{67}
+\def\jcvglottal{68}
+\def\jcvTironianEt{69}
+\def\jcvperiod{70}
+\def\jcvmiddot{71}
+\def\jcvcomma{72}
+\def\jcvsemicolon{73}
+\def\jcvpunctuselevatus{74}
+\def\jcvexclam{75}
+\def\jcvquestion{76}
+\def\jcvASCIItilde{77}
+\def\jcvasterisk{78}
+\def\jcvslash{79}
+\def\jcvrum{80}
+\def\jcvcombiningzigzag{81}
+\def\jcvspacingusabbrev{82}
+\def\jcvetabbrev{83}
+\def\jcvmacron{84}
+\def\jcvcombiningopena{85}
+\def\jcvcombininginsulard{86}
+\def\jcvcombiningrrotunda{87}
+\def\jcvcombiningdieresis{88}
+\def\jcvcombiningoverline{89}
+\def\jcvHcombiningdoublemacron{90}
+\def\jcvEng{91}
+\def\jcvbrevebelow{92}
+\def\jcvcurrency{93}
+\def\jcvlb{94}
+\def\jcvsterling{95}
+\def\jcvGermanpenny{96}
+\def\jcvflorin{97}
+\def\jcvounce{98}
+%\def\notyetused{99}

@@ -1,0 +1,588 @@
+\documentclass[12pt]{article}
+
+
+%\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{supertabular}
+\usepackage[table,dvipsnames]{xcolor}
+%\usepackage{metalogo}
+%\newcommand{\ltech}{Lua\kern-1.5pt\TeX}
+%\newcommand{\lltech}{Lua\LaTeX}
+\newcommand{\ltech}{LuaTeX}
+\newcommand{\lltech}{LuaLaTeX}
+\definecolor{myLightBlue}{RGB}{203,228,249}
+\newcommand{\bluerow}{\rowcolor{myLightBlue}}
+
+\newcommand{\SizeRecord}[3]{{Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}}
+\usepackage[
+    MainFeatures={StylisticSet=9}
+]{JunicodeVF}
+\linespread{1.1}
+\title{Junicode VF}
+\author{Peter S. Baker}
+\date{\today}
+
+\tolerance=1500
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This package supports Junicode VF, the variable \textbf{version} of Junicode
+(2.204 or higher) for \lltech. Junicode VF is not yet in CTAN, so you must
+install the font in your system in order to use it. This package loads
+fontspec, so it is not necessary to load that package separately, even if you are using
+other fonts alongside Junicode VF.
+
+\section{Loading JunicodeVF}
+
+Load the package in the usual way, with {\small\verb|\usepackage{JunicodeVF}|}.
+By default, the main font is not a set of fixed outlines that can change only
+by being scaled, but rather a set of
+\emph{variable} outlines where glyphs sized for footnotes (typically about 8 points) are a
+little heavier and wider than glyphs sized for block quotations (10 points),
+those are heavier and wider than glyphs for the main
+text (11 or 12 points), and those are heavier and wider
+than glyphs for headers (18 points and higher):\\[0.5ex]
+
+\noindent {\footnotesize This text is for footnotes,}\\
+{\small this is for block quotations,}\\
+this is for main text,\\[0.2ex]
+{\Large and this is for headers.}\\[0.5ex]
+
+\noindent It's not easy to see the difference between sizes in a brief example
+like this one, but the effect is to promote legibility at small
+sizes and prevent text blocks from looking
+either darker or lighter than the main text on a page.\footnote{%
+For example, on a typical LaTeX page a footnote like this, looked at as a block
+of gray, is usually a little lighter than the main text. But on this page, the
+“color” of the footnote matches that of the main text. The variation in glyph
+shape responsible for this effect approximates the way letters in metal type were
+typically wider and heavier at small sizes.} If the package's default settings
+don't work for you, you can substitute your own, as explained below.
+
+The {\small\verb|\usepackage|} command for this package can take many options,
+which will be discussed in the appropriate sections below. However, the
+package will work perfectly well with no options at all.
+
+\section{Customizing Numbers}
+
+Junicode's default numbers are \textbf{oldstyle proportional} (1234). You can change this
+default for the entire document with either or both of the options \textbf{lining} and
+\textbf{tabular}:
+
+\begin{center}
+    {\small\verb|\usepackage[lining,tabular]{JunicodeVF}|}
+\end{center}
+
+\noindent You can pass other options affecting the numbers of the four standard
+styles (Regular, Italic, Bold, Bold Italic) of the main text font via the
+\textbf{MainFeatures} option:
+
+\begin{center}
+    {\small\verb|\usepackage[MainFeatures={StylisticSet=9}]{JunicodeVF}|}
+\end{center}
+
+\noindent Like most of this package's options, \textbf{MainFeatures} is a way of passing
+features to fontspec's various font-setting commands. In this case, Stylistic
+Set 9 is Junicode's "Alternate Figures" feature, which substitutes more
+modern shapes for certain oldstyle numbers (it is used in this document).
+
+\section{Customizing the Main Font}
+
+The main font is organized into the four traditional styles (Regular, Italic,
+Bold, Bold Italic), which can be invoked in the usual ways
+({\small\verb|\textit{}|}, etc.). As explained above, however, each of these
+styles varies with the font size, so that the actual number of styles is
+potentially very large.
+
+This package's default styles stay fairly close to what you would get with
+Junicode's static fonts. But you can customize these styles in a number of ways.
+For example, the style used for the body text of the \textit{Junicode Manual}
+is wider than the default, giving the text a lighter and more open look. You
+can get that look (or any other) by passing a \textbf{SizeFeatures} option for 
+each of the four styles:
+
+\footnotesize
+\begin{verbatim}
+\usepackage[
+    MainFeatures={StylisticSet=9},
+    MainRegularSizeFeatures={
+        SizeFeatures={
+            {Size={-8.6},        RawFeature={axis={wght=550,wdth=120}}},
+            {Size={8.6-10.99},   RawFeature={axis={wght=475,wdth=115}}},
+            {Size={10.99-21.59}, RawFeature={axis={wght=400,wdth=112.5}}},
+            {Size={21.59-},      RawFeature={axis={wght=351,wdth=100}}}
+        }
+    },
+    MainItalicSizeFeatures={
+        SizeFeatures={
+            {Size={-8.6},        RawFeature={axis={wght=550,wdth=118}}},
+            {Size={8.6-10.99},   RawFeature={axis={wght=475,wdth=114}}},
+            {Size={10.99-21.59}, RawFeature={axis={wght=450,wdth=111}}},
+            {Size={21.59-},      RawFeature={axis={wght=372,wdth=98}}}
+        }
+    },
+    MainBoldSizeFeatures={
+        SizeFeatures={
+            {Size={-8.6},        RawFeature={axis={wght=700,wdth=120}}},
+            {Size={8.6-10.99},   RawFeature={axis={wght=700,wdth=115}}},
+            {Size={10.99-21.59}, RawFeature={axis={wght=650,wdth=112.5}}},
+            {Size={21.59-},      RawFeature={axis={wght=600,wdth=100}}}
+        }
+    },
+    MainBoldItalicSizeFeatures={
+        SizeFeatures={
+            {Size={-8.6},        RawFeature={axis={wght=700,wdth=118}}},
+            {Size={8.6-10.99},   RawFeature={axis={wght=700,wdth=114}}},
+            {Size={10.99-21.59}, RawFeature={axis={wght=650,wdth=111}}},
+            {Size={21.59-},      RawFeature={axis={wght=600,wdth=98}}}
+        }
+    }
+]{JunicodeVF}
+\end{verbatim}
+\normalsize
+
+\noindent This is less intimidating than it looks. With
+\textbf{MainRegularSizeFeatures} and the other options for font styles, we pass \textbf{SizeFeatures}
+to fontspec’s {\small\verb|\setmainfont|} command---precisely the same options
+we would use if we were addressing fontspec directly.
+For each size-range, \textbf{RawFeature} defines values for the font’s \textbf{wght} (Weight)
+and \textbf{wdth} (Width) axes.\footnote{There is also a third axis, Enlarged (ENLA),
+but this is highly specialized and won't be useful in most documents. It is
+discussed separately below.} Possible values for \textbf{wght} are
+300–700 (400 is the default), and possible values for \textbf{wdth} are 75–125
+(100 is the default).
+
+If you like, you can simplify these options by defining a new command:
+
+\footnotesize
+\begin{verbatim}
+\newcommand{\SizeRecord}[3]{
+    {Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}
+}
+\usepackage[
+    MainFeatures={StylisticSet=10},
+    MainRegularSizeFeatures={
+        SizeFeatures={
+            \SizeRecord{-8.59}{550}{120},
+            \SizeRecord{8.59-10.99}{475}{115},
+            \SizeRecord{10.99-21.59}{400}{112.5},
+            \SizeRecord{21.59-}{475}{115}
+        }
+    },
+    . . .
+]{JunicodeVF}
+\end{verbatim}
+\normalsize
+
+\noindent In addition to options like \textbf{MainRegularSizeFeatures},
+you can pass options for features other than \textbf{SizeFeatures}.
+These are \textbf{MainRegularFeatures}, \textbf{MainItalicFeatures},
+and so on---named like the other options, but without \textbf{Size}.
+For example, if you want Discretionary Ligatures to be on only for the
+Regular style, simply add a \textbf{MainRegularFeatures} option:
+
+\footnotesize
+\begin{verbatim}
+\newcommand{\SizeRecord}[3]{
+    {Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}
+}
+\usepackage[
+    MainFeatures={StylisticSet=10},
+    MainRegularFeatures={Ligatures=Discretionary},
+    MainRegularSizeFeatures={
+        SizeFeatures={
+            \SizeRecord{-8.59}{550}{120},
+            \SizeRecord{8.59-10.99}{475}{115},
+            \SizeRecord{10.99-21.59}{400}{112.5},
+            \SizeRecord{21.59-}{475}{115}
+        }
+    },
+    . . .
+]{JunicodeVF}
+\end{verbatim}
+\normalsize
+
+\section{Selecting Alternate Styles}
+
+In addition to the document's main font, you can choose from fifty
+predefined styles. These match the thirty-eight styles supplied by the
+static version of Junicode, plus twelve more. The commands for shifting to these
+styles are as follows (of the italic styles, only the base “jItalic” is listed;
+append “Italic” to any of the others, except “Regular”):
+
+\begin{multicols}{3}
+    \jCond\textbackslash jRegular
+
+    \textbackslash jItalic
+    
+    \textbackslash jCond
+    
+    \textbackslash jSmCond
+    
+    \textbackslash jSmExp
+    
+    \textbackslash jExp
+    
+    \textbackslash jLight
+    
+    \textbackslash jLightCond
+    
+    \textbackslash jLightSmCond
+    
+    \textbackslash jLightSmExp
+    
+    \textbackslash jLightExp
+    
+    \textbackslash jMedium
+    
+    \textbackslash jMediumCond
+    
+    \textbackslash jMediumSmCond
+    
+    \textbackslash jMediumSmExp
+    
+    \textbackslash jMediumExp
+    
+    \textbackslash jSmbold
+    
+    \textbackslash jSmboldCond
+    
+    \textbackslash jSmboldSmCond
+    
+    \textbackslash jSmboldSmExp
+    
+    \textbackslash jSmboldExp
+    
+    \textbackslash jBold
+    
+    \textbackslash jBoldCond
+    
+    \textbackslash jBoldSmCond
+    
+    \textbackslash jBoldSmExp
+    
+    \textbackslash jBoldExp
+    
+\end{multicols}
+
+\noindent These commands will be self-explanatory if you bear in mind Junicode's 
+abbreviations for style names: Cond=Condensed, Exp=Expanded, Sm=Semi. Use
+them to shift temporarily to a style other than that of the main text.
+For example, to shift briefly to the Light Condensed style for a short phrase, use
+this code:
+\begin{center}
+{\small\verb|{\jLightCond a short phrase}|}.
+\end{center}
+The result: {\jLightCond a short phrase}.
+
+To add features to any of these styles, use the style name
+(without the prefixed \textbf{j} and with \textbf{Features} appended)
+as a package option. To change the size features for the style,
+do the same, but with \textbf{SizeFeatures} instead of \textbf{Features}
+appended. For example:
+
+\footnotesize
+\begin{verbatim}
+    \usepackage[
+        LightCondFeatures={
+            Language=English,
+            StylisticSet=2
+        },
+        LightCondSizeFeatures={
+            SizeFeatures={
+                Size={5-},RawFeature={axis={wght=325,wdth=85}}
+            }
+        }
+    ]{JunicodeVF}
+\end{verbatim}
+\normalsize
+
+\noindent This will shift text in the Light Condensed style from default to insular
+letter-shapes and slightly increase the weight and width of all glyphs in that style.
+Here the \textbf{SizeFeatures} section is very simple (as in the package file itself),
+but you can have as many size ranges as you want, just as you can for the main font.
+
+\section{The Enlarge Axis}
+
+Junicode's Enlarge axis is for a special purpose: to represent the enlarged
+minuscule letters that often begin sentences and other textual units in medieval manuscripts.
+Thus it should normally be applied only to single letters, not to runs of text.
+
+This package defines three different styles for the Enlarge axis, in three sizes:\\[0.5ex]
+
+\noindent\textbackslash EnlargedOne {\EnlargedOne b}\\
+\textbackslash EnlargedTwo {\EnlargedTwo b}\\
+\textbackslash EnlargedThree {\EnlargedThree b}\\[0.5ex]
+
+\noindent You can produce an italic version of the enlarged minuscule by appending “Italic” to
+the style name. You can also customize these styles just as you can the other alternate
+styles. The only difference is that you need to supply a value for the Enlarge axis (ENLA)
+as well as the others. Again, a command for this purpose may help:
+
+\footnotesize
+\begin{verbatim}
+\newcommand{\ENLASizeRecord}[4]{
+    {Size={#1},RawFeature={axis={wght=#2,wdth=#3,ENLA=#4}}}
+}
+\usepackage[ENLAOneFeatures={
+    SizeFeatures={
+        \ENLASizeRecord{5-}{600}{100}{65}
+    }
+}]{JunicodeVF}
+\end{verbatim}
+\normalsize
+
+\section{Other Commands}
+
+This package's other commands are offered as conveniences---shorter and more
+mnemonic than the fontspec commands they invoke (though of course all fonspec commands
+remain available). Each of these commands
+also has a corresponding “text” command that works like 
+{\small\verb|\textit{}|}—that is, it takes
+as its sole argument the text to which the command will be applied. Each “text” command
+consists of the main command with “text” prefixed—for example,
+{\small\verb|\textInsularLetterForms{}|}
+corresponding to {\small\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
+applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Feature Reference.”
+
+\begin{center}
+\tablehead{\hline}
+\tabletail{\hline}
+\begin{supertabular}{| l | p{2.75in} |}
+\bluerow\textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\
+\textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.\\
+\bluerow\textbackslash IPAAlternates & Applies ss03, IPA alternates.\\
+\textbackslash HighOverline & Applies ss04, High Overline.\\
+\bluerow\textbackslash MediumHighOverline & Applies ss05, Medium-high Overline.\\
+\textbackslash EnlargedMinuscules & Applies ss06, Enlarged minuscules.\\
+\bluerow\textbackslash Underdotted & Applies ss07, Underdotted.\\
+\textbackslash ContextualLongS & Applies ss08, Contextual long s.\\
+\bluerow\textbackslash AlternateFigures & Applies ss09, Alternate Figures.\\
+\textbackslash EntitiesAndTags & Applies ss10, Entities and Tags.\\
+\bluerow\textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\
+\textbackslash ElderFuthark & Applies ss13, Elder Futhark.\\
+\bluerow\textbackslash YoungerFuthark & Applies ss14, Younger Futhark.\\
+\textbackslash LongBranchToShortTwig & Applies ss15, Long Branch to Short Twig.\\
+\bluerow\textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\
+\textbackslash RareDigraphs & Applies ss17, Rare Digraphs.\\
+\bluerow\textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\
+\textbackslash LatinToGothic & Applies ss19, Latin to Gothic.\\
+\bluerow\textbackslash LowDiacritics & Applies ss20, Low Diacritics.\\
+\textbackslash jcv, \textbackslash textcv & Applies any Character Variant feature (see below).\\
+\end{supertabular}
+\end{center}
+
+\noindent The syntax of \textbackslash jcv
+is {\small\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
+and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
+\textbackslash textcv takes an additional required argument ({\small\verb|\textcv[num]{num}{text}|}—the text to which the
+feature should be applied.
+
+Character Variant features can also be selected with mnemonics, listed below. For example, a feature for
+lowercase \textbf{a} can be expressed as {\small\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
+
+\begin{multicols}{3}
+\small\jCond\textbackslash jcvA
+
+\textbackslash jcva
+
+\textbackslash jcvB
+
+\textbackslash jcvb
+
+\textbackslash jcvC
+
+\textbackslash jcvc
+
+\textbackslash jcvD
+
+\textbackslash jcvd
+
+\textbackslash jcvE
+
+\textbackslash jcve
+
+\textbackslash jcvF
+
+\textbackslash jcvf
+
+\textbackslash jcvG
+
+\textbackslash jcvg
+
+\textbackslash jcvH
+
+\textbackslash jcvh
+
+\textbackslash jcvI
+
+\textbackslash jcvi
+
+\textbackslash jcvJ
+
+\textbackslash jcvj
+
+\textbackslash jcvK
+
+\textbackslash jcvk
+
+\textbackslash jcvL
+
+\textbackslash jcvl
+
+\textbackslash jcvM
+
+\textbackslash jcvm
+
+\textbackslash jcvN
+
+\textbackslash jcvn
+
+\textbackslash jcvO
+
+\textbackslash jcvo
+
+\textbackslash jcvP
+
+\textbackslash jcvp
+
+\textbackslash jcvQ
+
+\textbackslash jcvq
+
+\textbackslash jcvR
+
+\textbackslash jcvr
+
+\textbackslash jcvS
+
+\textbackslash jcvs
+
+\textbackslash jcvT
+
+\textbackslash jcvt
+
+\textbackslash jcvU
+
+\textbackslash jcvu
+
+\textbackslash jcvV
+
+\textbackslash jcvv
+
+\textbackslash jcvW
+
+\textbackslash jcvw
+
+\textbackslash jcvX
+
+\textbackslash jcvx
+
+\textbackslash jcvY
+
+\textbackslash jcvy
+
+\textbackslash jcvZ
+
+\textbackslash jcvz
+
+\textbackslash jcvaa
+
+\textbackslash jcvAE
+
+\textbackslash jcvae
+
+\textbackslash jcvAO
+
+\textbackslash jcvao
+
+\textbackslash jcvAogonek
+
+\textbackslash jcvaogonek
+
+\textbackslash jcvASCIItilde
+
+\textbackslash jcvasterisk
+
+\textbackslash jcvav
+
+\textbackslash jcvbrevebelow
+
+\textbackslash jcvcombiningdieresis
+
+\textbackslash jcvcombiningdoublemacron
+
+\textbackslash jcvcombininginsulard
+
+\textbackslash jcvcombiningopena
+
+\textbackslash jcvcombiningoverline
+
+\textbackslash jcvcombiningrrotunda
+
+\textbackslash jcvcombiningzigzag
+
+\textbackslash jcvcomma
+
+\textbackslash jcvcurrency
+
+\textbackslash jcvdbar
+
+\textbackslash jcvdcroat
+
+\textbackslash jcvEng
+
+\textbackslash jcvEogonek
+
+\textbackslash jcvetabbrev
+
+\textbackslash jcvexclam
+
+\textbackslash jcvflorin
+
+\textbackslash jcvGermanpenny
+
+\textbackslash jcvglottal
+
+\textbackslash jcvlb
+
+\textbackslash jcvlhighstroke %somehow escaped the documentation
+
+\textbackslash jcvmacron
+
+\textbackslash jcvmiddot
+
+\textbackslash jcvoPolish
+
+\textbackslash jcvounce
+
+\textbackslash jcvperiod
+
+\textbackslash jcvpunctuselevatus
+
+\textbackslash jcvquestion
+
+\textbackslash jcvrum
+
+\textbackslash jcvsemicolon
+
+\textbackslash jcvslash
+
+\textbackslash jcvspacingusabbrev
+
+\textbackslash jcvspacingzigzag
+
+\textbackslash jcvsterling
+
+\textbackslash jcvthorncrossed
+
+\textbackslash jcvTironianEt
+
+\textbackslash jcvYogh
+\end{multicols}
+
+
+\end{document}

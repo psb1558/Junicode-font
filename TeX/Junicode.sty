@@ -2,7 +2,7 @@
 %
 %   fonttype:      Choose otf (the default) or ttf
 %
-%   lining:        Default numbers will be lining (uppecase)
+%   lining:        Default numbers will be lining (uppercase)
 %   oldstyle:      Default numbers will be oldstyle (lowercase)
 %   proportional:  Default numbers will be proportional
 %   tabular:       Default numbers will be tabular (monospaced)
@@ -20,6 +20,15 @@
 \ProvidesPackage{Junicode}[2023/11/24 (Peter Baker) Supports Junicode (2.204 and up) static fonts for XeLaTeX and LuaLaTeX.]
 
 \RequirePackage{ifxetex,ifluatex,xkeyval}
+
+\newif\ifjunicodeokay
+\ifxetex
+    \junicodeokaytrue
+\else\ifluatex
+    \junicodeokaytrue
+\else
+    \PackageError{Junicode}{This package works only with LuaLaTeX or XeLaTeX}{}
+\fi
 
 % Choose the type of font: otf or ttf.
 

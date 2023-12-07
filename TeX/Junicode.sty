@@ -30,6 +30,28 @@
     \PackageError{Junicode}{This package works only with LuaLaTeX or XeLaTeX}{}
 \fi
 
+% Declear empty commands for Alternative styles
+
+\newcommand{\RegularDef}{}
+\newcommand{\BoldDef}{}
+\newcommand{\CondDef}{}
+\newcommand{\CondLightDef}{}
+\newcommand{\CondMediumDef}{}
+\newcommand{\ExpDef}{}
+\newcommand{\ExpBoldDef}{}
+\newcommand{\ExpMediumDef}{}
+\newcommand{\ExpSmboldDef}{}
+\newcommand{\LightDef}{}
+\newcommand{\MediumDef}{}
+\newcommand{\SmboldDef}{}
+\newcommand{\SmCondDef}{}
+\newcommand{\SmCondLightDef}{}
+\newcommand{\SmCondMediumDef}{}
+\newcommand{\SmExpDef}{}
+\newcommand{\SmExpBoldDef}{}
+\newcommand{\SmExpMediumDef}{}
+\newcommand{\SmExpSmboldDef}{}
+
 % Choose the type of font: otf or ttf.
 
 \newcommand*{\junicode@fonttype}{otf}
@@ -76,6 +98,46 @@
 \newif\ifjunicode@boldsemicondensed \junicode@boldsemicondensedfalse
 \newif\ifjunicode@boldexpanded \junicode@boldexpandedfalse
 \newif\ifjunicode@boldsemiexpanded \junicode@boldsemiexpandedfalse
+
+% Options for Alternative styles
+
+\DeclareOptionX{BoldFeatures}{\renewcommand*{\BoldDef}{#1,}}
+
+\DeclareOptionX{CondFeatures}{\renewcommand*{\CondDef}{#1,}}
+
+\DeclareOptionX{CondLightFeatures}{\renewcommand*{\CondLightDef}{#1,}}
+
+\DeclareOptionX{CondMediumFeatures}{\renewcommand*{\CondMediumDef}{#1,}}
+
+\DeclareOptionX{ExpFeatures}{\renewcommand*{\ExpDef}{#1,}}
+
+\DeclareOptionX{ExpBoldDef}{\renewcommand*{\ExpBoldDef}{#1,}}
+
+\DeclareOptionX{ExpMediumFeatures}{\renewcommand*{\ExpMediumDef}{#1,}}
+
+\DeclareOptionX{ExpSmboldFeatures}{\renewcommand*{\ExpSmboldDef}{#1,}}
+
+\DeclareOptionX{LightDefFeatures}{\renewcommand*{\LightDef}{#1,}}
+
+\DeclareOptionX{MediumFeatures}{\renewcommand*{\MediumDef}{#1,}}
+
+\DeclareOptionX{RegularFeatures}{\renewcommand*{\RegularDef}{#1,}}
+
+\DeclareOptionX{SmboldFeatures}{\renewcommand*{\SmboldDef}{#1,}}
+
+\DeclareOptionX{SmCondFeatures}{\renewcommand*{\SmCondDef}{#1,}}
+
+\DeclareOptionX{SmCondLightFeatures}{\renewcommand*{\SmCondLightDef}{#1,}}
+
+\DeclareOptionX{SmCondMediumFeatures}{\renewcommand*{\SmCondMediumDef}{#1,}}
+
+\DeclareOptionX{SmExpFeatures}{\renewcommand*{\SmExpDef}{#1,}}
+
+\DeclareOptionX{SmExpBoldFeatures}{\renewcommand*{\SmExpBoldDef}{#1,}}
+
+\DeclareOptionX{SmExpMediumFeatures}{\renewcommand*{\SmExpMediumDef}{#1,}}
+
+\DeclareOptionX{SmExpSmboldFeatures}{\renewcommand*{\SmExpSmboldDef}{#1,}}
 
 % Declare the width options.
 
@@ -158,89 +220,90 @@
 % These commands let you access any style, despite the options passed to
 % this package.
 
-\newcommand{\junicode@newfont}[2]{
+\newcommand{\junicode@newfont}[3]{
     \newfontface#1{#2}[
         Renderer =          HarfBuzz,
+        #3
         Numbers =           {\junicode@figurealign,\junicode@figurestyle},
         SmallCapsFeatures = {Letters=SmallCaps},
     ]
 }
 
-\junicode@newfont{\jBold}{Junicode-Bold}
+\junicode@newfont{\jBold}{Junicode-Bold}{\BoldDef}
 
-\junicode@newfont{\jBoldItalic}{Junicode-BoldItalic}
+\junicode@newfont{\jBoldItalic}{Junicode-BoldItalic}{\BoldDef}
 
-\junicode@newfont{\jCond}{Junicode-Cond}
+\junicode@newfont{\jCond}{Junicode-Cond}{\CondDef}
 
-\junicode@newfont{\jCondItalic}{Junicode-CondItalic}
+\junicode@newfont{\jCondItalic}{Junicode-CondItalic}{\CondDef}
 
-\junicode@newfont{\jCondLight}{Junicode-CondLight}
+\junicode@newfont{\jCondLight}{Junicode-CondLight}{\CondLightDef}
 
-\junicode@newfont{\jCondLightItalic}{Junicode-CondLightItalic}
+\junicode@newfont{\jCondLightItalic}{Junicode-CondLightItalic}{\CondLightDef}
 
-\junicode@newfont{\jCondMedium}{Junicode-CondMedium}
+\junicode@newfont{\jCondMedium}{Junicode-CondMedium}{\CondMediumDef}
 
-\junicode@newfont{\jCondMediumItalic}{Junicode-CondMediumItalic}
+\junicode@newfont{\jCondMediumItalic}{Junicode-CondMediumItalic}{\CondMediumDef}
 
-\junicode@newfont{\jExp}{Junicode-Exp}
+\junicode@newfont{\jExp}{Junicode-Exp}{\ExpDef}
 
-\junicode@newfont{\jExpBold}{Junicode-ExpBold}
+\junicode@newfont{\jExpItalic}{Junicode-ExpItalic}{\ExpDef}
 
-\junicode@newfont{\jExpBoldItalic}{Junicode-ExpBoldItalic}
+\junicode@newfont{\jExpBold}{Junicode-ExpBold}{\ExpBoldDef}
 
-\junicode@newfont{\jExpItalic}{Junicode-ExpItalic}
+\junicode@newfont{\jExpBoldItalic}{Junicode-ExpBoldItalic}{\ExpBoldDef}
 
-\junicode@newfont{\jExpMedium}{Junicode-ExpMedium}
+\junicode@newfont{\jExpMedium}{Junicode-ExpMedium}{\ExpMediumDef}
 
-\junicode@newfont{\jExpMediumItalic}{Junicode-ExpMediumItalic}
+\junicode@newfont{\jExpMediumItalic}{Junicode-ExpMediumItalic}{\ExpMediumDef}
 
-\junicode@newfont{\jExpSmbold}{Junicode-ExpSmbold}
+\junicode@newfont{\jExpSmbold}{Junicode-ExpSmbold}{\ExpSmboldDef}
 
-\junicode@newfont{\jExpSmboldItalic}{Junicode-ExpSmboldItalic}
+\junicode@newfont{\jExpSmboldItalic}{Junicode-ExpSmboldItalic}{\ExpSmboldDef}
 
-\junicode@newfont{\jItalic}{Junicode-Italic}
+\junicode@newfont{\jRegular}{Junicode-Regular}{\RegularDef}
 
-\junicode@newfont{\jLight}{Junicode-Light}
+\junicode@newfont{\jItalic}{Junicode-Italic}{\RegularDef}
 
-\junicode@newfont{\jLightItalic}{Junicode-LightItalic}
+\junicode@newfont{\jLight}{Junicode-Light}{\LightDef}
 
-\junicode@newfont{\jMedium}{Junicode-Medium}
+\junicode@newfont{\jLightItalic}{Junicode-LightItalic}{\LightDef}
 
-\junicode@newfont{\jMediumItalic}{Junicode-MediumItalic}
+\junicode@newfont{\jMedium}{Junicode-Medium}{\MediumDef}
 
-\junicode@newfont{\jRegular}{Junicode-Regular}
+\junicode@newfont{\jMediumItalic}{Junicode-MediumItalic}{\MediumDef}
 
-\junicode@newfont{\jSmbold}{Junicode-Smbold}
+\junicode@newfont{\jSmbold}{Junicode-Smbold}{\SmboldDef}
 
-\junicode@newfont{\jSmboldItalic}{Junicode-SmboldItalic}
+\junicode@newfont{\jSmboldItalic}{Junicode-SmboldItalic}{\SmboldDef}
 
-\junicode@newfont{\jSmCond}{Junicode-SmCond}
+\junicode@newfont{\jSmCond}{Junicode-SmCond}{\SmCondDef}
 
-\junicode@newfont{\jSmCondItalic}{Junicode-SmCondItalic}
+\junicode@newfont{\jSmCondItalic}{Junicode-SmCondItalic}{\SmCondDef}
 
-\junicode@newfont{\jSmCondLight}{Junicode-SmCondLight}
+\junicode@newfont{\jSmCondLight}{Junicode-SmCondLight}{\SmCondLightDef}
 
-\junicode@newfont{\jSmCondLightItalic}{Junicode-SmCondLightItalic}
+\junicode@newfont{\jSmCondLightItalic}{Junicode-SmCondLightItalic}{\SmCondLightDef}
 
-\junicode@newfont{\jSmCondMedium}{Junicode-SmCondMedium}
+\junicode@newfont{\jSmCondMedium}{Junicode-SmCondMedium}{\SmCondMediumDef}
 
-\junicode@newfont{\jSmCondMediumItalic}{Junicode-SmCondMediumItalic}
+\junicode@newfont{\jSmCondMediumItalic}{Junicode-SmCondMediumItalic}{\SmCondMediumDef}
 
-\junicode@newfont{\jSmExp}{Junicode-SmExp}
+\junicode@newfont{\jSmExp}{Junicode-SmExp}{\SmExpDef}
 
-\junicode@newfont{\jSmExpBold}{Junicode-SmExpBold}
+\junicode@newfont{\jSmExpItalic}{Junicode-SmExpItalic}{\SmExpDef}
 
-\junicode@newfont{\jSmExpBoldItalic}{Junicode-SmExpBoldItalic}
+\junicode@newfont{\jSmExpBold}{Junicode-SmExpBold}{\SmExpBoldDef}
 
-\junicode@newfont{\jSmExpItalic}{Junicode-SmExpItalic}
+\junicode@newfont{\jSmExpBoldItalic}{Junicode-SmExpBoldItalic}{\SmExpBoldDef}
 
-\junicode@newfont{\jSmExpMedium}{Junicode-SmExpMedium}
+\junicode@newfont{\jSmExpMedium}{Junicode-SmExpMedium}{\SmExpDef}{\SmExpMediumDef}
 
-\junicode@newfont{\jSmExpMediumItalic}{Junicode-SmExpMediumItalic}
+\junicode@newfont{\jSmExpMediumItalic}{Junicode-SmExpMediumItalic}{\SmExpMediumDef}
 
-\junicode@newfont{\jSmExpSmbold}{Junicode-SmExpSmbold}
+\junicode@newfont{\jSmExpSmbold}{Junicode-SmExpSmbold}{\SmExpSmboldDef}
 
-\junicode@newfont{\jSmExpSmboldItalic}{Junicode-SmExpSmboldItalic}
+\junicode@newfont{\jSmExpSmboldItalic}{Junicode-SmExpSmboldItalic}{\SmExpSmboldDef}
 
 % Convenience commands for non-verbose access to the cvNN features.
 % See also the "jcv" mnemonics below.

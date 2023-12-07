@@ -1,9 +1,18 @@
 \documentclass{article}
-\usepackage[medium,semiexpanded]{Junicode}
+\usepackage[
+    medium,
+    semiexpanded,
+    SmExpSmboldFeatures={
+        Language=English,
+        StylisticSet=8
+    }
+]{Junicode}
 \usepackage{microtype}
 \usepackage{multicol}
 \usepackage{supertabular}
+\setmonofont{SourceCodePro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
 \linespread{1.1}
+\tolerance=1500
 \title{Junicode}
 \author{Peter S. Baker}
 \date{}
@@ -21,13 +30,13 @@ other fonts alongside Junicode.
 
 \section{Loading Junicode}
 
-Load Junicode in the usual way, with {\small\verb|\usepackage{Junicode}|}. Several options are available:
+Load Junicode in the usual way, with {\verb|\usepackage{Junicode}|}. Several options are available:
 
 \begin{description}
 \item[fonttype] The type of font to look for, CFF or TrueType. These font types differ in the
 way they draw outlines, and their hinting technologies are very different. Values may be otf
 (the default) or ttf, e.g.\\
-\hspace*{1in}{\small\verb|\usepackage[fonttype=ttf]{Junicode}|}
+\hspace*{1in}{\verb|\usepackage[fonttype=ttf]{Junicode}|}
 \item[light] The weight of the type for the main text is Light instead of Regular.
 \item[medium] The weight of the type for the main text is Medium, somewhat heavier than Regular.
 \item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
@@ -46,6 +55,7 @@ will produce an error.
 \item[tabular] Numbers will be tabular or monospaced.
 \item[oldstyle] Numbers will be old-style, harmonizing with lowercase letters.
 \item[lining] Numbers will be lining, harmonizing with uppercase letters.
+\item[style options] These will be discussed in the next section.
 \end{description}
 
 \section{Selecting Alternate Styles}
@@ -132,19 +142,42 @@ if you keep these abbreviations in mind: Sm = Semi, Cond = Condensed, Exp = Expa
     \textbackslash jSmExpSmboldItalic    
 \end{multicols}
 
+\noindent You can customize these styles by passing options when you load the package.
+The name of each option is based on the corresponding stylename, but without the
+prefixed “j” or any suffixed “Italic” (since each of these options
+affects both the roman and the matching italic face), and with “Features” suffixed.
+The content of the option must be one or more of the fontspec features appropriate to
+Junicode. For example, this is the {\verb|\usepackage|} command from the preamble to
+this document:
+
+\begin{verbatim}
+    \usepackage[
+        medium,
+        semiexpanded,
+        SmExpSmboldFeatures={
+            Language=English,
+            StylisticSet=8
+        }
+    ]{Junicode}
+\end{verbatim}
+
+\noindent After the options for setting the main text, the \textbf{SmExpSmboldFeatures}
+option sets the language to English and turns on Stylistic Set 8 (“Contextual Long s”)
+for the SemiExpanded Semibold face:
+{\jSmExpSmbold \textcv[4]{\jcvf}{self\char"200Clessness}}.
+
 \section{Other Commands}
 
-These commands do nothing more than wrap fontspec commands, which can still be
-used with the Junicode package and are actually needed if you want to take full
-advantage of the Junicode font’s features. Some of these commands are more mnemonic
-than the corresponding fontspec commands, and others are more compact. Each command
+This package's other commands are offered as conveniences---shorter and more
+mnemonic than the fontspec commands they invoke (though of course all fontspec commands
+remain available). Each of these commands
 also has a corresponding “text” command that works like 
-{\small\verb|\textit{}|}—that is, it takes
+{\verb|\textit{}|}—that is, it takes
 as its sole argument the text to which the command will be applied. Each “text” command
 consists of the main command with “text” prefixed—for example,
-{\small\verb|\textInsularLetterForms{}|}
-corresponding to {\small\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
-applied by these commands, see Chapter 4, Feature Reference.
+{\verb|\textInsularLetterForms{}|}
+corresponding to {\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
+applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Feature Reference.”
 
 \begin{center}
 \tablehead{\hline}
@@ -159,7 +192,7 @@ This has an effect only with English and Irish text.\\\hline
 \textbackslash EnlargedMinuscules & Applies ss06, Enlarged minuscules.\\\hline
 \textbackslash Underdotted & Applies ss07, Underdotted.\\\hline
 \textbackslash ContextualLongS & Applies ss08, Contextual long s. This should be used only in English or
-French text. With other languages it simply converts all instances of s to ſ.\\\hline
+French text. With other languages it converts all instances of s to ſ.\\\hline
 \textbackslash AlternateFigures & Applies ss09, Alternate Figures.\\\hline
 \textbackslash EntitiesAndTags & Applies ss10, Entities and Tags.\\\hline
 \textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\\hline
@@ -176,13 +209,13 @@ French text. With other languages it simply converts all instances of s to ſ.\\
 \end{center}
 
 \noindent The syntax of \textbackslash jcv
-is {\small\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
+is {\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
 and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
-\textbackslash textcv takes an additional required argument ({\small\verb|\textcv[num]{num}{text}|}—the text to which the
+\textbackslash textcv takes an additional required argument ({\verb|\textcv[num]{num}{text}|}—the text to which the
 feature should be applied.
 
 Character Variant features can also be selected with mnemonics, listed below. For example, a feature for
-lowercase \textbf{a} can be expressed as {\small\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
+lowercase \textbf{a} can be expressed as {\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
 
 \begin{multicols}{3}
 \jCond\textbackslash jcvA

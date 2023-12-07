@@ -228,43 +228,43 @@ append “Italic” to any of the others, except “Regular”):
     
     \textbackslash jLight
     
-    \textbackslash jLightCond
+    \textbackslash jCondLight
     
-    \textbackslash jLightSmCond
+    \textbackslash jSmCondLight
     
-    \textbackslash jLightSmExp
+    \textbackslash jSmExpLight
     
-    \textbackslash jLightExp
+    \textbackslash jExpLight
     
     \textbackslash jMedium
     
-    \textbackslash jMediumCond
+    \textbackslash jCondMedium
     
-    \textbackslash jMediumSmCond
+    \textbackslash jSmCondMedium
     
-    \textbackslash jMediumSmExp
+    \textbackslash jSmExpMedium
     
-    \textbackslash jMediumExp
+    \textbackslash jExpMedium
     
     \textbackslash jSmbold
     
-    \textbackslash jSmboldCond
+    \textbackslash jCondSmbold
     
-    \textbackslash jSmboldSmCond
+    \textbackslash jSmCondSmbold
     
-    \textbackslash jSmboldSmExp
+    \textbackslash jSmExpSmbold
     
-    \textbackslash jSmboldExp
+    \textbackslash jExpSmbold
     
     \textbackslash jBold
     
-    \textbackslash jBoldCond
+    \textbackslash jCondBold
     
-    \textbackslash jBoldSmCond
+    \textbackslash jSmCondBold
     
-    \textbackslash jBoldSmExp
+    \textbackslash jSmExpBold
     
-    \textbackslash jBoldExp
+    \textbackslash jExpBold
     
 \end{multicols}
 
@@ -274,9 +274,9 @@ them to shift temporarily to a style other than that of the main text.
 For example, to shift briefly to the Light Condensed style for a short phrase, use
 this code:
 \begin{center}
-{\small\verb|{\jLightCond a short phrase}|}.
+{\small\verb|{\jCondLight a short phrase}|}.
 \end{center}
-The result: {\jLightCond a short phrase}.
+The result: {\jCondLight a short phrase}.
 
 To add features to any of these styles, use the style name
 (without the prefixed \textbf{j} and with \textbf{Features} appended)
@@ -287,11 +287,11 @@ appended. For example:
 \footnotesize
 \begin{verbatim}
     \usepackage[
-        LightCondFeatures={
+        CondLightFeatures={
             Language=English,
             StylisticSet=2
         },
-        LightCondSizeFeatures={
+        CondLightSizeFeatures={
             SizeFeatures={
                 Size={5-},RawFeature={axis={wght=325,wdth=85}}
             }

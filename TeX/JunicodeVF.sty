@@ -1,353 +1,487 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{JunicodeVF}[2023/11/24 (Peter Baker) Supports Junicode VF (2.204 and up) variable fonts for LuaLaTeX.]
+\ProvidesPackage{JunicodeVF}[%
+    2023/12/08 (Peter Baker) Supports Junicode VF (2.204 and up) variable fonts for LuaLaTeX.]
 
 \RequirePackage{ifluatex,xkeyval,fontspec}
 
 \RequireLuaTeX
 
+% VALUES FOR WEIGHT AND WIDTH IN THE FIVE STANDARD SIZES
+% AND FOUR STANDARD FACES
+
+\def\junicodevf@RwghtOne{490}
+\def\junicodevf@RwghtTwo{440}
+\def\junicodevf@RwghtThree{390}
+\def\junicodevf@RwghtFour{370}
+\def\junicodevf@RwghtFive{350}
+
+\def\junicodevf@IwghtOne{525}
+\def\junicodevf@IwghtTwo{475}
+\def\junicodevf@IwghtThree{425}
+\def\junicodevf@IwghtFour{370}
+\def\junicodevf@IwghtFive{350}
+
+\def\junicodevf@BwghtOne{700}
+\def\junicodevf@BwghtTwo{700}
+\def\junicodevf@BwghtThree{650}
+\def\junicodevf@BwghtFour{650}
+\def\junicodevf@BwghtFive{600}
+
+\def\junicodevf@BIwghtOne{700}
+\def\junicodevf@BIwghtTwo{700}
+\def\junicodevf@BIwghtThree{650}
+\def\junicodevf@BIwghtFour{650}
+\def\junicodevf@BIwghtFive{600}
+
+\def\junicodevf@RwdthOne{115}
+\def\junicodevf@RwdthTwo{107.5}
+\def\junicodevf@RwdthThree{100}
+\def\junicodevf@RwdthFour{95}
+\def\junicodevf@RwdthFive{90}
+
+\def\junicodevf@IwdthOne{115}
+\def\junicodevf@IwdthTwo{107.5}
+\def\junicodevf@IwdthThree{100}
+\def\junicodevf@IwdthFour{95}
+\def\junicodevf@IwdthFive{90}
+
+\def\junicodevf@BwdthOne{115}
+\def\junicodevf@BwdthTwo{107.5}
+\def\junicodevf@BwdthThree{100}
+\def\junicodevf@BwdthFour{95}
+\def\junicodevf@BwdthFive{90}
+
+\def\junicodevf@BIwdthOne{115}
+\def\junicodevf@BIwdthTwo{107.5}
+\def\junicodevf@BIwdthThree{100}
+\def\junicodevf@BIwdthFour{95}
+\def\junicodevf@BIwdthFive{90}
+
+% OPTIONS FOR WEIGHT AND WIDTH
+
+\newif\ifjunicodevf@regular \junicodevf@regulartrue
+\def\junicodevf@regularname{Regular}
+\newif\ifjunicodevf@bold \junicodevf@boldtrue
+
+% Declare the boolean variables for weights.
+
+\newif\ifjunicodevf@light \junicodevf@lightfalse
+\newif\ifjunicodevf@medium \junicodevf@mediumfalse
+\newif\ifjunicodevf@semibold \junicodevf@semiboldfalse
+
+% Declare the weight options
+
+\DeclareOptionX{light}{\junicodevf@lighttrue}
+\DeclareOptionX{medium}{\junicodevf@mediumtrue}
+\DeclareOptionX{semibold}{\junicodevf@semiboldtrue}
+
+% Declare the boolean variables for widths.
+
+\newif\ifjunicodevf@condensed \junicodevf@condensedfalse
+\newif\ifjunicodevf@semicondensed \junicodevf@semicondensedfalse
+\newif\ifjunicodevf@expanded \junicodevf@expandedfalse
+\newif\ifjunicodevf@semiexpanded \junicodevf@semiexpandedfalse
+
+\newif\ifjunicodevf@boldcondensed \junicodevf@boldcondensedfalse
+\newif\ifjunicodevf@boldsemicondensed \junicodevf@boldsemicondensedfalse
+\newif\ifjunicodevf@boldexpanded \junicodevf@boldexpandedfalse
+\newif\ifjunicodevf@boldsemiexpanded \junicodevf@boldsemiexpandedfalse
+
+% Declare the width options.
+
+\DeclareOptionX{condensed}{\junicodevf@condensedtrue}
+\DeclareOptionX{semicondensed}{\junicodevf@semicondensedtrue}
+\DeclareOptionX{expanded}{\junicodevf@expandedtrue}
+\DeclareOptionX{semiexpanded}{\junicodevf@semiexpandedtrue}
+
 % Figures: default is OldStyle Proportional
 
-\newif\ifjunicode@lining \junicode@liningfalse
-\newif\ifjunicode@tabular \junicode@tabularfalse
-
-\DeclareOptionX{lining}{\junicode@liningtrue}
-\DeclareOptionX{tabular}{\junicode@tabulartrue}
-\DeclareOptionX{proportional}{\junicode@tabularfalse}
-\DeclareOptionX{oldstyle}{\junicode@liningfalse}
-
-% Defaults for the four standard styles
-
-\newcommand{\MainRegDef}{}
-
-\newcommand{\MainRegSizeDef}{
-    SizeFeatures={
-        {Size={-8.5},        RawFeature={axis={wght=490,wdth=115}}},
-        {Size={8.5-10.99},   RawFeature={axis={wght=440,wdth=107.5}}},
-        {Size={10.99-17.99}, RawFeature={axis={wght=390,wdth=100}}},
-        {Size={17.99-23.99}, RawFeature={axis={wght=370,wdth=95}}},
-        {Size={23.99-},      RawFeature={axis={wght=350,wdth=90}}}
-    }
-}
-
-\newcommand{\MainItalicDef}{}
-
-\newcommand{\MainItalicSizeDef}{
-    SizeFeatures={
-        {Size={-8.5},        RawFeature={axis={wght=525,wdth=115}}},
-        {Size={8.5-10.99},   RawFeature={axis={wght=475,wdth=107.5}}},
-        {Size={10.99-17.99}, RawFeature={axis={wght=425,wdth=100}}},
-        {Size={17.99-23.99}, RawFeature={axis={wght=370,wdth=95}}},
-        {Size={23.99-},      RawFeature={axis={wght=350,wdth=90}}}
-    }
-}
-
-\newcommand{\MainBoldDef}{}
-
-\newcommand{\MainBoldSizeDef}{
-    SizeFeatures={
-        {Size={-8.5},        RawFeature={axis={wght=700,wdth=115}}},
-        {Size={8.5-10.99},   RawFeature={axis={wght=700,wdth=107.5}}},
-        {Size={10.99-17.99}, RawFeature={axis={wght=650,wdth=100}}},
-        {Size={17.99-23.99}, RawFeature={axis={wght=650,wdth=95}}},
-        {Size={23.99-},      RawFeature={axis={wght=600,wdth=90}}}
-    }
-}
-
-\newcommand{\MainBoldItalicDef}{}
-
-\newcommand{\MainBoldItalicSizeDef}{
-    SizeFeatures={
-        {Size={-8.5},        RawFeature={axis={wght=700,wdth=115}}},
-        {Size={8.5-10.99},   RawFeature={axis={wght=700,wdth=107.5}}},
-        {Size={10.99-17.99}, RawFeature={axis={wght=650,wdth=100}}},
-        {Size={17.99-23.99}, RawFeature={axis={wght=650,wdth=95}}},
-        {Size={23.99-},      RawFeature={axis={wght=600,wdth=90}}}
-      }  
-}
-
-% These empty commands are for adding features: \MainDef to the four styles
-% of the main text font, the others for the alternate styles.
-
-\newcommand{\MainDef}{}
-
-\newcommand{\RegDef}{}
-
-\newcommand{\CondDef}{}
-
-\newcommand{\SmCondDef}{}
-
-\newcommand{\SmExpDef}{}
-
-\newcommand{\ExpDef}{}
-
-
-\newcommand{\LtDef}{}
-
-\newcommand{\LtCondDef}{}
-
-\newcommand{\LtSmCondDef}{}
-
-\newcommand{\LtSmExpDef}{}
-
-\newcommand{\LtExpDef}{}
-
-
-\newcommand{\MmDef}{}
-
-\newcommand{\MmCondDef}{}
-
-\newcommand{\MmSmCondDef}{}
-
-\newcommand{\MmSmExpDef}{}
-
-\newcommand{\MmExpDef}{}
-
-
-\newcommand{\SmBdDef}{}
-
-\newcommand{\SmBdCondDef}{}
-
-\newcommand{\SmBdSmCondDef}{}
-
-\newcommand{\SmBdSmExpDef}{}
-
-\newcommand{\SmBdExpDef}{}
-
-
-\newcommand{\BdDef}{}
-
-\newcommand{\BdCondDef}{}
-
-\newcommand{\BdSmCondDef}{}
-
-\newcommand{\BdSmExpDef}{}
-
-\newcommand{\BdExpDef}{}
-
-% The SizeDef commands store the defaults for each of the alternate styles.
-
-\newcommand{\RegSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100}}}}}
-
-\newcommand{\CondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=75}}}}}
-
-\newcommand{\SmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=87.5}}}}}
-
-\newcommand{\SmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=112.5}}}}}
-
-\newcommand{\ExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=125}}}}}
-
-
-\newcommand{\LtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=100}}}}}
-
-\newcommand{\LtCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=75}}}}}
-
-\newcommand{\LtSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=87.5}}}}}
-
-\newcommand{\LtSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=112.5}}}}}
-
-\newcommand{\LtExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=125}}}}}
-
-
-\newcommand{\MmSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=100}}}}}
-
-\newcommand{\MmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=75}}}}}
-
-\newcommand{\MmSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=87.5}}}}}
-
-\newcommand{\MmSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=112.5}}}}}
-
-\newcommand{\MmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=125}}}}}
-
-
-\newcommand{\SmBdSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=100}}}}}
-
-\newcommand{\SmBdCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=75}}}}}
-
-\newcommand{\SmBdSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=87.5}}}}}
-
-\newcommand{\SmBdSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=112.5}}}}}
-
-\newcommand{\SmBdExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=125}}}}}
-
-
-\newcommand{\BdSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=100}}}}}
-
-\newcommand{\BdCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=75}}}}}
-
-\newcommand{\BdSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=87.5}}}}}
-
-\newcommand{\BdSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=112.5}}}}}
-
-\newcommand{\BdExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=125}}}}}
-
-
-\newcommand{\ENLAOneDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=32}}}}}
-
-\newcommand{\ENLATwoDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=47}}}}}
-
-\newcommand{\ENLAThreeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=75}}}}}
-
-\newcommand{\ENLAFourDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=100}}}}}
-
+\newif\ifjunicodevf@lining \junicodevf@liningfalse
+\newif\ifjunicodevf@tabular \junicodevf@tabularfalse
+
+\DeclareOptionX{lining}{\junicodevf@liningtrue}
+\DeclareOptionX{tabular}{\junicodevf@tabulartrue}
+\DeclareOptionX{proportional}{\junicodevf@tabularfalse}
+\DeclareOptionX{oldstyle}{\junicodevf@liningfalse}
+
+% Empty commands for adding features.
+
+% 1. Features for all four Main faces
+
+\newcommand*{\MainDef}{}
+
+% 2. Features for each of the four Main faces.
+
+\newcommand*{\MainRegDef}{}
+\newcommand*{\MainItalicDef}{}
+\newcommand*{\MainBoldDef}{}
+\newcommand*{\MainBoldItalicDef}{}
+
+% 3. Features for the Alternate styles
+
+\newcommand*{\RegDef}{}
+\newcommand*{\CondDef}{}
+\newcommand*{\SmCondDef}{}
+\newcommand*{\SmExpDef}{}
+\newcommand*{\ExpDef}{}
+
+\newcommand*{\LtDef}{}
+\newcommand*{\LtCondDef}{}
+\newcommand*{\LtSmCondDef}{}
+\newcommand*{\LtSmExpDef}{}
+\newcommand*{\LtExpDef}{}
+
+\newcommand*{\MmDef}{}
+\newcommand*{\MmCondDef}{}
+\newcommand*{\MmSmCondDef}{}
+\newcommand*{\MmSmExpDef}{}
+\newcommand*{\MmExpDef}{}
+
+\newcommand*{\SmBdDef}{}
+\newcommand*{\SmBdCondDef}{}
+\newcommand*{\SmBdSmCondDef}{}
+\newcommand*{\SmBdSmExpDef}{}
+\newcommand*{\SmBdExpDef}{}
+
+\newcommand*{\BdDef}{}
+\newcommand*{\BdCondDef}{}
+\newcommand*{\BdSmCondDef}{}
+\newcommand*{\BdSmExpDef}{}
+\newcommand*{\BdExpDef}{}
+
+% These SizeDef commands store the defaults for each of the alternate styles.
+
+\newcommand*{\RegSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100}}}}}
+\newcommand*{\CondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=75}}}}}
+\newcommand*{\SmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=87.5}}}}}
+\newcommand*{\SmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=112.5}}}}}
+\newcommand*{\ExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=125}}}}}
+
+\newcommand*{\LtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=100}}}}}
+\newcommand*{\LtCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=75}}}}}
+\newcommand*{\LtSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=87.5}}}}}
+\newcommand*{\LtSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=112.5}}}}}
+\newcommand*{\LtExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,wdth=125}}}}}
+
+\newcommand*{\MmSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=100}}}}}
+\newcommand*{\MmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=75}}}}}
+\newcommand*{\MmSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=87.5}}}}}
+\newcommand*{\MmSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=112.5}}}}}
+\newcommand*{\MmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,wdth=125}}}}}
+
+\newcommand*{\SmBdSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=100}}}}}
+\newcommand*{\SmBdCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=75}}}}}
+\newcommand*{\SmBdSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=87.5}}}}}
+\newcommand*{\SmBdSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=112.5}}}}}
+\newcommand*{\SmBdExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,wdth=125}}}}}
+
+\newcommand*{\BdSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=100}}}}}
+\newcommand*{\BdCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=75}}}}}
+\newcommand*{\BdSmCondSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=87.5}}}}}
+\newcommand*{\BdSmExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=112.5}}}}}
+\newcommand*{\BdExpSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,wdth=125}}}}}
+
+\newcommand*{\ENLAOneDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=32}}}}}
+\newcommand*{\ENLATwoDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=47}}}}}
+\newcommand*{\ENLAThreeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=75}}}}}
+\newcommand*{\ENLAFourDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=100}}}}}
+
+% Declare the options for the Main features. First general, then size.
 
 \DeclareOptionX{MainFeatures}{\renewcommand*{\MainDef}{#1}}
-
 \DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
-
 \DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
-
 \DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
-
 \DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
 
+\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{#1}}
+\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{#1}}
+\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{#1}}
+\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{#1}}
 
-%\DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
+% Declare the options for each of the Alternate Styles.
 
-%\DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
-
-%\DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
-
-%\DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
-
-
-\DeclareOptionX{MainRegularSizeFeatures}{\renewcommand*{\MainRegSizeDef}{#1}}
-
-\DeclareOptionX{MainItalicSizeFeatures}{\renewcommand*{\MainItalicSizeDef}{#1}}
-
-\DeclareOptionX{MainBoldSizeFeatures}{\renewcommand*{\MainBoldSizeDef}{#1}}
-
-\DeclareOptionX{MainBoldItalicSizeFeatures}{\renewcommand*{\MainBoldItalicSizeDef}{#1}}
-
-% Alternate styles
+%  1. General features
 
 \DeclareOptionX{RegularFeatures}{\renewcommand*{\RegDef}{#1,}}
-
 \DeclareOptionX{CondFeatures}{\renewcommand*{\CondDef}{#1,}}
-
 \DeclareOptionX{SmCondFeatures}{\renewcommand*{\SmCondDef}{#1,}}
-
 \DeclareOptionX{SmExpFeatures}{\renewcommand*{\SmExpDef}{#1,}}
-
 \DeclareOptionX{ExpFeatures}{\renewcommand*{\ExpDef}{#1,}}
 
-
 \DeclareOptionX{LightFeatures}{\renewcommand*{\LtDef}{#1,}}
-
 \DeclareOptionX{CondLightFeatures}{\renewcommand*{\LtCondDef}{#1,}}
-
 \DeclareOptionX{SmCondLightFeatures}{\renewcommand*{\LtSmCondDef}{#1,}}
-
 \DeclareOptionX{SmExpLightFeatures}{\renewcommand*{\LtSmExpDef}{#1,}}
-
 \DeclareOptionX{ExpLightFeatures}{\renewcommand*{\LtExpDef}{#1,}}
 
-
 \DeclareOptionX{MediumFeatures}{\renewcommand*{\MmDef}{#1,}}
-
 \DeclareOptionX{CondMediumFeatures}{\renewcommand*{\MmCondDef}{#1,}}
-
 \DeclareOptionX{SmCondMediumFeatures}MmSmCondDef{\renewcommand*{\MmSmCondDef}{#1,}}
-
 \DeclareOptionX{SmExpMediumFeatures}{\renewcommand*{\MmSmExpDef}{#1,}}
-
 \DeclareOptionX{ExpMediumFeatures}{\renewcommand*{\MmExpDef}{#1,}}
 
-
 \DeclareOptionX{SmBoldFeatures}{\renewcommand*{\SmBdDef}{#1,}}
-
 \DeclareOptionX{CondSmBoldFeatures}{\renewcommand*{\SmBdCondDef}{#1,}}
-
 \DeclareOptionX{SmCondSmBoldFeatures}{\renewcommand*{\SmBdSmCondDef}{#1,}}
-
 \DeclareOptionX{SmExpSmBoldFeatures}{\renewcommand*{\SmBdSmExpDef}{#1,}}
-
 \DeclareOptionX{ExpSmBoldFeatures}{\renewcommand*{\SmBdExpDef}{#1,}}
 
-
 \DeclareOptionX{BoldFeatures}{\renewcommand*{\BdDef}{#1,}}
-
 \DeclareOptionX{CondBoldFeatures}{\renewcommand*{\BdCondDef}{#1,}}
-
 \DeclareOptionX{SmCondBoldFeatures}{\renewcommand*{\BdSmCondDef}{#1,}}
-
 \DeclareOptionX{SmExpBoldFeatures}{\renewcommand*{\BdSmExpDef}{#1,}}
-
 \DeclareOptionX{ExpBoldFeatures}{\renewcommand*{\BdExpDef}{#1,}}
 
-% Alternate style size features
+% 2. Size features
 
 \DeclareOptionX{CondSizeFeatures}{\renewcommand*{\CondSizeDef}{#1}}
-
 \DeclareOptionX{SmCondSizeFeatures}{\renewcommand*{\SmCondSizeDef}{#1}}
-
 \DeclareOptionX{SmExpSizeFeatures}{\renewcommand*{\SmExpSizeDef}{#1}}
-
 \DeclareOptionX{ExpSizeFeatures}{\renewcommand*{\ExpSizeDef}{#1}}
 
 
 \DeclareOptionX{LightSizeFeatures}{\renewcommand*{\LtSizeDef}{#1}}
-
 \DeclareOptionX{CondLightSizeFeatures}{\renewcommand*{\LtCondSizeDef}{#1}}
-
 \DeclareOptionX{SmCondLightSizeFeatures}{\renewcommand*{\LtSmCondSizeDef}{#1}}
-
 \DeclareOptionX{SmExpLightSizeFeatures}{\renewcommand*{\LtSmExpSizeDef}{#1}}
-
 \DeclareOptionX{ExpLightSizeFeatures}{\renewcommand*{\LtExpSizeDef}{#1}}
 
-
 \DeclareOptionX{MediumSizeFeatures}{\renewcommand*{\MmSizeDef}{#1}}
-
 \DeclareOptionX{CondMediumSizeFeatures}{\renewcommand*{\MmCondSizeDef}{#1}}
-
 \DeclareOptionX{SmCondMediumSizeFeatures}{\renewcommand*{\MmSmCondSizeDef}{#1}}
-
 \DeclareOptionX{SmExpMediumSizeFeatures}{\renewcommand*{\MmSmExpSizeDef}{#1}}
-
 \DeclareOptionX{ExpMediumSizeFeatures}{\renewcommand*{\MmExpSizeDef}{#1}}
 
-
 \DeclareOptionX{SmBoldSizeFeatures}{\renewcommand*{\SmBdSizeDef}{#1}}
-
 \DeclareOptionX{CondSmBoldSizeFeatures}{\renewcommand*{\SmBdCondSizeDef}{#1}}
-
 \DeclareOptionX{SmCondSmBoldSizeFeatures}{\renewcommand*{\SmBdSmCondSizeDef}{#1}}
-
 \DeclareOptionX{SmExpSmBoldSizeFeatures}{\renewcommand*{\SmBdSmExpSizeDef}{#1}}
-
 \DeclareOptionX{ExpSmBoldSizeFeatures}{\renewcommand*{\SmBdExpSizeDef}{#1}}
 
-
 \DeclareOptionX{BoldSizeFeatures}{\renewcommand*{\BdSizeDef}{#1}}
-
 \DeclareOptionX{CondBoldSizeFeatures}{\renewcommand*{\BdCondSizeDef}{#1}}
-
 \DeclareOptionX{SmCondBoldSizeFeatures}{\renewcommand*{\BdSmCondSizeDef}{#1}}
-
 \DeclareOptionX{SmExpBoldSizeFeatures}{\renewcommand*{\BdSmExpSizeDef}{#1}}
-
 \DeclareOptionX{ExpBoldSizeFeatures}{\renewcommand*{\BdExpSizeDef}{#1}}
 
-
-
 \DeclareOptionX{ENLAOneFeatures}{\renewcommand*{\ENLAOneDef}{#1}}
-
 \DeclareOptionX{ENLATwoFeatures}{\renewcommand*{\ENLATwoDef}{#1}}
-
 \DeclareOptionX{ENLAThreeFeatures}{\renewcommand*{\ENLAThreeDef}{#1}}
-
 \DeclareOptionX{ENLAFourFeatures}{\renewcommand*{\ENLAThreeDef}{#1}}
 
+% Declare an option that will catch anything undefined and issue a warning.
+% Then process the options.
 
 \DeclareOptionX*{\PackageWarning{JunicodeVF}{Unknown option `\CurrentOption' ignored}}
 \ProcessOptionsX\relax
 
+% If one of the standard weight options, redefine the weights
+
+\ifjunicodevf@light
+    \def\junicodevf@RwghtOne{360}
+    \def\junicodevf@RwghtTwo{340}
+    \def\junicodevf@RwghtThree{320}
+    \def\junicodevf@RwghtFour{300}
+    \def\junicodevf@RwghtFive{300}
+
+    \def\junicodevf@IwghtOne{365}
+    \def\junicodevf@IwghtTwo{345}
+    \def\junicodevf@IwghtThree{325}
+    \def\junicodevf@IwghtFour{310}
+    \def\junicodevf@IwghtFive{310}
+\fi
+
+\ifjunicodevf@medium
+    \def\junicodevf@RwghtOne{590}
+    \def\junicodevf@RwghtTwo{540}
+    \def\junicodevf@RwghtThree{490}
+    \def\junicodevf@RwghtFour{470}
+    \def\junicodevf@RwghtFive{450}
+
+    \def\junicodevf@IwghtOne{625}
+    \def\junicodevf@IwghtTwo{575}
+    \def\junicodevf@IwghtThree{525}
+    \def\junicodevf@IwghtFour{470}
+    \def\junicodevf@IwghtFive{450}
+\fi
+
+\ifjunicodevf@semibold
+    \def\junicodevf@BwghtOne{690}
+    \def\junicodevf@BwghtTwo{640}
+    \def\junicodevf@BwghtThree{590}
+    \def\junicodevf@BwghtFour{570}
+    \def\junicodevf@BwghtFive{550}
+
+    \def\junicodevf@BIwghtOne{700}
+    \def\junicodevf@BIwghtTwo{675}
+    \def\junicodevf@BIwghtThree{625}
+    \def\junicodevf@BIwghtFour{570}
+    \def\junicodevf@BIwghtFive{550}
+\fi
+
+% If one of the standard width options, redefine the widths.
+
+\ifjunicodevf@condensed
+    \def\junicodevf@RwdthOne{90}
+    \def\junicodevf@RwdthTwo{85}
+    \def\junicodevf@RwdthThree{82.5}
+    \def\junicodevf@RwdthFour{75}
+    \def\junicodevf@RwdthFive{75}
+
+    \def\junicodevf@IwdthOne{90}
+    \def\junicodevf@IwdthTwo{85}
+    \def\junicodevf@IwdthThree{82.5}
+    \def\junicodevf@IwdthFour{75}
+    \def\junicodevf@IwdthFive{75}
+
+    \def\junicodevf@BwdthOne{90}
+    \def\junicodevf@BwdthTwo{85}
+    \def\junicodevf@BwdthThree{82.5}
+    \def\junicodevf@BwdthFour{75}
+    \def\junicodevf@BwdthFive{75}
+
+    \def\junicodevf@BIwdthOne{90}
+    \def\junicodevf@BIwdthTwo{85}
+    \def\junicodevf@BIwdthThree{82.5}
+    \def\junicodevf@BIwdthFour{75}
+    \def\junicodevf@BIwdthFive{75}
+\fi
+
+\ifjunicodevf@semicondensed
+    \def\junicodevf@RwdthOne{100}
+    \def\junicodevf@RwdthTwo{95}
+    \def\junicodevf@RwdthThree{87.5}
+    \def\junicodevf@RwdthFour{87.5}
+    \def\junicodevf@RwdthFive{77.5}
+
+    \def\junicodevf@IwdthOne{100}
+    \def\junicodevf@IwdthTwo{95}
+    \def\junicodevf@IwdthThree{87.5}
+    \def\junicodevf@IwdthFour{87.5}
+    \def\junicodevf@IwdthFive{77.5}
+
+    \def\junicodevf@BwdthOne{100}
+    \def\junicodevf@BwdthTwo{95}
+    \def\junicodevf@BwdthThree{87.5}
+    \def\junicodevf@BwdthFour{87.5}
+    \def\junicodevf@BwdthFive{77.5}
+
+    \def\junicodevf@BIwdthOne{100}
+    \def\junicodevf@BIwdthTwo{95}
+    \def\junicodevf@BIwdthThree{87.5}
+    \def\junicodevf@BIwdthFour{87.5}
+    \def\junicodevf@BIwdthFive{77.5}
+\fi
+
+\ifjunicodevf@semiexpanded
+    \def\junicodevf@RwdthOne{125}
+    \def\junicodevf@RwdthTwo{120}
+    \def\junicodevf@RwdthThree{112.5}
+    \def\junicodevf@RwdthFour{107.5}
+    \def\junicodevf@RwdthFive{102.5}
+
+    \def\junicodevf@IwdthOne{125}
+    \def\junicodevf@IwdthTwo{120}
+    \def\junicodevf@IwdthThree{112.5}
+    \def\junicodevf@IwdthFour{107.5}
+    \def\junicodevf@IwdthFive{102.5}
+
+    \def\junicodevf@BwdthOne{125}
+    \def\junicodevf@BwdthTwo{120}
+    \def\junicodevf@BwdthThree{112.5}
+    \def\junicodevf@BwdthFour{107.5}
+    \def\junicodevf@BwdthFive{102.5}
+
+    \def\junicodevf@BIwdthOne{125}
+    \def\junicodevf@BIwdthTwo{120}
+    \def\junicodevf@BIwdthThree{112.5}
+    \def\junicodevf@BIwdthFour{107.5}
+    \def\junicodevf@BIwdthFive{102.5}
+\fi
+
+\ifjunicodevf@expanded
+    \def\junicodevf@RwdthOne{125}
+    \def\junicodevf@RwdthTwo{125}
+    \def\junicodevf@RwdthThree{125}
+    \def\junicodevf@RwdthFour{120}
+    \def\junicodevf@RwdthFive{115}
+
+    \def\junicodevf@IwdthOne{125}
+    \def\junicodevf@IwdthTwo{125}
+    \def\junicodevf@IwdthThree{125}
+    \def\junicodevf@IwdthFour{120}
+    \def\junicodevf@IwdthFive{115}
+
+    \def\junicodevf@BwdthOne{125}
+    \def\junicodevf@BwdthTwo{125}
+    \def\junicodevf@BwdthThree{125}
+    \def\junicodevf@BwdthFour{120}
+    \def\junicodevf@BwdthFive{115}
+
+    \def\junicodevf@BIwdthOne{125}
+    \def\junicodevf@BIwdthTwo{125}
+    \def\junicodevf@BIwdthThree{125}
+    \def\junicodevf@BIwdthFour{120}
+    \def\junicodevf@BIwdthFive{115}
+\fi
+
+% If we don't already have SizeFeatures for the main faces, define them.
+
+\@ifundefined{MainRegSizeDef}{
+    \newcommand*{\MainRegSizeDef}{
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@RwghtOne,wdth=\junicodevf@RwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@RwghtTwo,wdth=\junicodevf@RwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@RwghtThree,wdth=\junicodevf@RwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@RwghtFour,wdth=\junicodevf@RwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@RwghtFive,wdth=\junicodevf@RwdthFive}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainItalicSizeDef}{
+    \newcommand*{\MainItalicSizeDef}{
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@IwghtOne,wdth=\junicodevf@IwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@IwghtTwo,wdth=\junicodevf@IwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@IwghtThree,wdth=\junicodevf@IwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@IwghtFour,wdth=\junicodevf@IwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@IwghtFive,wdth=\junicodevf@IwdthFive}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainBoldSizeDef}{
+    \newcommand*{\MainBoldSizeDef}{
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@BwghtOne,wdth=\junicodevf@BwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@BwghtTwo,wdth=\junicodevf@BwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@BwghtThree,wdth=\junicodevf@BwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@BwghtFour,wdth=\junicodevf@BwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@BwghtFive,wdth=\junicodevf@BwdthFive}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainBoldItalicSizeDef}{
+    \newcommand*{\MainBoldItalicSizeDef}{
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@BIwghtOne,wdth=\junicodevf@BIwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@BIwghtTwo,wdth=\junicodevf@BIwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@BIwghtThree,wdth=\junicodevf@BIwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@BIwghtFour,wdth=\junicodevf@BIwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@BIwghtFive,wdth=\junicodevf@BIwdthFive}}}
+        }
+    }
+}{}
+
 % Number strings for fontspec.
 
-\def\junicode@figurestyle{Lowercase}
-\ifjunicode@lining\def\junicode@figurestyle{Uppercase}\fi
-\def\junicode@figurealign{Proportional}
-\ifjunicode@tabular\def\junicode@figurealign{Monospaced}\fi
+\def\junicodevf@figurestyle{Lowercase}
+\ifjunicodevf@lining\def\junicodevf@figurestyle{Uppercase}\fi
+\def\junicodevf@figurealign{Proportional}
+\ifjunicodevf@tabular\def\junicodevf@figurealign{Monospaced}\fi
 
 % \RequirePackage{fontspec}
 
@@ -358,7 +492,7 @@
     BoldFont =           {*},
     BoldItalicFont =     {*-Italic},
     Renderer =           HarfBuzz,
-    Numbers =            {\junicode@figurealign,\junicode@figurestyle},
+    Numbers =            {\junicodevf@figurealign,\junicodevf@figurestyle},
     \MainDef,
     UprightFeatures =    {\MainRegDef
                           \MainRegSizeDef},
@@ -370,10 +504,10 @@
                           \MainBoldItalicSizeDef}
 ]
 
-\newcommand{\junicodevf@newfont}[4]{
+\newcommand*{\junicodevf@newfont}[4]{
     \setfontface#1{#2}[
         Renderer =          HarfBuzz,
-        Numbers =           {\junicode@figurealign,\junicode@figurestyle},
+        Numbers =           {\junicodevf@figurealign,\junicodevf@figurestyle},
         SmallCapsFont =     {*},
         SmallCapsFeatures = {Letters=SmallCaps},
         #3
@@ -382,111 +516,66 @@
 }
 
 \junicodevf@newfont{\jRegular}{JunicodeVF}{\RegDef}{\RegSizeDef}
-
 \junicodevf@newfont{\jItalic}{JunicodeVF-Italic}{\RegDef}{\RegSizeDef}
-
 \junicodevf@newfont{\jCond}{JunicodeVF}{\CondDef}{\CondSizeDef}
-
 \junicodevf@newfont{\jCondItalic}{JunicodeVF-Italic}{\CondDef}{\CondSizeDef}
-
 \junicodevf@newfont{\jSmCond}{JunicodeVF}{\SmCondDef}{\SmCondSizeDef}
-
 \junicodevf@newfont{\jSmCondItalic}{JunicodeVF-Italic}{\SmCondDef}{\SmCondSizeDef}
-
 \junicodevf@newfont{\jSmExp}{JunicodeVF}{\SmExpDef}{\SmExpSizeDef}
-
 \junicodevf@newfont{\jSmExpItalic}{JunicodeVF-Italic}{\SmExpDef}{\SmExpSizeDef}
-
 \junicodevf@newfont{\jExp}{JunicodeVF}{\ExpDef}{\ExpSizeDef}
-
 \junicodevf@newfont{\jExpItalic}{JunicodeVF-Italic}{\ExpDef}{\ExpSizeDef}
 
 % Light faces
 
 \junicodevf@newfont{\jLight}{JunicodeVF}{\LtDef}{\LtSizeDef}
-
 \junicodevf@newfont{\jLightItalic}{JunicodeVF-Italic}{\LtDef}{\LtSizeDef}
-
 \junicodevf@newfont{\jCondLight}{JunicodeVF}{\LtCondDef}{\LtCondSizeDef}
-
 \junicodevf@newfont{\jCondLightItalic}{JunicodeVF-Italic}{\LtCondDef}{\LtCondSizeDef}
-
 \junicodevf@newfont{\jSmCondLight}{JunicodeVF}{\LtSmCondDef}{\LtSmCondSizeDef}
-
 \junicodevf@newfont{\jSmCondLightItalic}{JunicodeVF-Italic}{\LtSmCondDef}{\LtSmCondSizeDef}
-
 \junicodevf@newfont{\jSmExpLight}{JunicodeVF}{\LtSmExpDef}{\LtSmExpSizeDef}
-
 \junicodevf@newfont{\jSmExpLightItalic}{JunicodeVF-Italic}{\LtSmExpDef}{\LtSmExpSizeDef}
-
 \junicodevf@newfont{\jExpLight}{JunicodeVF}{\LtExpDef}{\LtExpSizeDef}
-
 \junicodevf@newfont{\jExpLightItalic}{JunicodeVF-Italic}{\LtExpDef}{\LtExpSizeDef}
 
 % Medium faces
 
 \junicodevf@newfont{\jMedium}{JunicodeVF}{\MmDef}{\MmSizeDef}
-
 \junicodevf@newfont{\jMediumItalic}{JunicodeVF-Italic}{\MmDef}{\MmSizeDef}
-
 \junicodevf@newfont{\jCondMedium}{JunicodeVF}{\MmCondDef}{\MmCondSizeDef}
-
 \junicodevf@newfont{\jCondMediumItalic}{JunicodeVF-Italic}{\MmCondDef}{\MmCondSizeDef}
-
 \junicodevf@newfont{\jSmCondMedium}{JunicodeVF}{\MmSmCondDef}{\MmSmCondSizeDef}
-
 \junicodevf@newfont{\jSmCondMediumItalic}{JunicodeVF-Italic}{\MmSmCondDef}{\MmSmCondSizeDef}
-
 \junicodevf@newfont{\jSmExpMedium}{JunicodeVF}{\MmSmExpDef}{\MmSmExpSizeDef}
-
 \junicodevf@newfont{\jSmExpMediumItalic}{JunicodeVF-Italic}{\MmSmExpDef}{\MmSmExpSizeDef}
-
 \junicodevf@newfont{\jExpMedium}{JunicodeVF}{\MmExpDef}{\MmExpSizeDef}
-
 \junicodevf@newfont{\jExpMediumItalic}{JunicodeVF-Italic}{\MmExpDef}{\MmExpSizeDef}
 
 % Semibold faces
 
 \junicodevf@newfont{\jSmbold}{JunicodeVF}{\SmBdDef}{\SmBdSizeDef}
-
 \junicodevf@newfont{\jSmboldItalic}{JunicodeVF-Italic}{\SmBdDef}{\SmBdSizeDef}
-
 \junicodevf@newfont{\jCondSmbold}{JunicodeVF}{\SmBdCondDef}{\SmBdCondSizeDef}
-
 \junicodevf@newfont{\jCondSmboldItalic}{JunicodeVF-Italic}{\SmBdCondDef}{\SmBdCondSizeDef}
-
 \junicodevf@newfont{\jSmCondSmbold}{JunicodeVF}{\SmBdSmCondDef}{\SmBdSmCondSizeDef}
-
 \junicodevf@newfont{\jSmCondSmboldItalic}{JunicodeVF-Italic}{\SmBdSmCondDef}{\SmBdSmCondSizeDef}
-
 \junicodevf@newfont{\jSmExpSmbold}{JunicodeVF}{\SmBdSmExpDef}{\SmBdSmExpSizeDef}
-
 \junicodevf@newfont{\jSmExpSmboldItalic}{JunicodeVF-Italic}{\SmBdSmExpDef}{\SmBdSmExpSizeDef}
-
 \junicodevf@newfont{\jExpSmbold}{JunicodeVF}{\SmBdExpDef}{\SmBdExpSizeDef}
-
 \junicodevf@newfont{\jExpSmboldItalic}{JunicodeVF-Italic}{\SmBdExpDef}{\SmBdExpSizeDef}
 
 % Bold faces
 
 \junicodevf@newfont{\jBold}{JunicodeVF}{\BdDef}{\BdSizeDef}
-
 \junicodevf@newfont{\jBoldItalic}{JunicodeVF-Italic}{\BdDef}{\BdSizeDef}
-
 \junicodevf@newfont{\jCondBold}{JunicodeVF}{\BdCondDef}{\BdCondSizeDef}
-
 \junicodevf@newfont{\jCondBoldItalic}{JunicodeVF-Italic}{\BdCondDef}{\BdCondSizeDef}
-
 \junicodevf@newfont{\jSmCondBold}{JunicodeVF}{\BdSmCondDef}{\BdSmCondSizeDef}
-
 \junicodevf@newfont{\jSmCondBoldItalic}{JunicodeVF-Italic}{\BdSmCondDef}{\BdSmCondSizeDef}
-
 \junicodevf@newfont{\jSmExpBold}{JunicodeVF}{\BdSmExpDef}{\BdSmExpSizeDef}
-
 \junicodevf@newfont{\jSmExpBoldItalic}{JunicodeVF-Italic}{\BdSmExpDef}{\BdSmExpSizeDef}
-
 \junicodevf@newfont{\jExpBold}{JunicodeVF}{\BdExpDef}{\BdExpSizeDef}
-
 \junicodevf@newfont{\jExpBoldItalic}{JunicodeVF-Italic}{\BdExpDef}{\BdExpSizeDef}
 
 % Enlarged faces
@@ -535,90 +624,53 @@
 % Convenience commands for non-verbose access to the cvNN features.
 % See also the "jcv" mnemonics below.
 
-\newcommand{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
-
-\newcommand{\jcv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
+\newcommand*{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+\newcommand*{\jcv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
 
 % Convenience commands for accessing the Stylistic Sets. These are
 % intended to be mnemonic.
 
-\newcommand{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
+\newcommand*{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
+\newcommand*{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
+\newcommand*{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
+\newcommand*{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
+\newcommand*{\IPAAlternates}{\addfontfeature{StylisticSet=3}} % ss03
+\newcommand*{\textIPAAlternates}[1]{{\addfontfeature{StylisticSet=3}#1}}
+\newcommand*{\HighOverline}{\addfontfeature{StylisticSet=4}} % ss04
+\newcommand*{\textHighOverline}[1]{{\addfontfeature{StylisticSet=4}#1}}
+\newcommand*{\MediumHighOverline}{\addfontfeature{StylisticSet=5}} % ss05
+\newcommand*{\textMediumHighOverline}[1]{{\addfontfeature{StylisticSet=5}#1}}
+\newcommand*{\EnlargedMinuscules}{\addfontfeature{StylisticSet=6}} % ss06
+\newcommand*{\textEnlargedMinuscules}[1]{\addfontfeature{{StylisticSet=6}#1}}
+\newcommand*{\Underdotted}{\addfontfeature{StylisticSet=7}} % ss07
+\newcommand*{\textUnderdotted}[1]{{\addfontfeature{StylisticSet=7}#1}}
+\newcommand*{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
+\newcommand*{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
+\newcommand*{\AlternateFigures}{\addfontfeature{StylisticSet=9}} % ss09
+\newcommand*{\textAlternateFigures}[1]{{\addfontfeature{StylisticSet=9}#1}}
+\newcommand*{\EntitiesAndTags}{\addfontfeature{StylisticSet=10}} % ss10
+\newcommand*{\textEntitiesAndTags}[1]{{\addfontfeature{StylisticSet=10}#1}}
 
-\newcommand{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
+% \newcommand*{\}{} % ss11 not yet used
 
-\newcommand{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
-
-\newcommand{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
-
-\newcommand{\IPAAlternates}{\addfontfeature{StylisticSet=3}} % ss03
-
-\newcommand{\textIPAAlternates}[1]{{\addfontfeature{StylisticSet=3}#1}}
-
-\newcommand{\HighOverline}{\addfontfeature{StylisticSet=4}} % ss04
-
-\newcommand{\textHighOverline}[1]{{\addfontfeature{StylisticSet=4}#1}}
-
-\newcommand{\MediumHighOverline}{\addfontfeature{StylisticSet=5}} % ss05
-
-\newcommand{\textMediumHighOverline}[1]{{\addfontfeature{StylisticSet=5}#1}}
-
-\newcommand{\EnlargedMinuscules}{\addfontfeature{StylisticSet=6}} % ss06
-
-\newcommand{\textEnlargedMinuscules}[1]{\addfontfeature{{StylisticSet=6}#1}}
-
-\newcommand{\Underdotted}{\addfontfeature{StylisticSet=7}} % ss07
-
-\newcommand{\textUnderdotted}[1]{{\addfontfeature{StylisticSet=7}#1}}
-
-\newcommand{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
-
-\newcommand{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
-
-\newcommand{\AlternateFigures}{\addfontfeature{StylisticSet=9}} % ss09
-
-\newcommand{\textAlternateFigures}[1]{{\addfontfeature{StylisticSet=9}#1}}
-
-\newcommand{\EntitiesAndTags}{\addfontfeature{StylisticSet=10}} % ss10
-
-\newcommand{\textEntitiesAndTags}[1]{{\addfontfeature{StylisticSet=10}#1}}
-
-% \newcommand{\}{} % ss11 not yet used
-
-\newcommand{\EarlyEnglishFuthorc}{\addfontfeature{StylisticSet=12}} % ss12
-
-\newcommand{\textEarlyEnglishFuthorc}[1]{{\addfontfeature{StylisticSet=12}#1}}
-
-\newcommand{\ElderFuthark}{\addfontfeature{StylisticSet=13}} % ss13
-
-\newcommand{\textElderFuthark}[1]{{\addfontfeature{StylisticSet=13}#1}}
-
-\newcommand{\YoungerFuthark}{\addfontfeature{StylisticSet=14}} % ss14
-
-\newcommand{\textYoungerFuthark}[1]{{\addfontfeature{StylisticSet=14}#1}}
-
-\newcommand{\LongBranchToShortTwig}{\addfontfeature{StylisticSet=15}} % ss15
-
-\newcommand{\textLongBranchToShortTwig}[1]{{\addfontfeature{StylisticSet=15}#1}}
-
-\newcommand{\ContextualRRotunda}{\addfontfeature{StylisticSet=16}} % ss16
-
-\newcommand{\textContextualRRotunda}[1]{{\addfontfeature{StylisticSet=16}#1}}
-
-\newcommand{\RareDigraphs}{\addfontfeature{StylisticSet=17}} % ss17
-
-\newcommand{\textRareDigraphs}[1]{{\addfontfeature{StylisticSet=17}#1}}
-
-\newcommand{\OldStylePunctuation}{\addfontfeature{StylisticSet=18}} % ss18
-
-\newcommand{\textOldStylePunctuation}[1]{{\addfontfeature{StylisticSet=18}#1}}
-
-\newcommand{\LatinToGothic}{\addfontfeature{StylisticSet=19}} % ss19
-
-\newcommand{\textLatinToGothic}[1]{{\addfontfeature{StylisticSet=19}#1}}
-
-\newcommand{\LowDiacritics}{\addfontfeature{StylisticSet=20}} % ss20
-
-\newcommand{\textLowDiacritics}[1]{{\addfontfeature{StylisticSet=20}#1}}
+\newcommand*{\EarlyEnglishFuthorc}{\addfontfeature{StylisticSet=12}} % ss12
+\newcommand*{\textEarlyEnglishFuthorc}[1]{{\addfontfeature{StylisticSet=12}#1}}
+\newcommand*{\ElderFuthark}{\addfontfeature{StylisticSet=13}} % ss13
+\newcommand*{\textElderFuthark}[1]{{\addfontfeature{StylisticSet=13}#1}}
+\newcommand*{\YoungerFuthark}{\addfontfeature{StylisticSet=14}} % ss14
+\newcommand*{\textYoungerFuthark}[1]{{\addfontfeature{StylisticSet=14}#1}}
+\newcommand*{\LongBranchToShortTwig}{\addfontfeature{StylisticSet=15}} % ss15
+\newcommand*{\textLongBranchToShortTwig}[1]{{\addfontfeature{StylisticSet=15}#1}}
+\newcommand*{\ContextualRRotunda}{\addfontfeature{StylisticSet=16}} % ss16
+\newcommand*{\textContextualRRotunda}[1]{{\addfontfeature{StylisticSet=16}#1}}
+\newcommand*{\RareDigraphs}{\addfontfeature{StylisticSet=17}} % ss17
+\newcommand*{\textRareDigraphs}[1]{{\addfontfeature{StylisticSet=17}#1}}
+\newcommand*{\OldStylePunctuation}{\addfontfeature{StylisticSet=18}} % ss18
+\newcommand*{\textOldStylePunctuation}[1]{{\addfontfeature{StylisticSet=18}#1}}
+\newcommand*{\LatinToGothic}{\addfontfeature{StylisticSet=19}} % ss19
+\newcommand*{\textLatinToGothic}[1]{{\addfontfeature{StylisticSet=19}#1}}
+\newcommand*{\LowDiacritics}{\addfontfeature{StylisticSet=20}} % ss20
+\newcommand*{\textLowDiacritics}[1]{{\addfontfeature{StylisticSet=20}#1}}
 
 % Tiny macros for providing mnemonic access to the cvNN features.
 

@@ -2,7 +2,7 @@
 \usepackage[
     medium,
     semiexpanded,
-    SmExpSmboldFeatures={
+    SmCondLightFeatures={
         Language=English,
         StylisticSet=8
     }
@@ -11,11 +11,13 @@
 \usepackage{multicol}
 \usepackage{supertabular}
 \setmonofont{SourceCodePro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
+\setsansfont{SourceSansPro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
+\newcommand{\fspec}{{\sffamily fontspec}}
 \linespread{1.1}
 \tolerance=1500
 \title{Junicode}
 \author{Peter S. Baker}
-\date{}
+\date{\today}
 \begin{document}
 \maketitle
 
@@ -25,7 +27,7 @@ This package supports the Junicode static fonts (version 2.204 or higher)
 for XeLaTeX and LuaLaTeX. The current version of the Junicode font should
 be installed in your system. If the font is included in your TeX installation,
 it is an obsolete version: you should remove it if possible. This package loads
-fontspec, so it is not necessary to load it separately, even if you are using
+\fspec, so it is not necessary to load it separately, even if you are using
 other fonts alongside Junicode.
 
 \section{Loading Junicode}
@@ -33,26 +35,28 @@ other fonts alongside Junicode.
 Load Junicode in the usual way, with {\verb|\usepackage{Junicode}|}. Several options are available:
 
 \begin{description}
-\item[fonttype] The type of font to look for, CFF or TrueType. These font types differ in the
-way they draw outlines, and their hinting technologies are very different. Values may be otf
-(the default) or ttf, e.g.\\
+\item[fonttype] The type of font to look for, \textbf{otf} (the default) or \textbf{ttf}.
+These font types differ in the
+way they draw outlines, and their hinting technologies are very different. They may look subtly
+different on a computer screen. Example:\\
 \hspace*{1in}{\verb|\usepackage[fonttype=ttf]{Junicode}|}
-\item[light] The weight of the type for the main text is Light instead of Regular.
-\item[medium] The weight of the type for the main text is Medium, somewhat heavier than Regular.
+\item[light] The weight of the type for the main text is light instead of regular.
+\item[medium] The weight of the type for the main text is medium, somewhat heavier than regular.
+The main text in this document is set in Junicode Medium.
 \item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
-good choice if you have selected the light option.
+good choice if you have selected the \textbf{light} option.
 \item[condensed] The width of the type is narrow. Note that bold type cannot be condensed: when
 this option is selected, any bold type in the text will have normal width.
 \item[semicondensed] The width of the type is wider than condensed but narrower than the default.
 Note that bold type cannot be semicondensed: when this option is selected, any bold type in the
 text will have normal width.
 \item[expanded] The width of the type is wide. Note that light type cannot be expanded: using
-both the light and the expanded options will produce an error.
+both the \textbf{light} and the \textbf{expanded} options will produce an error.
 \item[semiexpanded] The width of the type is wider than the default but narrower than expanded.
-Note that light type cannot be semiexpanded: using both the light and the semiexpanded options
+Note that light type cannot be semiexpanded: using both the \textbf{light} and the \textbf{semiexpanded} options
 will produce an error.
 \item[proportional] Numbers in the document will be proportionally spaced. This is the default.
-\item[tabular] Numbers will be tabular or monospaced.
+\item[tabular] Numbers will be tabular (or monospaced).
 \item[oldstyle] Numbers will be old-style, harmonizing with lowercase letters.
 \item[lining] Numbers will be lining, harmonizing with uppercase letters.
 \item[style options] These will be discussed in the next section.
@@ -139,14 +143,14 @@ if you keep these abbreviations in mind: Sm = Semi, Cond = Condensed, Exp = Expa
     
     \textbackslash jSmExpSmbold
     
-    \textbackslash jSmExpSmboldItalic    
+    \textbackslash jSmExpSmboldItalic
 \end{multicols}
 
 \noindent You can customize these styles by passing options when you load the package.
 The name of each option is based on the corresponding stylename, but without the
 prefixed “j” or any suffixed “Italic” (since each of these options
 affects both the roman and the matching italic face), and with “Features” suffixed.
-The content of the option must be one or more of the fontspec features appropriate to
+The content of the option must be one or more of the {\fspec} features appropriate to
 Junicode. For example, this is the {\verb|\usepackage|} command from the preamble to
 this document:
 
@@ -154,22 +158,22 @@ this document:
     \usepackage[
         medium,
         semiexpanded,
-        SmExpSmboldFeatures={
+        SmCondLightFeatures={
             Language=English,
             StylisticSet=8
         }
     ]{Junicode}
 \end{verbatim}
 
-\noindent After the options for setting the main text, the \textbf{SmExpSmboldFeatures}
+\noindent After the options for setting the main text, the \textbf{SmCondLightFeatures}
 option sets the language to English and turns on Stylistic Set 8 (“Contextual Long s”)
-for the SemiExpanded Semibold face:
-{\jSmExpSmbold \textcv[4]{\jcvf}{self\char"200Clessness}}.
+for the semicondensed light face:
+{\jSmCondLight \textcv[4]{\jcvf}{self\char"200Clessness}}.
 
 \section{Other Commands}
 
 This package's other commands are offered as conveniences---shorter and more
-mnemonic than the fontspec commands they invoke (though of course all fontspec commands
+mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
 remain available). Each of these commands
 also has a corresponding “text” command that works like 
 {\verb|\textit{}|}—that is, it takes
@@ -184,15 +188,13 @@ applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Fea
 \tabletail{\hline}
 \begin{supertabular}{| l | p{2.75in} |}
 \textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\\hline
-\textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.
-This has an effect only with English and Irish text.\\\hline
+\textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.\\\hline
 \textbackslash IPAAlternates & Applies ss03, IPA alternates.\\\hline
 \textbackslash HighOverline & Applies ss04, High Overline.\\\hline
 \textbackslash MediumHighOverline & Applies ss05, Medium-high Overline.\\\hline
 \textbackslash EnlargedMinuscules & Applies ss06, Enlarged minuscules.\\\hline
 \textbackslash Underdotted & Applies ss07, Underdotted.\\\hline
-\textbackslash ContextualLongS & Applies ss08, Contextual long s. This should be used only in English or
-French text. With other languages it converts all instances of s to ſ.\\\hline
+\textbackslash ContextualLongS & Applies ss08, Contextual long s.\\\hline
 \textbackslash AlternateFigures & Applies ss09, Alternate Figures.\\\hline
 \textbackslash EntitiesAndTags & Applies ss10, Entities and Tags.\\\hline
 \textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\\hline

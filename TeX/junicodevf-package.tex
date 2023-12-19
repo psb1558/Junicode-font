@@ -9,9 +9,9 @@
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
 
 \newcommand{\SizeRecord}[3]{{Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}}
-\usepackage[
+\usepackage[semiexpanded,weightadjustment=35,widthadjustment=-5,
     MainFeatures={StylisticSet=9}
-]{JunicodeVF}
+]{junicodevf}
 \setfontface\samplefootnote{JunicodeVF}[
     Renderer = HarfBuzz,
     SizeFeatures = {{Size={5-}, RawFeature={axis={wght=490,wdth=115}}}},
@@ -23,7 +23,7 @@
 \usepackage{metalogo}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
 \newcommand{\lltech}{Lua\LaTeX}
-\setmonofont{SourceCodePro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
+\setmonofont{Fira Code}[Scale=MatchLowercase,Numbers=Lowercase]
 \setsansfont{SourceSansPro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
 \newcommand{\fspec}{{\sffamily fontspec}}
 \linespread{1.1}
@@ -40,17 +40,20 @@
 
 This package supports Junicode VF, the variable version of Junicode
 (2.204 or higher) for \lltech. Junicode VF is not yet in CTAN, so you must
-install the font in your system in order to use it. This package loads
+install the font in your system in order to use it. Place the files
+\texttt{junicodevf.sty} and \texttt{junicodevf.lua} somewhere your {\TeX} 
+installation can find them (perhaps in the directory with the document
+you're currently working on). This package loads
 \fspec, so it is not necessary to load that package separately, even if you are using
 other fonts alongside Junicode VF.
 
 \section{Loading Junicode VF}
 
-Load the package in the usual way, with {\verb|\usepackage{JunicodeVF}|}.
+Load the package in the usual way, with {\verb|\usepackage{junicodevf}|}.
 By default, the main font is not a set of static outlines whose proportions
 remain the same though they can be scaled, but rather a set of
-\emph{variable} outlines that become relatively wider and heavier as the
-text size increases. You can see the difference if we scale a line of footnote
+\emph{variable} outlines that become relatively narrower and lighter as the
+text size decreases. You can see the difference if we scale a line of footnote
 text and a line of header text to the same {\verb|\large|} size:\\[0.5ex]
 
 \noindent {\large\samplefootnote Here is some sample text for footnotes (usually about 8pt).}\\[0.2ex]
@@ -69,21 +72,32 @@ shape responsible for this effect approximates the way letters in metal type wer
 typically wider and heavier at small sizes.} Evenness of texture makes text in
 different point sizes \emph{look} the same.
 
-Junicode VF can be customized in an enormous number of ways, which will be explained
-in later sections, but the {\verb|\usepackage|} command takes a few simple options
-as well:
+Junicode VF's package options give you a number of ways to fine-tune the look of
+your text:
 
 \begin{description}
     \item[light] The weight of the type for the main text is Light. As with the default
-    style, “Light” is a set of outlines differing in weight and width.
+    weight, and all weights selectable by options, “Light” is a range of weights that varies
+    with the size of the type.
     \item[medium] The weight of the type for the main text is Medium---that is, darker than
-    Regular but lighter than Bold.
+    Regular but lighter than Semibold.
     \item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
     good choice if you have selected the \textbf{light} option.
+    \item[weightadjustment] Adjusts the weight of the type by adding this number.
+    For example, if you choose \textbf{medium} for your document (weight averaging about 500)
+    and \textbf{bold} (weight around 700), and also include the option {\verb|weightadjustment=-25|},
+    then the weights of medium and bold text will be lightened by 25 (475, 675).
     \item[condensed] The width of the type is narrow---about 85\% of the width of the Regular style.
+    As with the default
+    width, and all widths selectable by options, "Condensed" is a range of widths that varies
+    with the size of the type.
     \item[semicondensed] The width of the type is wider than condensed but narrower than the default.
     \item[expanded] The width of the type is wide---about 125\% of the width of the Regular style.
     \item[semiexpanded] The width of the type is wider than Regular but narrower than Expanded.
+    \item[widthadjustment] Adjusts the width of the type by adding this number. For example, if you
+    choose \textbf{semicondensed} for your document (width averaging 87.5), and you also include
+    the option {\verb|widthadjustment=5|}, then the average width will be 92.5, between
+    \textbf{semicondensed} and \textbf{regular}.
     \item[proportional] Numbers in the document will be proportionally spaced. This is the default.
     \item[tabular] Numbers will be tabular (monospaced).
     \item[oldstyle] Numbers will be old-style, harmonizing with lowercase letters. This is the default.
@@ -92,9 +106,10 @@ as well:
 
 \section{Customizing the Main Font}
 
-The simple options listed in the previous section provide a rough and ready
-way to vary Junicode VF's look, but with this package's more advanced options you can choose
-from a virtually infinite number of styles.
+If the options listed in the previous section don’t give you the effect you’re looking for, this package’s 
+more advanced options allow you to choose from a virtually infinite number of styles. Do this by passing 
+OpenType features for your document’s main text or for one or more of the four main styles (Regular, Italic, 
+Bold, Bold Italic), and also by supplying custom values for the font’s four axes.
 
 For example, the style used for the body text of the \textit{Junicode Manual}
 is wider than the default, giving the text a lighter and more open look. You
@@ -137,7 +152,7 @@ each of the four standard styles:
             {Size={21.59-},      RawFeature={axis={wght=600,wdth=98}}}
         }
     }
-]{JunicodeVF}
+]{junicodevf}
 \end{verbatim}
 \normalsize
 
@@ -170,7 +185,7 @@ If you like, you can simplify these options by defining a new command:
         }
     },
     . . .
-]{JunicodeVF}
+]{junicodevf}
 \end{verbatim}
 \normalsize
 
@@ -191,7 +206,7 @@ Italic style, simply add a \textbf{MainItalicFeatures} option:
     MainFeatures={StylisticSet=10},
     MainItalicFeatures={Ligatures=Discretionary},
     . . .
-]{JunicodeVF}
+]{junicodevf}
 \end{verbatim}
 \normalsize
 
@@ -201,7 +216,7 @@ In addition to the document's main font, you can choose from fifty
 predefined styles. These match the thirty-eight styles supplied by the
 static version of Junicode, plus twelve more. The commands for shifting to these
 styles are as follows (of the italic styles, only the base “jItalic” is listed;
-append “Italic” to any of the others, except “Regular”):
+append “Italic” to any of the others, except “jRegular”):
 
 \begin{multicols}{3}
     \jCond\textbackslash jRegular
@@ -288,11 +303,11 @@ appended. For example:
                 Size={5-},RawFeature={axis={wght=325,wdth=80}}
             }
         }
-    ]{JunicodeVF}
+    ]{junicodevf}
 \end{verbatim}
 \normalsize
 
-\noindent This will shift text in the Light Condensed style from default to insular
+\noindent This will shift text in the Condensed Light style from default to insular
 letter-shapes and slightly increase the weight and width of all glyphs in that style.
 Here the \textbf{SizeFeatures} section is very simple (as in the package file itself),
 but you can have as many size ranges as you want, just as you can for the main font.
@@ -323,7 +338,7 @@ as well as the others. Again, a command for this purpose may help:
     SizeFeatures={
         \ENLASizeRecord{5-}{600}{100}{65}
     }
-}]{JunicodeVF}
+}]{junicodevf}
 \end{verbatim}
 \normalsize
 

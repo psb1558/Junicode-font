@@ -3686,6 +3686,7 @@ code = "# lookup sub_low_diacritics ;
   sub vcomb by vcomb.low ;
   sub zcomb by zcomb.low ;
   sub zigzagabovecomb by zigzagabovecomb.low ;
+  sub circumflexcomb by circumflexcomb.low ;
 ";
 labels = (
 {
@@ -7968,6 +7969,13 @@ lookup f_alt {
   sub [f f.lf longs longs.llongs]' lookup f_before_dia [ @lc_with_diacritics_above eth eth.loclENG ]' lookup f_before_dia ;
   # sub [ f longs ]' @lc_with_diacritics_above by [ f.alt longs.alt ];
 } f_alt;
+
+lookup f_letter_diacritic {
+  lookupflag UseMarkFilteringSet [ @combining_above graphemejoinercomb ] ;
+  @lc_chars = [ @AllLowerCaseexclf @LowerCase_f ] ;
+  sub [ f f.lf ]' @lc_chars [ @combining_above graphemejoinercomb ] by [ f.alt f.alt.lf ] ;
+} f_letter_diacritic ;
+
 
   lookup calt_j_alt ;
 

@@ -1,0 +1,386 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{junicodevf}[%
+    2023/12/08 (Peter Baker) Supports Junicode VF (2.204 and up) variable fonts for LuaLaTeX.]
+
+\RequirePackage{ifluatex,xkeyval,fontspec}
+
+\RequireLuaTeX
+
+% OPTIONS FOR WEIGHT AND WIDTH
+
+\def\junicodevf@regweight{1}
+\DeclareOptionX{light}{\def\junicodevf@regweight{2}}
+\DeclareOptionX{medium}{\def\junicodevf@regweight{3}}
+
+\def\junicodevf@boldweight{1}
+\DeclareOptionX{semibold}{\def\junicodevf@boldweight{2}}
+
+\def\junicodevf@width{1}
+\DeclareOptionX{condensed}{\def\junicodevf@width{2}}
+\DeclareOptionX{semicondensed}{\def\junicodevf@width{3}}
+\DeclareOptionX{semiexpanded}{\def\junicodevf@width{4}}
+\DeclareOptionX{expanded}{\def\junicodevf@width{5}}
+
+\def\wghtadjust{0}
+\DeclareOptionX{weightadjustment}{\def\wghtadjust{#1}}
+
+\def\wdthadjust{0}
+\DeclareOptionX{widthadjustment}{\def\wdthadjust{#1}}
+
+% FIGURES (default is OldStyle Proportional)
+
+\newif\ifjunicodevf@lining \junicodevf@liningfalse
+\newif\ifjunicodevf@tabular \junicodevf@tabularfalse
+
+\DeclareOptionX{lining}{\junicodevf@liningtrue}
+\DeclareOptionX{tabular}{\junicodevf@tabulartrue}
+\DeclareOptionX{proportional}{\junicodevf@tabularfalse}
+\DeclareOptionX{oldstyle}{\junicodevf@liningfalse}
+
+% COMMANDS FOR ADDING FEATURES TO MAIN TEXT
+
+% Features for all four Main faces
+
+\newcommand*{\MainDef}{}
+
+% Features for each of the four Main faces.
+
+\newcommand*{\MainRegDef}{}
+\newcommand*{\MainItalicDef}{}
+\newcommand*{\MainBoldDef}{}
+\newcommand*{\MainBoldItalicDef}{}
+
+\DeclareOptionX{MainFeatures}{\renewcommand*{\MainDef}{#1}}
+\DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
+\DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
+\DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
+\DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
+
+\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{#1}}
+\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{#1}}
+\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{#1}}
+\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{#1}}
+
+% SUPPORT FOR ENLA AXIS
+
+\newcommand*{\ENLAOneDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=32}}}}}
+\newcommand*{\ENLATwoDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=47}}}}}
+\newcommand*{\ENLAThreeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=75}}}}}
+\newcommand*{\ENLAFourDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=100}}}}}
+
+% Declare the options for each of the Alternate Styles.
+
+\directlua{dofile("junicodevf.lua")
+mkaltcommands()}
+
+% Declare an option that will catch anything undefined and issue a warning.
+% Then process the options.
+
+\DeclareOptionX*{\PackageWarning{JunicodeVF}{Unknown option `\CurrentOption' ignored}}
+\ProcessOptionsX\relax
+
+% DEFINE THE WEIGHTS AND WIDTHS (depending on weight and width options)
+
+\def\mkregweightcommands#1#2{%
+\directlua{wtindex = #1
+adjustment = #2
+mkregweightcommands(wtindex, adjustment)}}
+
+\def\mkboldweightcommands#1#2{%
+\directlua{wtindex = #1
+adjustment = #2
+mkboldweightcommands(wtindex, adjustment)}}
+
+\def\mkwidthcommands#1#2{%
+\directlua{wdindex = #1
+adjustment = #2
+mkwidthcommands(wdindex, adjustment)}}
+
+\mkregweightcommands{\junicodevf@regweight}{\wghtadjust}
+
+\mkboldweightcommands{\junicodevf@boldweight}{\wghtadjust}
+
+\mkwidthcommands{\junicodevf@width}{\wdthadjust}
+
+% DEFINE SizeFeatures (if we don't already have them)
+
+\@ifundefined{MainRegSizeDef}{
+    \newcommand*{\MainRegSizeDef}{%
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@RwghtOne,wdth=\junicodevf@RwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@RwghtTwo,wdth=\junicodevf@RwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@RwghtThree,wdth=\junicodevf@RwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@RwghtFour,wdth=\junicodevf@RwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@RwghtFive,wdth=\junicodevf@RwdthFive}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainItalicSizeDef}{
+    \newcommand*{\MainItalicSizeDef}{%
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@IwghtOne,wdth=\junicodevf@IwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@IwghtTwo,wdth=\junicodevf@IwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@IwghtThree,wdth=\junicodevf@IwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@IwghtFour,wdth=\junicodevf@IwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@IwghtFive,wdth=\junicodevf@IwdthFive}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainBoldSizeDef}{
+    \newcommand*{\MainBoldSizeDef}{%
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@BwghtOne,wdth=\junicodevf@BwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@BwghtTwo,wdth=\junicodevf@BwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@BwghtThree,wdth=\junicodevf@BwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@BwghtFour,wdth=\junicodevf@BwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@BwghtFive,wdth=\junicodevf@BwdthFive}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainBoldItalicSizeDef}{
+    \newcommand*{\MainBoldItalicSizeDef}{%
+        SizeFeatures={
+            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@BIwghtOne,wdth=\junicodevf@BIwdthOne}}},
+            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@BIwghtTwo,wdth=\junicodevf@BIwdthTwo}}},
+            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@BIwghtThree,wdth=\junicodevf@BIwdthThree}}},
+            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@BIwghtFour,wdth=\junicodevf@BIwdthFour}}},
+            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@BIwghtFive,wdth=\junicodevf@BIwdthFive}}}
+        }
+    }
+}{}
+
+% NUMBER STRINGS for fontspec.
+
+\def\junicodevf@figurestyle{Lowercase}
+\ifjunicodevf@lining\def\junicodevf@figurestyle{Uppercase}\fi
+\def\junicodevf@figurealign{Proportional}
+\ifjunicodevf@tabular\def\junicodevf@figurealign{Monospaced}\fi
+
+% DECLARE THE FONTS
+
+\setmainfont{Junicode VF}[
+    ItalicFont =         {*-Italic},
+    BoldFont =           {*},
+    BoldItalicFont =     {*-Italic},
+    Renderer =           HarfBuzz,
+    Numbers =            {\junicodevf@figurealign,\junicodevf@figurestyle},
+    \MainDef,
+    UprightFeatures =    {\MainRegDef
+                          \MainRegSizeDef},
+    BoldFeatures =       {\MainBoldDef
+                          \MainBoldSizeDef},
+    ItalicFeatures =     {\MainItalicDef
+                          \MainItalicSizeDef},
+    BoldItalicFeatures = {\MainBoldItalicDef
+                          \MainBoldItalicSizeDef}
+]
+
+\newcommand*{\junicodevf@newfont}[4]{
+    \setfontface#1{#2}[
+        Renderer =          HarfBuzz,
+        Numbers =           {\junicodevf@figurealign,\junicodevf@figurestyle},
+        SmallCapsFont =     {*},
+        SmallCapsFeatures = {Letters=SmallCaps},
+        #3
+        #4
+    ]
+}
+
+\directlua{mkfontcommands()}
+
+% ENLARGED FACES
+
+\setfontface\EnlargedOne{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLAOneDef
+]
+
+\setfontface\EnlargedOneItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLAOneDef
+]
+
+\setfontface\EnlargedTwo{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLATwoDef
+]
+
+\setfontface\EnlargedTwoItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLATwoDef
+]
+
+\setfontface\EnlargedThree{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLAThreeDef
+]
+
+\setfontface\EnlargedThreeItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLAThreeDef
+]
+
+%\setfontface\EnlargedFour{JunicodeVF}[
+%    Renderer = HarfBuzz,
+%    \ENLAThreeDef
+%]
+
+%\setfontface\EnlargedFourItalic{JunicodeVF-Italic}[
+%    Renderer = HarfBuzz,
+%    \ENLAThreeDef
+%]
+
+% Convenience commands for non-verbose access to the cvNN features.
+% See also the "jcv" mnemonics below.
+
+\newcommand*{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+\newcommand*{\jcv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
+
+% Convenience commands for accessing the Stylistic Sets. These are
+% intended to be mnemonic.
+
+\newcommand*{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
+\newcommand*{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
+\newcommand*{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
+\newcommand*{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
+\newcommand*{\IPAAlternates}{\addfontfeature{StylisticSet=3}} % ss03
+\newcommand*{\textIPAAlternates}[1]{{\addfontfeature{StylisticSet=3}#1}}
+\newcommand*{\HighOverline}{\addfontfeature{StylisticSet=4}} % ss04
+\newcommand*{\textHighOverline}[1]{{\addfontfeature{StylisticSet=4}#1}}
+\newcommand*{\MediumHighOverline}{\addfontfeature{StylisticSet=5}} % ss05
+\newcommand*{\textMediumHighOverline}[1]{{\addfontfeature{StylisticSet=5}#1}}
+\newcommand*{\EnlargedMinuscules}{\addfontfeature{StylisticSet=6}} % ss06
+\newcommand*{\textEnlargedMinuscules}[1]{\addfontfeature{{StylisticSet=6}#1}}
+\newcommand*{\Underdotted}{\addfontfeature{StylisticSet=7}} % ss07
+\newcommand*{\textUnderdotted}[1]{{\addfontfeature{StylisticSet=7}#1}}
+\newcommand*{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
+\newcommand*{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
+\newcommand*{\AlternateFigures}{\addfontfeature{StylisticSet=9}} % ss09
+\newcommand*{\textAlternateFigures}[1]{{\addfontfeature{StylisticSet=9}#1}}
+\newcommand*{\EntitiesAndTags}{\addfontfeature{StylisticSet=10}} % ss10
+\newcommand*{\textEntitiesAndTags}[1]{{\addfontfeature{StylisticSet=10}#1}}
+% \newcommand*{\}{} % ss11 not yet used
+\newcommand*{\EarlyEnglishFuthorc}{\addfontfeature{StylisticSet=12}} % ss12
+\newcommand*{\textEarlyEnglishFuthorc}[1]{{\addfontfeature{StylisticSet=12}#1}}
+\newcommand*{\ElderFuthark}{\addfontfeature{StylisticSet=13}} % ss13
+\newcommand*{\textElderFuthark}[1]{{\addfontfeature{StylisticSet=13}#1}}
+\newcommand*{\YoungerFuthark}{\addfontfeature{StylisticSet=14}} % ss14
+\newcommand*{\textYoungerFuthark}[1]{{\addfontfeature{StylisticSet=14}#1}}
+\newcommand*{\LongBranchToShortTwig}{\addfontfeature{StylisticSet=15}} % ss15
+\newcommand*{\textLongBranchToShortTwig}[1]{{\addfontfeature{StylisticSet=15}#1}}
+\newcommand*{\ContextualRRotunda}{\addfontfeature{StylisticSet=16}} % ss16
+\newcommand*{\textContextualRRotunda}[1]{{\addfontfeature{StylisticSet=16}#1}}
+\newcommand*{\RareDigraphs}{\addfontfeature{StylisticSet=17}} % ss17
+\newcommand*{\textRareDigraphs}[1]{{\addfontfeature{StylisticSet=17}#1}}
+\newcommand*{\OldStylePunctuation}{\addfontfeature{StylisticSet=18}} % ss18
+\newcommand*{\textOldStylePunctuation}[1]{{\addfontfeature{StylisticSet=18}#1}}
+\newcommand*{\LatinToGothic}{\addfontfeature{StylisticSet=19}} % ss19
+\newcommand*{\textLatinToGothic}[1]{{\addfontfeature{StylisticSet=19}#1}}
+\newcommand*{\LowDiacritics}{\addfontfeature{StylisticSet=20}} % ss20
+\newcommand*{\textLowDiacritics}[1]{{\addfontfeature{StylisticSet=20}#1}}
+
+% Tiny macros for providing mnemonic access to the cvNN features.
+
+\def\jcvA{1}
+\def\jcva{2}
+\def\jcvB{3}
+\def\jcvb{4}
+\def\jcvC{5}
+\def\jcvc{6}
+\def\jcvD{7}
+\def\jcvd{8}
+\def\jcvE{9}
+\def\jcve{10}
+\def\jcvF{11}
+\def\jcvf{12}
+\def\jcvG{13}
+\def\jcvg{14}
+\def\jcvH{15}
+\def\jcvh{16}
+\def\jcvI{17}
+\def\jcvi{18}
+\def\jcvJ{19}
+\def\jcvj{20}
+\def\jcvK{21}
+\def\jcvk{22}
+\def\jcvL{23}
+\def\jcvl{24}
+\def\jcvM{25}
+\def\jcvm{26}
+\def\jcvN{27}
+\def\jcvn{28}
+\def\jcvO{29}
+\def\jcvo{30}
+\def\jcvP{31}
+\def\jcvp{32}
+\def\jcvQ{33}
+\def\jcvq{34}
+\def\jcvR{35}
+\def\jcvr{36}
+\def\jcvS{37}
+\def\jcvs{38}
+\def\jcvT{39}
+\def\jcvt{40}
+\def\jcvU{41}
+\def\jcvu{42}
+\def\jcvV{43}
+\def\jcvv{44}
+\def\jcvW{45}
+\def\jcvw{46}
+\def\jcvX{47}
+\def\jcvx{48}
+\def\jcvY{49}
+\def\jcvy{50}
+\def\jcvZ{51}
+\def\jcvz{52}
+\def\jcvAogonek{53}
+\def\jcvaogonek{54}
+\def\jcvaa{55}
+\def\jcvAE{56}
+\def\jcvae{57}
+\def\jcvAO{58}
+\def\jcvao{59}
+\def\jcvav{60}
+\def\jcvdbar{61}
+\def\jcvdcroat{61}
+\def\jcvEogonek{62}
+\def\jcvYogh{63}
+\def\jcvlhighstroke{64} %somehow escaped the documentation
+\def\jcvoPolish{65}
+\def\jcvthorncrossed{66}
+\def\jcvspacingzigzag{67}
+\def\jcvglottal{68}
+\def\jcvTironianEt{69}
+\def\jcvperiod{70}
+\def\jcvmiddot{71}
+\def\jcvcomma{72}
+\def\jcvsemicolon{73}
+\def\jcvpunctuselevatus{74}
+\def\jcvexclam{75}
+\def\jcvquestion{76}
+\def\jcvASCIItilde{77}
+\def\jcvasterisk{78}
+\def\jcvslash{79}
+\def\jcvrum{80}
+\def\jcvcombiningzigzag{81}
+\def\jcvspacingusabbrev{82}
+\def\jcvetabbrev{83}
+\def\jcvmacron{84}
+\def\jcvcombiningopena{85}
+\def\jcvcombininginsulard{86}
+\def\jcvcombiningrrotunda{87}
+\def\jcvcombiningdieresis{88}
+\def\jcvcombiningoverline{89}
+\def\jcvHcombiningdoublemacron{90}
+\def\jcvEng{91}
+\def\jcvbrevebelow{92}
+\def\jcvcurrency{93}
+\def\jcvlb{94}
+\def\jcvsterling{95}
+\def\jcvGermanpenny{96}
+\def\jcvflorin{97}
+\def\jcvounce{98}
+%\def\notyetused{99}

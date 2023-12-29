@@ -29,30 +29,30 @@ alt_styles = {
 
 -- 1: Regular, 2: Light, 3: Medium
 regular_weights = { 
-   junicodevf_at_RwghtOne =   { 490, 360, 590 },
-   junicodevf_at_IwghtOne =   { 525, 365, 625 },
+   junicodevf_at_RwghtOne =   { 490, 390, 590 },
    junicodevf_at_RwghtTwo =   { 440, 340, 540 },
-   junicodevf_at_IwghtTwo =   { 475, 345, 575 },
-   junicodevf_at_RwghtThree = { 390, 320, 490 },
+   junicodevf_at_RwghtThree = { 390, 290, 490 },
+   junicodevf_at_RwghtFour =  { 370, 270, 470 },
+   junicodevf_at_RwghtFive =  { 350, 250, 450 },
+   junicodevf_at_IwghtOne =   { 525, 425, 625 },
+   junicodevf_at_IwghtTwo =   { 475, 375, 575 },
    junicodevf_at_IwghtThree = { 425, 325, 525 },
-   junicodevf_at_RwghtFour =  { 370, 300, 470 },
-   junicodevf_at_IwghtFour =  { 370, 310, 470 },
-   junicodevf_at_RwghtFive =  { 350, 300, 450 },
-   junicodevf_at_IwghtFive =  { 350, 310, 450 }
+   junicodevf_at_IwghtFour =  { 370, 270, 470 },
+   junicodevf_at_IwghtFive =  { 350, 250, 450 }
 }
 
 -- 1: Bold, 2: Semibold
 bold_weights = { 
-   junicodevf_at_BwghtOne =    { 700, 690 },
-   junicodevf_at_BIwghtOne =   { 700, 700 },
-   junicodevf_at_BwghtTwo =    { 700, 640 },
-   junicodevf_at_BIwghtTwo =   { 700, 675 },
-   junicodevf_at_BwghtThree =  { 650, 590 },
-   junicodevf_at_BIwghtThree = { 650, 625 },
-   junicodevf_at_BwghtFour =   { 650, 570 },
-   junicodevf_at_BIwghtFour =  { 650, 570 },
-   junicodevf_at_BwghtFive =   { 600, 550 },
-   junicodevf_at_BIwghtFive =  { 600, 550 }
+   junicodevf_at_BwghtOne =    { 790, 690 },
+   junicodevf_at_BwghtTwo =    { 740, 640 },
+   junicodevf_at_BwghtThree =  { 690, 590 },
+   junicodevf_at_BwghtFour =   { 650, 550 },
+   junicodevf_at_BwghtFive =   { 600, 500 },
+   junicodevf_at_BIwghtOne =   { 800, 700 },
+   junicodevf_at_BIwghtTwo =   { 775, 675 },
+   junicodevf_at_BIwghtThree = { 725, 625 },
+   junicodevf_at_BIwghtFour =  { 675, 575 },
+   junicodevf_at_BIwghtFive =  { 625, 525 }
 }
 
  -- 1: regular, 2: condensed, 3: semicondensed, 4: semiexpanded, 5: expanded

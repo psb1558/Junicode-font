@@ -19,18 +19,20 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{junicode}[2023/12/19 (Peter Baker) Supports Junicode (2.204 and up) static fonts for XeLaTeX and LuaLaTeX.]
 
-\RequirePackage{ifxetex,ifluatex,xkeyval}
+\RequirePackage{iftex,xkeyval}
 
-\newif\ifjunicodeokay
+\newif\ifjunc \junctrue
 \ifxetex
-    \junicodeokaytrue
-\else\ifluatex
-    \junicodeokaytrue
-\else
+    \juncfalse
+\fi
+\ifluatex
+    \juncfalse
+\fi
+\ifjunc
     \PackageError{Junicode}{This package works only with LuaLaTeX or XeLaTeX}{}
 \fi
 
-% Declear empty commands for Alternative styles
+% Declare empty commands for Alternative styles
 
 \newcommand{\RegularDef}{}
 \newcommand{\BoldDef}{}
@@ -40,17 +42,17 @@
 \newcommand{\ExpDef}{}
 \newcommand{\ExpBoldDef}{}
 \newcommand{\ExpMediumDef}{}
-\newcommand{\ExpSmboldDef}{}
+\newcommand{\ExpSmBoldDef}{}
 \newcommand{\LightDef}{}
 \newcommand{\MediumDef}{}
-\newcommand{\SmboldDef}{}
+\newcommand{\SmBoldDef}{}
 \newcommand{\SmCondDef}{}
 \newcommand{\SmCondLightDef}{}
 \newcommand{\SmCondMediumDef}{}
 \newcommand{\SmExpDef}{}
 \newcommand{\SmExpBoldDef}{}
 \newcommand{\SmExpMediumDef}{}
-\newcommand{\SmExpSmboldDef}{}
+\newcommand{\SmExpSmBoldDef}{}
 
 % Choose the type of font: otf or ttf.
 
@@ -115,7 +117,7 @@
 
 \DeclareOptionX{ExpMediumFeatures}{\renewcommand*{\ExpMediumDef}{#1,}}
 
-\DeclareOptionX{ExpSmboldFeatures}{\renewcommand*{\ExpSmboldDef}{#1,}}
+\DeclareOptionX{ExpSmBoldFeatures}{\renewcommand*{\ExpSmBoldDef}{#1,}}
 
 \DeclareOptionX{LightDefFeatures}{\renewcommand*{\LightDef}{#1,}}
 
@@ -123,7 +125,7 @@
 
 \DeclareOptionX{RegularFeatures}{\renewcommand*{\RegularDef}{#1,}}
 
-\DeclareOptionX{SmboldFeatures}{\renewcommand*{\SmboldDef}{#1,}}
+\DeclareOptionX{SmBoldFeatures}{\renewcommand*{\SmBoldDef}{#1,}}
 
 \DeclareOptionX{SmCondFeatures}{\renewcommand*{\SmCondDef}{#1,}}
 
@@ -137,7 +139,7 @@
 
 \DeclareOptionX{SmExpMediumFeatures}{\renewcommand*{\SmExpMediumDef}{#1,}}
 
-\DeclareOptionX{SmExpSmboldFeatures}{\renewcommand*{\SmExpSmboldDef}{#1,}}
+\DeclareOptionX{SmExpSmBoldFeatures}{\renewcommand*{\SmExpSmBoldDef}{#1,}}
 
 % Declare the width options.
 
@@ -206,7 +208,20 @@
 
 \RequirePackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX, Extension=.\junicode@fonttype}
+\defaultfontfeatures{Ligatures=TeX}
 
+\ifxetex
+\typeout{\junicode@regstylename}
+\setmainfont
+  [Numbers =           {\junicode@figurealign,\junicode@figurestyle},
+   SmallCapsFeatures = {Letters=SmallCaps},
+   UprightFont =       *-\junicode@regstylename,
+   ItalicFont =        *-\junicode@italstylename,
+   BoldFont =          *-\junicode@boldstylename,
+   BoldItalicFont =    *-\junicode@boldstylename Italic,
+  ]{Junicode}
+\fi
+\ifluatex
 \setmainfont
   [Renderer =          HarfBuzz,
    Numbers =           {\junicode@figurealign,\junicode@figurestyle},
@@ -216,10 +231,21 @@
    BoldFont =          *-\junicode@boldstylename,
    BoldItalicFont =    *-\junicode@boldstylename Italic,
   ]{Junicode}
+\fi
 
 % These commands let you access any style, despite the options passed to
 % this package.
 
+\ifxetex
+\newcommand{\junicode@newfont}[3]{
+    \newfontface#1{#2}[
+        #3
+        Numbers =           {\junicode@figurealign,\junicode@figurestyle},
+        SmallCapsFeatures = {Letters=SmallCaps},
+    ]
+}
+\fi
+\ifluatex
 \newcommand{\junicode@newfont}[3]{
     \newfontface#1{#2}[
         Renderer =          HarfBuzz,
@@ -228,6 +254,7 @@
         SmallCapsFeatures = {Letters=SmallCaps},
     ]
 }
+\fi
 
 \junicode@newfont{\jBold}{Junicode-Bold}{\BoldDef}
 
@@ -257,9 +284,9 @@
 
 \junicode@newfont{\jExpMediumItalic}{Junicode-ExpMediumItalic}{\ExpMediumDef}
 
-\junicode@newfont{\jExpSmbold}{Junicode-ExpSmbold}{\ExpSmboldDef}
+\junicode@newfont{\jExpSmBold}{Junicode-ExpSmBold}{\ExpSmBoldDef}
 
-\junicode@newfont{\jExpSmboldItalic}{Junicode-ExpSmboldItalic}{\ExpSmboldDef}
+\junicode@newfont{\jExpSmBoldItalic}{Junicode-ExpSmBoldItalic}{\ExpSmBoldDef}
 
 \junicode@newfont{\jRegular}{Junicode-Regular}{\RegularDef}
 
@@ -273,9 +300,9 @@
 
 \junicode@newfont{\jMediumItalic}{Junicode-MediumItalic}{\MediumDef}
 
-\junicode@newfont{\jSmbold}{Junicode-Smbold}{\SmboldDef}
+\junicode@newfont{\jSmBold}{Junicode-SmBold}{\SmBoldDef}
 
-\junicode@newfont{\jSmboldItalic}{Junicode-SmboldItalic}{\SmboldDef}
+\junicode@newfont{\jSmBoldItalic}{Junicode-SmBoldItalic}{\SmBoldDef}
 
 \junicode@newfont{\jSmCond}{Junicode-SmCond}{\SmCondDef}
 
@@ -301,9 +328,9 @@
 
 \junicode@newfont{\jSmExpMediumItalic}{Junicode-SmExpMediumItalic}{\SmExpMediumDef}
 
-\junicode@newfont{\jSmExpSmbold}{Junicode-SmExpSmbold}{\SmExpSmboldDef}
+\junicode@newfont{\jSmExpSmBold}{Junicode-SmExpSmBold}{\SmExpSmBoldDef}
 
-\junicode@newfont{\jSmExpSmboldItalic}{Junicode-SmExpSmboldItalic}{\SmExpSmboldDef}
+\junicode@newfont{\jSmExpSmBoldItalic}{Junicode-SmExpSmBoldItalic}{\SmExpSmBoldDef}
 
 % Convenience commands for non-verbose access to the cvNN features.
 % See also the "jcv" mnemonics below.

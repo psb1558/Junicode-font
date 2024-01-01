@@ -9,6 +9,7 @@
 \definecolor{BrickRed}{RGB}{146,18,6}
 \definecolor{RViolet}{RGB}{70,18,87}
 \definecolor{GunMetalGray}{RGB}{42,52,57}
+\definecolor{myRed}{rgb}{0.5,0,0}
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
 
 \newcommand{\SizeRecord}[3]{{Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}}
@@ -30,6 +31,17 @@
 \newcommand{\lltech}{Lua\LaTeX}
 \setmonofont{Fira Mono}[Scale=MatchLowercase,Numbers=Lowercase]
 \setsansfont{Fira Sans}[Scale=MatchLowercase,Numbers=Lowercase]
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\footskip = 30pt
+\headsep = 30pt
+\renewcommand{\headrule}{}
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
 \newcommand{\fspec}{{\sffamily fontspec}}
 \newcommand{\src}[1]{{\color{BrickRed}\texttt{#1}}}
 \newcommand{\option}[1]{{\color{RViolet}\textbf{#1}}}
@@ -45,14 +57,35 @@
 
 \section{Introduction}
 
+\pagestyle{fancy}
+\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}%
+\addfontfeature{Letters=UppercaseSmallCaps}\leftmark}
+\fancyhead[CO]{\scshape\color{myRed} {junicode}\hspace{10pt}{\addfontfeatures{Numbers=OldStyle}\thepage}}
+
 This package supports Junicode VF, the variable version of Junicode
-(2.204 or higher) for \lltech. Junicode VF is not yet in CTAN, so you must
-install the font in your system in order to use it. Place the files
-\texttt{junicodevf.sty} and \texttt{junicodevf.lua} somewhere your {\TeX} 
-installation can find them (perhaps in the directory with the document
-you're currently working on). This package loads
-\fspec, so it is not necessary to load that package separately, even if you are using
-other fonts alongside Junicode VF.
+(2.204 or higher) for \lltech.
+
+A variable font is one with glyphs that can change not only their size, but also their
+shape. These changes in shape are defined in one or more \textbf{axes}---for example,
+\textbf{Weight} (Light, Bold, etc.) and \textbf{Width} (Condensed, Expanded). A traditional
+“static” font family also has axes, but as every stylistic variant of a static family
+requires a separate font file,
+the number of available styles is severely constrained. A variable font, by contrast,
+offers a practically limitless number of styles in a single file: you choose a style
+by making a selection of number values (usually called “coordinates”) from the axes, 
+of which Junicode has three:
+
+\begin{description}
+    \item[Weight] Possible weights run from Light (300) to ExtraBold (700). By
+    convention, Regular is 400.
+    \item[Width] Widths run from 75 (Condensed) to 125 (Expanded). Stroke widths remain
+    the same as the overall width of the character changes, with the result that
+    Condensed type looks darker than Regular or Expanded.
+    \item[Enlarged] This axis is for reproducing the enlarged minuscules of medieval
+    manuscripts---that is, letters that are lowercase in shape and intermediate between
+    upper- and lowercase in size, used to introduce various textual units (see section
+    5 below).
+\end{description}
 
 \section{Loading Junicode VF}
 
@@ -335,7 +368,7 @@ styles.
 
 \section{Other Commands}
 
-This package's other commands are offered as conveniences---shorter and more
+This package's other commands (listed in Table 1) are offered as conveniences, being shorter and more
 mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
 remain available). Each of these commands
 also has a corresponding “text” command that works like 
@@ -346,7 +379,9 @@ consists of the main command with “text” prefixed—for example,
 corresponding to {\color{BrickRed}\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
 applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Feature Reference.”
 
-\begin{center}
+%\begin{center}
+\begin{table}[ht]
+\centering
 \tablehead{\hline}
 \tabletail{\hline}
 \begin{supertabular}{| l | p{2.75in} |}
@@ -371,7 +406,9 @@ applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Fea
 \bluerow\textbackslash LowDiacritics & Applies ss20, Low Diacritics.\\
 \textbackslash jcv, \textbackslash textcv & Applies any Character Variant feature (see below).\\
 \end{supertabular}
-\end{center}
+\caption{Stylistic Set and Character Variant Commands}
+\end{table}
+%\end{center}
 
 \noindent The syntax of \textbackslash jcv
 is {\color{BrickRed}\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
@@ -584,7 +621,7 @@ lowercase \textbf{a} can be expressed as {\color{BrickRed}\verb|\textcv[2]{\jcva
 
 \vspace*{\fill}
 \begin{center}
-    \itshape This document is set in Junicode VF with Weight 435 and Width 107.5.\\
+    \itshape This document is set in 12-point Junicode VF with Weight 435 and Width 107.5.\\
     The font for code is Fira Mono,\\
     and the sans serif font is Fira Sans.
 \end{center}

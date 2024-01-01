@@ -112,7 +112,8 @@ end
       tex.print("\\newcommand{\\" .. romsizedef .. "}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=" ..
               v[1] .. ",wdth=" .. v[2] .. "}}}}}")
       tex.print("\\DeclareOptionX{" .. romfeat .. "}{\\renewcommand*{\\" .. romdef .. "}{#1,}}")
-      tex.print("\\DeclareOptionX{" .. romsizefeat .. "}{\\renewcommand*{\\" .. romsizedef .. "}{#1}}")
+      tex.print("\\DeclareOptionX{" .. romsizefeat .. "}{\\renewcommand*{\\" .. romsizedef .. "}{\\directlua{mksizecommand({#1})}}}")
+      tex.print("\\DeclareOptionX{" .. italsizefeat .. "}{\\renewcommand*{\\" .. romsizedef .. "}{\\directlua{mksizecommand({#1})}}}")
    end
 end
 
@@ -151,3 +152,47 @@ function mkfontcommands()
       tex.print("\\junicodevf@newfont{\\" .. italfontcmd .. "}{JunicodeVF-Italic}{\\" .. defcmd .. "}{\\" .. defsizecmd .. "}")
    end
 end
+
+function mksizecommand(sizetable)
+   result = "Nothing yet"
+   if #sizetable > 0 then
+       result = "SizeFeatures={"
+       lastsize = 0
+       for i, v in ipairs(sizetable) do
+           if v["size"] then
+               axiscount = 0
+               sizeitem = "{Size={"
+               currentsize = v["size"]
+               csnum = v["size"]
+               if i == #sizetable then
+                   currentsize = currentsize .. "-"
+               elseif lastsize == 0 then
+                   currentsize = "-" .. currentsize
+               else
+                   currentsize = lastsize .. "-" .. currentsize
+               end
+               lastsize = csnum
+               sizeitem = sizeitem .. currentsize .. "},RawFeature={axis={"
+               if v["wght"] then
+                   sizeitem = sizeitem .. "wght=" .. v["wght"]
+                   axiscount = axiscount + 1
+               end
+               if v["wdth"] then
+                   if axiscount >= 1 then sizeitem = sizeitem .. "," end
+                   sizeitem = sizeitem .. "wdth=" .. v["wdth"]
+                   axiscount = axiscount + 1
+               end
+               if v["ENLA"] then
+                   if axiscount >= 1 then sizeitem = sizeitem .. "," end
+                   sizeitem = sizeitem .. "ENLA=" .. v["ENLA"]
+               end
+               sizeitem = sizeitem .. "}}},"
+               result = result .. sizeitem
+           end
+       end
+       result = result .. "}"
+       tex.print(result)
+   end
+end
+
+

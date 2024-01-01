@@ -39,6 +39,8 @@
 
 % COMMANDS FOR ADDING FEATURES TO MAIN TEXT
 
+\directlua{dofile("junicodevf.lua")}
+
 % Features for all four Main faces
 
 \newcommand*{\MainDef}{}
@@ -50,28 +52,32 @@
 \newcommand*{\MainBoldDef}{}
 \newcommand*{\MainBoldItalicDef}{}
 
-\DeclareOptionX{MainFeatures}{\renewcommand*{\MainDef}{#1}}
+\DeclareOptionX{MainFeatures}{\renewcommand*{\MainDef}{#1,}}
 \DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
 \DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
 \DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
 \DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
 
-\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{#1}}
-\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{#1}}
-\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{#1}}
-\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{#1}}
+\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{\directlua{mksizecommand({#1})}}}
 
 % SUPPORT FOR ENLA AXIS
 
-\newcommand*{\ENLAOneDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=32}}}}}
-\newcommand*{\ENLATwoDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=47}}}}}
-\newcommand*{\ENLAThreeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=75}}}}}
-\newcommand*{\ENLAFourDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=100}}}}}
+\newcommand*{\ENLAOneSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=32}}}}}
+\newcommand*{\ENLATwoSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=47}}}}}
+\newcommand*{\ENLAThreeSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=75}}}}}
+\newcommand*{\ENLAFourSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,wdth=100,ENLA=100}}}}}
+
+\DeclareOptionX{ENLAOneSizeFeatures}{\renewcommand*{\ENLAOneSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{ENLATwoSizeFeatures}{\renewcommand*{\ENLATwoSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{ENLAThreeSizeFeatures}{\renewcommand*{\ENLAThreeSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{ENLAFourSizeFeatures}{\renewcommand*{\ENLAFourSizeDef}{\directlua{mksizecommand({#1})}}}
 
 % Declare the options for each of the Alternate Styles.
 
-\directlua{dofile("junicodevf.lua")
-mkaltcommands()}
+\directlua{mkaltcommands()}
 
 % Declare an option that will catch anything undefined and issue a warning.
 % Then process the options.
@@ -195,43 +201,43 @@ mkwidthcommands(wdindex, adjustment)}}
 
 \setfontface\EnlargedOne{JunicodeVF}[
     Renderer = HarfBuzz,
-    \ENLAOneDef
+    \ENLAOneSizeDef
 ]
 
 \setfontface\EnlargedOneItalic{JunicodeVF-Italic}[
     Renderer = HarfBuzz,
-    \ENLAOneDef
+    \ENLAOneSizeDef
 ]
 
 \setfontface\EnlargedTwo{JunicodeVF}[
     Renderer = HarfBuzz,
-    \ENLATwoDef
+    \ENLATwoSizeDef
 ]
 
 \setfontface\EnlargedTwoItalic{JunicodeVF-Italic}[
     Renderer = HarfBuzz,
-    \ENLATwoDef
+    \ENLATwoSizeDef
 ]
 
 \setfontface\EnlargedThree{JunicodeVF}[
     Renderer = HarfBuzz,
-    \ENLAThreeDef
+    \ENLAThreeSizeDef
 ]
 
 \setfontface\EnlargedThreeItalic{JunicodeVF-Italic}[
     Renderer = HarfBuzz,
-    \ENLAThreeDef
+    \ENLAThreeSizeDef
 ]
 
-%\setfontface\EnlargedFour{JunicodeVF}[
-%    Renderer = HarfBuzz,
-%    \ENLAThreeDef
-%]
+\setfontface\EnlargedFour{JunicodeVF}[
+    Renderer = HarfBuzz,
+    \ENLAFourSizeDef
+]
 
-%\setfontface\EnlargedFourItalic{JunicodeVF-Italic}[
-%    Renderer = HarfBuzz,
-%    \ENLAThreeDef
-%]
+\setfontface\EnlargedFourItalic{JunicodeVF-Italic}[
+    Renderer = HarfBuzz,
+    \ENLAFourSizeDef
+]
 
 % Convenience commands for non-verbose access to the cvNN features.
 % See also the "jcv" mnemonics below.

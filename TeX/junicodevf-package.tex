@@ -6,6 +6,9 @@
 \usepackage{supertabular}
 \usepackage[table,dvipsnames]{xcolor}
 \definecolor{myLightBlue}{RGB}{203,228,249}
+\definecolor{BrickRed}{RGB}{146,18,6}
+\definecolor{RViolet}{RGB}{70,18,87}
+\definecolor{GunMetalGray}{RGB}{42,52,57}
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
 
 \newcommand{\SizeRecord}[3]{{Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}}
@@ -21,11 +24,15 @@
     SizeFeatures = {{Size={5-}, RawFeature={axis={wght=350,wdth=90}}}}
 ]
 \usepackage{metalogo}
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\Large\color{GunMetalGray}}{\thesection.}{1em}{}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
 \newcommand{\lltech}{Lua\LaTeX}
 \setmonofont{Fira Mono}[Scale=MatchLowercase,Numbers=Lowercase]
 \setsansfont{Fira Sans}[Scale=MatchLowercase,Numbers=Lowercase]
 \newcommand{\fspec}{{\sffamily fontspec}}
+\newcommand{\src}[1]{{\color{BrickRed}\texttt{#1}}}
+\newcommand{\option}[1]{{\color{RViolet}\textbf{#1}}}
 \linespread{1.1}
 \title{Junicode VF}
 \author{Peter S. Baker}
@@ -49,13 +56,13 @@ other fonts alongside Junicode VF.
 
 \section{Loading Junicode VF}
 
-Load the package in the usual way, with {\verb|\usepackage{junicodevf}|}, to
+Load the package in the usual way, with {\color{BrickRed}\verb|\usepackage{junicodevf}|}, to
 set Junicode VF as the main font.
 By default, the main font is not a set of static outlines whose proportions
 remain the same though they can be scaled, but rather a set of
 \emph{variable} outlines that become relatively narrower and lighter as the
 text size decreases. You can see the difference if we scale a line of footnote
-text and a line of header text to the same {\verb|\large|} size:\\[0.5ex]
+text and a line of header text to the same {\color{BrickRed}\verb|\large|} size:\\[0.5ex]
 
 \noindent {\large\samplefootnote Here is some sample text for footnotes (usually about 8pt).}\\[0.2ex]
 {\large\sampleheader Here is some sample text for headers (18pt or larger).}\\[0.5ex]
@@ -83,10 +90,10 @@ your text:
     \item[medium] The weight of the type for the main text is Medium---that is, darker than
     Regular but lighter than Semibold.
     \item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
-    good choice if you have selected the \textbf{light} option.
+    good choice if you have selected the \option{light} option.
     \item[weightadjustment] Adjusts the weight of the type by adding this number.
-    For example, if you choose \textbf{medium} for your document (weight averaging about 500)
-    and \textbf{bold} (weight around 700), and also include the option {\verb|weightadjustment=-25|},
+    For example, if you choose \option{medium} for your document (weight averaging about 500)
+    and \option{bold} (weight around 700), and also include the option {\color{BrickRed}\verb|weightadjustment=-25|},
     then the weights of medium and bold text will be lightened by 25 (475, 675).
     \item[condensed] The width of the type is narrow---about 85\% of the width of the Regular style.
     As with the default
@@ -96,9 +103,9 @@ your text:
     \item[expanded] The width of the type is wide---about 125\% of the width of the Regular style.
     \item[semiexpanded] The width of the type is wider than Regular but narrower than Expanded.
     \item[widthadjustment] Adjusts the width of the type by adding this number. For example, if you
-    choose \textbf{semicondensed} for your document (width averaging 87.5), and you also include
-    the option {\verb|widthadjustment=5|}, then the average width will be 92.5, between
-    \textbf{semicondensed} and \textbf{regular}.
+    choose \option{semicondensed} for your document (width averaging 87.5), and you also include
+    the option {\color{BrickRed}\verb|widthadjustment=5|}, then the average width will be 92.5, between
+    \option{semicondensed} and \option{regular}.
     \item[proportional] Numbers in the document will be proportionally spaced. This is the default.
     \item[tabular] Numbers will be tabular (monospaced).
     \item[oldstyle] Numbers will be old-style, harmonizing with lowercase letters. This is the default.
@@ -108,108 +115,91 @@ your text:
 \section{Customizing the Main Font}
 
 If the options listed in the previous section don’t give you the effect you’re looking for, this package’s 
-more advanced options allow you to choose from a virtually infinite number of styles. Do this by passing 
+more advanced options allow you to choose from an effectively infinite number of styles. Do this by passing 
 OpenType features for your document’s main text or for one or more of the four main styles (Regular, Italic, 
 Bold, Bold Italic), and also by supplying custom values for the font’s four axes.
 
-For example, the style used for the body text of the \textit{Junicode Manual}
-is wider than the default, giving the text a lighter and more open look. You
-can get that look (or any other) by passing a \textbf{SizeFeatures} option for 
-each of the four standard styles:
+For example, if you want your document to use the conventions observed by early
+English typesetters for the distribution of \option{s} and \option{ſ}, load the
+package this way:
 
 \footnotesize
 \begin{verbatim}
-\usepackage[
-    MainFeatures={StylisticSet=9},
-    MainRegularSizeFeatures={
-        SizeFeatures={
-            {Size={-8.6},        RawFeature={axis={wght=550,wdth=120}}},
-            {Size={8.6-10.99},   RawFeature={axis={wght=475,wdth=115}}},
-            {Size={10.99-21.59}, RawFeature={axis={wght=400,wdth=112.5}}},
-            {Size={21.59-},      RawFeature={axis={wght=351,wdth=100}}}
-        }
-    },
-    MainItalicSizeFeatures={
-        SizeFeatures={
-            {Size={-8.6},        RawFeature={axis={wght=550,wdth=118}}},
-            {Size={8.6-10.99},   RawFeature={axis={wght=475,wdth=114}}},
-            {Size={10.99-21.59}, RawFeature={axis={wght=450,wdth=111}}},
-            {Size={21.59-},      RawFeature={axis={wght=372,wdth=98}}}
-        }
-    },
-    MainBoldSizeFeatures={
-        SizeFeatures={
-            {Size={-8.6},        RawFeature={axis={wght=700,wdth=120}}},
-            {Size={8.6-10.99},   RawFeature={axis={wght=700,wdth=115}}},
-            {Size={10.99-21.59}, RawFeature={axis={wght=650,wdth=112.5}}},
-            {Size={21.59-},      RawFeature={axis={wght=600,wdth=100}}}
-        }
-    },
-    MainBoldItalicSizeFeatures={
-        SizeFeatures={
-            {Size={-8.6},        RawFeature={axis={wght=700,wdth=118}}},
-            {Size={8.6-10.99},   RawFeature={axis={wght=700,wdth=114}}},
-            {Size={10.99-21.59}, RawFeature={axis={wght=650,wdth=111}}},
-            {Size={21.59-},      RawFeature={axis={wght=600,wdth=98}}}
-        }
-    }
-]{junicodevf}
+    \usepackage[MainFeatures={
+        Language=English,
+        StylisticSet=8
+    }]{junicodevf}
 \end{verbatim}
 \normalsize
 
-\noindent This is less intimidating than it looks. With
-\textbf{MainRegularSizeFeatures} and the other options for font styles, we pass \textbf{SizeFeatures}
-to \fspec’s {\verb|\setmainfont|} command---precisely the same options
-we would pass directly to {\fspec}.
-For each size-range, \textbf{RawFeature} defines values for the font’s \textbf{wght} (Weight)
-and \textbf{wdth} (Width) axes.\footnote{There is also a third axis, Enlarged (ENLA),
-but this is highly specialized and won't be useful in most documents. It is
-discussed separately below.} Possible values for \textbf{wght} are
-300–700 (400 is the default), and possible values for \textbf{wdth} are 75–125
-(100 is the default).
+\noindent If you want to use these conventions only for italic text, use
+\option{MainItalicFeatures} instead of \option{MainFeatures}. All of the
+features you pass via these options must be valid for \fspec: in fact,
+they are passed straight through to \fspec.
 
-If you like, you can simplify these options by defining a new command:
+If you want to customize the four basic styles of the main text, use
+\option{MainRegularSizeFeatures}, \option{MainItalicSizeFeatures}, and so on.
+Each of these defines a list of associative arrays, in which each array in the
+list prescribes axis coordinates for a range of sizes.
+For example, here are the \textbf{SizeFeatures} for the \textit{Junicode Manual}:
 
 \footnotesize
 \begin{verbatim}
-\newcommand{\SizeRecord}[3]{
-    {Size={#1},RawFeature={axis={wght=#2,wdth=#3}}}
-}
-\usepackage[
-    MainFeatures={StylisticSet=10},
-    MainRegularSizeFeatures={
-        SizeFeatures={
-            \SizeRecord{-8.59}{550}{120},
-            \SizeRecord{8.59-10.99}{475}{115},
-            \SizeRecord{10.99-21.59}{400}{112.5},
-            \SizeRecord{21.59-}{475}{115}
+    \usepackage[
+        MainRegularSizeFeatures={
+            {size=8.6,wght=550,wdth=120},
+            {size=10.99,wght=475,wdth=115},
+            {size=21.59,wght=400,wdth=112.5},
+            {size=21.59,wght=351,wdth=100}
+        },
+        MainItalicSizeFeatures={
+            {size=8.6,wght=550,wdth=118},
+            {size=10.99,wght=475,wdth=114},
+            {size=21.59,wght=450,wdth=111},
+            {size=21.59,wght=372,wdth=98}
+        },
+        MainBoldSizeFeatures={
+            {size=8.6,wght=700,wdth=120},
+            {size=10.99,wght=700,wdth=115},
+            {size=21.59,wght=650,wdth=112.5},
+            {size=21.59,wght=600,wdth=100}
+        },
+        MainBoldItalicSizeFeatures={
+            {size=8.6,wght=700,wdth=118},
+            {size=10.99,wght=700,wdth=114},
+            {size=21.59,wght=650,wdth=111},
+            {size=21.59,wght=600,wdth=98}
         }
-    },
-    . . .
-]{junicodevf}
+    ]{junicodevf}
 \end{verbatim}
 \normalsize
 
-\noindent In addition to options like \textbf{MainRegularSizeFeatures},
-you can pass options for features other than \textbf{SizeFeatures}.
-\textbf{MainFeatures} is for enabling features in all of the four
-main styles---in the example above, Stylistic Set 10 (“Entities”).
-You can enable features in the individual styles with
-\textbf{MainRegularFeatures}, \textbf{MainItalicFeatures},
-\textbf{MainBoldFeatures}, and \textbf{MainBoldItalicFeatures}---named 
-like the other options, but without \textbf{Size}.
-For example, if you want Discretionary Ligatures to be on only for the
-Italic style, simply add a \textbf{MainItalicFeatures} option:
+\noindent For each array, a \src{size} key is mandatory: any array without one
+is ignored. The arrays should be in order of point size. The first array
+prescribes axis coordinates for all sizes up to \src{size}, the last array for all sizes
+greater than \src{size}, and any intermediate items a range from the previous to the
+current \src{size}.\footnote{%
+If you want only one size array, make \src{size} improbably low (e.g. 5) and place
+a comma after the closing brace of the array.%
+} So the ranges covered in each list above are \src{-8.6}, \src{8.6-10.99},
+\src{10.99-21.59},
+and \src{21.59-}.\footnote{Any modification of the default text size (e.g. in the
+\src{\textbackslash documentclass} command) can affect the size definitions in these
+arrays, with the result that (for example)
+\src{10} no longer means exactly “ten points.” You may have to experiment to get these numbers
+right.}
 
-\footnotesize
-\begin{verbatim}
-\usepackage[
-    MainFeatures={StylisticSet=10},
-    MainItalicFeatures={Ligatures=Discretionary},
-    . . .
-]{junicodevf}
-\end{verbatim}
-\normalsize
+The keys other than \src{size} are the four-letter tags for the font's axes: \src{wght}
+(Weight), \src{wdth} (Width), and \src{ENLA} (Enlarge).\footnote{%
+By convention, tags for axes defined in the OpenType standard are lowercase; custom axes
+are uppercase. Junicode’s \src{ENLA} is a custom axis.%
+} When a key
+is omitted, the default value for that axis is used. It is up to the user to make sure the values
+given for each axis are valid---the package does no checking (but {\fspec} will do a good bit
+of checking for you). When SizeFeatures are given in
+this way, they override any other options that set or change axis coordinates
+(e.g. \option{weightadjustment}).
+
 
 \section{Selecting Alternate Styles}
 
@@ -282,15 +272,15 @@ them to shift temporarily to a style other than that of the main text.
 For example, to shift to the Condensed Light style for a short phrase, use
 this code:
 \begin{center}
-{\small\verb|{\jCondLight a short phrase}|}.
+{\color{BrickRed}\small\verb|{\jCondLight a short phrase}|}.
 \end{center}
 The result: {\jCondLight a short phrase}.
 
 To add features to any of these styles, use the style name
-(without the prefixed “j” and with “Features” appended)
+(without the prefixed “j” and with \textbf{Features} appended)
 as a package option. To change the size features for the style,
 do the same, but with \textbf{SizeFeatures} instead of \textbf{Features}
-appended. For example:
+appended:
 
 \footnotesize
 \begin{verbatim}
@@ -299,11 +289,7 @@ appended. For example:
             Language=English,
             StylisticSet=2
         },
-        CondLightSizeFeatures={
-            SizeFeatures={
-                Size={5-},RawFeature={axis={wght=325,wdth=80}}
-            }
-        }
+        CondLightSizeFeatures={{size=5,wght=325,wdth=80},}
     ]{junicodevf}
 \end{verbatim}
 \normalsize
@@ -319,29 +305,33 @@ Junicode's Enlarge axis is for a special purpose: to represent the enlarged
 minuscule letters that often begin sentences and other textual units in medieval manuscripts.
 Thus it should normally be applied only to single letters, not to runs of text.
 
-This package defines three different styles for the Enlarge axis, in three sizes:\\[0.5ex]
+This package defines four different styles for the Enlarge axis, in four sizes:\\[0.5ex]
 
-\noindent\textbackslash EnlargedOne {\EnlargedOne b}\\
-\textbackslash EnlargedTwo {\EnlargedTwo b}\\
-\textbackslash EnlargedThree {\EnlargedThree b}\\[0.5ex]
+\begin{center}
+\begin{supertabular}{ l  l  l }
+Not Enlarged & abc & \textit{abc}\\
+\textbackslash EnlargedOne & {\EnlargedOne abc} & {\EnlargedOneItalic abc}\\
+\textbackslash EnlargedTwo & {\EnlargedTwo abc} & {\EnlargedTwoItalic abc}\\
+\textbackslash EnlargedThree & {\EnlargedThree abc} & {\EnlargedThreeItalic abc}\\
+\textbackslash EnlargedFour & {\EnlargedFour abc} & {\EnlargedFourItalic abc}\\
+\end{supertabular}
+\end{center}
 
 \noindent You can produce an italic version of the enlarged minuscule by appending “Italic” to
-the style name. You can also customize these styles just as you can the other alternate
-styles. The only difference is that you need to supply a value for the Enlarge axis (ENLA)
-as well as the others. Again, a command for this purpose may help:
+the style name. You can also customize these styles with \textbf{SizeFeatures}:
 
 \footnotesize
 \begin{verbatim}
-\newcommand{\ENLASizeRecord}[4]{
-    {Size={#1},RawFeature={axis={wght=#2,wdth=#3,ENLA=#4}}}
-}
-\usepackage[ENLAOneFeatures={
-    SizeFeatures={
-        \ENLASizeRecord{5-}{600}{100}{65}
-    }
-}]{junicodevf}
+    \usepackage[
+        ENLAThreeSizeFeatures={{size=5,ENLA=85},}
+    ]{junicodevf}
 \end{verbatim}
 \normalsize
+
+\noindent This example will set all axes except for \src{ENLA} to their default coordinates.
+You can, of course, define other axes, and, as with Junicode’s other \textbf{SizeFeatures} options,
+as many size arrays as you like. \textbf{Features} options are not available for the Enlarged 
+styles.
 
 \section{Other Commands}
 
@@ -349,11 +339,11 @@ This package's other commands are offered as conveniences---shorter and more
 mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
 remain available). Each of these commands
 also has a corresponding “text” command that works like 
-{\verb|\textit{}|}—that is, it takes
+{\color{BrickRed}\verb|\textit{}|}—that is, it takes
 as its sole argument the text to which the command will be applied. Each “text” command
 consists of the main command with “text” prefixed—for example,
-{\verb|\textInsularLetterForms{}|}
-corresponding to {\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
+{\color{BrickRed}\verb|\textInsularLetterForms{}|}
+corresponding to {\color{BrickRed}\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
 applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Feature Reference.”
 
 \begin{center}
@@ -384,13 +374,13 @@ applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Fea
 \end{center}
 
 \noindent The syntax of \textbackslash jcv
-is {\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
+is {\color{BrickRed}\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
 and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
-\textbackslash textcv takes an additional required argument ({\verb|\textcv[num]{num}{text}|}—the text to which the
+\textbackslash textcv takes an additional required argument ({\color{BrickRed}\verb|\textcv[num]{num}{text}|}—the text to which the
 feature should be applied.
 
 Character Variant features can also be selected with mnemonics, listed below. For example, a feature for
-lowercase \textbf{a} can be expressed as {\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
+lowercase \textbf{a} can be expressed as {\color{BrickRed}\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
 
 \begin{multicols}{3}
 \small\jCond\textbackslash jcvA
@@ -592,5 +582,10 @@ lowercase \textbf{a} can be expressed as {\verb|\textcv[2]{\jcva}{a}|}, yielding
 \textbackslash jcvYogh
 \end{multicols}
 
-
+\vspace*{\fill}
+\begin{center}
+    \itshape This document is set in Junicode VF with Weight 435 and Width 107.5.\\
+    The font for code is Fira Mono,\\
+    and the sans serif font is Fira Sans.
+\end{center}
 \end{document}

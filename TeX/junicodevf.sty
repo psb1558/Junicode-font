@@ -39,7 +39,8 @@
 
 % COMMANDS FOR ADDING FEATURES TO MAIN TEXT
 
-\directlua{dofile("junicodevf.lua")}
+%\directlua{dofile("junicodevf.lua")}
+\directlua{dofile(kpse.find_file("junicodevf.lua"))}
 
 % Features for all four Main faces
 
@@ -74,6 +75,10 @@
 \DeclareOptionX{ENLATwoSizeFeatures}{\renewcommand*{\ENLATwoSizeDef}{\directlua{mksizecommand({#1})}}}
 \DeclareOptionX{ENLAThreeSizeFeatures}{\renewcommand*{\ENLAThreeSizeDef}{\directlua{mksizecommand({#1})}}}
 \DeclareOptionX{ENLAFourSizeFeatures}{\renewcommand*{\ENLAFourSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{EnlargedOneSizeFeatures}{\renewcommand*{\ENLAOneSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{EnlargedTwoSizeFeatures}{\renewcommand*{\ENLATwoSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{EnlargedThreeSizeFeatures}{\renewcommand*{\ENLAThreeSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{EnlargedFourSizeFeatures}{\renewcommand*{\ENLAFourSizeDef}{\directlua{mksizecommand({#1})}}}
 
 % Declare the options for each of the Alternate Styles.
 
@@ -82,7 +87,7 @@
 % Declare an option that will catch anything undefined and issue a warning.
 % Then process the options.
 
-\DeclareOptionX*{\PackageWarning{JunicodeVF}{Unknown option `\CurrentOption' ignored}}
+\DeclareOptionX*{\PackageWarning{junicodevf}{Unknown option `\CurrentOption' ignored}}
 \ProcessOptionsX\relax
 
 % DEFINE THE WEIGHTS AND WIDTHS (depending on weight and width options)

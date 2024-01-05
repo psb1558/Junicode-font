@@ -3,7 +3,8 @@
 %\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}entering characters with tags}
 \addfontfeature{MyStyle=noentities}
 
-Any character in Junicode that can be rendered using a Character Variant ({\charvar}) feature can also be rendered using a
+Any character in Junicode that can be rendered using a Character Variant (\textSourceText{cvNN})
+feature can also be rendered using a
 sequence consisting of a base character and two Unicode tags---that is, characters from the Unicode tag range. This range
 duplicates the ASCII character set (which consists, roughly, of things that can be typed on a U.S. English keyboard),
 but the characters it contains are normally invisible. They are used as modifiers
@@ -96,10 +97,12 @@ Most of the two-tag sequences documented here are designed to be mnemonic. For e
 \textex{\&\_\_s;\&\_\_q;} sequence in the example
 above stands for ``square.'' However, two-tag sequences are not capable of describing characters in any detail, and in
 some cases, where the number of variants is large (especially for period, combining macron, and currency), the tags are
-not descriptive at all, but rather an index (the same numbers used in the corresponding {\charvar} features).
+not descriptive at all, but rather an index (the same numbers used in the corresponding \textSourceText{cvNN} features).
 
-These tags are compatible with Junicode's other OpenType features, including the {\charvar} features, and can be mixed with
-them. They will not interfere with the placement of combining marks, which can come either before or after the tag-pair. Use a {\charvar} feature when a variant should appear
+These tags are compatible with Junicode's other OpenType features, including the \textSourceText{cvNN} features, 
+and can be mixed with
+them. They will not interfere with the placement of combining marks, which can come either before or after the tag-pair. 
+Use a \textSourceText{cvNN} feature when a variant should appear
 throughout the text, repeatedly in a particular passage (for example, a block quotation), or in a style. A tag sequence may be preferable for isolated forms or to override an OpenType feature.
 
 In the list below, records for each character are color-coded as follows:
@@ -118,10 +121,10 @@ In the list below, records for each character are color-coded as follows:
   \end{supertabular}
 \end{center}
 
-\noindent Tags or {\charvar} features are usually to be preferred to PUA code points,
+\noindent Tags or \textSourceText{cvNN} features are usually to be preferred to PUA code points,
 which should be used only where accessibility and searchability are
 not issues (mainly in printed texts). Unicode code points can safely be
-entered directly. Junicode makes a few of them accessible via {\charvar} features and tags because it may often
+entered directly. Junicode makes a few of them accessible via \textSourceText{cvNN} features and tags because it may often
 be desirable to associate these characters with their bases rather than the Unicode code points. For
 example, the insular T (\textex{\restag{T\&\_\_i;\&\_\_n;}}) is sure to be searchable as T if entered with the sequence
 \textex{\noent{T\&\_\_i;\&\_\_n;}}, but if entered as \textex{U+A786} it may or may not be searchable as T,
@@ -218,12 +221,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{period} &
 {.\&\_\_1;\&\_\_5;} &
 {\restag{.\char"0E0031\char"0E0035}} &
-\arraybslash {\narrow Punctus interrogativus horizontal tilde / \ltab{F1E8}}\\\hline
+\arraybslash {\jCond Punctus interrogativus horizontal tilde / \ltab{F1E8}}\\\hline
 %
 \mufi{period} &
 {.\&\_\_1;\&\_\_6;} &
 {\restag{.\char"0E0031\char"0E0036}} &
-\arraybslash {\narrow Punctus interrogativus lemniskate / \ltab{F1F1}}\\\hline
+\arraybslash {\jCond Punctus interrogativus lemniskate / \ltab{F1F1}}\\\hline
 %
 \mufi{period} &
 {.\&\_\_1;\&\_\_7;} &
@@ -383,12 +386,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+0304} &
 {\char"25CC\char"0304\&\_\_2;\&\_\_8;} &
 {\restag{\char"25CC\char"0304\char"0E0032\char"0E0038}} &
-\arraybslash {\narrow Combining ligature o r rotunda / \tab{F03E}}\\\hline
+\arraybslash {\jCond Combining ligature o r rotunda / \tab{F03E}}\\\hline
 %
 \mufi{U+0304} &
 {\char"25CC\char"0304\&\_\_2;\&\_\_9;} &
 {\restag{\char"25CC\char"0304\char"0E0032\char"0E0039}} &
-\arraybslash {\narrow Combining ligature letter o rum / \ltab{F03F}}\\\hline
+\arraybslash {\jCond Combining ligature letter o rum / \ltab{F03F}}\\\hline
 %
 \nuni{U+0304} &
 {\char"25CC\char"0304\&\_\_3;\&\_\_0;} &
@@ -793,7 +796,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{h} &
 {h\&\_\_d;\&\_\_b;} &
 {\restag{h\char"0E0064\char"0E0062}} &
-\arraybslash{\narrow Caroline h with right descender and bar / TBD}\\\hline
+\arraybslash{\jCond Caroline h with right descender and bar / TBD}\\\hline
 %
 \stdu{I} &
 {I\&\_\_d;\&\_\_a;} &
@@ -933,7 +936,7 @@ Characters without code points can only be entered via tags or OpenType features
 \opua{l} &
 {l\&\_\_s;\&\_\_f;} &
 {\restag{l\char"0E0073\char"0E0066}} &
-\arraybslash {\narrow l with high stroke ending with flourish / \ltab{F000F}}\\\hline
+\arraybslash {\jCond l with high stroke ending with flourish / \ltab{F000F}}\\\hline
 %
 \nuni{l} &
 {l\&\_\_i;\&\_\_n;} &
@@ -993,7 +996,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{N} &
 {N\&\_\_l;\&\_\_d;} &
 {\restag{N\char"0E006C\char"0E0064}} &
-\arraybslash {\narrow N with low bar and descender / TBD}\\\hline
+\arraybslash {\jCond N with low bar and descender / TBD}\\\hline
 %
 \mufi{n} &
 {n\&\_\_d;\&\_\_e;} &
@@ -1153,7 +1156,7 @@ Characters without code points can only be entered via tags or OpenType features
 \nuni{S} &
 {S\&\_\_s;\&\_\_d;} &
 \restag{S\char"0E0073\char"0E0064} &
-\arraybslash {\narrow S with diagonal stroke (Sanctus abbrev)}\\\hline
+\arraybslash {\jCond S with diagonal stroke (Sanctus abbrev)}\\\hline
 %
 \stdu{S} &
 {S\&\_\_m;\&\_\_s;} &
@@ -1263,7 +1266,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U} &
 {U\&\_\_l;\&\_\_d;} &
 \restag{U\char"0E006C\char"0E0064} &
-\arraybslash {\narrow Lowercase-shaped U with descender / TBD}\\\hline
+\arraybslash {\jCond Lowercase-shaped U with descender / TBD}\\\hline
 %
 \mufi{u} &
 {u\&\_\_e;\&\_\_n;} &
@@ -1303,7 +1306,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{v} &
 {v\&\_\_e;\&\_\_l;} &
 \restag{v\char"0E0065\char"0E006C} &
-\arraybslash {\narrow Enlarged minuscule v with low point / TBD}\\\hline
+\arraybslash {\jCond Enlarged minuscule v with low point / TBD}\\\hline
 %
 \nuni{W} &
 {W\&\_\_e;\&\_\_n;} &
@@ -1358,12 +1361,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{x} &
 {x\&\_\_s;\&\_\_3;} &
 \restag{x\char"0E0073\char"0E0033} &
-\arraybslash {\narrow x with two diagonal strokes (lower right) / \ltab{E8CE}}\\\hline
+\arraybslash {\jCond x with two diagonal strokes (lower right) / \ltab{E8CE}}\\\hline
 %
 \mufi{Y} &
 {Y\&\_\_s;\&\_\_d;} &
 \restag{Y\char"0E0073\char"0E0064} &
-\arraybslash {\narrow Y with diagonal stroke (Hymnus abbrev) / \ltab{E8DB}}\\\hline
+\arraybslash {\jCond Y with diagonal stroke (Hymnus abbrev) / \ltab{E8DB}}\\\hline
 %
 \nuni{Y} &
 {Y\&\_\_e;\&\_\_n;} &
@@ -1523,7 +1526,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+A735} &
 {\char"0A735\&\_\_e;\&\_\_2;} &
 \restag{\char"0A735\char"0E0065\char"0E0032} &
-\arraybslash {\narrow Enlarged minuscule ao with smaller o / \ltab{EAF2}}\\\hline
+\arraybslash {\jCond Enlarged minuscule ao with smaller o / \ltab{EAF2}}\\\hline
 %
 \mufi{U+A735} &
 {\char"0A735\&\_\_n;\&\_\_e;} &
@@ -1591,12 +1594,12 @@ Characters without code points can only be entered via tags or OpenType features
 \arraybslash e with dot, acute, and diagonal stroke\\\hline
 %
 \nuni{\&\_eogo;} &
-{{\narrow \char"25CC\&\_eogo;}\&\_\_c;\&\_\_e;} &
+{{\jCond \char"25CC\&\_eogo;}\&\_\_c;\&\_\_e;} &
 \restag{\char"25CC\&\_eogo;\char"0E0063\char"0E0065} &
 \arraybslash Combining e with centered ogonek\\\hline
 %
 \nuni{\&\_eogo;} &
-{{\narrow \char"25CC\&\_eogo;}\&\_\_s;\&\_\_t;} &
+{{\jCond \char"25CC\&\_eogo;}\&\_\_s;\&\_\_t;} &
 \restag{\char"25CC\&\_eogo;\char"0E0073\char"0E0074} &
 \arraybslash Combining e with diagonal stroke\\\hline
 %
@@ -1633,22 +1636,22 @@ Characters without code points can only be entered via tags or OpenType features
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_1;\footnotemark{}} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0031}} &
-\arraybslash {\narrow Old Polish o with broken slash / \ltab{F0011}}\\\hline
+\arraybslash {\jCond Old Polish o with broken slash / \ltab{F0011}}\\\hline
 %
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_2;} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0032}} &
-\arraybslash {\narrow Old Polish o with short slash / \ltab{F0012}}\\\hline
+\arraybslash {\jCond Old Polish o with short slash / \ltab{F0012}}\\\hline
 %
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_3;} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0033}} &
-\arraybslash {\narrow Old Polish o with lower left slash / \ltab{F0013}}\\\hline
+\arraybslash {\jCond Old Polish o with lower left slash / \ltab{F0013}}\\\hline
 %
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_4;} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0034}} &
-\arraybslash {\narrow Old Polish o with upper right slash / \ltab{F0014}}\\\hline
+\arraybslash {\jCond Old Polish o with upper right slash / \ltab{F0014}}\\\hline
 %
 \mufi{U+1E8F} &
 {\char"1E8F\&\_\_s;\&\_\_d;} &
@@ -1658,7 +1661,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+A765} &
 {\addfontfeature{Language=Icelandic} \char"0A765\&\_\_a;\&\_\_1;} &
 {\addfontfeature{Language=Icelandic}\restag{\char"0A765\char"0E0061\char"0E0031}} &
-\arraybslash \ {\narrow thorn with stroke with different slant / \ltab{F149}}\\\hline
+\arraybslash \ {\jCond thorn with stroke with different slant / \ltab{F149}}\\\hline
 %
 \nuni{U+A765/ENG} &
 {\char"0A765\&\_\_a;\&\_\_1;} &
@@ -1683,7 +1686,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+204A} &
 {\char"204A\&\_\_a;\&\_\_3;} &
 \restag{\char"204A\char"0E0061\char"0E0033} &
-\arraybslash {\narrow Tironian et sign without descender / TBD}\\\hline
+\arraybslash {\jCond Tironian et sign without descender / TBD}\\\hline
 %
 \opua{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_1;} &
@@ -1698,7 +1701,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_3;} &
 \restag{\char"2E52\char"0E0061\char"0E0033} &
-\arraybslash {\narrow Tironian Et sign without descender / TBD}\\\hline
+\arraybslash {\jCond Tironian Et sign without descender / TBD}\\\hline
 %
 \nuni{U+00AF} &
 {{\textasciimacron}\&\_\_0;\&\_\_1;} &
@@ -1748,7 +1751,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_3;} &
 \restag{;\char"0E0061\char"0E0033} &
-\arraybslash {\narrow Colon with middle comma positura / \ltab{F1E5}}\\\hline
+\arraybslash {\jCond Colon with middle comma positura / \ltab{F1E5}}\\\hline
 %
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_4;} &
@@ -1763,7 +1766,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_6;} &
 \restag{;\char"0E0061\char"0E0036} &
-\arraybslash {\narrow Punctus with double comma positura / TBD}\\\hline
+\arraybslash {\jCond Punctus with double comma positura / TBD}\\\hline
 %
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_7;} &

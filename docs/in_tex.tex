@@ -1,0 +1,433 @@
+\chapter{Junicode and {\TeX}}\hypertarget{JunicodeAndTeX}{}
+
+\section{Loading the packages}
+
+There are packages for both Junicode (the static font) and Junicode VF (the variable font) 
+in CTAN, the {\TeX} repository, and also
+in the {\TeX} Live distribution (run \src{tlmgr} to get them). Both static and variable versions
+have a convenient script for loading and managing the font: use
+{\color{BrickRed}\verb|\usepackage{junicode}|} for the static font and
+{\color{BrickRed}\verb|\usepackage{junicodevf}|} for the variable font. These accept several
+options commonly used in font packages:
+
+\begin{description}
+    \item[light] The weight of the type for the main text is light instead of regular.
+    \item[medium] The weight of the type for the main text is medium, somewhat heavier than regular.
+    \item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
+    good choice if you have selected the \option{light} option.
+    \item[condensed] The width of the type is narrow. Note that in the static font,
+    bold type cannot be condensed: when
+    this option is selected, any bold type in the text will have normal width.
+    \item[semicondensed] The width of the type is wider than condensed but narrower than the default.
+    In the static font, bold type cannot be semicondensed.
+    \item[expanded] The width of the type is about 125\%. Note that in the static font, light type
+    cannot be expanded: using both the \option{light} and the \option{expanded} options will produce
+    an error.
+    \item[semiexpanded] The width of the type is wider than the default but narrower than expanded.
+    In the static font, light type cannot be semiexpanded.
+    \item[proportional] Numbers in the document will be proportionally spaced. This is the default.
+    \item[tabular] Numbers will be tabular (or monospaced).
+    \item[oldstyle] Numbers will be old-style, harmonizing with lowercase letters.
+    \item[lining] Numbers will be lining, harmonizing with uppercase letters.
+\end{description}
+
+\noindent In the variable font, terms like “regular” and “light” do not denote a fixed shape as in the static font, but rather a
+range of weights and widths that vary with the point size. You can see these variations
+if we scale a line of footnote
+text and a line of header text to the same {\color{BrickRed}\verb|\large|} size:
+
+\begin{quote}
+\large\samplefootnote Here is some sample text for footnotes (about 8pt).\\
+\sampleheader Here is some sample text for headers (18pt or larger).
+\end{quote}
+
+\noindent The glyphs for footnote text are heavier and wider than those for the headers, recalling the way
+punchcutters in the era of metal type often designed small sizes to be relatively thicker and wider
+than main text or titles. This promoted legibility at small sizes and also evenness of color on
+pages with text blocks in diverse sizes.
+
+Junicode VF provides vastly more flexibility than static Junicode, starting with two options that go
+with the weight and width options listed above:
+
+\begin{description}
+    \item[weightadjustment] Adjusts the weight of the type by adding this number.
+    For example, if you choose \option{medium} for your document (weight averaging about 500)
+    and \option{bold} (weight around 700), and also include the option \src{weightadjustment=-25},
+    then the weights of medium and bold text will be lightened by 25 (to 475 and 675).
+    \item[widthadjustment] Adjusts the width of the type by adding this number. For example, if you
+    choose \option{semicondensed} for your document (width averaging 87.5), and you also include
+    the option {\color{BrickRed}\verb|widthadjustment=5|}, then the average width will be 92.5, between
+    \option{semicondensed} and \option{regular}.
+\end{description}
+
+\section{Advanced Options}
+
+If you are using the variable font and the options mentioned so far don't yield the results
+you want, the options listed in this section allow you to choose from an effectively infinite
+number of styles. Do this by supplying custom axis coordinates for one or more of the four basic
+styles of the main text (Regular, Italic, Bold, BoldItalic) via package options called
+\option{SizeFeatures}. For example, here are the \option{SizeFeatures} for this document:
+
+\footnotesize
+\begin{verbatim}
+    \usepackage[
+        MainRegularSizeFeatures={
+            {size=8.6,wght=550,wdth=120},
+            {size=10.99,wght=475,wdth=115},
+            {size=21.59,wght=400,wdth=112.5},
+            {size=21.59,wght=351,wdth=100}
+        },
+        MainItalicSizeFeatures={
+            {size=8.6,wght=550,wdth=118},
+            {size=10.99,wght=475,wdth=114},
+            {size=21.59,wght=450,wdth=111},
+            {size=21.59,wght=372,wdth=98}
+        },
+        MainBoldSizeFeatures={
+            {size=8.6,wght=700,wdth=120},
+            {size=10.99,wght=700,wdth=115},
+            {size=21.59,wght=650,wdth=112.5},
+            {size=21.59,wght=600,wdth=100}
+        },
+        MainBoldItalicSizeFeatures={
+            {size=8.6,wght=700,wdth=118},
+            {size=10.99,wght=700,wdth=114},
+            {size=21.59,wght=650,wdth=111},
+            {size=21.59,wght=600,wdth=98}
+        }
+    ]{junicodevf}
+\end{verbatim}
+\normalsize
+
+\noindent These options consist of lists of associative arrays, each
+prescribing axis coordinates for a range of sizes. In these arrays,
+the \src{size} key is mandatory: any array without one is ignored. The
+arrays should be in order of point size. The first array
+prescribes axis coordinates for all sizes up to \src{size}, the last array for all sizes
+greater than \src{size}, and any intermediate arrays a range from the previous to the
+current \src{size}.\footnote{%
+If you want only one size array, make \src{size} improbably low (e.g. 5) and place
+a comma after the closing brace of the array.%
+} So the ranges covered in each list above are \src{-8.6}, \src{8.6-10.99},
+\src{10.99-21.59},
+and \src{21.59-}.\footnote{Any modification of the default text size (e.g. in the
+\src{\textbackslash documentclass} command) can affect the size definitions in these
+arrays, with the result that (for example)
+\src{10} no longer means exactly “ten points.” You may have to experiment to get these numbers
+right.}
+
+The keys other than \src{size} are the four-letter tags for the font's axes: \src{wght}
+(Weight), \src{wdth} (Width), and \src{ENLA} (Enlarge).\footnote{%
+By convention, tags for axes defined in the OpenType standard are lowercase; custom axes
+are uppercase. Junicode’s \src{ENLA} is a custom axis.%
+} When a key
+is omitted, the default value for that axis is used. It is up to the user to make sure the values
+given for each axis are valid---the package does no checking (though {\fspec} will do a good bit
+of checking for you). When \option{SizeFeatures} are given in
+this way, they override any other options that set or change axis coordinates
+(e.g. \option{weightadjustment}).
+
+The \option{SizeFeatures} options can only set axis coordinates; with the \option{Features} 
+options you can
+set OpenType features for the main text or for the four main styles individually.
+
+For example, if you want your document to use the conventions observed by early
+English typesetters for the distribution of \textex{s} and \textex{ſ}, load the
+package this way:
+
+\footnotesize
+\begin{verbatim}
+    \usepackage[MainFeatures={
+        Language=English,
+        StylisticSet=8
+    }]{junicodevf}
+\end{verbatim}
+\normalsize
+
+\noindent If you want to use these features only for text in the regular style, use
+\option{MainRegularFeatures} instead of \option{MainFeatures}. For the other styles, use
+\option{MainItalicFeatures}, \option{MainBoldFeatures}, and \option{MainBoldItalicFeatures}.
+All of the
+features you pass via these options must be valid for \fspec: in fact,
+they are passed straight through to \fspec.
+
+\section{Selecting Alternate Styles}
+
+In addition to the document's main font, you can choose from up to fifty
+predefined styles---thirty-eight if you are using the static font (in the list below,
+styles available only to variable font users are {\color{BrickRed}red}).
+The commands for shifting to these
+styles are as follows (of the italic styles, only the base “jItalic” is listed;
+append “Italic” to any of the others, except “jRegular”):
+
+\begin{multicols}{3}
+    \jCond\textbackslash jRegular
+
+    \textbackslash jItalic
+    
+    \textbackslash jCond
+    
+    \textbackslash jSmCond
+    
+    \textbackslash jSmExp
+    
+    \textbackslash jExp
+    
+    \textbackslash jLight
+    
+    \textbackslash jCondLight
+    
+    \textbackslash jSmCondLight
+    
+    {\color{BrickRed}\textbackslash jSmExpLight}
+    
+    {\color{BrickRed}\textbackslash jExpLight}
+    
+    \textbackslash jMedium
+    
+    \textbackslash jCondMedium
+    
+    \textbackslash jSmCondMedium
+    
+    \textbackslash jSmExpMedium
+    
+    \textbackslash jExpMedium
+    
+    \textbackslash jSmbold
+    
+    {\color{BrickRed}\textbackslash jCondSmbold}
+    
+    {\color{BrickRed}\textbackslash jSmCondSmbold}
+    
+    \textbackslash jSmExpSmbold
+    
+    \textbackslash jExpSmbold
+    
+    \textbackslash jBold
+    
+    {\color{BrickRed}\textbackslash jCondBold}
+    
+    {\color{BrickRed}\textbackslash jSmCondBold}
+    
+    \textbackslash jSmExpBold
+    
+    \textbackslash jExpBold
+    
+\end{multicols}
+
+\noindent These commands will be self-explanatory if you bear in mind Junicode's 
+abbreviations for style names: Cond=Condensed, Exp=Expanded, Sm=Semi.\footnote{%
+The purpose of these abbreviations is to keep font names under the character-limit
+imposed by some systems.} Use
+them to shift temporarily to a style other than that of the main text.
+For example, to shift to the Condensed Light style for a short phrase, use
+this code:
+\begin{center}
+{\color{BrickRed}\small\verb|{\jCondLight a short phrase}|}.
+\end{center}
+The result: {\jCondLight a short phrase}.
+
+To add features to any of these styles (variable font only), use the style name
+(without the prefixed “j” and with \option{Features} appended)
+as a package option. To change the size features for the style,
+do the same, but with \option{SizeFeatures} instead of \option{Features}
+appended:
+
+\footnotesize
+\begin{verbatim}
+    \usepackage[
+        CondLightFeatures={
+            Language=English,
+            StylisticSet=2
+        },
+        CondLightSizeFeatures={{size=5,wght=325,wdth=80},}
+    ]{junicodevf}
+\end{verbatim}
+\normalsize
+
+\noindent This will shift text in the Condensed Light style from default to insular
+letter-shapes and slightly increase the weight and width of all glyphs in that style.
+Here the \option{SizeFeatures} section is very simple (as in the package file itself),
+but you can have as many size ranges as you want, just as you can for the main font.
+
+\section{The Enlarge Axis}
+
+The variable package defines four different styles for Junicode VF’s Enlarge axis, in four sizes:
+
+\begin{center}
+\begin{tabular}{ l  l  l }
+Not Enlarged & abc & \textit{abc}\\
+\textbackslash EnlargedOne & {\EnlargedOne abc} & {\EnlargedOneItalic abc}\\
+\textbackslash EnlargedTwo & {\EnlargedTwo abc} & {\EnlargedTwoItalic abc}\\
+\textbackslash EnlargedThree & {\EnlargedThree abc} & {\EnlargedThreeItalic abc}\\
+\textbackslash EnlargedFour & {\EnlargedFour abc} & {\EnlargedFourItalic abc}\\
+\end{tabular}
+\end{center}
+
+\noindent You can produce an italic version of the enlarged minuscule by appending “Italic” to
+the style name. You can also customize these styles with \option{SizeFeatures}:
+
+\footnotesize
+\begin{verbatim}
+    \usepackage[
+        EnlargedThreeSizeFeatures={{size=5,ENLA=85},}
+    ]{junicodevf}
+\end{verbatim}
+\normalsize
+
+\noindent This example will set all axes except for \src{ENLA} to their default coordinates.
+You can, of course, define other axes, and, as with Junicode’s other \option{SizeFeatures} options,
+as many size arrays as you like. \option{Features} options are not available for the Enlarged 
+styles.
+
+\section{Other Commands}
+
+This package's other commands (listed in the following table) are offered as conveniences, being shorter and more
+mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
+remain available). Each of these commands
+also has a corresponding “text” command that works like 
+{\color{BrickRed}\verb|\textit{}|}---that is, it takes
+as its sole argument the text to which the command will be applied. Each “text” command
+consists of the main command with “text” prefixed---for example,
+{\color{BrickRed}\verb|\textInsularLetterForms{}|}
+corresponding to {\color{BrickRed}\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
+applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Feature Reference.”
+
+\begin{center}\small
+%\begin{table}[ht]
+\centering
+\tablehead{\hline}
+\tabletail{\hline}
+\begin{supertabular}{| l | p{2.75in} |}
+\bluerow\textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\
+\textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.\\
+\bluerow\textbackslash IPAAlternates & Applies ss03, IPA alternates.\\
+\textbackslash HighOverline & Applies ss04, High Overline.\\
+\bluerow\textbackslash MediumHighOverline & Applies ss05, Medium-high Overline.\\
+\textbackslash EnlargedMinuscules & Applies ss06, Enlarged minuscules.\\
+\bluerow\textbackslash Underdotted & Applies ss07, Underdotted.\\
+\textbackslash ContextualLongS & Applies ss08, Contextual long s.\\
+\bluerow\textbackslash AlternateFigures & Applies ss09, Alternate Figures.\\
+\textbackslash EntitiesAndTags & Applies ss10, Entities and Tags.\\
+\bluerow\textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\
+\textbackslash ElderFuthark & Applies ss13, Elder Futhark.\\
+\bluerow\textbackslash YoungerFuthark & Applies ss14, Younger Futhark.\\
+\textbackslash LongBranchToShortTwig & Applies ss15, Long Branch to Short Twig.\\
+\bluerow\textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\
+\textbackslash RareDigraphs & Applies ss17, Rare Digraphs.\\
+\bluerow\textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\
+\textbackslash LatinToGothic & Applies ss19, Latin to Gothic.\\
+\bluerow\textbackslash LowDiacritics & Applies ss20, Low Diacritics.\\
+\textbackslash jcv, \textbackslash textcv & Applies any Character Variant feature (see below).\\
+\end{supertabular}
+%\caption{Stylistic Set and Character Variant Commands}
+%\end{table}
+\end{center}
+
+The syntax of \textbackslash jcv
+is {\color{BrickRed}\verb|\jcv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
+and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
+\textbackslash textcv takes an additional required argument ({\color{BrickRed}\verb|\textcv[num]{num}{text}|}---the text to which the
+feature should be applied.
+
+Character Variant features can also be selected by means of commands consisting of the prefix
+{\color{BrickRed}\verb|\jcv|} plus any letter of the basic Latin alphabet (e.g. {\color{BrickRed}\verb|\jcvA|},
+{\color{BrickRed}\verb|\jcvz|}), or any of the mnemonics below.
+For example, a feature for
+lowercase \textbf{a} can be expressed as {\color{BrickRed}\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
+
+\begin{multicols}{3}
+\small\jCond\textbackslash jcvaa
+
+\textbackslash jcvAE
+
+\textbackslash jcvae
+
+\textbackslash jcvAO
+
+\textbackslash jcvao
+
+\textbackslash jcvAogonek
+
+\textbackslash jcvaogonek
+
+\textbackslash jcvASCIItilde
+
+\textbackslash jcvasterisk
+
+\textbackslash jcvav
+
+\textbackslash jcvbrevebelow
+
+\textbackslash jcvcombiningdieresis
+
+\textbackslash jcvcombiningdoublemacron
+
+\textbackslash jcvcombininginsulard
+
+\textbackslash jcvcombiningopena
+
+\textbackslash jcvcombiningoverline
+
+\textbackslash jcvcombiningrrotunda
+
+\textbackslash jcvcombiningzigzag
+
+\textbackslash jcvcomma
+
+\textbackslash jcvcurrency
+
+\textbackslash jcvdbar
+
+\textbackslash jcvdcroat
+
+\textbackslash jcvEng
+
+\textbackslash jcvEogonek
+
+\textbackslash jcvetabbrev
+
+\textbackslash jcvexclam
+
+\textbackslash jcvflorin
+
+\textbackslash jcvGermanpenny
+
+\textbackslash jcvglottal
+
+\textbackslash jcvlb
+
+\textbackslash jcvlhighstroke %somehow escaped the documentation
+
+\textbackslash jcvmacron
+
+\textbackslash jcvmiddot
+
+\textbackslash jcvoPolish
+
+\textbackslash jcvounce
+
+\textbackslash jcvperiod
+
+\textbackslash jcvpunctuselevatus
+
+\textbackslash jcvquestion
+
+\textbackslash jcvrum
+
+\textbackslash jcvsemicolon
+
+\textbackslash jcvslash
+
+\textbackslash jcvspacingusabbrev
+
+\textbackslash jcvspacingzigzag
+
+\textbackslash jcvsterling
+
+\textbackslash jcvthorncrossed
+
+\textbackslash jcvTironianEt
+
+\textbackslash jcvYogh
+\end{multicols}

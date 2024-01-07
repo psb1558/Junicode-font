@@ -39,7 +39,6 @@
 
 % COMMANDS FOR ADDING FEATURES TO MAIN TEXT
 
-%\directlua{dofile("junicodevf.lua")}
 \directlua{dofile(kpse.find_file("junicodevf.lua"))}
 
 % Features for all four Main faces
@@ -87,80 +86,37 @@
 % Declare an option that will catch anything undefined and issue a warning.
 % Then process the options.
 
-\DeclareOptionX*{\PackageWarning{junicodevf}{Unknown option `\CurrentOption' ignored}}
+\DeclareOptionX*{\PackageWarning{junicodevf}{Unknown option '\CurrentOption' ignored}}
 \ProcessOptionsX\relax
 
-% DEFINE THE WEIGHTS AND WIDTHS (depending on weight and width options)
+% MAKE THE FONTS
 
-\def\mkregweightcommands#1#2{%
-\directlua{wtindex = #1
-adjustment = #2
-mkregweightcommands(wtindex, adjustment)}}
+\def\makemainfontcommand#1#2#3#4#5{%
+\directlua{%
+style_idx =     #1
+weight_option = #2
+weight_adjust = #3
+width_option =  #4
+width_adjust =  #5
+mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_adjust)}}
 
-\def\mkboldweightcommands#1#2{%
-\directlua{wtindex = #1
-adjustment = #2
-mkboldweightcommands(wtindex, adjustment)}}
-
-\def\mkwidthcommands#1#2{%
-\directlua{wdindex = #1
-adjustment = #2
-mkwidthcommands(wdindex, adjustment)}}
-
-\mkregweightcommands{\junicodevf@regweight}{\wghtadjust}
-
-\mkboldweightcommands{\junicodevf@boldweight}{\wghtadjust}
-
-\mkwidthcommands{\junicodevf@width}{\wdthadjust}
-
-% DEFINE SizeFeatures (if we don't already have them)
+% If we didn't get size features from user, make them here from defaults and
+% basic options.
 
 \@ifundefined{MainRegSizeDef}{
-    \newcommand*{\MainRegSizeDef}{%
-        SizeFeatures={
-            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@RwghtOne,wdth=\junicodevf@RwdthOne}}},
-            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@RwghtTwo,wdth=\junicodevf@RwdthTwo}}},
-            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@RwghtThree,wdth=\junicodevf@RwdthThree}}},
-            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@RwghtFour,wdth=\junicodevf@RwdthFour}}},
-            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@RwghtFive,wdth=\junicodevf@RwdthFive}}}
-        }
-    }
+    \makemainfontcommand{1}{\junicodevf@regweight}{\wghtadjust}{\junicodevf@width}{\wdthadjust}
 }{}
 
 \@ifundefined{MainItalicSizeDef}{
-    \newcommand*{\MainItalicSizeDef}{%
-        SizeFeatures={
-            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@IwghtOne,wdth=\junicodevf@IwdthOne}}},
-            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@IwghtTwo,wdth=\junicodevf@IwdthTwo}}},
-            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@IwghtThree,wdth=\junicodevf@IwdthThree}}},
-            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@IwghtFour,wdth=\junicodevf@IwdthFour}}},
-            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@IwghtFive,wdth=\junicodevf@IwdthFive}}}
-        }
-    }
+    \makemainfontcommand{2}{\junicodevf@regweight}{\wghtadjust}{\junicodevf@width}{\wdthadjust}
 }{}
 
 \@ifundefined{MainBoldSizeDef}{
-    \newcommand*{\MainBoldSizeDef}{%
-        SizeFeatures={
-            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@BwghtOne,wdth=\junicodevf@BwdthOne}}},
-            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@BwghtTwo,wdth=\junicodevf@BwdthTwo}}},
-            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@BwghtThree,wdth=\junicodevf@BwdthThree}}},
-            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@BwghtFour,wdth=\junicodevf@BwdthFour}}},
-            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@BwghtFive,wdth=\junicodevf@BwdthFive}}}
-        }
-    }
+    \makemainfontcommand{3}{\junicodevf@boldweight}{\wghtadjust}{\junicodevf@width}{\wdthadjust}
 }{}
 
 \@ifundefined{MainBoldItalicSizeDef}{
-    \newcommand*{\MainBoldItalicSizeDef}{%
-        SizeFeatures={
-            {Size={-8.5},        RawFeature={axis={wght=\junicodevf@BIwghtOne,wdth=\junicodevf@BIwdthOne}}},
-            {Size={8.5-10.99},   RawFeature={axis={wght=\junicodevf@BIwghtTwo,wdth=\junicodevf@BIwdthTwo}}},
-            {Size={10.99-17.99}, RawFeature={axis={wght=\junicodevf@BIwghtThree,wdth=\junicodevf@BIwdthThree}}},
-            {Size={17.99-23.99}, RawFeature={axis={wght=\junicodevf@BIwghtFour,wdth=\junicodevf@BIwdthFour}}},
-            {Size={23.99-},      RawFeature={axis={wght=\junicodevf@BIwghtFive,wdth=\junicodevf@BIwdthFive}}}
-        }
-    }
+    \makemainfontcommand{4}{\junicodevf@boldweight}{\wghtadjust}{\junicodevf@width}{\wdthadjust}
 }{}
 
 % NUMBER STRINGS for fontspec.
@@ -170,7 +126,8 @@ mkwidthcommands(wdindex, adjustment)}}
 \def\junicodevf@figurealign{Proportional}
 \ifjunicodevf@tabular\def\junicodevf@figurealign{Monospaced}\fi
 
-% DECLARE THE FONTS
+% Set the main font, then the alternate styles. It appears that
+% the fonts aren't embedded in the PDF unless actually used.
 
 \setmainfont{Junicode VF}[
     ItalicFont =         {*-Italic},
@@ -243,6 +200,7 @@ mkwidthcommands(wdindex, adjustment)}}
     Renderer = HarfBuzz,
     \ENLAFourSizeDef
 ]
+
 
 % Convenience commands for non-verbose access to the cvNN features.
 % See also the "jcv" mnemonics below.

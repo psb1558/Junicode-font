@@ -26,63 +26,54 @@ alt_styles = {
    ExpBold =      { 700, 125   }
 }
 
-
--- 1: Regular, 2: Light, 3: Medium
-regular_weights = { 
-   junicodevf_at_RwghtOne =   { 490, 390, 590 },
-   junicodevf_at_RwghtTwo =   { 440, 340, 540 },
-   junicodevf_at_RwghtThree = { 390, 290, 490 },
-   junicodevf_at_RwghtFour =  { 370, 270, 470 },
-   junicodevf_at_RwghtFive =  { 350, 250, 450 },
-   junicodevf_at_IwghtOne =   { 525, 425, 625 },
-   junicodevf_at_IwghtTwo =   { 475, 375, 575 },
-   junicodevf_at_IwghtThree = { 425, 325, 525 },
-   junicodevf_at_IwghtFour =  { 370, 270, 470 },
-   junicodevf_at_IwghtFive =  { 350, 250, 450 }
+names = {
+   {"Regular",    "MainRegSizeDef"},
+   {"Italic",     "MainItalicSizeDef"},
+   {"Bold",       "MainBoldSizeDef"},
+   {"BoldItalic", "MainBoldItalicSizeDef"}
 }
 
--- 1: Bold, 2: Semibold
-bold_weights = { 
-   junicodevf_at_BwghtOne =    { 790, 690 },
-   junicodevf_at_BwghtTwo =    { 740, 640 },
-   junicodevf_at_BwghtThree =  { 690, 590 },
-   junicodevf_at_BwghtFour =   { 650, 550 },
-   junicodevf_at_BwghtFive =   { 600, 500 },
-   junicodevf_at_BIwghtOne =   { 800, 700 },
-   junicodevf_at_BIwghtTwo =   { 775, 675 },
-   junicodevf_at_BIwghtThree = { 725, 625 },
-   junicodevf_at_BIwghtFour =  { 675, 575 },
-   junicodevf_at_BIwghtFive =  { 625, 525 }
+main_regular_styles = {
+   {size=8.5, wght=490,  wdth=115 },
+   {size=9.5, wght=472,  wdth=112 },
+   {size=10.5, wght=454, wdth=109 },
+   {size=11.5, wght=436, wdth=106 },
+   {size=12.5, wght=418, wdth=103 },
+   {size=13.5, wght=400, wdth=100 },
+   {size=14.5, wght=390, wdth=99  },
+   {size=16.5, wght=380, wdth=98  },
+   {size=19.5, wght=370, wdth=97  },
+   {size=22.5, wght=360, wdth=96  },
+   {size=22.5, wght=350, wdth=95  },
 }
 
- -- 1: regular, 2: condensed, 3: semicondensed, 4: semiexpanded, 5: expanded
-all_widths = {
-   junicodevf_at_RwdthOne =    { 115,   95,   100,  125,   150   },
-   junicodevf_at_RwdthTwo =    { 107.5, 85,   95,   120,   137.5 },
-   junicodevf_at_RwdthThree =  { 100,   82.5, 90,   112.5, 125   },
-   junicodevf_at_RwdthFour =   { 95,    75,   87.5, 107.5, 120   },
-   junicodevf_at_RwdthFive =   { 90,    70,   77.5, 102.5, 115   },
-   junicodevf_at_IwdthOne =    { 115,   95,   100,  125,   150   },
-   junicodevf_at_IwdthTwo =    { 107.5, 85,   95,   120,   137.5 },
-   junicodevf_at_IwdthThree =  { 100,   82.5, 90,   112.5, 125   },
-   junicodevf_at_IwdthFour =   { 95,    75,   87.5, 107.5, 120   },
-   junicodevf_at_IwdthFive =   { 90,    70,   77.5, 102.5, 115   },
-   junicodevf_at_BwdthOne =    { 115,   95,   100,  125,   150   },
-   junicodevf_at_BwdthTwo =    { 107.5, 85,   95,   120,   137.5 },
-   junicodevf_at_BwdthThree =  { 100,   82.5, 90,   112.5, 125   },
-   junicodevf_at_BwdthFour =   { 95,    75,   87.5, 107.5, 120   },
-   junicodevf_at_BwdthFive =   { 90,    70,   77.5, 102.5, 115   },
-   junicodevf_at_BIwdthOne =   { 115,   95,   100,  125,   150   },
-   junicodevf_at_BIwdthTwo =   { 107.5, 85,   95,   120,   137.5 },
-   junicodevf_at_BIwdthThree = { 100,   82.5, 90,   112.5, 125   },
-   junicodevf_at_BIwdthFour =  { 95,    75,   87.5, 107.5, 120   },
-   junicodevf_at_BIwdthFive =  { 90,    70,   77.5, 102.5, 115   }
+main_bold_styles = {
+   {size=8.5,  wght=790, wdth=115 },
+   {size=9.5,  wght=772, wdth=112 },
+   {size=10.5, wght=754, wdth=109 },
+   {size=11.5, wght=736, wdth=106 },
+   {size=12.5, wght=718, wdth=103 },
+   {size=13.5, wght=700, wdth=100 },
+   {size=14.5, wght=690, wdth=99  },
+   {size=16.5, wght=680, wdth=98  },
+   {size=19.5, wght=670, wdth=97  },
+   {size=22.5, wght=660, wdth=96  },
+   {size=22.5, wght=650, wdth=95  },
 }
+
+-- 1=Regular, 2=Light, 3=Medium
+main_regular_autoadjustment = {0, -100, 100}
+
+-- 1=Bold, 2=SemiBold
+main_bold_autoadjustment = {0, -100}
+
+-- 1=Regular, 2=Condensed, 3=SemiCondensed, 4=SemiExpanded, 5=Expanded
+main_width_autoadjustment = { 0, -25, -12.5, 12.5, 25 }
 
 function adjustweight(weight, adjustment)
    adjusted = weight + adjustment
-   if adjusted > 800 then adjusted = 800 end
-   if adjusted < 200 then adjusted = 200 end
+   if adjusted > 700 then adjusted = 700 end
+   if adjusted < 300 then adjusted = 300 end
    return adjusted
 end
 
@@ -93,7 +84,7 @@ function adjustwidth(width, adjustment)
    return adjusted
 end
 
- function mkaltcommands()
+function mkaltcommands()
    for k, v in pairs(alt_styles) do
       romdef = k .. "Def"
       romsizedef = k .. "SizeDef"
@@ -117,27 +108,6 @@ end
    end
 end
 
-function mkregweightcommands(wtidx,adjustment)
-   for k, wt in pairs(regular_weights) do
-      cmd, n = string.gsub(k, "_at_", "@")
-      tex.print("\\newcommand*{\\" .. cmd .. "}{" .. adjustweight(wt[wtidx],adjustment) .. "}")
-   end
-end
-
-function mkboldweightcommands(wtidx,adjustment)
-   for k, wt in pairs(bold_weights) do
-      cmd, n = string.gsub(k, "_at_", "@")
-      tex.print("\\newcommand*{\\" .. cmd .. "}{" .. adjustweight(wt[wtidx],adjustment) .. "}")
-   end
-end
-
-function mkwidthcommands(wdidx, adjustment)
-   for k, wd in pairs(all_widths) do
-      cmd, n = string.gsub(k, "_at_", "@")
-      tex.print("\\newcommand*{\\" .. cmd .. "}{" .. adjustwidth(wd[wdidx],adjustment) .. "}")
-   end
-end
-
 function mkfontcommands()
    for k, v in pairs(alt_styles) do
       defcmd = k .. "Def"
@@ -153,7 +123,7 @@ function mkfontcommands()
    end
 end
 
-function mksizecommand(sizetable)
+function mksizecommand_helper(sizetable)
    result = "Nothing yet"
    if #sizetable > 0 then
        result = "SizeFeatures={"
@@ -164,11 +134,11 @@ function mksizecommand(sizetable)
                sizeitem = "{Size={"
                currentsize = v["size"]
                csnum = v["size"]
-               if i == #sizetable then
+               if i == #sizetable then                   -- last array in the list
                    currentsize = currentsize .. "-"
-               elseif lastsize == 0 then
+               elseif lastsize == 0 then                 -- first array in the list
                    currentsize = "-" .. currentsize
-               else
+               else                                      -- an intermediate array
                    currentsize = lastsize .. "-" .. currentsize
                end
                lastsize = csnum
@@ -191,8 +161,29 @@ function mksizecommand(sizetable)
            end
        end
        result = result .. "}"
-       tex.print(result)
+       return result
    end
 end
 
+function mksizecommand(sizetable)
+   tex.print(mksizecommand_helper(sizetable))
+end
 
+function mkmainfontcommand(name_idx, wght_option, wght_adjust, wdth_option, wdth_adjust)
+   main_style_name = names[name_idx][1]
+   command_name    = names[name_idx][2]
+   style_table = main_regular_styles
+   wght_autoadjust = main_regular_autoadjustment[wght_option]
+   if string.find(main_style_name, "Bold") then
+      style_table = main_bold_styles
+      wght_autoadjust = main_bold_autoadjustment[wght_option]
+   end
+   sizetable = {}
+   for i, v in ipairs(style_table) do
+      sizetable[i] = {}
+      sizetable[i]["size"] = v["size"]
+      sizetable[i]["wght"] = adjustweight(v["wght"] + wght_autoadjust, wght_adjust)
+      sizetable[i]["wdth"] = adjustwidth(v["wdth"] + main_width_autoadjustment[wdth_option], wdth_adjust)
+   end
+   tex.print("\\newcommand{\\" .. command_name .. "}{" .. mksizecommand_helper(sizetable) .. "}")
+end

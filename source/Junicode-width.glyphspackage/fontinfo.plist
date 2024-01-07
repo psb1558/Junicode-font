@@ -723,8 +723,9 @@ five.sups six.sups seven.sups eight.sups nine.sups zero.subs.zero
 zeroinferior.zero zerosuperior.zero zero.sups.zero gammamod-latin
 u10190 u10191 u10192 u10193 u10194 u10195 u10196 u10197 u10198 u10199
 u1019A florin numeral-greek lowernumeral-greek uni02C2 uni02C3 uni02C4
-uni02C5 uni02D2 uni02D3 uni02D4 uni02D5 uni02D6 uni02D7 uni02E5
-uni02E6 uni02E7 uni02E8 uni02E9 uni02EC uni02ED uni02EE uni02EF
+uni02C5 uni02D2 uni02D3 uni02D4 uni02D5 uni02D6 uni02D7
+tonebarextrahighmod tonebarextralowmod tonebarhighmod tonebarlowmod tonebarmidmod 
+uni02EC uni02ED uni02EE uni02EF
 uni02F0 uni02F1 uni02F2 uni02F3 uni02F4 uni02F5 uni02F6 uni02F7
 uni02F8 uni02F9 uni02FA uni02FB uni02FC uni02FD uni02FE uni02FF
 uni02DE uni02DF uni02E4 reversedRotatedFloralHeartBullet uni261A
@@ -1495,7 +1496,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-01-01 20:39:47 +0000";
+date = "2024-01-07 13:20:00 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2599,6 +2600,7 @@ lookup grek_Composed {
   sub rho commareversedabovecomb.loclELL by rhodasia ;
 
 } grek_Composed ;
+
 ";
 tag = ccmp;
 },
@@ -8926,7 +8928,148 @@ sub two.paren zero.paren by two_zero.paren ;
 } rlig_main ;
 
 # lookup subscript_a ;
-
+lookup tone_ligs {
+sub tonebarextrahighmod tonebarextrahighmod tonebarextralowmod by tonebarextrahighmod_tonebarextrahighmod_tonebarextralowmod ;
+sub tonebarextrahighmod tonebarextrahighmod tonebarhighmod by tonebarextrahighmod_tonebarextrahighmod_tonebarhighmod ;
+sub tonebarextrahighmod tonebarextrahighmod tonebarlowmod by tonebarextrahighmod_tonebarextrahighmod_tonebarlowmod ;
+sub tonebarextrahighmod tonebarextrahighmod tonebarmidmod by tonebarextrahighmod_tonebarextrahighmod_tonebarmidmod ;
+sub tonebarextrahighmod tonebarextralowmod by tonebarextrahighmod_tonebarextralowmod ;
+sub tonebarextrahighmod tonebarextralowmod tonebarextrahighmod by tonebarextrahighmod_tonebarextralowmod_tonebarextrahighmod ;
+sub tonebarextrahighmod tonebarextralowmod tonebarextralowmod by tonebarextrahighmod_tonebarextralowmod_tonebarextralowmod ;
+sub tonebarextrahighmod tonebarextralowmod tonebarhighmod by tonebarextrahighmod_tonebarextralowmod_tonebarhighmod ;
+sub tonebarextrahighmod tonebarextralowmod tonebarlowmod by tonebarextrahighmod_tonebarextralowmod_tonebarlowmod ;
+sub tonebarextrahighmod tonebarextralowmod tonebarmidmod by tonebarextrahighmod_tonebarextralowmod_tonebarmidmod ;
+sub tonebarextrahighmod tonebarhighmod by tonebarextrahighmod_tonebarhighmod ;
+sub tonebarextrahighmod tonebarhighmod tonebarextrahighmod by tonebarextrahighmod_tonebarhighmod_tonebarextrahighmod ;
+sub tonebarextrahighmod tonebarhighmod tonebarextralowmod by tonebarextrahighmod_tonebarhighmod_tonebarextralowmod ;
+sub tonebarextrahighmod tonebarhighmod tonebarhighmod by tonebarextrahighmod_tonebarhighmod_tonebarhighmod ;
+sub tonebarextrahighmod tonebarhighmod tonebarlowmod by tonebarextrahighmod_tonebarhighmod_tonebarlowmod ;
+sub tonebarextrahighmod tonebarhighmod tonebarmidmod by tonebarextrahighmod_tonebarhighmod_tonebarmidmod ;
+sub tonebarextrahighmod tonebarlowmod by tonebarextrahighmod_tonebarlowmod ;
+sub tonebarextrahighmod tonebarlowmod tonebarextrahighmod by tonebarextrahighmod_tonebarlowmod_tonebarextrahighmod ;
+sub tonebarextrahighmod tonebarlowmod tonebarextralowmod by tonebarextrahighmod_tonebarlowmod_tonebarextralowmod ;
+sub tonebarextrahighmod tonebarlowmod tonebarhighmod by tonebarextrahighmod_tonebarlowmod_tonebarhighmod ;
+sub tonebarextrahighmod tonebarlowmod tonebarlowmod by tonebarextrahighmod_tonebarlowmod_tonebarlowmod ;
+sub tonebarextrahighmod tonebarlowmod tonebarmidmod by tonebarextrahighmod_tonebarlowmod_tonebarmidmod ;
+sub tonebarextrahighmod tonebarmidmod by tonebarextrahighmod_tonebarmidmod ;
+sub tonebarextrahighmod tonebarmidmod tonebarextrahighmod by tonebarextrahighmod_tonebarmidmod_tonebarextrahighmod ;
+sub tonebarextrahighmod tonebarmidmod tonebarextralowmod by tonebarextrahighmod_tonebarmidmod_tonebarextralowmod ;
+sub tonebarextrahighmod tonebarmidmod tonebarhighmod by tonebarextrahighmod_tonebarmidmod_tonebarhighmod ;
+sub tonebarextrahighmod tonebarmidmod tonebarlowmod by tonebarextrahighmod_tonebarmidmod_tonebarlowmod ;
+sub tonebarextrahighmod tonebarmidmod tonebarmidmod by tonebarextrahighmod_tonebarmidmod_tonebarmidmod ;
+sub tonebarextralowmod tonebarextrahighmod by tonebarextralowmod_tonebarextrahighmod ;
+sub tonebarextralowmod tonebarextrahighmod tonebarextrahighmod by tonebarextralowmod_tonebarextrahighmod_tonebarextrahighmod ;
+sub tonebarextralowmod tonebarextrahighmod tonebarextralowmod by tonebarextralowmod_tonebarextrahighmod_tonebarextralowmod ;
+sub tonebarextralowmod tonebarextrahighmod tonebarhighmod by tonebarextralowmod_tonebarextrahighmod_tonebarhighmod ;
+sub tonebarextralowmod tonebarextrahighmod tonebarlowmod by tonebarextralowmod_tonebarextrahighmod_tonebarlowmod ;
+sub tonebarextralowmod tonebarextrahighmod tonebarmidmod by tonebarextralowmod_tonebarextrahighmod_tonebarmidmod ;
+sub tonebarextralowmod tonebarextralowmod tonebarextrahighmod by tonebarextralowmod_tonebarextralowmod_tonebarextrahighmod ;
+sub tonebarextralowmod tonebarextralowmod tonebarhighmod by tonebarextralowmod_tonebarextralowmod_tonebarhighmod ;
+sub tonebarextralowmod tonebarextralowmod tonebarlowmod by tonebarextralowmod_tonebarextralowmod_tonebarlowmod ;
+sub tonebarextralowmod tonebarextralowmod tonebarmidmod by tonebarextralowmod_tonebarextralowmod_tonebarmidmod ;
+sub tonebarextralowmod tonebarhighmod by tonebarextralowmod_tonebarhighmod ;
+sub tonebarextralowmod tonebarhighmod tonebarextrahighmod by tonebarextralowmod_tonebarhighmod_tonebarextrahighmod ;
+sub tonebarextralowmod tonebarhighmod tonebarextralowmod by tonebarextralowmod_tonebarhighmod_tonebarextralowmod ;
+sub tonebarextralowmod tonebarhighmod tonebarhighmod by tonebarextralowmod_tonebarhighmod_tonebarhighmod ;
+sub tonebarextralowmod tonebarhighmod tonebarlowmod by tonebarextralowmod_tonebarhighmod_tonebarlowmod ;
+sub tonebarextralowmod tonebarhighmod tonebarmidmod by tonebarextralowmod_tonebarhighmod_tonebarmidmod ;
+sub tonebarextralowmod tonebarlowmod by tonebarextralowmod_tonebarlowmod ;
+sub tonebarextralowmod tonebarlowmod tonebarextrahighmod by tonebarextralowmod_tonebarlowmod_tonebarextrahighmod ;
+sub tonebarextralowmod tonebarlowmod tonebarextralowmod by tonebarextralowmod_tonebarlowmod_tonebarextralowmod ;
+sub tonebarextralowmod tonebarlowmod tonebarhighmod by tonebarextralowmod_tonebarlowmod_tonebarhighmod ;
+sub tonebarextralowmod tonebarlowmod tonebarlowmod by tonebarextralowmod_tonebarlowmod_tonebarlowmod ;
+sub tonebarextralowmod tonebarlowmod tonebarmidmod by tonebarextralowmod_tonebarlowmod_tonebarmidmod ;
+sub tonebarextralowmod tonebarmidmod by tonebarextralowmod_tonebarmidmod ;
+sub tonebarextralowmod tonebarmidmod tonebarextrahighmod by tonebarextralowmod_tonebarmidmod_tonebarextrahighmod ;
+sub tonebarextralowmod tonebarmidmod tonebarextralowmod by tonebarextralowmod_tonebarmidmod_tonebarextralowmod ;
+sub tonebarextralowmod tonebarmidmod tonebarhighmod by tonebarextralowmod_tonebarmidmod_tonebarhighmod ;
+sub tonebarextralowmod tonebarmidmod tonebarlowmod by tonebarextralowmod_tonebarmidmod_tonebarlowmod ;
+sub tonebarextralowmod tonebarmidmod tonebarmidmod by tonebarextralowmod_tonebarmidmod_tonebarmidmod ;
+sub tonebarhighmod tonebarextrahighmod by tonebarhighmod_tonebarextrahighmod ;
+sub tonebarhighmod tonebarextrahighmod tonebarextrahighmod by tonebarhighmod_tonebarextrahighmod_tonebarextrahighmod ;
+sub tonebarhighmod tonebarextrahighmod tonebarextralowmod by tonebarhighmod_tonebarextrahighmod_tonebarextralowmod ;
+sub tonebarhighmod tonebarextrahighmod tonebarhighmod by tonebarhighmod_tonebarextrahighmod_tonebarhighmod ;
+sub tonebarhighmod tonebarextrahighmod tonebarlowmod by tonebarhighmod_tonebarextrahighmod_tonebarlowmod ;
+sub tonebarhighmod tonebarextrahighmod tonebarmidmod by tonebarhighmod_tonebarextrahighmod_tonebarmidmod ;
+sub tonebarhighmod tonebarextralowmod by tonebarhighmod_tonebarextralowmod ;
+sub tonebarhighmod tonebarextralowmod tonebarextrahighmod by tonebarhighmod_tonebarextralowmod_tonebarextrahighmod ;
+sub tonebarhighmod tonebarextralowmod tonebarextralowmod by tonebarhighmod_tonebarextralowmod_tonebarextralowmod ;
+sub tonebarhighmod tonebarextralowmod tonebarhighmod by tonebarhighmod_tonebarextralowmod_tonebarhighmod ;
+sub tonebarhighmod tonebarextralowmod tonebarlowmod by tonebarhighmod_tonebarextralowmod_tonebarlowmod ;
+sub tonebarhighmod tonebarextralowmod tonebarmidmod by tonebarhighmod_tonebarextralowmod_tonebarmidmod ;
+sub tonebarhighmod tonebarhighmod tonebarextrahighmod by tonebarhighmod_tonebarhighmod_tonebarextrahighmod ;
+sub tonebarhighmod tonebarhighmod tonebarextralowmod by tonebarhighmod_tonebarhighmod_tonebarextralowmod ;
+sub tonebarhighmod tonebarhighmod tonebarlowmod by tonebarhighmod_tonebarhighmod_tonebarlowmod ;
+sub tonebarhighmod tonebarhighmod tonebarmidmod by tonebarhighmod_tonebarhighmod_tonebarmidmod ;
+sub tonebarhighmod tonebarlowmod by tonebarhighmod_tonebarlowmod ;
+sub tonebarhighmod tonebarlowmod tonebarextrahighmod by tonebarhighmod_tonebarlowmod_tonebarextrahighmod ;
+sub tonebarhighmod tonebarlowmod tonebarextralowmod by tonebarhighmod_tonebarlowmod_tonebarextralowmod ;
+sub tonebarhighmod tonebarlowmod tonebarhighmod by tonebarhighmod_tonebarlowmod_tonebarhighmod ;
+sub tonebarhighmod tonebarlowmod tonebarlowmod by tonebarhighmod_tonebarlowmod_tonebarlowmod ;
+sub tonebarhighmod tonebarlowmod tonebarmidmod by tonebarhighmod_tonebarlowmod_tonebarmidmod ;
+sub tonebarhighmod tonebarmidmod by tonebarhighmod_tonebarmidmod ;
+sub tonebarhighmod tonebarmidmod tonebarextrahighmod by tonebarhighmod_tonebarmidmod_tonebarextrahighmod ;
+sub tonebarhighmod tonebarmidmod tonebarextralowmod by tonebarhighmod_tonebarmidmod_tonebarextralowmod ;
+sub tonebarhighmod tonebarmidmod tonebarhighmod by tonebarhighmod_tonebarmidmod_tonebarhighmod ;
+sub tonebarhighmod tonebarmidmod tonebarlowmod by tonebarhighmod_tonebarmidmod_tonebarlowmod ;
+sub tonebarhighmod tonebarmidmod tonebarmidmod by tonebarhighmod_tonebarmidmod_tonebarmidmod ;
+sub tonebarlowmod tonebarextrahighmod by tonebarlowmod_tonebarextrahighmod ;
+sub tonebarlowmod tonebarextrahighmod tonebarextrahighmod by tonebarlowmod_tonebarextrahighmod_tonebarextrahighmod ;
+sub tonebarlowmod tonebarextrahighmod tonebarextralowmod by tonebarlowmod_tonebarextrahighmod_tonebarextralowmod ;
+sub tonebarlowmod tonebarextrahighmod tonebarhighmod by tonebarlowmod_tonebarextrahighmod_tonebarhighmod ;
+sub tonebarlowmod tonebarextrahighmod tonebarlowmod by tonebarlowmod_tonebarextrahighmod_tonebarlowmod ;
+sub tonebarlowmod tonebarextrahighmod tonebarmidmod by tonebarlowmod_tonebarextrahighmod_tonebarmidmod ;
+sub tonebarlowmod tonebarextralowmod by tonebarlowmod_tonebarextralowmod ;
+sub tonebarlowmod tonebarextralowmod tonebarextrahighmod by tonebarlowmod_tonebarextralowmod_tonebarextrahighmod ;
+sub tonebarlowmod tonebarextralowmod tonebarextralowmod by tonebarlowmod_tonebarextralowmod_tonebarextralowmod ;
+sub tonebarlowmod tonebarextralowmod tonebarhighmod by tonebarlowmod_tonebarextralowmod_tonebarhighmod ;
+sub tonebarlowmod tonebarextralowmod tonebarlowmod by tonebarlowmod_tonebarextralowmod_tonebarlowmod ;
+sub tonebarlowmod tonebarextralowmod tonebarmidmod by tonebarlowmod_tonebarextralowmod_tonebarmidmod ;
+sub tonebarlowmod tonebarhighmod by tonebarlowmod_tonebarhighmod ;
+sub tonebarlowmod tonebarhighmod tonebarextrahighmod by tonebarlowmod_tonebarhighmod_tonebarextrahighmod ;
+sub tonebarlowmod tonebarhighmod tonebarextralowmod by tonebarlowmod_tonebarhighmod_tonebarextralowmod ;
+sub tonebarlowmod tonebarhighmod tonebarhighmod by tonebarlowmod_tonebarhighmod_tonebarhighmod ;
+sub tonebarlowmod tonebarhighmod tonebarlowmod by tonebarlowmod_tonebarhighmod_tonebarlowmod ;
+sub tonebarlowmod tonebarhighmod tonebarmidmod by tonebarlowmod_tonebarhighmod_tonebarmidmod ;
+sub tonebarlowmod tonebarlowmod tonebarextrahighmod by tonebarlowmod_tonebarlowmod_tonebarextrahighmod ;
+sub tonebarlowmod tonebarlowmod tonebarextralowmod by tonebarlowmod_tonebarlowmod_tonebarextralowmod ;
+sub tonebarlowmod tonebarlowmod tonebarhighmod by tonebarlowmod_tonebarlowmod_tonebarhighmod ;
+sub tonebarlowmod tonebarlowmod tonebarmidmod by tonebarlowmod_tonebarlowmod_tonebarmidmod ;
+sub tonebarlowmod tonebarmidmod by tonebarlowmod_tonebarmidmod ;
+sub tonebarlowmod tonebarmidmod tonebarextrahighmod by tonebarlowmod_tonebarmidmod_tonebarextrahighmod ;
+sub tonebarlowmod tonebarmidmod tonebarextralowmod by tonebarlowmod_tonebarmidmod_tonebarextralowmod ;
+sub tonebarlowmod tonebarmidmod tonebarhighmod by tonebarlowmod_tonebarmidmod_tonebarhighmod ;
+sub tonebarlowmod tonebarmidmod tonebarlowmod by tonebarlowmod_tonebarmidmod_tonebarlowmod ;
+sub tonebarlowmod tonebarmidmod tonebarmidmod by tonebarlowmod_tonebarmidmod_tonebarmidmod ;
+sub tonebarmidmod tonebarextrahighmod by tonebarmidmod_tonebarextrahighmod ;
+sub tonebarmidmod tonebarextrahighmod tonebarextrahighmod by tonebarmidmod_tonebarextrahighmod_tonebarextrahighmod ;
+sub tonebarmidmod tonebarextrahighmod tonebarextralowmod by tonebarmidmod_tonebarextrahighmod_tonebarextralowmod ;
+sub tonebarmidmod tonebarextrahighmod tonebarhighmod by tonebarmidmod_tonebarextrahighmod_tonebarhighmod ;
+sub tonebarmidmod tonebarextrahighmod tonebarlowmod by tonebarmidmod_tonebarextrahighmod_tonebarlowmod ;
+sub tonebarmidmod tonebarextrahighmod tonebarmidmod by tonebarmidmod_tonebarextrahighmod_tonebarmidmod ;
+sub tonebarmidmod tonebarextralowmod by tonebarmidmod_tonebarextralowmod ;
+sub tonebarmidmod tonebarextralowmod tonebarextrahighmod by tonebarmidmod_tonebarextralowmod_tonebarextrahighmod ;
+sub tonebarmidmod tonebarextralowmod tonebarextralowmod by tonebarmidmod_tonebarextralowmod_tonebarextralowmod ;
+sub tonebarmidmod tonebarextralowmod tonebarhighmod by tonebarmidmod_tonebarextralowmod_tonebarhighmod ;
+sub tonebarmidmod tonebarextralowmod tonebarlowmod by tonebarmidmod_tonebarextralowmod_tonebarlowmod ;
+sub tonebarmidmod tonebarextralowmod tonebarmidmod by tonebarmidmod_tonebarextralowmod_tonebarmidmod ;
+sub tonebarmidmod tonebarhighmod by tonebarmidmod_tonebarhighmod ;
+sub tonebarmidmod tonebarhighmod tonebarextrahighmod by tonebarmidmod_tonebarhighmod_tonebarextrahighmod ;
+sub tonebarmidmod tonebarhighmod tonebarextralowmod by tonebarmidmod_tonebarhighmod_tonebarextralowmod ;
+sub tonebarmidmod tonebarhighmod tonebarhighmod by tonebarmidmod_tonebarhighmod_tonebarhighmod ;
+sub tonebarmidmod tonebarhighmod tonebarlowmod by tonebarmidmod_tonebarhighmod_tonebarlowmod ;
+sub tonebarmidmod tonebarhighmod tonebarmidmod by tonebarmidmod_tonebarhighmod_tonebarmidmod ;
+sub tonebarmidmod tonebarlowmod by tonebarmidmod_tonebarlowmod ;
+sub tonebarmidmod tonebarlowmod tonebarextrahighmod by tonebarmidmod_tonebarlowmod_tonebarextrahighmod ;
+sub tonebarmidmod tonebarlowmod tonebarextralowmod by tonebarmidmod_tonebarlowmod_tonebarextralowmod ;
+sub tonebarmidmod tonebarlowmod tonebarhighmod by tonebarmidmod_tonebarlowmod_tonebarhighmod ;
+sub tonebarmidmod tonebarlowmod tonebarlowmod by tonebarmidmod_tonebarlowmod_tonebarlowmod ;
+sub tonebarmidmod tonebarlowmod tonebarmidmod by tonebarmidmod_tonebarlowmod_tonebarmidmod ;
+sub tonebarmidmod tonebarmidmod tonebarextrahighmod by tonebarmidmod_tonebarmidmod_tonebarextrahighmod ;
+sub tonebarmidmod tonebarmidmod tonebarextralowmod by tonebarmidmod_tonebarmidmod_tonebarextralowmod ;
+sub tonebarmidmod tonebarmidmod tonebarhighmod by tonebarmidmod_tonebarmidmod_tonebarhighmod ;
+sub tonebarmidmod tonebarmidmod tonebarlowmod by tonebarmidmod_tonebarmidmod_tonebarlowmod ;
+} tone_ligs ;
 ";
 tag = rlig;
 },
@@ -63328,5 +63471,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 205;
+versionMinor = 206;
 }

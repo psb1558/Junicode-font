@@ -32,7 +32,7 @@ First the legalities. It is perfectly all right to create a modified version
 of Junicode via subsetting, compress it into a webfont (almost certainly in
 woff2 format), and host it on your web server. This is because “Junicode” is
 not a “Reserved Font Name” (which complicates web use of
-many fonts licensed under the Open Font License). If you are nervous about the
+many fonts licensed under the Open Font License). If you are nevertheless nervous about the
 legal requirements of the Open Font License, you can change the font name to
 something arbitrary with the \texttt{-‌-obfuscate-names} option
 of the pyftsubset program, and you can embed the Open Font License, or a
@@ -108,12 +108,14 @@ want to retain in the font. All others, except for the
 \hyperlink{req}{Required Features}, are discarded. All of the characters
 referenced in these features will also be included in the output file, as long
 as those characters are variants of characters in your text file. For example,
-the \textSourceText{smcp} (Small Caps) feature has many more small caps than there are letters
+the \textSourceText{smcp}\index{smcp} (Small Caps) feature has many more small caps than there are letters
 of the alphabet, but most of them are not included in the subsetted font. The
 program's parsimony with characters keeps the font file as small as possible.
-Note that some features are included automatically: \textSourceText{ccmp},
-\textSourceText{locl}, \textSourceText{calt}, \textSourceText{liga}, \textSourceText{rlig},
-\textSourceText{kern}, \textSourceText{mark}, and \textSourceText{mkmk}.
+Note that some features are included automatically: \textSourceText{ccmp}\index{ccmp},
+\textSourceText{locl}\index{locl}, \textSourceText{calt}\index{calt},
+ \textSourceText{liga}\index{liga}, \textSourceText{rlig}\index{rlig},
+\textSourceText{kern}\index{kern}, \textSourceText{mark}\index{mark},
+ and \textSourceText{mkmk}\index{mkmk}.
 
 
 \texttt{--layout-features-} tells the program which OpenType features to omit.

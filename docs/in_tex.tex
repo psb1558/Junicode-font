@@ -7,8 +7,8 @@ in CTAN, the {\TeX} repository, and also
 in the {\TeX} Live distribution (run \src{tlmgr} to get them). Both static and variable versions
 have a convenient script for loading and managing the font: use
 {\color{BrickRed}\verb|\usepackage{junicode}|} for the static font and
-{\color{BrickRed}\verb|\usepackage{junicodevf}|} for the variable font. These accept several
-options commonly used in font packages:
+{\color{BrickRed}\verb|\usepackage{junicodevf}|} for the variable font (which requires \ltech).
+These commands accept several options commonly used in font packages:
 
 \begin{description}
     \item[light] The weight of the type for the main text is light instead of regular.
@@ -31,7 +31,9 @@ options commonly used in font packages:
     \item[lining] Numbers will be lining, harmonizing with uppercase letters.
 \end{description}
 
-\noindent In the variable font, terms like “regular” and “light” do not denote a fixed shape as in the static font, but rather a
+\noindent With the variable font, terms like “light” and “semibold” (and, for that  matter,
+“regular”) do not denote a fixed
+shape the way they do with the static font, but rather a
 range of weights and widths that vary with the point size. You can see these variations
 if we scale a line of footnote
 text and a line of header text to the same {\color{BrickRed}\verb|\large|} size:
@@ -41,10 +43,10 @@ text and a line of header text to the same {\color{BrickRed}\verb|\large|} size:
 \sampleheader Here is some sample text for headers (18pt or larger).
 \end{quote}
 
-\noindent The glyphs for footnote text are heavier and wider than those for the headers, recalling the way
+\noindent The glyphs for footnote text are heavier and wider than those for headers, recalling the way
 punchcutters in the era of metal type often designed small sizes to be relatively thicker and wider
 than main text or titles. This promoted legibility at small sizes and also evenness of color on
-pages with text blocks in diverse sizes.
+pages with diverse text blocks.
 
 Junicode VF provides vastly more flexibility than static Junicode, starting with two options that go
 with the weight and width options listed above:
@@ -62,7 +64,7 @@ with the weight and width options listed above:
 
 \section{Advanced Options}
 
-If you are using the variable font and the options mentioned so far don't yield the results
+If you are using the variable font and the basic options listed above don't yield the results
 you want, the options listed in this section allow you to choose from an effectively infinite
 number of styles. Do this by supplying custom axis coordinates for one or more of the four basic
 styles of the main text (Regular, Italic, Bold, BoldItalic) via package options called
@@ -144,7 +146,7 @@ package this way:
 \end{verbatim}
 \normalsize
 
-\noindent If you want to use these features only for text in the regular style, use
+\noindent If you want to use these conventions only for text in the regular style, use
 \option{MainRegularFeatures} instead of \option{MainFeatures}. For the other styles, use
 \option{MainItalicFeatures}, \option{MainBoldFeatures}, and \option{MainBoldItalicFeatures}.
 All of the
@@ -252,7 +254,8 @@ but you can have as many size ranges as you want, just as you can for the main f
 
 \section{The Enlarge Axis}
 
-The variable package defines four different styles for Junicode VF’s Enlarge axis, in four sizes:
+The variable package defines four different styles for Junicode VF’s
+\hyperlink{enlarge}{Enlarge axis}, in four sizes:
 
 \begin{center}
 \begin{tabular}{ l  l  l }
@@ -282,7 +285,8 @@ styles.
 
 \section{Other Commands}
 
-This package's other commands (listed in the following table) are offered as conveniences, being shorter and more
+The font packages’ other commands (listed in the following table) are offered as conveniences,
+being shorter and more
 mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
 remain available). Each of these commands
 also has a corresponding “text” command that works like 
@@ -291,7 +295,7 @@ as its sole argument the text to which the command will be applied. Each “text
 consists of the main command with “text” prefixed---for example,
 {\color{BrickRed}\verb|\textInsularLetterForms{}|}
 corresponding to {\color{BrickRed}\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
-applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Feature Reference.”
+applied by these commands, see \hyperlink{FeatureReference}{Chapter 4, Feature Reference}.
 
 \begin{center}\small
 %\begin{table}[ht]
@@ -299,25 +303,25 @@ applied by these commands, see Chapter 4 of the \textit{Junicode Manual}, “Fea
 \tablehead{\hline}
 \tabletail{\hline}
 \begin{supertabular}{| l | p{2.75in} |}
-\bluerow\textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\
-\textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.\\
-\bluerow\textbackslash IPAAlternates & Applies ss03, IPA alternates.\\
-\textbackslash HighOverline & Applies ss04, High Overline.\\
-\bluerow\textbackslash MediumHighOverline & Applies ss05, Medium-high Overline.\\
-\textbackslash EnlargedMinuscules & Applies ss06, Enlarged minuscules.\\
-\bluerow\textbackslash Underdotted & Applies ss07, Underdotted.\\
-\textbackslash ContextualLongS & Applies ss08, Contextual long s.\\
-\bluerow\textbackslash AlternateFigures & Applies ss09, Alternate Figures.\\
-\textbackslash EntitiesAndTags & Applies ss10, Entities and Tags.\\
-\bluerow\textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\
-\textbackslash ElderFuthark & Applies ss13, Elder Futhark.\\
-\bluerow\textbackslash YoungerFuthark & Applies ss14, Younger Futhark.\\
-\textbackslash LongBranchToShortTwig & Applies ss15, Long Branch to Short Twig.\\
-\bluerow\textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\
-\textbackslash RareDigraphs & Applies ss17, Rare Digraphs.\\
-\bluerow\textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\
-\textbackslash LatinToGothic & Applies ss19, Latin to Gothic.\\
-\bluerow\textbackslash LowDiacritics & Applies ss20, Low Diacritics.\\
+\bluerow\textbackslash AltThornEth & Applies ss01,\index{ss01} Alternate thorn and eth.\\
+\textbackslash InsularLetterForms & Applies ss02,\index{ss02} Insular letter-forms.\\
+\bluerow\textbackslash IPAAlternates & Applies ss03,\index{ss03} IPA alternates.\\
+\textbackslash HighOverline & Applies ss04,\index{ss04} High Overline.\\
+\bluerow\textbackslash MediumHighOverline & Applies ss05,\index{ss05} Medium-high Overline.\\
+\textbackslash EnlargedMinuscules & Applies ss06,\index{ss06} Enlarged minuscules.\\
+\bluerow\textbackslash Underdotted & Applies ss07,\index{ss07} Underdotted.\\
+\textbackslash ContextualLongS & Applies ss08,\index{ss08} Contextual long s.\\
+\bluerow\textbackslash AlternateFigures & Applies ss09,\index{ss09} Alternate Figures.\\
+\textbackslash EntitiesAndTags & Applies ss10,\index{ss10} Entities and Tags.\\
+\bluerow\textbackslash EarlyEnglishFuthorc & Applies ss12,\index{ss12} Early English Futhorc.\\
+\textbackslash ElderFuthark & Applies ss13,\index{ss13} Elder Futhark.\\
+\bluerow\textbackslash YoungerFuthark & Applies ss14,\index{ss14} Younger Futhark.\\
+\textbackslash LongBranchToShortTwig & Applies ss15,\index{ss15} Long Branch to Short Twig.\\
+\bluerow\textbackslash ContextualRRotunda & Applies ss16,\index{ss16} Contextual r rotunda.\\
+\textbackslash RareDigraphs & Applies ss17,\index{ss17} Rare Digraphs.\\
+\bluerow\textbackslash OldStylePunctuation & Applies ss18,\index{ss18} Old-style Punctuation.\\
+\textbackslash LatinToGothic & Applies ss19,\index{ss19} Latin to Gothic.\\
+\bluerow\textbackslash LowDiacritics & Applies ss20,\index{ss20} Low Diacritics.\\
 \textbackslash jcv, \textbackslash textcv & Applies any Character Variant feature (see below).\\
 \end{supertabular}
 %\caption{Stylistic Set and Character Variant Commands}
@@ -334,7 +338,8 @@ Character Variant features can also be selected by means of commands consisting 
 {\color{BrickRed}\verb|\jcv|} plus any letter of the basic Latin alphabet (e.g. {\color{BrickRed}\verb|\jcvA|},
 {\color{BrickRed}\verb|\jcvz|}), or any of the mnemonics below.
 For example, a feature for
-lowercase \textbf{a} can be expressed as {\color{BrickRed}\verb|\textcv[2]{\jcva}{a}|}, yielding \textbf{\textcv[2]{\jcva}{a}}.
+lowercase \textbf{a} can be expressed as {\color{BrickRed}\verb|\textcv[2]{\jcva}{a}|},\index{cv02}
+yielding \textbf{\textcv[2]{\jcva}{a}}.
 
 \begin{multicols}{3}
 \small\jCond\textbackslash jcvaa

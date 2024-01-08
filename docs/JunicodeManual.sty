@@ -43,10 +43,15 @@
 ]
 \setfontface\sampleheader{JunicodeVF}[
     Renderer = HarfBuzz,
-    SizeFeatures = {{Size={5-}, RawFeature={axis={wght=350,wdth=90}}}}
+    SizeFeatures = {{Size={5-}, RawFeature={axis={wght=350,wdth=95}}}}
 ]
 \setmonofont{Fira Mono}[Scale=MatchLowercase,Numbers=Lowercase]
 \setsansfont{Fira Sans}[Scale=MatchLowercase,Numbers=Lowercase]
+
+\usepackage{imakeidx}
+\usepackage{idxlayout}
+%\renewcommand{\indexname}{Index of OpenType Features}
+\makeindex[title=Index of OpenType Features,intoc]
 
 \usepackage{fancyhdr}
 \usepackage{realscripts}
@@ -63,6 +68,7 @@
 \definecolor{myLightBlue}{RGB}{203,228,249}
 \definecolor{myLightGreen}{RGB}{234,255,244}
 \definecolor{myLightPurple}{RGB}{214,205,234}
+\definecolor{GunMetalGray}{RGB}{42,52,57}
 \usepackage{multicol}
 \usepackage{array}
 \usepackage{tabto}
@@ -149,7 +155,7 @@
 % Headers
 \usepackage{titlesec}
 \titleformat{\chapter}[hang]{\huge\jSmCondLight\color{RViolet}}{\thechapter.}{1em}{}
-\titleformat{\section}[hang]{\Large\jSmCond\color{SlateGray}}{\thesection.}{1em}{}
+\titleformat{\section}[hang]{\Large\jSmCond\color{GunMetalGray}}{\thesection.}{1em}{}
 \titleformat{\subsection}[hang]{\large\color{BrickRed}}{\thesubsection.}{1em}{}
 % List styles
 \newcommand\liststyleLi{%

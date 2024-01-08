@@ -28,14 +28,15 @@ your text less accessible and less searchable. Indexing, concordance and bibliog
 screen readers will misinterpret it. To solve one problem (that of visual representation), you may well have introduced
 a host of far more serious problems.
 
-Fortunately, Junicode offers a solution for this particular problem. The OpenType feature \textSourceText{cv63} substitutes for
+Fortunately, Junicode offers a solution for this particular problem. The OpenType feature
+\textSourceText{cv63}\index{cv63} substitutes for
 the yogh a character that \textit{looks} like the ezh but is semantically a yogh and therefore will be
 handled correctly by applications. But neither Junicode nor any other font can solve every problem of this kind.
 Sometimes you will have to call to mind the important principle stated above: \textit{A transcript is not a
 facsimile}. It is much more important that it should have the same \textit{meaning} as the original than
 that it should have the same \textit{look}.
 
-This document concerns the transcription of texts in Latin (and to some extent, other archaic languages, e.g. Old and
+This chapter concerns the transcription of texts in Latin (and to some extent, other archaic languages, e.g. Old and
 Middle English, Old French). It is long-standing custom, when transcribing certain kinds of documents, to retain marks
 of abbreviation---for example, the \textex{\hlig{\char"0A753p\char"0363}} you may find in a manuscript or printed edition representing
 the word \textit{propterea}. This is okay---and Junicode can help with the task. But when dealing with the
@@ -44,7 +45,8 @@ correct characters for your transcription, as this will help readers who already
 
 For example, the abbreviation \textex{\hlig{\char"0A753p\char"0363}} as printed here consists of an underlying sequence of Unicode
 characters: \textex{\char"0A753} (\unic{U+A753}, the common abbreviation for \textit{pro}) + \textex{p} + \textex{\char"25CC\char"0363}
-(\unic{U+0363}, the combining small \textit{a}). The OpenType feature \textSourceText{hlig} (Historical Ligatures) has been
+(\unic{U+0363}, the combining small \textit{a}). The OpenType feature \textSourceText{hlig}\index{hlig}
+ (Historical Ligatures) has been
 applied to this sequence, changing its appearance but not its underlying value. That underlying value is intelligible
 to computer applications in the sense that they can recognize each character.
 
@@ -81,7 +83,8 @@ the combining mark. It is also possible to place a combining mark over another c
 \textex{\cvd[32]{84}{q\char"0363\char"0304}}, enter this sequence: q (\unic{U+0071}) + \unic{U+0363} + \unic{U+0304}.
 
 Junicode 2 contains many variants of combining marks: for example the curly zigzag \cvd[1]{81}{\char"25CC\char"035B} is a variant of
-Unicode's angular zigzag {\char"25CC\char"035B} (\unic{U+035B}), produced by applying the OpenType feature \textSourceText{cv81[2]} to
+Unicode's angular zigzag {\char"25CC\char"035B} (\unic{U+035B}), produced by applying the OpenType feature 
+\textSourceText{cv81[2]}\index{cv81} to
 \textbf{both the base character and the combining mark}. Sometimes the combination of base + combining mark + OpenType
 feature will not produce the desired effect. When this happens, place \unic{U+034F} (a special invisible combining mark,
 included in Unicode for exactly this purpose) between the base and the (visible) mark.\\
@@ -92,11 +95,11 @@ included in Unicode for exactly this purpose) between the base and the (visible)
 \textit{dampna}.
 \end{quote}
 The combining macron can also be applied above superscripts and combining marks. Apply the OpenType feature
-\textSourceText{cv84[33]} for a narrower macron:
+\textSourceText{cv84[33]}\index{cv84} for a narrower macron:
 \begin{quote}
 \cvd[32]{84}{antiqua\char"034F\char"0304} \textit{antiquam}; \cvd[32]{84}{q\char"0363\char"0304} \textit{quam}.
 \end{quote}
-For the superscript \textit{a}, use the OpenType feature \textSourceText{sups} (see r. below).\\[1ex]
+For the superscript \textit{a}, use the OpenType feature \textSourceText{sups}\index{sups} (see r. below).\\[1ex]
 
 \noindent\secletter{b.}\ \ For a straight stroke through a tall letter, use the \textsc{combining short stroke overlay} (\unic{U+0335}): \textex{f\char"0335\ d\char"0335\ l\char"0335}. But Unicode also has precomposed versions of
 \textex{d}, \textex{l} and other characters \mbox{with} stroke, e.g.
@@ -134,7 +137,7 @@ to apply \textSourceText{cv81[2]} to \unic{U+035B}, as here:
 \textit{generatio}; p\char"035B; \textit{prae}; seru\char"035Be \textit{servire}}.
 \end{quote}
 The curly form of the combining zigzag may be attached to any letter, and it may change shape depending on the letter it
-is attached to (including caps, for which use the \textSourceText{case} feature, and small caps:
+is attached to (including caps, for which use the \textSourceText{case}\index{case} feature, and small caps:
 \textex{\cvd[1]{81}{A\char"035B B\char"035B \textsc{c\char"035B
 d\char"035B\hspace{0.2em}}}}).\\[1ex]
 
@@ -173,7 +176,7 @@ quib\char"0A76B\ \textit{quibus}; lic\char"0A76B\ \textit{licet}; s\char"0A76B\ 
 \end{quote}
 \noindent\secletter{k.}\ \ For \textit{{}-rum} the Unicode \textsc{rum rotunda} (\unic{U+A75D}) is like the one in MUFI/Junicode.
 The one in the \textit{Record Interpreter} and \textit{Statutes} is a late stylized version of
-this. Use \unic{U+A75D} and apply OpenType feature \textsc{\textSourceText{cv80}} to obtain the correct shape:
+this. Use \unic{U+A75D} and apply OpenType feature \textsc{\textSourceText{cv80}}\index{cv80} to obtain the correct shape:
 \begin{quote}
 \cvd{80}{a\~{i}a\char"0A75D\ \textit{animarum}; co\char"0A75Dpere \textit{corrumpere}; beato\char"0A75D\
 \textit{beatorum}}.
@@ -203,9 +206,10 @@ former, and neither is listed among the \textit{Statutes} abbreviations):
 \char"0A757\ \textit{quod}; \char"0A757d \textit{quid}; \char"0A757b\char"0A76B\ \textit{quibus}.
 \end{quote}
 \noindent\secletter{q.}\ \ For \textit{quae}, \textit{que}, use \textex{q}
-followed by \textsc{et} (\unic{U+A76B}) with or without \textSourceText{hlig}: \textex{q\char"0A76B}
+followed by \textsc{et} (\unic{U+A76B}) with or without \textSourceText{hlig}\index{hlig}: \textex{q\char"0A76B}
 \textex{\hlig{q\char"0A76B}}. For the semicolon-like \textsc{et} sign (\textex{\cvd{83}{q\char"0A76B}}), use
-\textSourceText{cv83[1]}; for the subscripted version (which can also form a ligature via \textSourceText{hlig}), use \textSourceText{cv83[2]}:
+\textSourceText{cv83[1]}\index{cv83}; for the subscripted version (which can also form a ligature via \textSourceText{hlig}), 
+use \textSourceText{cv83[2]}:
 \textex{\cvd[1]{83}{q\char"0A76B\ \hlig{q\char"0A76B}}}.\\[1ex]
 
 \noindent\secletter{r.}\ \ All of the letters a-z are available in superscript form. Access with the \textex{sups}
@@ -215,8 +219,9 @@ q\sups{o}s \textit{quos}; c\sups{i}lo \textit{circulo}; cap\sups{i} \textit{capi
 \end{quote}
 The basic Latin letters a--z have anchors that allow you to position combining marks over them (see a. above)\\[1ex]
 
-\noindent\secletter{s.}\ \ Tironian \textsc{et} sign \char"204A\ \unic{U+204A}, cap \char"2E52\ \unic{U+2E52}. With \textSourceText{cv69[1]} \cvd{69}{\char"204A\char"2E52}; with
-\textSourceText{cv69[2]} \cvd[1]{69}{\char"204A\char"2E52}.\\[1ex]
+\noindent\secletter{s.}\ \ Tironian \textsc{et} sign \char"204A\ \unic{U+204A}, cap \char"2E52\ \unic{U+2E52}. 
+With \textSourceText{cv69[1]} \cvd{69}{\char"204A\char"2E52}; with
+\textSourceText{cv69[2]}\index{cv69} \cvd[1]{69}{\char"204A\char"2E52}.\\[1ex]
 
 \noindent\secletter{t.}\ \ For \textit{est}, use \textex{\char"223B} \unic{U+223B} \textsc{homothetic}. Use of a mathematical sign for this
 purpose is not ideal, but Unicode offers no better solution.\\[1ex]
@@ -228,7 +233,7 @@ use \textex{\textrecipe} \unic{U+211E} or \textex{\char"211F} \unic{U+211F}.\\[1
 
 \noindent\secletter{w.}\ \ At least one edition uses a spacing version of the \textsc{combining zigzag}
 (\textbf{f.} above).
-Neither Unicode nor MUFI has a matching character: with Junicode, apply \textSourceText{cv67} to the spacing
+Neither Unicode nor MUFI has a matching character: with Junicode, apply \textSourceText{cv67}\index{cv67} to the spacing
 \textsc{macron} (\unic{U+00AF}): \textex{\cvd{67}{\char"25CC\char"00AF}}.
 
 \section[Other formatting]{Other formatting}
@@ -252,7 +257,8 @@ body {
 }
 \end{verbatim}
 
-\noindent But the \textSourceText{hlig} feature, if applied to the whole text, will produce many unwanted effects, so it should be
+\noindent But the \textSourceText{hlig}\index{hlig} feature, if applied to the whole text, 
+will produce many unwanted effects, so it should be
 included in a class definition to be used in a <span> applied just to the target sequence:
 \begin{verbatim}
 .que {

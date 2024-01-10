@@ -36,8 +36,8 @@ by these sites are always *seriously* out of date. Often they are accompanied by
 or other faulty information, and often the packages they offer are incomplete.
 If the archives in which these fonts are packaged are
 corrupt or infected with malware, **that is not the responsibility of Junicode’s developer.**
-Always use versions of Junicode downloaded from this site, or from reputable Open Source repositories
-like Homebrew or those that serve Linux distributions. This site **will not support** versions of Junicode downloaded
+Always use versions of Junicode downloaded from this site or from reputable Open Source repositories
+like Homebrew, Linux distributions, or CTAN. This site **will not support** versions of Junicode downloaded
 from commercial websites.
 
 

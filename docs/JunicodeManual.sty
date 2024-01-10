@@ -35,7 +35,9 @@
     {size=11,wght=400,wdth=75},
     {size=22,wght=350,wdth=75},
     {size=22,wght=345,wdth=75}
-  }
+  },
+  SmCondLightFeatures={StylisticSet=9},
+  SmCondFeatures={StylisticSet=9}
 ]{junicodevf}
 \setfontface\samplefootnote{JunicodeVF}[
     Renderer = HarfBuzz,
@@ -43,6 +45,7 @@
 ]
 \setfontface\sampleheader{JunicodeVF}[
     Renderer = HarfBuzz,
+    StylisticSet = 9,
     SizeFeatures = {{Size={5-}, RawFeature={axis={wght=350,wdth=95}}}}
 ]
 \setmonofont{Fira Mono}[Scale=MatchLowercase,Numbers=Lowercase]
@@ -50,7 +53,7 @@
 
 \usepackage{imakeidx}
 \usepackage{idxlayout}
-%\renewcommand{\indexname}{Index of OpenType Features}
+
 \makeindex[title=Index of OpenType Features,intoc]
 
 \usepackage{fancyhdr}
@@ -107,9 +110,7 @@
 \newcommand{\ornm}[2][0]{{\addfontfeature{Ornament=#1}#2}}
 \newcommand{\unic}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
 \newcommand{\src}[1]{{\color{BrickRed}\texttt{#1}}}
-%\newcommand{\src}[1]{#1}
 \newcommand{\option}[1]{{\color{RViolet}\sffamily#1}}
-%\newcommand{\option}[1]{#1}
 \newcommand{\enla}[1]{{\EnlargedOne#1}}
 \newcommand{\enlax}[1]{{\EnlargedTwo#1}}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
@@ -126,20 +127,7 @@
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
-% Page layout (geometry)
-%\setlength\voffset{-1in}
-%\setlength\hoffset{-0.75in}
-%\setlength\topmargin{1in}
-%\setlength\oddsidemargin{1in}
-%\setlength\textheight{8.000001in}
-%\setlength\textwidth{6in}
-%\setlength\footskip{0.0cm}
 \setlength\headheight{15pt}
-%\setlength\headsep{0.2in}
-% Footnote rule
-%\setlength{\skip\footins}{14pt}
-%\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
-% Pages styles
 \pagestyle{fancy}
 \footskip = 30pt
 \headsep = 30pt

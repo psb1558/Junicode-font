@@ -107,19 +107,19 @@ the \src{size} key is mandatory: any array without one is ignored. The
 arrays should be in order of point size. The first array
 prescribes axis coordinates for all sizes up to \src{size}, the last array for all sizes
 greater than \src{size}, and any intermediate arrays a range from the previous to the
-current \src{size}.\footnote{%
+current \src{size}.\footnote{\ %
 If you want only one size array, make \src{size} improbably low (e.g. 5) and place
 a comma after the closing brace of the array.%
 } So the ranges covered in each list above are \src{-8.6}, \src{8.6-10.99},
 \src{10.99-21.59},
-and \src{21.59-}.\footnote{Any modification of the default text size (e.g. in the
+and \src{21.59-}.\footnote{\ Any modification of the default text size (e.g. in the
 \src{\textbackslash documentclass} command) can affect the size definitions in these
 arrays, with the result that (for example)
 \src{10} no longer means exactly “ten points.” You may have to experiment to get these numbers
 right.}
 
 The keys other than \src{size} are the four-letter tags for the font's axes: \src{wght}
-(Weight), \src{wdth} (Width), and \src{ENLA} (Enlarge).\footnote{%
+(Weight), \src{wdth} (Width), and \src{ENLA} (Enlarge).\footnote{\ %
 By convention, tags for axes defined in the OpenType standard are lowercase; custom axes
 are uppercase. Junicode’s \src{ENLA} is a custom axis.%
 } When a key
@@ -218,7 +218,7 @@ append “Italic” to any of the others, except “jRegular”):
 \end{multicols}
 
 \noindent These commands will be self-explanatory if you bear in mind Junicode's 
-abbreviations for style names: Cond=Condensed, Exp=Expanded, Sm=Semi.\footnote{%
+abbreviations for style names: Cond=Condensed, Exp=Expanded, Sm=Semi.\footnote{\ %
 The purpose of these abbreviations is to keep font names under the character-limit
 imposed by some systems.} Use
 them to shift temporarily to a style other than that of the main text.

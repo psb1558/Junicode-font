@@ -23,6 +23,14 @@
   <control-value name="f-bar-top" value="411"/>
   <control-value name="f-right-bottom" value="-255"/>
   <pre-program>
+    <!-- Turn off hinting above 300 ppem -->
+    <if test="pixels-per-em &gt; 300">
+      <disable-instructions/>
+    </if>
+    <!-- Dropout control -->
+    <push>4 511</push>
+    <command name="SCANCTRL"/>
+    <command name="SCANTYPE"/>
     <if test="pixels-per-em &lt; 40">
       <set-control-value name="cap-height-overshoot" unit="pixel" value="control-value(cap-height)"/>
       <set-control-value name="cap-baseline-undershoot" unit="pixel" value="control-value(baseline)"/>
@@ -198,9 +206,9 @@
         <point num="{99;412}"/>
       </shift>
       <move color="black" round="no">
-        <point num="{163;367}"/>
+        <point num="{164;369}"/>
         <shift>
-          <point num="{91;367}"/>
+          <point num="{91;369}"/>
         </shift>
       </move>
     </move>
@@ -357,28 +365,28 @@
   </glyph>
   <glyph ps-name="f.rl">
     <set-vectors axis="y"/>
+    <move distance="lc-descender">
+      <point num="{-72;-267}"/>
+      <move color="black">
+        <point num="{-46;-225}"/>
+      </move>
+    </move>
     <move distance="lc-ascender">
-      <point num="{320;715}"/>
-      <move color="black" round="no">
-        <point num="{298;678}"/>
+      <point num="{341;715}"/>
+      <move color="black">
+        <point num="{318;679}"/>
       </move>
     </move>
     <move distance="f-bar-top">
-      <point num="{171;412}"/>
+      <point num="{185;412}"/>
       <shift>
-        <point num="{99;411}"/>
+        <point num="{114;411}"/>
       </shift>
-      <move color="black" round="no">
-        <point num="{163;369}"/>
+      <move color="black">
+        <point num="{177;369}"/>
         <shift>
-          <point num="{91;369}"/>
+          <point num="{105;369}"/>
         </shift>
-      </move>
-    </move>
-    <move distance="lc-descender">
-      <point num="{-75;-267}"/>
-      <move color="black" round="no">
-        <point num="{-50;-225}"/>
       </move>
     </move>
     <interpolate-untouched-points axis="y"/>

@@ -1,0 +1,56 @@
+#!/bin/bash
+
+if [ -d Junicode ]
+then
+    rm -fr Junicode/*
+else
+    mkdir Junicode
+fi
+
+mkdir Junicode/OTF
+
+mkdir Junicode/TTF
+
+mkdir Junicode/VAR
+
+mkdir Junicode/WOFF2
+
+mkdir Junicode/docs
+
+mkdir Junicode/docs/source
+
+mkdir Junicode/TeX
+
+cp ../OFL.txt Junicode
+
+cp ../TeX/junicode.sty Junicode/TeX
+cp ../TeX/junicodevf.sty Junicode/TeX
+cp ../TeX/junicodevf.lua Junicode/TeX
+
+cp ../fonts/otf/*.otf Junicode/OTF
+
+cp ../fonts/ttf/*.ttf Junicode/TTF
+
+cp ../fonts/variable/*.ttf Junicode/VAR
+
+cp ../docs/JunicodeManual.pdf Junicode/docs
+cp ../docs/JunicodeManual.sty Junicode/docs/source
+cp ../docs/About.tex Junicode/docs/source
+cp ../docs/EnlargeAxis.tex Junicode/docs/source
+cp ../docs/Feature_Reference.tex Junicode/docs/source
+cp ../docs/GettingStarted.tex Junicode/docs/source
+cp ../docs/JunicodeManual.tex Junicode/docs/source
+cp ../docs/OnTheWeb.tex Junicode/docs/source
+cp ../docs/Record_Interpreter_notes.tex Junicode/docs/source
+cp ../docs/Specimens.tex Junicode/docs/source
+cp ../docs/tag_key_ins.tex Junicode/docs/source
+cp ../docs/encoded-glyphs.tex Junicode/docs/source
+cp ../docs/in_tex.tex Junicode/docs/source
+cp ../docs/dns.png Junicode/docs/source
+
+cd Junicode/VAR
+for f in *.ttf; do woff2_compress $f; done
+mv *.woff2 ../WOFF2
+cd ../..
+
+zip -r Junicode.zip Junicode

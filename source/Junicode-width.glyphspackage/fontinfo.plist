@@ -18,7 +18,8 @@ tag = ENLA;
 classes = (
 {
 code = "# Combining above with unicode:
-Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb bcomb ccedillacomb ccomb dcomb ecomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb pcomb rcomb rrotundacomb scomb tcomb ucomb tinsularcomb vcomb wcomb xcomb zcomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commareversedabovecomb commaaboverightcomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb doublebrevecomb doublemacroncomb tildedoublecomb breveinverteddoublecomb doublecircumflexcomb ogonekabovecomb tripleacute ginsularcomb rinsularcomb uniF1C8 urabovecomb usabovecomb";
+Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb bcomb ccedillacomb ccomb dcomb ecomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb pcomb rcomb rrotundacomb scomb tcomb ucomb tinsularcomb vcomb wcomb xcomb zcomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commareversedabovecomb commaaboverightcomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb doublebrevecomb doublemacroncomb tildedoublecomb breveinverteddoublecomb doublecircumflexcomb ogonekabovecomb tripleacute ginsularcomb rinsularcomb uniF1C8 urabovecomb usabovecomb macronacutecomb
+";
 name = combining_above;
 },
 {
@@ -1496,7 +1497,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-05-24 18:46:48 +0000";
+date = "2024-06-02 16:48:52 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -9555,17 +9556,17 @@ code = "lookupflag IgnoreMarks;
 
 sub longs i z.alt1 by longs_i_z.alt1 ;
 # sub longs.alt1 i z.alt1 by longs_i_z.alt1 ;
-# sub f f i by f_f_i ;
-# sub f f l by f_f_l;
+sub f f i by f_f_i ;
+sub f f l by f_f_l ;
 # sub longs longs i by longs_longs_i;
 # sub longs.alt1 longs.alt1 i by longs_longs_i;
 # sub longs longs l by longs_longs_l;
 # sub longs.alt1 longs.alt1 l by longs_longs_l;
 sub longs longs t by longs_longs_t ;
 sub longs.rlongs longs.llongs t by longs_longs_t ;
-# sub f f by f_f ;
-# sub f i by fi ;
-# sub f l by fl ;
+sub f f by f_f ;
+sub f i by f_i ;
+sub f l by f_l ;
 # sub f j by f_j;
 # sub longs b by longs_b;
 # sub longs.alt1 b by longs_b;
@@ -9825,7 +9826,6 @@ KernOnModels = (
 "r y"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -9935,7 +9935,7 @@ stemValues = (
 33
 );
 userData = {
-GSCornerRadius = 33;
+GSCornerRadius = 17;
 GSOffsetHorizontal = 45;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 0;
@@ -63915,5 +63915,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 207;
+versionMinor = 208;
 }

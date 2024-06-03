@@ -1,7 +1,7 @@
 {
-glyphname = f_f_l;
+glyphname = ffi;
 kernLeft = KO_f;
-kernRight = KO_i;
+kernRight = KO_i.lf;
 layers = (
 {
 anchors = (
@@ -21,24 +21,24 @@ ref = f.rf;
 },
 {
 pos = (261,0);
-ref = f.lfrl;
+ref = f.lfrij;
 },
 {
-pos = (522,0);
-ref = l.lf;
+pos = (546,0);
+ref = i.lf;
 }
 );
-width = 801;
+width = 779;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
+pos = (283,0);
 },
 {
 name = caret_2;
-pos = (528,0);
+pos = (567,0);
 }
 );
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -48,14 +48,14 @@ ref = f.rf;
 },
 {
 pos = (279,0);
-ref = f.lfrl;
+ref = f.lfrij;
 },
 {
-pos = (556,0);
-ref = l.lf;
+pos = (571,0);
+ref = i.lf;
 }
 );
-width = 826;
+width = 827;
 },
 {
 anchors = (
@@ -75,30 +75,24 @@ ref = f.rf;
 },
 {
 pos = (247,0);
-ref = f.lfrl;
+ref = f.lfrij;
 },
 {
-pos = (517,0);
-ref = l.lf;
+pos = (531,0);
+ref = i.lf;
 }
 );
-width = 770;
+width = 755;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
+pos = (229,0);
 },
 {
 name = caret_2;
-pos = (528,0);
-}
-);
-guides = (
-{
-pos = (1339,349);
-showMeasurement = 1;
+pos = (450,0);
 }
 );
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -108,24 +102,24 @@ ref = f.rf;
 },
 {
 pos = (218,0);
-ref = f.lfrl;
+ref = f.lfrij;
 },
 {
-pos = (448,0);
-ref = l.lf;
+pos = (466,0);
+ref = i.lf;
 }
 );
-width = 671;
+width = 656;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
+pos = (307,0);
 },
 {
 name = caret_2;
-pos = (528,0);
+pos = (621,0);
 }
 );
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -135,14 +129,14 @@ ref = f.rf;
 },
 {
 pos = (305,0);
-ref = f.lfrl;
+ref = f.lfrij;
 },
 {
-pos = (618,0);
-ref = l.lf;
+pos = (627,0);
+ref = i.lf;
 }
 );
-width = 910;
+width = 905;
 },
 {
 anchors = (
@@ -162,19 +156,20 @@ ref = f.rf;
 },
 {
 pos = (261,0);
-ref = f.lfrl;
+ref = f.lfrij;
 },
 {
-pos = (522,0);
-ref = l.lf;
+pos = (546,0);
+ref = i.lf;
 }
 );
-width = 801;
+width = 779;
 }
 );
 metricLeft = f;
-metricRight = l;
-production = f_f_i;
+metricRight = i;
+production = uniFB03;
+unicode = 64259;
 userData = {
 KernOnSpecialSpacing = {
 L = NoKerning;

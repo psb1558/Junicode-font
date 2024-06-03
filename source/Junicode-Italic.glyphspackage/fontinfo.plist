@@ -742,7 +742,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-05-24 18:47:09 +0000";
+date = "2024-06-02 16:48:36 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -8656,8 +8656,8 @@ sub longs i z.alt1 by longs_i_z.alt1 ;
 sub longs.rij i.llongs z.alt1 by longs_i_z.alt1 ;
 sub f f t by f_f_t ;
 # sub f f udieresis by f_f_udieresis ;
-# sub f f i by uniFB03 ;
-# sub f f l by uniFB04 ;
+sub f f i by f_f_i ;
+sub f f l by f_f_l ;
 sub longs longs t by longs_longs_t ;
 sub longs.rlongs longs.llongs t by longs_longs_t ;
 sub longs tinsular by longs_tinsular ;
@@ -8670,10 +8670,10 @@ sub f eth by f_eth ;
 sub f eth.loclENG by f_eth.loclENG ;
 # sub f thorn by f_thorn ;
 # sub f thorn.loclENG by f_thorn.loclENG ;
-# sub f f by uniFB00 ;
+sub f f by f_f ;
 # sub f f.alt by f_f.alt ;
-# sub f i by uniFB01 ;
-# sub f l by uniFB02 ;
+sub f i by f_i ;
+sub f l by f_l ;
 # sub f odieresis by f_odieresis ;
 # sub f udieresis by f_udieresis ;
 # sub longs longs by longs_longs ;
@@ -9043,7 +9043,6 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -57342,5 +57341,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 207;
+versionMinor = 208;
 }

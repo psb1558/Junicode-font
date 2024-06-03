@@ -1,17 +1,19 @@
 {
-glyphname = f_f_l;
+glyphname = ff;
 kernLeft = KO_f;
-kernRight = KO_i;
+kernRight = KO_f;
 layers = (
 {
 anchors = (
 {
 name = caret_1;
 pos = (263,0);
-},
+}
+);
+guides = (
 {
-name = caret_2;
-pos = (528,0);
+angle = 90;
+pos = (538,359);
 }
 );
 layerId = master01;
@@ -21,24 +23,22 @@ ref = f.rf;
 },
 {
 pos = (261,0);
-ref = f.lfrl;
-},
-{
-pos = (522,0);
-ref = l.lf;
+ref = f.lf;
 }
 );
-width = 801;
+width = 546;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
-},
+pos = (287,0);
+}
+);
+guides = (
 {
-name = caret_2;
-pos = (528,0);
+angle = 90;
+pos = (592,359);
 }
 );
 layerId = "75918100-ED89-42A8-B0FE-888EB9C86810";
@@ -48,24 +48,22 @@ ref = f.rf;
 },
 {
 pos = (279,0);
-ref = f.lfrl;
-},
-{
-pos = (556,0);
-ref = l.lf;
+ref = f.lf;
 }
 );
-width = 826;
+width = 571;
 },
 {
 anchors = (
 {
 name = caret_1;
 pos = (263,0);
-},
+}
+);
+guides = (
 {
-name = caret_2;
-pos = (528,0);
+angle = 90;
+pos = (525,359);
 }
 );
 layerId = "6ABD9449-5E80-4451-809E-12ADEB9E9AB4";
@@ -75,30 +73,22 @@ ref = f.rf;
 },
 {
 pos = (247,0);
-ref = f.lfrl;
-},
-{
-pos = (517,0);
-ref = l.lf;
+ref = f.lf;
 }
 );
-width = 770;
+width = 531;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
-},
-{
-name = caret_2;
-pos = (528,0);
+pos = (229,0);
 }
 );
 guides = (
 {
-pos = (1339,349);
-showMeasurement = 1;
+angle = 90;
+pos = (456,359);
 }
 );
 layerId = "70B83247-6FA0-4662-9656-C86DD2A17D3B";
@@ -108,24 +98,16 @@ ref = f.rf;
 },
 {
 pos = (218,0);
-ref = f.lfrl;
-},
-{
-pos = (448,0);
-ref = l.lf;
+ref = f.lf;
 }
 );
-width = 671;
+width = 463;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
-},
-{
-name = caret_2;
-pos = (528,0);
+pos = (307,0);
 }
 );
 layerId = "9E6FDE2E-55A6-44A9-9556-F1822294BF26";
@@ -135,24 +117,22 @@ ref = f.rf;
 },
 {
 pos = (305,0);
-ref = f.lfrl;
-},
-{
-pos = (618,0);
-ref = l.lf;
+ref = f.lf;
 }
 );
-width = 910;
+width = 632;
 },
 {
 anchors = (
 {
 name = caret_1;
-pos = (263,0);
-},
+pos = (219,0);
+}
+);
+guides = (
 {
-name = caret_2;
-pos = (528,0);
+angle = 90;
+pos = (490,359);
 }
 );
 layerId = "00F4936D-6309-4DEC-83B3-42806ED1A477";
@@ -162,19 +142,16 @@ ref = f.rf;
 },
 {
 pos = (261,0);
-ref = f.lfrl;
-},
-{
-pos = (522,0);
-ref = l.lf;
+ref = f.lf;
 }
 );
-width = 801;
+width = 546;
 }
 );
 metricLeft = f;
-metricRight = l;
-production = f_f_i;
+metricRight = f;
+production = uniFB00;
+unicode = 64256;
 userData = {
 KernOnSpecialSpacing = {
 L = NoKerning;

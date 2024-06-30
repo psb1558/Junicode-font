@@ -1269,9 +1269,9 @@ code = "#lookup i_dot {
 
 lookup i_dot {
   @combining_plus = [graphemejoinercomb @combining_below] ;
-  sub [ i j icomb ]' @combining_above by [ dotlessi jdotless dotlessicomb ] ;
-  sub [ i j icomb ]' @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb ] ;
-  sub [ i j icomb ]' @combining_plus @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_plus @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
   #sub [ i j icomb ]' @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
   #sub [ i j icomb ]' graphemejoinercomb @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
 # graphemejoinercomb

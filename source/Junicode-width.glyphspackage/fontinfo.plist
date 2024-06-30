@@ -2038,9 +2038,9 @@ tag = locl;
 {
 code = "lookup i_dot {
   @combining_plus = [graphemejoinercomb @combining_below] ;
-  sub [ i j icomb ]' @combining_above by [ dotlessi jdotless dotlessicomb ] ;
-  sub [ i j icomb ]' @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb ] ;
-  sub [ i j icomb ]' @combining_plus @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_plus @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
   #sub [ i j icomb ]' @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
   #sub [ i j icomb ]' graphemejoinercomb @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
 # graphemejoinercomb
@@ -8706,6 +8706,8 @@ sub zigzagabovecomb.alt3 by zigzagabovecomb.alt3.sc;
 sub commareversedabovecomb.loclELL by commareversedabovecomb.loclELL.sc;
 sub softsign-cy by softsign-cy.sc ;
 sub hardsign-cy by hardsign-cy.sc ;
+sub uniA7DB by uniA7DB.sc ;
+sub uni019B by lambdastroke.sc ;
 ";
 tag = smcp;
 },
@@ -9826,6 +9828,7 @@ KernOnModels = (
 "r y"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -10787,12 +10790,6 @@ axesValues = (
 400,
 87.5,
 0
-);
-customParameters = (
-{
-name = "Style Name as STAT entry";
-value = wdth;
-}
 );
 instanceInterpolations = {
 "70B83247-6FA0-4662-9656-C86DD2A17D3B" = 0.5;

@@ -742,7 +742,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-06-02 16:48:36 +0000";
+date = "2024-07-17 17:26:56 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -3850,6 +3850,7 @@ lookup salt_one {
   sub hyphen from [ hyphen.twoshaped ] ;
   sub lbar from [ lbar.mecurl ] ;
   sub wynn from [ wynn.alt01 ] ;
+  sub rightWhiteIndex from [ rightWhiteIndex.alt ] ;
 } salt_one ;
 ";
 tag = salt;
@@ -4588,9 +4589,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"enim abbreviation\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Enlarged n with descender\";
+  };
 # Character 0x006E;
 };
-sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript n.alt4 enim ] ;
+sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript n.alt4 enim n.alt1.enlarged ] ;
 ";
 tag = cv28;
 },
@@ -57448,5 +57452,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 208;
+versionMinor = 209;
 }

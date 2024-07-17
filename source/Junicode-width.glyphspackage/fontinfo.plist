@@ -1497,7 +1497,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-07-12 19:27:14 +0000";
+date = "2024-07-17 17:26:12 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -5401,9 +5401,12 @@ code = "cvParameters {
  ParamUILabelNameID {
    name 3 1 0x0409 \"enim abbreviation\";
  };
+ ParamUILabelNameID {
+   name 3 1 0x0409 \"Enlarged n with descender\";
+ };
 #  Character 0x006E;
 };
-sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript n.alt4 enim ] ;
+sub n from [ n.alt1 n.alt2 n.alt3 n.mecurl n.enlarged n.asubscript n.alt4 enim n.alt1.enlarged ] ;
 ";
 tag = cv28;
 },
@@ -9925,7 +9928,6 @@ KernOnModels = (
 "r y"
 );
 };
-visible = 1;
 },
 {
 axesValues = (

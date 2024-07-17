@@ -1269,9 +1269,14 @@ code = "#lookup i_dot {
 
 lookup i_dot {
   @combining_plus = [graphemejoinercomb @combining_below] ;
-  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
-  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
-  sub [ i j icomb iogonek idotbelow itildebelow ]' @combining_plus @combining_plus @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow jstroke jcrossedtail ]' @combining_above by [ dotlessi jdotless 
+        dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless jstroke.dotless jcrossedtail.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow jstroke jcrossedtail ]' @combining_plus @combining_above by [ dotlessi 
+            jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless jstroke.dotless
+            jcrossedtail.dotless ] ;
+  sub [ i j icomb iogonek idotbelow itildebelow jstroke jcrossedtail ]' @combining_plus @combining_plus @combining_above by
+            [ dotlessi jdotless dotlessicomb iogonek.dotless idotbelow.dotless itildebelow.dotless jstroke.dotless
+                  jcrossedtail.dotless ] ;
   #sub [ i j icomb ]' @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
   #sub [ i j icomb ]' graphemejoinercomb @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
 # graphemejoinercomb
@@ -2594,7 +2599,13 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Combining subscript a\";
   };
-#  Character 0x0304;
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Curved macron with half serifs\"; # 38
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Macron with half serifs\"; # 39
+  };
+  Character 0x0304;
 };
 sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1   #1-4
                        zigzagabovecomb.alt2 zigzagabovecomb.alt3 ancomb aNcomb arcomb      #5-9
@@ -2603,7 +2614,7 @@ sub macroncomb from  [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagab
                        omacroncomb oogonekcomb oslashcomb qcomb rumrotundacomb                 #20-24
                        Tcomb ycomb thorncomb orrotcomb orumrotundacomb                            #25-29
                        dieresiscomb.alt dotacutecomb ogonekdotcomb macroncomb.narrow macroncomb.alt3
-					   etcomb spiritusasper asubscriptcomb ] ; #36
+					   etcomb spiritusasper asubscriptcomb macroncomb.alt4 macroncomb.alt5 ] ; #35-
 sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigzagabovecomb.alt1.case
                        zigzagabovecomb.alt2.case zigzagabovecomb.alt3.case ancomb aNcomb arcomb
                        aRcomb Bcomb Dcomb emacroncomb eogonekcomb
@@ -2611,7 +2622,7 @@ sub macroncomb.case from [ macroncomb.alt1 macroncomb.alt2 overlinecomb.alt zigz
                        omacroncomb oogonekcomb oslashcomb qcomb rumrotundacomb
                        Tcomb ycomb thorncomb orrotcomb orumrotundacomb
                        dieresiscomb.alt dotacutecomb.case ogonekdotcomb macroncomb.narrow macroncomb.alt3.case
-					   etcomb spiritusasper asubscriptcomb ] ;
+					   etcomb spiritusasper asubscriptcomb macroncomb.alt4 macroncomb.alt5 ] ;
 ";
 tag = cv84;
 },
@@ -3780,6 +3791,7 @@ code = "lookup salt_three {
   sub f from [  f.rustic f.lombardic f.lombardic.alt]  ;
   sub g from [  g.rustic g.lombardic g.rustic.alt ]  ;
   sub t from [  t.rustic t.lombardic t.lombardic.alt ]  ;
+  sub eth.loclENG from [ eth.loclENG.enlarged.alt eth.loclENG.alt01 eth.loclENG.alt02 ] ;
 } salt_three ;
 
 lookup salt_two {
@@ -3834,10 +3846,10 @@ lookup salt_two {
 lookup salt_one {
   sub AE from [ AE.rustic ] ;
   sub ae from [ ae.rustic ] ;
-  sub eth.loclENG from [ eth.loclENG.enlarged.alt ] ;
   sub ydotaccent from [ y.alt5 ] ;
   sub hyphen from [ hyphen.twoshaped ] ;
   sub lbar from [ lbar.mecurl ] ;
+  sub wynn from [ wynn.alt01 ] ;
 } salt_one ;
 ";
 tag = salt;
@@ -3900,9 +3912,19 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"High Carolingian a\";  # English US
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Square a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Pointed a\";  # English US
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular a with short headstroke\";  # English US
+  };
 #  Character 0x0061;
 };
-sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged a.alt6 a.alt7 ] ;
+#sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged a.alt6 a.alt7 a.alt10 ] ;
+sub a from [ a.alt3 a.alt1 a.alt2 a.alt4 a.alt5 a.enlarged a.alt6 a.alt7 a.alt8 a.alt9 a.alt10 ] ;
 ";
 tag = cv02;
 },
@@ -3965,9 +3987,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule c\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"c with horn\";
+  };
 #  Character 0x0063;
 };
-sub c from [ c.mecurl c.enlarged ] ;
+sub c from [ c.mecurl c.enlarged c.alt01 ] ;
 ";
 tag = cv06;
 },
@@ -4014,14 +4039,17 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Alternate insular d with straight back\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Alternate insular d with upright back\";
+  };
 #  Character 0x0064;
 };
 sub d from          [ dinsular          dinsular.alt          d.mecurl          d.enlarged
-                      dinsular.enlarged dinsular.alt2 ] ;
+                      dinsular.enlarged dinsular.alt2 dinsular.alt3 ] ;
 sub ddotaccent from [ dinsulardotaccent dinsulardotaccent.alt ddotaccent.mecurl ddotaccent.enlarged
-                      dinsulardotaccent.enlarged dinsulardotaccent.alt2 ];
+                      dinsulardotaccent.enlarged dinsulardotaccent.alt2 dinsulardotaccent.alt3 ];
 sub dacute from     [ dinsularacute     dinsularacute.alt     dacute.mecurl     dacute.enlarged
-                      dinsularacute.enlarged dinsularacute.alt2 ] ;
+                      dinsularacute.enlarged dinsularacute.alt2 dinsularacute.alt3 ] ;
 ";
 tag = cv08;
 },
@@ -4065,10 +4093,20 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Tall open e\";
   };
-#  Character 0x0065;
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with straight back and bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"e with straight back, horn and bar\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tall e with horn and bar\";
+  };
+  Character 0x0065;
 };
-sub e from      [ e.alt1 e.alt2 e.alt3 e.enlarged      e.alt4 ] ;
-sub e.alt2 from [ e.alt1 e      e.alt3 e.alt2.enlarged e.alt4 ] ;
+# to do: e.alt05 e.alt011 (10), 
+sub e from      [ e.alt1 e.alt2 e.alt3 e.enlarged      e.alt4 e.alt05 e.alt11 e.alt06 ] ;
+sub e.alt2 from [ e.alt1 e      e.alt3 e.alt2.enlarged e.alt4 e.alt05 e.alt11 e.alt06 ] ;
 ";
 tag = cv10;
 },
@@ -4126,9 +4164,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Insular f with split top\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"f with short descender\";
+  };
 #  Character 0x0066;
 };
-sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged f.alt4 ] ;
+sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged f.alt4 f.alt05 ] ;
 
 
 # do something about underdotted form (supply for all?)
@@ -4196,9 +4237,28 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Orm's hard g, enlarged\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Closed g with straight-sided loop\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular g\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular g with short right stroke\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular g with open bowl\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Caroline g with open bowl\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular g with short left stroke\";
+  };
 #  Character 0x0067;
 };
-sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged gormulum.enlarged ] ;
+sub g from [ ginsular gormulum g.alt4 g.alt1 g.alt2 g.alt3 g.mecurl g.enlarged gormulum.enlarged g.alt05
+ginsular ginsular.alt01 ginsular.alt02 g.alt06 ginsular.alt03 ] ;
 ";
 tag = cv14;
 },
@@ -4381,9 +4441,12 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Uncial k with descender\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"lc-shaped k\";
+  };
 #  Character 0x006B;
 };
-sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged k.alt4 ] ;
+sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged k.alt4 k.alt05 ] ;
 ";
 tag = cv22;
 },
@@ -4682,9 +4745,15 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"r with alternate flourish\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Short-limbed insular r\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Insular r with short right limb\";
+  };
 #  Character 0x0072;
 };
-sub r from [ rinsular rrotunda r.mecurl r.enlarged r.mecurl02 ] ;
+sub r from [ rinsular rrotunda r.mecurl r.enlarged r.mecurl02 rinsular.alt01 rinsular.alt02 ] ;
 ";
 tag = cv36;
 },
@@ -4767,14 +4836,17 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"s with hook above\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Long s with descender and loop\";
+  };
 #  Character 0x0073;
 };
 sub s from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5
-             longs.alt6 s.alt3 s.alt4 ] ;
+             longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
 sub sinsular from [ s ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5
-                    longs.alt6 s.alt3 s.alt4 ] ;
+                    longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
 sub longs from [ sinsular ssigmoid s longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5
-                 longs.alt6 s.alt3 s.alt4 ] ;
+                 longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
 
 ";
 tag = cv38;
@@ -5152,9 +5224,24 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"ae with round a\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with square a and high e\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with pointed a\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with round a and high e\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Caroline ae with tongue\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"ae with tongue and low left loop\";
+  };
 #  Character 0x00E6;
 };
-sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ae.alt4 ae.alt5 ] ;
+sub ae from [ ae.alt1 ae.enlarged ae.alt2 ae.alt3 ae.alt4 ae.alt5 ae.alt06 ae.alt07 ae.alt08 ae.alt09 ae.alt10 ] ;
 ";
 tag = cv57;
 },
@@ -5368,13 +5455,21 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Generic Tironian et with approach and stroke\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tironian et lc only) with medium-high top\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Tironian Et (cap only) with descender\";
+  };
 #  Character 0x204A;
 #  Character 0x2E52;
 };
 sub etTironian from [ tironiansignet.alt1 tironiansignet.alt2 etTironian.alt3 etTironian.alt4 etTironian.alt5
-                      etTironian.alt6 etTironian.alt7 etTironian.alt8 etTironian.alt9 ] ;
+                      etTironian.alt6 etTironian.alt7 etTironian.alt8 etTironian.alt9 EtTironian.alt4
+                      etTironian.alt10 ] ;
 sub EtTironian from [ EtTironian.alt1     EtTironian.alt2     EtTironian.alt3 EtTironian.alt4 EtTironian.alt5
-                      EtTironian.alt6 EtTironian.alt7 EtTironian.alt8 EtTironian.alt9 ] ;
+                      EtTironian.alt6 EtTironian.alt7 EtTironian.alt8 EtTironian.alt9 EtTironian.alt4
+                      EtTironian.alt10 ] ;
 ";
 tag = cv69;
 },
@@ -7988,6 +8083,7 @@ sub k by k.enlarged ;
 sub l by l.enlarged ;
 sub m by m.enlarged ;
 sub n by n.enlarged ;
+sub n.alt1 by n.alt1.enlarged ;
 sub eth.loclENG by eth.enlarged.loclENG ;
 sub thorn by thorn.enlarged ;
 sub o by o.enlarged ;
@@ -8420,6 +8516,7 @@ code = "lookupflag IgnoreMarks;
 
 sub p s i by p_s_i.hlig ;
 sub P s i by P_s_i.hlig ;
+sub N e by N_e.hlig ;
 # sub longs.alt1 t r by longs_t_r ;
 sub qstrokethroughdescender qstrokethroughdescender by qstrokethroughdescender_qstrokethroughdescender.hlig ;
 sub pstrokethroughdescender pstrokethroughdescender by pstrokethroughdescender_pstrokethroughdescender ;
@@ -8445,6 +8542,7 @@ sub a thorn by a_thorn.hlig ;
 sub a r by a_r.hlig ;
 sub a v by a_v.hlig ;
 sub a.alt1 v by auncial_v.hlig ;
+sub ae tinsular by ae_tinsular.hlig ;
 sub b b by b_b.hlig ;
 sub b o by b_o.hlig ;
 sub c h by c_h.hlig ;
@@ -8507,6 +8605,8 @@ sub k longs by k_longs ;
 sub k longshighstroke by k_longshighstroke ;
 sub longs vend by longs_vend.hlig ;
 sub longs et by longs_et.hlig ;
+sub longs p by longs_p.alt2 ;
+sub longs.alt2 tinsular by longs_tinsular.alt07 ;
 sub tinsular tinsular by tinsular_tinsular.hlig ;
 sub u e by u_e.hlig ;
 sub u u by u_u.hlig ;
@@ -8519,6 +8619,11 @@ sub thorn.loclENG thorn.loclENG by thorn_thorn.hlig ;
 sub thornstroke.loclENG thornstroke.loclENG by thornstroke_thornstroke.loclENG.hlig ;
 sub wynn wynn by wynn_wynn.hlig ;
 sub longs wynn by longs_wynn.hlig ;
+sub longs.alt2 wynn by longs_wynn.alt2 ;
+sub sinsular sinsular by sinsular_sinsular.hlig ;
+sub ginsular ginsular by ae_ginsular.hlig ;
+sub lhighstroke lhighstroke by lhighstroke_lhighstroke.alt ;
+
 ";
 tag = hlig;
 },
@@ -8679,6 +8784,7 @@ sub f l by f_l ;
 # sub longs longs by longs_longs ;
 sub longs t by longs_t ;
 sub longs.alt2 t by longs_t.alt ;
+sub longs.alt6 t by longs_t.alt6 ;
 # sub longs adieresis by longs_adieresis ;
 # sub longs udieresis by longs_udieresis ;
 sub e.alt4 dinsulardotaccent.alt by e_ddotaccent.alt ;
@@ -9043,6 +9149,7 @@ KernOnUserSetAutopairs = (
 "uniA7C2 AE"
 );
 };
+visible = 1;
 },
 {
 axesValues = (

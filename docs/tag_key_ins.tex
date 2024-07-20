@@ -122,7 +122,10 @@ In the list below, records for each character are color-coded as follows:
   \end{supertabular}
 \end{center}
 
-\noindent Tags or \textSourceText{cvNN} features are usually to be preferred to PUA code points,
+\noindent With the information conveyed by these colors, and with code points listed
+where available, this table may be useful for other purposes than locating tags.
+
+Tags or \textSourceText{cvNN} features are usually to be preferred to PUA code points,
 which should be used only where accessibility and searchability are
 not issues (mainly in printed texts). Unicode code points can safely be
 entered directly. Junicode makes a few of them accessible via \textSourceText{cvNN} features and tags because it may often
@@ -131,7 +134,8 @@ example, the insular T (\textex{\restag{T\&\_\_i;\&\_\_n;}}) is sure to be searc
 \textex{\noent{T\&\_\_i;\&\_\_n;}}, but if entered as \textex{U+A786} it may or may not be searchable as T,
 depending on the application.
 
-Characters without code points can only be entered via tags or OpenType features.
+Characters without code points can only be entered via tags or OpenType features. In Microsoft Word, where most
+OpenType features are unavailable (but \textSourceText{ss10} is), many characters can be accessed only via tags.
 
 \begin{center}
   \addfontfeature{Numbers={Uppercase,Monospaced}}
@@ -209,40 +213,40 @@ Characters without code points can only be entered via tags or OpenType features
 {\restag{.\char"0E0031\char"0E0032}} &
 \arraybslash Punctus flexus / F1F5\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_2;} &
 {\restag{.\char"0E0032\char"0E0032}} &
-\arraybslash Dotless punctus elevatus / TBA\\\hline
+\arraybslash Dotless punctus elevatus\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_3;} &
 {\restag{.\char"0E0032\char"0E0033}} &
-\arraybslash Punctus elevatus with s-shaped top / TBA\\\hline
+\arraybslash Punctus elevatus with s-shaped top\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_4;} &
 {\restag{.\char"0E0032\char"0E0034}} &
-\arraybslash Dotless punctus elevatus with s-shaped top / TBA\\\hline
+\arraybslash Dotless punctus elevatus with s-shaped top\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_5;} &
 {\restag{.\char"0E0032\char"0E0035}} &
-\arraybslash Enlarged punctus elevatus / TBA\\\hline
+\arraybslash Enlarged punctus elevatus\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_6;} &
 {\restag{.\char"0E0032\char"0E0036}} &
-\arraybslash Enlarged dotless punctus elevatus / TBA\\\hline
+\arraybslash Enlarged dotless punctus elevatus\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_7;} &
 {\restag{.\char"0E0032\char"0E0037}} &
-\arraybslash Enlarged punctus elevatus with s-shaped top / TBA\\\hline
+\arraybslash Enlarged punctus elevatus with s-shaped top\\\hline
 %
-\mufi{period} &
+\nuni{period} &
 {.\&\_\_2;\&\_\_8;} &
 {\restag{.\char"0E0032\char"0E0038}} &
-\arraybslash Enlarged dotless punctus elevatus with s-shaped top / TBA\\\hline
+\arraybslash Enlarged dotless punctus elevatus with s-shaped top\\\hline
 %
 \mufi{period} &
 {.\&\_\_1;\&\_\_3;} &
@@ -257,12 +261,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{period} &
 {.\&\_\_1;\&\_\_5;} &
 {\restag{.\char"0E0031\char"0E0035}} &
-\arraybslash {\jCond Punctus interrogativus horizontal tilde / \ltab{F1E8}}\\\hline
+\arraybslash {\tcomp Punctus interrogativus horizontal tilde / \ltab{F1E8}}\\\hline
 %
 \mufi{period} &
 {.\&\_\_1;\&\_\_6;} &
 {\restag{.\char"0E0031\char"0E0036}} &
-\arraybslash {\jCond Punctus interrogativus lemniskate / \ltab{F1F1}}\\\hline
+\arraybslash {\tcomp Punctus interrogativus lemniskate / \ltab{F1F1}}\\\hline
 %
 \mufi{period} &
 {.\&\_\_1;\&\_\_7;} &
@@ -422,12 +426,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+0304} &
 {\char"25CC\char"0304\&\_\_2;\&\_\_8;} &
 {\restag{\char"25CC\char"0304\char"0E0032\char"0E0038}} &
-\arraybslash {\jCond Combining ligature o r rotunda / \tab{F03E}}\\\hline
+\arraybslash {\tcomp Combining ligature o r rotunda / \tab{F03E}}\\\hline
 %
 \mufi{U+0304} &
 {\char"25CC\char"0304\&\_\_2;\&\_\_9;} &
 {\restag{\char"25CC\char"0304\char"0E0032\char"0E0039}} &
-\arraybslash {\jCond Combining ligature letter o rum / \ltab{F03F}}\\\hline
+\arraybslash {\tcomp Combining ligature letter o rum / \ltab{F03F}}\\\hline
 %
 \nuni{U+0304} &
 {\char"25CC\char"0304\&\_\_3;\&\_\_0;} &
@@ -468,6 +472,16 @@ Characters without code points can only be entered via tags or OpenType features
 {\char"25CC\char"0304\&\_\_3;\&\_\_7;} &
 {\restag{\char"25CC\char"0304\char"0E0033\char"0E0037}} &
 \arraybslash Attached subscript a\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_8;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0038}} &
+\arraybslash Curved macron with half serifs / 10A05D\\\hline
+%
+\mufi{U+0304} &
+{\char"25CC\char"0304\&\_\_3;\&\_\_9;} &
+{\restag{\char"25CC\char"0304\char"0E0033\char"0E0039}} &
+\arraybslash Macron with half serifs / 10A075\\\hline
 %
 \mufi{A} &
 {A\&\_\_i;\&\_\_n;} &
@@ -517,22 +531,22 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{a} &
 {a\&\_\_o;\&\_\_c;} &
 {\restag{a\char"0E006F\char"0E0063}} &
-\arraybslash oc-shaped a / TBD\\\hline
+\arraybslash oc-shaped a / 10A001\\\hline
 %
 \mufi{a} &
 {a\&\_\_h;\&\_\_c;} &
 {\restag{a\char"0E0068\char"0E0063}} &
-\arraybslash high caroline a / TBD\\\hline
+\arraybslash high caroline a / 10A003\\\hline
 %
 \mufi{a} &
 {a\&\_\_s;\&\_\_q;} &
 {\restag{a\char"0E0073\char"0E0071}} &
-\arraybslash Square a / TBD\\\hline
+\arraybslash Square a / 10A004\\\hline
 %
 \mufi{a} &
 {a\&\_\_p;\&\_\_o;} &
 {\restag{a\char"0E0070\char"0E006F}} &
-\arraybslash Pointed a / TBD\\\hline
+\arraybslash Pointed a / 10A005\\\hline
 %
 \mufi{a} &
 {a\&\_\_e;\&\_\_n;} &
@@ -542,7 +556,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{a} &
 {a\&\_\_o;\&\_\_n;} &
 {\restag{a\char"0E006F\char"0E006E}} &
-\arraybslash Enlarged oc-shaped a / TBD\\\hline
+\arraybslash Enlarged oc-shaped a / 10A002\\\hline
+%
+\mufi{a} &
+{a\&\_\_i;\&\_\_s;} &
+{\restag{a\char"0E0069\char"0E0073}} &
+\arraybslash Insular a with short headstroke / 10A07C\\\hline
 %
 \nuni{B} &
 {B\&\_\_e;\&\_\_n;} &
@@ -578,6 +597,11 @@ Characters without code points can only be entered via tags or OpenType features
 {c\&\_\_e;\&\_\_n;} &
 {\restag{c\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule c / EEE2\\\hline
+%
+\mufi{c} &
+{c\&\_\_h;\&\_\_o;} &
+{\restag{c\char"0E0068\char"0E006F}} &
+\arraybslash c with horn / 10A076\\\hline
 %
 \nuni{D} &
 {D\&\_\_i;\&\_\_e;} &
@@ -624,6 +648,11 @@ Characters without code points can only be entered via tags or OpenType features
 {\restag{d\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule d / EEE3\\\hline
 %
+\mufi{d} &
+{d\&\_\_i;\&\_\_s;} &
+{\restag{d\char"0E0069\char"0E0073}} &
+\arraybslash Insular d with straight back / EEE3\\\hline
+%
 \mufi{E} &
 {E\&\_\_u;\&\_\_c;} &
 {\restag{E\char"0E0075\char"0E0063}} &
@@ -664,6 +693,21 @@ Characters without code points can only be entered via tags or OpenType features
 {\restag{e\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule e / EEE6\\\hline
 %
+\mufi{e} &
+{e\&\_\_s;\&\_\_t;} &
+{\restag{e\char"0E0073\char"0E0074}} &
+\arraybslash e with straight back and tongue / 10A058\\\hline
+%
+\mufi{e} &
+{e\&\_\_h;\&\_\_t;} &
+{\restag{e\char"0E0068\char"0E0074}} &
+\arraybslash e with horn and tongue / 10A07B\\\hline
+%
+\mufi{e} &
+{e\&\_\_h;\&\_\_h;} &
+{\restag{e\char"0E0068\char"0E0068}} &
+\arraybslash High e with horn and tongue / 10A07E\\\hline
+%
 \stdu{F} &
 {F\&\_\_i;\&\_\_n;} &
 {\restag{F\char"0E0069\char"0E006E}} &
@@ -687,7 +731,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{f} &
 {f\&\_\_i;\&\_\_s;} &
 {\restag{f\char"0E0069\char"0E0073}} &
-\arraybslash Insular f with split top / TBD\\\hline
+\arraybslash Insular f with split top / 10A012\\\hline
 %
 \mufi{f} &
 {f\&\_\_i;\&\_\_1;} &
@@ -724,6 +768,11 @@ Characters without code points can only be entered via tags or OpenType features
 {\restag{f\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule f / EEE7\\\hline
 %
+\mufi{f} &
+{f\&\_\_h;\&\_\_d;} &
+{\restag{f\char"0E0066\char"0E0064}} &
+\arraybslash f with half descender / 10A06F\\\hline
+%
 \stdu{G} &
 {G\&\_\_i;\&\_\_n;} &
 {\restag{G\char"0E0069\char"0E006E}} &
@@ -744,50 +793,80 @@ Characters without code points can only be entered via tags or OpenType features
 {\restag{G\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule G\\\hline
 %
-\stdu{g} &
+\stdu{g} & % ginsular
 {g\&\_\_i;\&\_\_n;} &
 {\restag{g\char"0E0069\char"0E006E}} &
 \arraybslash Insular g / 1D79\\\hline
 %
-\stdu{g} &
+\stdu{g} & % gorulum
 {g\&\_\_o;\&\_\_r;} &
 {\restag{g\char"0E006F\char"0E0072}} &
 \arraybslash Ormulum g with bar / A7D1\\\hline
 %
-\stdu{g} &
+\stdu{g} & % g.alt4
 {g\&\_\_s;\&\_\_c;} &
 {\restag{g\char"0E0073\char"0E0063}} &
 \arraybslash Script g / 0261 \\\hline
 %
-\mufi{g} &
+\mufi{g} & % g.mecurl
 {g\&\_\_c;\&\_\_u;} &
 {\restag{g\char"0E0063\char"0E0075}} &
-\arraybslash g with curl / F196\\\hline
+\arraybslash g with flourish / F196\\\hline
 %
-\mufi{g} &
+\mufi{g} & % g.enlarged
 {g\&\_\_e;\&\_\_n;} &
 {\restag{g\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule g / EEE8 \\\hline
 %
-\mufi{g} &
+\mufi{g} & % ginsular.enlarged
 {g\&\_\_n;\&\_\_e;} &
 {\restag{g\char"0E006E\char"0E0065}} &
-\arraybslash Enlarged insular g / TBD \\\hline
+\arraybslash Enlarged insular g / 10A024 \\\hline
 %
-\mufi{g} &
+\mufi{g} & % g.alt1
 {g\&\_\_c;\&\_\_1;} &
 {\restag{g\char"0E0063\char"0E0031}} &
 \arraybslash Closed g with separate loops / F21D\\\hline
 %
-\mufi{g} &
+\mufi{g} & % g.alt2
 {g\&\_\_c;\&\_\_2;} &
 {\restag{g\char"0E0063\char"0E0032}} &
 \arraybslash Closed g with large lower loop / F21E\\\hline
 %
-\mufi{g} &
+\mufi{g} & % g.alt3
 {g\&\_\_c;\&\_\_3;} &
 {\restag{g\char"0E0063\char"0E0033}} &
 \arraybslash Closed g with small lower loop / F21F\\\hline
+%
+\mufi{g} & % g.alt05
+{g\&\_\_o;\&\_\_4;} &
+{\restag{g\char"0E0063\char"0E0034}} &
+\arraybslash Closed g with straight-sided loop / 10A05E\\\hline
+%
+\nuni{g} & % gormulum.enlarged
+{g\&\_\_o;\&\_\_e;} &
+{\restag{g\char"0E006F\char"0E0065}} &
+\arraybslash Orm's hard g, enlarged\\\hline
+%
+\mufi{g} & % ginsular.alt01
+{g\&\_\_i;\&\_\_s;} &
+{\restag{g\char"0E0069\char"0E0073}} &
+\arraybslash Insular g with short right stroke / 10A060\\\hline
+%
+\mufi{g} & % ginsular.alt02
+{g\&\_\_i;\&\_\_o;} &
+{\restag{g\char"0E0069\char"0E006F}} &
+\arraybslash Insular g with open bowl / 10A06D\\\hline
+%
+\mufi{g} & % g.alt06
+{g\&\_\_c;\&\_\_o;} &
+{\restag{g\char"0E0063\char"0E006F}} &
+\arraybslash Caroline g with open bowl / 10A078\\\hline
+%
+\mufi{g} & % ginsular.alt03
+{g\&\_\_i;\&\_\_l;} &
+{\restag{g\char"0E0069\char"0E006C}} &
+\arraybslash Insular g with short left stroke / 10A07F\\\hline
 %
 \mufi{H} &
 {H\&\_\_u;\&\_\_n;} &
@@ -802,7 +881,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{H} &
 {H\&\_\_h;\&\_\_l;} &
 {\restag{H\char"0E0068\char"0E006C}} &
-\arraybslash H with high left stem / TBD\\\hline
+\arraybslash H with high left stem / 10A026\\\hline
 %
 \mufi{h} &
 {h\&\_\_d;\&\_\_e;} &
@@ -832,17 +911,17 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{h} &
 {h\&\_\_e;\&\_\_c;} &
 {\restag{h\char"0E0065\char"0E0063}} &
-\arraybslash Enlarged Caroline h / TBD\\\hline
+\arraybslash Enlarged Caroline h / 10A025\\\hline
 %
 \mufi{h} &
 {h\&\_\_d;\&\_\_b;} &
 {\restag{h\char"0E0064\char"0E0062}} &
-\arraybslash{\jCond Caroline h with right descender and bar / TBD}\\\hline
+\arraybslash{\tcomp Caroline h with right descender and bar / 10A029}\\\hline
 %
-\mufi{h} &
+\nuni{h} &
 {h\&\_\_c;\&\_\_u;} &
 {\restag{h\char"0E0063\char"0E0075}} &
-\arraybslash{\jCond h with curl / TBD}\\\hline
+\arraybslash{h with curl}\\\hline
 %
 \stdu{I} &
 {I\&\_\_d;\&\_\_a;} &
@@ -862,7 +941,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{I} &
 {I\&\_\_u;\&\_\_s;} &
 {\restag{I\char"0E0075\char"0E0073}} &
-\arraybslash I without serif / TBD\\\hline
+\arraybslash I without serifs / 10A074\\\hline
 %
 \stdu{i} &
 {i\&\_\_d;\&\_\_l;} &
@@ -937,7 +1016,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{k} &
 {k\&\_\_u;\&\_\_d;} &
 {\restag{k\char"0E0075\char"0E0064}} &
-\arraybslash Uncial k with descender / TBD\\\hline
+\arraybslash Uncial k with descender / 10A02C\\\hline
 %
 \mufi{k} &
 {k\&\_\_c;\&\_\_1;} &
@@ -958,6 +1037,11 @@ Characters without code points can only be entered via tags or OpenType features
 {k\&\_\_e;\&\_\_n;} &
 {\restag{k\char"0E0065\char"0E006E}} &
 \arraybslash Enlarged minuscule k / EEEC\\\hline
+%
+\mufi{k} &
+{k\&\_\_c;\&\_\_l;} &
+{\restag{k\char"0E0063\char"0E0069}} &
+\arraybslash k with c-like bars k / 10A077\\\hline
 %
 \nuni{L} &
 {L\&\_\_e;\&\_\_n;} &
@@ -982,7 +1066,7 @@ Characters without code points can only be entered via tags or OpenType features
 \opua{l} &
 {l\&\_\_s;\&\_\_f;} &
 {\restag{l\char"0E0073\char"0E0066}} &
-\arraybslash {\jCond l with high stroke ending with flourish / \ltab{F000F}}\\\hline
+\arraybslash {\tcomp l with high stroke ending with flourish / \ltab{F000F}}\\\hline
 %
 \nuni{l} &
 {l\&\_\_i;\&\_\_n;} &
@@ -1047,7 +1131,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{N} &
 {N\&\_\_l;\&\_\_d;} &
 {\restag{N\char"0E006C\char"0E0064}} &
-\arraybslash {\jCond N with low bar and descender / TBD}\\\hline
+\arraybslash {\tcomp N with low bar and descender / 10A036}\\\hline
 %
 \mufi{n} &
 {n\&\_\_d;\&\_\_e;} &
@@ -1082,12 +1166,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{n} &
 {n\&\_\_w;\&\_\_p;} &
 {\restag{n\char"0E0077\char"0E0070}} &
-\arraybslash {Wide petite cap n with descender / TBD}\\\hline
+\arraybslash {\tcomp Wide petite cap n with descender / 10A037}\\\hline
 %
-\mufi{n} &
+\nuni{n} &
 {n\&\_\_e;\&\_\_m;} &
 {\restag{n\char"0E0065\char"0E006D}} &
-\arraybslash {enim abbreviation / TBD}\\\hline
+\arraybslash {enim abbreviation}\\\hline
 %
 \nuni{O} &
 {O\&\_\_e;\&\_\_n;} &
@@ -1179,15 +1263,25 @@ Characters without code points can only be entered via tags or OpenType features
 \restag{r\char"0E0063\char"0E0075} &
 \arraybslash r with curl / F19B\\\hline
 %
-\mufi{r} &
+\nuni{r} &
 {r\&\_\_c;\&\_\_2;} &
 \restag{r\char"0E0063\char"0E0032} &
-\arraybslash r with alternate curl / TBA\\\hline
+\arraybslash r with alternate curl\\\hline
 %
 \mufi{r} &
 {r\&\_\_e;\&\_\_n;} &
 \restag{r\char"0E0065\char"0E006E} &
 \arraybslash Enlarged minuscule r / EEF3\\\hline
+%
+\mufi{r} &
+{r\&\_\_i;\&\_\_b;} &
+\restag{r\char"0E0069\char"0E0062} &
+\arraybslash Insular r baseline form / 10A056\\\hline
+%
+\mufi{r} &
+{r\&\_\_i;\&\_\_s;} &
+\restag{r\char"0E0069\char"0E0073} &
+\arraybslash Insular r with short right leg / 10A06B\\\hline
 %
 \stdu{S} &
 {S\&\_\_i;\&\_\_n;} &
@@ -1202,12 +1296,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{S} &
 {S\&\_\_a;\&\_\_d;} &
 \restag{S\char"0E0061\char"0E0064} &
-\arraybslash Ascending and descending S / TBD\\\hline
+\arraybslash Ascending and descending S / 10A03D\\\hline
 %
 \mufi{S} &
 {S\&\_\_r;\&\_\_z;} &
 \restag{S\char"0E0072\char"0E007A} &
-\arraybslash Reverse Z-shaped S / TBD\\\hline
+\arraybslash Reverse Z-shaped S / 10A03F\\\hline
 %
 \nuni{S} &
 {S\&\_\_e;\&\_\_n;} &
@@ -1217,7 +1311,7 @@ Characters without code points can only be entered via tags or OpenType features
 \nuni{S} &
 {S\&\_\_s;\&\_\_d;} &
 \restag{S\char"0E0073\char"0E0064} &
-\arraybslash {\jCond S with diagonal stroke (Sanctus abbrev)}\\\hline
+\arraybslash {\tcomp S with diagonal stroke (Sanctus abbrev)}\\\hline
 %
 \stdu{S} &
 {S\&\_\_m;\&\_\_s;} &
@@ -1237,7 +1331,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{s} &
 {s\&\_\_i;\&\_\_s;} &
 \restag{s\char"0E0069\char"0E0073} &
-\arraybslash Insular s with split top / TBD\\\hline
+\arraybslash Insular s with split top / 10A03E\\\hline
 %
 \stdu{s} &
 {s\&\_\_s;\&\_\_g;} &
@@ -1247,7 +1341,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{s} &
 {s\&\_\_a;\&\_\_d;} &
 \restag{s\char"0E0061\char"0E0064} &
-\arraybslash Ascending and descending s / TBD\\\hline
+\arraybslash Ascending and descending s / 10A040\\\hline
 %
 \stdu{s} &
 {s\&\_\_l;\&\_\_o;} &
@@ -1282,7 +1376,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{s} &
 {s\&\_\_s;\&\_\_t;} &
 \restag{s\char"0E0073\char"0E0074} &
-\arraybslash Long s with short tail / TBD\\\hline
+\arraybslash Long s with short tail / 10A033\\\hline
 %
 \stdu{s} &
 {s\&\_\_m;\&\_\_s;} &
@@ -1298,6 +1392,11 @@ Characters without code points can only be entered via tags or OpenType features
 {s\&\_\_h;\&\_\_k;} &
 \restag{s\char"0E0068\char"0E006B} &
 \arraybslash {s with hook}\\\hline
+%
+\mufi{s} &
+{s\&\_\_l;\&\_\_p;} &
+\restag{s\char"0E006C\char"0E0070} &
+\arraybslash {Long s with descender and loop / 10A067}\\\hline
 %
 \stdu{T} &
 {T\&\_\_i;\&\_\_n;} &
@@ -1327,12 +1426,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{t} &
 {t\&\_\_c;\&\_\_d;} &
 \restag{t\char"0E0063\char"0E0064} &
-\arraybslash Cap-like t with descender / TBD\\\hline
+\arraybslash Cap-like t with descender / 10A044\\\hline
 %
-\mufi{t} &
+\nuni{t} &
 {t\&\_\_a;\&\_\_p;} &
 \restag{t\char"0E0061\char"0E0070} &
-\arraybslash t with approach / TBD\\\hline
+\arraybslash t with approach\\\hline
 %
 \nuni{U} &
 {U\&\_\_e;\&\_\_n;} &
@@ -1347,7 +1446,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U} &
 {U\&\_\_l;\&\_\_d;} &
 \restag{U\char"0E006C\char"0E0064} &
-\arraybslash {\jCond Lowercase-shaped U with descender / TBD}\\\hline
+\arraybslash {\tcomp Lowercase-shaped U with descender / 10A048}\\\hline
 %
 \mufi{u} &
 {u\&\_\_e;\&\_\_n;} &
@@ -1387,7 +1486,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{v} &
 {v\&\_\_e;\&\_\_l;} &
 \restag{v\char"0E0065\char"0E006C} &
-\arraybslash {\jCond Enlarged minuscule v with low point / TBD}\\\hline
+\arraybslash {\tcomp Enlarged minuscule v with low point / 10A049}\\\hline
 %
 \nuni{W} &
 {W\&\_\_e;\&\_\_n;} &
@@ -1412,7 +1511,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{ƿ} &
 {ƿ\&\_\_e;\&\_\_n;} &
 \restag{ƿ\char"0E0065\char"0E006E} &
-\arraybslash Enlarged wynn / TBD\\\hline
+\arraybslash Enlarged wynn / 10A04E\\\hline
+%
+\mufi{ƿ} &
+{ƿ\&\_\_t;\&\_\_b;} &
+\restag{ƿ\char"0E0074\char"0E0062} &
+\arraybslash wynn with triangular bowl / 10A06E\\\hline
 %
 \nuni{X} &
 {X\&\_\_e;\&\_\_n;} &
@@ -1442,12 +1546,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{x} &
 {x\&\_\_s;\&\_\_3;} &
 \restag{x\char"0E0073\char"0E0033} &
-\arraybslash {\jCond x with two diagonal strokes (lower right) / \ltab{E8CE}}\\\hline
+\arraybslash {\tcomp x with two diagonal strokes (lower right) / \ltab{E8CE}}\\\hline
 %
 \mufi{Y} &
 {Y\&\_\_s;\&\_\_d;} &
 \restag{Y\char"0E0073\char"0E0064} &
-\arraybslash {\jCond Y with diagonal stroke (Hymnus abbrev) / \ltab{E8DB}}\\\hline
+\arraybslash {\tcomp Y with diagonal stroke (Hymnus abbrev) / \ltab{E8DB}}\\\hline
 %
 \nuni{Y} &
 {Y\&\_\_e;\&\_\_n;} &
@@ -1472,12 +1576,12 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{y} &
 {y\&\_\_c;\&\_\_u;} &
 \restag{y\char"0E0063\char"0E0075} &
-\arraybslash Curved y / TBD\\\hline
+\arraybslash Curved y / 10A054\\\hline
 %
 \mufi{y} &
 {y\&\_\_s;\&\_\_c;} &
 \restag{y\char"0E0073\char"0E0063} &
-\arraybslash Short curved y / TBD\\\hline
+\arraybslash Short curved y / 10A04F\\\hline
 %
 \stdu{Z} &
 {Z\&\_\_v;\&\_\_i;} &
@@ -1572,17 +1676,42 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+00E6} &
 {æ\&\_\_s;\&\_\_q;} &
 \restag{æ\char"0E0073\char"0E0071} &
-\arraybslash æ with square a / TBD\\\hline
+\arraybslash æ with square a / 10A006\\\hline
 %
 \mufi{U+00E6} &
 {æ\&\_\_r;\&\_\_o;} &
 \restag{æ\char"0E0072\char"0E006F} &
-\arraybslash æ with round a / TBD\\\hline
+\arraybslash æ with round a / 10A007\\\hline
 %
 \nuni{U+00E6} &
 {æ\&\_\_r;\&\_\_o;} &
 \restag{æ\char"0E0075\char"0E006E} &
 \arraybslash Uncial æ\\\hline
+%
+\nuni{U+00E6} &
+{æ\&\_\_s;\&\_\_h;} &
+\restag{æ\char"0E0073\char"0E0068} &
+\arraybslash Square æ with high e\\\hline
+%
+\nuni{U+00E6} &
+{æ\&\_\_p;\&\_\_o;} &
+\restag{æ\char"0E0070\char"0E006F} &
+\arraybslash æ with pointed a\\\hline
+%
+\nuni{U+00E6} &
+{æ\&\_\_r;\&\_\_h;} &
+\restag{æ\char"0E0072\char"0E0068} &
+\arraybslash æ with round a and high e\\\hline
+%
+\nuni{U+00E6} &
+{æ\&\_\_c;\&\_\_t;} &
+\restag{æ\char"0E0063\char"0E0074} &
+\arraybslash æ with caroline a and tongue\\\hline
+%
+\nuni{U+00E6} &
+{æ\&\_\_n;\&\_\_t;} &
+\restag{æ\char"0E006E\char"0E0074} &
+\arraybslash æ with neckless a and tongue\\\hline
 %
 \mufi{U+A734} &
 {\char"0A734\&\_\_n;\&\_\_e;} &
@@ -1607,7 +1736,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+A735} &
 {\char"0A735\&\_\_e;\&\_\_2;} &
 \restag{\char"0A735\char"0E0065\char"0E0032} &
-\arraybslash {\jCond Enlarged minuscule ao with smaller o / \ltab{EAF2}}\\\hline
+\arraybslash {\tcomp Enlarged minuscule ao with smaller o / \ltab{EAF2}}\\\hline
 %
 \mufi{U+A735} &
 {\char"0A735\&\_\_n;\&\_\_e;} &
@@ -1632,7 +1761,17 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+00F0} &
 {ð\&\_\_e;\&\_\_a;} &
 \restag{ð\char"0E0065\char"0E0061} &
-\arraybslash Enlarged eth alternate form / TBD\\\hline
+\arraybslash Enlarged insular eth / 10A052\\\hline
+%
+\mufi{U+00F0} &
+{ð\&\_\_s;\&\_\_b;} &
+\restag{ð\char"0E0073\char"0E0062} &
+\arraybslash Insular eth with straight back / 10A061\\\hline
+%
+\mufi{U+00F0} &
+{ð\&\_\_h;\&\_\_c;} &
+\restag{ð\char"0E0068\char"0E0063} &
+\arraybslash Insular eth with half crossbar / 10A07A\\\hline
 %
 \nuni{U+0118} &
 {Ę\&\_\_c;\&\_\_e;} &
@@ -1675,12 +1814,12 @@ Characters without code points can only be entered via tags or OpenType features
 \arraybslash e with dot, acute, and diagonal stroke\\\hline
 %
 \nuni{\&\_eogo;} &
-{{\jCond \char"25CC\&\_eogo;}\&\_\_c;\&\_\_e;} &
+{{\tcomp \char"25CC\&\_eogo;}\&\_\_c;\&\_\_e;} &
 \restag{\char"25CC\&\_eogo;\char"0E0063\char"0E0065} &
 \arraybslash Combining e with centered ogonek\\\hline
 %
 \nuni{\&\_eogo;} &
-{{\jCond \char"25CC\&\_eogo;}\&\_\_s;\&\_\_t;} &
+{{\tcomp \char"25CC\&\_eogo;}\&\_\_s;\&\_\_t;} &
 \restag{\char"25CC\&\_eogo;\char"0E0073\char"0E0074} &
 \arraybslash Combining e with diagonal stroke\\\hline
 %
@@ -1717,32 +1856,32 @@ Characters without code points can only be entered via tags or OpenType features
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_1;\footnotemark{}} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0031}} &
-\arraybslash {\jCond Old Polish o with broken slash / \ltab{F0011}}\\\hline
+\arraybslash {\tcomp Old Polish o with broken slash / \ltab{F0011}}\\\hline
 %
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_2;} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0032}} &
-\arraybslash {\jCond Old Polish o with short slash / \ltab{F0012}}\\\hline
+\arraybslash {\tcomp Old Polish o with short slash / \ltab{F0012}}\\\hline
 %
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_3;} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0033}} &
-\arraybslash {\jCond Old Polish o with lower left slash / \ltab{F0013}}\\\hline
+\arraybslash {\tcomp Old Polish o with lower left slash / \ltab{F0013}}\\\hline
 %
 \opua{U+A7C1} &
 {\prob\&\_\_a;\&\_\_4;} &
 {\prob\restag{\char"0A7C1\char"0E0061\char"0E0034}} &
-\arraybslash {\jCond Old Polish o with upper right slash / \ltab{F0014}}\\\hline
+\arraybslash {\tcomp Old Polish o with upper right slash / \ltab{F0014}}\\\hline
 %
 \mufi{U+1E8F} &
 {\char"1E8F\&\_\_s;\&\_\_d;} &
 \restag{\char"1E8F\char"0E0073\char"0E0064} &
-\arraybslash Short curved y with dot / TBD\\\hline
+\arraybslash Short curved y with dot / 10A050\\\hline
 %
 \mufi{U+A765} &
 {\addfontfeature{Language=Icelandic} \char"0A765\&\_\_a;\&\_\_1;} &
 {\addfontfeature{Language=Icelandic}\restag{\char"0A765\char"0E0061\char"0E0031}} &
-\arraybslash \ {\jCond thorn with stroke with different slant / \ltab{F149}}\\\hline
+\arraybslash \ {\tcomp thorn with stroke with different slant / \ltab{F149}}\\\hline
 %
 \nuni{U+A765/ENG} &
 {\char"0A765\&\_\_a;\&\_\_1;} &
@@ -1767,37 +1906,42 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+204A} &
 {\char"204A\&\_\_a;\&\_\_3;} &
 \restag{\char"204A\char"0E0061\char"0E0033} &
-\arraybslash {\jCond Tironian et sign without descender / TBD}\\\hline
+\arraybslash {\tcomp Tironian et sign without descender / 10A01E}\\\hline
 %
-\mufi{U+204A} &
+\nuni{U+204A} &
 {\char"204A\&\_\_a;\&\_\_4;} &
 \restag{\char"204A\char"0E0061\char"0E0034} &
-\arraybslash {\jCond Tironian et sign with bar / TBD}\\\hline
+\arraybslash {Tironian et sign with bar}\\\hline
 %
-\mufi{U+204A} &
+\nuni{U+204A} &
 {\char"204A\&\_\_a;\&\_\_5;} &
 \restag{\char"204A\char"0E0061\char"0E0035} &
-\arraybslash {\jCond Tironian et sign round form / TBD}\\\hline
+\arraybslash {Tironian et sign round form}\\\hline
 %
-\mufi{U+204A} &
+\nuni{U+204A} &
 {\char"204A\&\_\_a;\&\_\_6;} &
 \restag{\char"204A\char"0E0061\char"0E0036} &
-\arraybslash {\jCond Generic Tironian et sign / TBD}\\\hline
+\arraybslash {Generic Tironian et sign}\\\hline
 %
-\mufi{U+204A} &
+\nuni{U+204A} &
 {\char"204A\&\_\_a;\&\_\_7;} &
 \restag{\char"204A\char"0E0061\char"0E0037} &
-\arraybslash {\jCond Generic Tironian et sign with bar / TBD}\\\hline
+\arraybslash {Generic Tironian et sign with bar}\\\hline
 %
-\mufi{U+204A} &
+\nuni{U+204A} &
 {\char"204A\&\_\_a;\&\_\_8;} &
 \restag{\char"204A\char"0E0061\char"0E0038} &
-\arraybslash {\jCond Generic Tironian et sign with curl / TBD}\\\hline
+\arraybslash {Generic Tironian et sign with curl}\\\hline
 %
-\mufi{U+204A} &
+\nuni{U+204A} &
 {\char"204A\&\_\_a;\&\_\_9;} &
 \restag{\char"204A\char"0E0061\char"0E0039} &
-\arraybslash {\jCond Generic Tironian et sign with curl and bar / TBD}\\\hline
+\arraybslash {\tcomp Generic Tironian et sign with curl and bar}\\\hline
+%
+\mufi{U+204A} &
+{\char"204A\&\_\_a;\&\_\_0;} &
+\restag{\char"204A\char"0E0061\char"0E0030} &
+\arraybslash {\tcomp Tironian et sign high and low / 10A069}\\\hline
 %
 \opua{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_1;} &
@@ -1809,50 +1953,60 @@ Characters without code points can only be entered via tags or OpenType features
 \restag{\char"2E52\char"0E0061\char"0E0032} &
 \arraybslash Tironian Et sign later form with bar\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_3;} &
 \restag{\char"2E52\char"0E0061\char"0E0033} &
-\arraybslash {\jCond Tironian Et sign without descender / TBD}\\\hline
+\arraybslash {Tironian Et sign without descender}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_4;} &
 \restag{\char"2E52\char"0E0061\char"0E0034} &
-\arraybslash {\jCond Tironian Et sign with bar / TBD}\\\hline
+\arraybslash {Tironian Et sign with bar}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_5;} &
 \restag{\char"2E52\char"0E0061\char"0E0035} &
-\arraybslash {\jCond Tironian Et sign round form / TBD}\\\hline
+\arraybslash {Tironian Et sign round form}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_6;} &
 \restag{\char"2E52\char"0E0061\char"0E0036} &
-\arraybslash {\jCond Generic Tironian Et sign / TBD}\\\hline
+\arraybslash {Generic Tironian Et sign}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_7;} &
 \restag{\char"2E52\char"0E0061\char"0E0037} &
-\arraybslash {\jCond Generic Tironian Et sign with bar / TBD}\\\hline
+\arraybslash {Generic Tironian Et sign with bar}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_8;} &
 \restag{\char"2E52\char"0E0061\char"0E0038} &
-\arraybslash {\jCond Generic Tironian Et sign with curl / TBD}\\\hline
+\arraybslash {Generic Tironian Et sign with curl}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E52} &
 {\char"2E52\&\_\_a;\&\_\_9;} &
 \restag{\char"2E52\char"0E0061\char"0E0039} &
-\arraybslash {\jCond Generic Tironian Et sign with curl and bar / TBD}\\\hline
+\arraybslash {\tcomp Generic Tironian Et sign with curl and bar}\\\hline
 %
 \mufi{U+2E52} &
+{\char"2E52\&\_\_a;\&\_\_0;} &
+\restag{\char"2E52\char"0E0061\char"0E0030} &
+\arraybslash {\tcomp Capital Tironian Et sign high and low / 10A068}\\\hline
+%
+\nuni{U+2E4D} &
 {\char"2E4D\&\_\_s;\&\_\_s;} &
-\restag{\char"2E52\char"0E0073\char"0E0073} &
-\arraybslash {\jCond s-shaped paragraphus / TBD}\\\hline
+\restag{\char"2E4D\char"0E0073\char"0E0073} &
+\arraybslash {s-shaped paragraphus}\\\hline
 %
-\mufi{U+2E52} &
+\nuni{U+2E4D} &
 {\char"2E4D\&\_\_c;\&\_\_c;} &
-\restag{\char"2E52\char"0E0063\char"0E0063} &
-\arraybslash {\jCond cc-shaped paragraphus / TBD}\\\hline
+\restag{\char"2E4D\char"0E0063\char"0E0063} &
+\arraybslash {cc-shaped paragraphus}\\\hline
+%
+\nuni{U+2E4D} &
+{\char"2E4D\&\_\_c;\&\_\_s;} &
+\restag{\char"2E4D\char"0E0063\char"0E0073} &
+\arraybslash {C-with-bar paragraphus}\\\hline
 %
 \nuni{U+00AF} &
 {{\textasciimacron}\&\_\_0;\&\_\_1;} &
@@ -1877,7 +2031,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{U+00B7} &
 {{\textperiodcentered}\&\_\_s;\&\_\_r;} &
 \restag{{\textperiodcentered}\char"0E0073\char"0E0072} &
-\arraybslash Slightly raised period / \ TBD\\\hline
+\arraybslash Slightly raised period / \ 10A03B\\\hline
 %
 \mufi{comma} &
 {,\&\_\_a;\&\_\_1;} &
@@ -1902,7 +2056,7 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_3;} &
 \restag{;\char"0E0061\char"0E0033} &
-\arraybslash {\jCond Colon with middle comma positura / \ltab{F1E5}}\\\hline
+\arraybslash {\tcomp Colon with middle comma positura / \ltab{F1E5}}\\\hline
 %
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_4;} &
@@ -1917,17 +2071,17 @@ Characters without code points can only be entered via tags or OpenType features
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_6;} &
 \restag{;\char"0E0061\char"0E0036} &
-\arraybslash {\jCond Punctus with double comma positura / TBD}\\\hline
+\arraybslash {\tcomp Punctus with double comma positura 10A042}\\\hline
 %
 \mufi{semicolon} &
 {;\&\_\_a;\&\_\_7;} &
 \restag{;\char"0E0061\char"0E0037} &
-\arraybslash Hexagonal positura / TBD\\\hline
+\arraybslash Hexagonal positura / 10A043\\\hline
 %
-\mufi{semicolon} &
+\nuni{semicolon} &
 {;\&\_\_a;\&\_\_8;} &
 \restag{;\char"0E0061\char"0E0038} &
-\arraybslash Positura with two dots and tick / TBD\\\hline
+\arraybslash Positura with two dots and tick\\\hline
 %
 \mufi{U+2E4E} &
 {\char"2E4E\&\_\_a;\&\_\_1;} &
@@ -1950,40 +2104,40 @@ Characters without code points can only be entered via tags or OpenType features
 \arraybslash Punctus flexus / F1F5\\\hline
 %
 %
-\mufi{U+2E4E} &
+\nuni{U+2E4E} &
 {\char"2E4E\&\_\_a;\&\_\_5;} &
 \restag{\char"2E4E\char"0E0061\char"0E0035} &
-\arraybslash Dotless punctus elevatus / TBA\\\hline
+\arraybslash Dotless punctus elevatus\\\hline
 %
-\mufi{U+2E4E} &
+\nuni{U+2E4E} &
 {\char"2E4E\&\_\_a;\&\_\_6;} &
 \restag{\char"2E4E\char"0E0061\char"0E0036} &
-\arraybslash Punctus elevatus with s-shaped top / TBA\\\hline
+\arraybslash Punctus elevatus with s-shaped top\\\hline
 %
-\mufi{U+2E4E} &
+\nuni{U+2E4E} &
 {\char"2E4E\&\_\_a;\&\_\_7;} &
 \restag{\char"2E4E\char"0E0061\char"0E0037} &
-\arraybslash Dotless punctus elevatus with s-shaped top / TBA\\\hline
+\arraybslash Dotless punctus elevatus with s-shaped top\\\hline
 %
-\mufi{U+2E4E} &
+\nuni{U+2E4E} &
 {\char"2E4E\&\_\_a;\&\_\_8;} &
 \restag{\char"2E4E\char"0E0061\char"0E0038} &
-\arraybslash Enlarged punctus elevatus / TBA\\\hline
+\arraybslash Enlarged punctus elevatus\\\hline
 %
-\mufi{U+2E4E} &
+\mufi{U+2E4E} & % F1F5 is okay
 {\char"2E4E\&\_\_a;\&\_\_9;} &
 \restag{\char"2E4E\char"0E0061\char"0E0039} &
 \arraybslash Enlarged dotless punctus elevatus / F1F5\\\hline
 %
-\mufi{U+2E4E} &
+\nuni{U+2E4E} &
 {\char"2E4E\&\_\_b;\&\_\_1;} &
 \restag{\char"2E4E\char"0E0062\char"0E0031} &
-\arraybslash Enlarged punctus elevatus with s-shaped top / F1F5\\\hline
+\arraybslash Enlarged punctus elevatus with s-shaped top\\\hline
 %
-\mufi{U+2E4E} &
+\nuni{U+2E4E} &
 {\char"2E4E\&\_\_b;\&\_\_2;} &
 \restag{\char"2E4E\char"0E0062\char"0E0032} &
-\arraybslash Enlarged dotless punctus elevatus with s-shaped top / F1F5\\\hline
+\arraybslash Enlarged dotless punctus elevatus with s-shaped top\\\hline
 %
 %
 \mufi{exclam} &
@@ -2096,15 +2250,15 @@ Characters without code points can only be entered via tags or OpenType features
 \restag{\char"0A76B\char"0E0061\char"0E0032} &
 \arraybslash Subscript et abbreviation\\\hline
 %
-\mufi{U+A76B} &
+\nuni{U+A76B} &
 {\char"0A76B\&\_\_a;\&\_\_3;} &
 \restag{\char"0A76B\char"0E0061\char"0E0033} &
-\arraybslash Colon-like et abbreviation / TBD\\\hline
+\arraybslash Colon-like et abbreviation\\\hline
 %
-\mufi{U+A76B} &
+\nuni{U+A76B} &
 {\char"0A76B\&\_\_a;\&\_\_4;} &
 \restag{\char"0A76B\char"0E0061\char"0E0034} &
-\arraybslash et abbreviation crossing preceding q / TBD\\\hline
+\arraybslash et abbreviation crossing preceding q\\\hline
 %
 \mufi{U+1DD3} &
 {\char"25CC\char"1DD3\&\_\_a;\&\_\_1;} &

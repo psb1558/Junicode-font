@@ -1712,7 +1712,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-07-17 17:26:12 +0000";
+date = "2024-09-09 00:50:27 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -5864,7 +5864,7 @@ code = "cvParameters {
     name 3 1 0x0409 \"Sigmoid s\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Longs s\";
+    name 3 1 0x0409 \"Long s\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"Descending longs s\";
@@ -9900,6 +9900,8 @@ code = "lookupflag IgnoreMarks;
 
 # sub aShortTwigAr-runic zerowidthjoiner fehu-runic by aShortTwigAr_zerowidthjoiner_fehu-runic ;
 
+sub u zerowidthjoiner e by u_e.hlig ;
+
 sub longs i z.alt1 by longs_i_z.alt1 ;
 # sub longs.alt1 i z.alt1 by longs_i_z.alt1 ;
 sub f f i by f_f_i ;
@@ -10109,7 +10111,7 @@ stemValues = (
 34
 );
 userData = {
-GSCornerRadius = 14;
+GSCornerRadius = 10;
 GSExtrudeAngle = 30;
 GSExtrudeOffset = 15;
 GSOffsetHorizontal = 10;
@@ -10173,6 +10175,7 @@ KernOnModels = (
 "r y"
 );
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -10282,7 +10285,7 @@ stemValues = (
 33
 );
 userData = {
-GSCornerRadius = 17;
+GSCornerRadius = 12;
 GSOffsetHorizontal = 45;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = 0;
@@ -63907,5 +63910,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 209;
+versionMinor = 210;
 }

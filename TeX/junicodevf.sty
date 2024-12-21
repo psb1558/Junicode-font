@@ -6,6 +6,9 @@
 
 \RequireLuaTeX
 
+\def\junicodevf@renderer{HarfBuzz}
+\DeclareOptionX{renderer}{\def\junicodevf@renderer{#1}}
+
 % OPTIONS FOR WEIGHT AND WIDTH
 
 \def\junicodevf@regweight{1}
@@ -133,7 +136,7 @@ mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_a
     ItalicFont =         {*-Italic},
     BoldFont =           {*},
     BoldItalicFont =     {*-Italic},
-    Renderer =           HarfBuzz,
+    Renderer =           \junicodevf@renderer,
     Numbers =            {\junicodevf@figurealign,\junicodevf@figurestyle},
     \MainDef,
     UprightFeatures =    {\MainRegDef
@@ -148,7 +151,7 @@ mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_a
 
 \newcommand*{\junicodevf@newfont}[4]{
     \setfontface#1{#2}[
-        Renderer =          HarfBuzz,
+        Renderer =          \junicodevf@renderer,
         Numbers =           {\junicodevf@figurealign,\junicodevf@figurestyle},
         SmallCapsFont =     {*},
         SmallCapsFeatures = {Letters=SmallCaps},
@@ -162,42 +165,42 @@ mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_a
 % ENLARGED FACES
 
 \setfontface\EnlargedOne{JunicodeVF}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLAOneSizeDef
 ]
 
 \setfontface\EnlargedOneItalic{JunicodeVF-Italic}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLAOneSizeDef
 ]
 
 \setfontface\EnlargedTwo{JunicodeVF}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLATwoSizeDef
 ]
 
 \setfontface\EnlargedTwoItalic{JunicodeVF-Italic}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLATwoSizeDef
 ]
 
 \setfontface\EnlargedThree{JunicodeVF}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLAThreeSizeDef
 ]
 
 \setfontface\EnlargedThreeItalic{JunicodeVF-Italic}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLAThreeSizeDef
 ]
 
 \setfontface\EnlargedFour{JunicodeVF}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLAFourSizeDef
 ]
 
 \setfontface\EnlargedFourItalic{JunicodeVF-Italic}[
-    Renderer = HarfBuzz,
+    Renderer = \junicodevf@renderer,
     \ENLAFourSizeDef
 ]
 

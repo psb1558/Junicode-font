@@ -54,6 +54,9 @@
 \newcommand{\SmExpMediumDef}{}
 \newcommand{\SmExpSmBoldDef}{}
 
+\def\junicodevf@renderer{HarfBuzz}
+\DeclareOptionX{renderer}{\def\junicodevf@renderer{#1}}
+
 % Choose the type of font: otf or ttf.
 
 \newcommand*{\junicode@fonttype}{otf}
@@ -223,7 +226,7 @@
 \fi
 \ifluatex
 \setmainfont
-  [Renderer =          HarfBuzz,
+  [Renderer =          \junicodevf@renderer,
    Numbers =           {\junicode@figurealign,\junicode@figurestyle},
    SmallCapsFeatures = {Letters=SmallCaps},
    UprightFont =       *-\junicode@regstylename,
@@ -248,7 +251,7 @@
 \ifluatex
 \newcommand{\junicode@newfont}[3]{
     \newfontface#1{#2}[
-        Renderer =          HarfBuzz,
+        Renderer =          \junicodevf@renderer,
         #3
         Numbers =           {\junicode@figurealign,\junicode@figurestyle},
         SmallCapsFeatures = {Letters=SmallCaps},

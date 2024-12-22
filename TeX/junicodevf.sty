@@ -136,7 +136,7 @@ mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_a
     ItalicFont =         {*-Italic},
     BoldFont =           {*},
     BoldItalicFont =     {*-Italic},
-    Renderer =           \junicodevf@renderer,
+    Renderer =           {\junicodevf@renderer},
     Numbers =            {\junicodevf@figurealign,\junicodevf@figurestyle},
     \MainDef,
     UprightFeatures =    {\MainRegDef
@@ -151,7 +151,7 @@ mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_a
 
 \newcommand*{\junicodevf@newfont}[4]{
     \setfontface#1{#2}[
-        Renderer =          \junicodevf@renderer,
+        Renderer =          {\junicodevf@renderer},
         Numbers =           {\junicodevf@figurealign,\junicodevf@figurestyle},
         SmallCapsFont =     {*},
         SmallCapsFeatures = {Letters=SmallCaps},
@@ -165,42 +165,42 @@ mkmainfontcommand(style_idx, weight_option, weight_adjust, width_option, width_a
 % ENLARGED FACES
 
 \setfontface\EnlargedOne{JunicodeVF}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLAOneSizeDef
 ]
 
 \setfontface\EnlargedOneItalic{JunicodeVF-Italic}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLAOneSizeDef
 ]
 
 \setfontface\EnlargedTwo{JunicodeVF}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLATwoSizeDef
 ]
 
 \setfontface\EnlargedTwoItalic{JunicodeVF-Italic}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLATwoSizeDef
 ]
 
 \setfontface\EnlargedThree{JunicodeVF}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLAThreeSizeDef
 ]
 
 \setfontface\EnlargedThreeItalic{JunicodeVF-Italic}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLAThreeSizeDef
 ]
 
 \setfontface\EnlargedFour{JunicodeVF}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLAFourSizeDef
 ]
 
 \setfontface\EnlargedFourItalic{JunicodeVF-Italic}[
-    Renderer = \junicodevf@renderer,
+    Renderer = {\junicodevf@renderer},
     \ENLAFourSizeDef
 ]
 

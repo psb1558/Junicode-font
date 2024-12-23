@@ -437,6 +437,17 @@ cv66\index{cv66|textbf} &
 \end{supertabular}
 \end{center}
 
+\subsection{\textSourceText{swsh} – Swash letters (italic only)}
+Produces swash versions of several capitals: \textex{\textit{\addfontfeature{Style=Swash}A Æ D J}}. There are three swash
+versions of Q\,, selected via index (if indexing of \textSourceText{swsh} is supported by your
+application): 1=\textex{\textit{\cvd[2]{33}{Qui}}}, 
+2=\textex{\textit{\cvd[4]{33}{Qui}}}, 3=\textex{\textit{\cvd[3]{33}{Qui}}}.
+Note that swash versions of Q can also be selected with \textSourceText{cv33}. Swash Q is not permitted in
+word-final position; there plain italic Q is substituted. Also, if Q with extended tail might collide with
+a following letter, another appropriate form of Q is substituted. There are also swash versions of lowercase
+e and k: \textex{\textit{\addfontfeature{Style=Swash} e k}}. These are only permitted in word-final position:
+\textex{\textit{\addfontfeature{Style=Swash}elevate, skylark}}.
+
 \subsection{\textSourceText{ss01} – Alternate thorn and eth}
 Produces\index{ss01} Nordic thorn and eth (\textex{\addfontfeature{Language=English}\textAltThornEth{{\th}{\dh}{\TH}}})
 when the language is English, and English thorn and eth
@@ -454,7 +465,7 @@ always be enabled.
 Produces\index{ss02|textbf} insular letter-forms, e.g. \textex{\addfontfeatures{Language=English,StylisticSet=2}dfgrsw}.
 The result is different,
 depending on whether the language is English or Irish (make sure the language for your document is set
-properly). In English text, capitals are not affected (except W), as these do not not commonly have
+properly). In English text, capitals are not affected (except W), as these do not commonly have
 insular shapes in early manuscripts; instead, enter the Unicode code points or use the Character Variant
 (\textSourceText{cvNN}) features. In English text, ss02 imitates the typography of the Old English
 passages of Hickes’s \textit{Thesaurus}, not the usage of Old English or Anglo-Latin manuscripts. In

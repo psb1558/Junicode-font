@@ -81,7 +81,13 @@
 \usepackage{metalogo}
 \usepackage{hyperref}
 \hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,%
-  urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+  urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=,}
+\pdfstringdefDisableCommands{%
+	\def\unic{}%
+	\def\textSourceText{}%
+	\def\addfontfeature\@gobble
+}
+\urlstyle{same}
 % Footnotes configuration
 \makeatletter
 \renewcommand\thefootnote{\arabic{footnote}}

@@ -8,14 +8,14 @@
 
 \begin{titlepage}
 \huge\noindent
-{\color{myRed}}\\[5cm]
+{\color{myRed}\ornm{yyyyyyyyyyyyyyyyyy}}\\[5cm]
 \Huge \centering {\color{myBlue}Junicode} \\[1cm]
 \huge \centering the font for medievalists \\[1cm]
- \Huge\centering {\color{myRed}} \\[1cm]
+ \Huge\centering {\color{myRed}\ornm{d}} \\[1cm]
  \huge\centering {\jItalic specimens and user manual} \\[1ex]
  \Large\centering{\jRegular for version 2.211}\\
 \vfill
-{\color{myRed}}
+{\color{myRed}\ornm{yyyyyyyyyyyyyyyyyy}}
 \end{titlepage}
 \cleardoublepage
 \thispagestyle{plain}
@@ -24,27 +24,25 @@
 
 \mainmatter
 
-\input{About.tex}
+\include{About.tex}
 
-\input{Specimens.tex}
+\include{Specimens.tex}
 
-\input{GettingStarted.tex}
+\include{GettingStarted.tex}
 
-\input{Feature_Reference.tex}
+\include{Feature_Reference.tex}
 
-\input{tag_key_ins.tex}
+\include{tag_key_ins.tex}
 
-\input{Record_Interpreter_notes.tex}
+\include{Record_Interpreter_notes.tex}
 
-\input{EnlargeAxis.tex}
+\include{EnlargeAxis.tex}
 
-\input{OnTheWeb.tex}
+\include{OnTheWeb.tex}
 
-\input{in_tex.tex}
+\include{in_tex.tex}
 
-\input{encoded-glyphs.tex}
-
-\input{upperpua.tex}
+\include{encoded-glyphs.tex}
 
 \printindex
 
@@ -55,7 +53,8 @@ using the {\LuaLaTeX} typesetting system with fontspec for font management.\\
 The font for code is Fira Mono.\\
 The sans serif font is Fira Sans.\\
 The source for the document, JunicodeManual.tex, is available at}}\\
-{\color{BrickRed}https://github.com/psb1558/Junicode-font.}
+\url{https://github.com/psb1558/Junicode-font}.
+
 \end{center}
 %\thispagestyle{plain}
 

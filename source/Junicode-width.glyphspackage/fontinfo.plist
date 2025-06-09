@@ -1,5 +1,5 @@
 {
-.appVersion = "3234";
+.appVersion = "3337";
 .formatVersion = 3;
 axes = (
 {
@@ -1597,6 +1597,10 @@ name = brackets_left;
 code = "parenright bracketright braceright guillemotright guilsinglright uni27E9 angleright dblanglebracketright uni2E29 
 ";
 name = brackets_right;
+},
+{
+code = "space nbspace enspace emspace enquad emquad threeperemspace fourperemspace sixperemspace figurespace punctuationspace thinspace hairspace zerowidthspace narrownbspace ";
+name = spaces;
 }
 );
 customParameters = (
@@ -1736,7 +1740,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-12-23 15:25:24 +0000";
+date = "2025-06-08 12:00:05 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -1758,6 +1762,7 @@ languagesystem latn GAE;
 languagesystem latn IRI;
 languagesystem latn IRT;
 languagesystem latn SGA;
+languagesystem latn NLD;
 
 languagesystem grek dflt;
 languagesystem grek ELL;
@@ -1807,6 +1812,10 @@ lookup Vertical_Kerning_06 {
 lookup Vertical_Kerning_07 {
   pos @dashes <0 40 0 0> ;
 } Vertical_Kerning_07 ;
+
+lookup Vertical_Kerning_08 {
+  pos slash <0 42 0 0> ;
+} Vertical_Kerning_08 ;
 
 lookup Contextual_Kerning_01 {
   lookupflag 0 ;
@@ -1872,6 +1881,7 @@ lookup loclENG {
 	sub thorncomb by thorncomb.loclENG;
 	sub uniE48F by uniE48F.loclENG;
 	sub uniF03D by uniF03D.loclENG;
+    sub thorn.medhighoverline by thorn.medhighoverline.loclENG ;
 } loclENG ;
 
 lookup loclCAT {
@@ -2282,6 +2292,9 @@ code = "script latn;
     lookup loclENG ;
   language CAT ;
     lookup loclCAT ;
+  language NLD ;
+    sub iacute j' by jacute ;
+    sub Iacute J' by Jacute ;
 
 script grek;
   language dflt;
@@ -2455,6 +2468,7 @@ sub thorn.loclENG overlinecomb by thorn.medhighoverline.loclENG ;
 } overlines ;
 
 lookup diacritics {
+  sub emod ogonekcomb by eogonekmod ;
   sub H tildeoverlaycomb by Htildeoverlay ;
   sub Q strokeshortcomb by Qstrokethroughdescender ;
   sub Q tildeoverlaycomb by Qstrokethroughdescender ;
@@ -4111,6 +4125,7 @@ code = "    sub parenleft by uni207D ;
 	sub period by period.sups ;
     sub comma by comma.sups ;
     sub endash by endash.sups ;
+    sub eogonek by eogonekmod ;
 ";
 tag = sups;
 },
@@ -4160,6 +4175,24 @@ sub seven.tosf by seven.subs ;
 sub eight.tosf by eight.subs ;
 sub nine.tosf by nine.subs ;
 sub minus by minusinferior ;
+sub a by ainferior ;
+sub e by einferior ;
+sub h by hinferior ;
+sub i by isubscript ;
+sub j by jsubscript ;
+sub k by kinferior ;
+sub l by linferior ;
+sub m by minferior ;
+sub n by ninferior ;
+sub o by oinferior ;
+sub schwa by schwainferior ;
+sub p by pinferior ;
+sub r by rsubscript ;
+sub s by sinferior ;
+sub t by tinferior ;
+sub u by usubscript ;
+sub v by vsubscript ;
+sub x by xinferior ;
 ";
 tag = subs;
 },
@@ -4214,6 +4247,7 @@ code = "  sub thornstroke by thornstroke.loclENG;
   sub ethcomb by ethcomb.loclENG;
   sub eth.enlarged by eth.enlarged.loclENG ;
   sub thorn.enlarged by thorn.enlarged.loclENG ;
+  sub thorn.medhighoverline by thorn.medhighoverline.loclENG ;
 script latn;
 language ENG;
   sub Thorn.loclENG by Thorn ;
@@ -4226,6 +4260,7 @@ language ENG;
   sub ethcomb.loclENG by ethcomb ;
   sub thornstroke.loclENG by thornstroke ;
   sub thornstroke.loclENG.sc by thornstroke.sc ;
+  sub thorn.medhighoverline.loclENG by thorn.medhighoverline ;
 ";
 labels = (
 {
@@ -4365,25 +4400,35 @@ tag = ss05;
 code = "script DFLT ;
 language dflt ;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 script latn;
 language dflt;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language AZE;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language CRT;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language KAZ;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language TAT;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language TRK;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language ROM;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language MOL;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language CAT;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language LAT exclude_dflt ;
   lookup ss08_longs_init ;
   lookup ss08_longs_ENG ;
@@ -7982,6 +8027,7 @@ sub Istroke by istroke.sc;
 sub Itilde by itilde.sc;
 sub Itildebelow by itildebelow.sc;
 sub J by j.sc;
+sub Jacute by jacute.sc;
 sub Jcircumflex by jcircumflex.sc;
 sub Jstroke by jstroke.sc;
 sub K by k.sc;
@@ -8102,6 +8148,7 @@ sub Sdotbelow by sdotbelow.sc;
 sub Sdotbelowdotaccent by sdotbelowdotaccent.sc;
 sub Germandbls by germandbls.sc;
 sub Sinsular by sinsular.sc;
+sub Ssigmoid by ssigmoid.sc;
 sub T by t.sc;
 sub Tbar by tbar.sc;
 sub Tcaron by tcaron.sc;
@@ -8530,6 +8577,7 @@ sub b.lf by b.sc ;
 sub h.lf by h.sc ;
 sub i.lf by i.sc ;
 sub j.lf by j.sc ;
+sub jacute by jacute.sc ;
 sub k.lf by k.sc ;
 sub l.lf by l.sc ;
 sub thorn.lf by thorn.sc ;
@@ -10032,15 +10080,27 @@ code = "lookup kern_Vertical_Kerning {
 
 lookup kern_Vertical_Alphanumeric {
   pos @brackets_left' lookup Vertical_Kerning_04 @lining_numbers ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @lining_numbers ;
   pos @lining_numbers @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @lining_numbers @spaces @brackets_right' lookup Vertical_Kerning_05 ;
   pos @brackets_left' lookup Vertical_Kerning_04 @Uppercase ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @Uppercase ;
   pos @Uppercase @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @Uppercase @spaces @brackets_right' lookup Vertical_Kerning_05 ;
 } kern_Vertical_Alphanumeric ;
 
 lookup kern_Vertical_dashes {
   pos @Uppercase @dashes' lookup Vertical_Kerning_06 @Uppercase ;
-  pos @Uppercase space @dashes' lookup Vertical_Kerning_06 space @Uppercase ;
+  pos @Uppercase @spaces @dashes' lookup Vertical_Kerning_06 @spaces @Uppercase ;
+  pos @lining_numbers @dashes' lookup Vertical_Kerning_07 @lining_numbers ;
+  pos @lining_numbers @spaces @dashes' lookup Vertical_Kerning_07 @spaces @lining_numbers ;
 } kern_Vertical_dashes ;
+
+lookup kern_Vertical_slashes {
+  @allupper = [ @Uppercase @lining_numbers ] ;
+  pos @allupper slash' lookup Vertical_Kerning_08 @allupper ;
+  pos @allupper @spaces slash' lookup Vertical_Kerning_08 @spaces @allupper ;
+} kern_Vertical_slashes ;
 
 lookup kern_Contextual_Kerning {
   lookupflag 0 ;
@@ -12810,6 +12870,7 @@ iinvertedbreve = 12;
 imacron = -15;
 itilde = 32;
 jcircumflex = 5;
+ocircumflexgrave = -23;
 rinvertedbreve = -27;
 };
 "@MMK_L_KO_U" = {
@@ -13555,6 +13616,7 @@ zcaron = -30;
 "@MMK_R_KO_a.alt1" = -1;
 "@MMK_R_KO_a.alt4" = 13;
 "@MMK_R_KO_a.alt5" = -5;
+"@MMK_R_KO_a.sc" = -40;
 "@MMK_R_KO_adieresis" = -1;
 "@MMK_R_KO_b" = -1;
 "@MMK_R_KO_b.p02" = 7;
@@ -18525,7 +18587,7 @@ uni02DE = -16;
 "@MMK_R_KO_a.alt1" = -18;
 "@MMK_R_KO_a.alt4" = -12;
 "@MMK_R_KO_a.alt5" = -64;
-"@MMK_R_KO_a.sc" = -53;
+"@MMK_R_KO_a.sc" = -113;
 "@MMK_R_KO_b.p02" = -1;
 "@MMK_R_KO_colon" = -32;
 "@MMK_R_KO_e.alt3" = -9;
@@ -21334,6 +21396,7 @@ iinvertedbreve = 19;
 imacron = -20;
 itilde = 32;
 jcircumflex = 30;
+ocircumflexgrave = 16;
 rinvertedbreve = -27;
 };
 "@MMK_L_KO_U" = {
@@ -22080,6 +22143,7 @@ zcaron = -29;
 "@MMK_R_KO_a.alt1" = -10;
 "@MMK_R_KO_a.alt4" = -1;
 "@MMK_R_KO_a.alt5" = -12;
+"@MMK_R_KO_a.sc" = -40;
 "@MMK_R_KO_adieresis" = 4;
 "@MMK_R_KO_b" = -11;
 "@MMK_R_KO_b.p02" = -1;
@@ -27048,7 +27112,7 @@ uni02DE = 10;
 "@MMK_R_KO_a.alt1" = -34;
 "@MMK_R_KO_a.alt4" = -28;
 "@MMK_R_KO_a.alt5" = -81;
-"@MMK_R_KO_a.sc" = -77;
+"@MMK_R_KO_a.sc" = -97;
 "@MMK_R_KO_b.p02" = 29;
 "@MMK_R_KO_colon" = -42;
 "@MMK_R_KO_e.alt3" = -19;
@@ -30167,6 +30231,7 @@ idieresis = 36;
 imacron = -21;
 itilde = 10;
 jcircumflex = 5;
+ocircumflexgrave = -27;
 rinvertedbreve = -35;
 };
 "@MMK_L_KO_U" = {
@@ -30912,6 +30977,7 @@ zcaron = -30;
 "@MMK_R_KO_a.alt1" = -1;
 "@MMK_R_KO_a.alt4" = 14;
 "@MMK_R_KO_a.alt5" = -14;
+"@MMK_R_KO_a.sc" = -40;
 "@MMK_R_KO_adieresis" = -1;
 "@MMK_R_KO_b" = -1;
 "@MMK_R_KO_b.p02" = 5;
@@ -35880,7 +35946,7 @@ uni02DE = -20;
 "@MMK_R_KO_a.alt1" = -23;
 "@MMK_R_KO_a.alt4" = -12;
 "@MMK_R_KO_a.alt5" = -73;
-"@MMK_R_KO_a.sc" = -52;
+"@MMK_R_KO_a.sc" = -112;
 "@MMK_R_KO_b.p02" = 38;
 "@MMK_R_KO_colon" = -44;
 "@MMK_R_KO_e.alt3" = -10;
@@ -38970,6 +39036,7 @@ adblgrave = -5;
 adieresis = -18;
 ainvertedbreve = -31;
 atilde = -18;
+ecircumflexgrave = 10;
 ibreve = 16;
 icaron = 8;
 icircumflex = 5;
@@ -38979,6 +39046,7 @@ iinvertedbreve = 16;
 imacron = -11;
 itilde = 27;
 jcircumflex = 10;
+ocircumflexgrave = 10;
 rinvertedbreve = -32;
 };
 "@MMK_L_KO_U" = {
@@ -39727,6 +39795,7 @@ zcaron = -23;
 "@MMK_R_KO_a.alt1" = -4;
 "@MMK_R_KO_a.alt4" = 10;
 "@MMK_R_KO_a.alt5" = -9;
+"@MMK_R_KO_a.sc" = -35;
 "@MMK_R_KO_adieresis" = -1;
 "@MMK_R_KO_b" = -4;
 "@MMK_R_KO_b.p02" = 11;
@@ -44695,7 +44764,7 @@ uni02DE = 6;
 "@MMK_R_KO_a.alt1" = -25;
 "@MMK_R_KO_a.alt4" = -18;
 "@MMK_R_KO_a.alt5" = -68;
-"@MMK_R_KO_a.sc" = -53;
+"@MMK_R_KO_a.sc" = -89;
 "@MMK_R_KO_b.p02" = 33;
 "@MMK_R_KO_colon" = -40;
 "@MMK_R_KO_e.alt3" = -10;
@@ -47806,6 +47875,7 @@ iinvertedbreve = 18;
 imacron = -20;
 itilde = 5;
 jcircumflex = 5;
+ocircumflexgrave = -24;
 rinvertedbreve = -35;
 };
 "@MMK_L_KO_U" = {
@@ -48555,6 +48625,7 @@ zcaron = -39;
 "@MMK_R_KO_a.alt1" = -1;
 "@MMK_R_KO_a.alt4" = 14;
 "@MMK_R_KO_a.alt5" = -1;
+"@MMK_R_KO_a.sc" = -60;
 "@MMK_R_KO_adieresis" = 7;
 "@MMK_R_KO_b" = -10;
 "@MMK_R_KO_b.p02" = -1;
@@ -53523,7 +53594,7 @@ uni02DE = -32;
 "@MMK_R_KO_a.alt1" = -22;
 "@MMK_R_KO_a.alt4" = -14;
 "@MMK_R_KO_a.alt5" = -72;
-"@MMK_R_KO_a.sc" = -69;
+"@MMK_R_KO_a.sc" = -159;
 "@MMK_R_KO_b.p02" = 15;
 "@MMK_R_KO_colon" = -42;
 "@MMK_R_KO_e.alt3" = -8;
@@ -56673,6 +56744,7 @@ iinvertedbreve = 12;
 imacron = -15;
 itilde = 32;
 jcircumflex = 5;
+ocircumflexgrave = -23;
 rinvertedbreve = -27;
 };
 "@MMK_L_KO_U" = {
@@ -57417,6 +57489,7 @@ zcaron = -30;
 "@MMK_R_KO_a.alt1" = -1;
 "@MMK_R_KO_a.alt4" = 13;
 "@MMK_R_KO_a.alt5" = -5;
+"@MMK_R_KO_a.sc" = -40;
 "@MMK_R_KO_adieresis" = -1;
 "@MMK_R_KO_b" = -1;
 "@MMK_R_KO_b.p02" = 7;
@@ -62385,7 +62458,7 @@ uni02DE = -16;
 "@MMK_R_KO_a.alt1" = -18;
 "@MMK_R_KO_a.alt4" = -12;
 "@MMK_R_KO_a.alt5" = -64;
-"@MMK_R_KO_a.sc" = -53;
+"@MMK_R_KO_a.sc" = -113;
 "@MMK_R_KO_b.p02" = -1;
 "@MMK_R_KO_colon" = -32;
 "@MMK_R_KO_e.alt3" = -9;
@@ -63898,7 +63971,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright (c) 1998-2024 by Peter S. Baker";
+value = "Copyright (c) 1998-2025 by Peter S. Baker";
 }
 );
 },
@@ -63977,5 +64050,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 211;
+versionMinor = 213;
 }

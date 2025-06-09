@@ -1,5 +1,5 @@
 {
-.appVersion = "3234";
+.appVersion = "3337";
 .formatVersion = 3;
 axes = (
 {
@@ -1802,6 +1802,10 @@ code = "parenright bracketright braceright guillemotright
 guilsinglright rightanglebracket-math angleright dblanglebracketright rightDoubleParen 
 ";
 name = brackets_right;
+},
+{
+code = "space nbspace enspace emspace enquad emquad threeperemspace fourperemspace sixperemspace figurespace punctuationspace thinspace hairspace zerowidthspace narrownbspace ";
+name = spaces;
 }
 );
 customParameters = (
@@ -1917,7 +1921,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2024-12-23 17:58:53 +0000";
+date = "2025-06-08 12:00:53 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -1938,6 +1942,7 @@ languagesystem latn LAT;
 languagesystem latn IRI;
 languagesystem latn IRT;
 languagesystem latn SGA;
+languagesystem latn NLD;
 
 languagesystem grek dflt;
 languagesystem grek ELL;
@@ -1998,6 +2003,10 @@ lookup Vertical_Kerning_06 {
 lookup Vertical_Kerning_07 {
   pos @dashes <4 40 0 0> ;
 } Vertical_Kerning_07 ;
+
+lookup Vertical_Kerning_08 {
+  pos slash <0 42 0 0> ;
+} Vertical_Kerning_08 ;
 
 lookup Contextual_Kerning_01 {
   lookupflag 0 ;
@@ -2441,6 +2450,13 @@ lookup locl_latn_3 {
 	sub  L' periodcentered' L by Ldot;
 } locl_latn_3;
 
+lookup locl_latn_NLD {
+    script latn ;
+    language NLD ;
+    sub iacute j' by jacute ;
+    sub Iacute J' by Jacute ;
+} locl_latn_NLD ;
+
 lookup locl_grek_0 {
 	script grek;
 	language dflt;
@@ -2620,6 +2636,7 @@ sub thorn.loclENG overlinecomb by thorn.medhighoverline.loclENG ;
 } overlines ;
 
 lookup diacritics {
+  sub emod ogonekcomb by eogonekmod ;
   sub H tildeoverlaycomb by Htildeoverlay ;
   sub Q strokeshortcomb by Qstrokethroughdescender ;
   sub Q tildeoverlaycomb by Qstrokethroughdescender ;
@@ -3051,11 +3068,11 @@ lookup grek_Composed {
 
 } grek_Composed ;
 
-lookup grek_decomposed {
-  sub alphamacron
-      by alphamacron commaabovecomb
-acutecomb.loclELL;
-} grek_decomposed ;
+#lookup grek_decomposed {
+#  sub alphamacron
+#      by alphamacron commaabovecomb
+#acutecomb.loclELL;
+#} grek_decomposed ;
 ";
 tag = ccmp;
 },
@@ -4262,6 +4279,7 @@ code = "    sub parenleft by parenleft.sups ;
     sub comma by comma.sups ;
     sub hyphen by hyphen.sups ;
     sub endash by endash.sups ;
+    sub eogonek by eogonekmod ;
 ";
 tag = sups;
 },
@@ -4311,6 +4329,24 @@ sub seven.tosf by seven.subs ;
 sub eight.tosf by eight.subs ;
 sub nine.tosf by nine.subs ;
 sub minus by minusinferior ;
+sub a by ainferior ;
+sub e by einferior ;
+sub h by hinferior ;
+sub i by isubscript ;
+sub j by jsubscript ;
+sub k by kinferior ;
+sub l by linferior ;
+sub m by minferior ;
+sub n by ninferior ;
+sub o by oinferior ;
+sub schwa by schwainferior ;
+sub p by pinferior ;
+sub r by rsubscript ;
+sub s by sinferior ;
+sub t by tinferior ;
+sub u by usubscript ;
+sub v by vsubscript ;
+sub x by xinferior ;
 ";
 tag = subs;
 },
@@ -4390,6 +4426,7 @@ code = "  sub thornstroke by thornstroke.loclENG;
 #  sub ethcomb by ethcomb.loclENG;
   sub eth.enlarged by eth.enlarged.loclENG ;
   sub thorn.enlarged by thorn.enlarged.loclENG ;
+  sub thorn.medhighoverline by thorn.medhighoverline.loclENG ;
 script latn;
 language ENG;
   sub Thorn.loclENG by Thorn ;
@@ -4402,6 +4439,7 @@ language ENG;
 #  sub ethcomb.loclENG by ethcomb ;
   sub thornstroke.loclENG by thornstroke ;
   sub thornstroke.loclENG.sc by thornstroke.sc ;
+  sub thorn.medhighoverline.loclENG by thorn.medhighoverline ;
 ";
 labels = (
 {
@@ -4534,25 +4572,35 @@ tag = ss05;
 code = "script DFLT;
 language dflt;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 script latn;
 language dflt;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language AZE;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language CRT;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language KAZ;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language TAT;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language TRK;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language ROM;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language MOL;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language CAT;
   lookup ss08_longs_init ;
+  lookup ss08_longs_ENG ;
 language LAT exclude_dflt ;
   lookup ss08_longs_init ;
   lookup ss08_longs_ENG ;
@@ -8078,6 +8126,7 @@ sub Istroke by istroke.sc;
 sub Itilde by itilde.sc;
 sub Itildebelow by itildebelow.sc;
 sub J by j.sc;
+sub Jacute by jacute.sc;
 sub Jcircumflex by jcircumflex.sc;
 sub Jstroke by jstroke.sc;
 sub K by k.sc;
@@ -8198,6 +8247,7 @@ sub Sdotbelow by sdotbelow.sc;
 sub Sdotbelowdotaccent by sdotbelowdotaccent.sc;
 sub Germandbls by germandbls.sc;
 sub Sinsular by sinsular.sc;
+sub Ssigmoid by ssigmoid.sc;
 sub T by t.sc;
 sub Tbar by tbar.sc;
 sub Tcaron by tcaron.sc;
@@ -8637,6 +8687,7 @@ sub i.lf by i.sc ;
 sub i.alt2 by i.sc ;
 sub j.lf by j.sc ;
 sub jdotaccent by jdotaccent.sc ;
+sub jacute by jacute.sc ;
 #sub jdotbelow by jdotbelow.sc ;
 sub k.lf by k.sc ;
 sub l.lf by l.sc ;
@@ -10080,15 +10131,28 @@ lookup kern_numbers {
 
 lookup kern_Vertical_Alphanumeric {
   pos @brackets_left' lookup Vertical_Kerning_04 @lining_numbers ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @lining_numbers ;
   pos @lining_numbers @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @lining_numbers @spaces @brackets_right' lookup Vertical_Kerning_05 ;
   pos @brackets_left' lookup Vertical_Kerning_04 @Uppercase ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @Uppercase ;
   pos @Uppercase @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @Uppercase @spaces @brackets_right' lookup Vertical_Kerning_05 ;
 } kern_Vertical_Alphanumeric ;
 
 lookup kern_Vertical_dashes {
   pos @Uppercase @dashes' lookup Vertical_Kerning_06 @Uppercase ;
-  pos @Uppercase space @dashes' lookup Vertical_Kerning_06 space @Uppercase ;
+  pos @Uppercase @spaces @dashes' lookup Vertical_Kerning_06 @spaces @Uppercase ;
+  pos @lining_numbers @dashes' lookup Vertical_Kerning_07 @lining_numbers ;
+  pos @lining_numbers @spaces @dashes' lookup Vertical_Kerning_07 @spaces @lining_numbers ;
 } kern_Vertical_dashes ;
+
+lookup kern_Vertical_slashes {
+  @allupper = [ @Uppercase @lining_numbers ] ;
+  pos @allupper slash' lookup Vertical_Kerning_08 @allupper ;
+  pos @allupper @spaces slash' lookup Vertical_Kerning_08 @spaces @allupper ;
+} kern_Vertical_slashes ;
+
 ";
 tag = kern;
 }
@@ -21287,7 +21351,7 @@ itilde = 68;
 jcaron = 40;
 jcircumflex = 40;
 obreve = -48;
-ocircumflexgrave = 120;
+ocircumflexgrave = 140;
 odblgrave = -38;
 odotaccentacute = -68;
 ohungarumlaut = -58;
@@ -28992,7 +29056,7 @@ adblgrave = -89;
 atilde = -59;
 ebreve = -56;
 ecaron = -88;
-ecircumflexgrave = 70;
+ecircumflexgrave = 90;
 edblgrave = -58;
 edieresis = -68;
 einvertedbreve = -58;
@@ -29012,7 +29076,7 @@ itilde = 52;
 jcaron = 40;
 jcircumflex = 30;
 obreve = -50;
-ocircumflexgrave = 70;
+ocircumflexgrave = 90;
 odblgrave = -65;
 odotaccentacute = -70;
 ohungarumlaut = -50;
@@ -36721,7 +36785,7 @@ adblgrave = -50;
 atilde = -50;
 ebreve = -45;
 ecaron = -62;
-ecircumflexgrave = 100;
+ecircumflexgrave = 120;
 edblgrave = -32;
 edieresis = -32;
 einvertedbreve = -52;
@@ -44449,7 +44513,7 @@ adblgrave = -73;
 atilde = -93;
 ebreve = -91;
 ecaron = -121;
-ecircumflexgrave = 50;
+ecircumflexgrave = 36;
 edblgrave = -41;
 edieresis = -86;
 einvertedbreve = -91;
@@ -58662,7 +58726,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright (c) 1998-2024 by Peter S. Baker";
+value = "Copyright (c) 1998-2025 by Peter S. Baker";
 }
 );
 },
@@ -58727,5 +58791,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 211;
+versionMinor = 213;
 }

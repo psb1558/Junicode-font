@@ -18,18 +18,18 @@ tag = ENLA;
 classes = (
 {
 code = "zero.lt one.lt two.lt three.lt four.lt five.lt six.lt seven.lt eight.lt nine.lt dollar.lt percent.lt numbersign.lt
-sterling.lf yen.lf euro.lt dollar.lt perthousand.lt pertenthousand.lt minus.lt
+sterling.lt yen.lt euro.lt dollar.lt perthousand.lt pertenthousand.lt minus.lt
 ";
 name = FIGURES_LINING_TABULAR;
 },
 {
-code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf dollar.tosf percent numbersign sterling yen euro dollar.tosf perthousand pertenthousand minus
+code = "zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf dollar.tosf percent.tosf numbersign.tosf sterling.tosf yen.tosf euro.tosf dollar.tosf perthousand.tosf pertenthousand.tosf minus.tosf
 ";
 name = FIGURES_OLDSTYLE_TABULAR;
 },
 {
-code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf dollar.lf percent.lt numbersign.lt
-sterling.lf yen.lf euro.lt dollar.lf perthousand.lt pertenthousand.lt minus.lt
+code = "zero.lf one.lf two.lf three.lf four.lf five.lf six.lf seven.lf eight.lf nine.lf dollar.lf percent.lf numbersign.lf
+sterling.lf yen.lf euro.lf dollar.lf perthousand.lf pertenthousand.lf minus.lf
 ";
 name = FIGURES_LINING;
 },
@@ -2439,7 +2439,6 @@ lookup locl_latn_2 {
 	sub uniE48F by uniE48F.loclENG;
 #	sub thorndotbelow by thorndotbelow.loclENG;
 	sub thorncomb by thorncomb.loclENG;
-	sub uniE48F by uniE48F.loclENG;
 	sub uniF03D by uniF03D.loclENG;
 } locl_latn_2;
 
@@ -4166,8 +4165,6 @@ code = "  sub zero.lt by zero.lt.zero;
   sub zeroinferior by zeroinferior.zero;
   sub zerosuperior by zerosuperior.zero;
   sub zero.tosf by zero.tosf.zero;
-  sub zerosuperior by zerosuperior.zero;
-  sub zeroinferior by zeroinferior.zero;
   sub zero.numr by zero.numr.zero;
   sub zero.dnom by zero.dnom.zero;
   sub zero.sups by zero.sups.zero;
@@ -4347,6 +4344,11 @@ sub t by tinferior ;
 sub u by usubscript ;
 sub v by vsubscript ;
 sub x by xinferior ;
+sub beta by betasubscript ;
+sub chi by chisubscript ;
+sub gamma by gammasubscript ;
+sub phi by phisubscript ;
+sub rho by rhosubscript ;
 ";
 tag = subs;
 },
@@ -8562,7 +8564,6 @@ code = "sub a by a.sc;
 sub aa by aa.sc;
 sub aacute by aacute.sc;
 sub abreve by abreve.sc;
-sub abreveacute by abreveacute.sc;
 sub abreveacute by abreveacute.sc;
 sub abrevedotbelow by abrevedotbelow.sc;
 sub abrevegrave by abrevegrave.sc;

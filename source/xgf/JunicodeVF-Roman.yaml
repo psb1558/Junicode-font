@@ -33584,12 +33584,12 @@ glyphs:
         pos: xheight
         points:
         - ptid: 18
-          rel: blackdist
+          rel: stem
       - ptid: 0
         pos: lc-descender
         points:
         - ptid: 11
-          rel: blackdist
+          rel: stem
   uni204B:
     y:
       points:
@@ -33597,7 +33597,7 @@ glyphs:
         pos: baseline
         points:
         - ptid: 4
-          rel: blackdist
+          rel: stem
           points:
           - ptid:
             - 46
@@ -33607,7 +33607,7 @@ glyphs:
         pos: cap-height
         points:
         - ptid: 9
-          rel: blackdist
+          rel: stem
           points:
           - ptid: 51
             rel: shift
@@ -48371,33 +48371,39 @@ glyphs:
         pos: xheight
         points:
         - ptid: 11
-          rel: blackdist
+          rel: stem
       - ptid: 0
         pos: lc-baseline-undershoot
         points:
         - ptid: 32
-          rel: blackdist
+          rel: stem
   uni204A.alt2:
     y:
       points:
-      - ptid: 18
-        points:
-        - ptid: 11
-          rel: blackdist
       - ptid: 0
         pos: lc-baseline-undershoot
         points:
         - ptid: 32
-          rel: blackdist
-      - ptid: 53
+          rel: stem
+          round: false
+      - ptid: '{53;414}'
+        pos: xheight
+        points:
+        - ptid: '{247;353}'
+          rel: stem
+          round: false
+      - ptid: '{300;181}'
         ref:
-        - 18
-        - 0
+        - '{229;-11}'
+        - '{53;414}'
         rel: interpolate
         round: true
         points:
-        - ptid: 48
-          rel: blackdist
+        - ptid: '{24;227}'
+          rel: stem
+          round: false
+    props:
+      category: Ll
   uni2070.zero:
     y:
       points:
@@ -64728,12 +64734,12 @@ glyphs:
       - ptid: '{234;-271}'
         points:
         - ptid: '{192;-229}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{109;570}'
         points:
         - ptid: '{268;530}'
-          rel: blackdist
+          rel: stem
           round: false
   uni2E52.alt10:
     y:

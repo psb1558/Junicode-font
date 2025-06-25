@@ -129,7 +129,7 @@ fi
 if [ "$generateufo" = true ]
 then
   echo "Generating UFOs and designspace file from Glyphs source."
-  glyphs2ufo --propagate-anchors --no-preserve-glyphsapp-metadata --generate-GDEF \
+  glyphs2ufo --no-preserve-glyphsapp-metadata --generate-GDEF \
     --output-dir $BUILDDIR --designspace-path ${BUILDDIR}/${glyphsfilename}.designspace \
     --write-public-skip-export-glyphs $glyphsfile
   if [ $? -ne 0 ]

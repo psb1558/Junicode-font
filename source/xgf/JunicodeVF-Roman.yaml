@@ -684,6 +684,19 @@ cvt:
       glyph: five.lt.subs
       ptnum:
       - 31
+  num-round-bottom:
+    axis: y
+    type: pos
+    val: -11
+    origin:
+      glyph: eight.lf
+      ptnum:
+      - 0
+    cat: Nd
+    same-as:
+      below:
+        cv: baseline
+        ppem: 40
 cvar:
 - regions:
   - tag: wght
@@ -14869,13 +14882,13 @@ glyphs:
         pos: num_round_top
         points:
         - ptid: '{235;619}'
-          rel: blackdist
+          rel: stem
           round: false
-      - ptid: '{231;-8}'
+      - ptid: '{231;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{232;25}'
-          rel: blackdist
+        - ptid: '{232;22}'
+          rel: stem
           round: false
   zero.lt.zero:
     y:
@@ -25152,26 +25165,26 @@ glyphs:
   eight.lf:
     y:
       points:
+      - ptid: '{221;-11}'
+        pos: baseline
+        points:
+        - ptid: '{236;22}'
+          rel: stem
+          round: false
       - ptid: '{221;651}'
         pos: num_round_top
         points:
         - ptid: '{210;614}'
-          rel: blackdist
-          round: false
-      - ptid: '{221;-8}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{236;25}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid:
-        - '{172;326}'
-        - '{200;305}'
-        - '{246;368}'
-        - '{273;347}'
+        - '{172;324}'
+        - '{273;345}'
+        - '{200;303}'
+        - '{246;366}'
         ref:
-        - '{221;-8}'
         - '{221;651}'
+        - '{221;-11}'
         rel: interpolate
   eight.numr:
     y:
@@ -25248,28 +25261,29 @@ glyphs:
   eight.tosf:
     y:
       points:
-      - ptid: '{247;-15}'
+      - ptid: '{247;-11}'
+        pos: num-round-bottom
         points:
-        - ptid: '{236;16}'
-          rel: blackdist
+        - ptid: '{236;20}'
+          rel: stem
           round: false
-        pos: lc-baseline-undershoot
       - ptid: '{255;621}'
+        pos: num_round_top
         points:
         - ptid: '{239;591}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid:
-        - '{194;291}'
-        - '{218;272}'
-        - '{258;337}'
-        - '{284;318}'
+        - '{194;293}'
+        - '{284;320}'
+        - '{218;274}'
+        - '{258;339}'
         ref:
         - '{255;621}'
-        - '{247;-15}'
+        - '{247;-11}'
         rel: interpolate
     props:
-      category: Ll
+      category: Nd
   emacroncomb:
     y:
       points:
@@ -26422,23 +26436,23 @@ glyphs:
         pos: num_flat_top
         points:
         - ptid: '{154;573}'
-          rel: blackdist
+          rel: stem
           round: false
-      - ptid: '{138;-8}'
+      - ptid: '{138;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{179;33}'
-          rel: blackdist
+        - ptid: '{179;30}'
+          rel: stem
           round: false
       - ptid: '{162;437}'
         ref:
-        - '{138;-8}'
+        - '{138;-11}'
         - '{128;643}'
         rel: interpolate
         round: true
         points:
         - ptid: '{143;363}'
-          rel: blackdist
+          rel: stem
           round: false
     props:
       category: Ll
@@ -43156,11 +43170,11 @@ glyphs:
   six.lf:
     y:
       points:
-      - ptid: '{221;-8}'
-        pos: lc-baseline-undershoot
+      - ptid: '{221;-11}'
+        pos: num-round-bottom
         points:
-        - ptid: '{234;31}'
-          rel: blackdist
+        - ptid: '{234;28}'
+          rel: stem
           round: false
       - ptid: '{358;673}'
         points:
@@ -43170,12 +43184,12 @@ glyphs:
       - ptid: '{258;374}'
         ref:
         - '{358;673}'
-        - '{221;-8}'
+        - '{221;-11}'
         rel: interpolate
         round: true
         points:
         - ptid: '{219;319}'
-          rel: blackdist
+          rel: stem
           round: false
   six.numr:
     y:
@@ -43204,16 +43218,16 @@ glyphs:
   six:
     y:
       points:
-      - ptid: '{226;-15}'
+      - ptid: '{226;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{254;18}'
-          rel: blackdist
+        - ptid: '{254;22}'
+          rel: stem
           round: false
-      - ptid: '{269;368}'
+      - ptid: '{269;370}'
         points:
-        - ptid: '{250;313}'
-          rel: blackdist
+        - ptid: '{250;315}'
+          rel: stem
           round: false
       - ptid: '{456;637}'
         points:
@@ -43245,26 +43259,26 @@ glyphs:
   six.tosf:
     y:
       points:
-      - ptid: '{211;-15}'
+      - ptid: '{211;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{239;18}'
-          rel: blackdist
+        - ptid: '{239;22}'
+          rel: stem
           round: false
       - ptid: '{441;637}'
         points:
         - ptid: '{448;616}'
-          rel: blackdist
+          rel: stem
           round: false
-      - ptid: '{254;368}'
+      - ptid: '{254;370}'
         ref:
         - '{441;637}'
-        - '{211;-15}'
+        - '{211;-11}'
         rel: interpolate
         round: true
         points:
-        - ptid: '{235;313}'
-          rel: blackdist
+        - ptid: '{235;315}'
+          rel: stem
           round: false
     props:
       category: Ll
@@ -43886,13 +43900,13 @@ glyphs:
         pos: num_round_top
         points:
         - ptid: '{185;599}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{161;-11}'
         pos: lc-baseline-undershoot
         points:
         - ptid: '{193;26}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{162;337}'
         ref:
@@ -43902,7 +43916,7 @@ glyphs:
         round: true
         points:
         - ptid: '{107;368}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{245;370}'
         ref:
@@ -57167,7 +57181,7 @@ glyphs:
         pos: baseline
         points:
         - ptid: 4
-          rel: blackdist
+          rel: stem
           round: false
           points:
           - ptid: 33
@@ -57176,10 +57190,10 @@ glyphs:
         pos: lc-minim
         points:
         - ptid: 18
-          rel: graydist
+          rel: stem
           points:
           - ptid: 14
-            rel: blackdist
+            rel: stem
             round: false
     props:
       category: Ll
@@ -66189,6 +66203,172 @@ glyphs:
           round: false
     props:
       category: Ll
+  oogonekmod:
+    y:
+      points:
+      - ptid: '{177;276}'
+        pos: sups-baseline-undershoot
+        points:
+        - ptid: '{173;300}'
+          rel: stem
+          round: false
+      - ptid: '{174;590}'
+        pos: sups-xheight-overshoot
+        points:
+        - ptid: '{173;570}'
+          rel: stem
+          round: false
+      - ptid: '{251;323}'
+        ref:
+        - '{177;276}'
+        - '{174;590}'
+        rel: interpolate
+      - ptid: '{237;138}'
+        points:
+        - ptid: '{266;177}'
+          rel: stem
+          round: false
+  aogonekmod:
+    y:
+      points:
+      - ptid: '{96;276}'
+        pos: sups-baseline-undershoot
+        points:
+        - ptid: '{229;277}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{259;314}'
+            rel: stem
+            round: false
+        - ptid: '{133;312}'
+          rel: stem
+          round: false
+      - ptid: '{153;590}'
+        pos: sups-xheight-overshoot
+        points:
+        - ptid: '{130;564}'
+          rel: stem
+          round: false
+      - ptid: '{170;458}'
+        ref:
+        - '{153;590}'
+        - '{96;276}'
+        rel: interpolate
+        points:
+        - ptid: '{172;438}'
+          rel: stem
+          round: false
+      - ptid: '{215;116}'
+        pos: subs-xheight
+        points:
+        - ptid: '{245;152}'
+          rel: stem
+          round: false
+  iogonekmod:
+    y:
+      points:
+      - ptid: '{100;284}'
+        pos: sups-baseline
+        points:
+        - ptid: '{165;305}'
+          rel: stem
+          round: false
+          points:
+          - ptid: '{31;305}'
+            rel: shift
+      - ptid: '{123;590}'
+        pos: sups-xheight-overshoot
+        points:
+        - ptid: '{36;548}'
+          rel: stem
+        - ptid: '{90;640}'
+          rel: stem
+          points:
+          - ptid: '{90;728}'
+            rel: stem
+      - ptid: '{145;289}'
+        ref:
+        - '{100;284}'
+        - '{165;305}'
+        rel: interpolate
+      - ptid:
+        - '{67;481}'
+        - '{67;458}'
+        - '{67;481}'
+        ref:
+        - '{123;590}'
+        - '{100;284}'
+        rel: interpolate
+      - ptid: '{95;138}'
+        points:
+        - ptid: '{124;177}'
+          rel: stem
+          round: false
+  iogonekmod.dotless:
+    y:
+      points:
+      - ptid: '{100;284}'
+        pos: sups-baseline
+        points:
+        - ptid: '{165;305}'
+          rel: stem
+          round: false
+          points:
+          - ptid: '{31;305}'
+            rel: shift
+      - ptid: '{123;590}'
+        pos: sups-xheight-overshoot
+        points:
+        - ptid: '{36;548}'
+          rel: stem
+      - ptid: '{145;289}'
+        ref:
+        - '{100;284}'
+        - '{165;305}'
+        rel: interpolate
+      - ptid:
+        - '{67;481}'
+        - '{67;458}'
+        - '{67;481}'
+        ref:
+        - '{123;590}'
+        - '{100;284}'
+        rel: interpolate
+      - ptid: '{95;138}'
+        points:
+        - ptid: '{124;177}'
+          rel: stem
+          round: false
+  uogonekmod:
+    y:
+      points:
+      - ptid: '{159;276}'
+        pos: sups-baseline-undershoot
+        points:
+        - ptid:
+          - '{260;272}'
+          - '{357;295}'
+          rel: shift
+        - ptid: '{180;315}'
+          rel: stem
+          round: false
+      - ptid: '{116;590}'
+        pos: sups-xheight-overshoot
+        points:
+        - ptid: '{301;590}'
+          rel: shift
+        - ptid: '{31;583}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{217;583}'
+            rel: shift
+      - ptid: '{274;138}'
+        points:
+        - ptid: '{303;177}'
+          rel: stem
+          round: false
 uni01E5:
   y:
     points:

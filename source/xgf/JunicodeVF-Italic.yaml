@@ -33958,7 +33958,7 @@ glyphs:
         pos: baseline
         points:
         - ptid: '{-7;24}'
-          rel: blackdist
+          rel: stem
           round: false
           points:
           - ptid: '{167;24}'
@@ -33967,7 +33967,7 @@ glyphs:
         pos: xheight
         points:
         - ptid: '{98;391}'
-          rel: blackdist
+          rel: stem
           round: false
           points:
           - ptid: '{271;391}'
@@ -33980,7 +33980,7 @@ glyphs:
         round: true
         points:
         - ptid: '{49;241}'
-          rel: blackdist
+          rel: stem
           round: false
   uni1D7F:
     y:
@@ -50626,17 +50626,15 @@ glyphs:
   uni0330:
     y:
       points:
-      - ptid: '{-159;-84}'
+      - ptid: '{-8;-185}'
         points:
-        - ptid: '{-178;-139}'
-          rel: blackdist
-          round: false
-        - ptid: '{-11;-129}'
-          rel: graydist
+        - ptid: '{10;-129}'
+          rel: stem
+        - ptid: '{-157;-139}'
+          rel: stem
           points:
-          - ptid: '{-29;-185}'
-            rel: blackdist
-            round: false
+          - ptid: '{-138;-84}'
+            rel: stem
   uni0342:
     y:
       points:
@@ -59932,29 +59930,6 @@ glyphs:
         - ptid: '{181;45}'
           rel: blackdist
           round: false
-  uni1E2D.dotless:
-    y:
-      points:
-      - ptid: '{126;-16}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{178;54}'
-          rel: blackdist
-          round: false
-        - ptid: '{41;-84}'
-          rel: whitedist
-          points:
-          - ptid: '{22;-139}'
-            rel: blackdist
-            round: false
-          - ptid: '{189;-129}'
-            rel: graydist
-            points:
-            - ptid: '{171;-185}'
-              rel: blackdist
-              round: false
-      - ptid: '{226;510}'
-        pos: lc-markabove
   uni2E52.alt5:
     y:
       points:
@@ -61029,6 +61004,135 @@ glyphs:
         round: true
         points:
         - ptid: '{219;450}'
+          rel: stem
+  uogonekmod:
+    y:
+      points:
+      - ptid: '{128;276}'
+        pos: mod-baseline
+        points:
+        - ptid: '{277;277}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{330;329}'
+            rel: stem
+        - ptid: '{165;327}'
+          rel: stem
+      - ptid: '{185;590}'
+        pos: mod-xheight-overshoot
+        points:
+        - ptid: '{334;581}'
+          rel: shift
+        - ptid: '{141;536}'
+          rel: stem
+      - ptid: '{280;124}'
+        points:
+        - ptid: '{307;155}'
+          rel: stem
+  oogonekmod:
+    y:
+      points:
+      - ptid: '{151;276}'
+        pos: mod-baseline
+        points:
+        - ptid: '{159;314}'
+          rel: stem
+      - ptid: '{240;590}'
+        pos: mod-xheight-overshoot
+        points:
+        - ptid: '{241;557}'
+          rel: stem
+      - ptid: '{173;124}'
+        points:
+        - ptid: '{200;155}'
+          rel: stem
+    props:
+      category: Lm
+  iogonekmod:
+    y:
+      points:
+      - ptid: '{109;277}'
+        pos: mod-baseline
+        points:
+        - ptid: '{160;330}'
+          rel: stem
+      - ptid: '{184;590}'
+        pos: mod-xheight-overshoot
+        points:
+        - ptid: '{140;535}'
+          rel: stem
+        - ptid: '{216;651}'
+          rel: stem
+          points:
+          - ptid: '{217;741}'
+            rel: stem
+      - ptid: '{111;124}'
+        points:
+        - ptid: '{138;155}'
+          rel: stem
+  iogonekmod.dotless:
+    y:
+      points:
+      - ptid: '{109;277}'
+        pos: mod-baseline
+        points:
+        - ptid: '{160;330}'
+          rel: stem
+      - ptid: '{184;590}'
+        pos: mod-xheight-overshoot
+        points:
+        - ptid: '{140;535}'
+          rel: stem
+      - ptid: '{111;124}'
+        points:
+        - ptid: '{138;155}'
+          rel: stem
+  aogonekmod:
+    y:
+      points:
+      - ptid: '{98;276}'
+        pos: mod-baseline
+        points:
+        - ptid: '{131;320}'
+          rel: stem
+        - ptid: '{212;281}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{269;329}'
+            rel: stem
+      - ptid: '{240;590}'
+        pos: mod-xheight-overshoot
+        points:
+        - ptid: '{231;563}'
+          rel: stem
+      - ptid: '{195;115}'
+        points:
+        - ptid: '{225;146}'
+          rel: stem
+  aogonek:
+    y:
+      points:
+      - ptid: '{96;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{137;40}'
+          rel: stem
+        - ptid: '{288;-12}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{353;50}'
+            rel: stem
+      - ptid: '{300;412}'
+        pos: xheight
+        points:
+        - ptid: '{288;380}'
+          rel: stem
+      - ptid: '{279;-232}'
+        points:
+        - ptid: '{315;-190}'
           rel: stem
 masters:
   wght-min:

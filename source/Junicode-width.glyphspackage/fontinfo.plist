@@ -1696,10 +1696,6 @@ value = (
 );
 },
 {
-name = "Propagate Anchors";
-value = 0;
-},
-{
 name = blueFuzz;
 value = 0;
 },
@@ -1739,9 +1735,13 @@ size = 0;
 {
 name = "Feature for Feature Variations";
 value = rclt;
+},
+{
+name = "Propagate Anchors";
+value = 1;
 }
 );
-date = "2025-06-18 17:55:53 +0000";
+date = "2025-06-25 14:31:07 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2318,15 +2318,12 @@ tag = locl;
 {
 code = "lookup i_dot {
   @combining_plus = [graphemejoinercomb @combining_below] ;
-  sub [ i j icomb iogonek itildebelow jstroke istroke jcrossedtail ]' @combining_above by
-      [ dotlessi jdotless dotlessicomb iogonek.dotless itildebelow.dotless jstroke.dotless
-          istroke.dotless jcrossedtail.dotless ] ;
-  sub [ i j icomb iogonek itildebelow jstroke istroke jcrossedtail ]' @combining_plus @combining_above by
-      [ dotlessi jdotless dotlessicomb iogonek.dotless itildebelow.dotless jstroke.dotless 
-          istroke.dotless jcrossedtail.dotless ] ;
-  sub [ i j icomb iogonek itildebelow jstroke istroke jcrossedtail ]' @combining_plus @combining_plus
-      @combining_above by [ dotlessi jdotless dotlessicomb iogonek.dotless itildebelow.dotless
-          jstroke.dotless istroke.dotless jcrossedtail.dotless ] ;
+  @ij_with_mark = [ i j icomb iogonek itildebelow idotbelow jstroke istroke jcrossedtail ] ;
+  @ijdotless_with_mark = [ dotlessi jdotless dotlessicomb iogonek.dotless itildebelow.dotless 
+                           idotbelow.dotless jstroke.dotless istroke.dotless jcrossedtail.dotless ] ;
+  sub @ij_with_mark' @combining_above by @ijdotless_with_mark ;
+  sub @ij_with_mark' @combining_plus @combining_above by @ijdotless_with_mark ;
+  sub @ij_with_mark' @combining_plus @combining_plus @combining_above by @ijdotless_with_mark ;
   #sub [ i j icomb ]' @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
   #sub [ i j icomb ]' graphemejoinercomb @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
 # graphemejoinercomb
@@ -4141,7 +4138,12 @@ code = "    sub parenleft by uni207D ;
 	sub period by period.sups ;
     sub comma by comma.sups ;
     sub endash by endash.sups ;
+    sub aogonek by aogonekmod ;
     sub eogonek by eogonekmod ;
+    sub iogonek by iogonekmod ;
+    sub iogonek.dotless by iogonekmod.dotless ;
+    sub oogonek by oogonekmod ;
+    sub uogonek by uogonekmod ;
 ";
 tag = sups;
 },
@@ -10142,6 +10144,7 @@ lookup kern_Contextual_Kerning {
 } kern_Contextual_Kerning ;
 
 lookup kern_L_apostrophe {
+  lookupflag IgnoreMarks ;
   @frenchvowels = [ a agrave acircumflex
                     ae
                     e eacute egrave ecircumflex
@@ -10247,6 +10250,9 @@ pos = (74,284);
 },
 {
 pos = (215,276);
+},
+{
+pos = (238,276);
 }
 );
 id = master01;
@@ -10268,7 +10274,7 @@ over = 10;
 pos = 415;
 },
 {
-over = -14;
+over = -20;
 },
 {
 pos = -200;
@@ -10454,7 +10460,7 @@ over = 10;
 pos = 415;
 },
 {
-over = -14;
+over = -20;
 },
 {
 pos = -200;
@@ -10610,6 +10616,10 @@ pos = (-26,284);
 },
 {
 pos = (215,276);
+},
+{
+angle = 180;
+pos = (74,284);
 }
 );
 iconName = Light;
@@ -10632,7 +10642,7 @@ over = 10;
 pos = 415;
 },
 {
-over = -14;
+over = -20;
 },
 {
 pos = -200;
@@ -10811,7 +10821,7 @@ over = 10;
 pos = 415;
 },
 {
-over = -14;
+over = -20;
 },
 {
 pos = -200;
@@ -10990,7 +11000,7 @@ over = 10;
 pos = 415;
 },
 {
-over = -14;
+over = -20;
 },
 {
 pos = -200;
@@ -11153,7 +11163,7 @@ over = 10;
 pos = 415;
 },
 {
-over = -14;
+over = -20;
 },
 {
 pos = -200;
@@ -63220,5 +63230,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 214;
+versionMinor = 215;
 }

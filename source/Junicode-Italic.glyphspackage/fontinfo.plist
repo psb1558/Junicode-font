@@ -1921,7 +1921,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2025-06-18 17:55:41 +0000";
+date = "2025-06-25 14:30:53 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2487,15 +2487,13 @@ code = "#lookup i_dot {
 #} i_dot ;
 
 lookup i_dot {
+  @ij_with_mark = [ i j icomb iogonek itildebelow idotbelow istroke jstroke jcrossedtail ] ;
+  @ijdotless_with_mark = [ dotlessi jdotless dotlessicomb iogonek.dotless itildebelow.dotless 
+                           idotbelow.dotless istroke.dotless jstroke.dotless jcrossedtail.dotless ] ;
   @combining_plus = [graphemejoinercomb @combining_below] ;
-  sub [ i j icomb iogonek itildebelow jstroke jcrossedtail ]' @combining_above by [ dotlessi jdotless 
-        dotlessicomb iogonek.dotless itildebelow.dotless jstroke.dotless jcrossedtail.dotless ] ;
-  sub [ i j icomb iogonek itildebelow jstroke jcrossedtail ]' @combining_plus @combining_above by [ dotlessi 
-            jdotless dotlessicomb iogonek.dotless itildebelow.dotless jstroke.dotless
-            jcrossedtail.dotless ] ;
-  sub [ i j icomb iogonek itildebelow jstroke jcrossedtail ]' @combining_plus @combining_plus @combining_above by
-            [ dotlessi jdotless dotlessicomb iogonek.dotless itildebelow.dotless jstroke.dotless
-                  jcrossedtail.dotless ] ;
+  sub @ij_with_mark' @combining_above by @ijdotless_with_mark ;
+  sub @ij_with_mark' @combining_plus @combining_above by @ijdotless_with_mark ;
+  sub @ij_with_mark' @combining_plus @combining_plus @combining_above by @ijdotless_with_mark ;
   #sub [ i j icomb ]' @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
   #sub [ i j icomb ]' graphemejoinercomb @combining_below @combining_above by [ dotlessi jdotless dotlessicomb ] ;
 # graphemejoinercomb
@@ -4287,7 +4285,12 @@ code = "    sub parenleft by parenleft.sups ;
     sub comma by comma.sups ;
     sub hyphen by hyphen.sups ;
     sub endash by endash.sups ;
+    sub aogonek by aogonekmod ;
     sub eogonek by eogonekmod ;
+    sub iogonek by iogonekmod ;
+    sub iogonek.dotless by iogonekmod.dotless ;
+    sub oogonek by oogonekmod ;
+    sub uogonek by uogonekmod ;
 ";
 tag = sups;
 },
@@ -10125,6 +10128,7 @@ lookup kern_Contextual_Kerning {
 } kern_Contextual_Kerning ;
 
 lookup kern_L_apostrophe {
+  lookupflag IgnoreMarks ;
   @frenchvowels = [ a agrave acircumflex
                     e eacute egrave ecircumflex
                     i
@@ -10355,7 +10359,7 @@ over = 15;
 pos = 416;
 },
 {
-over = -14;
+over = -20;
 },
 {
 over = -15;
@@ -10670,7 +10674,7 @@ over = 15;
 pos = 416;
 },
 {
-over = -14;
+over = -20;
 },
 {
 over = -15;
@@ -10979,7 +10983,7 @@ over = 15;
 pos = 416;
 },
 {
-over = -14;
+over = -20;
 },
 {
 over = -15;
@@ -11294,7 +11298,7 @@ over = 15;
 pos = 416;
 },
 {
-over = -14;
+over = -20;
 },
 {
 over = -15;
@@ -11600,7 +11604,7 @@ over = 15;
 pos = 416;
 },
 {
-over = -14;
+over = -20;
 },
 {
 over = -15;
@@ -11903,7 +11907,7 @@ over = 15;
 pos = 676;
 },
 {
-over = -14;
+over = -20;
 },
 {
 over = -15;
@@ -58933,5 +58937,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 214;
+versionMinor = 215;
 }

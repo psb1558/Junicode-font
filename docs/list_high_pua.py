@@ -1,3 +1,4 @@
+# For use in Glyphs macro panel
 s = Glyphs.font.selection
 for g in s:
 	if g.unicode:

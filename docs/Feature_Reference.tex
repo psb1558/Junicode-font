@@ -1286,8 +1286,24 @@ for other spacing marks of abbreviation.
 The degree sign is often used as an editorial sign in editions of the Greek New Testament. This feature
 scales and positions it to match other editorial signs (U+2E00--u+2E0D).
 
-\section{Combining Marks}\index{cv84|textbf}
-\subsection{\textSourceText{cv84} – MUFI combining marks (variants of \unic{U+0304})}\hypertarget{cv84}{}
+\section{Combining Marks}
+
+Junicode provides more than 350 combining marks, including nearly 150 Unicode-encoded marks, variants of these,
+and unencoded equivalents of MUFI diacritics (which, being PUA-encoded, do not function well as combining marks).
+All of Junicode’s unencoded marks are accessible via OpenType features (listed below) or tags. Most are
+produced by positioning the mark directly after the base character: for example, the combination
+\textex{a\char"035B} is produced by the sequence \textex{a \unic{U+035B}}. Several are “double” marks, marking
+the relationship between two characters. These are produced by placing the double mark \textit{between}
+the two base characters: \unic{U+035C} (\textex{◌͜◌}), \unic{U+035F} (\textex{◌͟◌}),
+\unic{U+0362} (\textex{◌͢◌}), \unic{U+035D} (\textex{◌͝◌}), \unic{U+035E} (\textex{◌͞◌}),
+\unic{U+0360} (\textex{◌͠◌}), \unic{U+0361} (\textex{◌͡◌}), \unic{U+1DCD} (\textex{◌᷍◌}). The height of 
+these double marks is automatically adjusted to clear neighboring letters and combining marks, e.g.
+\textex{l͡o}, \textex{a̍͠o}, \textex{æ\char"1DD3\char"034F\char"1DCDu}, \textex{o\char"033B\char"035Ce}. If a double
+diacritic appears too high or too low (e.g. \textex{l\char"035Eo\char"030E}), place \unic{U+200C}
+\textUName{zero-width non-joiner} somewhere between the double diacritic and the combining mark:
+\textex{l \unic{U+035E} \unic{U+200C} o \unic{U+030E}} produces \textex{l\char"035E\char"200Co\char"030E}.
+
+\subsection{\textSourceText{cv84} – MUFI combining marks (variants of \unic{U+0304})}\hypertarget{cv84}{}\index{cv84|textbf}
 MUFI encodes a number of combining marks in the PUA (with code points between \unic{E000} and \unic{F8FF}), but when these characters
 are entered directly, they can interfere with searching and accessibility, and some important applications fail to
 position them correctly over their base characters. To avoid these problems, enter \unic{U+0304} (◌̄, \textUName{combining

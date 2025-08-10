@@ -66369,6 +66369,38 @@ glyphs:
         - ptid: '{303;177}'
           rel: stem
           round: false
+  uni03D0:
+    y:
+      points:
+      - ptid: '{244;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{244;30}'
+          rel: stem
+          round: false
+      - ptid: '{249;725}'
+        pos: lc-ascender
+        points:
+        - ptid: '{249;696}'
+          rel: stem
+          round: false
+      - ptid:
+        - '{222;419}'
+        - '{236;352}'
+        ref:
+        - '{249;725}'
+        - '{244;-11}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{223;448}'
+          ref: '{222;419}'
+          rel: stem
+          round: false
+        - ptid: '{239;311}'
+          ref: '{236;352}'
+          rel: stem
+          round: false
 uni01E5:
   y:
     points:

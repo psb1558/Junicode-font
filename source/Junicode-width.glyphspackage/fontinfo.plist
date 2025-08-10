@@ -1789,7 +1789,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2025-07-01 11:53:36 +0000";
+date = "2025-08-09 22:43:38 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -5188,7 +5188,7 @@ tag = cv03;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variant of b\"; 
+    name 3 1 0x0409 \"Variants of b and beta\"; 
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"Enlarged minuscule b\"; 
@@ -5198,7 +5198,54 @@ code = "cvParameters {
   };
 #  Character 0x0062;
 };
-sub b from [ b.enlarged b.alt2 ];
+
+script DFLT ;
+language dflt ;
+lookup cv_b {
+  sub b from [ b.enlarged b.alt2 ];
+} cv_b ;
+script latn ;
+language dflt ;
+  lookup cv_b ;
+language AZE ;
+  lookup cv_b ;
+language CRT ;
+  lookup cv_b ;
+language KAZ ;
+  lookup cv_b ;
+language TAT ;
+  lookup cv_b ;
+language TRK ;
+  lookup cv_b ;
+language ROM ;
+  lookup cv_b ;
+language MOL ;
+  lookup cv_b ;
+language ENG ;
+  lookup cv_b ;
+language CAT ;
+  lookup cv_b ;
+language LAT ;
+  lookup cv_b ;
+language FRA ;
+  lookup cv_b ;
+language GAE ;
+  lookup cv_b ;
+language IRI ;
+  lookup cv_b ;
+language IRT ;
+  lookup cv_b ;
+language SGA ;
+  lookup cv_b ;
+language NLD ;
+  lookup cv_b ;
+script grek ;
+language dflt;
+  lookup cv_beta {
+    sub beta from [ betaSymbol ] ;
+  } cv_beta ;
+language ELL ;
+  lookup cv_beta ;
 ";
 tag = cv04;
 },
@@ -5323,10 +5370,10 @@ tag = cv09;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of e\";
+    name 3 1 0x0409 \"Variants of e and epsilon\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Uncial e\";
+    name 3 1 0x0409 \"Uncial e; Greek lunate epsilon symbol\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"e with bar\";
@@ -5351,8 +5398,54 @@ code = "cvParameters {
   };
 #  Character 0x0065;
 };
-sub e      from [ e.alt1 e.alt2 e.alt3 e.enlarged      e.alt4 e.alt05 e.alt11 e.alt06 ] ;
-sub e.alt2 from [ e.alt1 e      e.alt3 e.alt2.enlarged e.alt4 e.alt05 e.alt11 e.alt06 ] ;
+script DFLT ;
+language dflt ;
+lookup cv_e {
+  sub e      from [ e.alt1 e.alt2 e.alt3 e.enlarged      e.alt4 e.alt05 e.alt11 e.alt06 ] ; 
+  sub e.alt2 from [ e.alt1 e      e.alt3 e.alt2.enlarged e.alt4 e.alt05 e.alt11 e.alt06 ] ;
+} cv_e ;
+script latn ;
+language dflt ;
+  lookup cv_e ;
+language AZE ;
+  lookup cv_e ;
+language CRT ;
+  lookup cv_e ;
+language KAZ ;
+  lookup cv_e ;
+language TAT ;
+  lookup cv_e ;
+language TRK ;
+  lookup cv_e ;
+language ROM ;
+  lookup cv_e ;
+language MOL ;
+  lookup cv_e ;
+language ENG ;
+  lookup cv_e ;
+language CAT ;
+  lookup cv_e ;
+language LAT ;
+  lookup cv_e ;
+language FRA ;
+  lookup cv_e ;
+language GAE ;
+  lookup cv_e ;
+language IRI ;
+  lookup cv_e ;
+language IRT ;
+  lookup cv_e ;
+language SGA ;
+  lookup cv_e ;
+language NLD ;
+  lookup cv_e ;
+script grek ;
+language dflt ;
+  lookup cv_epsilon {
+    sub epsilon from [ epsilonLunateSymbol ] ;
+  } cv_epsilon ;
+language ELL ;
+  lookup cv_epsilon ;
 ";
 tag = cv10;
 },
@@ -5381,10 +5474,10 @@ tag = cv11;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of f\";
+    name 3 1 0x0409 \"Variants of f and phi\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Insular f\";
+    name 3 1 0x0409 \"Insular f; Greek phi symbol\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"Insular f with dotted hooks\";
@@ -5415,13 +5508,57 @@ code = "cvParameters {
   };
 #  Character 0x0066;
 };
-sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged f.alt4 f.alt05 ] ;
-
 
 # do something about underdotted form (supply for all?)
 # sub fdotbelow    from [ finsulardotbelow    ] ;
 
-
+script DFLT ;
+language dflt ;
+lookup cv_f {
+  sub f from [ finsular f.alt1 f.alt2 f.alt3 f.alt f.mecurl f.enlarged finsular.enlarged f.alt4 f.alt05 ] ;
+} cv_f ;
+script latn ;
+language dflt ;
+  lookup cv_f ;
+language AZE ;
+  lookup cv_f ;
+language CRT ;
+  lookup cv_f ;
+language KAZ ;
+  lookup cv_f ;
+language TAT ;
+  lookup cv_f ;
+language TRK ;
+  lookup cv_f ;
+language ROM ;
+  lookup cv_f ;
+language MOL ;
+  lookup cv_f ;
+language ENG ;
+  lookup cv_f ;
+language CAT ;
+  lookup cv_f ;
+language LAT ;
+  lookup cv_f ;
+language FRA ;
+  lookup cv_f ;
+language GAE ;
+  lookup cv_f ;
+language IRI ;
+  lookup cv_f ;
+language IRT ;
+  lookup cv_f ;
+language SGA ;
+  lookup cv_f ;
+language NLD ;
+  lookup cv_f ;
+script grek ;
+language dflt ;
+  lookup cv_phi {
+    sub phi from [ phiSymbol ] ;
+  } cv_phi ;
+language ELL ;
+  lookup cv_phi ;
 ";
 tag = cv12;
 },
@@ -5673,10 +5810,10 @@ tag = cv21;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of k\";
+    name 3 1 0x0409 \"Variants of k and kappa\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Uncial k\";
+    name 3 1 0x0409 \"Uncial k; Greek kappa symbol\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"Semi-closed k\";
@@ -5698,7 +5835,54 @@ code = "cvParameters {
   };
 #  Character 0x006B;
 };
-sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged k.alt4 k.alt05 ] ;
+
+script DFLT ;
+language dflt ;
+lookup cv_k {
+  sub k from [ k.alt1 k.alt2 k.alt3 k.mecurl k.enlarged k.alt4 k.alt05 ] ;
+} cv_k ;
+script latn ;
+language dflt ;
+  lookup cv_k ;
+language AZE ;
+  lookup cv_k ;
+language CRT ;
+  lookup cv_k ;
+language KAZ ;
+  lookup cv_k ;
+language TAT ;
+  lookup cv_k ;
+language TRK ;
+  lookup cv_k ;
+language ROM ;
+  lookup cv_k ;
+language MOL ;
+  lookup cv_k ;
+language ENG ;
+  lookup cv_k ;
+language CAT ;
+  lookup cv_k ;
+language LAT ;
+  lookup cv_k ;
+language FRA ;
+  lookup cv_k ;
+language GAE ;
+  lookup cv_k ;
+language IRI ;
+  lookup cv_k ;
+language IRT ;
+  lookup cv_k ;
+language SGA ;
+  lookup cv_k ;
+language NLD ;
+  lookup cv_k ;
+script grek ;
+language dflt ;
+  lookup cv_kappa {
+    sub kappa from [ kappaSymbol ] ;
+  } cv_kappa ;
+language ELL ;
+  lookup cv_kappa ;
 ";
 tag = cv22;
 },
@@ -5897,17 +6081,64 @@ tag = cv31;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of p\";
+    name 3 1 0x0409 \"Variants of p and pi\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Enlarged minuscule p\";
+    name 3 1 0x0409 \"Enlarged minuscule p; Greek pi symbol\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"Alternate p for the Ormulum\";
   };
 #  Character 0x0070;
 };
-sub p from [ p.enlarged p.alt ] ;
+
+script DFLT ;
+language dflt ;
+lookup cv_p {
+  sub p from [ p.enlarged p.alt ] ;
+} cv_p ;
+script latn ;
+language dflt ;
+  lookup cv_p ;
+language AZE ;
+  lookup cv_p ;
+language CRT ;
+  lookup cv_p ;
+language KAZ ;
+  lookup cv_p ;
+language TAT ;
+  lookup cv_p ;
+language TRK ;
+  lookup cv_p ;
+language ROM ;
+  lookup cv_p ;
+language MOL ;
+  lookup cv_p ;
+language ENG ;
+  lookup cv_p ;
+language CAT ;
+  lookup cv_p ;
+language LAT ;
+  lookup cv_p ;
+language FRA ;
+  lookup cv_p ;
+language GAE ;
+  lookup cv_p ;
+language IRI ;
+  lookup cv_p ;
+language IRT ;
+  lookup cv_p ;
+language SGA ;
+  lookup cv_p ;
+language NLD ;
+  lookup cv_p ;
+script grek ;
+language dflt ;
+  lookup cv_pi {
+    sub pi from [ piSymbol ] ;
+  } cv_pi ;
+language ELL ;
+  lookup cv_pi ;
 ";
 tag = cv32;
 },
@@ -5980,10 +6211,10 @@ tag = cv35;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of r\";
+    name 3 1 0x0409 \"Variants of r and rho\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Insular r\";
+    name 3 1 0x0409 \"Insular r; Greek rho symbol\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"r rotunda\";
@@ -6005,7 +6236,54 @@ code = "cvParameters {
   };
 #  Character 0x0072;
 };
-sub r from [ rinsular rrotunda r.mecurl r.enlarged r.mecurl02 rinsular.alt01 rinsular.alt02 ] ;
+
+script DFLT ;
+language dflt ;
+lookup cv_r {
+  sub r from [ rinsular rrotunda r.mecurl r.enlarged r.mecurl02 rinsular.alt01 rinsular.alt02 ] ;
+} cv_r ;
+script latn ;
+language dflt ;
+  lookup cv_r ;
+language AZE ;
+  lookup cv_r ;
+language CRT ;
+  lookup cv_r ;
+language KAZ ;
+  lookup cv_r ;
+language TAT ;
+  lookup cv_r ;
+language TRK ;
+  lookup cv_r ;
+language ROM ;
+  lookup cv_r ;
+language MOL ;
+  lookup cv_r ;
+language ENG ;
+  lookup cv_r ;
+language CAT ;
+  lookup cv_r ;
+language LAT ;
+  lookup cv_r ;
+language FRA ;
+  lookup cv_r ;
+language GAE ;
+  lookup cv_r ;
+language IRI ;
+  lookup cv_r ;
+language IRT ;
+  lookup cv_r ;
+language SGA ;
+  lookup cv_r ;
+language NLD ;
+  lookup cv_r ;
+script grek ;
+language dflt ;
+  lookup cv_rho {
+    sub rho from [ rhoSymbol ] ;
+  } cv_rho ;
+language ELL ;
+  lookup cv_rho ;
 ";
 tag = cv36;
 },
@@ -6125,10 +6403,10 @@ tag = cv39;
 {
 code = "cvParameters {
   FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of t\";
+    name 3 1 0x0409 \"Variants of t and theta\";
   };
   ParamUILabelNameID {
-    name 3 1 0x0409 \"Insular t\";
+    name 3 1 0x0409 \"Insular t; Greek theta symbol\";
   };
   ParamUILabelNameID {
     name 3 1 0x0409 \"t with flourish\";
@@ -6144,7 +6422,54 @@ code = "cvParameters {
   };
 #  Character 0x0074;
 };
-sub t from [ tinsular t.mecurl t.enlarged t.alt t.alt02 ] ;
+
+script DFLT ;
+language dflt ;
+lookup cv_t {
+  sub t from [ tinsular t.mecurl t.enlarged t.alt t.alt02 ] ;
+} cv_t ;
+script latn ;
+language dflt ;
+  lookup cv_t ;
+language AZE ;
+  lookup cv_t ;
+language CRT ;
+  lookup cv_t ;
+language KAZ ;
+  lookup cv_t ;
+language TAT ;
+  lookup cv_t ;
+language TRK ;
+  lookup cv_t ;
+language ROM ;
+  lookup cv_t ;
+language MOL ;
+  lookup cv_t ;
+language ENG ;
+  lookup cv_t ;
+language CAT ;
+  lookup cv_t ;
+language LAT ;
+  lookup cv_t ;
+language FRA ;
+  lookup cv_t ;
+language GAE ;
+  lookup cv_t ;
+language IRI ;
+  lookup cv_t ;
+language IRT ;
+  lookup cv_t ;
+language SGA ;
+  lookup cv_t ;
+language NLD ;
+  lookup cv_t ;
+script grek ;
+language dflt ;
+  lookup cv_theta {
+    sub theta from [ thetaSymbol ] ;
+  } cv_theta ;
+language ELL ;
+  lookup cv_theta ;
 ";
 tag = cv40;
 },
@@ -63450,5 +63775,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 216;
+versionMinor = 217;
 }

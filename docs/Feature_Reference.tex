@@ -142,18 +142,19 @@ already use case-appropriate combining marks. This feature also changes oldstyle
 lining figures, since these harmonize better with uppercase letters.
 
 \section{Alphabetic Variants}
-\subsection{\textSourceText{cv01-cv52} – Basic Latin Variants}
+\subsection{\textSourceText{cv01-cv52} – Basic Latin and Greek Variants}\hypertarget{LatGrkVariants}
 These features also affect small cap (\textSourceText{smcp}\index{smcp}) and underdotted
 (\textSourceText{ss07}\index{ss07}) forms,
 where available. Variants in \cvc{magenta} are also available via \textSourceText{ss06}\index{ss06} “Enlarged Minuscules.”
 Use the \textSourceText{cvNN} features instead of \textSourceText{ss06}\index{ss06} when you want to substitute an
-enlarged minuscule for a capital (or, less likely, a lowercase) letter everywhere in a text.
+enlarged minuscule for a capital (or, less likely, a lowercase) letter everywhere in a text. See the
+\hyperlink{enlarge}{Enlarge Axis} for a more flexible method of producing enlarged minuscules.
 
 \begin{center}
 \tablefirsthead{\hline
 \bfseries Variant of &\
 \bfseries cvNN &
-\arraybslash{\bfseries Variants}\\\hline}
+\centering\arraybslash{\bfseries Variants}\\\hline}
 \tablehead{\hline
 \bfseries Variant of &
 \bfseries cvNN &
@@ -173,8 +174,8 @@ a & cv02 &
 \bluerow B & cv03 &
 1=\cvc{\cvd{3}{B}}, 2=\cvd[1]{3}{B}\index{cv03|textbf}\\
 %
-b & cv04 &
-1=\cvc{\cvd{4}{b}}\index{cv04|textbf}\\
+b β & cv04 &
+Latin: 1=\cvc{\cvd{4}{b}}\index{cv04|textbf}\\
 %
 \bluerow C & cv05 &
 {1=\cvd{5}{C}, 2=\cvc{\cvd[1]{5}{C}}}\index{cv05|textbf}\\
@@ -354,6 +355,47 @@ quotation of the \textit{Ormulum}. The feature produces a p that differs from
 the default only in the way it forms a double-p ligature with \textSourceText{hlig}\index{hlig}:
 \cvd[1]{32}{\hlig{pp}}, not \hlig{pp}.
 
+When the active script is Greek (set automatically by many apps), 
+a few of these features behave differently,
+substituting the “Symbol” forms of several letters (which are also accessible
+via their Unicode encodings):
+
+\begin{center}
+  \tablefirsthead{\hline
+  \bfseries Variant of &\
+  \bfseries cvNN &
+  \centering\arraybslash{\bfseries Variants}\\\hline}
+  \tablehead{\hline
+  \bfseries Variant of &
+  \bfseries cvNN &
+  \centering\arraybslash{\bfseries Variants}\\\hline}
+  \tabletail{\hline}
+  \tablelasttail{\hline}
+  \begin{supertabular}{| c | c | p{2.9212599in} |}
+    \bluerow\color{black}β & cv04 &
+    1={\addfontfeature{Script=Greek}\cvd{4}{β}} (\unic{U+03D0})\\
+    %
+    \color{black}ε & cv10 &
+    1={\addfontfeature{Script=Greek}\cvd{10}{ε}} (\unic{U+03F5})\\
+    %
+    \bluerow\color{black}φ & cv12 &
+    1={\addfontfeature{Script=Greek}\cvd{12}{φ}} (\unic{U+03D5})\\
+    %
+    \color{black}κ & cv22 &
+    1={\addfontfeature{Script=Greek}\cvd{22}{κ}} (\unic{U+03F0})\\
+    %
+    \bluerow\color{black}π & cv32 &
+    1={\addfontfeature{Script=Greek}\cvd{32}{π}} (\unic{U+03D6})\\
+    %
+    \color{black}ρ & cv36 &
+    1={\addfontfeature{Script=Greek}\cvd{36}{ρ}} (\unic{U+03F1})\\
+    %
+    \bluerow\color{black}θ & cv40 &
+    1={\addfontfeature{Script=Greek}\cvd{40}{θ}} (\unic{U+03D1})\\
+  \end{supertabular}
+\end{center}
+
+
 \subsection{\textSourceText{cv53-cv66}, \textSourceText{cv91}\index{cv91} – Other Latin Letters}\hypertarget{OtherLatin}{}
 Some features affect both upper- and lowercase forms. \textSourceText{cv62}\index{cv62} also affects
 combining \textex{e} with ogonek, accessible via either \textSourceText{\hyperlink{cv84}{cv84}}\index{cv84} or
@@ -368,7 +410,7 @@ entity reference \textSourceText{\&\_eogo;}.
 \tablehead{\hline
 \bfseries Variant of &
 \bfseries cvNN &
-\arraybslash{\bfseries Variants}\\\hline}
+\centering\arraybslash{\bfseries Variants}\\\hline}
 \tabletail{\hline}
 \tablelasttail{\hline}
 \begin{supertabular}{| c | c |p{2.3212599in}|}
@@ -729,10 +771,14 @@ preferred result, try placing \unic{U+034F} \textUName{combining grapheme joiner
 in the sequence of combining marks—for example, before the \textit{ypogegrammeni}
 to make \textex{\addfontfeatures{Language=Greek} Ὤ͏ͅ}.
 
+For alternate Greek letter-shapes, see \hyperlink{LatGrkVariants}{Basic Latin and Greek Variants} above
+and the next section.
+
 \subsection{\textSourceText{ss03} – Alternate Greek}
 Provides\index{ss03|textbf} alternate shapes of {\addfontfeature{Language=Greek}β γ θ π φ χ ω}:
 \textex{\addfontfeature{StylisticSet=3}β γ θ π φ χ ω}.
-These are chiefly useful in linguistics, as they harmonize with IPA characters.
+These are chiefly useful in linguistics, as they harmonize with IPA characters. This feature
+will work whether the Greek or Latin script is active.
 
 \section{Gothic}
 \subsection{\textSourceText{ss19} – Latin to Gothic Transliteration}

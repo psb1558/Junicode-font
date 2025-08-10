@@ -61128,6 +61128,34 @@ glyphs:
         points:
         - ptid: '{315;-190}'
           rel: stem
+  uni03D0:
+    y:
+      points:
+      - ptid: '{196;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{210;30}'
+          rel: stem
+      - ptid: '{386;731}'
+        pos: lc-ascender
+        points:
+        - ptid: '{379;702}'
+          rel: stem
+      - ptid:
+        - '{283;425}'
+        - '{279;352}'
+        ref:
+        - '{386;731}'
+        - '{196;-11}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{291;454}'
+          ref: '{283;425}'
+          rel: stem
+        - ptid: '{271;311}'
+          ref: '{279;352}'
+          rel: stem
 masters:
   wght-min:
     name: wght-min

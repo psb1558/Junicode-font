@@ -1819,7 +1819,24 @@ languagesystem grek ELL;
 name = Languagesystems;
 },
 {
-code = "#lookup Vertical_Kerning_01 {
+code = "lookup  altgreek {
+  sub beta by beta.alt ;
+  sub gamma by gamma-latin ;
+  sub theta by theta.alt ;
+  sub pi by pi.alt ;
+  sub phi by phi.alt ;
+  sub omega by omega.alt ;
+} altgreek;
+
+lookup greek_add_underdot {
+  sub @greek_alpha by @greek_alpha dotbelowcomb ;
+} greek_add_underdot ;
+
+lookup latin_add_underdot {
+  sub @latin_with_bottom_anchor by @latin_with_bottom_anchor dotbelowcomb ;
+} latin_add_underdot ;
+
+#lookup Vertical_Kerning_01 {
 #  lookupflag 0 ;
 #    pos doublebrevecomb <0 264 0 0> ;
 #    pos doublemacroncomb <0 264 0 0> ;
@@ -1945,23 +1962,6 @@ lookup loclCAT {
 	sub  l' periodcentered' l by ldot;
 	sub  L' periodcentered' L by Ldot;
 } loclCAT ;
-
-lookup  altgreek {
-  sub beta by beta.alt ;
-  sub gamma by gamma-latin ;
-  sub theta by theta.alt ;
-  sub pi by pi.alt ;
-  sub phi by phi.alt ;
-  sub omega by omega.alt ;
-} altgreek;
-
-lookup greek_add_underdot {
-  sub @greek_alpha by @greek_alpha dotbelowcomb ;
-} greek_add_underdot ;
-
-lookup latin_add_underdot {
-  sub @latin_with_bottom_anchor by @latin_with_bottom_anchor dotbelowcomb ;
-} latin_add_underdot ;
 
 # lookup sub_low_diacritics {
 #  sub muncialcomb by muncialcomb.low ;
@@ -3879,6 +3879,9 @@ sub yen by yen.lf ;
 sub numbersign by numbersign.lt ;
 sub euro by euro.lt ;
 sub sterling by sterling.lf ;
+#sub hyphen by hyphen.case ;
+#sub endash by endash.case ;
+#sub emdash by emdash.case ;
 ";
 tag = case;
 },
@@ -10646,30 +10649,6 @@ lookup kern_double_below_400 {
   pos @double_diacritics_below' <0 -301 0 0> @below400 ;
 } kern_double_below_400 ;
 
-lookup kern_Vertical_Alphanumeric {
-  pos @brackets_left' lookup Vertical_Kerning_04 @lining_numbers ;
-  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @lining_numbers ;
-  pos @lining_numbers @brackets_right' lookup Vertical_Kerning_05 ;
-  pos @lining_numbers @spaces @brackets_right' lookup Vertical_Kerning_05 ;
-  pos @brackets_left' lookup Vertical_Kerning_04 @Uppercase ;
-  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @Uppercase ;
-  pos @Uppercase @brackets_right' lookup Vertical_Kerning_05 ;
-  pos @Uppercase @spaces @brackets_right' lookup Vertical_Kerning_05 ;
-} kern_Vertical_Alphanumeric ;
-
-lookup kern_Vertical_dashes {
-  pos @Uppercase @dashes' lookup Vertical_Kerning_06 @Uppercase ;
-  pos @Uppercase @spaces @dashes' lookup Vertical_Kerning_06 @spaces @Uppercase ;
-  pos @lining_numbers @dashes' lookup Vertical_Kerning_07 @lining_numbers ;
-  pos @lining_numbers @spaces @dashes' lookup Vertical_Kerning_07 @spaces @lining_numbers ;
-} kern_Vertical_dashes ;
-
-lookup kern_Vertical_slashes {
-  @allupper = [ @Uppercase @lining_numbers ] ;
-  pos @allupper slash' lookup Vertical_Kerning_08 @allupper ;
-  pos @allupper @spaces slash' lookup Vertical_Kerning_08 @spaces @allupper ;
-} kern_Vertical_slashes ;
-
 lookup kern_Contextual_Kerning {
   lookupflag 0 ;
     @enohu = [ n o u ] ;
@@ -10725,7 +10704,30 @@ lookup kern_numbers {
     pos [ five six seven eight ] quoteright' <75 0 0 0> nine ;
     pos @digits quoteright' lookup Contextual_Kerning_05 @digits ;
 } kern_numbers ;
-";
+
+lookup kern_Vertical_Alphanumeric {
+  pos @brackets_left' lookup Vertical_Kerning_04 @lining_numbers ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @lining_numbers ;
+  pos @lining_numbers @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @lining_numbers @spaces @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @Uppercase ;
+  pos @brackets_left' lookup Vertical_Kerning_04 @spaces @Uppercase ;
+  pos @Uppercase @brackets_right' lookup Vertical_Kerning_05 ;
+  pos @Uppercase @spaces @brackets_right' lookup Vertical_Kerning_05 ;
+} kern_Vertical_Alphanumeric ;
+
+lookup kern_Vertical_dashes {
+  pos @Uppercase @dashes' lookup Vertical_Kerning_06 @Uppercase ;
+  pos @Uppercase @spaces @dashes' lookup Vertical_Kerning_06 @spaces @Uppercase ;
+  pos @lining_numbers @dashes' lookup Vertical_Kerning_07 @lining_numbers ;
+  pos @lining_numbers @spaces @dashes' lookup Vertical_Kerning_07 @spaces @lining_numbers ;
+} kern_Vertical_dashes ;
+
+lookup kern_Vertical_slashes {
+  @allupper = [ @Uppercase @lining_numbers ] ;
+  pos @allupper slash' lookup Vertical_Kerning_08 @allupper ;
+  pos @allupper @spaces slash' lookup Vertical_Kerning_08 @spaces @allupper ;
+} kern_Vertical_slashes ;";
 tag = kern;
 }
 );

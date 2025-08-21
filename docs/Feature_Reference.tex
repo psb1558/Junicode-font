@@ -134,12 +134,15 @@ Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin
 accessed only through this feature.
 
 \subsection{\textSourceText{case} – Case-Sensitive Forms}
-Produces\index{case} combining marks that harmonize with capital letters: {\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
+Produces\index{case} combining marks that harmonize with capital letters:
+{\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
 likelihood that a combining mark will collide with a glyph in the line above. Some applications turn this
 feature on automatically for runs of capitals, and precomposed characters
 (e.g. \textex{É} \unic{U+00C9}, \textex{Ū} \unic{U+016A})
 already use case-appropriate combining marks. This feature also changes oldstyle to
-lining figures, since these harmonize better with uppercase letters.
+lining figures, since these harmonize better with uppercase letters. (Some fonts use this feature
+to raise hyphens and dashes between capitals and lining numbers, but Junicode uses contextual
+kerning instead.)
 
 \section{Alphabetic Variants}
 \subsection{\textSourceText{cv01-cv52} – Basic Latin and Greek Variants}\hypertarget{LatGrkVariants}

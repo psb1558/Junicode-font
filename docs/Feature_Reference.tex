@@ -142,7 +142,7 @@ feature on automatically for runs of capitals, and precomposed characters
 already use case-appropriate combining marks. This feature also changes oldstyle to
 lining figures, since these harmonize better with uppercase letters. (Some fonts use this feature
 to raise hyphens and dashes between capitals and lining numbers, but Junicode uses contextual
-kerning instead.)
+kerning instead: a–b A–B.)
 
 \section{Alphabetic Variants}
 \subsection{\textSourceText{cv01-cv52} – Basic Latin and Greek Variants}\hypertarget{LatGrkVariants}
@@ -690,6 +690,9 @@ For this feature to work properly,
 \textSourceText{calt}\index{calt} “Contextual Alternates” must also be enabled (as it should be by default: see
 \hyperlink{req}{Required Features} below).  This feature does not work in {\ltech}, except in harf mode.
 
+\subsection{\textSourceText{cv68} – Variant of ʔ (\unic{U+0294}, glottal stop)}
+1=\cvd{68}{ʔ}\index{cv68|textbf}.
+
 \subsection{\textSourceText{salt} –
 Stylistic\index{salt|textbf} Alternates (medieval capitals, etc.)}\hypertarget{salt}{}
 Junicode has two series of decorative capitals in medieval scripts. These affect only the letters
@@ -720,12 +723,11 @@ unavailable) are also gathered here:
 
 ꝭ: 1=\salti{0}{ꝭ}.
 
-ƿ: 1=\salti{0}{ƿ}.
+Ƿ: 1=\salti{0}{Ƿ}, 2= 1=\salti{1}{Ƿ}.
+
+ƿ: 1=\salti{0}{ƿ}, 2= 1=\salti{1}{ƿ}.
 \end{multicols}
 
-
-\subsection{\textSourceText{cv68} – Variant of ʔ (\unic{U+0294}, glottal stop)}
-1=\cvd{68}{ʔ}\index{cv68|textbf}.
 
 \section{Greek}
 Junicode has two distinct styles of Greek. In the roman face, it is upright and
@@ -896,6 +898,36 @@ a{\textcompwordmark}R\hfill→\hfill{}aR}
 a{\textcompwordmark}v\hfill→\hfill{}av}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}c\hfill→\hfill{}æc}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}ꝼ\hfill→\hfill{}æꝼ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}ᵹ\hfill→\hfill{}æᵹ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}m\hfill→\hfill{}æm}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}n\hfill→\hfill{}æn}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}p\hfill→\hfill{}æp}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}ꞃ\hfill→\hfill{}æꞃ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}ꞅ\hfill→\hfill{}æꞅ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}ꞇ\hfill→\hfill{}æꞇ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+æ{\textcompwordmark}x\hfill→\hfill{}æx}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 \cvd[1]{2}{a}{\textcompwordmark}{v}\hfill→\hfill{}\cvd[1]{2}{av}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -942,6 +974,9 @@ e{\textcompwordmark}n\hfill→\hfill{}en}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 e{\textcompwordmark}o\hfill→\hfill{}eo}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+e{\textcompwordmark}p\hfill→\hfill{}ep}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 e{\textcompwordmark}ꞃ\hfill→\hfill{}eꞃ}
@@ -1010,7 +1045,19 @@ k{\textcompwordmark}ẝ\hfill→\hfill{}kẝ}
 l{\textcompwordmark}l\hfill→\hfill{}ll}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+m{\textcompwordmark}a\hfill→\hfill{}ma}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+m{\textcompwordmark}e\hfill→\hfill{}me}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+m{\textcompwordmark}i\hfill→\hfill{}mi}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 n{\textcompwordmark}a\hfill→\hfill{}na}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+n{\textcompwordmark}e\hfill→\hfill{}ne}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 n{\textcompwordmark}i\hfill→\hfill{}ni}
@@ -1030,10 +1077,16 @@ O{\textcompwordmark}Ꝛ\hfill→\hfill{}OꝚ}
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 o{\textcompwordmark}ꝛ\hfill→\hfill{}oꝛ}
 
+\textsc{\color[rgb]{0.38039216,0.09019608,0.16078432}
+o{\textcompwordmark}ꝛ\hfill→\hfill{}oꝛ}
+
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 O{\textcompwordmark}Ꝝ\hfill→\hfill{}OꝜ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+o{\textcompwordmark}ꝝ\hfill→\hfill{}oꝝ}
+
+\textsc{\color[rgb]{0.38039216,0.09019608,0.16078432}
 o{\textcompwordmark}ꝝ\hfill→\hfill{}oꝝ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1044,6 +1097,9 @@ p{\textcompwordmark}p\hfill→\hfill{}pp}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 ꝓ{\textcompwordmark}p\hfill→\hfill{}ꝓp}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+ꝑ{\textcompwordmark}ꝑ\hfill→\hfill{}ꝑꝑ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 P{\textcompwordmark}s\hfill→\hfill{}Ps}
@@ -1092,6 +1148,9 @@ q{\textcompwordmark}ꝛ\hfill→\hfill{}qꝛ}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 ꞇ{\textcompwordmark}ꞇ\hfill→\hfill{}ꞇꞇ}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
+U{\textcompwordmark}✝D\hfill→\hfill{}U✝D}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 U{\textcompwordmark}E\hfill→\hfill{}UE}
@@ -1257,7 +1316,11 @@ Colons,\index{ss18|textbf} semicolons, parentheses, quotation marks and several 
 (\unic{U+204A / U+2E52}, Tironian nota)}
 1=\cvd{69}{⁊⹒}, 2=\cvd[1]{69}{⁊⹒}, 3=\cvd[2]{69}{⁊⹒}, 4=\cvd[3]{69}{⁊⹒}, 5=\cvd[4]{69}{⁊⹒},
 6=\cvd[5]{69}{⁊⹒}, 7=\cvd[6]{69}{⁊⹒}, 8=\cvd[7]{69}{⁊⹒}, 9=\cvd[8]{69}{⁊⹒},
-10=\cvd[9]{69}{⁊⹒}, 11=\cvd[10]{69}{⁊⹒}.\index{cv69|textbf}
+10=\cvd[9]{69}{⁊⹒}, 11=\cvd[10]{69}{⁊⹒}.\index{cv69|textbf} The Tironian \textit{nota} was
+used throughout the Middle Ages, and it took a wide variety of shapes. The default glyphs and those
+on indexes 3, 4, and 11 are suitable for early medieval text, while those on indexes 1, 2, and 5
+are more appropriate for later medieval text. Those on indexes 6, 7, and 8 are intended as
+compromises, suitable for text of any period.
 
 \subsection{\textSourceText{cv70} –
   Variants of . (period)}\index{cv70|textbf}
@@ -1553,61 +1616,20 @@ attention to them, since they will likely have their own method of representing 
 \hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
 
 \subsection{\textSourceText{ss20} – Low Diacritics}
-The\index{ss20|textbf} MUFI recommendation includes a number of precomposed characters with base letters
-{\addfontfeature{Language=Icelandic}b, h, k, {\th}, ꝺ and {\dh}} and a number of combining
-marks. Instead of being positioned above ascender height as usual (e.g.
+The\index{ss20|textbf} MUFI recommendation includes a number of precomposed characters consisting of
+base letters with ascenders (e.g. \textex{b}, \textex{þ}) and a number of combining marks.
+Instead of being positioned above ascender height as usual (e.g.
 \textex{hͣ}), the MUFI glyphs have the marks positioned above the x-height
 (e.g. \textex{\addfontfeature{StylisticSet=20}hͣ}).
 Using the MUFI code points for these precomposed glyphs can interfere with searching
 and drastically reduce accessibility. Users of Junicode should instead use a sequence of base character + combining
-mark, and apply \textSourceText{ss20} to the two glyphs. Variant shapes of \textex{ꝺ} and \textex{{\dh}}
+mark, and apply \textSourceText{ss20} to the two glyphs. Affected base letters are
+\textex{b}, \textex{d}, \textex{ð}, \textex{ꝺ}, \textex{h}, \textex{ħ}, \textex{k}, \textex{þ},
+and \textex{ꟓ} with variants: other letters are not affected.
+Variant shapes of \textex{ꝺ} and \textex{{\dh}}
 that accommodate the combining mark will be substituted for the normal base characters (but this is not necessary for
-the other base characters). Examples:
-\textex{\addfontfeature{StylisticSet=20}bͦ ꝺᷦ \cvd[14]{84}{h̄} kͤ {\th}ͭ ðᷢ}. These marks are affected by this
-feature:
-
-\begin{multicols}{3}
-  \jSmCond\color{BrickRed}◌ͣ (\unic{U+0363})
-
-  ◌ᷓ (\unic{U+1DD3})
-
-  ◌ͤ (\unic{U+0364})
-
-  \cvd[14]{84}{◌͏̄} (\unic{U+0304}\slash\textSourceText{cv84[15]})\index{cv84}
-
-  ◌ᷞ (\unic{U+1DDE})
-
-  \cvd[18]{84}{◌͏̄} (\unic{U+0304}\slash\textSourceText{cv84[19]})\index{cv84}.
-
-  ◌ͦ (\unic{U+0366})
-
-  ◌ͬ (\unic{U+036C})
-
-  ◌ᷢ (\unic{U+1DE2})
-
-  ◌ᷣ (\unic{U+1DE3})
-
-  \cvd{87}{◌ᷣ} (\unic{U+1DE3}\slash\textSourceText{cv87[1]})
-
-  ◌ͭ (\unic{U+036D})
-
-  ◌ᫎ (\unic{U+1ACE})
-
-  ◌ͧ (\unic{U+0367})
-
-  ◌ͮ (\unic{U+036E})
-
-  ◌ᷦ (\unic{U+1DE6})
-
-  ◌͛ (\unic{U+035B})
-  \end{multicols}
-
-\noindent\textSourceText{ss20} is intended for use only with the diacritics and base characters listed here; other
-base+diacritic combinations may be disrupted by the feature. You should therefore apply it only to
-relevant base+diacritic pairs (e.g. via a style in InDesign or a word processor or a command in
-{\LuaTeX}).
-
-
+other base characters). Examples:
+\textex{\addfontfeature{StylisticSet=20}bͦ ꝺᷦ \cvd[14]{84}{h̄} kͤ {\th}ͭ ðᷢ}.
 
 \subsection{\textSourceText{cv85} – Variant of ◌ᷓ (U+1DD3, combining open a)}
 1=\cvd{85}{◌ᷓ}.\index{cv85|textbf}

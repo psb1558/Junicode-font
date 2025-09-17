@@ -1,6 +1,6 @@
 font:
-  in: JunicodeVF-Italic.ttf
-  out: JunicodeVF-Italic-hinted.ttf
+  in: /Users/peterbaker/work/GitHub/Junicode-New/source/dist/JunicodeVF-Italic.ttf
+  out: /Users/peterbaker/work/GitHub/Junicode-New/fonts/variable/JunicodeVF-Italic.ttf
 defaults:
   init_graphics: false
   cleartype: true
@@ -56674,13 +56674,13 @@ glyphs:
         pos: lc-baseline-undershoot
         points:
         - ptid: '{183;33}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{293;416}'
         pos: xheight
         points:
         - ptid: '{293;375}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{80;633}'
         points:
@@ -61860,6 +61860,163 @@ glyphs:
           ref: '{288;276}'
           rel: stem
           round: false
+  D_o.hlig:
+    y:
+      points:
+      - ptid:
+          base: '{130;0}'
+          pt-a: '{4;-3}'
+          pt-b: '{14;34}'
+          pt-a-sh: '{318;-3}'
+        macro:
+          nm: cap-serif
+      - ptid: '{293;26}'
+        ref: '{130;0}'
+        rel: stem
+      - ptid: '{411;666}'
+        pos: cap-height
+        points:
+        - ptid: '{181;628}'
+          rel: stem
+        - ptid: '{413;635}'
+          rel: stem
+      - ptid: '{837;505}'
+        points:
+        - ptid: '{911;762}'
+          rel: stem
+      - ptid:
+        - '{912;735}'
+        - '{845;535}'
+        ref:
+        - '{911;762}'
+        - '{837;505}'
+        rel: interpolate
+    props:
+      category: Lu
+  d_o.hlig:
+    y:
+      points:
+      - ptid: '{95;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{136;40}'
+          rel: stem
+        - ptid: '{315;-13}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{366;55}'
+            rel: stem
+      - ptid: '{299;416}'
+        pos: xheight
+        points:
+        - ptid: '{286;384}'
+          rel: stem
+      - ptid: '{491;725}'
+        pos: lc-f-top
+        points:
+        - ptid: '{377;698}'
+          rel: stem
+          points:
+          - ptid: '{377;673}'
+            rel: stem
+      - ptid: '{577;505}'
+        points:
+        - ptid: '{651;762}'
+          rel: stem
+      - ptid:
+        - '{652;735}'
+        - '{585;535}'
+        ref:
+        - '{651;762}'
+        - '{577;505}'
+        rel: interpolate
+    props:
+      category: Ll
+  f_o.hlig:
+    y:
+      points:
+      - ptid: '{-65;-269}'
+        pos: lc-descender
+        points:
+        - ptid: '{-33;-228}'
+          rel: stem
+      - ptid: '{353;715}'
+        pos: lc-f-top
+        points:
+        - ptid: '{342;681}'
+          rel: stem
+      - ptid: '{195;411}'
+        pos: f-bar-top
+        points:
+        - ptid: '{136;411}'
+          rel: shift
+        - ptid: '{188;373}'
+          rel: stem
+          points:
+          - ptid: '{129;373}'
+            rel: shift
+      - ptid: '{463;314}'
+        points:
+        - ptid: '{537;571}'
+          rel: stem
+      - ptid:
+        - '{538;544}'
+        - '{471;344}'
+        ref:
+        - '{537;571}'
+        - '{463;314}'
+        rel: interpolate
+    props:
+      category: Ll
+  uniA77A006F.hlig:
+    y:
+      points:
+      - ptid: '{171;-13}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{183;33}'
+          rel: stem
+      - ptid: '{293;416}'
+        pos: xheight
+        points:
+        - ptid: '{80;633}'
+          rel: shift
+        - ptid: '{293;375}'
+          rel: stem
+      - ptid: '{463;503}'
+        points:
+        - ptid: '{537;760}'
+          rel: stem
+      - ptid:
+        - '{538;733}'
+        - '{471;533}'
+        ref:
+        - '{537;760}'
+        - '{463;503}'
+        rel: interpolate
+    props:
+      category: Ll
+  semicolon.alt9:
+    y:
+      points:
+      - ptid: '{131;115}'
+        points:
+        - ptid: '{-4;-180}'
+          rel: stem
+        - ptid: '{152;225}'
+          rel: stem
+          points:
+          - ptid: '{156;339}'
+            rel: stem
+            dist: period-width
+            points:
+            - ptid: '{196;449}'
+              rel: stem
+              points:
+              - ptid: '{200;563}'
+                rel: stem
+                dist: period-width
 masters:
   wght-min:
     name: wght-min

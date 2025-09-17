@@ -1783,7 +1783,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2025-09-14 00:15:01 +0000";
+date = "2025-09-16 23:13:28 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -3053,15 +3053,6 @@ lookup tagligs {
  sub period one.tag zero.tag by uni2E4E.alt2 ;
  sub period one.tag one.tag by uni2E4E.alt3 ;
  sub period one.tag two.tag by uni2E4E.alt4 ;
-# New punctus elevatus shapes:
- sub period two.tag two.tag by uni2E4E.alt5 ;
- sub period two.tag three.tag by uni2E4E.alt6 ;
- sub period two.tag four.tag by uni2E4E.alt7 ;
- sub period two.tag five.tag by uni2E4E.enlarged ;
- sub period two.tag six.tag by uni2E4E.alt5.enlarged ;
- sub period two.tag seven.tag by uni2E4E.alt6.enlarged ;
- sub period two.tag eight.tag by uni2E4E.alt7.enlarged ;
-#
  sub period one.tag three.tag by exclam.alt2 ;
  sub period one.tag four.tag by question.alt2 ;
  sub period one.tag five.tag by question.alt3 ;
@@ -3071,6 +3062,14 @@ lookup tagligs {
  sub period one.tag nine.tag by dottedsolidus ;
  sub period two.tag zero.tag by slash.alt ;
  sub period two.tag one.tag by periodcentered.alt1 ;
+ sub period two.tag two.tag by uni2E4E.alt5 ;
+ sub period two.tag three.tag by uni2E4E.alt6 ;
+ sub period two.tag four.tag by uni2E4E.alt7 ;
+ sub period two.tag five.tag by uni2E4E.enlarged ;
+ sub period two.tag six.tag by uni2E4E.alt5.enlarged ;
+ sub period two.tag seven.tag by uni2E4E.alt6.enlarged ;
+ sub period two.tag eight.tag by uni2E4E.alt7.enlarged ;
+ sub period two.tag nine.tag by semicolon.alt9 ; # NEW
  sub macroncomb zero.tag one.tag by macroncomb.alt1 ;
  sub macroncomb zero.tag two.tag by macroncomb.alt2 ;
  sub macroncomb zero.tag three.tag by overlinecomb.alt ;
@@ -3479,6 +3478,7 @@ lookup tagligs {
  sub semicolon a.tag six.tag by semicolon.alt6 ;
  sub semicolon a.tag seven.tag by semicolon.alt7 ;
  sub semicolon a.tag eight.tag by semicolon.alt8 ;
+ sub semicolon a.tag nine.tag by semicolon.alt9 ; # NEW
  sub uni2E4E a.tag one.tag by uni2E4E.alt1 ;
  sub uni2E4E a.tag two.tag by uni2E4E.alt2 ;
  sub uni2E4E a.tag three.tag by uni2E4E.alt3 ;
@@ -7121,7 +7121,7 @@ sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1       
                   uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2           # 10-14
                   question.alt3 question.alt4 asciitilde.alt asterisk.alt dottedsolidus      # 15-19
                   slash.alt uni2E4E.alt5 uni2E4E.alt6 uni2E4E.alt7 uni2E4D.alt1              # 20-24
-                  uni2E4D.alt2 hyphen.twoshaped swungdash swungdashstroke ] ;	#25-
+                  uni2E4D.alt2 hyphen.twoshaped swungdash swungdashstroke semicolon.alt9 ] ; # 25-29
 ";
 tag = cv70;
 },
@@ -7188,10 +7188,13 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Positura with two dots and tick\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semicolon with dot above\";
+  };
 #  Character 0x003B;
 };
 sub semicolon from [ semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 semicolon.alt6
-                     semicolon.alt7 semicolon.alt8 ] ;
+                     semicolon.alt7 semicolon.alt8 semicolon.alt9 ] ;
 ";
 tag = cv73;
 },
@@ -10163,11 +10166,16 @@ sub b b by b_b.hlig ;
 sub b o by b_o.hlig ;
 sub c h by c_h.hlig ;
 sub c k by c_k.hlig ;
+sub d o by d_o.hlig ;
 sub dinsular dinsular by dinsular_dinsular.hlig ;
 sub dinsular e by dinsular_e.hlig ;
 sub dinsular o by dinsular_o.hlig ;
+sub dinsular.enlarged o by dinsular_o.hlig.enlarged ;
+sub dinsular.enlarged o.enlarged by dinsular_o.hlig.enlarged ;
+sub dinsular.enlarged O.enlarged by dinsular_o.hlig.enlarged ;
 # sub dinsular v by dinsular_v.hlig ;
 sub d e by d_e.hlig ;
+sub D o by D_o.hlig ;
 sub e a by e_a.hlig ;
 sub e c by e_c.hlig ;
 sub e e by e_e.hlig ;
@@ -10186,6 +10194,8 @@ sub e y by e_y.hlig ;
 sub eth.loclENG eth.loclENG by eth_eth.loclENG.hlig ;
 sub f adieresis by f_adieresis.hlig ;
 sub f.alt adieresis by f_adieresis.hlig ;
+sub f o by f_o.hlig ;
+sub f.alt o by f_o.hlig ;
 sub g d by g_d.hlig ;
 sub g eth by g_eth.hlig ;
 sub g dinsular by g_dinsular.hlig ;
@@ -10314,39 +10324,50 @@ code = "lookupflag IgnoreMarks;
 tag = dlig;
 },
 {
-code = "sub b.lf by b.lf.lowtop ;
-sub h.lf by h.lf.lowtop ;
-sub k.lf by k.lf.lowtop ;
-sub thorn.lf by thorn.lf.lowtop ;
-sub thorn.loclENG.lf by thorn.loclENG.lf.lowtop ;
-sub b by b.lowtop ;
-sub d by d.lowtop ;
-# sub dinsular by dinsular.lowtop ;
-# sub eth by eth.lowtop ;
-sub h by h.lowtop ;
-sub hbar by hbar.lowtop ;
-sub k by k.lowtop ;
-sub kstroke by kstroke.lowtop ;
-sub thorn by thorn.lowtop ;
-sub thorndouble by thorndouble.lowtop ;
-sub thornstrokethroughdescender by thornstrokethroughdescender.lowtop ;
-sub h.alt by h.alt.lowtop ;
-sub k.alt1 by k.alt1.lowtop ;
-sub h.alt2 by k.alt2.lowtop ;
-sub h.alt3 by h.alt3.lowtop ;
-sub k.alt3 by k.alt3.lowtop ;
-sub k.alt4 by k.alt4.lowtop ;
-sub thorn.loclENG by thorn.loclENG.lowtop ;
-sub dinsular by dinsular.withdiacritic.lowtop ;
-sub eth by eth.withdiacritic.lowtop ;
-sub h.alt.enlarged by h.alt.enlarged.lowtop ;
-sub h.alt3.enlarged by h.alt3.enlarged.lowtop ;
-sub b.enlarged by b.enlarged.lowtop ;
-sub h.enlarged by h.enlarged.lowtop ;
-sub k.enlarged by k.enlarged.lowtop ;
-sub thorn.enlarged by thorn.enlarged.lowtop ;
-sub thorn_thorn.hlig by thorn_thorn.hlig.lowtop ;
+code = "@latincombtopanchor = [ Bcomb Dcomb Gcomb Kcomb Lcomb Mcomb Ncomb Rcomb Tcomb aNcomb aRcomb acomb aecomb ancomb aocomb arcomb avcomb bcomb ccomb dcomb dotacutecomb dotlessicomb ecomb emacroncomb eogonekcomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb jcomb jdotlesscomb kcomb lcomb longscomb mcomb ncomb ocomb omacroncomb oogonekcomb orrotcomb orumrotundacomb oslashcomb pcomb qcomb rcomb rrotundacomb rumrotundacomb scomb tcomb thorncomb ucomb tinsularcomb vcomb wcomb xcomb ycomb zcomb flattenedopenaabovecomb.alt insulardcomb.alt rrotundacomb.alt ethcomb.loclENG thorncomb.loclENG aacutecomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commaabovecomb_gravecomb commareversedabovecomb commareversedabovecomb_gravecomb commareversedabovecomb_acutecomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb aeacutecomb amacroncomb breveacutecomb brevegravecomb ccedillacomb circumflexacutecomb circumflexgravecomb circumflexhookabovecomb circumflextildecomb eacutecomb etcomb macronacutecomb muncialcomb oogonekabovecomb spiritusasper tildeacutecomb u035B0301 tripleacute ginsularcomb rinsularcomb urabovecomb dieresiscomb.alt overlinecomb.alt macroncomb.alt1 zigzagabovecomb.alt1 macroncomb.alt2 macroncomb.alt3 zigzagabovecomb.alt3 macroncomb.alt4 macroncomb.alt5 eogonekcomb.alt eogonekcomb.alt1 zigzagabovecomb.mkmk ogonekabovecomb.mkmk macroncomb.narrow tildecomb.wide macroncomb.wide zigzagabovecomb.alt3.ff zigzagabovecomb.alt1.mkmk zigzagabovecomb.alt2.mkmk zigzagabovecomb.alt3.mkmk macroncomb.alt3.wide ] ;
 
+@targetbase = [ b.lf h.lf k.lf thorn.lf thorn.loclENG.lf b d h hbar k kstroke thorn thorndouble thornstrokethroughdescender h.alt k.alt1 h.alt2 h.alt3 k.alt3 k.alt4 thorn.loclENG dinsular eth h.alt.enlarged h.alt3.enlarged b.enlarged h.enlarged k.enlarged thorn.enlarged thorn_thorn.hlig ] ;
+
+@resultbase = [ b.lf.lowtop h.lf.lowtop k.lf.lowtop thorn.lf.lowtop thorn.loclENG.lf.lowtop b.lowtop d.lowtop h.lowtop hbar.lowtop k.lowtop kstroke.lowtop thorn.lowtop thorndouble.lowtop thornstrokethroughdescender.lowtop h.alt.lowtop k.alt1.lowtop k.alt2.lowtop h.alt3.lowtop k.alt3.lowtop k.alt4.lowtop thorn.loclENG.lowtop dinsular.withdiacritic.lowtop eth.withdiacritic.lowtop h.alt.enlarged.lowtop h.alt3.enlarged.lowtop b.enlarged.lowtop h.enlarged.lowtop k.enlarged.lowtop thorn.enlarged.lowtop thorn_thorn.hlig.lowtop ] ;
+
+lookupflag UseMarkFilteringSet [ @latincombtopanchor graphemejoinercomb ] ;
+
+sub @targetbase' @latincombtopanchor by @resultbase ;
+sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
+
+#sub b.lf by b.lf.lowtop ;
+#sub h.lf by h.lf.lowtop ;
+#sub k.lf by k.lf.lowtop ;
+#sub thorn.lf by thorn.lf.lowtop ;
+#sub thorn.loclENG.lf by thorn.loclENG.lf.lowtop ;
+#sub b by b.lowtop ;
+#sub d by d.lowtop ;
+## sub dinsular by dinsular.lowtop ;
+## sub eth by eth.lowtop ;
+#sub h by h.lowtop ;
+#sub hbar by hbar.lowtop ;
+#sub k by k.lowtop ;
+#sub kstroke by kstroke.lowtop ;
+#sub thorn by thorn.lowtop ;
+#sub thorndouble by thorndouble.lowtop ;
+#sub thornstrokethroughdescender by thornstrokethroughdescender.lowtop ;
+#sub h.alt by h.alt.lowtop ;
+#sub k.alt1 by k.alt1.lowtop ;
+#sub h.alt2 by k.alt2.lowtop ;
+#sub h.alt3 by h.alt3.lowtop ;
+#sub k.alt3 by k.alt3.lowtop ;
+#sub k.alt4 by k.alt4.lowtop ;
+#sub thorn.loclENG by thorn.loclENG.lowtop ;
+#sub dinsular by dinsular.withdiacritic.lowtop ;
+#sub eth by eth.withdiacritic.lowtop ;
+#sub h.alt.enlarged by h.alt.enlarged.lowtop ;
+#sub h.alt3.enlarged by h.alt3.enlarged.lowtop ;
+#sub b.enlarged by b.enlarged.lowtop ;
+#sub h.enlarged by h.enlarged.lowtop ;
+#sub k.enlarged by k.enlarged.lowtop ;
+#sub thorn.enlarged by thorn.enlarged.lowtop ;
+#sub thorn_thorn.hlig by thorn_thorn.hlig.lowtop ;
+#
 # lookup sub_low_diacritics ;
 #  sub acomb by acomb.low ;
 #  sub flattenedopenaabovecomb by flattenedopenaabovecomb.low ;
@@ -11022,10 +11043,6 @@ pos = (210,590);
 },
 {
 pos = (110,585);
-},
-{
-angle = 180;
-pos = (-26,284);
 },
 {
 pos = (215,276);

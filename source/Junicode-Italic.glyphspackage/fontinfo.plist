@@ -2017,7 +2017,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2025-09-14 00:08:25 +0000";
+date = "2025-09-16 23:13:50 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -3287,6 +3287,7 @@ lookup tagligs {
  sub period one.tag nine.tag by uni2E4A ;
  sub period two.tag zero.tag by slash.alt ;
  sub period two.tag one.tag by periodcentered.alt1 ;
+ sub period two.tag nine.tag by semicolon.alt9 ; # NEW
  sub macroncomb zero.tag one.tag by macroncomb.alt1 ;
  sub macroncomb zero.tag two.tag by macroncomb.alt2 ;
  sub macroncomb zero.tag three.tag by overlinecomb.alt ;
@@ -3695,6 +3696,7 @@ lookup tagligs {
  sub semicolon a.tag six.tag by semicolon.alt6 ;
  sub semicolon a.tag seven.tag by semicolon.alt7 ;
  sub semicolon a.tag eight.tag by semicolon.alt8 ;
+ sub semicolon a.tag nine.tag by semicolon.alt9 ; # NEW
  sub uni2E4E a.tag one.tag by uni2E4E.alt1 ;
  sub uni2E4E a.tag two.tag by uni2E4E.alt2 ;
  sub uni2E4E a.tag three.tag by uni2E4E.alt3 ;
@@ -7244,7 +7246,7 @@ sub period from [ periodcentered.alt comma.alt1 comma.alt2 semicolon.alt1       
                   semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 uni2E4E.alt1   # 5-9
                   uni2E4E.alt2 uni2E4E.alt3 uni2E4E.alt4 exclam.alt2 question.alt2           # 10-14
                   question.alt3 question.alt4 asciitilde.alt asterisk.alt uni2E4A            # 15-19
-                  slash.alt hyphen.twoshaped swungdash swungdashstroke ] ;                   # 23-
+                  slash.alt hyphen.twoshaped swungdash swungdashstroke semicolon.alt9 ] ;    # 23-29
 ";
 tag = cv70;
 },
@@ -7311,10 +7313,13 @@ code = "cvParameters {
   ParamUILabelNameID {
     name 3 1 0x0409 \"Positura with two dots and tick\";
   };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Semicolon with dot above\";
+  };
 #  Character 0x003B;
 };
 sub semicolon from [ semicolon.alt1 semicolon.alt2 semicolon.alt3 semicolon.alt4 semicolon.alt5 semicolon.alt6
-                     semicolon.alt7 semicolon.alt8 ] ;
+                     semicolon.alt7 semicolon.alt8 semicolon.alt9 ] ;
 ";
 tag = cv73;
 },
@@ -10255,6 +10260,9 @@ sub b b by b_b.hlig ;
 sub b o by b_o.hlig ;
 sub c h by c_h.hlig ;
 sub c k by c_k.hlig ;
+sub D o by D_o.hlig ;
+sub d o by d_o.hlig ;
+sub dinsular o by dinsular_o.hlig ;
 sub d e by d_e.hlig ;
 sub dinsular dinsular by dinsular_dinsular.hlig ;
 sub dinsular e by dinsular_e.hlig ;
@@ -10277,6 +10285,8 @@ sub e y by e_y.hlig ;
 sub eth.loclENG eth.loclENG by eth_eth.loclENG.hlig ;
 sub f adieresis by f_adieresis ;
 sub f.alt adieresis by f_adieresis ;
+sub f o by f_o.hlig ;
+sub f.alt o by f_o.hlig ;
 sub g d by g_d.hlig ;
 sub g eth by g_eth.hlig ;
 sub g dinsular by g_dinsular.hlig ;
@@ -10381,31 +10391,43 @@ sub t y by t_y.dlig ;
 tag = dlig;
 },
 {
-code = "sub thorn.lf by thorn.lf.lowtop ;
-sub thorn.loclENG.lf by thorn.loclENG.lf.lowtop ;
-sub b.lf by b.lf.lowtop ;
-sub h.lf by h.lf.lowtop ;
-sub k.lf by k.lf.lowtop ;
-sub b by b.lowtop ;
-sub d by d.lowtop ;
-sub dinsular by dinsular.withdiacritic ;
-# sub eth by eth.lowtop ;
-sub h by h.lowtop ;
-sub hbar by hbar.lowtop ;
-sub k by k.lowtop ;
-sub thorn by thorn.lowtop ;
-sub thorndouble by thorndouble.lowtop ;
-sub h.alt by h.alt.lowtop ;
-sub k.alt1 by k.alt1.lowtop ;
-sub h.alt3 by h.alt3.lowtop ;
-sub k.alt3 by k.alt3.lowtop ;
-sub k.alt4 by k.alt4.lowtop ;
-sub b.enlarged by b.enlarged.lowtop ;
-sub thorn.loclENG by thorn.loclENG.lowtop ;
-sub eth by eth.withdiacritic.lowtop ;
-sub h.alt.enlarged by h.alt.enlarged.lowtop ;
-sub h.alt3.enlarged by h.alt3.enlarged.lowtop ;
-sub thorn_thorn.hlig by thorn_thorn.hlig.lowtop ;
+code = "@latincombtopanchor = [ Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb brevehook ccomb dcomb dotacutecomb dotlessicomb ecomb ethcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb muncialcomb ncomb ocomb rcomb rrotundacomb scomb tcomb thorncomb ucomb vcomb xcomb zcomb dieresiscomb.alt flattenedopenaabovecomb.alt insulardcomb.alt rrotundacomb.alt circumacute.viet circumgrave.viet circumhook.viet ethcomb.loclENG thorncomb.loclENG Bcomb Dcomb Kcomb Tcomb aNcomb aRcomb aacutecomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commaabovecomb_gravecomb commareversedabovecomb commareversedabovecomb_gravecomb commareversedabovecomb_acutecomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb aeacutecomb amacroncomb ancomb arcomb bcomb breveacutecomb brevegravecomb carondotcomb ccedillacomb circumflextildecomb eacutecomb emacroncomb eogonekcomb etcomb fcomb jcomb jdotlesscomb macronacutecomb omacroncomb oogonekabovecomb oogonekcomb orrotcomb orumrotundacomb oslashcomb pcomb qcomb ringacutecomb rumrotundacomb spiritusasper u035B0301 uni1ACB uni1ACC uni1ACD tinsularcomb urabovecomb wcomb ycomb overlinecomb.alt macroncomb.alt1 zigzagabovecomb.alt1 macroncomb.alt2 macroncomb.alt3 zigzagabovecomb.alt3 macroncomb.alt4 macroncomb.alt5 zigzagabovecomb.d eogonekcomb.alt eogonekcomb.alt1 zigzagabovecomb.mkmk ogonekabovecomb.mkmk macroncomb.narrow tildecomb.wide macroncomb.wide zigzagabovecomb.alt1.mkmk zigzagabovecomb.alt2.mkmk zigzagabovecomb.alt3.mkmk macroncomb.alt3.wide ] ;
+
+@targetbase = [ thorn.lf thorn.loclENG.lf b.lf h.lf k.lf b d dinsular h hbar k thorn thorndouble h.alt k.alt1 h.alt3 k.alt3 k.alt4 b.enlarged thorn.loclENG eth h.alt.enlarged h.alt3.enlarged thorn_thorn.hlig ] ;
+
+@resultbase = [ thorn.lf.lowtop thorn.loclENG.lf.lowtop b.lf.lowtop h.lf.lowtop k.lf.lowtop b.lowtop d.lowtop dinsular.withdiacritic h.lowtop hbar.lowtop k.lowtop thorn.lowtop thorndouble.lowtop h.alt.lowtop k.alt1.lowtop h.alt3.lowtop k.alt3.lowtop k.alt4.lowtop b.enlarged.lowtop thorn.loclENG.lowtop eth.withdiacritic.lowtop h.alt.enlarged.lowtop h.alt3.enlarged.lowtop thorn_thorn.hlig.lowtop ] ;
+
+lookupflag UseMarkFilteringSet [ @latincombtopanchor graphemejoinercomb ] ;
+
+sub @targetbase' @latincombtopanchor by @resultbase ;
+sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
+
+
+#sub thorn.lf by thorn.lf.lowtop ;
+#sub thorn.loclENG.lf by thorn.loclENG.lf.lowtop ;
+#sub b.lf by b.lf.lowtop ;
+#sub h.lf by h.lf.lowtop ;
+#sub k.lf by k.lf.lowtop ;
+#sub b by b.lowtop ;
+#sub d by d.lowtop ;
+#sub dinsular by dinsular.withdiacritic ;
+## sub eth by eth.lowtop ;
+#sub h by h.lowtop ;
+#sub hbar by hbar.lowtop ;
+#sub k by k.lowtop ;
+#sub thorn by thorn.lowtop ;
+#sub thorndouble by thorndouble.lowtop ;
+#sub h.alt by h.alt.lowtop ;
+#sub k.alt1 by k.alt1.lowtop ;
+#sub h.alt3 by h.alt3.lowtop ;
+#sub k.alt3 by k.alt3.lowtop ;
+#sub k.alt4 by k.alt4.lowtop ;
+#sub b.enlarged by b.enlarged.lowtop ;
+#sub thorn.loclENG by thorn.loclENG.lowtop ;
+#sub eth by eth.withdiacritic.lowtop ;
+#sub h.alt.enlarged by h.alt.enlarged.lowtop ;
+#sub h.alt3.enlarged by h.alt3.enlarged.lowtop ;
+#sub thorn_thorn.hlig by thorn_thorn.hlig.lowtop ;
 ";
 labels = (
 {

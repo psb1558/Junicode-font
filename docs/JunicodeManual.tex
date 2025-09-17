@@ -5,6 +5,7 @@
 \begin{document}
 
 \addfontfeature{Script=Latin,Language=English,Contextuals=Alternate}
+\frontmatter
 
 \begin{titlepage}
 \huge\noindent
@@ -13,13 +14,18 @@
 \huge \centering the font for medievalists \\[1cm]
  \Huge\centering {\color{myRed}\ornm{d}} \\[1cm]
  \huge\centering {\jItalic specimens and user manual} \\[1ex]
- \Large\centering{\jRegular for version 2.218}\\
+ \Large\centering{\jRegular for version 2.219}\\
 \vfill
 {\color{myRed}\ornm{yyyyyyyyyyyyyyyyyy}}
 \end{titlepage}
 \cleardoublepage
 \thispagestyle{plain}
 
+
+\pagestyle{fancy}
+\fancyhead[CE]{\color{myRed} \thepage\hspace{10pt}%
+\addfontfeature{Letters=UppercaseSmallCaps}\leftmark}
+\fancyhead[CO]{\color{myRed}{\scshape junicode}\hspace{10pt}\thepage}
 \tableofcontents
 
 \mainmatter

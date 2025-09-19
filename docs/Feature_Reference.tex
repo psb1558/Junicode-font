@@ -955,6 +955,9 @@ c{\textcompwordmark}k\hfill→\hfill{}ck}
 ꝺ{\textcompwordmark}o\hfill→\hfill{}ꝺo}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+ꝺ{\textcompwordmark}v\hfill→\hfill{}ꝺv}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 d{\textcompwordmark}e\hfill→\hfill{}de}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1033,6 +1036,9 @@ g{\textcompwordmark}p\hfill→\hfill{}gp}
 g{\textcompwordmark}r\hfill→\hfill{}gr}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+g{\textcompwordmark}v\hfill→\hfill{}gv}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 H{\textcompwordmark}r\hfill→\hfill{}Hr}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1075,7 +1081,7 @@ n{\textcompwordmark}e\hfill→\hfill{}ne}
 n{\textcompwordmark}i\hfill→\hfill{}ni}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
-\textsc{n}{\textcompwordmark}ſ\hfill→\hfill{}\textsc{nſ}}
+\textsc{n}{\textcompwordmark}ſ\hfill→\hfill{}\textsc{nſ}}**
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
 n{\textcompwordmark}v\hfill→\hfill{}nv}
@@ -1189,6 +1195,9 @@ u{\textcompwordmark}u\hfill→\hfill{}uu}
 ð{\textcompwordmark}ð\hfill→\hfill{}ðð}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
+ð{\textcompwordmark}v\hfill→\hfill{}ðv}
+
+{\color[rgb]{0.38039216,0.09019608,0.16078432}
 {\th}\textcompwordmark{\th}\hfill→\hfill{}{\th}{\th}}
 
 {\color[rgb]{0.38039216,0.09019608,0.16078432}
@@ -1200,9 +1209,20 @@ u{\textcompwordmark}u\hfill→\hfill{}uu}
 \end{multicols}
 
 \noindent\addfontfeatures{Ligatures=histoff}
-Note: For the ligature \textex{\textsc{\hlig{nſ}}} to
+*\,The \textex{\hlig{aa}} ligature looks like \unic{U+A733} \textex{ꜳ}, but behaves differently.
+As in most other ligatures, each element has a set of anchors so that diacritics can be placed 
+over or under the element, e.g. \textex{\hlig{a{\char"34F\char"301}a}},
+\textex{\hlig{aa\char"34F\char"301}}.
+**\,For the ligature \textex{\textsc{\hlig{nſ}}} to
 work properly, \unic{U+017F} \textex{ſ} must be entered directly, not by applying an OpenType feature to
 \textex{s}.
+
+An alternative way to generate any of the ligatures listed above is to place
+\unic{U+200D} \textUName{zero width joiner}
+between the ligature’s elements (most ligatures require one joiner—a few three-part ligatures require
+two). This method does not require that \textSourceText{hlig} be on, and so can reduce 
+the amount of tagging needed in a text. \unic{U+200D} is not visible and is normally ignored in searching.
+Using it is as safe as using \textSourceText{hlig}.
 
 \subsection{\textSourceText{dlig} –
 Discretionary Ligatures}
@@ -1212,8 +1232,36 @@ The collection of discretionary ligatures in the italic face also includes
 \textex{\textit{\addfontfeature{Ligatures=Rare}as, is, us}}.
 
 
+\subsection{\unic{U+200D} \textUName{zero width joiner}}\hypertarget{zwj}{}
+
+The Unicode character \unic{U+200D} \textUName{zero width joiner} (ZWJ) provides an
+alternate method of entering many ligatures and diagraphs, including all ligatures
+available via \textSourceText{hlig} and the digraphs \textex{a‍a a‍e a‍o a‍u a‍v a‍y o‍e o‍o v‍y},
+with uppercase equivalents. For ligatures from
+\textSourceText{hlig}, the advantage of the ZWJ is that a text with many historic
+ligatures will require less tagging to turn \textSourceText{hlig} on and off (the
+feature is disruptive when it is on where it is not needed). The ZWJ causes two
+letters to be combined as a ligature.  Use it where you want a digraph to be searchable
+as its elements: for example, \unic{U+A733} \textUName{latin small letter aa} cannot
+ordinarily be searched as \textex{a} or \textex{aa}; if entered as \textSourceText{a
+\unic{U+200D} a}, it will be searchable as \textex{aa} (but not as \unic{U+A733}).
+Also, combining marks can be placed over the individual elements of ligatures but not
+over the elements of digraphs: the sequences \textSourceText{a \unic{U+034F U+0301
+U+200D} a} and \textSourceText{a \unic{U+200D} a \unic{U+034F
+U+0301}}\footnote{\ \unic{U+034F} \textUName{combining grapheme joiner} is needed to
+prevent the sequence \textSourceText{a \unic{U+0301}} being resolved as \textex{á}
+before the font’s OpenType programming can be run, preventing the formation of a
+ligature.} yield \textex{a{\char"034F\char"0301\char"200D}a} and
+\textex{a{\char"200D}a\char"034F\char"0301}, while an accent on \unic{U+A733} is
+centered on the digraph: \textex{ꜳ\char"0301}.
+
+
 \subsection{\textSourceText{ss17} – Rare
 Digraphs}\hypertarget{ss17}{}
+
+{\color{red}Note}: \textSourceText{ss17} is deprecated as of version 2.220, and it will be removed in version 2.225.
+Instead of \textSourceText{ss17}, use \unic{U+200D} \textUName{zero width joiner} (see previous section).
+
 By\index{ss17|textbf} “digraph” we mean conjoined letters that represent a phonetic value: the most common examples
 for western languages are \textex{{\ae}} and \textex{{\oe}} (though these, because they
 are so common, are not included in this feature). Use of this feature in web pages enables easier searches: for

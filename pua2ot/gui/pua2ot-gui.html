@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--
+    A GUI for PUA2OT.
+
+    Copyright (c) 2025 by Peter S. Baker
+    MIT License
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MUFI Private Use to OpenType Converter</title>
+        <style>
+            @font-face {
+                font-family: "junicode";
+                src: url("../fonts/JunicodeVF-Roman.woff2");
+                font-weight: 300 700;
+                font-stretch: 75% 125%;
+            }
+            @font-face {
+                font-family: "junicode";
+                src: url("../fonts/JunicodeVF-Italic.woff2");
+                font-style: italic;
+                font-weight: 300 700;
+                font-stretch: 75% 125%;
+            }
+            @font-face {
+                font-family: "notosans";
+                src: url("../fonts/NotoSans-Regular.woff2");
+            }
+            body {
+                font-family: junicode;
+                font-size: 150%;
+                line-height: 1.5;
+                margin-left: 10%;
+                margin-right: 10%;
+                font-feature-settings: "ss09";
+            }
+            fieldset {
+                flex: 1;
+                padding: 0;
+            }
+            .container {
+                display: flex;
+                column-gap: 10px;
+            }
+            #destbox {
+                font-feature-settings: "ss10", "cv69" 7;
+            }
+            .edit-box {
+                padding: 10px;
+                max-height: 400px;
+                overflow-y: auto;
+            }
+            .plainformat {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            h1 {
+                font-size: 120%;
+                font-weight: 400;
+                font-feature-settings: "smcp";
+            }
+            h2 {
+                font-size: 110%;
+                font-weight: 400;
+                font-feature-settings: "smcp";
+            }
+            div.edit-box p {
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+            div.edit-box p:first-of-type {
+                margin-top: 0em;
+            }
+            p.intro {
+                font-size: 80%;
+            }
+            li {
+                font-size: 80%;
+            }
+            td {
+                padding: 0px 10px;
+                vertical-align: top;
+            }
+            dt {
+                font-style: italic;
+                font-size: 80%;
+            }
+            dd {
+                font-size: 80%;
+            }
+            input[type="text"] {
+                width: 40ch;
+            }
+            legend {
+                font-family: notosans;
+                font-size: 70%;
+                color: rgb(99, 53, 183);
+            }
+            .codeview {
+                font-family: notosans;
+                font-size: 70%;
+            }
+            .code {
+                font-family: notosans;
+                font-size: 75%;
+            }
+            .unic {
+                font-feature-settings: "lnum", "tnum";
+            }
+            .pua {
+                color: red;
+            }
+            .dispopts {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>MUFI Private Use to OpenType Converter</h1>
+        <div id="boxes" class="container">
+            <fieldset>
+                <legend>Source</legend>
+            <div class="edit-box" id="sourcebox">
+                I þe feadereſ ⁊ ı þe ſuneſ ⁊ ı þe alı gaſteſ nome er bıgınneð ancrene ƿıſſe.
+                Rectı dılıgunꞇ ꞇe. I canꞇıcıſ ſponſa ad ſponſum.
+                Eſt rectum gramaꞇıcum ʀectū geomeꞇrıcum ʀectū ꞇeologıcum.
+                ꞇ ſunꞇ dıfferencıe  ꞇoꞇıꝺem regulaꝝ.
+                De recto ꞇeologıco ſermo nobıſ eſt. cuıꝰ regule ꝺue ſunꞇ.
+                Vna cırca coꝛdıſ dırectıonem lꞇera uerſaꞇur cca exꞇerıoꝛum
+                rectıfıcaꞇıonem. Rectı dılıgunꞇ ꞇe.
+                Lauerꝺ ſeıð godeſ ſpuſe ꞇo ıre ꝺeoreƿurðe ſpuſ.
+                e rıꞇe luuıeð þe. eo beoð rıꞇe þe luuıeð eer rıƿle.
+                nꞇ ᵹe ıne leoue ſuſtren abbeð monı deı ıcraueꞇ on me
+                eer rıƿle. onıe cunne rıƿlen beoð. a ꞇƿa beoð bımong alle.
+                ꝥ ıc culle ſpeoken of þur oƿer bone ƿıð goꝺes grace þe
+                an riƿleð þe heoꝛꞇe ⁊ makeð efne ⁊ ſmeðe ƿıð uꞇe cnoſt ⁊ dolc
+                of ƿo ınƿıꞇ ⁊ of ƿreıᵹende þe ſegge. er þu ſunegeſt
+                oþer þıſ nıſ naƿꞇ ıbeꞇ ᵹeꞇ aſe ƿel as ıꞇ ate.
+            </div>
+            </fieldset>
+            <fieldset>
+                <legend>Destination</legend>
+            <div class="edit-box" id="destbox">
+                The converted text will appear here.
+            </div>
+            </fieldset>
+        </div>
+        <div class="dispopts">
+            <div>
+            <input type="file" id="file_input">
+            </div>
+            <div>
+                <label for="edit_source" style="font-size: 80%;">Edit Source</label>
+                <input type="checkbox" id="edit_source">
+            </div>
+            <div>
+            <label id="mark_pua_label" for="mark_pua" style="font-size: 80%;">Mark Replaced Chars in Source:</label>
+            <input type="checkbox" id="mark_pua">
+            </div>
+            <div>
+            <label for="show_code" style="font-size: 80%;">Show Code:</label>
+            <input type="checkbox" id="show_code">
+            </div>
+            <div>
+            <button id="dnlbutton" type="button">Download</button>
+            </div>
+            <div>
+            <button id="cpybutton" type="button">Copy</button>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        Options:
+                    </td>
+                    <td>
+                        <label for="method_preference" >More legible markup:</label>
+                        <input type="checkbox" id="method_preference" value="0"><br>
+                        <label for="utag_entities">Use entities for Unicode tags:</label>
+                        <input type="checkbox" id="utag_entities" value="0"><br>
+                        <label for="alternate_unicodes">Alternate bases for:</label>
+                        <select id="alternate_unicodes" multiple>
+                            <option value="insular">Insular</option>
+                            <option value="smallcap">Small caps</option>
+                            <option value="punctuation">Punctuation</option>
+                            <option value="mark">Marks</option>
+                            <option value="currency">Currency</option>
+                            <option value="alpha">Misc. alphabetic</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="problem_unicodes">Keep problematic Unicodes:</label>
+                        <input type="checkbox" id="problem_unicodes" value="0"><br>
+                        <label for="default_features">Default features:</label>
+                        <input type="text" id="default_features" value='"ss10": 1, "cv69": 7'
+                            style="background-color: initial;"><br>
+                        <label for="non_word_tags">Non-word tags:</label>
+                        <input type="text" id="non_word_tags"
+                            value='"ss04", "ss05", "ss06", "pcap", "smcp", "hlig"'
+                            style="background-color: initial;"><br>
+                        <label for="language_choice">Language:</label>
+                        <select id="language_choice">
+                            <option value="en" selected>English</option>
+                            <option value="is">Icelandic</option>
+                            <option value="la">Latin</option>
+                            <option value="de">German</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="el">Greek</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <dialog id="lang_code_picker">
+                <form method="dialog">
+                    <p>Two-letter language tag:</p>
+                    <input type="text" id="langInput" name="langInput" placeholder="Language" required><br>
+                    <button type="button" value="cancel" id="language_cancel">Cancel</button> 
+                    <button type="submit" value="okay" id="language_okay">Okay</button>
+                </form>
+            </dialog>
+        </div>
+        <div><hr></div>
+        <p class="intro">
+            Load a text or html file (replacing the sample text) using the “Choose File”
+            (or “Browse”) button or drag it into the
+            “Source” box; the text will immediately be converted and displayed in the 
+            “Destination” box. Click “Download” or “Copy” to export the converted text.
+            The Options affect the conversion as follows:
+        </p>
+        <ul>
+            <li>
+                <b>More legible markup.</b> By default, the conversion prefers methods
+                using Unicode tags and (for ligatures) the zero-width joiner. Check this
+                box to make it prefer &lt;span&gt; tags with style attributes.
+            </li>
+            <li>
+                <b>Use entities for Unicode tags.</b> The conversion will insert
+                entities (not HTML entities, but Junicode’s). These may interfere with 
+                searching.
+            </li>
+            <li>
+                <b>Alternate bases.</b> For several categories of character, there
+                are alternate base characters (with different associated methods).
+                While the defaults have been chosen to maximize accessibility and 
+                minimize file size, many users may have good reasons to prefer the 
+                alternates. Click on any of the listed categories (hold down the 
+                shift or command/control keys to select more than one) to shift to
+                the alternate bases for that category.
+            </li>
+            <li>
+                <b>Keep problematic Unicodes.</b> In addition to PUA characters,
+                the script converts Unicodes that <i>look</i> like letters of the 
+                alphabet, but that most apps do not recognize as such. If you want to
+                keep these Unicodes, check this box.
+            </li>
+            <li>
+                <b>Default features.</b> These are the OpenType features that should
+                always be on in your document: the script needs to track them. On
+                export, they will be output to a &lt;div&gt; enclosing the text. This
+                is a list of key-value pairs, with the keys in quotation marks 
+                followed by a colon and a number (1 = “on”).
+            </li>
+            <li>
+                <b>Non-word tags.</b> Most OpenType features are applied to whole words;
+                the features listed here are instead applied to individual letters.
+                If you decide that another feature should be applied only to individual
+                letters, add it to this list. Tag names must be enclosed in quotation
+                marks and separated by commas.
+            </li>
+            <li>
+                <b>Language.</b> The language of the text. Be sure to set this, since
+                OpenType features may act differently depending on the language.
+            </li>
+        </ul>
+        <!-- <script src="pua2ot-gui-min.js"></script> -->
+        <script src="../src/PUA2OT_DATA.js"></script>
+        <script src="../src/pua2ot-common.js"></script>
+        <script src="../src/pua2ot-gui.js"></script>
+    </body>
+
+</html>

@@ -100,6 +100,11 @@ above stands for ``square.'' However, two-tag sequences are not capable of descr
 some cases, where the number of variants is large (especially for period, combining macron, and currency), the tags are
 not descriptive at all, but rather an index (the same numbers used in the corresponding \textSourceText{cvNN} features).
 
+Some tag sequences are applied to classes of character. \&\_\_p;\&\_\_c; makes petite caps, \&\_\_c;\&\_\_a;
+makes uppercase forms of combining marks, \&\_\_e;\&\_\_n; makes most enlarged minuscules, and \&\_\_i;\&\_\_n; makes
+most insular variants of alphabetic characters. To save space in a rather large section of this manual, these classes 
+are omitted from this table.
+
 These tags are compatible with Junicode's other OpenType features, including the \textSourceText{cvNN} features, 
 and can be mixed with
 them. They will not interfere with the placement of combining marks, which can come either before or after the tag-pair. 
@@ -495,11 +500,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash Macron with half serifs / 10A075\\\hline
 %
 \mufi{A} &
-{A\&\_\_i;\&\_\_n;} &
-{\restag{A\char"0E0069\char"0E006E}} &
-\arraybslash Insular A / F201\\\hline
-%
-\mufi{A} &
 {A\&\_\_s;\&\_\_q;} &
 {\restag{A\char"0E0073\char"0E0071}} &
 \arraybslash Square A / F13A\\\hline
@@ -508,16 +508,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {A\&\_\_s;\&\_\_d;} &
 {\restag{A\char"0E0073\char"0E0064}} &
 \arraybslash A with diagonal stroke / E8DA\\\hline
-%
-\nuni{A} &
-{A\&\_\_e;\&\_\_n;} &
-{\restag{A\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule A\\\hline
-%
-\mufi{a} &
-{a\&\_\_i;\&\_\_n;} &
-{\restag{a\char"0E0069\char"0E006E}} &
-\arraybslash Insular a / F200\\\hline
 %
 \mufi{a} &
 {a\&\_\_u;\&\_\_n;} &
@@ -560,11 +550,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash Pointed a / 10A005\\\hline
 %
 \mufi{a} &
-{a\&\_\_e;\&\_\_n;} &
-{\restag{a\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule a / EEE0\\\hline
-%
-\mufi{a} &
 {a\&\_\_o;\&\_\_n;} &
 {\restag{a\char"0E006F\char"0E006E}} &
 \arraybslash Enlarged oc-shaped a / 10A002\\\hline
@@ -574,40 +559,15 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{a\char"0E0069\char"0E0073}} &
 \arraybslash Insular a with short headstroke / 10A07C\\\hline
 %
-\nuni{B} &
-{B\&\_\_e;\&\_\_n;} &
-{\restag{B\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule B\\\hline
-%
-\nuni{B} &
-{B\&\_\_i;\&\_\_n;} &
-{\restag{B\char"0E0069\char"0E006E}} &
-\arraybslash Insular B\\\hline
-%
-\mufi{b} &
-{b\&\_\_e;\&\_\_n;} &
-{\restag{b\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule b / EEE1\\\hline
-%
 \mufi{C} &
 {C\&\_\_s;\&\_\_q;} &
 {\restag{C\char"0E0073\char"0E0071}} &
 \arraybslash Square C / F106\\\hline
 %
-\nuni{C} &
-{C\&\_\_e;\&\_\_n;} &
-{\restag{C\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule C\\\hline
-%
 \mufi{c} &
 {c\&\_\_c;\&\_\_u;} &
 {\restag{c\char"0E0063\char"0E0075}} &
 \arraybslash c with curl / F198\\\hline
-%
-\mufi{c} &
-{c\&\_\_e;\&\_\_n;} &
-{\restag{c\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule c / EEE2\\\hline
 %
 \mufi{c} &
 {c\&\_\_h;\&\_\_o;} &
@@ -618,16 +578,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {D\&\_\_i;\&\_\_e;} &
 {\restag{D\char"0E0069\char"0E0065}} &
 \arraybslash Enlarged minuscule insular D\\\hline
-%
-\stdu{D} &
-{D\&\_\_i;\&\_\_n;} &
-{\restag{D\char"0E0069\char"0E006E}} &
-\arraybslash Insular D / A779\\\hline
-%
-\nuni{D} &
-{D\&\_\_e;\&\_\_n;} &
-{\restag{D\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule D\\\hline
 %
 \stdu{d} &
 {d\&\_\_i;\&\_\_1;} &
@@ -655,11 +605,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash d with curl / F193\\\hline
 %
 \mufi{d} &
-{d\&\_\_e;\&\_\_n;} &
-{\restag{d\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule d / EEE3\\\hline
-%
-\mufi{d} &
 {d\&\_\_i;\&\_\_s;} &
 {\restag{d\char"0E0069\char"0E0073}} &
 \arraybslash Insular d with straight back / EEE3\\\hline
@@ -673,16 +618,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {E\&\_\_u;\&\_\_n;} &
 {\restag{E\char"0E0075\char"0E006E}} &
 \arraybslash Uncial E / F10A\\\hline
-%
-\nuni{E} &
-{E\&\_\_e;\&\_\_n;} &
-{\restag{E\char"0E0069\char"0E006E}} &
-\arraybslash Insular E\\\hline
-%
-\nuni{E} &
-{E\&\_\_e;\&\_\_n;} &
-{\restag{E\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule E\\\hline
 %
 \mufi{e} &
 {e\&\_\_u;\&\_\_n;} &
@@ -700,11 +635,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash High e with bar / F21A\\\hline
 %
 \mufi{e} &
-{e\&\_\_e;\&\_\_n;} &
-{\restag{e\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule e / EEE6\\\hline
-%
-\mufi{e} &
 {e\&\_\_s;\&\_\_t;} &
 {\restag{e\char"0E0073\char"0E0074}} &
 \arraybslash e with straight back and tongue / 10A058\\\hline
@@ -719,25 +649,10 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{e\char"0E0068\char"0E0068}} &
 \arraybslash High e with horn and tongue / 10A07E\\\hline
 %
-\stdu{F} &
-{F\&\_\_i;\&\_\_n;} &
-{\restag{F\char"0E0069\char"0E006E}} &
-\arraybslash Insular F / A77B\\\hline
-%
-\mufi{F} &
-{F\&\_\_e;\&\_\_n;} &
-{\restag{F\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule F / EEE7\\\hline
-%
 \nuni{F} &
 {F\&\_\_i;\&\_\_e;} &
 {\restag{F\char"0E0069\char"0E0065}} &
 \arraybslash Enlarged minuscule insular F\\\hline
-%
-\stdu{f} &
-{f\&\_\_i;\&\_\_n;} &
-{\restag{f\char"0E0069\char"0E006E}} &
-\arraybslash Insular f / A77C\\\hline
 %
 \mufi{f} &
 {f\&\_\_i;\&\_\_s;} &
@@ -775,19 +690,9 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash f with curl / F194\\\hline
 %
 \mufi{f} &
-{f\&\_\_e;\&\_\_n;} &
-{\restag{f\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule f / EEE7\\\hline
-%
-\mufi{f} &
 {f\&\_\_h;\&\_\_d;} &
 {\restag{f\char"0E0066\char"0E0064}} &
 \arraybslash f with half descender / 10A06F\\\hline
-%
-\stdu{G} &
-{G\&\_\_i;\&\_\_n;} &
-{\restag{G\char"0E0069\char"0E006E}} &
-\arraybslash Insular G / A77D\\\hline
 %
 \stdu{G} &
 {G\&\_\_o;\&\_\_r;} &
@@ -798,16 +703,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {G\&\_\_s;\&\_\_q;} &
 {\restag{G\char"0E0073\char"0E0071}} &
 \arraybslash Square G / F10E\\\hline
-%
-\nuni{G} &
-{G\&\_\_e;\&\_\_n;} &
-{\restag{G\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule G\\\hline
-%
-\stdu{g} & % ginsular
-{g\&\_\_i;\&\_\_n;} &
-{\restag{g\char"0E0069\char"0E006E}} &
-\arraybslash Insular g / 1D79\\\hline
 %
 \stdu{g} & % gorulum
 {g\&\_\_o;\&\_\_r;} &
@@ -823,11 +718,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {g\&\_\_c;\&\_\_u;} &
 {\restag{g\char"0E0063\char"0E0075}} &
 \arraybslash g with flourish / F196\\\hline
-%
-\mufi{g} & % g.enlarged
-{g\&\_\_e;\&\_\_n;} &
-{\restag{g\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule g / EEE8 \\\hline
 %
 \mufi{g} & % ginsular.enlarged
 {g\&\_\_n;\&\_\_e;} &
@@ -884,11 +774,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{H\char"0E0075\char"0E006E}} &
 \arraybslash Uncial H / F110\\\hline
 %
-\nuni{H} &
-{H\&\_\_e;\&\_\_n;} &
-{\restag{H\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule H\\\hline
-%
 \mufi{H} &
 {H\&\_\_h;\&\_\_l;} &
 {\restag{H\char"0E0068\char"0E006C}} &
@@ -903,11 +788,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {h\&\_\_a;\&\_\_u;} &
 {\restag{h\char"0E0061\char"0E0075}} &
 \arraybslash h-shaped \textit{autem} abbreviation / E8A3\\\hline
-%
-\mufi{h} &
-{h\&\_\_e;\&\_\_n;} &
-{\restag{h\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule h / EEE9\\\hline
 %
 \nuni{h} &
 {h\&\_\_e;\&\_\_d;} &
@@ -944,11 +824,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{I\char"0E0064\char"0E0065}} &
 \arraybslash I with descender / A7FE\\\hline
 %
-\nuni{I} &
-{I\&\_\_e;\&\_\_n;} &
-{\restag{I\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule I\\\hline
-%
 \mufi{I} &
 {I\&\_\_u;\&\_\_s;} &
 {\restag{I\char"0E0075\char"0E0073}} &
@@ -979,20 +854,10 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{i\char"0E0066\char"0E0032}} &
 \arraybslash i final form\\\hline
 %
-\mufi{i} &
-{i\&\_\_e;\&\_\_n;} &
-{\restag{i\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule i / EEEA\\\hline
-%
 \mufi{J} &
 {J\&\_\_d;\&\_\_a;} &
 {\restag{J\char"0E0064\char"0E0061}} &
 \arraybslash J with dot above / E15C\\\hline
-%
-\nuni{J} &
-{J\&\_\_e;\&\_\_n;} &
-{\restag{J\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule J\\\hline
 %
 \stdu{j} &
 {j\&\_\_d;\&\_\_l;} &
@@ -1008,16 +873,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {j\&\_\_d;\&\_\_a;} &
 {\restag{j\char"0E0064\char"0E0061}} &
 \arraybslash j with dot accent / F000D\\\hline
-%
-\mufi{j} &
-{j\&\_\_e;\&\_\_n;} &
-{\restag{j\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule j / EEEB\\\hline
-%
-\nuni{K} &
-{K\&\_\_e;\&\_\_n;} &
-{\restag{K\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule K\\\hline
 %
 \mufi{k} &
 {k\&\_\_u;\&\_\_n;} &
@@ -1045,29 +900,14 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash k with curl / F195\\\hline
 %
 \mufi{k} &
-{k\&\_\_e;\&\_\_n;} &
-{\restag{k\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule k / EEEC\\\hline
-%
-\mufi{k} &
 {k\&\_\_c;\&\_\_l;} &
 {\restag{k\char"0E0063\char"0E0069}} &
 \arraybslash k with c-like bars k / 10A077\\\hline
-%
-\nuni{L} &
-{L\&\_\_e;\&\_\_n;} &
-{\restag{L\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule L\\\hline
 %
 \mufi{l} &
 {l\&\_\_d;\&\_\_e;} &
 {\restag{l\char"0E0064\char"0E0065}} &
 \arraybslash Descending l / F222\\\hline
-%
-\mufi{l} &
-{l\&\_\_e;\&\_\_n;} &
-{\restag{l\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule l / EEED\\\hline
 %
 \stdu{l} &
 {l\&\_\_s;\&\_\_h;} &
@@ -1078,11 +918,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {l\&\_\_s;\&\_\_f;} &
 {\restag{l\char"0E0073\char"0E0066}} &
 \arraybslash {\tcomp l with high stroke ending with flourish / \ltab{F000F}}\\\hline
-%
-\nuni{l} &
-{l\&\_\_i;\&\_\_n;} &
-{\restag{l\char"0E0069\char"0E006E}} &
-\arraybslash {Insular l}\\\hline
 %
 \nuni{U+019A} &
 {ƚ\&\_\_c;\&\_\_u;} &
@@ -1104,11 +939,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{M\char"0E0061\char"0E0031}} &
 \arraybslash Epigraphic M / \ A7FF\\\hline
 %
-\nuni{M} &
-{M\&\_\_e;\&\_\_n;} &
-{\restag{M\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule M\\\hline
-%
 \mufi{m} &
 {m\&\_\_u;\&\_\_d;} &
 {\restag{m\char"0E0075\char"0E0064}} &
@@ -1125,19 +955,19 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash m with descender / F223\\\hline
 %
 \mufi{m} &
-{m\&\_\_e;\&\_\_n;} &
-{\restag{m\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule m / EEEE\\\hline
+{m\&\_\_u;\&\_\_e;} &
+{\restag{m\char"0E0075\char"0E0065}} &
+\arraybslash Enlarged uncial m / F225\\\hline
+%
+\mufi{m} &
+{m\&\_\_u;\&\_\_m;} &
+{\restag{m\char"0E0075\char"0E006D}} &
+\arraybslash Mediascule uncial m with descender / F226\\\hline
 %
 \mufi{N} &
 {N\&\_\_d;\&\_\_e;} &
 {\restag{N\char"0E0064\char"0E0065}} &
 \arraybslash N with descender / F229\\\hline
-%
-\mufi{N} &
-{N\&\_\_e;\&\_\_n;} &
-{\restag{N\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule n / EEEF\\\hline
 %
 \mufi{N} &
 {N\&\_\_l;\&\_\_d;} &
@@ -1160,11 +990,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash n with curl / F19A\\\hline
 %
 \mufi{n} &
-{n\&\_\_e;\&\_\_n;} &
-{\restag{n\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule n / EEEF\\\hline
-%
-\mufi{n} &
 {n\&\_\_s;\&\_\_d;} &
 {\restag{n\char"0E0073\char"0E0064}} &
 \arraybslash Small cap n with descender / F22A\\\hline
@@ -1184,30 +1009,10 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{n\char"0E0065\char"0E006D}} &
 \arraybslash {enim abbreviation}\\\hline
 %
-\nuni{O} &
-{O\&\_\_e;\&\_\_n;} &
-{\restag{O\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule O\\\hline
-%
-\mufi{o} &
-{o\&\_\_e;\&\_\_n;} &
-{\restag{o\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule o / EEF0\\\hline
-%
 \stdu{P} &
 {P\&\_\_r;\&\_\_e;} &
 {\restag{P\char"0E0072\char"0E0065}} &
 \arraybslash Reversed P / A7FC\\\hline
-%
-\nuni{P} &
-{P\&\_\_e;\&\_\_n;} &
-{\restag{P\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule P\\\hline
-%
-\mufi{p} &
-{p\&\_\_e;\&\_\_n;} &
-{\restag{p\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule p / EEF1\\\hline
 %
 \nuni{p} &
 {p\&\_\_a;\&\_\_1;} &
@@ -1229,40 +1034,15 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {\restag{Q\char"0E006C\char"0E0032\char"25CC\char"25CC}} &
 \arraybslash Q with long tail, two\\\hline
 %
-\nuni{Q} &
-{Q\&\_\_e;\&\_\_n;} &
-{\restag{Q\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule Q\\\hline
-%
 \mufi{q} &
 {q\&\_\_s;\&\_\_d;} &
 {\restag{q\char"0E0073\char"0E0064}} &
 \arraybslash q with diagonal stroke / E8B4\\\hline
 %
-\mufi{q} &
-{q\&\_\_e;\&\_\_n;} &
-{\restag{q\char"0E0065\char"0E006E}} &
-\arraybslash Enlarged minuscule q / EEF2\\\hline
-%
-\stdu{R} &
-{R\&\_\_i;\&\_\_n;} &
-\restag{R\char"0E0069\char"0E006E} &
-\arraybslash Insular R / A783\\\hline
-%
 \stdu{R} &
 {R\&\_\_r;\&\_\_o;} &
 \restag{R\char"0E0072\char"0E006F} &
 \arraybslash R rotunda / A75A\\\hline
-%
-\nuni{R} &
-{R\&\_\_e;\&\_\_n;} &
-\restag{R\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule R\\\hline
-%
-\stdu{r} &
-{r\&\_\_i;\&\_\_n;} &
-\restag{r\char"0E0069\char"0E006E} &
-\arraybslash Insular r / A782\\\hline
 %
 \stdu{r} &
 {r\&\_\_r;\&\_\_o;} &
@@ -1280,11 +1060,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash r with alternate curl\\\hline
 %
 \mufi{r} &
-{r\&\_\_e;\&\_\_n;} &
-\restag{r\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule r / EEF3\\\hline
-%
-\mufi{r} &
 {r\&\_\_i;\&\_\_b;} &
 \restag{r\char"0E0069\char"0E0062} &
 \arraybslash Insular r baseline form / 10A056\\\hline
@@ -1298,11 +1073,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {r\&\_\_l;\&\_\_s;} &
 \restag{r\char"0E006C\char"0E0073} &
 \arraybslash r with long leg and stroke / E7E4\\\hline
-%
-\stdu{S} &
-{S\&\_\_i;\&\_\_n;} &
-\restag{S\char"0E0069\char"0E006E} &
-\arraybslash Insular S / A784\\\hline
 %
 \stdu{S} &
 {S\&\_\_s;\&\_\_g;} &
@@ -1320,11 +1090,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash Reverse Z-shaped S / 10A03F\\\hline
 %
 \nuni{S} &
-{S\&\_\_e;\&\_\_n;} &
-\restag{S\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule S\\\hline
-%
-\nuni{S} &
 {S\&\_\_s;\&\_\_d;} &
 \restag{S\char"0E0073\char"0E0064} &
 \arraybslash {\tcomp S with diagonal stroke (Sanctus abbrev)}\\\hline
@@ -1338,11 +1103,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {S\&\_\_h;\&\_\_o;} &
 \restag{S\char"0E0068\char"0E0064} &
 \arraybslash {Hollow S}\\\hline
-%
-\stdu{s} &
-{s\&\_\_i;\&\_\_n;} &
-\restag{s\char"0E0069\char"0E006E} &
-\arraybslash Insular s / A785\\\hline
 %
 \mufi{s} &
 {s\&\_\_i;\&\_\_s;} &
@@ -1363,11 +1123,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {s\&\_\_l;\&\_\_o;} &
 \restag{s\char"0E006C\char"0E006F} &
 \arraybslash Long s / 017F\\\hline
-%
-\mufi{s} &
-{s\&\_\_e;\&\_\_n;} &
-\restag{s\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule s / EEF4\\\hline
 %
 \mufi{s} &
 {s\&\_\_l;\&\_\_d;} &
@@ -1414,30 +1169,10 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \restag{s\char"0E006C\char"0E0070} &
 \arraybslash {Long s with descender and loop / 10A067}\\\hline
 %
-\stdu{T} &
-{T\&\_\_i;\&\_\_n;} &
-\restag{T\char"0E0069\char"0E006E} &
-\arraybslash Insular T / A786\\\hline
-%
-\nuni{T} &
-{T\&\_\_e;\&\_\_n;} &
-\restag{T\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule T\\\hline
-%
-\stdu{t} &
-{t\&\_\_i;\&\_\_n;} &
-\restag{t\char"0E0069\char"0E006E} &
-\arraybslash Insular t / A787\\\hline
-%
 \mufi{t} &
 {t\&\_\_c;\&\_\_u;} &
 \restag{t\char"0E0063\char"0E0075} &
 \arraybslash t with curl / F199\\\hline
-%
-\mufi{t} &
-{t\&\_\_e;\&\_\_n;} &
-\restag{t\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule t / EEF5\\\hline
 %
 \mufi{t} &
 {t\&\_\_c;\&\_\_d;} &
@@ -1450,11 +1185,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash t with approach\\\hline
 %
 \nuni{U} &
-{U\&\_\_e;\&\_\_n;} &
-\restag{U\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule U\\\hline
-%
-\nuni{U} &
 {U\&\_\_l;\&\_\_c;} &
 \restag{U\char"0E006C\char"0E0063} &
 \arraybslash Lowercase-shaped U\\\hline
@@ -1463,16 +1193,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {U\&\_\_l;\&\_\_d;} &
 \restag{U\char"0E006C\char"0E0064} &
 \arraybslash {\tcomp Lowercase-shaped U with descender / 10A048}\\\hline
-%
-\mufi{u} &
-{u\&\_\_e;\&\_\_n;} &
-\restag{u\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule u / EEF7\\\hline
-%
-\nuni{V} &
-{V\&\_\_e;\&\_\_n;} &
-\restag{V\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule V\\\hline
 %
 \mufi{v} &
 {v\&\_\_s;\&\_\_1;} &
@@ -1490,11 +1210,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash v with bar / E74E\\\hline
 %
 \mufi{v} &
-{v\&\_\_e;\&\_\_n;} &
-\restag{v\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule v / EEF8\\\hline
-%
-\mufi{v} &
 {v\&\_\_s;\&\_\_2;} &
 \restag{v\char"0E0073\char"0E0032} &
 \arraybslash v with two bars / E8BC\\\hline
@@ -1504,20 +1219,10 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \restag{v\char"0E0065\char"0E006C} &
 \arraybslash {\tcomp Enlarged minuscule v with low point / 10A049}\\\hline
 %
-\nuni{W} &
-{W\&\_\_e;\&\_\_n;} &
-\restag{W\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule W\\\hline
-%
 \stdu{W} &
 {W\&\_\_a;\&\_\_n;} &
 \restag{W\char"0E0061\char"0E006E} &
 \arraybslash {W Anglicana}\\\hline
-%
-\mufi{w} &
-{w\&\_\_e;\&\_\_n;} &
-\restag{w\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule w / EEF9\\\hline
 %
 \stdu{w} &
 {w\&\_\_a;\&\_\_n;} &
@@ -1525,24 +1230,9 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \arraybslash {w Anglicana}\\\hline
 %
 \mufi{ƿ} &
-{ƿ\&\_\_e;\&\_\_n;} &
-\restag{ƿ\char"0E0065\char"0E006E} &
-\arraybslash Enlarged wynn / 10A04E\\\hline
-%
-\mufi{ƿ} &
 {ƿ\&\_\_t;\&\_\_b;} &
 \restag{ƿ\char"0E0074\char"0E0062} &
 \arraybslash wynn with triangular bowl / 10A06E\\\hline
-%
-\nuni{X} &
-{X\&\_\_e;\&\_\_n;} &
-\restag{X\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule X\\\hline
-%
-\mufi{x} &
-{x\&\_\_e;\&\_\_n;} &
-\restag{x\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule x / EEFA\\\hline
 %
 \stdu{x} &
 {x\&\_\_l;\&\_\_o;} &
@@ -1569,11 +1259,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \restag{Y\char"0E0073\char"0E0064} &
 \arraybslash {\tcomp Y with diagonal stroke (Hymnus abbrev) / \ltab{E8DB}}\\\hline
 %
-\nuni{Y} &
-{Y\&\_\_e;\&\_\_n;} &
-\restag{Y\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule Y\\\hline
-%
 \mufi{y} &
 {y\&\_\_r;\&\_\_m;} &
 \restag{y\char"0E0072\char"0E006D} &
@@ -1583,11 +1268,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {y\&\_\_b;\&\_\_a;} &
 \restag{y\char"0E0062\char"0E0061} &
 \arraybslash y with bar / E77B\\\hline
-%
-\mufi{y} &
-{y\&\_\_e;\&\_\_n;} &
-\restag{y\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule y / EEFB\\\hline
 %
 \mufi{y} &
 {y\&\_\_c;\&\_\_u;} &
@@ -1604,11 +1284,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \restag{Z\char"0E0076\char"0E0069} &
 \arraybslash Visigothic Z / A762\\\hline
 %
-\nuni{Z} &
-{Z\&\_\_e;\&\_\_n;} &
-\restag{Z\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule Z\\\hline
-%
 \stdu{z} &
 {z\&\_\_v;\&\_\_i;} &
 \restag{z\char"0E0076\char"0E0069} &
@@ -1618,11 +1293,6 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 {z\&\_\_m;\&\_\_g;} &
 \restag{z\char"0E006D\char"0E0067} &
 \arraybslash Middle High German z / F238\\\hline
-%
-\mufi{z} &
-{z\&\_\_e;\&\_\_n;} &
-\restag{z\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule z / EEFC\\\hline
 %
 \opua{U+0104} &
 {\char"0104\&\_\_s;\&\_\_1;} &
@@ -1659,30 +1329,15 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \restag{\char"0A733\char"0E0063\char"0E006C} &
 \arraybslash Closed aa / EFA0\\\hline
 %
-\mufi{U+A733} &
-{\char"0A733\&\_\_e;\&\_\_n;} &
-\restag{\char"0A733\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule aa / EFDF\\\hline
-%
 \mufi{U+00C6} &
 {Æ\&\_\_n;\&\_\_e;} &
 \restag{Æ\char"0E006E\char"0E0065} &
 \arraybslash Neckless {\AE} / EFAE\\\hline
 %
-\mufi{U+00C6} &
-{Æ\&\_\_e;\&\_\_n;} &
-\restag{Æ\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule {\AE}\\\hline
-%
 \mufi{U+00E6} &
 {æ\&\_\_n;\&\_\_e;} &
 \restag{æ\char"0E006E\char"0E0065} &
 \arraybslash Neckless æ / EFA1\\\hline
-%
-\mufi{U+00E6} &
-{æ\&\_\_e;\&\_\_n;} &
-\restag{æ\char"0E0065\char"0E006E} &
-\arraybslash Enlarged minuscule æ / \ EAF1\\\hline
 %
 \mufi{U+00E6} &
 {æ\&\_\_o;\&\_\_p;} &
@@ -2491,7 +2146,7 @@ OpenType features are unavailable (but \textSourceText{ss10} is), many character
 \restag{{\pounds}\char"0E0061\char"0E0036} &
 \arraybslash Lira sterlina sign / F2EF\\\hline
 %
-\mufi{U+20B1} &
+\mufi{U+20B0} &
 {\char"20B0\&\_\_a;\&\_\_1;} &
 \restag{\char"20B0\char"0E0061\char"0E0031} &
 \arraybslash Penning sign / F2F5\\\hline

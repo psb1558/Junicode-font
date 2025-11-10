@@ -1,5 +1,7 @@
 \ProvidesPackage{JunicodeManual}
 
+\usepackage{needspace}
+
 \usepackage{microtype}
 
 \usepackage[
@@ -55,7 +57,7 @@
 \usepackage{imakeidx}
 \usepackage{idxlayout}
 
-\makeindex[title=Index of OpenType Features,intoc]
+\makeindex[title=Index of Features and Formatting Chars,intoc]
 
 \usepackage{fancyhdr}
 \usepackage{realscripts}
@@ -79,7 +81,7 @@
 \usepackage{supertabular}
 \usepackage{hhline}
 \usepackage{metalogo}
-\usepackage{hyperref}
+\usepackage[hypertexnames=true, plainpages=false, pdfpagelabels]{hyperref}
 \hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,%
   urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=,}
 \pdfstringdefDisableCommands{%

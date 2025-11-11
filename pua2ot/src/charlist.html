@@ -27,44 +27,77 @@
                 font-size: 125%;
             }
             table, th, td {
-                border: 1px solid black;
+                border: 1px solid lightgray;
                 font-size: 100%;
             }
             td {
                 padding: 4px;
             }
+            th {
+                background-color: lemonchiffon;
+                padding: 4px;
+            }
+            .hex {
+                background-color: MistyRose;
+            }
             .char {
-                background-color: Violet;
+                background-color: PowderBlue;
+            }
+            .varc {
+                background-color: MistyRose;
+            }
+            .basec {
+                background-color: PowderBlue;
             }
             .otag {
-                background-color: Gold;
+                background-color: MistyRose;
             }
             .utag {
-                background-color: MistyRose;
+                background-color: PowderBlue;
                 font-feature-settings: "ss10";
             }
             .zwj {
-                background-color: PaleGreen;
+                background-color: MistyRose;
                 font-feature-settings: "ss10";
             }
             .entity {
                 background-color: PowderBlue;
                 font-feature-settings: "ss10";
             }
+            .chdesc {
+                display: none;
+            }
+            dialog {
+                position: fixed;
+                z-index: 1000;
+            }
+            dialog[open] {
+                opacity: 1;
+                visibility: visible;
+            }
             #dialogtext {
                 font-family: notosans;
+                font-size: 80%;
             }
             </style>
     </head>
     <body lang="is">
         <p>
-            For testing. In each row, the characters in the colored boxes
-            should look the same. Click on any of the rightmost four columns
-            (when they have content) to see the underlying code.
+            For proofing. In each row, the characters in the last four columns
+            (those with content) should look the same as in the “base” column.
+            Click on any cell in the leftmost column 
+            for a description of the character. Click on any of the rightmost 
+            four columns to see the underlying code.
         </p>
+        <table id="tbl">
+            <thead id="table_head">
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
         <dialog id="method_info">
             <form method="dialog">
-                <p>Info for method:</p>
+                <p id="dialogheadertext">Character code:</p>
                 <pre id="dialogtext"></pre>
                 <button id="closeDialog">Close</button>
             </form>

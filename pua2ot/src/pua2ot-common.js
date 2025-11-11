@@ -382,10 +382,10 @@ function isFeatureOn(feature_dict, current_features) {
 }
 
 function mergeTags(base, taglist) {
-    // Helper for resolveUtag(). Given a list of Unicode tags and a
-    // string, this function substitutes pairs of tags for placeholders
-    // (%^%) or, if there are no placeholders, appends them to the end
-    // of the string.
+    // Helper for resolveUtag() and resolveZwj(). Given a list of 
+    // Unicode tags and a string, this function substitutes pairs of 
+    // tags for placeholders (%^%) or, if there are no placeholders, 
+    // appends them to the end of the string.
     //
     // The number of tags in taglist should be double the number of
     // placeholders in the string. If it is shorter, the function
@@ -685,9 +685,9 @@ function getLangBlock(codepoint_entry) {
     // To have different method blocks for different languages.
     lang = options.language;
     if (lang in codepoint_entry.lang){
-        return codepoint_entry.lang[lang]
+        return codepoint_entry.lang[lang];
     } else if ("other" in codepoint_entry.lang) {
-        return codepoint_entry.lang["other"]
+        return codepoint_entry.lang["other"];
     }
     // This would point to a problem in the database
     return null;
@@ -697,8 +697,8 @@ function getVarBlock(codepoint_entry) {
     // To have different method blocks depending on a choice of
     // variant groups, e.g. "insular" for using insular Unicodes
     // instead of a-z.
-    for (v in options.variantPreferences) {
-        vv = options.variantPreferences[v];
+    for (const v in options.variantPreferences) {
+        const vv = options.variantPreferences[v];
         if (vv in codepoint_entry.var) {
             return codepoint_entry.var[vv]
         }

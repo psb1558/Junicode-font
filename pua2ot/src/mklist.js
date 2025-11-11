@@ -3,6 +3,12 @@ const utagpref =   ['utag', 'otag', 'zwj', 'entity'];
 const zwjpref =    ['zwj', 'utag', 'otag', 'entity'];
 const entitypref = ['entity', 'zwj', 'utag', 'otag'];
 
+const dialog = document.getElementById('method_info');
+const info_para = document.getElementById("dialogtext");
+const dlg_header = document.getElementById("dialogheadertext");
+const tbl_head = document.getElementById("table_head");
+const tbl_body = document.getElementById("table_body");
+
 let isMark = false;
 
 function hexToChar(hexString) {
@@ -10,7 +16,7 @@ function hexToChar(hexString) {
     return String.fromCodePoint(i);
 }
 
-function makeRow(hex, vartext, block) {
+function makeRow(hex, vartext, block, desc) {
     let ch = hexToChar(hex);
 
     //
@@ -18,7 +24,9 @@ function makeRow(hex, vartext, block) {
     //
     const row = document.createElement("tr");
     const hexcell = document.createElement("td");
-    hexcell.textContent = hex;
+    cellContent = `${hex}<span class='chdesc'>${desc}</span>`
+    hexcell.innerHTML = cellContent;
+    hexcell.classList.add("hex");
     row.appendChild(hexcell);
     //
     // PUA CHARACTER
@@ -35,6 +43,7 @@ function makeRow(hex, vartext, block) {
     // VAR LABEL
     //
     const varcell = document.createElement("td");
+    varcell.classList.add("varc");
     if (vartext != null) {
         varcell.textContent = vartext;
     }
@@ -43,6 +52,7 @@ function makeRow(hex, vartext, block) {
     // BASE
     //
     const basecell = document.createElement("td");
+    basecell.classList.add("basec");
     if ("base" in block) {
         b = block["base"];
         if (isMark) {
@@ -110,39 +120,62 @@ function makeRow(hex, vartext, block) {
     return row;
 }
 
+function tableHeaderCell(name, parent) {
+    let cell = document.createElement("th");
+    cell.textContent = name;
+    parent.appendChild(cell);
+}
+
+function intersect(a, b) {
+    var t;
+    if (b.length > a.length) t = b, b = a, a = t;
+    return a.filter(function (e) {
+        return b.indexOf(e) > -1;
+    });
+}
+
+function setupListeners() {
+    tbl_body.addEventListener('click', function(e) {
+        tgt = e.target.closest('td');
+        const cl = Array.from(tgt.classList);
+        if (cl.includes("hex")) {
+            if (tgt.children.length > 0) {
+                dlg_header.innerHTML = "Character description:";
+                info_para.innerHTML = tgt.children[0].textContent;
+                dialog.showModal();
+            }
+        } else if (intersect(cl, otagpref).length > 0) {
+            let tc = tgt.innerHTML;
+            tc = tc.replaceAll("&amp;", "&");
+            tc = tc.replaceAll("\u200D", "&zwj;");
+            if (tc.length > 0) {
+                dlg_header.innerHTML = "Character code:";
+                info_para.innerText = tc;
+                dialog.showModal();
+           }
+        }
+    })
+}
+
+// We need to be able to see these Unicode tags.
 options.utagEntities = true;
 
-let table = document.createElement("table");
 let toprow = document.createElement("tr");
-let cell = document.createElement("td");
-cell.textContent = "hex";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "char";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "var";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "base";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "otag";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "utag";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "zwj";
-toprow.appendChild(cell);
-cell = document.createElement("td");
-cell.textContent = "entity";
-toprow.appendChild(cell);
-table.appendChild(toprow);
-document.body.appendChild(table);
+tableHeaderCell("hex", toprow);
+tableHeaderCell("char", toprow);
+tableHeaderCell("var", toprow);
+tableHeaderCell("base", toprow);
+tableHeaderCell("otag", toprow);
+tableHeaderCell("utag", toprow);
+tableHeaderCell("zwj", toprow);
+tableHeaderCell("entity", toprow);
+tbl_head.appendChild(toprow);
+
 for (h in PUA_DATA) {
+    let description = "";
     let block = PUA_DATA[h];
     if ("desc" in block) {
+        description = block.desc;
         if (block.desc.includes("COMBINING")) {
             isMark = true;
         } else {
@@ -160,36 +193,14 @@ for (h in PUA_DATA) {
         for (d in dbl) {
             const varbackup = options.variantPreferences;
             options.variantPreferences = [d];
-            let r = makeRow(h, d, dbl[d]);
-            table.appendChild(r);
+            let r = makeRow(h, d, dbl[d], description);
+            tbl_body.appendChild(r);
             options.variantPreferences = varbackup;
         }
     } else {
-        r = makeRow(h, null, block);
-        table.appendChild(r);
+        r = makeRow(h, null, block, description);
+        tbl_body.appendChild(r);
     }
 }
 
-const dialog = document.getElementById('method_info');
-const info_para = document.getElementById("dialogtext");
-
-function setupClassListeners(tagname) {
-    tagCells = document.getElementsByClassName(tagname);
-    for (o in tagCells) {
-        const el = tagCells[o];
-        if (el.innerText != undefined && el.innerText.trim().length > 0) {
-                el.addEventListener('click', function() {
-                    tc = el.innerHTML;
-                    tc = tc.replaceAll("&amp;", "&");
-                    tc = tc.replaceAll("\u200D", "&zwj;");
-                    info_para.innerText = tc;
-                    dialog.showModal();
-            })
-        }
-    }
-}
-
-setupClassListeners("otag");
-setupClassListeners("utag");
-setupClassListeners("zwj");
-setupClassListeners("entity");
+setupListeners();

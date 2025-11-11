@@ -8,6 +8,7 @@ const info_para = document.getElementById("dialogtext");
 const dlg_header = document.getElementById("dialogheadertext");
 const tbl_head = document.getElementById("table_head");
 const tbl_body = document.getElementById("table_body");
+const copy_text = document.getElementById("copyText");
 
 let isMark = false;
 
@@ -134,6 +135,14 @@ function intersect(a, b) {
     });
 }
 
+async function toClipboard(t) {
+    try {
+        await navigator.clipboard.writeText(t);
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
+}
+
 function setupListeners() {
     tbl_body.addEventListener('click', function(e) {
         tgt = e.target.closest('td');
@@ -155,6 +164,9 @@ function setupListeners() {
            }
         }
     })
+    copy_text.addEventListener('click', function(e) {
+        toClipboard(info_para.innerText);
+    });
 }
 
 // We need to be able to see these Unicode tags.

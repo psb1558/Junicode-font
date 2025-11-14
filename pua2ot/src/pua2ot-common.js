@@ -28,9 +28,20 @@
     *E4F0 *E516 *E737 EBEC F0C5 *F0BA
 */
 
+    /**
+     * Preference list for the "compact" style of markup.
+     */
     const COMPACT_PREF_LIST = [ "utag", "zwj", "otag", "entity" ];
+
+    /**
+     * Preference list for the "legible" style of markkup.
+     */
     const LEGIBLE_PREF_LIST = [ "otag", "utag", "zwj", "entity" ];
 
+    /**
+     * Defines Unicodes for problematic Unicodes (those that look like variants
+     * on letters of the alphabet but are not).
+     */
     const UNICODE_HEXES = [ '0131', '1D00', '1D01', '0299', '1D04', '1D05', '1D06',
                             '1D07', 'A730', '0262', '029C', '026A', '1D0A', '1D0B',
                             '029F', '1D0D', '0274', '1D0F', '0276', '1D18', '0280',
@@ -38,6 +49,9 @@
                             '1D79', 'A77A', 'A77C', 'A783', 'A785', 'A787', 'A75A',
                             'A75B' ];
 
+    /**
+     * The default lookup for Unicode tags. This replaces directly with tag characters.
+     */
     const UTAG_DICT = { "a": "\u{0E0061}",
                         "b": "\u{0E0062}",
                         "c": "\u{0E0063}",
@@ -75,6 +89,10 @@
                         "8": "\u{0E0038}",
                         "9": "\u{0E0039}" };
 
+/**
+ * Lookup for replacing letters and number with entities. This makes them
+ * visible and easy to debug.
+ */
 const UTAG_ENTITY_DICT = { "a": "&__a;",
                            "b": "&__b;",
                            "c": "&__c;",
@@ -112,6 +130,9 @@ const UTAG_ENTITY_DICT = { "a": "&__a;",
                            "8": "&__8;",
                            "9": "&__9;" };
 
+/**
+ * Entities for combining marks.
+ */
 const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
                             '\uf036': '&_an;',
                             '\uf038': '&_ar;',
@@ -138,8 +159,9 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
                             '\uf02b': '&_y;',
                             '\uf03d': '&_thorn;' };
 
-    
-
+    /*
+        For internal use. No need to document.
+    */
     let _prefList = COMPACT_PREF_LIST;
 
     let _defaultTags = { "ss10": 1, "cv69": 7 };
@@ -154,15 +176,16 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
 
     let _utagLookup = UTAG_DICT;
 
-    const variantLabels = [ "insular", "smallcap", "punctuation" ];
+    //const variantLabels = [ "insular", "smallcap", "punctuation", "alpha", "mark", "currency" ];
 
-    let _variantPreferences = [];
+    let _basePreferences = [];
 
     const phRegExp = new RegExp("%\\^%", "g");
 
-/*
-    Set up a dictionary of MUFI entities.
-*/
+/**
+ * Object mapping MUFI PUA hexes to entries in the database. We build this from the
+ * database rather than coding it into this file.
+ */
 let entityDict = {};
 for (const pua_code in PUA_DATA) {
     const mufi_entity = PUA_DATA[pua_code].mntity;
@@ -173,73 +196,64 @@ for (const pua_code in PUA_DATA) {
     }
 }
 
-/*
-    Set up a dictionary for doing rapid searches for entities.
-*/
+/**
+ * RegExp for doing rapid searches for entities.
+ */
 const ENTITY_MAP = new RegExp(Object.keys(entityDict).join("|"), "g");
 
 // ----------------------
 //  OPTIONS
 // ----------------------
 
+/**
+ * Stores options for controlling the behavior of this script.
+ * @property {string} language - The language of the text being converted.
+ * @property {boolean} utagEntities - Whether to substitute entities (instead of characters) for Unicode tags.
+ * @property {string[]} nonWordTags - Lists OpenType features that can be applied only to letters, not to words.
+ * @property {boolean} keepUnicode - Whether to keep problematic Unicodes.
+ * @property {string} methodPriority - Selects a predefined priority list: "compact" or "legible".
+ * @property {string[]} prefList - Use to supply a custom priority list.
+ * @property {{string: number}} defaultTags - OpenType features that are always on.
+ * @property {string[]} basePreferences - Choose among different bases for certain categories of character.
+ * @property {boolean} replaceMUFIEntities - Whether to search and replace MUFI entities.
+ * @type {{string: string | boolean | string[] | object}}
+ */
 let options = {}
 
 Object.defineProperty(options, 'language', {
-    get: function () {
-        return _language;
-    },
-    set: function(l) {
-        _language = l;
-    }
+    get: () => {return _language},
+    set: l => _language = l
 } );
 
 Object.defineProperty(options, 'utagEntities', {
-    // Whether Unicode tags should be represented as entities.
-    get: function() {
-        return (_utagLookup === UTAG_ENTITY_DICT);
-    },
-    set: function(useEntities) {
-        _utagLookup = useEntities ? UTAG_ENTITY_DICT : UTAG_DICT;
-    }
+    // true if entity dictionary is being used instead of the regular one.
+    get: () => _utagLookup === UTAG_ENTITY_DICT,
+    set: useEntities => _utagLookup = useEntities ? UTAG_ENTITY_DICT : UTAG_DICT
 } );
 
 Object.defineProperty(options, 'utagLookup', {
-    // Use to get or set the dictionary used for Unicode tags.
-    get: function() {
-        return _utagLookup;
-    },
-    set: function(ute) {
-        if (ute in [UTAG_ENTITY_DICT, UTAG_DICT]) {
-            _utagLookup = ute;
-        }
-    }
+    // Get or set the dictionary used for Unicode tags. Could be used for a
+    // custom one.
+    get: () => _utagLookup,
+    set: ute => {if (ute in [UTAG_ENTITY_DICT, UTAG_DICT]) {_utagLookup = ute}}
 } );
 
 Object.defineProperty(options, 'nonWordTags', {
-    // Get or set the list of non-word tags.
-    get: function() {
-        return _nonWordTags;
-    },
-    set: function(nwt) {
-        _nonWordTags = nwt;
-    }
+    // Get or set the list of non-word tags. Just an array of OpenType
+    // feature tags.
+    get: () => _nonWordTags,
+    set: nwt => _nonWordTags = nwt
 } );
 
 Object.defineProperty(options, 'keepUnicode', {
-    // A boolean property
-    get: function() {
-        return _keepUnicode;
-    },
-    set: function(ku) {
-        _keepUnicode = ku;
-    }
+    // A boolean property. Either we replace problem Unicodes or we don't.
+    get: () => _keepUnicode,
+    set: ku => _keepUnicode = ku
 } );
 
 Object.defineProperty(options, 'methodPriority', {
     // Choose between two predefined priority lists.
-    get: function() {
-        return (options.prefList === COMPACT_PREF_LIST) ? "compact" : "legible";
-    },
+    get: () => options.prefList === COMPACT_PREF_LIST ? "compact" : "legible",
     set: function(p) {
         if (p == "compact") {
             options.prefList = COMPACT_PREF_LIST;
@@ -251,50 +265,32 @@ Object.defineProperty(options, 'methodPriority', {
 
 Object.defineProperty(options, 'prefList', {
     // get or install a custom list of options for char replacement.
-    get: function() {
-        return _prefList;
-    },
-    set: function(pfl) {
-        if (pfl.length == 4) {
-            _prefList = pfl;
-        }
-    }
+    get: () => _prefList,
+    set: pfl => {if (pfl.length == 4) {_prefList = pfl}}
 } );
 
 Object.defineProperty(options, 'defaultTags', {
     // Get or set a list of tags that should always be on (aside from
     // the ones that OpenType recommends to be on by default, e.g. calt, liga).
-    get: function() {
-        return _defaultTags;
-    },
-    set: function(dft) {
-        _defaultTags = dft;
-    }
+    get: () => _defaultTags,
+    set: dft => _defaultTags = dft
 } );
 
 Object.defineProperty(options, 'replaceMUFIEntities', {
     // Boolean. Whether to replace MUFI entities.
-    get: function() {
-        return _replaceMUFIEntities;
-    },
-    set: function(r) {
-        _replaceMUFIEntities = r;
-    }
+    get: () => _replaceMUFIEntities,
+    set: r => _replaceMUFIEntities = r
 } );
 
-Object.defineProperty(options, 'variantPreferences', {
+Object.defineProperty(options, 'basePreferences', {
     // For dealing with classes of character that have more than
     // one possible base. The default choices maximize accessibility,
     // but the alternates may be good for particular purposes.
-    // _variantPreferences is an array that has any of these values
-    // in any order: Insular, Small caps, Punctuation, Marks,
-    // Currency, Alpha.
-    get: function() {
-        return _variantPreferences;
-    },
-    set: function(v) {
-        _variantPreferences = v;
-    }
+    // _basePreferences is an array that has any of these values
+    // in any order: insular, smallcap, punctuation, mark,
+    // currency, alpha.
+    get: () => _basePreferences,
+    set: v => _basePreferences = v
 } );
 
 
@@ -302,17 +298,26 @@ Object.defineProperty(options, 'variantPreferences', {
 // FUNCTIONS
 // ---------------------
 
-/* 
-    Converts all whitespace characters to spaces and changes &amp;
-    to a plain ampersand.
+/**
+ *  Converts all whitespace characters to spaces and changes ampersand
+ *  entity to a plain ampersand.
+ *  @param {string} s - The string to clean up.
 */
 const cleanup_string = s => s.replace(/\s+/g, " ").trim().replace(/&amp;/g, '&');
 
-/*
-    Gets a count of the placeholder sequences ("%^%") in a string.
+/**
+ * Gets a count of the placeholder sequences ("%^%") in a string.
+ * @param {string} s - The string to survey
+ * @return {number} The number of placeholders in the string.
 */
 const placeholderCount = (s) => (s.match(phRegExp) || []).length;
 
+/**
+ * Converts an object containing OpenType tags with indices into a
+ * string that can be used with CSS font-feature-settings.
+ * @param {{string: number}} tag_dict 
+ * @returns {string} A string that can be used with CSS font-feature-settings.
+ */
 function featureString(tag_dict) {
     /*
     Converts a dict containing OpenType tags with
@@ -339,12 +344,13 @@ function featureString(tag_dict) {
     return result_string;
 }
 
+/**
+ * Tests whether a character is MUFI PUA or problematic Unicode
+ * (note that the return value may depend on the value of option.keepUnicodes).
+ * @param {string} ch - the character to test.
+ * @returns {boolean} True if character is MUFI PUA or problematic Unicode.
+ */
 function isMufiPua(ch) {
-    /*
-        Returns true if character is MUFI PUA or
-        problematic Unicode (unless _keepUnicode
-        is true).
-    */
     let uni = ch.codePointAt(0);
     let hexstr = uni.toString(16).toUpperCase();
     if (hexstr.length == 3) {
@@ -356,18 +362,13 @@ function isMufiPua(ch) {
     return (hexstr in PUA_DATA);
 }
 
+/**
+ * Tests whether a feature is on. This is a helper for resolveOtag().
+ * @param {{string: number}} feature_dict - one-entry Object with the feature we're testing for.
+ * @param {{string: number}} current_features - features currently on.
+ * @returns {boolean} True if the feature is currently on.
+ */
 function isFeatureOn(feature_dict, current_features) {
-    /*
-    Helper for resolveOtag.
-
-    Args:
-      feature_dict (dict): The feature to test
-
-      current_features (dict): The features that are now on
-
-    Returns:
-      bool: Whether the feature is currently on
-    */
     let tagname  = feature_dict.name;
     let tagindex = 1;
     if ("index" in feature_dict) {
@@ -381,20 +382,25 @@ function isFeatureOn(feature_dict, current_features) {
     return false;
 }
 
+/**
+ * Helper for resolveUtag() and resolveZwj(). Given a list of 
+ * Unicode tags and a string, this function substitutes pairs of 
+ * tags for placeholders (%^%) or, if there are no placeholders, 
+ * appends them to the end of the string.
+ * The number of tags in taglist should be double the number of
+ * placeholders in the string. If it is shorter, the function
+ * will repeat the last pair of tags until the placeholders are
+ * all replaced.
+ * @param {string} base - The string that forms the basis of the
+ * output of resolveUtag() or resolveZwj().
+ * @param {array} taglist - Array of one-character strings representing utags.
+ * @returns {string} The base with tags merged in.
+ */
 function mergeTags(base, taglist) {
-    // Helper for resolveUtag() and resolveZwj(). Given a list of 
-    // Unicode tags and a string, this function substitutes pairs of 
-    // tags for placeholders (%^%) or, if there are no placeholders, 
-    // appends them to the end of the string.
-    //
-    // The number of tags in taglist should be double the number of
-    // placeholders in the string. If it is shorter, the function
-    // will repeat the last pair of tags until the placeholders are
-    // all replaced.
     if (taglist.length >= 2) {
         let utagList = [];
         for (const idx in taglist) {
-            utagList.push(options.utagLookup[taglist[idx].name]);
+            utagList.push(_utagLookup[taglist[idx].name]);
         }
         let phCount = placeholderCount(base)
         if (phCount == 0) {
@@ -420,34 +426,21 @@ function mergeTags(base, taglist) {
     return base;
 }
 
+/**
+ * An otag block specifies the OpenType features we need to activate
+ * to represent this "base". These are added to the features
+ * that are already on, and then we call featureString() to
+ * generate the correctly formatted arguments for
+ * font_feature_settings, which we plug into a "style"
+ * attribute of a &lt;span&gt;. We wrap the "base" into the &lt;span&gt;.
+ * @param {object} otag - The block of json data we are using for the transformation.
+ * @param {string} base - The letter(s) we are transforming.
+ * @param {array} current_tags - array of OpenType features currently on.
+ * @param {number} current_pass - 0 for first pass, 1 for second.
+ * @param {string} tags_name - name of the tags key to look for
+ * @returns {array} - Array with converted base and number of replacements made.
+ */
 function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags") {
-    /*
-    An otag block specifies the OpenType features we need to turn
-    on to represent this "base". These are added to the features
-    that are already on, and then we call featureString() to
-    generate the correctly formatted arguments for
-    font_feature_settings, which we plug into a "style"
-    attribute of a <span>. We wrap the "base" into the <span>.
-
-    Args:
-      otag (dict): A dictionary of OpenType features that should
-      be set for the current character or ligature.
-
-      base (string): The string to wrap in a <span>.
-
-      current_tags (dict): The collection of tags that is currently
-      on. We add to this as needed.
-
-      current_pass (int): Whether we are in pass 0 or pass 1
-      of the operation on the current word.
-
-      tags_name: The name of a "tags" element inside the otag
-      element.
-
-    Returns:
-      An array containing a formatted string and a count of word tags 
-      needed (pass 0) or single-letter tags generated (pass 1).
-    */
     let word_tag_count = 0;
     let loclbase = base;
     if ("base" in otag) {
@@ -460,7 +453,7 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
         let target_is_word = true;
         for (const idx in taglist) {
             let tagname = taglist[idx].name;
-            if (options.nonWordTags.includes(tagname)) {
+            if (_nonWordTags.includes(tagname)) {
                 target_is_word = false;
             }
         }
@@ -487,7 +480,7 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
     let target_is_char = false;
     let local_tags = structuredClone(current_tags);
     for (const idx in taglist) {
-        if (options.nonWordTags.includes(taglist[idx].name)) {
+        if (_nonWordTags.includes(taglist[idx].name)) {
             target_is_char = true;
             break;
         }
@@ -511,30 +504,19 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
     return [loclbase, local_tag_count];
 }
 
+/**
+ * Forms a ligature by inserting a zero-width joiner (zwj) before each
+ * alphabetic character (Unicode categories Ll or Lu). If the zwj block
+ * has a "utags" key, merge the utags into the base. A zwj block can
+ * also have a "tags" section: if so, run resolveOtag after the other
+ * processing.
+ * @param {object} zwj - The block of json data we are using for the transformation.
+ * @param {string} base  - The letter(s) we are transforming.
+ * @param {array} current_tags - array of OpenType features currently on.
+ * @param {number} current_pass - 0 for first pass, 1 for second.
+ * @returns {string} - the converted base.
+ */
 function resolveZwj(zwj, base, current_tags, current_pass=1) {
-    /*
-    If base is only one character, we can't do anything, so return it.
-    If the zwj block has its own "base", just return it.
-    Otherwise, place a zwj before any alphabetic character (Unicode
-      categories Ll or Lu)
-    A zwj block can have "tags". If this one does, just run resolveOtag
-      on the processed string.
-
-    Args:
-      zwj (dict): The 'zwj' element in the dict for the current
-      character.
-
-      base (string): The string that we are formatting.
-
-      current_tags (dict): Tags that are currently on. We pass this
-      through to resolveOtag if we call it.
-
-      current_pass (int): Which of the two passes for the current
-      word we are in.
-
-    Returns:
-      str: The formatted string
-    */
     let loclbase = base;
     if ("base" in zwj) {
         loclbase = zwj.base;
@@ -569,29 +551,18 @@ function resolveZwj(zwj, base, current_tags, current_pass=1) {
     return result_string;
 }
 
+/**
+ * Utags are Junicode's alternative to cvNN for producing
+ * characters. It can greatly reduce the amount of html required
+ * in a file. If an OpenType tag is needed, just call
+ * resolveOtag. If there's an error we just return the base.
+ * @param {object} utag - The block of json data we are using for the transformation.
+ * @param {string} base - The letter(s) we are transforming.
+ * @param {array} current_tags - array of OpenType features currently active.
+ * @param {number} current_pass - 0 for first pass, 1 for second.
+ * @returns {string} - the converted base.
+ */
 function resolveUtag(utag, base, current_tags, current_pass=1) {
-    /*
-    utag places two characters from the Unicode tag range after
-    the base. This is Junicode's alternate to cvNN for producing
-    characters. It can greatly reduce the amount of html required
-    in a file. If an OpenType tag is needed, just call
-    resolveOtag. If there's an error we just return the base.
-
-    Args:
-      utag (dict): The 'utag' element in the dict for the current
-      character.
-
-      base (string): The string that we are formatting.
-
-      current_tags (dict): Tags that are currently on. We pass this
-      through to resolveOtag if we call it.
-
-      current_pass (int): Which of the two passes for the current
-      word we are in.
-
-    Returns:
-      str: The formatted string
-    */
     let loclbase = base;
     let taglist = [];
     if ("base" in utag) {
@@ -613,27 +584,17 @@ function resolveUtag(utag, base, current_tags, current_pass=1) {
     return loclbase;
 }
 
+/**
+ * Place a Junicode (not MUFI) entity in the text in the place of the PUA
+ * character. Junicode uses this for combining marks that
+ * have only PUA code points.
+ * @param {object} entity - The block of json data we are using for the transformation.
+ * @param {string} base - The letter(s) we are transforming.
+ * @param {array} current_tags - array of OpenType features currently active.
+ * @param {number} current_pass - 0 for first pass, 1 for second.
+ * @returns {string} - the converted base.
+ */
 function resolveEntity(entity, base, current_tags, current_pass=1) {
-    /*
-    Place an entity in the text in the place of the PUA
-    character. Junicode uses this for combining marks that
-    have only PUA code points.
-
-    Args:
-      entity (dict): The 'entity' element in the dict for the current
-      character.
-
-      base (string): The string that we are formatting.
-
-      current_tags (dict): Tags that are currently on. We pass this
-      through to resolveOtag if we call it.
-
-      current_pass (int): Which of the two passes for the current
-      word we are in.
-
-    Returns:
-      str: The formatted string
-    */
     let loclbase = ("base" in entity) ? entity.base : base;
     if ("tags" in entity) {
         let otag_result = resolveOtag(entity, loclbase, current_tags,
@@ -643,23 +604,19 @@ function resolveEntity(entity, base, current_tags, current_pass=1) {
     return loclbase;
 }
 
+/**
+ * A helper for convert(). This function locates and returns the
+ * json block needed for the next method.
+ * @param {*} char_block {object} - The character block to search for
+ * a suitable conversion method for the current character.
+ * @returns {array} - 0: a string with the selected type; 1: section
+ * of the character block needed for pending operation.
+ */
 function getMethodBlock(char_block) {
-    /*
-    For finding the method to use on a character.
-    Note: returns None if none found.
-
-    Args:
-      char_block (dict): The character block in which to search for
-      a suitable conversion method for the current character.
-
-    Returns:
-      tuple: a string for the method to be used and a dict with
-      the conversion data.
-    */
     let preferred_block = null;
     let selected_type = null;
-    for (const idx in options.prefList) {
-        let tag = options.prefList[idx];
+    for (const idx in _prefList) {
+        let tag = _prefList[idx];
         if (tag in char_block) {
             preferred_block = char_block[tag];
             selected_type = tag;
@@ -669,36 +626,45 @@ function getMethodBlock(char_block) {
     return [selected_type, preferred_block];
 }
 
+/**
+ * Run to replace MUFI entities with PUA code points. Uses
+ * a regex method that's said to be efficient (important,
+ * since we're doing 850+ searches).
+ * @param {string} text_buffer - The text in which to perform a 
+ * search-and-replace operation substituting characters for MUFI
+ * entitys.
+ * @returns {string} the text_buffer after the search-and-replace
+ */
 function replaceEntities(text_buffer) {
-    /*
-        Run to replace MUFI entities with PUA code points. Uses
-        a regex method that's said to be efficient (important,
-        since we're doing 850+ searches).
-    */
-    const result = text_buffer.replace(ENTITY_MAP, function(matched) {
-        return entityDict[matched];
-    } );
-    return result;
+    return text_buffer.replace(ENTITY_MAP, matched => entityDict[matched]);
 }
 
+/**
+ * Lets us define different method blocks for different languages.
+ * Not currently used, but ready!
+ * @param {object} codepoint_entry - block in which to search for the
+ * currently active language.
+ * @returns {object} The block for the selected language, or null if the function has failed.
+ */
 function getLangBlock(codepoint_entry) {
-    // To have different method blocks for different languages.
-    lang = options.language;
+    lang = _language;
     if (lang in codepoint_entry.lang){
         return codepoint_entry.lang[lang];
     } else if ("other" in codepoint_entry.lang) {
         return codepoint_entry.lang["other"];
     }
-    // This would point to a problem in the database
     return null;
 }
 
+/**
+ * Allows you to select alternate bases for certain categories of character: number,
+ * insular, alpha, currency, punctuation, mark, smallcap.
+ * @param {object} codepoint_entry - The json block for the current character
+ * @returns {object} - The block for the selected base, or null if the function has failed.
+ */
 function getVarBlock(codepoint_entry) {
-    // To have different method blocks depending on a choice of
-    // variant groups, e.g. "insular" for using insular Unicodes
-    // instead of a-z.
-    for (const v in options.variantPreferences) {
-        const vv = options.variantPreferences[v];
+    for (const v in _basePreferences) {
+        const vv = _basePreferences[v];
         if (vv in codepoint_entry.var) {
             return codepoint_entry.var[vv]
         }
@@ -709,10 +675,23 @@ function getVarBlock(codepoint_entry) {
     return null;
 }
 
+/**
+ * Runs the program. Splits the text_buffer into an array of
+ * words and processes each word in two passes. Then
+ * reassembles text from array (space-separated).
+ * @param {string} text_buffer - The text to be converted. This can contain multiple
+ * and nested HTML elements.
+ * @param {boolean} repl_ent - Whether to replace MUFI entities before running the rest of the function.
+ * @param {boolean} code_on - In the GUI flavor, whether the "Show code" box is checked, and the
+ * underlying code is showing in the "Destination" box. In embedded and Node flavors you must
+ * also set options.replaceMUFIEntities.
+ * @returns {string} The processed text.
+ */
 function convert(text_buffer, repl_ent = true, code_on = false) {
     /*
-        Runs the program. Splits the text_buffer into a list of
-        words and processes each word in two passes
+        Runs the program. Splits the text_buffer into an array of
+        words and processes each word in two passes. Then
+        reassembled text from array (space-separated).
     */
     let processed_word_list = [];
 

@@ -1,10 +1,10 @@
-
+/**
+ * Finds all text nodes in the &lt;body&gt; of an
+ * html file and calls convert() to convert them all. Sets
+ * the language automatically if there is a lang attribute on the &lt;body&gt;
+ * or &lt;html&gt; element.
+ */
 function convertAll() {
-    /*
-        Finds all text nodes in #sourcebox and
-        calls convert() to convert them to an html
-        buffer.
-    */
     if (document.body.hasAttribute("lang")) {
         options.language = document.body.getAttribute("lang")
     } else if (document.documentElement.hasAttribute("lang")) {
@@ -53,5 +53,4 @@ function convertAll() {
         }
     }
     console.timeEnd("PUATimer");
-
 }

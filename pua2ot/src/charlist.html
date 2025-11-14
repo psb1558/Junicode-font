@@ -30,46 +30,25 @@
                 border: 1px solid lightgray;
                 font-size: 100%;
             }
-            td {
+            td, th {
                 padding: 4px;
             }
-            th {
-                background-color: lemonchiffon;
-                padding: 4px;
-            }
-            .hex {
+            .hex,  .desc, .basec, .utag, .entity {
                 background-color: MistyRose;
             }
-            .char {
+            .char, .otag, .zwj, .varc {
                 background-color: PowderBlue;
             }
-            .varc {
-                background-color: MistyRose;
-            }
-            .basec {
-                background-color: PowderBlue;
-            }
-            .otag {
-                background-color: MistyRose;
-            }
-            .utag {
-                background-color: PowderBlue;
+            .utag, .zwj, .entity {
                 font-feature-settings: "ss10";
             }
-            .zwj {
-                background-color: MistyRose;
-                font-feature-settings: "ss10";
-            }
-            .entity {
-                background-color: PowderBlue;
-                font-feature-settings: "ss10";
-            }
-            .chdesc {
-                display: none;
+            .desc {
+                font-variation-settings: "wdth" 75;
             }
             dialog {
                 position: fixed;
                 z-index: 1000;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
             }
             dialog[open] {
                 opacity: 1;
@@ -79,22 +58,32 @@
                 font-family: notosans;
                 font-size: 80%;
             }
+            .table-container table thead th {
+                position: sticky;
+                top: 0;
+                background-color: Indigo;
+                color: white;
+                z-index: 1;
+            }
             </style>
     </head>
     <body lang="is">
         <p>
             For proofing. In each row, the characters in the last four columns
             (those with content) should look the same as in the “char” column,
-            which displays the PUA character. Click on any cell in the leftmost 
-            column for a description of the character. Click on any of the 
-            rightmost four columns to see the underlying code.
+            which displays the PUA character. Click on a cell in the "Base"
+            column to view the Unicodes that make up the base. Click on any of
+            the rightmost four columns to see the code that generates its
+            content.
         </p>
+        <div class="table-container">
         <table id="tbl">
             <thead id="table_head">
             </thead>
             <tbody id="table_body">
             </tbody>
         </table>
+        </div>
         <dialog id="method_info">
             <form method="dialog">
                 <p id="dialogheadertext">Character code:</p>

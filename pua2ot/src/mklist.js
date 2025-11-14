@@ -3,6 +3,7 @@ const utagpref =   ['utag', 'otag', 'zwj', 'entity'];
 const zwjpref =    ['zwj', 'utag', 'otag', 'entity'];
 const entitypref = ['entity', 'zwj', 'utag', 'otag'];
 
+const table = document.getElementById('tbl');
 const dialog = document.getElementById('method_info');
 const info_para = document.getElementById("dialogtext");
 const dlg_header = document.getElementById("dialogheadertext");
@@ -12,23 +13,56 @@ const copy_text = document.getElementById("copyText");
 
 let isMark = false;
 
+let lastSelection = null;
+
 function hexToChar(hexString) {
     let i = parseInt(hexString, 16);
     return String.fromCodePoint(i);
 }
 
+function makeHex(s) {
+    let result = "";
+    for (const c of s) {
+        const i = c.codePointAt(0);
+        let hexstr = i.toString(16).toUpperCase();
+        while (hexstr.length < 4) {
+            hexstr = '0' + hexstr;
+        }
+        if (result.length > 0) {
+            result = result + ' ';
+        }
+        result = result + hexstr
+    }
+    return result;
+}
+
 function makeRow(hex, vartext, block, desc) {
     let ch = hexToChar(hex);
-
     //
     // HEX CODE
     //
     const row = document.createElement("tr");
     const hexcell = document.createElement("td");
-    cellContent = `${hex}<span class='chdesc'>${desc}</span>`
+    cellContent = hex;
     hexcell.innerHTML = cellContent;
     hexcell.classList.add("hex");
     row.appendChild(hexcell);
+    //
+    // VAR LABEL
+    //
+    const varcell = document.createElement("td");
+    varcell.classList.add("varc");
+    if (vartext != null) {
+        varcell.textContent = vartext;
+    }
+    row.appendChild(varcell);
+    //
+    // DESCRIPTION
+    //
+    const desccell = document.createElement("td");
+    desccell.classList.add("desc");
+    desccell.innerHTML = desc.toLowerCase();
+    row.appendChild(desccell);
     //
     // PUA CHARACTER
     //
@@ -40,15 +74,6 @@ function makeRow(hex, vartext, block, desc) {
     }
     puacell.textContent = b;
     row.appendChild(puacell);
-    //
-    // VAR LABEL
-    //
-    const varcell = document.createElement("td");
-    varcell.classList.add("varc");
-    if (vartext != null) {
-        varcell.textContent = vartext;
-    }
-    row.appendChild(varcell);
     //
     // BASE
     //
@@ -146,22 +171,27 @@ async function toClipboard(t) {
 function setupListeners() {
     tbl_body.addEventListener('click', function(e) {
         tgt = e.target.closest('td');
+        if (lastSelection != null) {
+            lastSelection.style = '';
+        }
+        lastSelection = tgt;
         const cl = Array.from(tgt.classList);
-        if (cl.includes("hex")) {
-            if (tgt.children.length > 0) {
-                dlg_header.innerHTML = "Character description:";
-                info_para.innerHTML = tgt.children[0].textContent;
-                dialog.showModal();
-            }
-        } else if (intersect(cl, otagpref).length > 0) {
+        if (intersect(cl, otagpref).length > 0) {
             let tc = tgt.innerHTML;
             tc = tc.replaceAll("&amp;", "&");
             tc = tc.replaceAll("\u200D", "&zwj;");
             if (tc.length > 0) {
+                tgt.style.backgroundColor = "DarkSeaGreen";
                 dlg_header.innerHTML = "Character code:";
                 info_para.innerText = tc;
                 dialog.showModal();
            }
+        } else if (cl.includes("basec")) {
+            tgt.style.backgroundColor = "DarkSeaGreen";
+            let hs = tgt.innerText;
+            dlg_header.innerHTML = "Base code points:";
+            info_para.innerText = makeHex(hs);
+            dialog.showModal();
         }
     })
     copy_text.addEventListener('click', function(e) {
@@ -169,13 +199,15 @@ function setupListeners() {
     });
 }
 
+
 // We need to be able to see these Unicode tags.
 options.utagEntities = true;
 
 let toprow = document.createElement("tr");
 tableHeaderCell("hex", toprow);
-tableHeaderCell("char", toprow);
 tableHeaderCell("var", toprow);
+tableHeaderCell("description", toprow);
+tableHeaderCell("pua", toprow);
 tableHeaderCell("base", toprow);
 tableHeaderCell("otag", toprow);
 tableHeaderCell("utag", toprow);
@@ -203,11 +235,11 @@ for (h in PUA_DATA) {
     if ("var" in block) {
         dbl = block["var"];
         for (d in dbl) {
-            const varbackup = options.variantPreferences;
-            options.variantPreferences = [d];
+            const varbackup = options.basePreferences;
+            options.basePreferences = [d];
             let r = makeRow(h, d, dbl[d], description);
             tbl_body.appendChild(r);
-            options.variantPreferences = varbackup;
+            options.basePreferences = varbackup;
         }
     } else {
         r = makeRow(h, null, block, description);

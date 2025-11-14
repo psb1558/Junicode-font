@@ -7,7 +7,7 @@
 // ------------------------
 
 /*
-    Whether the 
+    Whether "Show code" is currently active.
 */
 let codeOn = false;
 
@@ -27,11 +27,18 @@ let htmlDoc = null;
 // END OF VARIABLE SETUP. FUNCTIONS BEGIN.
 // ---------------------------------------------
 
-/*
-    Whether the text we're working with is plain text or html.
-*/
-const isHTMLType = () => {return (htmlDoc != null)};
+/**
+ * Tests whether the text we're working with is plain text or html.
+ * @returns {boolean} result of the test.
+ */
+const isHTMLType = () => htmlDoc != null;
 
+/**
+ * Prepares a string for export by doing some replacements and
+ * wrapping it in a &lt;div&gt; that turns on the default OpenType
+ * features.
+ * @returns {string} The processed string.
+ */
 function exportString() {
     /*
         Prepare text for export; wrap it in a div that turns on 
@@ -52,10 +59,12 @@ function exportString() {
     return text;
 }
 
+/**
+ * Prepares and downloads a file containing the converted text. This will
+ * be a plain text file (with html markup) if the original file was plain,
+ * and an html file if the original was html.
+ */
 function saveFile() {
-    /*
-        Prepare and download the text.
-    */
     const blob = new Blob([exportString()], {type: 'text/plain'});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -67,10 +76,12 @@ function saveFile() {
     URL.revokeObjectURL(url);
 }
 
+/**
+ * Adds markup to the source text (from a text file) to show which characters 
+ * are being replaced (by default the PUA characters, but usually also the 
+ * problematic Unicodes).
+ */
 function markPuaCharsText() {
-    /*
-        Mark PUA chars in text buffer by coloring them red.
-    */
     let found_PUA = false;
     let resultStr = "";
     for (var ch of textBackup) {
@@ -86,15 +97,17 @@ function markPuaCharsText() {
     }
 }
 
-/*
-    Restore text source to cancel highlighting of PUA chars.
-*/
+/**
+ * Restore text source to cancel highlighting of PUA chars.
+ */
 const restoreSourceText = () => sourceElement.innerText = textBackup;
 
+/**
+ * Adds markup to the source text (from an html file) to show which characters 
+ * are being replaced (by default the PUA characters, but usually also the 
+ * problematic Unicodes).
+ */
 function markPuaCharsHtml() {
-    /*
-        Mark PUA chars in html buffer by coloring them red.
-    */
     let replacementList = [];
 
     const clonedDiv = htmlBackup.cloneNode(true);
@@ -135,20 +148,24 @@ function markPuaCharsHtml() {
     }
 }
 
-/*
-    Restore HTML source to cancel highlighting of PUA chars.
-*/
+/**
+ * Restore HTML source to cancel highlighting of PUA chars.
+ */
 const restoreSourceHtml = () => sourceElement.innerHTML = htmlBackup.innerHTML;
 
-/*
-    call convert() for a plain text buffer.
-*/
+/**
+ * 
+ * @param {boolean} repl_ent - Whether to replace the MUFI entities in the text before
+ * other processing.
+ */
 const plainTextCaller = (repl_ent) => destElement.innerHTML = convert(textBackup, repl_ent, codeOn);
 
+/**
+ * Calls convert() for an HTML buffer.
+ * @param {boolean} repl_ent - Whether to replace the MUFI entities in the text before
+ * other processing.
+ */
 function htmlCaller(repl_ent) {
-    /*
-        Calls convert() for an HTML buffer.
-    */
     console.time("PUATimer");
 
     let replacementList = [];
@@ -180,20 +197,21 @@ function htmlCaller(repl_ent) {
     console.timeEnd("PUATimer");
 }
 
+/**
+ * Display contents of "body" element of html file in source box.
+ */
 function displayInSourceBox() {
-/*
-    Display contents of "body" element of html file in source box.
-*/
     sourceElement.style.whiteSpace = "normal";
     sourceElement.style.wordWrap = "break-word";
     sourceElement.innerHTML = htmlBackup.innerHTML = htmlDoc.body.innerHTML;
 }
 
+/**
+ * Copy text to clipboard. We display a message because there is 
+ * otherwise no feedback.
+ * @param {string} text - The text to copy.
+ */
 async function copyToClipboard(text) {
-    /*
-        Copy text to clipboard. We display a message because
-        there is otherwise no feedback.
-    */
     try {
         await navigator.clipboard.writeText(text);
         alert("Text copied");
@@ -202,9 +220,10 @@ async function copyToClipboard(text) {
     }
 }
 
-/*
-    Handle file after loading or dropping.
-*/
+/**
+ * Loads a file into the source box.
+ * @param {string} f - Name of a file to load.
+ */
 function loadFile(f) {
         const reader = new FileReader();
         reader.onload = () => {
@@ -430,7 +449,9 @@ fileInputWidget.addEventListener('change', (event) => {
     }
 } );
 
-// Helper for the "Edit Source" handler.
+/**
+ * Helper for change event for "Edit source" button.
+ */
 function handleSourceInput() {
     if (isHTMLType()) {
         htmlBackup.innerHTML = sourceElement.innerHTML;
@@ -464,6 +485,9 @@ editSrcWidget.addEventListener('change', (event) => {
     }
 } );
 
+/**
+ * Helper for "Alternate bases" event.
+ */
 function varValues() {
     let varPref = [];
     for (let i = 0; i < varWidget.options.length; i++) {
@@ -471,7 +495,7 @@ function varValues() {
             varPref.push(varWidget.options[i].value);
         }
     }
-    options.variantPreferences = varPref;
+    options.basePreferences = varPref;
 }
 
 let varWidget = document.getElementById('alternate_unicodes');

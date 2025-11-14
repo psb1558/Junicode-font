@@ -72,7 +72,7 @@ drag it into an up-to-date web browser. The program will look like this:
 Middle English \textit{Ancrene Wisse}) is the \textbf{Source Box}; it shows the 
 text with PUA characters or entities. The text-box 
 on the right is the \textbf{Destination Box}: it displays the result of the 
-conversion. These two boxes should look the same: this sameness assures you that 
+conversion. These two boxes should look the same: their sameness assures you that 
 the conversion has gone well.
 
 Immediately below the text boxes are options that affect their operation. 
@@ -108,7 +108,7 @@ these lines at the very end of the {\textless}body{\textgreater}:
     // options.prefList = ["utag", "zwj", "otag", "entity"];
     // options.defaultTags = {"ss10": 1, "cv69": 7};
     // options.language = "en";
-    // options.variantPreferences = [];
+    // options.basePreferences = [];
     convertAll();
 </script>\end{verbatim}\end{scriptsize}
 
@@ -141,7 +141,7 @@ the text \textSourceText{text\_buffer}, first replacing any MUFI entities if
 \textSourceText{repl\_ent} is true.
 
 For an example of how the Node module can be used, consult and run the file 
-\textSourceText{test2.js}, especially the \textSourceText{require} statement in 
+\textSourceText{test2.js}. Note especially the \textSourceText{require} statement in 
 line 3, the \textSourceText{options} object in line 13, and the invocation of 
 \textSourceText{convert()} in line 15.
 
@@ -162,8 +162,8 @@ relatively compact and accessible web pages. However, Unicode tags are invisible
 them hard to edit, and Junicode 
 is the only font that uses them in this way: the method is not exactly portable. If 
 you check the “More legible markup” box or set
-\textSourceText{options.methodPriority="legible"}, \textSourceText{pua2ot} will instead use <span> 
-elements with inline style
+\textSourceText{options.methodPriority="legible"}, \textSourceText{pua2ot} will instead 
+use {\textless}span{\textgreater} elements with inline style
 attributes that turn on OpenType features. The chief advantages of this method are that 
 you can see and easily edit the markup, and HTML
 elements are more familiar to users than Unicode tags. However, the resulting files
@@ -195,17 +195,18 @@ or set \textSourceText{options.keepUnicode=true}.
 
 \subsection{Alternate bases}
 
-Default: \textSourceText{options.variantPreferences=[]}.
+Default: \textSourceText{options.basePreferences=[]}.
 As a large font with many OpenType features, Junicode often provides more than one way 
 to achieve the outcome you want. \textSourceText{Pua2ot} operates by substituting a standard Unicode
 \textbf{base} character for a PUA character and then applying OpenType markup to that 
 base: \textSourceText{pua2ot} options affect both the base and the markup. This option affects several
 classes of character (\textbf{insular} letters, Unicode-encoded \textbf{small caps},
-\textbf{punctuation}, combining \textbf{marks}, and \textbf{currency} signs). Select
+\textbf{punctuation}, combining \textbf{marks}, \textbf{currency} signs, and a small 
+collection of alphabetic characters (\textbf{alpha})). Select
 one or more of the items in this list (use the Shift or Control/Command keys to make
-multiple selections) or assign an array to \textSourceText{options.variantPreferences}
+multiple selections) or assign an array to \textSourceText{options.basePreferences}
 to alter the substitutions \textSourceText{pua2ot} makes for many characters in these classes. The
-default settings here are chosen to maximize accessibility and minimize the size of 
+default settings are chosen to maximize accessibility and minimize the size of 
 the output file, but you may have good reasons for preferring alternate choices. For 
 example, small caps can by default be searched as their lowercase equivalents (e.g. 
 as \textex{a}), but if these small caps make a meaningful distinction in your text,
@@ -228,7 +229,7 @@ You may wish some OpenType features to be on for the whole document. For example
 \textSourceText{ss10} “Entities and Tags” must be on in any document that uses Junicode entities or 
 Unicode tags. To manage 
 your text’s OpenType features, this script needs to know about these default features; 
-and when you download or copy your text, they will be recorded in an enclosing <div>. 
+and when you download or copy your text, they will be recorded in an enclosing {\textless}div{\textgreater}. 
 Note the format: this is a comma-separated list of key-value pairs, where the keys 
 (four-letter tags identifying OpenType features) are in double quotation marks, followed 
 by a colon and a number (1 means “on,” but some features (especially the \textSourceText{cvnn} 

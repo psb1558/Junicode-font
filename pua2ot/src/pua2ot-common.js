@@ -31,12 +31,12 @@
     /**
      * Preference list for the "compact" style of markup.
      */
-    const COMPACT_PREF_LIST = [ "utag", "zwj", "otag", "entity" ];
+    const COMPACT_PREF_LIST = [ "utag", "zwj", "enla", "otag", "entity" ];
 
     /**
      * Preference list for the "legible" style of markkup.
      */
-    const LEGIBLE_PREF_LIST = [ "otag", "utag", "zwj", "entity" ];
+    const LEGIBLE_PREF_LIST = [ "enla", "otag", "utag", "zwj", "entity" ];
 
     /**
      * Defines Unicodes for problematic Unicodes (those that look like variants
@@ -168,7 +168,7 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
 
     let _keepUnicode = false
 
-    let _nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case" ];
+    let _nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "font-variation-settings" ];
 
     let _language = "en";
 
@@ -179,6 +179,8 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
     //const variantLabels = [ "insular", "smallcap", "punctuation", "alpha", "mark", "currency" ];
 
     let _basePreferences = [];
+
+    let _enlargedScale = 32;
 
     const phRegExp = new RegExp("%\\^%", "g");
 
@@ -216,6 +218,7 @@ const ENTITY_MAP = new RegExp(Object.keys(entityDict).join("|"), "g");
  * @property {{string: number}} defaultTags - OpenType features that are always on.
  * @property {string[]} basePreferences - Choose among different bases for certain categories of character.
  * @property {boolean} replaceMUFIEntities - Whether to search and replace MUFI entities.
+ * @property {number} enlargedScale - Scale (0-100) for Enlarge axis.
  * @type {{string: string | boolean | string[] | object}}
  */
 let options = {}
@@ -266,7 +269,7 @@ Object.defineProperty(options, 'methodPriority', {
 Object.defineProperty(options, 'prefList', {
     // get or install a custom list of options for char replacement.
     get: () => _prefList,
-    set: pfl => {if (pfl.length == 4) {_prefList = pfl}}
+    set: pfl => {if (pfl.length == 5) {_prefList = pfl}}
 } );
 
 Object.defineProperty(options, 'defaultTags', {
@@ -291,6 +294,11 @@ Object.defineProperty(options, 'basePreferences', {
     // currency, alpha.
     get: () => _basePreferences,
     set: v => _basePreferences = v
+} );
+
+Object.defineProperty(options, 'enlargedScale', {
+    get: () => _enlargedScale,
+    set: s => _enlargedScale = s
 } );
 
 
@@ -426,6 +434,18 @@ function mergeTags(base, taglist) {
     return base;
 }
 
+function applyEnlargeAxis(enla, base, current_tags) {
+    let loclbase = ("base" in enla) ? enla.base : base;
+    if ("utags" in enla) {
+        taglist = enla.utags;
+        if (taglist.length >= 2) {
+            loclbase = mergeTags(loclbase, taglist);
+        }
+    }
+    t = `<span style="font-variation-settings: 'ENLA' ${_enlargedScale}">`;
+    return t + loclbase + "</span>";
+}
+
 /**
  * An otag block specifies the OpenType features we need to activate
  * to represent this "base". These are added to the features
@@ -517,10 +537,11 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
  * @returns {string} - the converted base.
  */
 function resolveZwj(zwj, base, current_tags, current_pass=1) {
-    let loclbase = base;
+    const loclbase = ("base" in zwj) ? zwj.base : base;
+    /* let loclbase = base;
     if ("base" in zwj) {
         loclbase = zwj.base;
-    }
+    } */
     if (loclbase.length < 2) {
         return loclbase;
     }
@@ -563,11 +584,12 @@ function resolveZwj(zwj, base, current_tags, current_pass=1) {
  * @returns {string} - the converted base.
  */
 function resolveUtag(utag, base, current_tags, current_pass=1) {
-    let loclbase = base;
+    let loclbase = "base" in utag ? utag.base : base;
+    /* let loclbase = base;
     let taglist = [];
     if ("base" in utag) {
         loclbase = utag.base;
-    }
+    } */
     taglist = utag.tags;
     if (taglist === undefined) {
         if (!("otags" in utag)) {
@@ -612,7 +634,7 @@ function resolveEntity(entity, base, current_tags, current_pass=1) {
  * @returns {array} - 0: a string with the selected type; 1: section
  * of the character block needed for pending operation.
  */
-function getMethodBlock(char_block) {
+function getMethodBlock(char_block, h) {
     let preferred_block = null;
     let selected_type = null;
     for (const idx in _prefList) {
@@ -739,7 +761,7 @@ function convert(text_buffer, repl_ent = true, code_on = false) {
                         continue;
                     }
                     let current_base = codepoint_entry.base;
-                    let method_info = getMethodBlock(codepoint_entry);
+                    let method_info = getMethodBlock(codepoint_entry, hexstr);
                     let method_type = method_info[0];
                     let method_block = method_info[1];
                     let tmpstr = current_base;
@@ -754,6 +776,9 @@ function convert(text_buffer, repl_ent = true, code_on = false) {
                         if (tmpstr.length == 0) {
                             tmpstr = _char;
                         }
+                    }
+                    else if (method_type == "enla") {
+                        tmpstr = applyEnlargeAxis(method_block, current_base, current_tags);
                     }
                     else if (method_type == "zwj") {
                         tmpstr = resolveZwj(method_block, current_base, current_tags,

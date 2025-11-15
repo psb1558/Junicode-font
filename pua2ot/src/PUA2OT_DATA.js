@@ -1,1 +1,14138 @@
-const PUA_DATA={"0131":{base:"i",desc:"LATIN SMALL LETTER DOTLESS I",mntity:"inodot",note:"Produces an unencoded variant of i.",otag:{tags:[{index:1,name:"cv18"}]},utag:{tags:[{name:"d"},{name:"l"}]}},A75A:{base:"R",desc:"LATIN CAPITAL LETTER R ROTUNDA",mntity:"Rrot",otag:{tags:[{name:"cv35",index:2}]},utag:{tags:[{name:"r"},{name:"o"}]}},A75B:{base:"r",desc:"LATIN SMALL LETTER R ROTUNDA",mntity:"rrot",otag:{tags:[{name:"cv36",index:2}]},utag:{tags:[{name:"r"},{name:"o"}]}},"1D00":{desc:"LATIN LETTER SMALL CAPITAL A",mntity:"ascap",var:{smallcap:{base:"ᴀ"},other:{base:"a",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D01":{desc:"LATIN LETTER SMALL CAPITAL AE",mntity:"aeligscap",var:{smallcap:{base:"ᴁ"},other:{base:"æ",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"0299":{desc:"LATIN LETTER SMALL CAPITAL B",mntity:"bscap",var:{smallcap:{base:"ʙ"},other:{base:"b",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D04":{desc:"LATIN LETTER SMALL CAPITAL C",mntity:"cscap",var:{smallcap:{base:"ᴄ"},other:{base:"c",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D05":{desc:"LATIN LETTER SMALL CAPITAL D",mntity:"dscap",var:{smallcap:{base:"ᴅ"},other:{base:"d",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D06":{desc:"LATIN LETTER SMALL CAPITAL ETH",mntity:"ethscap",var:{smallcap:{base:"ᴆ"},other:{base:"ð",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D07":{desc:"LATIN LETTER SMALL CAPITAL E",mntity:"escap",var:{smallcap:{base:"ᴇ"},other:{base:"e",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},A730:{desc:"LATIN LETTER SMALL CAPITAL F",mntity:"fscap",var:{smallcap:{base:"ꜰ"},other:{base:"f",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"0262":{desc:"LATIN LETTER SMALL CAPITAL G",mntity:"gscap",var:{smallcap:{base:"ɢ"},other:{base:"g",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"029C":{desc:"LATIN LETTER SMALL CAPITAL H",mntity:"hscap",var:{smallcap:{base:"ʜ"},other:{base:"h",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"026A":{desc:"LATIN LETTER SMALL CAPITAL I",mntity:"iscap",var:{smallcap:{base:"ɪ"},other:{base:"i",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D0A":{desc:"LATIN LETTER SMALL CAPITAL J",mntity:"jscap",var:{smallcap:{base:"ᴊ"},other:{base:"j",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D0B":{desc:"LATIN LETTER SMALL CAPITAL K",mntity:"kscap",var:{smallcap:{base:"ᴋ"},other:{base:"k",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"029F":{desc:"LATIN LETTER SMALL CAPITAL L",mntity:"lscap",var:{smallcap:{base:"ʟ"},other:{base:"l",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D0D":{desc:"LATIN LETTER SMALL CAPITAL M",mntity:"mscap",var:{smallcap:{base:"ᴍ"},other:{base:"m",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"0274":{desc:"LATIN LETTER SMALL CAPITAL N",mntity:"nscap",var:{smallcap:{base:"ɴ"},other:{base:"n",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D0F":{desc:"LATIN LETTER SMALL CAPITAL O",mntity:"oscap",var:{smallcap:{base:"ᴏ"},other:{base:"o",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"0276":{desc:"LATIN LETTER SMALL CAPITAL OE",mntity:"oeligscap",var:{smallcap:{base:"ɶ"},other:{base:"œ",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D18":{desc:"LATIN LETTER SMALL CAPITAL P",mntity:"pscap",var:{smallcap:{base:"ᴘ"},other:{base:"p",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF0C:{base:"q",desc:"LATIN LETTER SMALL CAPITAL Q",mntity:"qscap",note:"deprecated",var:{smallcap:{base:"ꞯ"},other:{base:"q",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"0280":{desc:"LATIN LETTER SMALL CAPITAL R",mntity:"rscap",var:{smallcap:{base:"ʀ"},other:{base:"r",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},A731:{desc:"LATIN LETTER SMALL CAPITAL S",mntity:"sscap",var:{smallcap:{base:"ꜱ"},other:{base:"s",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},A7AF:{desc:"LATIN LETTER SMALL CAPITAL Q",mntity:"qscap",var:{smallcap:{base:"ꞯ"},other:{base:"q",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D1B":{desc:"LATIN LETTER SMALL CAPITAL T",mntity:"tscap",var:{smallcap:{base:"ᴛ"},other:{base:"t",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D1C":{desc:"LATIN LETTER SMALL CAPITAL U",mntity:"uscap",var:{smallcap:{base:"ᴜ"},other:{base:"u",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D20":{desc:"LATIN LETTER SMALL CAPITAL V",mntity:"vscap",var:{smallcap:{base:"ᴠ"},other:{base:"v",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D21":{desc:"LATIN LETTER SMALL CAPITAL W",mntity:"wscap",var:{smallcap:{base:"ᴡ"},other:{base:"w",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"028F":{desc:"LATIN LETTER SMALL CAPITAL Y",mntity:"yscap",var:{smallcap:{base:"ʏ"},other:{base:"y",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"1D22":{desc:"LATIN LETTER SMALL CAPITAL Z",mntity:"zscap",var:{smallcap:{base:"ᴢ"},other:{base:"z",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},"10FFFB":{base:"͏̄",desc:"COMBINING spiritus asper (not MUFI)",otag:{tags:[{index:36,name:"cv84"}]}},"10FFFC":{base:"͏̄",desc:"COMBINING subscript a (not MUFI)",otag:{tags:[{index:37,name:"cv84"}]}},"1D79":{desc:"LATIN SMALL LETTER INSULAR G",mntity:"gins",note:"Makes this character searchable as g.",var:{insular:{base:"ᵹ"},other:{base:"g",otag:{tags:[{name:"cv14"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},A77A:{desc:"LATIN SMALL LETTER INSULAR D",mntity:"drot",note:"Makes this character searchable as d.",var:{insular:{base:"ꝺ"},other:{base:"d",otag:{tags:[{name:"cv08"}]},utag:{tags:[{name:"i"},{name:"1"}]}}}},A77C:{desc:"LATIN SMALL LETTER INSULAR F",mntity:"fins",note:"Makes this character searchable as f.",var:{insular:{base:"ꝼ"},other:{base:"f",otag:{tags:[{name:"cv12"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},A783:{base:"r",desc:"LATIN SMALL LETTER INSULAR R",mntity:"rins",note:"Makes this character searchable as r.",var:{insular:{base:"ꞃ"},other:{base:"r",otag:{tags:[{name:"cv36"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},A785:{desc:"LATIN SMALL LETTER INSULAR S",mntity:"sins",note:"Makes this character searchable as s.",var:{insular:{base:"ꞅ"},other:{base:"s",otag:{tags:[{name:"cv38"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},A787:{desc:"LATIN SMALL LETTER INSULAR T",mntity:"trot",note:"Makes this character searchable as t.",var:{insular:{base:"ꞇ"},other:{base:"t",otag:{tags:[{name:"cv40"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},"10A0C4":{base:"⹎",otag:{tags:[{name:"cv74",index:5}]},utag:{tags:[{name:"a"},{name:"5"}]}},"10A042":{desc:"Punctus with double comma positura",base:";",note:"no period variant yet.",otag:{tags:[{name:"cv73",index:6}]},utag:{tags:[{name:"a"},{name:"6"}]}},"10A03B":{note:"Not in MUFI db",base:"·",otag:{tags:[{name:"cv71",index:2}]},utag:{tags:[{name:"s"},{name:"r"}]}},"10A043":{base:";",note:"no period variant yet.",otag:{tags:[{name:"cv73",index:7}]},utag:{tags:[{name:"a"},{name:"7"}]}},"10A05D":{base:"͏̄",desc:"COMBINING CURVED MACRON WITH SERIFS",note:"Not MUFI",otag:{tags:[{name:"cv84",index:38}]},entity:{base:"&_upmc;"},utag:{tags:[{name:"3"},{name:"8"}]}},"10A075":{base:"͏̄",desc:"COMBINING ZIGZAG-LIKE MACRON",note:"Not MUFI",otag:{tags:[{name:"cv84",index:39}]},entity:{base:"&_zzmc;"},utag:{tags:[{name:"3"},{name:"9"}]}},E004:{base:"Ą́",desc:"LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE",mntity:"Aogonacute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E00A:{base:"Ā́",desc:"LATIN CAPITAL LETTER A WITH MACRON AND ACUTE",mntity:"Amacracute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E010:{base:"Ā̆",desc:"LATIN CAPITAL LETTER A WITH MACRON AND BREVE",mntity:"Amacrbreve"},E025:{base:"A̋",desc:"LATIN CAPITAL LETTER A WITH DOUBLE ACUTE",mntity:"Adblac"},E02C:{base:"Aͤ",desc:"LATIN CAPITAL LETTER A WITH LATIN SMALL LETTER E ABOVE",mntity:"Aesup"},E033:{base:"A᷎",desc:"LATIN CAPITAL LETTER A WITH CURL",mntity:"Acurl"},E036:{base:"Æ̣",desc:"LATIN CAPITAL LETTER AE WITH DOT BELOW",mntity:"AEligdotbl"},E03A:{base:"Ǣ́",desc:"LATIN CAPITAL LETTER AE WITH MACRON AND ACUTE",mntity:"AEligmacracute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E03D:{base:"Ǣ̆",desc:"LATIN CAPITAL LETTER AE WITH MACRON AND BREVE",mntity:"AEligmacrbreve"},E03F:{base:"Æ̆",desc:"LATIN CAPITAL LETTER AE WITH BREVE",mntity:"AEligbreve"},E040:{base:"Æ̨",desc:"LATIN CAPITAL LETTER AE WITH OGONEK",mntity:"AEligogon"},E041:{base:"Æ̋",desc:"LATIN CAPITAL LETTER AE WITH DOUBLE ACUTE",mntity:"AEligdblac"},E042:{base:"Æ̈",desc:"LATIN CAPITAL LETTER AE WITH DIAERESIS",mntity:"AEliguml"},E043:{base:"Æ̇",desc:"LATIN CAPITAL LETTER AE WITH DOT ABOVE",mntity:"AEligdot"},E044:{base:"B́",desc:"LATIN CAPITAL LETTER B WITH ACUTE",mntity:"Bacute"},E066:{base:"C̣",desc:"LATIN CAPITAL LETTER C WITH DOT BELOW",mntity:"Cdotbl"},E076:{base:"C̨",desc:"LATIN CAPITAL LETTER C WITH OGONEK",mntity:"Cogon"},E077:{base:"D́",desc:"LATIN CAPITAL LETTER D WITH ACUTE",mntity:"Dacute"},E08F:{base:"Ð̣",desc:"LATIN CAPITAL LETTER ETH WITH DOT BELOW",mntity:"ETHdotbl"},E099:{base:"Ę́",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE",mntity:"Eogonacute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E0B7:{base:"Ē̆",desc:"LATIN CAPITAL LETTER E WITH MACRON AND BREVE",mntity:"Emacrbreve"},E0BC:{base:"Ę̄",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND MACRON",mntity:"Eogonmacr"},E0C8:{base:"Ė́",desc:"LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE",mntity:"Edotacute"},E0D1:{base:"E̋",desc:"LATIN CAPITAL LETTER E WITH DOUBLE ACUTE",mntity:"Edblac"},E0E1:{base:"Eͣ",desc:"LATIN CAPITAL LETTER E WITH LATIN SMALL LETTER A ABOVE",mntity:"Easup"},E0E8:{base:"Ę̣",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND DOT BELOW",mntity:"Eogondotbl"},E0E9:{base:"E᷎",desc:"LATIN CAPITAL LETTER E WITH CURL",mntity:"Ecurl"},E0EA:{base:"Ę̋",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND DOUBLE ACUTE",mntity:"Eogondblac",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E0EB:{base:"Ę̇",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND DOT ABOVE",mntity:"Eogondot"},E0EC:{base:"Ę͏̇́",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND DOT ABOVE AND ACUTE",mntity:"Eogondotacute"},E0EE:{base:"F̣",desc:"LATIN CAPITAL LETTER F WITH DOT BELOW",mntity:"Fdotbl"},E0F0:{base:"F́",desc:"LATIN CAPITAL LETTER F WITH ACUTE",mntity:"Facute"},E101:{base:"G̣",desc:"LATIN CAPITAL LETTER G WITH DOT BELOW",mntity:"Gdotbl"},E116:{base:"H́",desc:"LATIN CAPITAL LETTER H WITH ACUTE",mntity:"Hacute"},E12A:{base:"I᷎",desc:"LATIN CAPITAL LETTER I WITH CURL",mntity:"Icurl"},E135:{base:"Ī́",desc:"LATIN CAPITAL LETTER I WITH MACRON AND ACUTE",mntity:"Imacracute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E137:{base:"Ī̆",desc:"LATIN CAPITAL LETTER I WITH MACRON AND BREVE",mntity:"Imacrbreve"},E143:{base:"I̋",desc:"LATIN CAPITAL LETTER I WITH DOUBLE ACUTE",mntity:"Idblac"},E150:{base:"I̅",desc:"LATIN CAPITAL LETTER I WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Iovlhigh"},E151:{base:"J̣",desc:"LATIN CAPITAL LETTER J WITH DOT BELOW",mntity:"Jdotbl"},E152:{base:"J̅",desc:"LATIN CAPITAL LETTER J WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Jovlhigh"},E153:{base:"J́",desc:"LATIN CAPITAL LETTER J WITH ACUTE",mntity:"Jacute"},E154:{base:"J̄",desc:"LATIN CAPITAL LETTER J WITH HIGH MACRON (ABOVE CHARACTER)",mntity:"Jmacrhigh"},E15C:{base:"J̇",desc:"LATIN CAPITAL LETTER J WITH DOT ABOVE",mntity:"Jdot"},E162:{base:"J̋",desc:"LATIN CAPITAL LETTER J WITH DOUBLE ACUTE",mntity:"Jdblac"},E163:{base:"J᷎",desc:"LATIN CAPITAL LETTER J WITH CURL",mntity:"Jcurl"},E168:{base:"K̇",desc:"LATIN CAPITAL LETTER K WITH DOT ABOVE",mntity:"Kdot"},E19E:{base:"L̇",desc:"LATIN CAPITAL LETTER L WITH DOT ABOVE",mntity:"Ldot"},E1B8:{base:"M̄",desc:"LATIN CAPITAL LETTER M WITH HIGH MACRON (ABOVE CHARACTER)",mntity:"Mmacrhigh"},E1D2:{base:"M̅",desc:"LATIN CAPITAL LETTER M WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Movlhigh"},E1DC:{base:"N̄",desc:"LATIN CAPITAL LETTER N WITH HIGH MACRON (ABOVE CHARACTER)",mntity:"Nmacrhigh"},E208:{base:"Ǫ̣",desc:"LATIN CAPITAL LETTER O WITH OGONEK AND DOT BELOW",mntity:"Oogondotbl"},E20C:{base:"Ǫ́",desc:"LATIN CAPITAL LETTER O WITH OGONEK AND ACUTE",mntity:"Oogonacute"},E21B:{base:"Ō̆",desc:"LATIN CAPITAL LETTER O WITH MACRON AND BREVE",mntity:"Omacrbreve"},E22D:{base:"Ö̂",desc:"LATIN CAPITAL LETTER O WITH DIAERESIS AND CIRCUMFLEX",mntity:"Oumlcirc",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E244:{base:"Oͤ",desc:"LATIN CAPITAL LETTER O WITH LATIN SMALL LETTER E ABOVE",mntity:"Oesup"},E246:{base:"Oͧ",desc:"LATIN CAPITAL LETTER O WITH LATIN SMALL LETTER U ABOVE",mntity:"Ousup"},E24F:{base:"Ǫ᷎",desc:"LATIN CAPITAL LETTER O WITH OGONEK AND CURL",mntity:"Oogoncurl"},E252:{base:"Ø̄",desc:"LATIN CAPITAL LETTER O WITH STROKE AND MACRON",mntity:"Oslashmacr"},E253:{base:"Ø̄̆",desc:"LATIN CAPITAL LETTER O WITH STROKE AND MACRON AND BREVE",mntity:"Oslashmacrbreve"},E255:{base:"Ø̨",desc:"LATIN CAPITAL LETTER O WITH STROKE AND OGONEK",mntity:"Oslashogon"},E257:{base:"Ǿ̨",desc:"LATIN CAPITAL LETTER O WITH STROKE AND OGONEK AND ACUTE",mntity:"Oslashogonacute"},E259:{base:"Œ́",desc:"LATIN CAPITAL LIGATURE OE WITH ACUTE",mntity:"OEligacute"},E25D:{base:"Œ̄",desc:"LATIN CAPITAL LIGATURE OE WITH MACRON",mntity:"OEligmacr"},E260:{base:"Œ̄̆",desc:"LATIN CAPITAL LIGATURE OE WITH MACRON AND BREVE",mntity:"OEligmacrbreve"},E262:{base:"Œ̨",desc:"LATIN CAPITAL LIGATURE OE WITH OGONEK",mntity:"OEligogon"},E268:{base:"P̋",desc:"LATIN CAPITAL LETTER P WITH DOUBLE ACUTE",mntity:"Pdblac"},E26D:{base:"P̣",desc:"LATIN CAPITAL LETTER P WITH DOT BELOW",mntity:"Pdotbl"},E282:{base:"Q̇",desc:"LATIN CAPITAL LETTER Q WITH DOT ABOVE",mntity:"Qdot"},E288:{base:"Q̣",desc:"LATIN CAPITAL LETTER Q WITH DOT BELOW",mntity:"Qdotbl"},E2E2:{base:"T́",desc:"LATIN CAPITAL LETTER T WITH ACUTE",mntity:"Tacute"},E2EE:{base:"T̨",desc:"LATIN CAPITAL LETTER T WITH OGONEK",mntity:"Togon"},E309:{base:"Ū́",desc:"LATIN CAPITAL LETTER U WITH MACRON AND ACUTE",mntity:"Umacracute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E30B:{base:"Ū̆",desc:"LATIN CAPITAL LETTER U WITH MACRON AND BREVE",mntity:"Umacrbreve"},E315:{base:"U̇",desc:"LATIN CAPITAL LETTER U WITH DOT ABOVE",mntity:"Udot"},E317:{base:"Ü̂",desc:"LATIN CAPITAL LETTER U WITH DIAERESIS AND CIRCUMFLEX",mntity:"Uumlcirc",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E324:{base:"U̍",desc:"LATIN CAPITAL LETTER U WITH VERTICAL LINE ABOVE",mntity:"Uvertline"},E32B:{base:"Uͤ",desc:"LATIN CAPITAL LETTER U WITH LATIN SMALL LETTER E ABOVE",mntity:"Uesup"},E32D:{base:"Uͦ",desc:"LATIN CAPITAL LETTER U WITH LATIN SMALL LETTER O ABOVE",mntity:"Uosup"},E331:{base:"U᷎",desc:"LATIN CAPITAL LETTER U WITH CURL",mntity:"Ucurl"},E337:{base:"",desc:"LATIN CAPITAL LETTER THORN WITH DIAGONAL STROKE",mntity:"THORNbarslash",note:"Not done yet"},E33A:{base:"V́",desc:"LATIN CAPITAL LETTER V WITH ACUTE",mntity:"Vacute"},E33B:{base:"V̂",desc:"LATIN CAPITAL LETTER V WITH CIRCUMFLEX",mntity:"Vcirc"},E342:{base:"V̈",desc:"LATIN CAPITAL LETTER V WITH DIAERESIS",mntity:"Vuml"},E34B:{base:"V̋",desc:"LATIN CAPITAL LETTER V WITH DOUBLE ACUTE",mntity:"Vdblac"},E34C:{base:"V̇",desc:"LATIN CAPITAL LETTER V WITH DOT ABOVE",mntity:"Vdot"},E34D:{base:"V̄",desc:"LATIN CAPITAL LETTER V WITH MACRON",mntity:"Vmacr"},E34E:{base:"V̍",desc:"LATIN CAPITAL LETTER V WITH VERTICAL LINE ABOVE",mntity:"Vvertline"},E350:{base:"W̋",desc:"LATIN CAPITAL LETTER W WITH DOUBLE ACUTE",mntity:"Wdblac"},E353:{base:"Wͤ",desc:"LATIN CAPITAL LETTER W WITH LATIN SMALL LETTER E ABOVE",mntity:"Wesup"},E357:{base:"W̄",desc:"LATIN CAPITAL LETTER W WITH MACRON",mntity:"Wmacr"},E373:{base:"Ȳ́",desc:"LATIN CAPITAL LETTER Y WITH MACRON AND ACUTE",mntity:"Ymacracute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E375:{base:"Ȳ̆",desc:"LATIN CAPITAL LETTER Y WITH MACRON AND BREVE",mntity:"Ymacrbreve"},E376:{base:"Y̆",desc:"LATIN CAPITAL LETTER Y WITH BREVE",mntity:"Ybreve"},E37C:{base:"Y̋",desc:"LATIN CAPITAL LETTER Y WITH DOUBLE ACUTE",mntity:"Ydblac"},E384:{base:"Ẏ́",desc:"LATIN CAPITAL LETTER Y WITH DOT ABOVE AND ACUTE",mntity:"Ydotacute"},E385:{base:"Y᷎",desc:"LATIN CAPITAL LETTER Y WITH CURL",mntity:"Ycurl"},E39F:{base:"Þ̣",desc:"LATIN CAPITAL LETTER THORN WITH DOT BELOW",mntity:"THORNdotbl"},E3D3:{base:"O᷎",desc:"LATIN CAPITAL LETTER O WITH CURL",mntity:"Ocurl"},E3D4:{base:"Ø᷎",desc:"LATIN CAPITAL LETTER O WITH STROKE AND CURL",mntity:"Oslashcurl"},E3E5:{base:"Ꝼ̣",desc:"LATIN CAPITAL LETTER INSULAR F WITH DOT BELOW",mntity:"Finsdotbl"},E3E6:{base:"Ꝩ̣",desc:"LATIN CAPITAL LETTER INSULAR V (VEND) WITH DOT BELOW",mntity:"Vinsdotbl"},E3E7:{base:"Ꝩ̇",desc:"LATIN CAPITAL LETTER INSULAR V (VEND) WITH DOT ABOVE",mntity:"Vinsdot"},E404:{base:"ą́",desc:"LATIN SMALL LETTER A WITH OGONEK AND ACUTE",mntity:"aogonacute"},E40A:{base:"ā́",desc:"LATIN SMALL LETTER A WITH MACRON AND ACUTE",mntity:"amacracute"},E410:{base:"ā̆",desc:"LATIN SMALL LETTER A WITH MACRON AND BREVE",mntity:"amacrbreve"},E41A:{base:"ä̂",desc:"LATIN SMALL LETTER A WITH DIAERESIS AND CIRCUMFLEX",mntity:"aumlcirc"},E41D:{base:"ạ̈",desc:"LATIN SMALL LETTER A WITH DIAERESIS AND DOT BELOW",mntity:"adotbluml"},E41F:{base:"a͏̊̂",desc:"LATIN SMALL LETTER A WITH RING ABOVE AND CIRCUMFLEX",mntity:"aringcirc"},E425:{base:"a̋",desc:"LATIN SMALL LETTER A WITH DOUBLE ACUTE",mntity:"adblac"},E42C:{base:"aͤ",desc:"LATIN SMALL LETTER A WITH LATIN SMALL LETTER E ABOVE",mntity:"aesup"},E42D:{base:"aͦ",desc:"LATIN SMALL LETTER A WITH LATIN SMALL LETTER O ABOVE",mntity:"aosup"},E42E:{base:"aͮ",desc:"LATIN SMALL LETTER A WITH LATIN SMALL LETTER V ABOVE",mntity:"avsup"},E433:{base:"a᷎",desc:"LATIN SMALL LETTER A WITH CURL",mntity:"acurl"},E435:{base:"aͧ",desc:"LATIN SMALL LETTER A WITH LATIN SMALL LETTER U ABOVE",mntity:"ausup",note:"Added in Junicode 2.222."},E436:{base:"æ̣",desc:"LATIN SMALL LETTER AE WITH DOT BELOW",mntity:"aeligdotbl"},E43A:{base:"æ͏̄́",desc:"LATIN SMALL LETTER AE WITH MACRON AND ACUTE",mntity:"aeligmacracute"},E43D:{base:"æ͏̄̆",desc:"LATIN SMALL LETTER AE WITH MACRON AND BREVE",mntity:"aeligmacrbreve"},E43F:{base:"æ̆",desc:"LATIN SMALL LETTER AE WITH BREVE",mntity:"aeligbreve"},E440:{base:"æ̨",desc:"LATIN SMALL LETTER AE WITH OGONEK",mntity:"aeligogon"},E441:{base:"æ̋",desc:"LATIN SMALL LETTER AE WITH DOUBLE ACUTE",mntity:"aeligdblac"},E442:{base:"æ̈",desc:"LATIN SMALL LETTER AE WITH DIAERESIS",mntity:"aeliguml"},E443:{base:"æ̇",desc:"LATIN SMALL LETTER AE WITH DOT ABOVE",mntity:"aeligdot"},E444:{base:"b́",desc:"LATIN SMALL LETTER B WITH ACUTE",mntity:"bacute"},E44D:{base:"b̶",desc:"LATIN SMALL LETTER B WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"bovlmed"},E466:{base:"c̣",desc:"LATIN SMALL LETTER C WITH DOT BELOW",mntity:"cdotbl"},E476:{base:"c̨",desc:"LATIN SMALL LETTER C WITH OGONEK",mntity:"cogon"},E477:{base:"d́",desc:"LATIN SMALL LETTER D WITH ACUTE",mntity:"dacute"},E48F:{base:"ð̣",desc:"LATIN SMALL LETTER ETH WITH DOT BELOW",mntity:"ethdotbl"},E491:{base:"d̶",desc:"LATIN SMALL LETTER D WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"dovlmed"},E498:{base:"ẹ́",desc:"LATIN SMALL LETTER E WITH DOT BELOW AND ACUTE",mntity:"edotblacute"},E499:{base:"ę́",desc:"LATIN SMALL LETTER E WITH OGONEK AND ACUTE",mntity:"eogonacute"},E49F:{base:"ę̂",desc:"LATIN SMALL LETTER E WITH OGONEK AND CIRCUMFLEX",mntity:"eogoncirc"},E4B7:{base:"ē̆",desc:"LATIN SMALL LETTER E WITH MACRON AND BREVE",mntity:"emacrbreve"},E4BC:{base:"ę̄",desc:"LATIN SMALL LETTER E WITH OGONEK AND MACRON",mntity:"eogonmacr"},E4C8:{base:"ė́",desc:"LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE",mntity:"edotacute"},E4CD:{base:"ë̄",desc:"LATIN SMALL LETTER E WITH DIAERESIS AND MACRON",mntity:"eumlmacr"},E4CF:{base:"e̊",desc:"LATIN SMALL LETTER E WITH RING ABOVE",mntity:"ering"},E4D1:{base:"e̋",desc:"LATIN SMALL LETTER E WITH DOUBLE ACUTE",mntity:"edblac"},E4E1:{base:"eͣ",desc:"LATIN SMALL LETTER E WITH LATIN SMALL LETTER A ABOVE",mntity:"easup"},E4E2:{base:"eͥ",desc:"LATIN SMALL LETTER E WITH LATIN SMALL LETTER I ABOVE",mntity:"eisup"},E4E3:{base:"eͮ",desc:"LATIN SMALL LETTER E WITH LATIN SMALL LETTER V ABOVE",mntity:"evsup"},E4E8:{base:"ę̣",desc:"LATIN SMALL LETTER E WITH OGONEK AND DOT BELOW",mntity:"eogondotbl"},E4E9:{base:"e᷎",desc:"LATIN SMALL LETTER E WITH CURL",mntity:"ecurl"},E4EA:{base:"ę̋",desc:"LATIN SMALL LETTER E WITH OGONEK AND DOUBLE ACUTE",mntity:"eogondblac"},E4EB:{base:"ę̇",desc:"LATIN SMALL LETTER E WITH OGONEK AND DOT ABOVE",mntity:"eogondot"},E4EC:{base:"ę̇́",desc:"LATIN SMALL LETTER E WITH OGONEK AND DOT ABOVE AND ACUTE",mntity:"eogondotacute"},E4EE:{base:"f̣",desc:"LATIN SMALL LETTER F WITH DOT BELOW",mntity:"fdotbl"},E4F0:{base:"f́",desc:"LATIN SMALL LETTER F WITH ACUTE",mntity:"facute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E4F1:{base:"eͤ",desc:"LATIN SMALL LETTER E WITH LATIN SMALL LETTER E ABOVE",mntity:"eesup",note:"added to Junicode 2.222."},E4F2:{base:"eͦ",desc:"LATIN SMALL LETTER E WITH LATIN SMALL LETTER O ABOVE",mntity:"eosup",note:"added to Junicode 2.222."},E501:{base:"g̣",desc:"LATIN SMALL LETTER G WITH DOT BELOW",mntity:"gdotbl"},E516:{base:"h́",desc:"LATIN SMALL LETTER H WITH ACUTE",mntity:"hacute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E517:{base:"h̶",desc:"LATIN SMALL LETTER H WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"hovlmed"},E52A:{base:"i᷎",desc:"LATIN SMALL LETTER I WITH CURL",mntity:"icurl"},E535:{base:"ī́",desc:"LATIN SMALL LETTER I WITH MACRON AND ACUTE",mntity:"imacracute"},E537:{base:"ī̆",desc:"LATIN SMALL LETTER I WITH MACRON AND BREVE",mntity:"imacrbreve"},E543:{base:"i̋",desc:"LATIN SMALL LETTER I WITH DOUBLE ACUTE",mntity:"idblac"},E548:{base:"i̯",desc:"LATIN SMALL LETTER I WITH INVERTED BREVE BELOW",mntity:"ibrevinvbl"},E54A:{base:"iͤ",desc:"LATIN SMALL LETTER I WITH LATIN SMALL LETTER E ABOVE",mntity:"iesup"},E54B:{base:"iͮ",desc:"LATIN SMALL LETTER I WITH LATIN SMALL LETTER V ABOVE",mntity:"ivsup"},E550:{base:"i̶",desc:"LATIN SMALL LETTER I WITH MEDIUM-HIGH OVERLINE (ABOVE CHARACTER)",mntity:"iovlmed"},E551:{base:"j̣",desc:"LATIN SMALL LETTER J WITH DOT BELOW",mntity:"jdotbl"},E552:{base:"j̶",desc:"LATIN SMALL LETTER J WITH MEDIUM-HIGH OVERLINE (ABOVE CHARACTER)",mntity:"jovlmed"},E553:{base:"j́",desc:"LATIN SMALL LETTER J WITH ACUTE",mntity:"jacute"},E554:{base:"j̶",desc:"LATIN SMALL LETTER J WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",mntity:"jmacrmed"},E562:{base:"j̋",desc:"LATIN SMALL LETTER J WITH DOUBLE ACUTE",mntity:"jdblac"},E563:{base:"j᷎",desc:"LATIN SMALL LETTER J WITH CURL",mntity:"jcurl"},E568:{base:"k̇",desc:"LATIN SMALL LETTER K WITH DOT ABOVE",mntity:"kdot"},E58C:{base:"l̅",desc:"LATIN SMALL LETTER L WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"lovlhigh"},E596:{base:"l̄",desc:"LATIN SMALL LETTER L WITH HIGH MACRON (ABOVE CHARACTER)",mntity:"lmacrhigh"},E59E:{base:"l̇",desc:"LATIN SMALL LETTER L WITH DOT ABOVE",mntity:"ldot"},E5A4:{base:"l̥",desc:"LATIN SMALL LETTER L WITH RING BELOW",mntity:"lringbl"},E5B1:{base:"l̶",desc:"LATIN SMALL LETTER L WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"lovlmed"},E5B8:{base:"m̶",desc:"LATIN SMALL LETTER M WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",mntity:"mmacrmed"},E5C5:{base:"m̥",desc:"LATIN SMALL LETTER M WITH RING BELOW",mntity:"mringbl"},E5D2:{base:"m̶",desc:"LATIN SMALL LETTER M WITH MEDIUM-HIGH OVERLINE (ABOVE CHARACTER)",mntity:"movlmed"},E5D7:{base:"n̂",desc:"LATIN SMALL LETTER N WITH CIRCUMFLEX",mntity:"ncirc"},E5DC:{base:"n̄",desc:"LATIN SMALL LETTER N WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",mntity:"nmacrmed"},E5EE:{base:"n̥",desc:"LATIN SMALL LETTER N WITH RING BELOW",mntity:"nringbl"},E608:{base:"ǫ̣",desc:"LATIN SMALL LETTER O WITH OGONEK AND DOT BELOW",mntity:"oogondotbl"},E60C:{base:"ǫ́",desc:"LATIN SMALL LETTER O WITH OGONEK AND ACUTE",mntity:"oogonacute"},E60E:{base:"ǫ̂",desc:"LATIN SMALL LETTER O WITH OGONEK AND CIRCUMFLEX",mntity:"oogoncirc"},E61B:{base:"ō̆",desc:"LATIN SMALL LETTER O WITH MACRON AND BREVE",mntity:"omacrbreve"},E62C:{base:"ö́",desc:"LATIN SMALL LETTER O WITH DIAERESIS AND ACUTE",mntity:"oumlacute"},E62D:{base:"ö̂",desc:"LATIN SMALL LETTER O WITH DIAERESIS AND CIRCUMFLEX",mntity:"oumlcirc"},E637:{base:"o̊",desc:"LATIN SMALL LETTER O WITH RING ABOVE",mntity:"oring"},E643:{base:"oͣ",desc:"LATIN SMALL LETTER O WITH LATIN SMALL LETTER A ABOVE",mntity:"oasup"},E644:{base:"oͤ",desc:"LATIN SMALL LETTER O WITH LATIN SMALL LETTER E ABOVE",mntity:"oesup"},E645:{base:"oͥ",desc:"LATIN SMALL LETTER O WITH LATIN SMALL LETTER I ABOVE",mntity:"oisup"},E646:{base:"oͧ",desc:"LATIN SMALL LETTER O WITH LATIN SMALL LETTER U ABOVE",mntity:"ousup"},E647:{base:"oͮ",desc:"LATIN SMALL LETTER O WITH LATIN SMALL LETTER V ABOVE",mntity:"ovsup"},E64F:{base:"ǫ᷎",desc:"LATIN SMALL LETTER O WITH OGONEK AND CURL",mntity:"oogoncurl"},E652:{base:"ø̄",desc:"LATIN SMALL LETTER O WITH STROKE AND MACRON",mntity:"oslashmacr"},E653:{base:"ø̄̆",desc:"LATIN SMALL LETTER O WITH STROKE AND MACRON AND BREVE",mntity:"oslashmacrbreve"},E655:{base:"ø̨",desc:"LATIN SMALL LETTER O WITH STROKE AND OGONEK",mntity:"oslashogon"},E657:{base:"ǿ̨",desc:"LATIN SMALL LETTER O WITH STROKE AND OGONEK AND ACUTE",mntity:"oslashogonacute"},E659:{base:"œ́",desc:"LATIN SMALL LIGATURE OE WITH ACUTE",mntity:"oeligacute"},E65D:{base:"œ̄",desc:"LATIN SMALL LIGATURE OE WITH MACRON",mntity:"oeligmacr"},E660:{base:"œ̄̆",desc:"LATIN SMALL LIGATURE OE WITH MACRON AND BREVE",mntity:"oeligmacrbreve"},E662:{base:"œ̨",desc:"LATIN SMALL LIGATURE OE WITH OGONEK",mntity:"oeligogon"},E665:{base:"p̄",desc:"LATIN SMALL LETTER P WITH MACRON",mntity:"pmacr"},E668:{base:"p̋",desc:"LATIN SMALL LETTER P WITH DOUBLE ACUTE",mntity:"pdblac"},E66D:{base:"p̣",desc:"LATIN SMALL LETTER P WITH DOT BELOW",mntity:"pdotbl"},E681:{base:"q̄",desc:"LATIN SMALL LETTER Q WITH MACRON",mntity:"qmacr"},E682:{base:"q̇",desc:"LATIN SMALL LETTER Q WITH DOT ABOVE",mntity:"qdot"},E688:{base:"q̣",desc:"LATIN SMALL LETTER Q WITH DOT BELOW",mntity:"qdotbl"},E68B:{base:"ꝗ̃",desc:"LATIN SMALL LETTER Q WITH STROKE THROUGH DESCENDER AND TILDE",mntity:"qbardestilde"},E6A3:{base:"r̥",desc:"LATIN SMALL LETTER R WITH RING BELOW",mntity:"rringbl"},E6E2:{base:"t́",desc:"LATIN SMALL LETTER T WITH ACUTE",mntity:"tacute"},E6EE:{base:"t̨",desc:"LATIN SMALL LETTER T WITH OGONEK",mntity:"togon"},E709:{base:"ū́",desc:"LATIN SMALL LETTER U WITH MACRON AND ACUTE",mntity:"umacracute"},E70B:{base:"ū̆",desc:"LATIN SMALL LETTER U WITH MACRON AND BREVE",mntity:"umacrbreve"},E715:{base:"u̇",desc:"LATIN SMALL LETTER U WITH DOT ABOVE",mntity:"udot"},E717:{base:"ü̂",desc:"LATIN SMALL LETTER U WITH DIAERESIS AND CIRCUMFLEX",mntity:"uumlcirc"},E724:{base:"u̍",desc:"LATIN SMALL LETTER U WITH VERTICAL LINE ABOVE",mntity:"uvertline"},E727:{base:"u̯",desc:"LATIN SMALL LETTER U WITH INVERTED BREVE BELOW",mntity:"ubrevinvbl"},E72B:{base:"uͤ",desc:"LATIN SMALL LETTER U WITH LATIN SMALL LETTER E ABOVE",mntity:"uesup"},E72C:{base:"uͥ",desc:"LATIN SMALL LETTER U WITH LATIN SMALL LETTER I ABOVE",mntity:"uisup"},E72D:{base:"uͦ",desc:"LATIN SMALL LETTER U WITH LATIN SMALL LETTER O ABOVE",mntity:"uosup"},E731:{base:"u᷎",desc:"LATIN SMALL LETTER U WITH CURL",mntity:"ucurl"},E732:{base:"iͣ",desc:"LATIN SMALL LETTER I WITH LATIN SMALL LETTER A ABOVE",mntity:"iasup",note:"added in Junicode 2.222."},E734:{base:"þſ",desc:"LATIN SMALL LIGATURE THORN AND LONG S",mntity:"thornslonglig",otag:{tags:[{name:"hlig"}]},zwj:{}},E735:{base:"þẝ",desc:"LATIN SMALL LIGATURE THORN AND LONG S WITH STROKE",mntity:"thornslongligbar",note:"problem here?",otag:{tags:[{name:"hlig"}]},zwj:{}},E737:{base:"þ́",desc:"LATIN SMALL LETTER THORN WITH ACUTE",mntity:"thornacute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},E73A:{base:"v́",desc:"LATIN SMALL LETTER V WITH ACUTE",mntity:"vacute"},E73B:{base:"v̂",desc:"LATIN SMALL LETTER V WITH CIRCUMFLEX",mntity:"vcirc"},E742:{base:"v̈",desc:"LATIN SMALL LETTER V WITH DIAERESIS",mntity:"vuml"},E743:{base:"v̊",desc:"LATIN SMALL LETTER V WITH RING ABOVE",mntity:"vring"},E74B:{base:"v̋",desc:"LATIN SMALL LETTER V WITH DOUBLE ACUTE",mntity:"vdblac"},E74C:{base:"v̇",desc:"LATIN SMALL LETTER V WITH DOT ABOVE",mntity:"vdot"},E74D:{base:"v̄",desc:"LATIN SMALL LETTER V WITH MACRON",mntity:"vmacr"},E74E:{base:"v̵",desc:"LATIN SMALL LETTER V WITH BAR",mntity:"vbar"},E74F:{base:"v̍",desc:"LATIN SMALL LETTER V WITH VERTICAL LINE ABOVE",mntity:"vvertline"},E750:{base:"w̋",desc:"LATIN SMALL LETTER W WITH DOUBLE ACUTE",mntity:"wdblac"},E753:{base:"wͤ",desc:"LATIN SMALL LETTER W WITH LATIN SMALL LETTER E ABOVE",mntity:"wesup"},E754:{base:"wͦ",desc:"LATIN SMALL LETTER W WITH LATIN SMALL LETTER O ABOVE",mntity:"wosup"},E757:{base:"w̄",desc:"LATIN SMALL LETTER W WITH MACRON",mntity:"wmacr"},E771:{base:"wͥ",desc:"LATIN SMALL LETTER W WITH LATIN SMALL LETTER I ABOVE",mntity:"wisup",note:"Added in Junicode 2.222."},E773:{base:"ȳ́",desc:"LATIN SMALL LETTER Y WITH MACRON AND ACUTE",mntity:"ymacracute"},E775:{base:"ȳ̆",desc:"LATIN SMALL LETTER Y WITH MACRON AND BREVE",mntity:"ymacrbreve"},E776:{base:"y̆",desc:"LATIN SMALL LETTER Y WITH BREVE",mntity:"ybreve"},E77B:{base:"y̵",desc:"LATIN SMALL LETTER Y WITH BAR",mntity:"ybar"},E77C:{base:"y̋",desc:"LATIN SMALL LETTER Y WITH DOUBLE ACUTE",mntity:"ydblac"},E781:{base:"yͤ",desc:"LATIN SMALL LETTER Y WITH LATIN SMALL LETTER E ABOVE",mntity:"yesup"},E784:{base:"y͏̇́",desc:"LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE",mntity:"ydotacute"},E785:{base:"y᷎",desc:"LATIN SMALL LETTER Y WITH CURL",mntity:"ycurl"},E79E:{base:"ſ̶",desc:"LATIN SMALL LETTER LONG S WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"slongovlmed"},E79F:{base:"þ̣",desc:"LATIN SMALL LETTER THORN WITH DOT BELOW",mntity:"thorndotbl"},E7A2:{base:"þ̶",desc:"LATIN SMALL LETTER THORN WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"thornovlmed"},E7B2:{base:"n̵",desc:"LATIN SMALL LETTER N WITH BAR",mntity:"nbar"},E7C1:{base:"ꝛ̣",desc:"LATIN SMALL LETTER R ROTUNDA WITH DOT BELOW",mntity:"rrotdotbl"},E7C2:{base:"ſ̣",desc:"LATIN SMALL LETTER LONG S WITH DOT BELOW",mntity:"slongdotbl"},E7C3:{base:"k̶",desc:"LATIN SMALL LETTER K WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",mntity:"kovlmed"},E7C7:{base:"hẝ",desc:"LATIN SMALL LIGATURE H AND LONG S WITH STROKE",mntity:"hslongligbar",otag:{tags:[{name:"hlig"}]},zwj:{}},E7C8:{base:"kẝ",desc:"LATIN SMALL LIGATURE K AND LONG S WITH STROKE",mntity:"kslongligbar",otag:{tags:[{name:"hlig"}]},zwj:{}},E7CC:{base:"ɔ̄",desc:"LATIN SMALL LETTER OPEN O WITH MACRON",mntity:"oopenmacr"},E7D3:{base:"o᷎",desc:"LATIN SMALL LETTER O WITH CURL",mntity:"ocurl"},E7D4:{base:"ø᷎",desc:"LATIN SMALL LETTER O WITH STROKE AND CURL",mntity:"oslashcurl"},E7E4:{desc:"LATIN SMALL LETTER R WITH LONG LEG AND STROKE THROUGH DESCENDER",mntity:"rdesstrok",var:{alpha:{base:"ɼ̵"},other:{base:"r",otag:{tags:[{index:8,name:"cv36"}]},utag:{tags:[{name:"l"},{name:"s"}]}}}},E7E5:{desc:"LATIN SMALL LETTER INSULAR F WITH DOT BELOW",mntity:"finsdotbl",var:{insular:{base:"ꝼ̣"},other:{base:"f%^%̣",otag:{tags:[{name:"cv12"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},E7E6:{base:"ꝩ̣",desc:"LATIN SMALL LETTER INSULAR V (VEND) WITH DOT BELOW",mntity:"vinsdotbl"},E7E7:{base:"ꝩ̇",desc:"LATIN SMALL LETTER INSULAR V (VEND) WITH DOT ABOVE",mntity:"vinsdot"},E8A1:{base:"i̵̵",desc:"LATIN SMALL LETTER I WITH TWO STROKES",mntity:"idblstrok"},E8A2:{base:"j̵̵",desc:"LATIN SMALL LETTER J WITH TWO STROKES",mntity:"jdblstrok"},E8A3:{base:"h",desc:"LATIN ABBREVIATION SIGN AUTEM",mntity:"autem",otag:{tags:[{index:2,name:"cv16"}]},utag:{tags:[{name:"a"},{name:"u"}]}},E8AD:{base:"į",desc:"LATIN SMALL LETTER DOTLESS I WITH OGONEK",mntity:"inodotogon"},E8AE:{base:"oꝛ",desc:"LATIN SMALL LIGATURE O R ROTUNDA",mntity:"orrotlig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8AF:{base:"ſl",desc:"LATIN SMALL LIGATURE LONG S L WITH STROKE",mntity:"slonglbarlig",note:"nothing yet (see Junicode Manual p. 16)."},E8B3:{base:"qꝛ",desc:"LATIN SMALL LETTER Q LIGATED WITH R ROTUNDA",mntity:"q2app",otag:{tags:[{name:"hlig"}]},zwj:{}},E8B4:{base:"q",desc:"LATIN SMALL LETTER Q WITH CENTRAL SLANTED STROKE",mntity:"qcentrslstrok",otag:{tags:[{name:"cv34"}]},utag:{tags:[{name:"s"},{name:"d"}]}},E8B7:{base:"ſ",desc:"LATIN SMALL LETTER LONG S WITH FLOURISH",mntity:"slongflour",otag:{tags:[{index:5,name:"cv38"}]},utag:{tags:[{name:"l"},{name:"f"}]}},E8B8:{base:"ſ",desc:"LATIN SMALL LETTER LONG S WITH SLANTED DESCENDING STROKE",mntity:"slongslstrok",otag:{tags:[{name:"cv38",index:6}]},utag:{tags:[{name:"l"},{name:"s"}]}},E8BA:{base:"v",desc:"LATIN SMALL LETTER V WITH SHORT SLASH",mntity:"vslash",otag:{tags:[{name:"cv44"}]},utag:{tags:[{name:"s"},{name:"d"}]}},E8BB:{base:"v",desc:"LATIN SMALL LETTER V WITH SHORT SLASH ABOVE RIGHT",mntity:"vslashura",otag:{tags:[{index:2,name:"cv44"}]},utag:{tags:[{name:"s"},{name:"1"}]}},E8BC:{base:"v",desc:"LATIN SMALL LETTER V WITH TWO SHORT SLASHES ABOVE RIGHT",mntity:"vslashuradbl",otag:{tags:[{index:3,name:"cv44"}]},utag:{tags:[{name:"s"},{name:"2"}]}},E8BD:{base:"x",desc:"LATIN SMALL LETTER X WITH SHORT SLASH ABOVE",mntity:"xslashula",otag:{tags:[{index:2,name:"cv48"}]},utag:{tags:[{name:"s"},{name:"1"}]}},E8BE:{base:"x",desc:"LATIN SMALL LETTER X WITH SHORT SLASH BELOW",mntity:"xslashlra",otag:{tags:[{index:3,name:"cv48"}]},utag:{tags:[{name:"s"},{name:"2"}]}},E8BF:{base:"qꝫ",desc:"LATIN SMALL LETTER Q LIGATED WITH FINAL ET",mntity:"q3app",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C1:{base:"þr",desc:"LATIN SMALL LETTER THORN LIGATED WITH ARM OF LATIN SMALL LETTER R",mntity:"thornrarmlig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C2:{base:"Hr",desc:"LATIN CAPITAL LETTER H LIGATED WITH ARM OF LATIN SMALL LETTER R",mntity:"Hrarmlig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C3:{base:"hr",desc:"LATIN SMALL LETTER H LIGATED WITH ARM OF LATIN SMALL LETTER R",mntity:"hrarmlig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C5:{base:"kr",desc:"LATIN SMALL LETTER K LIGATED WITH ARM OF LATIN SMALL LETTER R",mntity:"krarmlig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C6:{base:"UU",desc:"LATIN CAPITAL LIGATURE UU",mntity:"UUlig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C7:{base:"uu",desc:"LATIN SMALL LIGATURE UU",mntity:"uulig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8C8:{base:"UE",desc:"LATIN CAPITAL LIGATURE UE",mntity:"UElig",otag:{tags:[{name:"hlig"}]},zwj:{}},E8CE:{base:"x",desc:"LATIN SMALL LETTER X WITH TWO SHORT SLASHES BELOW RIGHT",mntity:"xslashlradbl",otag:{tags:[{index:4,name:"cv48"}]},utag:{tags:[{name:"s"},{name:"3"}]}},E8D1:{base:"æ̊",desc:"LATIN SMALL LETTER AE WITH RING ABOVE",mntity:"aeligring"},E8D3:{base:"ǽ̨",desc:"LATIN SMALL LETTER AE WITH OGONEK AND ACUTE",mntity:"aeligogonacute"},E8D5:{base:"ä",desc:"LATIN SMALL LETTER A WITH DIAGONAL DIAERESIS",mntity:"adiaguml",otag:{tags:[{name:"cv88"}]},utag:{tags:[{name:"d"},{name:"i"}]}},E8D7:{base:"ö",desc:"LATIN SMALL LETTER O WITH DIAGONAL DIAERESIS",mntity:"odiaguml",otag:{tags:[{name:"cv88"}]},utag:{tags:[{name:"d"},{name:"i"}]}},E8DA:{base:"A",desc:"ANTIPHON",mntity:"Antiphon",otag:{tags:[{index:3,name:"cv01"}]},utag:{tags:[{name:"s"},{name:"d"}]}},E8DB:{base:"Y",desc:"HYMNUS",mntity:"Hymnus",otag:{tags:[{name:"cv49"}]},utag:{tags:[{name:"s"},{name:"d"}]}},E8DC:{base:"Ps",desc:"LATIN CAPITAL SIGN PSALMUS",mntity:"Psalmus",otag:{tags:[{name:"hlig"}]},zwj:{}},E8DD:{base:"ps",desc:"LATIN SMALL SIGN PSALMUS",mntity:"inodotogon",otag:{tags:[{name:"hlig"}]},zwj:{}},E8DE:{base:"Psi",desc:"LATIN CAPITAL SIGN PSALMI",mntity:"Psalmi",otag:{tags:[{name:"hlig"}]},zwj:{}},E8DF:{base:"psi",desc:"LATIN SMALL SIGN PSALMI",mntity:"psalmi",otag:{tags:[{name:"hlig"}]},zwj:{}},E8E0:{base:"aͥ",desc:"LATIN SMALL LETTER A WITH LATIN SMALL LETTER I ABOVE",mntity:"aisup"},E8E5:{base:"iͦ",desc:"LATIN SMALL LETTER I WITH LATIN SMALL LETTER O ABOVE",mntity:"iosup"},E8E6:{base:"iͧ",desc:"LATIN SMALL LETTER I WITH LATIN SMALL LETTER U ABOVE",mntity:"iusup"},E8E7:{base:"jͤ",desc:"LATIN SMALL LETTER J WITH LATIN SMALL LETTER E ABOVE",mntity:"jesup"},E8E8:{base:"mͤ",desc:"LATIN SMALL LETTER M WITH LATIN SMALL LETTER E ABOVE",mntity:"mesup"},E8E9:{base:"oͦ",desc:"LATIN SMALL LETTER O WITH LATIN SMALL LETTER O ABOVE",mntity:"oosup"},E8EA:{base:"rͤ",desc:"LATIN SMALL LETTER R WITH LATIN SMALL LETTER E ABOVE",mntity:"resup"},E8EB:{base:"uͣ",desc:"LATIN SMALL LETTER U WITH LATIN SMALL LETTER A ABOVE",mntity:"uasup"},E8EC:{base:"uͮ",desc:"LATIN SMALL LETTER U WITH LATIN SMALL LETTER V ABOVE",mntity:"uvsup"},E8ED:{base:"uᷱ",desc:"LATIN SMALL LETTER U WITH LATIN SMALL LETTER W ABOVE",mntity:"uwsup"},E8F0:{base:"wͣ",desc:"LATIN SMALL LETTER W WITH LATIN SMALL LETTER A ABOVE",mntity:"wasup"},E8F2:{base:"wͧ",desc:"LATIN SMALL LETTER W WITH LATIN SMALL LETTER U ABOVE",mntity:"wusup"},E8F3:{base:"wͮ",desc:"LATIN SMALL LETTER W WITH LATIN SMALL LETTER V ABOVE",mntity:"wvsup"},EAD0:{base:"gr",desc:"LATIN SMALL LIGATURE GR",mntity:"grlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EAD1:{base:"qꝩ",desc:"LATIN SMALL LIGATURE Q INSULAR V",mntity:"qvinslig",otag:{tags:[{name:"hlig"}]},zwj:{}},EAD2:{base:"gp",desc:"LATIN SMALL LIGATURE GP",mntity:"gplig",otag:{tags:[{name:"hlig"}]},zwj:{}},EADA:{base:"ſ%^%t",desc:"LATIN SMALL LIGATURE LONG S DESCENDING T",mntity:"slongdestlig",otag:{tags:[{name:"cv38",index:4}]},zwj:{utags:[{name:"l"},{name:"d"}]}},EADC:{base:"lz%^%",desc:"LATIN SMALL LIGATURE L MIDDLE HIGH GERMAN ZED",mntity:"lmhgzedlig",otag:{tags:[{index:2,name:"cv52"},{name:"hlig"}]},zwj:{utags:[{name:"m"},{name:"g"}]}},EADD:{base:"ſz%^%",desc:"LATIN SMALL LIGATURE LONG S MIDDLE HIGH GERMAN ZED",mntity:"slongmhgzedlig",otag:{tags:[{name:"cv52",index:2}]},zwj:{utags:[{name:"m"},{name:"g"}]}},EADE:{base:"ſiz%^%",desc:"LATIN SMALL LIGATURE LONG S I MIDDLE HIGH GERMAN ZED",mntity:"slongimhgzedlig",otag:{tags:[{index:2,name:"cv52"},{name:"hlig"}]},zwj:{utags:[{name:"m"},{name:"g"}]}},EAF0:{base:"á",desc:"LATIN ENLARGED LETTER SMALL A WITH ACUTE",mntity:"aenlacute",otag:{tags:[{name:"ss06"}]}},EAF1:{base:"æ",desc:"LATIN ENLARGED LETTER SMALL LIGATURE AE",mntity:"aeligenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EAF2:{base:"ꜵ",desc:"LATIN LIGATURE ENLARGED LETTER SMALL A AND LATIN SMALL LETTER O",mntity:"aenlosmalllig",otag:{tags:[{index:4,name:"cv59"}]},utag:{tags:[{name:"e"},{name:"2"}]}},EAF3:{base:"ę",desc:"LATIN ENLARGED LETTER SMALL E WITH OGONEK",mntity:"eogonenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EBA0:{base:"ſä",desc:"LATIN SMALL LIGATURE LONG S A WITH DIAERESIS",mntity:"slongaumllig",otag:{tags:[{name:"hlig"}]},zwj:{}},EBA1:{base:"ſh",desc:"LATIN SMALL LIGATURE LONG S H",mntity:"slonghlig",otag:{tags:[{name:"liga"}]}},EBA2:{base:"ſi",desc:"LATIN SMALL LIGATURE LONG S I",mntity:"slongilig",otag:{tags:[{name:"liga"}]}},EBA3:{base:"ſl",desc:"LATIN SMALL LIGATURE LONG S L",mntity:"slongllig",otag:{tags:[{name:"liga"}]}},EBA4:{base:"ſö",desc:"LATIN SMALL LIGATURE LONG S O WITH DIAERESIS",mntity:"slongoumllig",otag:{tags:[{name:"hlig"}]},zwj:{}},EBA5:{base:"ſp",desc:"LATIN SMALL LIGATURE LONG S P",mntity:"slongplig",otag:{tags:[{name:"dlig"}]},zwj:{}},EBA6:{base:"ſſ",desc:"LATIN SMALL LIGATURE LONG S LONG S",mntity:"slongslonglig",otag:{tags:[{name:"liga"}]}},EBA7:{base:"ſſi",desc:"LATIN SMALL LIGATURE LONG S LONG S I",mntity:"slongslongilig",otag:{tags:[{name:"liga"}]}},EBA8:{base:"ſſl",desc:"LATIN SMALL LIGATURE LONG S LONG S L",mntity:"slongslongllig",otag:{tags:[{name:"liga"}]}},EBA9:{base:"ſti",desc:"LATIN SMALL LIGATURE LONG S TI",mntity:"slongtilig",otag:{tags:[{name:"dlig"}]},zwj:{}},EBAA:{base:"ſtr",desc:"LATIN SMALL LIGATURE LONG S T R",mntity:"slongtrlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EBAB:{base:"ſü",desc:"LATIN SMALL LIGATURE LONG S U WITH DIAERESIS",mntity:"slonguumllig",otag:{tags:[{name:"hlig"}]},zwj:{}},EBAC:{base:"ſꝩ",desc:"LATIN SMALL LIGATURE LONG S INSULAR V",mntity:"slongvinslig",otag:{tags:[{name:"hlig"}]},zwj:{}},EBAD:{base:"hſ",desc:"LATIN SMALL LIGATURE H AND LONG S",mntity:"hslonglig",otag:{tags:[{name:"hlig"}]},zwj:{}},EBAE:{base:"kſ",desc:"LATIN SMALL LIGATURE K AND LONG S",mntity:"kslonglig",otag:{tags:[{name:"hlig"}]},zwj:{}},EBAF:{base:"ſ́",desc:"LATIN SMALL LETTER LONG S WITH ACUTE",mntity:"slongacute"},EBB0:{base:"Ꜻ́",desc:"LATIN CAPITAL LIGATURE AV WITH STROKE AND ACUTE",mntity:"AVligslashacute"},EBB1:{base:"ꜻ́",desc:"LATIN SMALL LIGATURE AV WITH STROKE AND ACUTE",mntity:"avligslashacute"},EBB2:{desc:"LATIN SMALL LETTER D ROTUNDA WITH ACUTE",mntity:"drotacute",var:{insular:{base:"ꝺ́"},other:{base:"d%^%́",otag:{tags:[{name:"cv08"}]},utag:{tags:[{name:"i"},{name:"1"}]}}}},EBB3:{base:"Ꝼ́",desc:"LATIN CAPITAL LETTER INSULAR F WITH ACUTE",mntity:"Finsacute"},EBB4:{base:"ꝼ́",desc:"LATIN SMALL LETTER INSULAR F WITH ACUTE",mntity:"finsacute"},EBB5:{base:"M͏́",desc:"LATIN CAPITAL LETTER UNCIAL M WITH ACUTE",mntity:"Muncacute",otag:{tags:[{name:"cv25"}]},utag:{base:"M%^%́",tags:[{name:"u"},{name:"n"}]}},EBB6:{base:"m͏́",desc:"LATIN SMALL LETTER UNCIAL M WITH ACUTE",mntity:"muncacute",otag:{tags:[{name:"cv26"}]},utag:{base:"m%^%́",tags:[{name:"u"},{name:"n"}]}},EBB7:{base:"O͏᷎́",desc:"LATIN CAPITAL LETTER O WITH CURL AND ACUTE",mntity:"Ocurlacute"},EBB8:{base:"o͏᷎́",desc:"LATIN SMALL LETTER O WITH CURL AND ACUTE",mntity:"ocurlacute"},EBB9:{base:"ꝛ́",desc:"LATIN SMALL LETTER R ROTUNDA WITH ACUTE",mntity:"rrotacute"},EBBA:{base:"Ꝩ́",desc:"LATIN CAPITAL LETTER INSULAR V (VEND) WITH ACUTE",mntity:"Vinsacute"},EBBB:{base:"ꝩ́",desc:"LATIN SMALL LETTER INSULAR V (VEND) WITH ACUTE",mntity:"vinsacute"},EBBD:{base:"e᷍a",desc:"LATIN SMALL LETTER EA WITH CIRCUMFLEX",mntity:"eacombcirc"},EBBE:{base:"e᷍u",desc:"LATIN SMALL LETTER EU WITH CIRCUMFLEX",mntity:"eucombcirc"},EBBF:{base:"u͏̄",desc:"LATIN SMALL LETTER U WITH CURLY BAR ABOVE",mntity:"ucurlbar",otag:{tags:[{index:1,name:"cv84"}]},utag:{tags:[{name:"0"},{name:"1"}]}},EBC0:{base:"Ꜵ̋",desc:"LATIN CAPITAL LIGATURE AO WITH DOUBLE ACUTE",mntity:"AOligdblac"},EBC1:{base:"ꜵ̋",desc:"LATIN SMALL LIGATURE AO WITH DOUBLE ACUTE",mntity:"aoligdblac"},EBC2:{base:"Ꜹ̋",desc:"LATIN CAPITAL LIGATURE AV WITH DOUBLE ACUTE",mntity:"AVligdblac"},EBC3:{base:"ꜹ̋",desc:"LATIN SMALL LIGATURE AV WITH DOUBLE ACUTE",mntity:"avligdblac"},EBC4:{base:"Ǫ̋",desc:"LATIN CAPITAL LETTER O WITH OGONEK AND DOUBLE ACUTE",mntity:"Oogondblac"},EBC5:{base:"ǫ̋",desc:"LATIN SMALL LETTER O WITH OGONEK AND DOUBLE ACUTE",mntity:"oogondblac"},EBC6:{base:"Ø̋",desc:"LATIN CAPITAL LETTER O WITH STROKE AND DOUBLE ACUTE",mntity:"Oslashdblac"},EBC7:{base:"ø̋",desc:"LATIN SMALL LETTER O WITH STROKE AND DOUBLE ACUTE",mntity:"oslashdblac"},EBC8:{base:"Œ̋",desc:"LATIN CAPITAL LIGATURE OE WITH DOUBLE ACUTE",mntity:"OEligdblac"},EBC9:{base:"œ̋",desc:"LATIN SMALL LIGATURE OE WITH DOUBLE ACUTE",mntity:"oeligdblac"},EBCA:{base:"Ꝡ͏̋",desc:"LATIN CAPITAL LIGATURE YY WITH DOUBLE ACUTE",mntity:"YYligdblac"},EBCB:{base:"ꝡ͏̋",desc:"LATIN SMALL LIGATURE YY WITH DOUBLE ACUTE",mntity:"yyligdblac"},EBCD:{base:"Ø̇",desc:"LATIN CAPITAL LETTER O WITH STROKE AND DOT ABOVE",mntity:"Oslashdot"},EBCE:{base:"ø̇",desc:"LATIN SMALL LETTER O WITH STROKE AND DOT ABOVE",mntity:"oslashdot"},EBCF:{desc:"LATIN LETTER SMALL CAPITAL P WITH DOT ABOVE",mntity:"pscapdot",var:{smallcap:{base:"ᴘ̇"},other:{base:"p%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBD0:{desc:"LATIN LETTER SMALL CAPITAL B WITH DOT ABOVE",mntity:"bscapdot",var:{smallcap:{base:"ʙ̇"},other:{base:"b%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBD1:{desc:"LATIN SMALL LETTER D ROTUNDA WITH DOT ABOVE",mntity:"drotdot",var:{insular:{base:"ꝺ̇"},other:{base:"d%^%̇",otag:{tags:[{name:"cv08"}]},utag:{tags:[{name:"i"},{name:"1"}]}}}},EBD2:{desc:"LATIN LETTER SMALL CAPITAL D WITH DOT ABOVE",mntity:"dscapdot",var:{smallcap:{base:"ᴅ̇"},other:{base:"d%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBD3:{desc:"LATIN CAPITAL LETTER INSULAR F WITH DOT ABOVE",mntity:"Finsdot",base:"Ꝼ̇"},EBD4:{desc:"LATIN SMALL LETTER INSULAR F WITH DOT ABOVE",mntity:"finsdot",var:{insular:{base:"ꝼ̇"},other:{base:"f%^%͏̇",otag:{tags:[{name:"cv12"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},EBD5:{desc:"LATIN SMALL LETTER SEMI-CLOSED INSULAR F WITH DOT ABOVE",mntity:"finssemiclosedot",var:{insular:{base:"ꝼ%^%̇",utag:{tags:[{name:"a"},{name:"1"}]}},other:{base:"f%^%͏̇",otag:{tags:[{index:3,name:"cv12"}]},utag:{tags:[{name:"i"},{name:"2"}]}}}},EBD6:{desc:"LATIN SMALL LETTER CLOSED INSULAR F WITH DOT ABOVE",mntity:"finsclosedot",var:{insular:{base:"ꝼ%^%̇",utag:{tags:[{name:"a"},{name:"2"}]}},other:{base:"f%^%͏̇",otag:{tags:[{index:4,name:"cv12"}]},utag:{tags:[{name:"i"},{name:"3"}]}}}},EBD7:{desc:"LATIN LETTER SMALL CAPITAL F WITH DOT ABOVE",mntity:"fscapdot",var:{smallcap:{base:"ꜰ̇"},other:{base:"f%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBDA:{desc:"LATIN LETTER SMALL CAPITAL H WITH DOT ABOVE",mntity:"hscapdot",var:{smallcap:{base:"ʜ̇"},other:{base:"h%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBDB:{desc:"LATIN LETTER SMALL CAPITAL K WITH DOT ABOVE",mntity:"kscapdot",var:{smallcap:{base:"ᴋ̇"},other:{base:"k%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBDC:{desc:"LATIN LETTER SMALL CAPITAL L WITH DOT ABOVE",mntity:"lscapdot",var:{smallcap:{base:"ʟ̇"},other:{base:"l%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBDD:{desc:"LATIN LETTER SMALL CAPITAL M WITH DOT ABOVE",mntity:"mscapdot",var:{smallcap:{base:"ᴍ̇"},other:{base:"m%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EBDE:{base:"Ǫ̇",desc:"LATIN CAPITAL LETTER O WITH OGONEK AND DOT ABOVE",mntity:"Oogondot"},EBDF:{base:"ǫ̇",desc:"LATIN SMALL LETTER O WITH OGONEK AND DOT ABOVE",mntity:"oogondot"},EBE0:{base:"Ø̣",desc:"LATIN CAPITAL LETTER O WITH STROKE AND DOT BELOW",mntity:"Oslashdotbl"},EBE1:{base:"ø̣",desc:"LATIN SMALL LETTER O WITH STROKE AND DOT BELOW",mntity:"oslashdotbl"},EBE2:{base:"J̈",desc:"LATIN CAPITAL LETTER J WITH DIAERESIS",mntity:"Juml"},EBE3:{base:"j̈",desc:"LATIN SMALL LETTER J WITH DIAERESIS",mntity:"juml"},EBE4:{base:"Ꝏ̈",desc:"LATIN CAPITAL LIGATURE OO WITH DIAERESIS",mntity:"OOliguml"},EBE5:{base:"ꝏ̈",desc:"LATIN SMALL LIGATURE OO WITH DIAERESIS",mntity:"ooliguml"},EBE6:{base:"ṖṖ",desc:"LATIN CAPITAL LIGATURE PP WITH DIAERESIS",mntity:"PPliguml",otag:{tags:[{name:"hlig"}]},zwj:{}},EBE7:{base:"ṗṗ",desc:"LATIN SMALL LIGATURE PP WITH DIAERESIS",mntity:"ppliguml",otag:{tags:[{name:"hlig"}]},zwj:{}},EBE8:{base:"Ꝡ͏̈",desc:"LATIN CAPITAL LIGATURE YY WITH DIAERESIS",mntity:"YYliguml"},EBE9:{base:"ꝡ͏̈",desc:"LATIN SMALL LIGATURE YY WITH DIAERESIS",mntity:"yyliguml"},EBEA:{base:"Æ᷎",desc:"LATIN CAPITAL LETTER AE WITH CURL",mntity:"AEligcurl"},EBEB:{base:"æ᷎",desc:"LATIN SMALL LETTER AE WITH CURL",mntity:"aeligcurl"},EBEC:{base:"Ø̄́",desc:"LATIN CAPITAL LETTER O WITH STROKE AND MACRON AND ACUTE",mntity:"Oslashmacracute",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},EBED:{base:"ø̄́",desc:"LATIN SMALL LETTER O WITH STROKE AND MACRON AND ACUTE",mntity:"oslashmacracute"},EBEE:{base:"Ø̆",desc:"LATIN CAPITAL LETTER O WITH STROKE AND BREVE",mntity:"Oslashbreve"},EBEF:{base:"ø̆",desc:"LATIN SMALL LETTER O WITH STROKE AND BREVE",mntity:"oslashbreve"},EBF0:{base:"Ꜹ̨",desc:"LATIN CAPITAL LIGATURE AV WITH OGONEK",mntity:"AVligogon"},EBF1:{base:"ꜹ̨",desc:"LATIN SMALL LIGATURE AV WITH OGONEK",mntity:"avligogon"},EBF2:{base:"Ę᷎",desc:"LATIN CAPITAL LETTER E WITH OGONEK AND CURL",mntity:"Eogoncurl"},EBF3:{base:"ę᷎",desc:"LATIN SMALL LETTER E WITH OGONEK AND CURL",mntity:"eogoncurl"},EBF4:{base:"Ȧ́",desc:"LATIN CAPITAL LETTER A WITH DOT ABOVE AND ACUTE",mntity:"Adotacute"},EBF5:{base:"ȧ́",desc:"LATIN SMALL LETTER A WITH DOT ABOVE AND ACUTE",mntity:"adotacute"},EBF6:{base:"İ́",desc:"LATIN CAPITAL LETTER I WITH DOT ABOVE AND ACUTE",mntity:"Idotacute"},EBF7:{base:"i̇́",desc:"LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE",mntity:"idotacute"},EBF8:{base:"Ȯ́",desc:"LATIN CAPITAL LETTER O WITH DOT ABOVE AND ACUTE",mntity:"Odotacute"},EBF9:{base:"ȯ́",desc:"LATIN SMALL LETTER O WITH DOT ABOVE AND ACUTE",mntity:"odotacute"},EBFA:{base:"Ǫ̇́",desc:"LATIN CAPITAL LETTER O WITH OGONEK AND DOT ABOVE AND ACUTE",mntity:"Oogondotacute"},EBFB:{base:"ǫ̇́",desc:"LATIN SMALL LETTER O WITH OGONEK AND DOT ABOVE AND ACUTE",mntity:"oogondotacute"},EBFC:{base:"Ø̇́",desc:"LATIN CAPITAL LETTER O WITH STROKE AND DOT ABOVE AND ACUTE",mntity:"Oslashdotacute"},EBFD:{base:"ø̇́",desc:"LATIN SMALL LETTER O WITH STROKE AND DOT ABOVE AND ACUTE",mntity:"oslashdotacute"},EBFE:{base:"U̇́",desc:"LATIN CAPITAL LETTER U WITH DOT ABOVE AND ACUTE",mntity:"Udotacute"},EBFF:{base:"u̇́",desc:"LATIN SMALL LETTER U WITH DOT ABOVE AND ACUTE",mntity:"udotacute"},EEC2:{base:"bb",desc:"LATIN SMALL LIGATURE BB",mntity:"bblig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEC3:{base:"bg",desc:"LATIN SMALL LIGATURE BG",mntity:"bglig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEC4:{base:"ck",desc:"LATIN SMALL LIGATURE CK",mntity:"cklig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEC5:{base:"ct",desc:"LATIN SMALL LIGATURE CT",mntity:"ctlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EEC6:{base:"d%^%d%^%",desc:"LATIN SMALL LIGATURE DD ROTUNDA",mntity:"drotdrotlig",otag:{tags:[{name:"cv08"},{name:"hlig"}]},zwj:{utags:[{name:"i"},{name:"1"}]}},EEC7:{base:"ey",desc:"LATIN SMALL LIGATURE EY",mntity:"eylig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEC8:{base:"fä",desc:"LATIN SMALL LIGATURE F A WITH DIAERESIS",mntity:"faumllig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEC9:{base:"fj",desc:"LATIN SMALL LIGATURE FJ",mntity:"fjlig",otag:{tags:[{name:"liga"}]}},EECA:{base:"fr",desc:"LATIN SMALL LIGATURE FR",mntity:"frlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EECB:{base:"ft",desc:"LATIN SMALL LIGATURE FT",mntity:"ftlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EECC:{base:"fü",desc:"LATIN SMALL LIGATURE F U WITH DIAERESIS",mntity:"fuumllig",otag:{tags:[{name:"dlig"}]},zwj:{}},EECD:{base:"fy",desc:"LATIN SMALL LIGATURE FY",mntity:"fylig",otag:{tags:[{name:"dlig"}]},zwj:{}},EECE:{base:"fft",desc:"LATIN SMALL LIGATURE FFT",mntity:"fftlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EECF:{base:"ffy",desc:"LATIN SMALL LIGATURE FFT",mntity:"fftlig",otag:{tags:[{name:"dlig"}]},zwj:{}},F75B:{base:";",desc:"Semicolon with dot",otag:{tags:[{name:"cv73",index:9}]},utag:{tags:[{name:"a"},{name:"9"}]}},EED0:{base:"fty",desc:"LATIN SMALL LIGATURE FTY",mntity:"ftylig",otag:{tags:[{name:"dlig"}]},zwj:{}},EED1:{base:"gg",desc:"LATIN SMALL LIGATURE GG",mntity:"gglig",otag:{tags:[{name:"hlig"}]},zwj:{}},EED2:{base:"gd",desc:"LATIN SMALL LIGATURE GD",mntity:"gdlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EED3:{desc:"LATIN SMALL LIGATURE G D ROTUNDA",mntity:"gdrotlig",var:{insular:{base:"gꝺ",otag:{tags:[{name:"hlig"}]},zwj:{}},other:{base:"gd",otag:{tags:[{name:"cv08"},{name:"hlig"}]},zwj:{utags:[{name:"i"},{name:"1"}]}}}},EED4:{base:"gð",desc:"LATIN SMALL LIGATURE G ETH",mntity:"gethlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EED5:{base:"n%^%ſ",desc:"LATIN SMALL LIGATURE SMALL CAPITAL N LONG S",mntity:"nscapslonglig",otag:{tags:[{name:"hlig"},{name:"cv28",index:11}]},zwj:{utags:[{name:"p"},{name:"c"}]}},EED6:{base:"pp",desc:"LATIN SMALL LIGATURE PP",mntity:"pplig",otag:{tags:[{name:"hlig"}]},zwj:{}},EED7:{base:"ꝓp",desc:"LATIN SMALL LIGATURE PP WITH FLOURISH",mntity:"ppflourlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EED8:{base:"tr",desc:"LATIN SMALL LIGATURE TR",mntity:"trlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EED9:{base:"tt",desc:"LATIN SMALL LIGATURE TT",mntity:"ttlig",otag:{tags:[{name:"dlig"}]},zwj:{}},EEDA:{base:"t%^%t%^%",desc:"LATIN SMALL LIGATURE T ROTUNDA T ROTUNDA",mntity:"trottrotlig",note:"fix so it can be made with a plain t.",otag:{tags:[{name:"cv40"},{name:"hlig"}]},zwj:{utags:[{name:"i"},{name:"n"}]}},EEDB:{base:"ty",desc:"LATIN SMALL LIGATURE TY",mntity:"tylig",otag:{tags:[{name:"dlig"}]},zwj:{}},EEDC:{base:"tz",desc:"LATIN SMALL LIGATURE TZ",mntity:"tzlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEDD:{base:"PP",desc:"LATIN CAPITAL LIGATURE PP",mntity:"PPlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEDE:{base:"go",desc:"LATIN SMALL LIGATURE GO",mntity:"golig",otag:{tags:[{name:"hlig"}]},zwj:{}},EEDF:{base:"ſ",desc:"LATIN ENLARGED LETTER SMALL LONG S",mntity:"slongenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE0:{base:"a",desc:"LATIN ENLARGED LETTER SMALL A",mntity:"aenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE1:{base:"b",desc:"LATIN ENLARGED LETTER SMALL B",mntity:"benl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE2:{base:"c",desc:"LATIN ENLARGED LETTER SMALL C",mntity:"cenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE3:{base:"d",desc:"LATIN ENLARGED LETTER SMALL D",mntity:"denl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE4:{desc:"LATIN ENLARGED LETTER D ROTUNDA",mntity:"drotenl",var:{insular:{base:"ꝺ",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},other:{base:"d",otag:{tags:[{name:"cv08"},{name:"ss06"}]},utag:{base:"d",tags:[{name:"i"},{name:"e"}]}}}},EEE5:{base:"ð",desc:"LATIN ENLARGED LETTER SMALL ETH",mntity:"ethenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE6:{base:"e",desc:"LATIN ENLARGED LETTER SMALL E",mntity:"eenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE7:{base:"f",desc:"LATIN ENLARGED LETTER SMALL F",mntity:"fenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE8:{base:"g",desc:"LATIN ENLARGED LETTER SMALL G",mntity:"genl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEE9:{base:"h",desc:"LATIN ENLARGED LETTER SMALL H",mntity:"henl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEEA:{base:"i",desc:"LATIN ENLARGED LETTER SMALL I",mntity:"ienl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEEB:{base:"j",desc:"LATIN ENLARGED LETTER SMALL J",mntity:"jenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEEC:{base:"k",desc:"LATIN ENLARGED LETTER SMALL K",mntity:"kenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEED:{base:"l",desc:"LATIN ENLARGED LETTER SMALL L",mntity:"lenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEEE:{base:"m",desc:"LATIN ENLARGED LETTER SMALL M",mntity:"menl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEEF:{base:"n",desc:"LATIN ENLARGED LETTER SMALL N",mntity:"nenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF0:{base:"o",desc:"LATIN ENLARGED LETTER SMALL O",mntity:"oenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF1:{base:"p",desc:"LATIN ENLARGED LETTER SMALL P",mntity:"penl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF2:{base:"q",desc:"LATIN ENLARGED LETTER SMALL Q",mntity:"qenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF3:{base:"r",desc:"LATIN ENLARGED LETTER SMALL R",mntity:"renl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF4:{base:"s",desc:"LATIN ENLARGED LETTER SMALL S",mntity:"senl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF5:{base:"t",desc:"LATIN ENLARGED LETTER SMALL T",mntity:"tenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF6:{base:"þ",desc:"LATIN ENLARGED LETTER SMALL THORN",mntity:"thornenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF7:{base:"u",desc:"LATIN ENLARGED LETTER SMALL U",mntity:"uenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF8:{base:"v",desc:"LATIN ENLARGED LETTER SMALL V",mntity:"venl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEF9:{base:"w",desc:"LATIN ENLARGED LETTER SMALL W",mntity:"wenl",otag:{tags:[{name:"cv46"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEFA:{base:"x",desc:"LATIN ENLARGED LETTER SMALL X",mntity:"xenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEFB:{base:"y",desc:"LATIN ENLARGED LETTER SMALL Y",mntity:"yenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEFC:{base:"z",desc:"LATIN ENLARGED LETTER SMALL Z",mntity:"zenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EEFD:{desc:"LATIN ENLARGED LETTER SMALL DOTLESS I",mntity:"inodotenl",var:{alpha:{base:"ı",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},other:{base:"i",otag:{tags:[{name:"cv18",index:8}]},utag:{tags:[{name:"d"},{name:"e"}]}}}},EEFE:{base:"ȷ",desc:"LATIN ENLARGED LETTER SMALL DOTLESS J",mntity:"jnodotenl",var:{alpha:{base:"ȷ",utag:{tags:[{name:"e"},{name:"n"}]},otag:{tags:[{name:"ss06"}]}},other:{base:"j",otag:{tags:[{name:"cv20"},{name:"ss06"}]},utag:{tags:[{name:"d"},{name:"l"},{name:"e"},{name:"n"}]}}}},EEFF:{desc:"LATIN ENLARGED LETTER SMALL INSULAR F",mntity:"finsenl",var:{insular:{base:"ꝼ",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},other:{base:"f",otag:{tags:[{name:"cv12"},{name:"ss06"}]},utag:{tags:[{name:"i"},{name:"e"}]}}}},EF11:{base:"x",desc:"LATIN LETTER SMALL CAPITAL X",mntity:"xscap",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}},EF15:{base:"þ",desc:"LATIN LETTER SMALL CAPITAL THORN",mntity:"thornscap",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}},EF20:{desc:"LATIN LETTER SMALL CAPITAL G WITH DOT ABOVE",mntity:"gscapdot",var:{smallcap:{base:"ɢ̇"},other:{base:"g%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF21:{desc:"LATIN LETTER SMALL CAPITAL N WITH DOT ABOVE",mntity:"nscapdot",var:{smallcap:{base:"n%^%̇"},other:{base:"n%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF22:{desc:"LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",mntity:"rscapdot",var:{smallcap:{base:"ʀ̇"},other:{base:"r%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF23:{desc:"LATIN LETTER SMALL CAPITAL S WITH DOT ABOVE",mntity:"sscapdot",var:{smallcap:{base:"ꜱ̇"},other:{base:"s%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF24:{desc:"LATIN LETTER SMALL CAPITAL T WITH DOT ABOVE",mntity:"tscapdot",var:{smallcap:{base:"ᴛ̇"},other:{base:"t%^%̇",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF25:{desc:"LATIN LETTER SMALL CAPITAL B WITH DOT BELOW",mntity:"bscapdotbl",var:{smallcap:{base:"ʙ̣"},other:{base:"b͏̣",otag:{tags:[{name:"pcap"}]},utag:{base:"b%^%̣",tags:[{name:"p"},{name:"c"}]}}}},EF26:{desc:"LATIN LETTER SMALL CAPITAL D WITH DOT BELOW",mntity:"dscapdotbl",var:{smallcap:{base:"ᴅ̣"},other:{base:"d%^%̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF27:{desc:"LATIN LETTER SMALL CAPITAL G WITH DOT BELOW",mntity:"gscapdotbl",var:{smallcap:{base:"ɢ̣"},other:{base:"g%^%͏̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF28:{desc:"LATIN LETTER SMALL CAPITAL L WITH DOT BELOW",mntity:"lscapdotbl",var:{smallcap:{base:"ʟ̣"},other:{base:"l%^%̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF29:{desc:"LATIN LETTER SMALL CAPITAL M WITH DOT BELOW",mntity:"mscapdotbl",var:{smallcap:{base:"ᴍ̣"},other:{base:"m%^%̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF2A:{base:"ṇ",desc:"LATIN LETTER SMALL CAPITAL N WITH DOT BELOW",mntity:"nscapdotbl",var:{smallcap:{base:"ɴ̣"},other:{base:"n%^%̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF2B:{desc:"LATIN LETTER SMALL CAPITAL R WITH DOT BELOW",mntity:"rscapdotbl",var:{smallcap:{base:"ʀ̣"},other:{base:"r%^%̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF2C:{desc:"LATIN LETTER SMALL CAPITAL S WITH DOT BELOW",mntity:"sscapdotbl",var:{smallcap:{base:"ꜱ̣"},other:{base:"s%^%͏̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EF2D:{base:"ṭ",desc:"LATIN LETTER SMALL CAPITAL T WITH DOT BELOW",mntity:"tscapdotbl",var:{smallcap:{base:"ᴛ̣"},other:{base:"t%^%̣",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},EFA0:{base:"ꜳ",desc:"LATIN SMALL LIGATURE AA CLOSED FORM",mntity:"aacloselig",otag:{tags:[{index:2,name:"cv55"}]},utag:{tags:[{name:"c"},{name:"l"}]}},EFA1:{base:"æ",desc:"LATIN SMALL LIGATURE NECKLESS A E",mntity:"anecklesselig",otag:{tags:[{name:"cv57"}]},utag:{tags:[{name:"n"},{name:"e"}]}},EFA2:{base:"ꜹ",desc:"LATIN SMALL LIGATURE NECKLESS A V",mntity:"anecklessvlig",otag:{tags:[{name:"cv60"}]},utag:{tags:[{name:"n"},{name:"e"}]}},EFA3:{base:"af",desc:"LATIN SMALL LIGATURE AF",mntity:"aflig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFA4:{desc:"LATIN SMALL LIGATURE A INSULAR F",mntity:"afinslig",var:{insular:{base:"aꝼ",otag:{tags:[{name:"hlig"}]},zwj:{}},other:{base:"af",otag:{tags:[{name:"cv12"},{name:"hlig"}]},zwj:{utags:[{name:"i"},{name:"n"}]}}}},EFA5:{base:"ag",desc:"LATIN SMALL LIGATURE AG",mntity:"aglig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFA6:{base:"al",desc:"LATIN SMALL LIGATURE AL",mntity:"allig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFA7:{base:"an",desc:"LATIN SMALL LIGATURE AN",mntity:"anlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFA8:{desc:"LATIN SMALL LIGATURE A SMALL CAPITAL N",mntity:"anscaplig",var:{insular:{base:"aɴ",otag:{tags:[{name:"hlig"}]},zwj:{}},other:{base:"an",otag:{tags:[{name:"hlig"},{name:"cv28",index:11}]},zwj:{utags:[{name:"p"},{name:"c"}]}}}},EFA9:{base:"ap",desc:"LATIN SMALL LIGATURE AP",mntity:"aplig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFAA:{base:"ar",desc:"LATIN SMALL LIGATURE AR",mntity:"arlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFAB:{desc:"LATIN SMALL LIGATURE A SMALL CAPITAL R",mntity:"arscaplig",var:{smallcap:{base:"aʀ",otag:{tags:[{name:"hlig"}]},zwj:{}},other:{base:"ar",otag:{tags:[{name:"hlig"},{name:"cv36",index:9}]},zwj:{utags:[{name:"p"},{name:"c"}]}}}},EFAC:{base:"aþ",desc:"LATIN SMALL LIGATURE A THORN",mntity:"athornlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFAD:{base:"oc",desc:"LATIN SMALL LIGATURE OC",mntity:"oclig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFAE:{base:"Æ",desc:"LATIN CAPITAL LIGATURE NECKLESS A E",mntity:"AnecklessElig",otag:{tags:[{name:"cv56"}]},utag:{tags:[{name:"n"},{name:"e"}]}},EFB9:{base:"OꝚ",desc:"LATIN CAPITAL LIGATURE O R ROTUNDA",mntity:"ORrotlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFBA:{base:"oꝝ",desc:"LATIN SMALL LIGATURE O RUM",mntity:"orumlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFBB:{base:"OꝜ",desc:"LATIN CAPITAL LIGATURE O RUM",mntity:"ORUMlig",otag:{tags:[{name:"hlig"}]},zwj:{}},EFD8:{base:"úú",desc:"LATIN SMALL LIGATURE UU WITH DOUBLE ACUTE",mntity:"uuligdblac",otag:{tags:[{name:"hlig"}]},zwj:{}},EFD9:{base:"ÚÚ",desc:"LATIN CAPITAL LIGATURE UU WITH DOUBLE ACUTE",mntity:"UUligdblac",otag:{tags:[{name:"hlig"}]},zwj:{}},EFDB:{base:"Æ̇́",desc:"LATIN CAPITAL LETTER AE WITH DOT ABOVE AND ACUTE",mntity:"AEligdotacute"},EFDC:{base:"æ̇́",desc:"LATIN SMALL LETTER AE WITH DOT ABOVE AND ACUTE",mntity:"aeligdotacute"},EFDD:{base:"œ",desc:"LATIN ENLARGED LETTER SMALL LIGATURE OE",mntity:"oeligenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EFDE:{base:"ꜵ",desc:"LATIN ENLARGED LETTER SMALL LIGATURE AO",mntity:"aoligenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"1"}]}},EFDF:{base:"ꜳ",desc:"LATIN ENLARGED LETTER SMALL LIGATURE AA",mntity:"aaligenl",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},EFE0:{base:"Ꜳ́",desc:"LATIN CAPITAL LIGATURE AA WITH ACUTE",mntity:"AAligacute"},EFE1:{base:"ꜳ́",desc:"LATIN SMALL LIGATURE AA WITH ACUTE",mntity:"aaligacute"},EFE2:{base:"Ꜵ́",desc:"LATIN CAPITAL LIGATURE AO WITH ACUTE",mntity:"AOligacute"},EFE3:{base:"ꜵ́",desc:"LATIN SMALL LIGATURE AO WITH ACUTE",mntity:"aoligacute"},EFE4:{base:"Ꜷ́",desc:"LATIN CAPITAL LIGATURE AU WITH ACUTE",mntity:"AUligacute"},EFE5:{base:"ꜷ́",desc:"LATIN SMALL LIGATURE AU WITH ACUTE",mntity:"auligacute"},EFE6:{base:"Ꜹ́",desc:"LATIN CAPITAL LIGATURE AV WITH ACUTE",mntity:"AVligacute"},EFE7:{base:"ꜹ́",desc:"LATIN SMALL LIGATURE AV WITH ACUTE",mntity:"avligacute"},EFE8:{base:"Ꝏ́",desc:"LATIN CAPITAL LIGATURE OO WITH ACUTE",mntity:"OOligacute"},EFE9:{base:"ꝏ́",desc:"LATIN SMALL LIGATURE OO WITH ACUTE",mntity:"ooligacute"},EFEA:{base:"Ꜳ̋",desc:"LATIN CAPITAL LIGATURE AA WITH DOUBLE ACUTE",mntity:"AAligdblac"},EFEB:{base:"ꜳ̋",desc:"LATIN SMALL LIGATURE AA WITH DOUBLE ACUTE",mntity:"aaligdblac"},EFEC:{base:"Ꝏ̋",desc:"LATIN CAPITAL LIGATURE OO WITH DOUBLE ACUTE",mntity:"OOligdblac"},EFED:{base:"ꝏ̋",desc:"LATIN SMALL LIGATURE OO WITH DOUBLE ACUTE",mntity:"ooligdblac"},EFEE:{base:"Ꜳ̇",desc:"LATIN CAPITAL LIGATURE AA WITH DOT ABOVE",mntity:"AAligdot"},EFEF:{base:"ꜳ̇",desc:"LATIN SMALL LIGATURE AA WITH DOT ABOVE",mntity:"aaligdot"},EFF0:{base:"Ꜽ̇",desc:"LATIN CAPITAL LIGATURE AY WITH DOT ABOVE",mntity:"AYligdot"},EFF1:{base:"ꜽ̇",desc:"LATIN SMALL LIGATURE AY WITH DOT ABOVE",mntity:"ayligdot"},EFF2:{base:"Ꜳ̣",desc:"LATIN CAPITAL LIGATURE AA WITH DOT BELOW",mntity:"AAligdotbl"},EFF3:{base:"ꜳ̣",desc:"LATIN SMALL LIGATURE AA WITH DOT BELOW",mntity:"aaligdotbl"},EFF4:{base:"Ꜵ̣",desc:"LATIN CAPITAL LIGATURE AO WITH DOT BELOW",mntity:"AOligdotbl"},EFF5:{base:"ꜵ̣",desc:"LATIN SMALL LIGATURE AO WITH DOT BELOW",mntity:"aoligdotbl"},EFF6:{base:"Ꜷ̣",desc:"LATIN CAPITAL LIGATURE AU WITH DOT BELOW",mntity:"AUligdotbl"},EFF7:{base:"ꜷ̣",desc:"LATIN SMALL LIGATURE AU WITH DOT BELOW",mntity:"auligdotbl"},EFF8:{base:"Ꜹ̣",desc:"LATIN CAPITAL LIGATURE AV WITH DOT BELOW",mntity:"AVligdotbl"},EFF9:{base:"ꜹ̣",desc:"LATIN SMALL LIGATURE AV WITH DOT BELOW",mntity:"avligdotbl"},EFFA:{base:"Ꜽ̣",desc:"LATIN CAPITAL LIGATURE AY WITH DOT BELOW",mntity:"AYligdotbl"},EFFB:{base:"ꜽ̣",desc:"LATIN SMALL LIGATURE AY WITH DOT BELOW",mntity:"ayligdotbl"},EFFC:{base:"Ꝏ̣",desc:"LATIN CAPITAL LIGATURE OO WITH DOT BELOW",mntity:"OOligdotbl"},EFFD:{base:"ꝏ̣",desc:"LATIN SMALL LIGATURE OO WITH DOT BELOW",mntity:"ooligdotbl"},EFFE:{base:"Ꜳ̈",desc:"LATIN CAPITAL LIGATURE AA WITH DIAERESIS",mntity:"AAliguml"},EFFF:{base:"ꜳ̈",desc:"LATIN SMALL LIGATURE AA WITH DIAERESIS",mntity:"aaliguml"},F00A:{base:"̄",desc:"COMBINING HIGH MACRON WITH FIXED HEIGHT (PART-WIDTH)",mntity:"macrhigh",note:"should be deprecated."},F00B:{base:"̄",desc:"COMBINING MEDIUM-HIGH MACRON WITH FIXED HEIGHT (PART-WIDTH)",mntity:"macrmed",note:"should be deprecated."},F012:{base:"ᷨ",desc:"COMBINING LATIN SMALL LETTER B",note:"use 1DE8 instead of the PUA char."},F013:{desc:"COMBINING LATIN LETTER SMALL CAPITAL B",mntity:"bscapsup",var:{mark:{base:"͏̄",otag:{tags:[{name:"cv84",index:11}]},utag:{tags:[{name:"1"},{name:"1"}]},entity:{base:"&_bsc;"}},other:{base:"ᷨ",utag:{tags:[{name:"s"},{name:"c"}]},entity:{base:"&_bsc;"}}}},F016:{base:"͏̄",desc:"COMBINING LATIN LETTER SMALL CAPITAL D",mntity:"dscapsup",otag:{tags:[{name:"cv84",index:12}]},utag:{tags:[{name:"1"},{name:"2"}]},entity:{base:"&_dsc;"}},F01C:{desc:"COMBINING LATIN LETTER SMALL CAPITAL K",mntity:"kscapsup",var:{mark:{base:"͏̄",otag:{tags:[{name:"cv84",index:18}]},utag:{tags:[{name:"1"},{name:"8"}]},entity:{base:"&_ksc;"}},other:{base:"ᷜ",utag:{tags:[{name:"s"},{name:"c"}]},entity:{base:"&_ksc;"}}}},F01F:{desc:"COMBINING M UNCIAL FORM",mntity:"muncsup",var:{mark:{base:"͏̄",otag:{tags:[{index:19,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"9"}]},entity:{base:"&_munc;"}},other:{base:"ͫ",utag:{tags:[{name:"u"},{name:"n"}]},entity:{base:"&_munc;"}}}},F02A:{desc:"COMBINING LATIN LETTER SMALL CAPITAL T",mntity:"tscapsup",var:{mark:{base:"͏̄",otag:{tags:[{index:25,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"5"}]},entity:{base:"&_tsc;"}},other:{base:"ͭ",utag:{tags:[{name:"s"},{name:"c"}]},entity:{base:"&_tsc;"}}}},F02B:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER Y",note:"I can't find a suitable base character.",mntity:"ysup",otag:{tags:[{index:26,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"6"}]},entity:{base:"&_y;"}},F02F:{desc:"COMBINING LATIN SMALL LETTER DOTLESS I",mntity:"inodotsup",var:{mark:{base:"͏̄",otag:{tags:[{index:15,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"5"}]},entity:{base:"&_idotl;"}},other:{base:"ͥ",utag:{tags:[{name:"d"},{name:"l"}]},entity:{base:"&_idotl;"}}}},F030:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER J",note:"I can't find a suitable base character.",mntity:"jsup",otag:{tags:[{index:16,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"6"}]},entity:{base:"&_j;"}},F031:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER DOTLESS J",note:"I can't find a suitable base character.",mntity:"jnodotsup",otag:{tags:[{index:17,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"7"}]},entity:{base:"&_jdotl;"}},F032:{desc:"COMBINING LATIN LETTER SMALL O WITH STROKE",mntity:"oslashsup",var:{mark:{base:"͏̄",otag:{tags:[{index:22,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"2"}]},entity:{base:"&_oslash;"}},other:{base:"ͦ",utag:{tags:[{name:"s"},{name:"l"}]},entity:{base:"&_oslash;"}}}},F033:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER Q",mntity:"qsup",note:"I can't find a suitable base character.",otag:{tags:[{index:23,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"3"}]},entity:{base:"&_q;"}},F036:{base:"͏̄",desc:"COMBINING LATIN SMALL LIGATURE AN",mntity:"anligsup",note:"I can't find a suitable base character.",otag:{tags:[{index:7,name:"cv84"}]},entity:{base:"&_an;"}},F038:{base:"͏̄",desc:"COMBINING LATIN SMALL LIGATURE AR",mntity:"arligsup",note:"I can't find a suitable base character.",otag:{tags:[{index:9,name:"cv84"}]},entity:{base:"&_ar;"}},F03A:{base:"͏̄",desc:"COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL N",mntity:"anscapligsup",note:"I can't find a suitable base character.",otag:{tags:[{index:8,name:"cv84"}]},utag:{tags:[{name:"0"},{name:"8"}]},entity:{base:"&_ansc;"}},F03D:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER THORN",mntity:"thornsup",note:"I can't find a suitable base character.",otag:{tags:[{index:27,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"7"}]},entity:{base:"&_thorn;"}},F03E:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER O R ROTUNDA",mntity:"orrotsup",note:"I can't find a suitable base character.",otag:{tags:[{index:28,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"8"}]},entity:{base:"&_orr;"}},F03F:{base:"͏̄",desc:"COMBINING LATIN SMALL LETTER O RUM",mntity:"orumsup",note:"I can't find a suitable base character.",otag:{tags:[{index:29,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"9"}]},entity:{base:"&_oru;"}},F040:{desc:"COMBINING LATIN SMALL LETTER RUM",mntity:"rumsup",var:{mark:{base:"͏̄",otag:{tags:[{index:24,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"4"}]},entity:{base:"&_ru;"}},other:{base:"ᷣ",utag:{tags:[{name:"r"},{name:"m"}]},entity:{base:"&_ru;"}}}},F053:{base:"c̄",desc:"LATIN SMALL LETTER C WITH MACRON",mntity:"cmacr"},F054:{base:"r̄",desc:"LATIN SMALL LETTER R WITH MACRON",mntity:"rmacr"},F055:{base:"b%^%ͣ",desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER A ABOVE",mntity:"basup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F056:{base:"b%^%ͤ",desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER E ABOVE",mntity:"besup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F057:{desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"binodotsup",var:{mark:{base:"b%^%̄%^%",otag:{tags:[{index:15,name:"cv84"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"1"},{name:"5"}]}},other:{base:"b%^%ͥ%^%",otag:{tags:[{name:"ss20"},{name:"cv64"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"d"},{name:"l"}]}}}},F059:{base:"b%^%ͦ",desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER O ABOVE",mntity:"bosup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F05A:{base:"b%^%ͬ",desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER R ABOVE",mntity:"brsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F05C:{base:"b%^%ͧ",desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER U ABOVE",mntity:"busup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F05D:{base:"b%^%ͮ",desc:"LATIN SMALL LETTER B WITH LATIN SMALL LETTER V ABOVE",mntity:"bvsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F05E:{base:"b%^%ᷓ",desc:"LATIN SMALL LETTER B WITH FLATTENED OPEN A ABOVE",mntity:"bra",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F05F:{base:"b͛",desc:"LATIN SMALL LETTER B WITH ZIGZAG ABOVE",mntity:"ber"},F062:{base:"b%^%ᷣ%^%",desc:"LATIN SMALL LETTER B WITH UR LEMNISKATE FORM ABOVE",mntity:"burlemn",otag:{tags:[{name:"cv87"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"a"},{name:"1"}]}},F063:{base:"b᷒",desc:"LATIN SMALL LETTER B WITH US ABOVE",mntity:"busup"},F064:{base:"h᷒",desc:"LATIN SMALL LETTER H WITH US ABOVE",mntity:"hus"},F065:{base:"h%^%ͣ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER A ABOVE",mntity:"hasup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F066:{base:"h%^%ͤ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER E ABOVE",mntity:"hesup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F067:{desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"hinodotsup",var:{mark:{base:"h̄",otag:{tags:[{name:"ss20"},{name:"cv84",index:15}]}},other:{base:"h%^%ͥ%^%",otag:{tags:[{name:"cv64"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"d"},{name:"l"}]}}}},F068:{desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER M UNCIAL FORM ABOVE",mntity:"hmuncsup",note:"stopped here",var:{mark:{base:"h%^%̄%^%",otag:{tags:[{index:19,name:"cv84"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"1"},{name:"9"}]}},other:{base:"h%^%ͫ%^%",utag:{tags:[{name:"l"},{name:"d"},{name:"u"},{name:"n"}]}}}},F069:{base:"h%^%ͦ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER O ABOVE",mntity:"hosup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F06A:{base:"h%^%ͬ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER R ABOVE",mntity:"hrsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F06B:{base:"h͛",desc:"LATIN SMALL LETTER H WITH ZIGZAG ABOVE",mntity:"her"},F06C:{base:"h%^%ͧ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER U ABOVE",mntity:"husup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F06D:{base:"h%^%ͮ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER V ABOVE",mntity:"hvsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F06E:{base:"hͭ",desc:"LATIN SMALL LETTER H WITH LATIN SMALL LETTER T ABOVE",mntity:"htsup",otag:{tags:[{name:"ss20"}]},utag:{base:"h%^%ͭ",tags:[{name:"l"},{name:"d"}]}},F06F:{base:"h%^%ᷓ",desc:"LATIN SMALL LETTER H WITH FLATTENED OPEN A ABOVE",mntity:"hra",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F074:{base:"h%^%ᷣ%^%",desc:"LATIN SMALL LETTER H WITH UR LEMNISKATE FORM ABOVE",mntity:"hurlemn",otag:{tags:[{name:"cv87"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"a"},{name:"1"}]}},F075:{base:"k%^%ͣ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER A ABOVE",mntity:"kasup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F076:{base:"k%^%ͤ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER E ABOVE",mntity:"kesup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F077:{base:"k̄",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"kinodotsup",otag:{tags:[{index:15,name:"cv84"},{name:"ss20"}]}},F078:{base:"k%^%ᷞ",desc:"LATIN SMALL LETTER K WITH LATIN LETTER SMALL CAPITAL L ABOVE",mntity:"klscapsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F079:{base:"k%^%ͦ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER O ABOVE",mntity:"kosup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F07A:{base:"k%^%ͬ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER R ABOVE",mntity:"krsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F07B:{base:"k%^%ᷢ",desc:"LATIN SMALL LETTER K WITH LATIN LETTER SMALL CAPITAL R ABOVE",mntity:"krscapsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F07C:{base:"kͧ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER U ABOVE",mntity:"kusup",otag:{tags:[{name:"ss20"}]},utag:{base:"k%^%ͧ",tags:[{name:"l"},{name:"d"}]}},F07D:{base:"k%^%ͮ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER V ABOVE",mntity:"kvsup",note:"need more info about this character.",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F07E:{base:"k᷒",desc:"LATIN SMALL LETTER K WITH US ABOVE",mntity:"kus"},F07F:{base:"k%^%ᷦ",desc:"LATIN SMALL LETTER K WITH LATIN SMALL LETTER Z ABOVE",mntity:"kzsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F084:{base:"þ͛",desc:"LATIN SMALL LETTER THORN WITH ZIGZAG ABOVE",mntity:"thonrer"},F085:{base:"þ%^%ͣ",desc:"LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER A ABOVE",mntity:"thornasup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F086:{base:"þ%^%ͤ",desc:"LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER E ABOVE",mntity:"thornesup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F087:{desc:"LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"thorninodotsup",var:{mark:{base:"þ%^%̄%^%",otag:{tags:[{index:15,name:"cv84"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"1"},{name:"5"}]}},other:{base:"þ%^%ͥ%^%",utag:{tags:[{name:"l"},{name:"d"},{name:"d"},{name:"l"}]},otag:{tags:[{name:"cv64"},{name:"ss20"}]}}}},F089:{base:"þ%^%ͦ",desc:"LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER O ABOVE",mntity:"thornosup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F08A:{base:"þ%^%ͬ",desc:"LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER R ABOVE",mntity:"thornrsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F08B:{base:"þ%^%ᷓ",desc:"LATIN SMALL LETTER THORN WITH FLATTENED OPEN A ABOVE",mntity:"thornra",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F08E:{base:"þ%^%ͭ",desc:"LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER T ABOVE",mntity:"thorntsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F08F:{base:"þ%^%ᫎ",desc:"LATIN SMALL LETTER THORN WITH LATIN LETTER INSULAR T ABOVE",mntity:"thorntrotsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F093:{desc:"LATIN SMALL LETTER INSULAR T WITH MACRON",mntity:"trotmacr",var:{insular:{base:"ꞇ̄"},other:{base:"t%^%̄",otag:{tags:[{name:"cv40"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},F094:{desc:"LATIN SMALL LETTER INSULAR T WITH DOT ABOVE",mntity:"trotdot",var:{insular:{base:"ꞇ̇"},other:{base:"t%^%͏̇",otag:{tags:[{name:"cv40"}]},utag:{tags:[{name:"i"},{name:"n"}]}}}},F096:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER E ABOVE",mntity:"drotesup",var:{insular:{base:"ꝺ%^%ͤ",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ͤ",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F097:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"drotinodotsup",var:{insular:{base:"ꝺ%^%ͥ%^%",otag:{tags:[{name:"cv64"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"d"},{name:"l"}]}},other:{base:"d%^%ͥ%^%",otag:{tags:[{name:"cv08"},{name:"cv64"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"},{name:"d"},{name:"l"}]}}}},F099:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER O ABOVE",mntity:"drotosup",var:{insular:{base:"ꝺ%^%ͦ",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ͦ",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F09A:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN LETTER SMALL R ABOVE",mntity:"drotrsup",var:{insular:{base:"ꝺ%^%ͬ",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ͬ",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F09B:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN LETTER SMALL CAPITAL R ABOVE",mntity:"drotrscapsup",var:{insular:{base:"ꝺ%^%ᷢ",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ᷢ",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F09C:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",mntity:"drotrscapdotsup",var:{insular:{base:"ꝺ%^%ᷢ̇",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ᷢ̇",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F09D:{desc:"LATIN SMALL LETTER D ROTUNDA WITH ZIGZAG ABOVE",mntity:"droter",var:{insular:{base:"ꝺ%^%͛",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%͛",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F09F:{desc:"LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER Z ABOVE",mntity:"drotzsup",var:{insular:{base:"ꝺ%^%ᷦ",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ᷦ",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F0A6:{desc:"LATIN SMALL LETTER D ROTUNDA WITH FLATTENED OPEN A ABOVE",mntity:"drotra",var:{insular:{base:"ꝺ%^%ᷓ",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"d%^%ᷓ",otag:{tags:[{name:"cv08"},{name:"ss20"}]},utag:{tags:[{name:"i"},{name:"l"}]}}}},F0A7:{desc:"LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"ethinodotsup",var:{alpha:{base:"ð%^%̄%^%",otag:{tags:[{name:"cv84",index:15},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"1"},{name:"5"}]}},other:{base:"ð%^%ͥ%^%",otag:{tags:[{name:"cv64"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"d"},{name:"l"}]}}}},F0A8:{desc:"LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER M UNCIAL FORM ABOVE",mntity:"ethmuncsup",var:{alpha:{base:"ð%^%̄%^%",otag:{tags:[{name:"cv84",index:19},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"1"},{name:"9"}]}},other:{base:"ð%^%ͫ%^%",utag:{tags:[{name:"l"},{name:"d"},{name:"u"},{name:"n"}]}}}},F0AA:{base:"ð%^%ͬ",desc:"LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER R ABOVE",mntity:"ethrsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0AB:{base:"ð%^%ᷢ",desc:"LATIN SMALL LETTER ETH WITH LATIN LETTER SMALL CAPITAL R ABOVE",mntity:"ethrscapsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0AC:{base:"ð%^%ᷢ̇",desc:"LATIN SMALL LETTER ETH WITH LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",mntity:"ethrscapdotsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0AE:{base:"ð%^%ͭ",desc:"LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER T ABOVE",mntity:"ethtsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0AF:{base:"ð%^%͛",desc:"LATIN SMALL LETTER ETH WITH ZIGZAG ABOVE",mntity:"ether",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0B7:{desc:"LATIN SMALL LETTER INSULAR F WITH MACRON",mntity:"finsmacr",var:{insular:{base:"ꝼ̄"},other:{base:"f͏̄",otag:{tags:[{name:"cv12"}]},utag:{base:"f%^%̄",tags:[{name:"i"},{name:"n"}]}}}},F0B8:{base:"f͛",desc:"LATIN SMALL LETTER F WITH ZIGZAG ABOVE",mntity:"fer"},F0B9:{base:"k͛",desc:"LATIN SMALL LETTER K WITH ZIGZAG ABOVE",mntity:"ker"},F0BA:{base:"l͛",desc:"LATIN SMALL LETTER L WITH ZIGZAG ABOVE",mntity:"ler",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},F0BB:{base:"l¯",desc:"LATIN SMALL LETTER L WITH WORD-FINAL ZIGZAG ABOVE",mntity:"lerfin",otag:{tags:[{name:"cv67"}]},utag:{tags:[{name:"0"},{name:"1"}]}},F0BC:{base:"ſ͛",desc:"LATIN SMALL LETTER LONG S WITH ZIGZAG ABOVE",mntity:"slonger"},F0BE:{base:"k%^%ᷓ",desc:"LATIN SMALL LETTER K WITH FLATTENED OPEN A ABOVE",mntity:"kra",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0BF:{base:"k%^%ᷣ%^%",desc:"LATIN SMALL LETTER K WITH UR LEMNISKATE FORM ABOVE",mntity:"kurlemn",otag:{tags:[{name:"cv87"},{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"},{name:"a"},{name:"1"}]}},F0C2:{base:"é",desc:"LATIN ENLARGED LETTER SMALL E WITH ACUTE",mntity:"eenlacute",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},F0C3:{base:"h̶",desc:"LATIN ENLARGED LETTER SMALL H WITH MEDIUM-HIGH MACRON",mntity:"henlmacrmed",otag:{tags:[{name:"ss06"}]},utag:{tags:[{name:"e"},{name:"n"}]}},F0C4:{desc:"LATIN CAPITAL LETTER G WITH LATIN SMALL LETTER DOTLESS I ABOVE",mntity:"Ginodotsup",var:{mark:{base:"G͏̄",otag:{tags:[{index:15,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"5"}]}},other:{base:"Gͥ",otag:{tags:[{name:"cv64"}]},utag:{tags:[{name:"d"},{name:"l"}]}}}},F0C5:{base:"V͛",desc:"LATIN CAPITAL LETTER V WITH ZIGZAG ABOVE",mntity:"Ver",otag:{tags:[{name:"case"}]},utag:{tags:[{name:"c"},{name:"a"}]}},F0C7:{base:"ǿ᷎",desc:"LATIN SMALL LETTER O WITH CURL AND ACUTE",mntity:"oslashcurlacute"},F0C8:{base:"͛́",desc:"COMBINING ZIGZAG AND ACUTE ABOVE",mntity:"eracute"},F0C9:{base:"ͦ͏᷎",desc:"COMBINING LATIN SMALL LETTER O WITH CURL",mntity:"ocurlsup"},F0CA:{base:"ͣ́",desc:"COMBINING LATIN SMALL LETTER A WITH ACUTE",mntity:"aacutesup"},F0CB:{base:"ᷔ́",desc:"COMBINING LATIN SMALL LETTER AE WITH ACUTE",mntity:"aeligacutesup"},F0CC:{base:"ͣ̄",desc:"COMBINING LATIN SMALL LETTER A WITH MACRON",mntity:"amacrsup"},F0CD:{base:"ͤ́",desc:"COMBINING LATIN SMALL LETTER E WITH ACUTE",mntity:"eacutesup"},F0CE:{base:"͛",desc:"COMBINING ZIGZAG ABOVE HIGH POSITION",mntity:"erhigh",note:"should be deprecated in favor of U+035B."},F0CF:{base:"ᷢ̇",desc:"COMBINING LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",mntity:"rscapdotsup"},F0D7:{base:"d%^%͏̵",otag:{tags:[{name:"cv08",index:7}]},utag:{tags:[{name:"i"},{name:"s"}]}},F0D8:{base:"ð̄",desc:"LATIN SMALL LETTER ETH WITH MACRON",mntity:"ethmacr"},F0D9:{base:"ð%^%ᫎ",desc:"LATIN SMALL LETTER ETH WITH LATIN LETTER INSULAR T ABOVE",mntity:"ethtrotsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0DA:{base:"h%^%ᫎ",desc:"LATIN SMALL LETTER H WITH LATIN LETTER INSULAR T ABOVE",mntity:"htrotsup",otag:{tags:[{name:"ss20"}]},utag:{tags:[{name:"l"},{name:"d"}]}},F0DC:{desc:"LATIN SMALL LIGATURE D ROTUNDA V",mntity:"drotvlig",var:{insular:{base:"ꝺv",otag:{tags:[{name:"hlig"}]},zwj:{}},other:{base:"d%^%v",otag:{tags:[{name:"cv08"},{name:"hlig"}]},zwj:{utags:[{name:"i"},{name:"1"}]}}}},F0DD:{base:"gv",desc:"LATIN SMALL LIGATURE G V",mntity:"gvlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F0DE:{base:"dv̄",desc:"LATIN SMALL LIGATURE D ROTUNDA V WITH MACRON",mntity:"drotvligmacr",otag:{tags:[{name:"cv08"},{name:"ss17"}]}},F0DF:{base:"ꜹ̄",desc:"LATIN SMALL LIGATURE A V WITH MACRON",mntity:"avligmacr"},F0E9:{base:"ðv",desc:"LATIN SMALL LIGATURE ETH V",mntity:"ethrotvlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F0EA:{base:"þv",desc:"LATIN SMALL LIGATURE THORN V",mntity:"thornvlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F0EB:{base:"nv",desc:"LATIN SMALL LIGATURE N V",mntity:"nvlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F0EC:{base:"a%^%v",desc:"LATIN LIGATURE ENLARGED LETTER SMALL A AND LATIN SMALL LETTER V",mntity:"aenlvlig",otag:{tags:[{index:12,name:"cv02"},{name:"hlig"}]},zwj:{utags:[{name:"u"},{name:"e"}]}},F0F8:{base:"nv̄",desc:"LATIN SMALL LIGATURE N V WITH MACRON",mntity:"nvmacrlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F0F9:{base:"a͏̄n",desc:"LATIN LIGATURE SMALL LETTER A WITH MACRON AND SMALL CAPITAL N",mntity:"amacrnscaplig",otag:{tags:[{name:"hlig"},{name:"cv28",index:11}]},zwj:{utags:[{name:"p"},{name:"c"}]}},F0FA:{base:"a͏́v",desc:"LATIN SMALL LIGATURE AV WITH ACUTE",mntity:"aacutevlig",otag:{tags:[{name:"hlig"}]},zwj:{base:"a͏́‍v"}},F0FB:{base:"a%^%v̄",desc:"LATIN LIGATURE ENLARGED LETTER SMALL A AND LATIN SMALL LETTER V WITH MACRON",mntity:"aenlvmacrlig",otag:{tags:[{index:12,name:"cv02"},{name:"hlig"}]},zwj:{utags:[{name:"u"},{name:"e"}]}},F0FC:{base:"av̄",desc:"LATIN LIGATURE SMALL LETTER A AND LATIN LETTER V WITH MACRON",mntity:"avmacrlig",otag:{tags:[{name:"hlig"}]},zwj:{base:"a‍v̄"}},F0FD:{base:"a͏́v̄",desc:"LATIN SMALL LIGATURE A WITH ACUTE AND LATIN SMALL LETTER V WITH MACRON",mntity:"aacutevmacrlig",otag:{tags:[{name:"hlig"}]},zwj:{base:"a͏́‍v̄"}},F106:{base:"C",desc:"LATIN CAPITAL LETTER C SQUARE FORM",mntity:"Csqu",otag:{tags:[{name:"cv05"}]},utag:{tags:[{name:"s"},{name:"q"}]}},F10A:{base:"E",desc:"LATIN CAPITAL LETTER E UNCIAL FORM",mntity:"Eunc",otag:{tags:[{name:"cv09"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F10E:{base:"G",desc:"LATIN CAPITAL LETTER G SQUARE FORM",mntity:"Gsqu",otag:{tags:[{index:3,name:"cv13"}]},utag:{tags:[{name:"s"},{name:"q"}]}},F110:{base:"H",desc:"LATIN CAPITAL LETTER UNCIAL H",mntity:"Hunc",otag:{tags:[{name:"cv15"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F11A:{base:"M",desc:"LATIN CAPITAL LETTER UNCIAL M",mntity:"Munc",otag:{tags:[{name:"cv25"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F126:{base:"Ꟙ",desc:"LATIN CAPITAL LETTER S CLOSED FORM",mntity:"Sclose",note:"Use U+A7D8 instead."},F127:{desc:"LATIN SMALL LETTER LONG S DESCENDING",mntity:"slongdes",var:{alpha:{base:"s",otag:{tags:[{index:4,name:"cv38"}]},utag:{tags:[{name:"l"},{name:"d"}]}},other:{base:"ſ",otag:{tags:[{index:4,name:"cv38"}]},utag:{tags:[{name:"l"},{name:"d"}]}}}},F128:{base:"ꟙ",desc:"LATIN SMALL LETTER S CLOSED FORM",mntity:"sclose",note:"Use U+A7D9 instead."},F130:{base:"͏̄",desc:"COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL R",mntity:"arscapligsup",note:"I can't find a suitable base character.",otag:{tags:[{name:"cv84",index:10}]},utag:{tags:[{name:"1"},{name:"0"}]},entity:{base:"&_arsc;"}},F135:{desc:"COMBINING LATIN SMALL LETTER E WITH OGONEK",mntity:"eogonsup",var:{mark:{base:"͏̄",otag:{tags:[{index:14,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"4"}]},entity:{base:"&_eogo;"}},other:{base:"ͤ",utag:{tags:[{name:"o"},{name:"g"}]},entity:{base:"&_eogo;"}}}},F136:{desc:"COMBINING LATIN SMALL LETTER E WITH MACRON",mntity:"emacrsup",var:{mark:{base:"͏̄",otag:{tags:[{index:13,name:"cv84"}]},utag:{tags:[{name:"1"},{name:"3"}]},entity:{base:"&_emac;"}},other:{base:"ͤ",utag:{tags:[{name:"m"},{name:"a"}]},entity:{base:"&_emac;"}}}},F13A:{base:"A",desc:"LATIN CAPITAL LETTER A SQUARE FORM",mntity:"Asqu",otag:{tags:[{index:2,name:"cv01"}]},utag:{tags:[{name:"s"},{name:"q"}]}},F13E:{desc:"COMBINING LATIN SMALL LETTER O WITH OGONEK",mntity:"oogonsup",var:{mark:{base:"͏̄",otag:{tags:[{index:21,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"1"}]},entity:{base:"&_oogo;"}},other:{base:"ͦ",utag:{tags:[{name:"o"},{name:"g"}]},entity:{base:"&_oogo;"}}}},F13F:{desc:"COMBINING LATIN SMALL LETTER O WITH MACRON",mntity:"omacrsup",var:{mark:{base:"͏̄",otag:{tags:[{index:20,name:"cv84"}]},utag:{tags:[{name:"2"},{name:"0"}]},entity:{base:"&_omac;"}},other:{base:"ͦ",utag:{tags:[{name:"m"},{name:"a"}]},entity:{base:"&_omac;"}}}},F149:{base:"ꝥ",desc:"LATIN SMALL LETTER THORN WITH DIAGONAL STROKE",mntity:"thornbarslash",otag:{tags:[{name:"cv66"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F158:{base:"⁊",desc:"LATIN ABBREVIATION SIGN SMALL ET WITH STROKE",mntity:"etslash",otag:{tags:[{index:2,name:"cv69"}]},utag:{tags:[{name:"a"},{name:"2"}]}},F159:{base:"",desc:"LATIN ABBREVIATION SIGN SMALL DE",mntity:"de",note:"need to think. Variant of d?"},F160:{base:"?",desc:"PUNCTUS INTERROGATIVUS",mntity:"punctinter",note:"Should be deprecated in favor of 2E54",var:{punctuation:{base:"⹔"},other:{base:"?",otag:{tags:[{name:"cv76"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},"2E54":{desc:"MEDIEVAL QUESTION MARK",var:{punctuation:{base:"⹔"},other:{base:"?",otag:{tags:[{name:"cv76"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F193:{base:"d",desc:"LATIN SMALL LETTER D WITH CURL",mntity:"dcurl",otag:{tags:[{index:3,name:"cv08"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F194:{base:"f",desc:"LATIN SMALL LETTER F WITH CURL",mntity:"fcurl",otag:{tags:[{index:6,name:"cv12"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F195:{base:"k",desc:"LATIN SMALL LETTER K WITH CURL",mntity:"kcurl",otag:{tags:[{index:4,name:"cv22"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F196:{base:"g",desc:"LATIN SMALL LETTER G WITH CURL",mntity:"gcurl",otag:{tags:[{index:7,name:"cv14"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F198:{base:"c",desc:"LATIN SMALL LETTER C WITH CURL",mntity:"ccurl",otag:{tags:[{name:"cv06"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F199:{base:"t",desc:"LATIN SMALL LETTER T WITH CURL",mntity:"tcurl",otag:{tags:[{index:2,name:"cv40"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F19A:{base:"n",desc:"LATIN SMALL LETTER N WITH FLOURISH",mntity:"nflour",otag:{tags:[{index:4,name:"cv28"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F19B:{base:"r",desc:"LATIN SMALL LETTER R WITH FLOURISH",mntity:"rflour",otag:{tags:[{index:3,name:"cv36"}]},utag:{tags:[{name:"c"},{name:"u"}]}},F1A5:{base:"ꝰ",desc:"LATIN ABBREVIATION SIGN SPACING BASE-LINE CAPITAL US",mntity:"USbase",otag:{tags:[{name:"cv82",index:2}]},utag:{tags:[{name:"a"},{name:"2"}]}},F1A6:{base:"ꝰ",desc:"LATIN ABBREVIATION SIGN SPACING BASE-LINE US",mntity:"usbase",otag:{tags:[{name:"cv82"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F1A7:{base:"⹒",desc:"LATIN ABBREVIATION SIGN CAPITAL ET WITH STROKE",mntity:"ETslash",otag:{tags:[{index:2,name:"cv69"}]},utag:{tags:[{name:"a"},{name:"2"}]}},"2E53":{desc:"MEDIEVAL EXCLAMATION MARK",note:"Should be included in MUFI, and F1E7 deprecated.",var:{punctuation:{base:"⹓"},other:{base:"!",otag:{tags:[{name:"cv75"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1AC:{base:"ꝫ",desc:"LATIN ABBREVIATION SIGN SEMICOLON",mntity:"sem",otag:{tags:[{name:"cv83"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F1BB:{base:"ch",desc:"LATIN SMALL LIGATURE CH",mntity:"chlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F1BC:{base:"fö",desc:"LATIN SMALL LIGATURE F O WITH DIAERESIS",mntity:"foumllig",otag:{tags:[{name:"dlig"}]},zwj:{}},F1BD:{base:"0",desc:"SMALL BASE LINE ZERO SIGN",mntity:"smallzero",utag:{tags:[{name:"b"},{name:"a"}]}},F1BF:{base:"X",desc:"MODIFIER LETTER CAPITAL X",mntity:"Xmod",otag:{tags:[{name:"sups"}]},utag:{tags:[{name:"m"},{name:"o"}]}},F1C0:{base:"͏̄",desc:"COMBINING ABBREVIATION MARK BAR ABOVE WITH DOT",mntity:"arbar",otag:{tags:[{index:3,name:"cv84"}]},utag:{tags:[{name:"0"},{name:"3"}]},entity:{base:"&_ovdt;"}},F1C1:{base:"ᷓ",desc:"COMBINING ABBREVIATION MARK SUPERSCRIPT RA OPEN A FORM WITH BAR ABOVE",mntity:"rabar",note:"I can't find a suitable base for this.",otag:{tags:[{name:"cv85"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F1C2:{base:"ᷣ",desc:"COMBINING ABBREVIATION MARK SUPERSCRIPT UR LEMNISKATE FORM",mntity:"urlemn",otag:{tags:[{name:"cv87"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F1C5:{base:"᷎",desc:"COMBINING CURL HIGH POSITION",mntity:"combcurlhigh"},F1C7:{desc:"COMBINING ABBREVIATION MARK ZIGZAG ABOVE ANGLE FORM",mntity:"erang",var:{mark:{base:"͏̄",otag:{tags:[{name:"cv84",index:4}]},utag:{tags:[{name:"0"},{name:"4"}]},entity:{base:"&_zzan;"}},other:{base:"͛",otag:{tags:[{name:"cv81"}]},utag:{tags:[{name:"a"},{name:"n"}]},entity:{base:"&_zzan;"}}}},F1C8:{desc:"COMBINING ABBREVIATION MARK ZIGZAG ABOVE CURLY FORM",mntity:"ercurl",var:{mark:{base:"̄",otag:{tags:[{name:"cv84",index:5}]},utag:{tags:[{name:"0"},{name:"5"}]},entity:{base:"&_zzcr;"}},other:{base:"͛",otag:{tags:[{index:2,name:"cv81"}]},utag:{tags:[{name:"c"},{name:"u"}]},entity:{base:"&_zzcr;"}}}},F1CA:{base:"̇",desc:"COMBINING DOT ABOVE HIGH POSITION",mntity:"combdothigh",note:"This should be deprecated."},F1CC:{base:"͏̄",desc:"COMBINING CURLY BAR ABOVE",mntity:"combcurlbar",otag:{tags:[{name:"cv84"}]},utag:{tags:[{name:"0"},{name:"1"}]},entity:{base:"&_cumc;"}},F1E2:{desc:"COMMA POSITURA",mntity:"posit",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:2}]},utag:{tags:[{name:"0"},{name:"2"}]}},other:{base:",",otag:{tags:[{name:"cv72"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1E3:{desc:"HIGH COMMA POSITURA (SIMPLEX DUCTUS)",mntity:"ductsimpl",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:3}]},utag:{tags:[{name:"0"},{name:"3"}]}},other:{base:",",otag:{tags:[{index:2,name:"cv72"}]},utag:{tags:[{name:"a"},{name:"2"}]}}}},F1E4:{base:";",desc:"PUNCTUS WITH COMMA POSITURA",mntity:"punctposit",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:5}]},utag:{tags:[{name:"0"},{name:"5"}]}},other:{base:";",otag:{tags:[{index:2,name:"cv73"}]},utag:{tags:[{name:"a"},{name:"2"}]}}}},F1E5:{desc:"COLON WITH MIDDLE COMMA POSITURA",mntity:"colmidcomposit",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:6}]},utag:{tags:[{name:"0"},{name:"6"}]}},other:{base:";",otag:{tags:[{index:3,name:"cv73"}]},utag:{tags:[{name:"a"},{name:"3"}]}}}},F1E6:{base:";",desc:"THREE DOTS WITH COMMA POSITURA",mntity:"tridotscomposit",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:8}]},utag:{tags:[{name:"0"},{name:"8"}]}},other:{base:";",otag:{tags:[{index:5,name:"cv73"}]},utag:{tags:[{name:"a"},{name:"5"}]}}}},F1E7:{base:"!",desc:"PUNCTUS EXCLAMATIVUS",mntity:"punctexclam",note:"Should be deprecated in favor of 2E53.",var:{punctuation:{base:"⹓"},other:{base:"!",otag:{tags:[{name:"cv75"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1E8:{base:"?",desc:"PUNCTUS INTERROGATIVUS HORIZONTAL TILDE",mntity:"punctintertilde",otag:{tags:[{index:2,name:"cv76"}]},utag:{tags:[{name:"a"},{name:"2"}]}},F1EA:{desc:"PUNCTUS VERSUS",mntity:"punctvers",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:4}]},utag:{tags:[{name:"0"},{name:"4"}]}},other:{base:";",otag:{tags:[{name:"cv73"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1EC:{desc:"SIGNE DE RENVOI",mntity:"renvoi",var:{punctucation:{base:".",otag:{tags:[{name:"cv70",index:18}]},utag:{tags:[{name:"1"},{name:"8"}]}},other:{base:"*",otag:{tags:[{name:"cv78"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1F0:{desc:"PUNCTUS ELEVATUS DIAGONAL STROKE",mntity:"punctelevdiag",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:9}]},utag:{tags:[{name:"0"},{name:"9"}]}},other:{base:"⹎",otag:{tags:[{name:"cv74"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},"2E4A":{desc:"Dotted Solidus",mntity:"virgsusp",var:{punctuation:{base:"⹊"},other:{base:"/",otag:{tags:[{name:"cv79"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1F1:{base:"?",desc:"PUNCTUS INTERROGATIVUS LEMNISKATE FORM",mntity:"punctinterlemn",otag:{tags:[{index:3,name:"cv76"}]},utag:{tags:[{name:"a"},{name:"3"}]}},F1F2:{desc:"TWO DOTS OVER COMMA POSITURA",mntity:"bidotscomposit",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:7}]},utag:{tags:[{name:"0"},{name:"7"}]}},other:{base:";",otag:{tags:[{index:4,name:"cv73"}]},utag:{tags:[{name:"a"},{name:"4"}]}}}},F1F4:{base:"/",desc:"VIRGULA SUSPENSIVA",note:"deprecated",var:{punctuation:{base:"⹊"},other:{base:"/",otag:{tags:[{name:"cv79"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F1F5:{desc:"PUNCTUS FLEXUS",mntity:"punctflex",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:12}]},utag:{tags:[{name:"1"},{name:"2"}]}},other:{base:"⹎",otag:{tags:[{index:4,name:"cv74"}]},utag:{tags:[{name:"a"},{name:"4"}]}}}},F1F7:{base:"/",desc:"SHORT VIRGULA",mntity:"virgmin",otag:{tags:[{name:"cv79",index:2}]},utag:{tags:[{name:"a"},{name:"2"}]}},F1F8:{desc:"DISTINCTIO",mntity:"hidot",var:{punctuation:{base:".",otag:{tags:[{name:"cv70"}]},utag:{tags:[{name:"0"},{name:"1"}]}},other:{base:"·",otag:{tags:[{name:"cv71"}]},utag:{tags:[{name:"h"},{name:"i"}]}}}},F1F9:{base:"~",desc:"WAVY LINE",mntity:"wavylin",otag:{tags:[{name:"cv77"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F1FA:{desc:"PUNCTUS ELEVATUS WITH HIGH BACK",mntity:"punctelevhiback",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:10}]},utag:{tags:[{name:"1"},{name:"0"}]}},other:{base:"⹎",otag:{tags:[{index:2,name:"cv74"}]},utag:{tags:[{name:"a"},{name:"2"}]}}}},F1FB:{desc:"PUNCTUS ELEVATUS WITH ONSET",mntity:"punctelevhack",var:{punctuation:{base:".",otag:{tags:[{name:"cv70",index:11}]},utag:{tags:[{name:"1"},{name:"1"}]}},other:{base:"⹎",otag:{tags:[{index:3,name:"cv74"}]},utag:{tags:[{name:"a"},{name:"3"}]}}}},F1FC:{base:"̮",desc:"COMBINING TRIPLE BREVE BELOW",mntity:"combtripbrevebl",otag:{tags:[{name:"cv92"}]},utag:{tags:[{name:"a"},{name:"1"}]}},F200:{base:"a",desc:"LATIN SMALL LETTER A INSULAR FORM",mntity:"ains",otag:{tags:[{name:"cv02"}]},utag:{tags:[{name:"i"},{name:"n"}]}},F201:{base:"A",desc:"LATIN CAPITAL LETTER A INSULAR FORM",mntity:"Ains",otag:{tags:[{name:"cv01"}]},utag:{tags:[{name:"i"},{name:"n"}]}},F202:{base:"a",desc:"LATIN SMALL LETTER OPEN A CAROLINGIAN FORM",mntity:"aopen",otag:{tags:[{index:3,name:"cv02"}]},utag:{tags:[{name:"o"},{name:"p"}]}},F203:{desc:"LATIN SMALL LETTER CLOSED A GOTHIC FORM",mntity:"aclose",base:"a",otag:{tags:[{index:4,name:"cv02"}]},utag:{tags:[{name:"c"},{name:"l"}]}},F204:{base:"æ",desc:"LATIN SMALL LETTER AE WITH RIGHT UPPER LOOP",mntity:"aeligred",otag:{tags:[{index:3,name:"cv57"}]},utag:{tags:[{name:"o"},{name:"p"}]}},F205:{base:"Ꜵ",desc:"LATIN CAPITAL LIGATURE AO NECKLESS",mntity:"AOligred",otag:{tags:[{name:"cv58"}]},utag:{tags:[{name:"n"},{name:"e"}]}},F206:{base:"ꜵ",desc:"LATIN SMALL LIGATURE AO NECKLESS",mntity:"aoligred",otag:{tags:[{name:"cv59"}]},utag:{tags:[{name:"n"},{name:"e"}]}},F207:{base:"f",desc:"LATIN SMALL LETTER CLOSED INSULAR F",mntity:"finsclose",otag:{tags:[{index:4,name:"cv12"}]},utag:{tags:[{name:"i"},{name:"3"}]}},F208:{base:"k",desc:"LATIN LETTER UNCIAL K",mntity:"kunc",otag:{tags:[{name:"cv22"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F209:{base:"k",desc:"LATIN SMALL LETTER K CLOSED FORM",mntity:"kclose",otag:{tags:[{index:3,name:"cv22"}]},utag:{tags:[{name:"c"},{name:"2"}]}},F20E:{base:"ꝛ",desc:"LATIN SMALL LETTER R ROTUNDA",note:"deprecated"},F214:{base:"a",desc:"LATIN SMALL LETTER A UNCIAL FORM",mntity:"aunc",otag:{tags:[{index:2,name:"cv02"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F215:{base:"a",desc:"LATIN SMALL LETTER NECKLESS A",mntity:"aneckless",otag:{tags:[{index:5,name:"cv02"}]},utag:{tags:[{name:"n"},{name:"e"}]}},F217:{base:"E",desc:"LATIN CAPITAL LETTER CLOSED E UNCIAL FORM",mntity:"Euncclose",otag:{tags:[{index:2,name:"cv09"}]},utag:{tags:[{name:"u"},{name:"c"}]}},F218:{base:"e",desc:"LATIN SMALL LETTER E UNCIAL FORM",mntity:"eunc",otag:{tags:[{name:"cv10"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F219:{base:"e",desc:"LATIN SMALL LETTER E EXTENDED BAR FORM",mntity:"eext",otag:{tags:[{index:2,name:"cv10"}]},utag:{tags:[{name:"b"},{name:"a"}]}},F21A:{base:"e",desc:"LATIN SMALL LETTER E TALL FORM",mntity:"etall",otag:{tags:[{index:3,name:"cv10"}]},utag:{tags:[{name:"b"},{name:"h"}]}},F21B:{base:"f",desc:"LATIN SMALL LETTER SEMI-CLOSED INSULAR F",mntity:"finssemiclose",otag:{tags:[{index:3,name:"cv12"}]},utag:{tags:[{name:"i"},{name:"2"}]}},F21C:{base:"f",desc:"LATIN SMALL LETTER INSULAR F WITH DOTTED HOOKS",mntity:"finsdothook",otag:{tags:[{index:2,name:"cv12"}]},utag:{tags:[{name:"i"},{name:"1"}]}},F21D:{base:"g",desc:"LATIN SMALL LETTER G WITH SEPARATE LOOPS",mntity:"gdivloop",otag:{tags:[{index:4,name:"cv14"}]},utag:{tags:[{name:"c"},{name:"1"}]}},F21E:{base:"g",desc:"LATIN SMALL LETTER CLOSED G WITH LARGE LOWER LOOP",mntity:"glglowloop",otag:{tags:[{index:5,name:"cv14"}]},utag:{tags:[{name:"c"},{name:"2"}]}},F21F:{base:"g",desc:"LATIN SMALL LETTER CLOSED G WITH SMALL LOWER LOOP",mntity:"gsmlowloop",otag:{tags:[{index:6,name:"cv14"}]},utag:{tags:[{name:"c"},{name:"3"}]}},F220:{base:"i",desc:"LATIN SMALL LETTER LONG I",mntity:"ilong",otag:{tags:[{index:2,name:"cv18"}]},utag:{tags:[{name:"l"},{name:"o"}]}},F221:{base:"k",desc:"LATIN SMALL LETTER K SEMI-CLOSED FORM",mntity:"ksemiclose",otag:{tags:[{index:2,name:"cv22"}]},utag:{tags:[{name:"c"},{name:"1"}]}},F222:{base:"l",desc:"LATIN SMALL LETTER L DESCENDING",mntity:"ldes",otag:{tags:[{name:"cv24"}]},utag:{tags:[{name:"d"},{name:"e"}]}},F223:{base:"m",desc:"LATIN SMALL LETTER M WITH RIGHT DESCENDER",mntity:"mrdes",otag:{tags:[{index:3,name:"cv26"}]},utag:{tags:[{name:"d"},{name:"e"}]}},F224:{base:"M",desc:"LATIN CAPITAL LETTER UNCIAL M WITH RIGHT DESCENDER",mntity:"Muncdes",otag:{tags:[{index:2,name:"cv25"}]},utag:{tags:[{name:"u"},{name:"d"}]}},F225:{base:"m",desc:"LATIN MEDIUSCULE LETTER M UNCIAL FORM",mntity:"mmeduncacute",otag:{tags:[{name:"cv26"},{name:"smcp"}]},utag:{tags:[{name:"u"},{name:"e"}]}},F226:{base:"m",desc:"LATIN SMALL LETTER UNCIAL M WITH RIGH DESCENDER",mntity:"muncdes",otag:{tags:[{index:2,name:"cv26"},{name:"smcp"}]},utag:{tags:[{name:"u"},{name:"m"}]}},F228:{base:"n",desc:"LATIN SMALL LETTER N WITH RIGHT DESCENDER",mntity:"nrdes",otag:{tags:[{name:"cv28"}]},utag:{tags:[{name:"d"},{name:"e"}]}},F229:{base:"N",desc:"LATIN CAPITAL LETTER N WITH RIGHT DESCENDER",mntity:"Nrdes",otag:{tags:[{name:"cv27"}]},utag:{tags:[{name:"d"},{name:"e"}]}},F22A:{base:"n",desc:"LATIN LETTER SMALL CAPITAL N WITH RIGHT DESCENDER",mntity:"nscaprdes",otag:{tags:[{name:"cv28"},{name:"smcp"}]},utag:{tags:[{name:"s"},{name:"r"}]}},F22B:{base:"n",desc:"LATIN LETTER SMALL CAPITAL N WITH LEFT DESCENDER",mntity:"nscapldes",otag:{tags:[{index:2,name:"cv28"}]},utag:{tags:[{name:"s"},{name:"d"}]}},F22C:{base:"Q",desc:"LATIN CAPITAL LETTER Q WITH STEM",mntity:"Qstem",otag:{tags:[{name:"cv33"}]},utag:{tags:[{name:"s"},{name:"m"}]}},F233:{base:"y",desc:"LATIN SMALL LETTER Y WITH RIGHT MAIN STROKE",mntity:"yrgmainstrok",otag:{tags:[{name:"cv50"}]},utag:{tags:[{name:"r"},{name:"m"}]}},F238:{base:"z",desc:"LATIN SMALL LETTER MIDDLE HIGH GERMAN ZED",mntity:"mhgzed",otag:{tags:[{index:2,name:"cv52"}]},utag:{tags:[{name:"m"},{name:"g"}]}},F239:{base:"iz",desc:"LATIN SMALL LIGATURE I MIDDLE HIGH GERMAN ZED",mntity:"imhgzedlig",otag:{tags:[{name:"cv52",index:2},{name:"liga"}]},zwj:{utags:[{name:"m"},{name:"g"}]}},F23A:{base:"h",desc:"LATIN SMALL LETTER H WITH RIGHT DESCENDER",mntity:"hrdes",otag:{tags:[{name:"cv16"}]},utag:{tags:[{name:"d"},{name:"e"}]}},F23C:{base:"m",desc:"LATIN SMALL LETTER M UNCIAL FORM",mntity:"munc",otag:{tags:[{name:"cv26"}]},utag:{tags:[{name:"u"},{name:"n"}]}},F23D:{base:"m",desc:"LATIN SMALL LETTER M UNCIAL FORM WITH RIGHT DESCENDER",mntity:"muncdes",otag:{tags:[{index:2,name:"cv26"}]},utag:{tags:[{name:"u"},{name:"d"}]}},F23E:{base:"m͏́",desc:"LATIN SMALL LETTER M UNCIAL FORM WITH ACUTE ACCENT",mntity:"muncsmallacute",otag:{tags:[{name:"cv26"}]},utag:{base:"m%^%́",tags:[{name:"u"},{name:"n"}]}},F23F:{base:"Ↄ̅",desc:"ROMAN NUMERAL REVERSED ONE HUNDRED WITH OVERLINE",mntity:"romnumCrevovl"},F2E0:{base:"¤",desc:"LATIN AS LIBRALIS SIGN",mntity:"romaslibr",otag:{tags:[{name:"cv93"}]},utag:{tags:[{name:"0"},{name:"1"}]}},F2E2:{desc:"LATIN SMALL CAPITAL LETTER X WITH BAR",mntity:"romscapxbar",var:{currency:{base:"¤",otag:{tags:[{index:2,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"2"}]}},other:{base:"x%^%̵",otag:{tags:[{name:"pcap"}]},utag:{tags:[{name:"p"},{name:"c"}]}}}},F2E3:{desc:"LATIN SMALL CAPITAL LETTER Y WITH BAR",mntity:"romscapybar",var:{currency:{base:"¤",otag:{tags:[{index:3,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"3"}]}},other:{base:"ʏ̵"}}},F2E4:{desc:"LATIN SMALL CAPITAL LETTER D WITH SLASH",mntity:"romscapdslash",var:{currency:{base:"¤",otag:{tags:[{index:4,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"4"}]}},other:{base:"ᴅ̸"}}},F2E6:{base:"¤",desc:"PHARMACEUTICAL DRAM SIGN",mntity:"dram",otag:{tags:[{index:5,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"5"}]}},F2E7:{base:"¤",desc:"ECU SIGN",mntity:"ecu",otag:{tags:[{index:6,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"6"}]}},F2E8:{desc:"FLOREN SIGN WITH LOOP",mntity:"florloop",var:{currency:{base:"¤",otag:{tags:[{index:7,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"7"}]}},other:{base:"ƒ",otag:{tags:[{name:"cv97"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F2E9:{base:"¤",desc:"GROSCHEN SIGN",mntity:"grosch",otag:{tags:[{index:8,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"8"}]}},F2EA:{desc:"DUTCH LIBRA SIGN",mntity:"libradut",var:{currency:{base:"¤",otag:{tags:[{index:11,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"1"}]}},other:{base:"£",otag:{tags:[{name:"cv95"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F2EB:{desc:"FRENCH LIBRA SIGN",mntity:"librafren",var:{currency:{base:"¤",otag:{tags:[{index:12,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"2"}]}},other:{base:"℔",otag:{tags:[{name:"cv94"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F2EC:{desc:"ITALIAN LIBRA SIGN",mntity:"libraital",var:{currency:{base:"¤",otag:{tags:[{index:13,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"3"}]}},other:{base:"£",otag:{tags:[{name:"cv95",index:3}]},utag:{tags:[{name:"a"},{name:"3"}]}}}},F2ED:{desc:"FLEMISH LIBRA SIGN",mntity:"libraflem",var:{currency:{base:"¤",otag:{tags:[{index:14,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"4"}]}},other:{base:"£",otag:{tags:[{name:"cv95",index:4}]},utag:{tags:[{name:"a"},{name:"4"}]}}}},F2EE:{desc:"LIRA NUOVA SIGN",mntity:"liranuov",var:{currency:{base:"¤",otag:{tags:[{index:15,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"5"}]}},other:{base:"£",otag:{tags:[{name:"cv95",index:5}]},utag:{tags:[{name:"a"},{name:"5"}]}}}},F2EF:{desc:"LIRA STERLINA SIGN",mntity:"lirasterl",var:{currency:{base:"¤",otag:{tags:[{index:16,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"6"}]}},other:{base:"£",otag:{tags:[{name:"cv95",index:6}]},utag:{tags:[{name:"a"},{name:"6"}]}}}},F2F0:{base:"¤",desc:"OLD MARK SIGN",mntity:"markold",otag:{tags:[{index:17,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"7"}]}},F2F1:{base:"¤",desc:"OLD FLOURISH MARK SIGN",mntity:"markflour",otag:{tags:[{index:18,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"8"}]}},F2F2:{base:"¤",desc:"MARKED SMALL LETTER M SIGN",mntity:"msign",otag:{tags:[{index:19,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"9"}]}},F2F3:{base:"¤",desc:"FLOURISHED SMALL LETTER M SIGN",mntity:"msignflour",otag:{tags:[{index:20,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"0"}]}},F2F4:{base:"¤",desc:"PHARMACEUTICAL OBOLUS SIGN",mntity:"obol",otag:{tags:[{index:21,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"1"}]}},F2F5:{desc:"PENNING SIGN",mntity:"penningar",var:{currency:{base:"¤",otag:{tags:[{index:22,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"2"}]}},other:{base:"₰",otag:{tags:[{name:"cv96"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F2F6:{base:"¤",desc:"OLD REICHSTALER SIGN",mntity:"reichtalold",otag:{tags:[{index:23,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"3"}]}},F2F7:{base:"¤",desc:"GERMAN SCHILLING SIGN",mntity:"schillgerm",otag:{tags:[{index:24,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"4"}]}},F2F8:{base:"¤",desc:"GERMAN SCRIPT SCHILLING SIGN",mntity:"schillgermscript",otag:{tags:[{index:25,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"5"}]}},F2F9:{base:"¤",desc:"SCUDI SIGN",mntity:"scudi",otag:{tags:[{index:26,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"6"}]}},F2FA:{base:"¤",desc:"KRONE SIGN",mntity:"krone",otag:{tags:[{index:10,name:"cv93"}]},utag:{tags:[{name:"1"},{name:"0"}]}},F2FB:{base:"¤",desc:"HELBING SIGN",mntity:"helbing",otag:{tags:[{index:9,name:"cv93"}]},utag:{tags:[{name:"0"},{name:"9"}]}},F2FD:{desc:"SCRIPT OUNCE SIGN",mntity:"ouncescript",var:{currency:{base:"¤",otag:{tags:[{index:27,name:"cv93"}]},utag:{tags:[{name:"2"},{name:"7"}]}},other:{base:"℥",otag:{tags:[{name:"cv98"}]},utag:{tags:[{name:"a"},{name:"1"}]}}}},F2FE:{base:"C",desc:"ROMAN NUMERAL CAPITAL C WITH TWO BARS",mntity:"Cnumbar",otag:{tags:[{index:3,name:"cv05"}]},utag:{tags:[{name:"2"},{name:"b"}]}},F2FF:{base:"c",desc:"ROMAN NUMERAL SMALL C WITH TWO BARS",mntity:"cnumbar",otag:{tags:[{index:4,name:"cv06"}]},utag:{tags:[{name:"2"},{name:"b"}]}},F4C2:{base:"",note:"proposed--not yet in Junicode"},F4F7:{base:"ſ̶l̶",desc:"LATIN SMALL LIGATURE LONG S L WITH MEDIUM-HIGH OVERLINE",mntity:"slonglovlmed"},F4F8:{base:"ſł",desc:"LATIN SMALL LIGATURE LONG S L WITH DIAGONAL STROKE",mntity:"slonglslashlig",otag:{tags:[{name:"liga"}]}},F4F9:{base:"ll",desc:"LATIN SMALL LIGATURE LL",mntity:"lllig",otag:{tags:[{name:"hlig"}]},zwj:{}},F4FA:{base:"ſch",desc:"LATIN SMALL LIGATURE LONG S CH",mntity:"slongchlig",otag:{tags:[{name:"hlig"}]},zwj:{}},F4FB:{base:"ſj",desc:"LATIN SMALL LIGATURE LONG S J",mntity:"slongjlig",note:"no ligature needed--taken care of in calt"},F4FC:{base:"ſk",desc:"LATIN SMALL LIGATURE LONG S K",mntity:"slongklig",otag:{tags:[{name:"liga"}]}},F4FD:{base:"ſs",desc:"LATIN SMALL LIGATURE LONG S S",mntity:"slongslig",otag:{tags:[{name:"liga"}]}},F4FE:{base:"ſſk",desc:"LATIN SMALL LIGATURE LONG S LONG S K",mntity:"slongslongklig",otag:{tags:[{name:"liga"}]}},F4FF:{base:"ſſt",desc:"LATIN SMALL LIGATURE LONG S LONG S T",mntity:"slongslongtlig",otag:{tags:[{name:"liga"}]}},F704:{base:"–́",desc:"METRICAL SYMBOL LONGUM WITH ACUTE (PRIMARY STRESS)",mntity:"metrmacracute"},F705:{base:"–̀",desc:"METRICAL SYMBOL LONGUM WITH GRAVE (SECONDARY STRESS)",mntity:"metrmacrgrave"},F706:{base:"⏑́",desc:"METRICAL SYMBOL BREVE WITH ACUTE (PRIMARY STRESS)",mntity:"metrbreveacute"},F707:{base:"⏑̀",desc:"METRICAL SYMBOL BREVE WITH GRAVE (SECONDARY STRESS)",mntity:"metrbrevegrave"},F708:{base:"⏓́",desc:"METRICAL SYMBOL BREVE ABOVE LONGUM WITH ACUTE (SHORT OR LONG SYLLABLE WITH PRIMARY STRESS)",mntity:"metrmacrbreveacute"},F709:{base:"⏓̀",desc:"METRICAL SYMBOL BREVE ABOVE LONGUM WITH GRAVE (SHORT OR LONG SYLLABLE WITH SECONDARY STRESS)",mntity:"metrmacrbrevegrave"},F70A:{base:"×",desc:"METRICAL SYMBOL ANCEPS",mntity:"metranc"},F70B:{base:"×́",desc:"METRICAL SYMBOL ANCEPS WITH ACUTE (PRIMARY STRESS)",mntity:"metrancacute"},F70C:{base:"×̀",desc:"METRICAL SYMBOL ANCEPS WITH GRAVE (SECONDARY STRESS)",mntity:"metrancgrave"},F715:{base:"–̋",desc:"METRICAL SYMBOL LONGUM WITH DOUBLE ACUTE (SECONDARY STRESS)",mntity:"metrmacrdblac"},F716:{base:"–̏",desc:"METRICAL SYMBOL LONGUM WITH DOUBLE GRAVE (SECONDARY STRESS AND ALLITERATION)",mntity:"metrmacrdblgrave"},F717:{base:"⏑̋",desc:"METRICAL SYMBOL BREVE WITH DOUBLE ACUTE (PRIMARY STRESS AND ALLITERATION)",mntity:"metrbrevedblac"},F718:{base:"⏑̏",desc:"METRICAL SYMBOL BREVE WITH DOUBLE GRAVE (SECONDARY STRESS AND ALLITERATION)",mntity:"metrbrevedblgrave"},F719:{base:"×̋",desc:"METRICAL SYMBOL ANCEPS WITH DOUBLE ACUTE (PRIMARY STRESS AND ALLITERATION)",mntity:"metrancdblac"},F71A:{base:"×̏",desc:"METRICAL SYMBOL ANCEPS WITH DOUBLE GRAVE (SECONDARY STRESS AND ALLITERATION)",mntity:"metrancdblgrave"},F71B:{base:"⏔́",desc:"METRICAL SYMBOL RESOLVED LIFT WITH ACUTE (PRIMARY STRESS)",mntity:"metrdblbrevemacracute"},F71C:{base:"⏔̋",desc:"METRICAL SYMBOL RESOLVED LIFT WITH DOUBLE ACUTE (PRIMARY STRESS AND ALLITERATION)",mntity:"metrdblbrevemacrdblac"},F7B2:{base:"V̅",desc:"LATIN CAPITAL LETTER V WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Vovlhigh"},F7B3:{base:"X̅",desc:"LATIN CAPITAL LETTER X WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Xovlhigh"},F7B4:{base:"L̅",desc:"LATIN CAPITAL LETTER L WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Lovlhigh"},F7B5:{base:"C̅",desc:"LATIN CAPITAL LETTER C WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Covlhigh"},F7B6:{base:"D̅",desc:"LATIN CAPITAL LETTER C WITH HIGH OVERLINE (ABOVE CHARACTER)",mntity:"Dovlhigh"}};
+const PUA_DATA = {
+    "0131": {
+        "base": "i",
+        "desc": "LATIN SMALL LETTER DOTLESS I",
+        "mntity": "inodot",
+        "note": "Produces an unencoded variant of i.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 1,
+                    "name": "cv18"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "l"
+                }
+            ]
+        }
+    },
+    "A75A": {
+        "base": "R",
+        "desc": "LATIN CAPITAL LETTER R ROTUNDA",
+        "mntity": "Rrot",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv35",
+                    "index": 2
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "r"
+                },
+                {
+                    "name": "o"
+                }
+            ]
+        }
+    },
+    "A75B": {
+        "base": "r",
+        "desc": "LATIN SMALL LETTER R ROTUNDA",
+        "mntity": "rrot",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv36",
+                    "index": 2
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "r"
+                },
+                {
+                    "name": "o"
+                }
+            ]
+        }
+    },
+    "1D00": {
+        "desc": "LATIN LETTER SMALL CAPITAL A",
+        "mntity": "ascap",
+        "var": {
+            "smallcap": {
+                "base": "ᴀ"
+            },
+            "other": {
+                "base": "a",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D01": {
+        "desc": "LATIN LETTER SMALL CAPITAL AE",
+        "mntity": "aeligscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴁ"
+            },
+            "other": {
+                "base": "æ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "0299": {
+        "desc": "LATIN LETTER SMALL CAPITAL B",
+        "mntity": "bscap",
+        "var": {
+            "smallcap": {
+                "base": "ʙ"
+            },
+            "other": {
+                "base": "b",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D04": {
+        "desc": "LATIN LETTER SMALL CAPITAL C",
+        "mntity": "cscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴄ"
+            },
+            "other": {
+                "base": "c",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D05": {
+        "desc": "LATIN LETTER SMALL CAPITAL D",
+        "mntity": "dscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴅ"
+            },
+            "other": {
+                "base": "d",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D06": {
+        "desc": "LATIN LETTER SMALL CAPITAL ETH",
+        "mntity": "ethscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴆ"
+            },
+            "other": {
+                "base": "ð",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D07": {
+        "desc": "LATIN LETTER SMALL CAPITAL E",
+        "mntity": "escap",
+        "var": {
+            "smallcap": {
+                "base": "ᴇ"
+            },
+            "other": {
+                "base": "e",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A730": {
+        "desc": "LATIN LETTER SMALL CAPITAL F",
+        "mntity": "fscap",
+        "var": {
+            "smallcap": {
+                "base": "ꜰ"
+            },
+            "other": {
+                "base": "f",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "0262": {
+        "desc": "LATIN LETTER SMALL CAPITAL G",
+        "mntity": "gscap",
+        "var": {
+            "smallcap": {
+                "base": "ɢ"
+            },
+            "other": {
+                "base": "g",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "029C": {
+        "desc": "LATIN LETTER SMALL CAPITAL H",
+        "mntity": "hscap",
+        "var": {
+            "smallcap": {
+                "base": "ʜ"
+            },
+            "other": {
+                "base": "h",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "026A": {
+        "desc": "LATIN LETTER SMALL CAPITAL I",
+        "mntity": "iscap",
+        "var": {
+            "smallcap": {
+                "base": "ɪ"
+            },
+            "other": {
+                "base": "i",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D0A": {
+        "desc": "LATIN LETTER SMALL CAPITAL J",
+        "mntity": "jscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴊ"
+            },
+            "other": {
+                "base": "j",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D0B": {
+        "desc": "LATIN LETTER SMALL CAPITAL K",
+        "mntity": "kscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴋ"
+            },
+            "other": {
+                "base": "k",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "029F": {
+        "desc": "LATIN LETTER SMALL CAPITAL L",
+        "mntity": "lscap",
+        "var": {
+            "smallcap": {
+                "base": "ʟ"
+            },
+            "other": {
+                "base": "l",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D0D": {
+        "desc": "LATIN LETTER SMALL CAPITAL M",
+        "mntity": "mscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴍ"
+            },
+            "other": {
+                "base": "m",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "0274": {
+        "desc": "LATIN LETTER SMALL CAPITAL N",
+        "mntity": "nscap",
+        "var": {
+            "smallcap": {
+                "base": "ɴ"
+            },
+            "other": {
+                "base": "n",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D0F": {
+        "desc": "LATIN LETTER SMALL CAPITAL O",
+        "mntity": "oscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴏ"
+            },
+            "other": {
+                "base": "o",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "0276": {
+        "desc": "LATIN LETTER SMALL CAPITAL OE",
+        "mntity": "oeligscap",
+        "var": {
+            "smallcap": {
+                "base": "ɶ"
+            },
+            "other": {
+                "base": "œ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D18": {
+        "desc": "LATIN LETTER SMALL CAPITAL P",
+        "mntity": "pscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴘ"
+            },
+            "other": {
+                "base": "p",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF0C": {
+        "base": "q",
+        "desc": "LATIN LETTER SMALL CAPITAL Q",
+        "mntity": "qscap",
+        "note": "deprecated",
+        "var": {
+            "smallcap": {
+                "base": "ꞯ"
+            },
+            "other": {
+                "base": "q",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "0280": {
+        "desc": "LATIN LETTER SMALL CAPITAL R",
+        "mntity": "rscap",
+        "var": {
+            "smallcap": {
+                "base": "ʀ"
+            },
+            "other": {
+                "base": "r",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A731": {
+        "desc": "LATIN LETTER SMALL CAPITAL S",
+        "mntity": "sscap",
+        "var": {
+            "smallcap": {
+                "base": "ꜱ"
+            },
+            "other": {
+                "base": "s",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A7AF": {
+        "desc": "LATIN LETTER SMALL CAPITAL Q",
+        "mntity": "qscap",
+        "var": {
+            "smallcap": {
+                "base": "ꞯ"
+            },
+            "other": {
+                "base": "q",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D1B": {
+        "desc": "LATIN LETTER SMALL CAPITAL T",
+        "mntity": "tscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴛ"
+            },
+            "other": {
+                "base": "t",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D1C": {
+        "desc": "LATIN LETTER SMALL CAPITAL U",
+        "mntity": "uscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴜ"
+            },
+            "other": {
+                "base": "u",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D20": {
+        "desc": "LATIN LETTER SMALL CAPITAL V",
+        "mntity": "vscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴠ"
+            },
+            "other": {
+                "base": "v",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D21": {
+        "desc": "LATIN LETTER SMALL CAPITAL W",
+        "mntity": "wscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴡ"
+            },
+            "other": {
+                "base": "w",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "028F": {
+        "desc": "LATIN LETTER SMALL CAPITAL Y",
+        "mntity": "yscap",
+        "var": {
+            "smallcap": {
+                "base": "ʏ"
+            },
+            "other": {
+                "base": "y",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "1D22": {
+        "desc": "LATIN LETTER SMALL CAPITAL Z",
+        "mntity": "zscap",
+        "var": {
+            "smallcap": {
+                "base": "ᴢ"
+            },
+            "other": {
+                "base": "z",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "10FFFB": {
+        "base": "͏̄",
+        "desc": "COMBINING spiritus asper (not MUFI)",
+        "otag": {
+            "tags": [
+                {
+                    "index": 36,
+                    "name": "cv84"
+                }
+            ]
+        }
+    },
+    "10FFFC": {
+        "base": "͏̄",
+        "desc": "COMBINING subscript a (not MUFI)",
+        "otag": {
+            "tags": [
+                {
+                    "index": 37,
+                    "name": "cv84"
+                }
+            ]
+        }
+    },
+    "1D79": {
+        "desc": "LATIN SMALL LETTER INSULAR G",
+        "mntity": "gins",
+        "note": "Makes this character searchable as g.",
+        "var": {
+            "insular": {
+                "base": "ᵹ"
+            },
+            "other": {
+                "base": "g",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv14"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A77A": {
+        "desc": "LATIN SMALL LETTER INSULAR D",
+        "mntity": "drot",
+        "note": "Makes this character searchable as d.",
+        "var": {
+            "insular": {
+                "base": "ꝺ"
+            },
+            "other": {
+                "base": "d",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A77C": {
+        "desc": "LATIN SMALL LETTER INSULAR F",
+        "mntity": "fins",
+        "note": "Makes this character searchable as f.",
+        "var": {
+            "insular": {
+                "base": "ꝼ"
+            },
+            "other": {
+                "base": "f",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv12"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A783": {
+        "base": "r",
+        "desc": "LATIN SMALL LETTER INSULAR R",
+        "mntity": "rins",
+        "note": "Makes this character searchable as r.",
+        "var": {
+            "insular": {
+                "base": "ꞃ"
+            },
+            "other": {
+                "base": "r",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv36"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A785": {
+        "desc": "LATIN SMALL LETTER INSULAR S",
+        "mntity": "sins",
+        "note": "Makes this character searchable as s.",
+        "var": {
+            "insular": {
+                "base": "ꞅ"
+            },
+            "other": {
+                "base": "s",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv38"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A787": {
+        "desc": "LATIN SMALL LETTER INSULAR T",
+        "mntity": "trot",
+        "note": "Makes this character searchable as t.",
+        "var": {
+            "insular": {
+                "base": "ꞇ"
+            },
+            "other": {
+                "base": "t",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv40"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "10A0C4": {
+        "base": "⹎",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv74",
+                    "index": 5
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "5"
+                }
+            ]
+        }
+    },
+    "10A042": {
+        "desc": "Punctus with double comma positura",
+        "base": ";",
+        "note": "no period variant yet.",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv73",
+                    "index": 6
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "6"
+                }
+            ]
+        }
+    },
+    "10A03B": {
+        "note": "Not in MUFI db",
+        "base": "·",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv71",
+                    "index": 2
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "r"
+                }
+            ]
+        }
+    },
+    "10A043": {
+        "base": ";",
+        "note": "no period variant yet.",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv73",
+                    "index": 7
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "7"
+                }
+            ]
+        }
+    },
+    "10A05D": {
+        "base": "͏̄",
+        "desc": "COMBINING CURVED MACRON WITH SERIFS",
+        "note": "Not MUFI",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv84",
+                    "index": 38
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_upmc;"
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "3"
+                },
+                {
+                    "name": "8"
+                }
+            ]
+        }
+    },
+    "10A075": {
+        "base": "͏̄",
+        "desc": "COMBINING ZIGZAG-LIKE MACRON",
+        "note": "Not MUFI",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv84",
+                    "index": 39
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_zzmc;"
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "3"
+                },
+                {
+                    "name": "9"
+                }
+            ]
+        }
+    },
+    "E004": {
+        "base": "Ą́",
+        "desc": "LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE",
+        "mntity": "Aogonacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E00A": {
+        "base": "Ā́",
+        "desc": "LATIN CAPITAL LETTER A WITH MACRON AND ACUTE",
+        "mntity": "Amacracute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E010": {
+        "base": "Ā̆",
+        "desc": "LATIN CAPITAL LETTER A WITH MACRON AND BREVE",
+        "mntity": "Amacrbreve"
+    },
+    "E025": {
+        "base": "A̋",
+        "desc": "LATIN CAPITAL LETTER A WITH DOUBLE ACUTE",
+        "mntity": "Adblac"
+    },
+    "E02C": {
+        "base": "Aͤ",
+        "desc": "LATIN CAPITAL LETTER A WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "Aesup"
+    },
+    "E033": {
+        "base": "A᷎",
+        "desc": "LATIN CAPITAL LETTER A WITH CURL",
+        "mntity": "Acurl"
+    },
+    "E036": {
+        "base": "Æ̣",
+        "desc": "LATIN CAPITAL LETTER AE WITH DOT BELOW",
+        "mntity": "AEligdotbl"
+    },
+    "E03A": {
+        "base": "Ǣ́",
+        "desc": "LATIN CAPITAL LETTER AE WITH MACRON AND ACUTE",
+        "mntity": "AEligmacracute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E03D": {
+        "base": "Ǣ̆",
+        "desc": "LATIN CAPITAL LETTER AE WITH MACRON AND BREVE",
+        "mntity": "AEligmacrbreve"
+    },
+    "E03F": {
+        "base": "Æ̆",
+        "desc": "LATIN CAPITAL LETTER AE WITH BREVE",
+        "mntity": "AEligbreve"
+    },
+    "E040": {
+        "base": "Æ̨",
+        "desc": "LATIN CAPITAL LETTER AE WITH OGONEK",
+        "mntity": "AEligogon"
+    },
+    "E041": {
+        "base": "Æ̋",
+        "desc": "LATIN CAPITAL LETTER AE WITH DOUBLE ACUTE",
+        "mntity": "AEligdblac"
+    },
+    "E042": {
+        "base": "Æ̈",
+        "desc": "LATIN CAPITAL LETTER AE WITH DIAERESIS",
+        "mntity": "AEliguml"
+    },
+    "E043": {
+        "base": "Æ̇",
+        "desc": "LATIN CAPITAL LETTER AE WITH DOT ABOVE",
+        "mntity": "AEligdot"
+    },
+    "E044": {
+        "base": "B́",
+        "desc": "LATIN CAPITAL LETTER B WITH ACUTE",
+        "mntity": "Bacute"
+    },
+    "E066": {
+        "base": "C̣",
+        "desc": "LATIN CAPITAL LETTER C WITH DOT BELOW",
+        "mntity": "Cdotbl"
+    },
+    "E076": {
+        "base": "C̨",
+        "desc": "LATIN CAPITAL LETTER C WITH OGONEK",
+        "mntity": "Cogon"
+    },
+    "E077": {
+        "base": "D́",
+        "desc": "LATIN CAPITAL LETTER D WITH ACUTE",
+        "mntity": "Dacute"
+    },
+    "E08F": {
+        "base": "Ð̣",
+        "desc": "LATIN CAPITAL LETTER ETH WITH DOT BELOW",
+        "mntity": "ETHdotbl"
+    },
+    "E099": {
+        "base": "Ę́",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE",
+        "mntity": "Eogonacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E0B7": {
+        "base": "Ē̆",
+        "desc": "LATIN CAPITAL LETTER E WITH MACRON AND BREVE",
+        "mntity": "Emacrbreve"
+    },
+    "E0BC": {
+        "base": "Ę̄",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND MACRON",
+        "mntity": "Eogonmacr"
+    },
+    "E0C8": {
+        "base": "Ė́",
+        "desc": "LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE",
+        "mntity": "Edotacute"
+    },
+    "E0D1": {
+        "base": "E̋",
+        "desc": "LATIN CAPITAL LETTER E WITH DOUBLE ACUTE",
+        "mntity": "Edblac"
+    },
+    "E0E1": {
+        "base": "Eͣ",
+        "desc": "LATIN CAPITAL LETTER E WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "Easup"
+    },
+    "E0E8": {
+        "base": "Ę̣",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND DOT BELOW",
+        "mntity": "Eogondotbl"
+    },
+    "E0E9": {
+        "base": "E᷎",
+        "desc": "LATIN CAPITAL LETTER E WITH CURL",
+        "mntity": "Ecurl"
+    },
+    "E0EA": {
+        "base": "Ę̋",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND DOUBLE ACUTE",
+        "mntity": "Eogondblac",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E0EB": {
+        "base": "Ę̇",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND DOT ABOVE",
+        "mntity": "Eogondot"
+    },
+    "E0EC": {
+        "base": "Ę͏̇́",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND DOT ABOVE AND ACUTE",
+        "mntity": "Eogondotacute"
+    },
+    "E0EE": {
+        "base": "F̣",
+        "desc": "LATIN CAPITAL LETTER F WITH DOT BELOW",
+        "mntity": "Fdotbl"
+    },
+    "E0F0": {
+        "base": "F́",
+        "desc": "LATIN CAPITAL LETTER F WITH ACUTE",
+        "mntity": "Facute"
+    },
+    "E101": {
+        "base": "G̣",
+        "desc": "LATIN CAPITAL LETTER G WITH DOT BELOW",
+        "mntity": "Gdotbl"
+    },
+    "E116": {
+        "base": "H́",
+        "desc": "LATIN CAPITAL LETTER H WITH ACUTE",
+        "mntity": "Hacute"
+    },
+    "E12A": {
+        "base": "I᷎",
+        "desc": "LATIN CAPITAL LETTER I WITH CURL",
+        "mntity": "Icurl"
+    },
+    "E135": {
+        "base": "Ī́",
+        "desc": "LATIN CAPITAL LETTER I WITH MACRON AND ACUTE",
+        "mntity": "Imacracute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E137": {
+        "base": "Ī̆",
+        "desc": "LATIN CAPITAL LETTER I WITH MACRON AND BREVE",
+        "mntity": "Imacrbreve"
+    },
+    "E143": {
+        "base": "I̋",
+        "desc": "LATIN CAPITAL LETTER I WITH DOUBLE ACUTE",
+        "mntity": "Idblac"
+    },
+    "E150": {
+        "base": "I̅",
+        "desc": "LATIN CAPITAL LETTER I WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Iovlhigh"
+    },
+    "E151": {
+        "base": "J̣",
+        "desc": "LATIN CAPITAL LETTER J WITH DOT BELOW",
+        "mntity": "Jdotbl"
+    },
+    "E152": {
+        "base": "J̅",
+        "desc": "LATIN CAPITAL LETTER J WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Jovlhigh"
+    },
+    "E153": {
+        "base": "J́",
+        "desc": "LATIN CAPITAL LETTER J WITH ACUTE",
+        "mntity": "Jacute"
+    },
+    "E154": {
+        "base": "J̄",
+        "desc": "LATIN CAPITAL LETTER J WITH HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "Jmacrhigh"
+    },
+    "E15C": {
+        "base": "J̇",
+        "desc": "LATIN CAPITAL LETTER J WITH DOT ABOVE",
+        "mntity": "Jdot"
+    },
+    "E162": {
+        "base": "J̋",
+        "desc": "LATIN CAPITAL LETTER J WITH DOUBLE ACUTE",
+        "mntity": "Jdblac"
+    },
+    "E163": {
+        "base": "J᷎",
+        "desc": "LATIN CAPITAL LETTER J WITH CURL",
+        "mntity": "Jcurl"
+    },
+    "E168": {
+        "base": "K̇",
+        "desc": "LATIN CAPITAL LETTER K WITH DOT ABOVE",
+        "mntity": "Kdot"
+    },
+    "E19E": {
+        "base": "L̇",
+        "desc": "LATIN CAPITAL LETTER L WITH DOT ABOVE",
+        "mntity": "Ldot"
+    },
+    "E1B8": {
+        "base": "M̄",
+        "desc": "LATIN CAPITAL LETTER M WITH HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "Mmacrhigh"
+    },
+    "E1D2": {
+        "base": "M̅",
+        "desc": "LATIN CAPITAL LETTER M WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Movlhigh"
+    },
+    "E1DC": {
+        "base": "N̄",
+        "desc": "LATIN CAPITAL LETTER N WITH HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "Nmacrhigh"
+    },
+    "E208": {
+        "base": "Ǫ̣",
+        "desc": "LATIN CAPITAL LETTER O WITH OGONEK AND DOT BELOW",
+        "mntity": "Oogondotbl"
+    },
+    "E20C": {
+        "base": "Ǫ́",
+        "desc": "LATIN CAPITAL LETTER O WITH OGONEK AND ACUTE",
+        "mntity": "Oogonacute"
+    },
+    "E21B": {
+        "base": "Ō̆",
+        "desc": "LATIN CAPITAL LETTER O WITH MACRON AND BREVE",
+        "mntity": "Omacrbreve"
+    },
+    "E22D": {
+        "base": "Ö̂",
+        "desc": "LATIN CAPITAL LETTER O WITH DIAERESIS AND CIRCUMFLEX",
+        "mntity": "Oumlcirc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E244": {
+        "base": "Oͤ",
+        "desc": "LATIN CAPITAL LETTER O WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "Oesup"
+    },
+    "E246": {
+        "base": "Oͧ",
+        "desc": "LATIN CAPITAL LETTER O WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "Ousup"
+    },
+    "E24F": {
+        "base": "Ǫ᷎",
+        "desc": "LATIN CAPITAL LETTER O WITH OGONEK AND CURL",
+        "mntity": "Oogoncurl"
+    },
+    "E252": {
+        "base": "Ø̄",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND MACRON",
+        "mntity": "Oslashmacr"
+    },
+    "E253": {
+        "base": "Ø̄̆",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND MACRON AND BREVE",
+        "mntity": "Oslashmacrbreve"
+    },
+    "E255": {
+        "base": "Ø̨",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND OGONEK",
+        "mntity": "Oslashogon"
+    },
+    "E257": {
+        "base": "Ǿ̨",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND OGONEK AND ACUTE",
+        "mntity": "Oslashogonacute"
+    },
+    "E259": {
+        "base": "Œ́",
+        "desc": "LATIN CAPITAL LIGATURE OE WITH ACUTE",
+        "mntity": "OEligacute"
+    },
+    "E25D": {
+        "base": "Œ̄",
+        "desc": "LATIN CAPITAL LIGATURE OE WITH MACRON",
+        "mntity": "OEligmacr"
+    },
+    "E260": {
+        "base": "Œ̄̆",
+        "desc": "LATIN CAPITAL LIGATURE OE WITH MACRON AND BREVE",
+        "mntity": "OEligmacrbreve"
+    },
+    "E262": {
+        "base": "Œ̨",
+        "desc": "LATIN CAPITAL LIGATURE OE WITH OGONEK",
+        "mntity": "OEligogon"
+    },
+    "E268": {
+        "base": "P̋",
+        "desc": "LATIN CAPITAL LETTER P WITH DOUBLE ACUTE",
+        "mntity": "Pdblac"
+    },
+    "E26D": {
+        "base": "P̣",
+        "desc": "LATIN CAPITAL LETTER P WITH DOT BELOW",
+        "mntity": "Pdotbl"
+    },
+    "E282": {
+        "base": "Q̇",
+        "desc": "LATIN CAPITAL LETTER Q WITH DOT ABOVE",
+        "mntity": "Qdot"
+    },
+    "E288": {
+        "base": "Q̣",
+        "desc": "LATIN CAPITAL LETTER Q WITH DOT BELOW",
+        "mntity": "Qdotbl"
+    },
+    "E2E2": {
+        "base": "T́",
+        "desc": "LATIN CAPITAL LETTER T WITH ACUTE",
+        "mntity": "Tacute"
+    },
+    "E2EE": {
+        "base": "T̨",
+        "desc": "LATIN CAPITAL LETTER T WITH OGONEK",
+        "mntity": "Togon"
+    },
+    "E309": {
+        "base": "Ū́",
+        "desc": "LATIN CAPITAL LETTER U WITH MACRON AND ACUTE",
+        "mntity": "Umacracute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E30B": {
+        "base": "Ū̆",
+        "desc": "LATIN CAPITAL LETTER U WITH MACRON AND BREVE",
+        "mntity": "Umacrbreve"
+    },
+    "E315": {
+        "base": "U̇",
+        "desc": "LATIN CAPITAL LETTER U WITH DOT ABOVE",
+        "mntity": "Udot"
+    },
+    "E317": {
+        "base": "Ü̂",
+        "desc": "LATIN CAPITAL LETTER U WITH DIAERESIS AND CIRCUMFLEX",
+        "mntity": "Uumlcirc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E324": {
+        "base": "U̍",
+        "desc": "LATIN CAPITAL LETTER U WITH VERTICAL LINE ABOVE",
+        "mntity": "Uvertline"
+    },
+    "E32B": {
+        "base": "Uͤ",
+        "desc": "LATIN CAPITAL LETTER U WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "Uesup"
+    },
+    "E32D": {
+        "base": "Uͦ",
+        "desc": "LATIN CAPITAL LETTER U WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "Uosup"
+    },
+    "E331": {
+        "base": "U᷎",
+        "desc": "LATIN CAPITAL LETTER U WITH CURL",
+        "mntity": "Ucurl"
+    },
+    "E337": {
+        "base": "",
+        "desc": "LATIN CAPITAL LETTER THORN WITH DIAGONAL STROKE",
+        "mntity": "THORNbarslash",
+        "note": "Not done yet"
+    },
+    "E33A": {
+        "base": "V́",
+        "desc": "LATIN CAPITAL LETTER V WITH ACUTE",
+        "mntity": "Vacute"
+    },
+    "E33B": {
+        "base": "V̂",
+        "desc": "LATIN CAPITAL LETTER V WITH CIRCUMFLEX",
+        "mntity": "Vcirc"
+    },
+    "E342": {
+        "base": "V̈",
+        "desc": "LATIN CAPITAL LETTER V WITH DIAERESIS",
+        "mntity": "Vuml"
+    },
+    "E34B": {
+        "base": "V̋",
+        "desc": "LATIN CAPITAL LETTER V WITH DOUBLE ACUTE",
+        "mntity": "Vdblac"
+    },
+    "E34C": {
+        "base": "V̇",
+        "desc": "LATIN CAPITAL LETTER V WITH DOT ABOVE",
+        "mntity": "Vdot"
+    },
+    "E34D": {
+        "base": "V̄",
+        "desc": "LATIN CAPITAL LETTER V WITH MACRON",
+        "mntity": "Vmacr"
+    },
+    "E34E": {
+        "base": "V̍",
+        "desc": "LATIN CAPITAL LETTER V WITH VERTICAL LINE ABOVE",
+        "mntity": "Vvertline"
+    },
+    "E350": {
+        "base": "W̋",
+        "desc": "LATIN CAPITAL LETTER W WITH DOUBLE ACUTE",
+        "mntity": "Wdblac"
+    },
+    "E353": {
+        "base": "Wͤ",
+        "desc": "LATIN CAPITAL LETTER W WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "Wesup"
+    },
+    "E357": {
+        "base": "W̄",
+        "desc": "LATIN CAPITAL LETTER W WITH MACRON",
+        "mntity": "Wmacr"
+    },
+    "E373": {
+        "base": "Ȳ́",
+        "desc": "LATIN CAPITAL LETTER Y WITH MACRON AND ACUTE",
+        "mntity": "Ymacracute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E375": {
+        "base": "Ȳ̆",
+        "desc": "LATIN CAPITAL LETTER Y WITH MACRON AND BREVE",
+        "mntity": "Ymacrbreve"
+    },
+    "E376": {
+        "base": "Y̆",
+        "desc": "LATIN CAPITAL LETTER Y WITH BREVE",
+        "mntity": "Ybreve"
+    },
+    "E37C": {
+        "base": "Y̋",
+        "desc": "LATIN CAPITAL LETTER Y WITH DOUBLE ACUTE",
+        "mntity": "Ydblac"
+    },
+    "E384": {
+        "base": "Ẏ́",
+        "desc": "LATIN CAPITAL LETTER Y WITH DOT ABOVE AND ACUTE",
+        "mntity": "Ydotacute"
+    },
+    "E385": {
+        "base": "Y᷎",
+        "desc": "LATIN CAPITAL LETTER Y WITH CURL",
+        "mntity": "Ycurl"
+    },
+    "E39F": {
+        "base": "Þ̣",
+        "desc": "LATIN CAPITAL LETTER THORN WITH DOT BELOW",
+        "mntity": "THORNdotbl"
+    },
+    "E3D3": {
+        "base": "O᷎",
+        "desc": "LATIN CAPITAL LETTER O WITH CURL",
+        "mntity": "Ocurl"
+    },
+    "E3D4": {
+        "base": "Ø᷎",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND CURL",
+        "mntity": "Oslashcurl"
+    },
+    "E3E5": {
+        "base": "Ꝼ̣",
+        "desc": "LATIN CAPITAL LETTER INSULAR F WITH DOT BELOW",
+        "mntity": "Finsdotbl"
+    },
+    "E3E6": {
+        "base": "Ꝩ̣",
+        "desc": "LATIN CAPITAL LETTER INSULAR V (VEND) WITH DOT BELOW",
+        "mntity": "Vinsdotbl"
+    },
+    "E3E7": {
+        "base": "Ꝩ̇",
+        "desc": "LATIN CAPITAL LETTER INSULAR V (VEND) WITH DOT ABOVE",
+        "mntity": "Vinsdot"
+    },
+    "E404": {
+        "base": "ą́",
+        "desc": "LATIN SMALL LETTER A WITH OGONEK AND ACUTE",
+        "mntity": "aogonacute"
+    },
+    "E40A": {
+        "base": "ā́",
+        "desc": "LATIN SMALL LETTER A WITH MACRON AND ACUTE",
+        "mntity": "amacracute"
+    },
+    "E410": {
+        "base": "ā̆",
+        "desc": "LATIN SMALL LETTER A WITH MACRON AND BREVE",
+        "mntity": "amacrbreve"
+    },
+    "E41A": {
+        "base": "ä̂",
+        "desc": "LATIN SMALL LETTER A WITH DIAERESIS AND CIRCUMFLEX",
+        "mntity": "aumlcirc"
+    },
+    "E41D": {
+        "base": "ạ̈",
+        "desc": "LATIN SMALL LETTER A WITH DIAERESIS AND DOT BELOW",
+        "mntity": "adotbluml"
+    },
+    "E41F": {
+        "base": "a͏̊̂",
+        "desc": "LATIN SMALL LETTER A WITH RING ABOVE AND CIRCUMFLEX",
+        "mntity": "aringcirc"
+    },
+    "E425": {
+        "base": "a̋",
+        "desc": "LATIN SMALL LETTER A WITH DOUBLE ACUTE",
+        "mntity": "adblac"
+    },
+    "E42C": {
+        "base": "aͤ",
+        "desc": "LATIN SMALL LETTER A WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "aesup"
+    },
+    "E42D": {
+        "base": "aͦ",
+        "desc": "LATIN SMALL LETTER A WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "aosup"
+    },
+    "E42E": {
+        "base": "aͮ",
+        "desc": "LATIN SMALL LETTER A WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "avsup"
+    },
+    "E433": {
+        "base": "a᷎",
+        "desc": "LATIN SMALL LETTER A WITH CURL",
+        "mntity": "acurl"
+    },
+    "E435": {
+        "base": "aͧ",
+        "desc": "LATIN SMALL LETTER A WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "ausup",
+        "note": "Added in Junicode 2.222."
+    },
+    "E436": {
+        "base": "æ̣",
+        "desc": "LATIN SMALL LETTER AE WITH DOT BELOW",
+        "mntity": "aeligdotbl"
+    },
+    "E43A": {
+        "base": "æ͏̄́",
+        "desc": "LATIN SMALL LETTER AE WITH MACRON AND ACUTE",
+        "mntity": "aeligmacracute"
+    },
+    "E43D": {
+        "base": "æ͏̄̆",
+        "desc": "LATIN SMALL LETTER AE WITH MACRON AND BREVE",
+        "mntity": "aeligmacrbreve"
+    },
+    "E43F": {
+        "base": "æ̆",
+        "desc": "LATIN SMALL LETTER AE WITH BREVE",
+        "mntity": "aeligbreve"
+    },
+    "E440": {
+        "base": "æ̨",
+        "desc": "LATIN SMALL LETTER AE WITH OGONEK",
+        "mntity": "aeligogon"
+    },
+    "E441": {
+        "base": "æ̋",
+        "desc": "LATIN SMALL LETTER AE WITH DOUBLE ACUTE",
+        "mntity": "aeligdblac"
+    },
+    "E442": {
+        "base": "æ̈",
+        "desc": "LATIN SMALL LETTER AE WITH DIAERESIS",
+        "mntity": "aeliguml"
+    },
+    "E443": {
+        "base": "æ̇",
+        "desc": "LATIN SMALL LETTER AE WITH DOT ABOVE",
+        "mntity": "aeligdot"
+    },
+    "E444": {
+        "base": "b́",
+        "desc": "LATIN SMALL LETTER B WITH ACUTE",
+        "mntity": "bacute"
+    },
+    "E44D": {
+        "base": "b̶",
+        "desc": "LATIN SMALL LETTER B WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "bovlmed"
+    },
+    "E466": {
+        "base": "c̣",
+        "desc": "LATIN SMALL LETTER C WITH DOT BELOW",
+        "mntity": "cdotbl"
+    },
+    "E476": {
+        "base": "c̨",
+        "desc": "LATIN SMALL LETTER C WITH OGONEK",
+        "mntity": "cogon"
+    },
+    "E477": {
+        "base": "d́",
+        "desc": "LATIN SMALL LETTER D WITH ACUTE",
+        "mntity": "dacute"
+    },
+    "E48F": {
+        "base": "ð̣",
+        "desc": "LATIN SMALL LETTER ETH WITH DOT BELOW",
+        "mntity": "ethdotbl"
+    },
+    "E491": {
+        "base": "d̶",
+        "desc": "LATIN SMALL LETTER D WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "dovlmed"
+    },
+    "E498": {
+        "base": "ẹ́",
+        "desc": "LATIN SMALL LETTER E WITH DOT BELOW AND ACUTE",
+        "mntity": "edotblacute"
+    },
+    "E499": {
+        "base": "ę́",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND ACUTE",
+        "mntity": "eogonacute"
+    },
+    "E49F": {
+        "base": "ę̂",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND CIRCUMFLEX",
+        "mntity": "eogoncirc"
+    },
+    "E4B7": {
+        "base": "ē̆",
+        "desc": "LATIN SMALL LETTER E WITH MACRON AND BREVE",
+        "mntity": "emacrbreve"
+    },
+    "E4BC": {
+        "base": "ę̄",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND MACRON",
+        "mntity": "eogonmacr"
+    },
+    "E4C8": {
+        "base": "ė́",
+        "desc": "LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE",
+        "mntity": "edotacute"
+    },
+    "E4CD": {
+        "base": "ë̄",
+        "desc": "LATIN SMALL LETTER E WITH DIAERESIS AND MACRON",
+        "mntity": "eumlmacr"
+    },
+    "E4CF": {
+        "base": "e̊",
+        "desc": "LATIN SMALL LETTER E WITH RING ABOVE",
+        "mntity": "ering"
+    },
+    "E4D1": {
+        "base": "e̋",
+        "desc": "LATIN SMALL LETTER E WITH DOUBLE ACUTE",
+        "mntity": "edblac"
+    },
+    "E4E1": {
+        "base": "eͣ",
+        "desc": "LATIN SMALL LETTER E WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "easup"
+    },
+    "E4E2": {
+        "base": "eͥ",
+        "desc": "LATIN SMALL LETTER E WITH LATIN SMALL LETTER I ABOVE",
+        "mntity": "eisup"
+    },
+    "E4E3": {
+        "base": "eͮ",
+        "desc": "LATIN SMALL LETTER E WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "evsup"
+    },
+    "E4E8": {
+        "base": "ę̣",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND DOT BELOW",
+        "mntity": "eogondotbl"
+    },
+    "E4E9": {
+        "base": "e᷎",
+        "desc": "LATIN SMALL LETTER E WITH CURL",
+        "mntity": "ecurl"
+    },
+    "E4EA": {
+        "base": "ę̋",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND DOUBLE ACUTE",
+        "mntity": "eogondblac"
+    },
+    "E4EB": {
+        "base": "ę̇",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND DOT ABOVE",
+        "mntity": "eogondot"
+    },
+    "E4EC": {
+        "base": "ę̇́",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND DOT ABOVE AND ACUTE",
+        "mntity": "eogondotacute"
+    },
+    "E4EE": {
+        "base": "f̣",
+        "desc": "LATIN SMALL LETTER F WITH DOT BELOW",
+        "mntity": "fdotbl"
+    },
+    "E4F0": {
+        "base": "f́",
+        "desc": "LATIN SMALL LETTER F WITH ACUTE",
+        "mntity": "facute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E4F1": {
+        "base": "eͤ",
+        "desc": "LATIN SMALL LETTER E WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "eesup",
+        "note": "added to Junicode 2.222."
+    },
+    "E4F2": {
+        "base": "eͦ",
+        "desc": "LATIN SMALL LETTER E WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "eosup",
+        "note": "added to Junicode 2.222."
+    },
+    "E501": {
+        "base": "g̣",
+        "desc": "LATIN SMALL LETTER G WITH DOT BELOW",
+        "mntity": "gdotbl"
+    },
+    "E516": {
+        "base": "h́",
+        "desc": "LATIN SMALL LETTER H WITH ACUTE",
+        "mntity": "hacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E517": {
+        "base": "h̶",
+        "desc": "LATIN SMALL LETTER H WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "hovlmed"
+    },
+    "E52A": {
+        "base": "i᷎",
+        "desc": "LATIN SMALL LETTER I WITH CURL",
+        "mntity": "icurl"
+    },
+    "E535": {
+        "base": "ī́",
+        "desc": "LATIN SMALL LETTER I WITH MACRON AND ACUTE",
+        "mntity": "imacracute"
+    },
+    "E537": {
+        "base": "ī̆",
+        "desc": "LATIN SMALL LETTER I WITH MACRON AND BREVE",
+        "mntity": "imacrbreve"
+    },
+    "E543": {
+        "base": "i̋",
+        "desc": "LATIN SMALL LETTER I WITH DOUBLE ACUTE",
+        "mntity": "idblac"
+    },
+    "E548": {
+        "base": "i̯",
+        "desc": "LATIN SMALL LETTER I WITH INVERTED BREVE BELOW",
+        "mntity": "ibrevinvbl"
+    },
+    "E54A": {
+        "base": "iͤ",
+        "desc": "LATIN SMALL LETTER I WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "iesup"
+    },
+    "E54B": {
+        "base": "iͮ",
+        "desc": "LATIN SMALL LETTER I WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "ivsup"
+    },
+    "E550": {
+        "base": "i̶",
+        "desc": "LATIN SMALL LETTER I WITH MEDIUM-HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "iovlmed"
+    },
+    "E551": {
+        "base": "j̣",
+        "desc": "LATIN SMALL LETTER J WITH DOT BELOW",
+        "mntity": "jdotbl"
+    },
+    "E552": {
+        "base": "j̶",
+        "desc": "LATIN SMALL LETTER J WITH MEDIUM-HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "jovlmed"
+    },
+    "E553": {
+        "base": "j́",
+        "desc": "LATIN SMALL LETTER J WITH ACUTE",
+        "mntity": "jacute"
+    },
+    "E554": {
+        "base": "j̶",
+        "desc": "LATIN SMALL LETTER J WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "jmacrmed"
+    },
+    "E562": {
+        "base": "j̋",
+        "desc": "LATIN SMALL LETTER J WITH DOUBLE ACUTE",
+        "mntity": "jdblac"
+    },
+    "E563": {
+        "base": "j᷎",
+        "desc": "LATIN SMALL LETTER J WITH CURL",
+        "mntity": "jcurl"
+    },
+    "E568": {
+        "base": "k̇",
+        "desc": "LATIN SMALL LETTER K WITH DOT ABOVE",
+        "mntity": "kdot"
+    },
+    "E58C": {
+        "base": "l̅",
+        "desc": "LATIN SMALL LETTER L WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "lovlhigh"
+    },
+    "E596": {
+        "base": "l̄",
+        "desc": "LATIN SMALL LETTER L WITH HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "lmacrhigh"
+    },
+    "E59E": {
+        "base": "l̇",
+        "desc": "LATIN SMALL LETTER L WITH DOT ABOVE",
+        "mntity": "ldot"
+    },
+    "E5A4": {
+        "base": "l̥",
+        "desc": "LATIN SMALL LETTER L WITH RING BELOW",
+        "mntity": "lringbl"
+    },
+    "E5B1": {
+        "base": "l̶",
+        "desc": "LATIN SMALL LETTER L WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "lovlmed"
+    },
+    "E5B8": {
+        "base": "m̶",
+        "desc": "LATIN SMALL LETTER M WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "mmacrmed"
+    },
+    "E5C5": {
+        "base": "m̥",
+        "desc": "LATIN SMALL LETTER M WITH RING BELOW",
+        "mntity": "mringbl"
+    },
+    "E5D2": {
+        "base": "m̶",
+        "desc": "LATIN SMALL LETTER M WITH MEDIUM-HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "movlmed"
+    },
+    "E5D7": {
+        "base": "n̂",
+        "desc": "LATIN SMALL LETTER N WITH CIRCUMFLEX",
+        "mntity": "ncirc"
+    },
+    "E5DC": {
+        "base": "n̄",
+        "desc": "LATIN SMALL LETTER N WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",
+        "mntity": "nmacrmed"
+    },
+    "E5EE": {
+        "base": "n̥",
+        "desc": "LATIN SMALL LETTER N WITH RING BELOW",
+        "mntity": "nringbl"
+    },
+    "E608": {
+        "base": "ǫ̣",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND DOT BELOW",
+        "mntity": "oogondotbl"
+    },
+    "E60C": {
+        "base": "ǫ́",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND ACUTE",
+        "mntity": "oogonacute"
+    },
+    "E60E": {
+        "base": "ǫ̂",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND CIRCUMFLEX",
+        "mntity": "oogoncirc"
+    },
+    "E61B": {
+        "base": "ō̆",
+        "desc": "LATIN SMALL LETTER O WITH MACRON AND BREVE",
+        "mntity": "omacrbreve"
+    },
+    "E62C": {
+        "base": "ö́",
+        "desc": "LATIN SMALL LETTER O WITH DIAERESIS AND ACUTE",
+        "mntity": "oumlacute"
+    },
+    "E62D": {
+        "base": "ö̂",
+        "desc": "LATIN SMALL LETTER O WITH DIAERESIS AND CIRCUMFLEX",
+        "mntity": "oumlcirc"
+    },
+    "E637": {
+        "base": "o̊",
+        "desc": "LATIN SMALL LETTER O WITH RING ABOVE",
+        "mntity": "oring"
+    },
+    "E643": {
+        "base": "oͣ",
+        "desc": "LATIN SMALL LETTER O WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "oasup"
+    },
+    "E644": {
+        "base": "oͤ",
+        "desc": "LATIN SMALL LETTER O WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "oesup"
+    },
+    "E645": {
+        "base": "oͥ",
+        "desc": "LATIN SMALL LETTER O WITH LATIN SMALL LETTER I ABOVE",
+        "mntity": "oisup"
+    },
+    "E646": {
+        "base": "oͧ",
+        "desc": "LATIN SMALL LETTER O WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "ousup"
+    },
+    "E647": {
+        "base": "oͮ",
+        "desc": "LATIN SMALL LETTER O WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "ovsup"
+    },
+    "E64F": {
+        "base": "ǫ᷎",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND CURL",
+        "mntity": "oogoncurl"
+    },
+    "E652": {
+        "base": "ø̄",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND MACRON",
+        "mntity": "oslashmacr"
+    },
+    "E653": {
+        "base": "ø̄̆",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND MACRON AND BREVE",
+        "mntity": "oslashmacrbreve"
+    },
+    "E655": {
+        "base": "ø̨",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND OGONEK",
+        "mntity": "oslashogon"
+    },
+    "E657": {
+        "base": "ǿ̨",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND OGONEK AND ACUTE",
+        "mntity": "oslashogonacute"
+    },
+    "E659": {
+        "base": "œ́",
+        "desc": "LATIN SMALL LIGATURE OE WITH ACUTE",
+        "mntity": "oeligacute"
+    },
+    "E65D": {
+        "base": "œ̄",
+        "desc": "LATIN SMALL LIGATURE OE WITH MACRON",
+        "mntity": "oeligmacr"
+    },
+    "E660": {
+        "base": "œ̄̆",
+        "desc": "LATIN SMALL LIGATURE OE WITH MACRON AND BREVE",
+        "mntity": "oeligmacrbreve"
+    },
+    "E662": {
+        "base": "œ̨",
+        "desc": "LATIN SMALL LIGATURE OE WITH OGONEK",
+        "mntity": "oeligogon"
+    },
+    "E665": {
+        "base": "p̄",
+        "desc": "LATIN SMALL LETTER P WITH MACRON",
+        "mntity": "pmacr"
+    },
+    "E668": {
+        "base": "p̋",
+        "desc": "LATIN SMALL LETTER P WITH DOUBLE ACUTE",
+        "mntity": "pdblac"
+    },
+    "E66D": {
+        "base": "p̣",
+        "desc": "LATIN SMALL LETTER P WITH DOT BELOW",
+        "mntity": "pdotbl"
+    },
+    "E681": {
+        "base": "q̄",
+        "desc": "LATIN SMALL LETTER Q WITH MACRON",
+        "mntity": "qmacr"
+    },
+    "E682": {
+        "base": "q̇",
+        "desc": "LATIN SMALL LETTER Q WITH DOT ABOVE",
+        "mntity": "qdot"
+    },
+    "E688": {
+        "base": "q̣",
+        "desc": "LATIN SMALL LETTER Q WITH DOT BELOW",
+        "mntity": "qdotbl"
+    },
+    "E68B": {
+        "base": "ꝗ̃",
+        "desc": "LATIN SMALL LETTER Q WITH STROKE THROUGH DESCENDER AND TILDE",
+        "mntity": "qbardestilde"
+    },
+    "E6A3": {
+        "base": "r̥",
+        "desc": "LATIN SMALL LETTER R WITH RING BELOW",
+        "mntity": "rringbl"
+    },
+    "E6E2": {
+        "base": "t́",
+        "desc": "LATIN SMALL LETTER T WITH ACUTE",
+        "mntity": "tacute"
+    },
+    "E6EE": {
+        "base": "t̨",
+        "desc": "LATIN SMALL LETTER T WITH OGONEK",
+        "mntity": "togon"
+    },
+    "E709": {
+        "base": "ū́",
+        "desc": "LATIN SMALL LETTER U WITH MACRON AND ACUTE",
+        "mntity": "umacracute"
+    },
+    "E70B": {
+        "base": "ū̆",
+        "desc": "LATIN SMALL LETTER U WITH MACRON AND BREVE",
+        "mntity": "umacrbreve"
+    },
+    "E715": {
+        "base": "u̇",
+        "desc": "LATIN SMALL LETTER U WITH DOT ABOVE",
+        "mntity": "udot"
+    },
+    "E717": {
+        "base": "ü̂",
+        "desc": "LATIN SMALL LETTER U WITH DIAERESIS AND CIRCUMFLEX",
+        "mntity": "uumlcirc"
+    },
+    "E724": {
+        "base": "u̍",
+        "desc": "LATIN SMALL LETTER U WITH VERTICAL LINE ABOVE",
+        "mntity": "uvertline"
+    },
+    "E727": {
+        "base": "u̯",
+        "desc": "LATIN SMALL LETTER U WITH INVERTED BREVE BELOW",
+        "mntity": "ubrevinvbl"
+    },
+    "E72B": {
+        "base": "uͤ",
+        "desc": "LATIN SMALL LETTER U WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "uesup"
+    },
+    "E72C": {
+        "base": "uͥ",
+        "desc": "LATIN SMALL LETTER U WITH LATIN SMALL LETTER I ABOVE",
+        "mntity": "uisup"
+    },
+    "E72D": {
+        "base": "uͦ",
+        "desc": "LATIN SMALL LETTER U WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "uosup"
+    },
+    "E731": {
+        "base": "u᷎",
+        "desc": "LATIN SMALL LETTER U WITH CURL",
+        "mntity": "ucurl"
+    },
+    "E732": {
+        "base": "iͣ",
+        "desc": "LATIN SMALL LETTER I WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "iasup",
+        "note": "added in Junicode 2.222."
+    },
+    "E734": {
+        "base": "þſ",
+        "desc": "LATIN SMALL LIGATURE THORN AND LONG S",
+        "mntity": "thornslonglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E735": {
+        "base": "þẝ",
+        "desc": "LATIN SMALL LIGATURE THORN AND LONG S WITH STROKE",
+        "mntity": "thornslongligbar",
+        "note": "problem here?",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E737": {
+        "base": "þ́",
+        "desc": "LATIN SMALL LETTER THORN WITH ACUTE",
+        "mntity": "thornacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "E73A": {
+        "base": "v́",
+        "desc": "LATIN SMALL LETTER V WITH ACUTE",
+        "mntity": "vacute"
+    },
+    "E73B": {
+        "base": "v̂",
+        "desc": "LATIN SMALL LETTER V WITH CIRCUMFLEX",
+        "mntity": "vcirc"
+    },
+    "E742": {
+        "base": "v̈",
+        "desc": "LATIN SMALL LETTER V WITH DIAERESIS",
+        "mntity": "vuml"
+    },
+    "E743": {
+        "base": "v̊",
+        "desc": "LATIN SMALL LETTER V WITH RING ABOVE",
+        "mntity": "vring"
+    },
+    "E74B": {
+        "base": "v̋",
+        "desc": "LATIN SMALL LETTER V WITH DOUBLE ACUTE",
+        "mntity": "vdblac"
+    },
+    "E74C": {
+        "base": "v̇",
+        "desc": "LATIN SMALL LETTER V WITH DOT ABOVE",
+        "mntity": "vdot"
+    },
+    "E74D": {
+        "base": "v̄",
+        "desc": "LATIN SMALL LETTER V WITH MACRON",
+        "mntity": "vmacr"
+    },
+    "E74E": {
+        "base": "v̵",
+        "desc": "LATIN SMALL LETTER V WITH BAR",
+        "mntity": "vbar"
+    },
+    "E74F": {
+        "base": "v̍",
+        "desc": "LATIN SMALL LETTER V WITH VERTICAL LINE ABOVE",
+        "mntity": "vvertline"
+    },
+    "E750": {
+        "base": "w̋",
+        "desc": "LATIN SMALL LETTER W WITH DOUBLE ACUTE",
+        "mntity": "wdblac"
+    },
+    "E753": {
+        "base": "wͤ",
+        "desc": "LATIN SMALL LETTER W WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "wesup"
+    },
+    "E754": {
+        "base": "wͦ",
+        "desc": "LATIN SMALL LETTER W WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "wosup"
+    },
+    "E757": {
+        "base": "w̄",
+        "desc": "LATIN SMALL LETTER W WITH MACRON",
+        "mntity": "wmacr"
+    },
+    "E771": {
+        "base": "wͥ",
+        "desc": "LATIN SMALL LETTER W WITH LATIN SMALL LETTER I ABOVE",
+        "mntity": "wisup",
+        "note": "Added in Junicode 2.222."
+    },
+    "E773": {
+        "base": "ȳ́",
+        "desc": "LATIN SMALL LETTER Y WITH MACRON AND ACUTE",
+        "mntity": "ymacracute"
+    },
+    "E775": {
+        "base": "ȳ̆",
+        "desc": "LATIN SMALL LETTER Y WITH MACRON AND BREVE",
+        "mntity": "ymacrbreve"
+    },
+    "E776": {
+        "base": "y̆",
+        "desc": "LATIN SMALL LETTER Y WITH BREVE",
+        "mntity": "ybreve"
+    },
+    "E77B": {
+        "base": "y̵",
+        "desc": "LATIN SMALL LETTER Y WITH BAR",
+        "mntity": "ybar"
+    },
+    "E77C": {
+        "base": "y̋",
+        "desc": "LATIN SMALL LETTER Y WITH DOUBLE ACUTE",
+        "mntity": "ydblac"
+    },
+    "E781": {
+        "base": "yͤ",
+        "desc": "LATIN SMALL LETTER Y WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "yesup"
+    },
+    "E784": {
+        "base": "y͏̇́",
+        "desc": "LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE",
+        "mntity": "ydotacute"
+    },
+    "E785": {
+        "base": "y᷎",
+        "desc": "LATIN SMALL LETTER Y WITH CURL",
+        "mntity": "ycurl"
+    },
+    "E79E": {
+        "base": "ſ̶",
+        "desc": "LATIN SMALL LETTER LONG S WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "slongovlmed"
+    },
+    "E79F": {
+        "base": "þ̣",
+        "desc": "LATIN SMALL LETTER THORN WITH DOT BELOW",
+        "mntity": "thorndotbl"
+    },
+    "E7A2": {
+        "base": "þ̶",
+        "desc": "LATIN SMALL LETTER THORN WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "thornovlmed"
+    },
+    "E7B2": {
+        "base": "n̵",
+        "desc": "LATIN SMALL LETTER N WITH BAR",
+        "mntity": "nbar"
+    },
+    "E7C1": {
+        "base": "ꝛ̣",
+        "desc": "LATIN SMALL LETTER R ROTUNDA WITH DOT BELOW",
+        "mntity": "rrotdotbl"
+    },
+    "E7C2": {
+        "base": "ſ̣",
+        "desc": "LATIN SMALL LETTER LONG S WITH DOT BELOW",
+        "mntity": "slongdotbl"
+    },
+    "E7C3": {
+        "base": "k̶",
+        "desc": "LATIN SMALL LETTER K WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)",
+        "mntity": "kovlmed"
+    },
+    "E7C7": {
+        "base": "hẝ",
+        "desc": "LATIN SMALL LIGATURE H AND LONG S WITH STROKE",
+        "mntity": "hslongligbar",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E7C8": {
+        "base": "kẝ",
+        "desc": "LATIN SMALL LIGATURE K AND LONG S WITH STROKE",
+        "mntity": "kslongligbar",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E7CC": {
+        "base": "ɔ̄",
+        "desc": "LATIN SMALL LETTER OPEN O WITH MACRON",
+        "mntity": "oopenmacr"
+    },
+    "E7D3": {
+        "base": "o᷎",
+        "desc": "LATIN SMALL LETTER O WITH CURL",
+        "mntity": "ocurl"
+    },
+    "E7D4": {
+        "base": "ø᷎",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND CURL",
+        "mntity": "oslashcurl"
+    },
+    "E7E4": {
+        "desc": "LATIN SMALL LETTER R WITH LONG LEG AND STROKE THROUGH DESCENDER",
+        "mntity": "rdesstrok",
+        "var": {
+            "alpha": {
+                "base": "ɼ̵"
+            },
+            "other": {
+                "base": "r",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 8,
+                            "name": "cv36"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "s"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "E7E5": {
+        "desc": "LATIN SMALL LETTER INSULAR F WITH DOT BELOW",
+        "mntity": "finsdotbl",
+        "var": {
+            "insular": {
+                "base": "ꝼ̣"
+            },
+            "other": {
+                "base": "f%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv12"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "E7E6": {
+        "base": "ꝩ̣",
+        "desc": "LATIN SMALL LETTER INSULAR V (VEND) WITH DOT BELOW",
+        "mntity": "vinsdotbl"
+    },
+    "E7E7": {
+        "base": "ꝩ̇",
+        "desc": "LATIN SMALL LETTER INSULAR V (VEND) WITH DOT ABOVE",
+        "mntity": "vinsdot"
+    },
+    "E8A1": {
+        "base": "i̵̵",
+        "desc": "LATIN SMALL LETTER I WITH TWO STROKES",
+        "mntity": "idblstrok"
+    },
+    "E8A2": {
+        "base": "j̵̵",
+        "desc": "LATIN SMALL LETTER J WITH TWO STROKES",
+        "mntity": "jdblstrok"
+    },
+    "E8A3": {
+        "base": "h",
+        "desc": "LATIN ABBREVIATION SIGN AUTEM",
+        "mntity": "autem",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv16"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "E8AD": {
+        "base": "į",
+        "desc": "LATIN SMALL LETTER DOTLESS I WITH OGONEK",
+        "mntity": "inodotogon"
+    },
+    "E8AE": {
+        "base": "oꝛ",
+        "desc": "LATIN SMALL LIGATURE O R ROTUNDA",
+        "mntity": "orrotlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8AF": {
+        "base": "ſl",
+        "desc": "LATIN SMALL LIGATURE LONG S L WITH STROKE",
+        "mntity": "slonglbarlig",
+        "note": "nothing yet (see Junicode Manual p. 16)."
+    },
+    "E8B3": {
+        "base": "qꝛ",
+        "desc": "LATIN SMALL LETTER Q LIGATED WITH R ROTUNDA",
+        "mntity": "q2app",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8B4": {
+        "base": "q",
+        "desc": "LATIN SMALL LETTER Q WITH CENTRAL SLANTED STROKE",
+        "mntity": "qcentrslstrok",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv34"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "E8B7": {
+        "base": "ſ",
+        "desc": "LATIN SMALL LETTER LONG S WITH FLOURISH",
+        "mntity": "slongflour",
+        "otag": {
+            "tags": [
+                {
+                    "index": 5,
+                    "name": "cv38"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "f"
+                }
+            ]
+        }
+    },
+    "E8B8": {
+        "base": "ſ",
+        "desc": "LATIN SMALL LETTER LONG S WITH SLANTED DESCENDING STROKE",
+        "mntity": "slongslstrok",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv38",
+                    "index": 6
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "s"
+                }
+            ]
+        }
+    },
+    "E8BA": {
+        "base": "v",
+        "desc": "LATIN SMALL LETTER V WITH SHORT SLASH",
+        "mntity": "vslash",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv44"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "E8BB": {
+        "base": "v",
+        "desc": "LATIN SMALL LETTER V WITH SHORT SLASH ABOVE RIGHT",
+        "mntity": "vslashura",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv44"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "E8BC": {
+        "base": "v",
+        "desc": "LATIN SMALL LETTER V WITH TWO SHORT SLASHES ABOVE RIGHT",
+        "mntity": "vslashuradbl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv44"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "E8BD": {
+        "base": "x",
+        "desc": "LATIN SMALL LETTER X WITH SHORT SLASH ABOVE",
+        "mntity": "xslashula",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv48"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "E8BE": {
+        "base": "x",
+        "desc": "LATIN SMALL LETTER X WITH SHORT SLASH BELOW",
+        "mntity": "xslashlra",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv48"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "E8BF": {
+        "base": "qꝫ",
+        "desc": "LATIN SMALL LETTER Q LIGATED WITH FINAL ET",
+        "mntity": "q3app",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C1": {
+        "base": "þr",
+        "desc": "LATIN SMALL LETTER THORN LIGATED WITH ARM OF LATIN SMALL LETTER R",
+        "mntity": "thornrarmlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C2": {
+        "base": "Hr",
+        "desc": "LATIN CAPITAL LETTER H LIGATED WITH ARM OF LATIN SMALL LETTER R",
+        "mntity": "Hrarmlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C3": {
+        "base": "hr",
+        "desc": "LATIN SMALL LETTER H LIGATED WITH ARM OF LATIN SMALL LETTER R",
+        "mntity": "hrarmlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C5": {
+        "base": "kr",
+        "desc": "LATIN SMALL LETTER K LIGATED WITH ARM OF LATIN SMALL LETTER R",
+        "mntity": "krarmlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C6": {
+        "base": "UU",
+        "desc": "LATIN CAPITAL LIGATURE UU",
+        "mntity": "UUlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C7": {
+        "base": "uu",
+        "desc": "LATIN SMALL LIGATURE UU",
+        "mntity": "uulig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8C8": {
+        "base": "UE",
+        "desc": "LATIN CAPITAL LIGATURE UE",
+        "mntity": "UElig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8CE": {
+        "base": "x",
+        "desc": "LATIN SMALL LETTER X WITH TWO SHORT SLASHES BELOW RIGHT",
+        "mntity": "xslashlradbl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv48"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        }
+    },
+    "E8D1": {
+        "base": "æ̊",
+        "desc": "LATIN SMALL LETTER AE WITH RING ABOVE",
+        "mntity": "aeligring"
+    },
+    "E8D3": {
+        "base": "ǽ̨",
+        "desc": "LATIN SMALL LETTER AE WITH OGONEK AND ACUTE",
+        "mntity": "aeligogonacute"
+    },
+    "E8D5": {
+        "base": "ä",
+        "desc": "LATIN SMALL LETTER A WITH DIAGONAL DIAERESIS",
+        "mntity": "adiaguml",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv88"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "i"
+                }
+            ]
+        }
+    },
+    "E8D7": {
+        "base": "ö",
+        "desc": "LATIN SMALL LETTER O WITH DIAGONAL DIAERESIS",
+        "mntity": "odiaguml",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv88"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "i"
+                }
+            ]
+        }
+    },
+    "E8DA": {
+        "base": "A",
+        "desc": "ANTIPHON",
+        "mntity": "Antiphon",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv01"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "E8DB": {
+        "base": "Y",
+        "desc": "HYMNUS",
+        "mntity": "Hymnus",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv49"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "E8DC": {
+        "base": "Ps",
+        "desc": "LATIN CAPITAL SIGN PSALMUS",
+        "mntity": "Psalmus",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8DD": {
+        "base": "ps",
+        "desc": "LATIN SMALL SIGN PSALMUS",
+        "mntity": "inodotogon",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8DE": {
+        "base": "Psi",
+        "desc": "LATIN CAPITAL SIGN PSALMI",
+        "mntity": "Psalmi",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8DF": {
+        "base": "psi",
+        "desc": "LATIN SMALL SIGN PSALMI",
+        "mntity": "psalmi",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "E8E0": {
+        "base": "aͥ",
+        "desc": "LATIN SMALL LETTER A WITH LATIN SMALL LETTER I ABOVE",
+        "mntity": "aisup"
+    },
+    "E8E5": {
+        "base": "iͦ",
+        "desc": "LATIN SMALL LETTER I WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "iosup"
+    },
+    "E8E6": {
+        "base": "iͧ",
+        "desc": "LATIN SMALL LETTER I WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "iusup"
+    },
+    "E8E7": {
+        "base": "jͤ",
+        "desc": "LATIN SMALL LETTER J WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "jesup"
+    },
+    "E8E8": {
+        "base": "mͤ",
+        "desc": "LATIN SMALL LETTER M WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "mesup"
+    },
+    "E8E9": {
+        "base": "oͦ",
+        "desc": "LATIN SMALL LETTER O WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "oosup"
+    },
+    "E8EA": {
+        "base": "rͤ",
+        "desc": "LATIN SMALL LETTER R WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "resup"
+    },
+    "E8EB": {
+        "base": "uͣ",
+        "desc": "LATIN SMALL LETTER U WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "uasup"
+    },
+    "E8EC": {
+        "base": "uͮ",
+        "desc": "LATIN SMALL LETTER U WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "uvsup"
+    },
+    "E8ED": {
+        "base": "uᷱ",
+        "desc": "LATIN SMALL LETTER U WITH LATIN SMALL LETTER W ABOVE",
+        "mntity": "uwsup"
+    },
+    "E8F0": {
+        "base": "wͣ",
+        "desc": "LATIN SMALL LETTER W WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "wasup"
+    },
+    "E8F2": {
+        "base": "wͧ",
+        "desc": "LATIN SMALL LETTER W WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "wusup"
+    },
+    "E8F3": {
+        "base": "wͮ",
+        "desc": "LATIN SMALL LETTER W WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "wvsup"
+    },
+    "EAD0": {
+        "base": "gr",
+        "desc": "LATIN SMALL LIGATURE GR",
+        "mntity": "grlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EAD1": {
+        "base": "qꝩ",
+        "desc": "LATIN SMALL LIGATURE Q INSULAR V",
+        "mntity": "qvinslig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EAD2": {
+        "base": "gp",
+        "desc": "LATIN SMALL LIGATURE GP",
+        "mntity": "gplig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EADA": {
+        "base": "ſ%^%t",
+        "desc": "LATIN SMALL LIGATURE LONG S DESCENDING T",
+        "mntity": "slongdestlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv38",
+                    "index": 4
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "EADC": {
+        "base": "lz%^%",
+        "desc": "LATIN SMALL LIGATURE L MIDDLE HIGH GERMAN ZED",
+        "mntity": "lmhgzedlig",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv52"
+                },
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "m"
+                },
+                {
+                    "name": "g"
+                }
+            ]
+        }
+    },
+    "EADD": {
+        "base": "ſz%^%",
+        "desc": "LATIN SMALL LIGATURE LONG S MIDDLE HIGH GERMAN ZED",
+        "mntity": "slongmhgzedlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv52",
+                    "index": 2
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "m"
+                },
+                {
+                    "name": "g"
+                }
+            ]
+        }
+    },
+    "EADE": {
+        "base": "ſiz%^%",
+        "desc": "LATIN SMALL LIGATURE LONG S I MIDDLE HIGH GERMAN ZED",
+        "mntity": "slongimhgzedlig",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv52"
+                },
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "m"
+                },
+                {
+                    "name": "g"
+                }
+            ]
+        }
+    },
+    "EAF0": {
+        "base": "á",
+        "desc": "LATIN ENLARGED LETTER SMALL A WITH ACUTE",
+        "mntity": "aenlacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EAF1": {
+        "base": "æ",
+        "desc": "LATIN ENLARGED LETTER SMALL LIGATURE AE",
+        "mntity": "aeligenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EAF2": {
+        "base": "ꜵ",
+        "desc": "LATIN LIGATURE ENLARGED LETTER SMALL A AND LATIN SMALL LETTER O",
+        "mntity": "aenlosmalllig",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv59"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "EAF3": {
+        "base": "ę",
+        "desc": "LATIN ENLARGED LETTER SMALL E WITH OGONEK",
+        "mntity": "eogonenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EBA0": {
+        "base": "ſä",
+        "desc": "LATIN SMALL LIGATURE LONG S A WITH DIAERESIS",
+        "mntity": "slongaumllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBA1": {
+        "base": "ſh",
+        "desc": "LATIN SMALL LIGATURE LONG S H",
+        "mntity": "slonghlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EBA2": {
+        "base": "ſi",
+        "desc": "LATIN SMALL LIGATURE LONG S I",
+        "mntity": "slongilig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EBA3": {
+        "base": "ſl",
+        "desc": "LATIN SMALL LIGATURE LONG S L",
+        "mntity": "slongllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EBA4": {
+        "base": "ſö",
+        "desc": "LATIN SMALL LIGATURE LONG S O WITH DIAERESIS",
+        "mntity": "slongoumllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBA5": {
+        "base": "ſp",
+        "desc": "LATIN SMALL LIGATURE LONG S P",
+        "mntity": "slongplig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBA6": {
+        "base": "ſſ",
+        "desc": "LATIN SMALL LIGATURE LONG S LONG S",
+        "mntity": "slongslonglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EBA7": {
+        "base": "ſſi",
+        "desc": "LATIN SMALL LIGATURE LONG S LONG S I",
+        "mntity": "slongslongilig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EBA8": {
+        "base": "ſſl",
+        "desc": "LATIN SMALL LIGATURE LONG S LONG S L",
+        "mntity": "slongslongllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EBA9": {
+        "base": "ſti",
+        "desc": "LATIN SMALL LIGATURE LONG S TI",
+        "mntity": "slongtilig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBAA": {
+        "base": "ſtr",
+        "desc": "LATIN SMALL LIGATURE LONG S T R",
+        "mntity": "slongtrlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBAB": {
+        "base": "ſü",
+        "desc": "LATIN SMALL LIGATURE LONG S U WITH DIAERESIS",
+        "mntity": "slonguumllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBAC": {
+        "base": "ſꝩ",
+        "desc": "LATIN SMALL LIGATURE LONG S INSULAR V",
+        "mntity": "slongvinslig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBAD": {
+        "base": "hſ",
+        "desc": "LATIN SMALL LIGATURE H AND LONG S",
+        "mntity": "hslonglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBAE": {
+        "base": "kſ",
+        "desc": "LATIN SMALL LIGATURE K AND LONG S",
+        "mntity": "kslonglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBAF": {
+        "base": "ſ́",
+        "desc": "LATIN SMALL LETTER LONG S WITH ACUTE",
+        "mntity": "slongacute"
+    },
+    "EBB0": {
+        "base": "Ꜻ́",
+        "desc": "LATIN CAPITAL LIGATURE AV WITH STROKE AND ACUTE",
+        "mntity": "AVligslashacute"
+    },
+    "EBB1": {
+        "base": "ꜻ́",
+        "desc": "LATIN SMALL LIGATURE AV WITH STROKE AND ACUTE",
+        "mntity": "avligslashacute"
+    },
+    "EBB2": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH ACUTE",
+        "mntity": "drotacute",
+        "var": {
+            "insular": {
+                "base": "ꝺ́"
+            },
+            "other": {
+                "base": "d%^%́",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBB3": {
+        "base": "Ꝼ́",
+        "desc": "LATIN CAPITAL LETTER INSULAR F WITH ACUTE",
+        "mntity": "Finsacute"
+    },
+    "EBB4": {
+        "base": "ꝼ́",
+        "desc": "LATIN SMALL LETTER INSULAR F WITH ACUTE",
+        "mntity": "finsacute"
+    },
+    "EBB5": {
+        "base": "M͏́",
+        "desc": "LATIN CAPITAL LETTER UNCIAL M WITH ACUTE",
+        "mntity": "Muncacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv25"
+                }
+            ]
+        },
+        "utag": {
+            "base": "M%^%́%^%",
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "EBB6": {
+        "base": "m͏́",
+        "desc": "LATIN SMALL LETTER UNCIAL M WITH ACUTE",
+        "mntity": "muncacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv26"
+                }
+            ]
+        },
+        "utag": {
+            "base": "m%^%́",
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "EBB7": {
+        "base": "O͏᷎́",
+        "desc": "LATIN CAPITAL LETTER O WITH CURL AND ACUTE",
+        "mntity": "Ocurlacute"
+    },
+    "EBB8": {
+        "base": "o͏᷎́",
+        "desc": "LATIN SMALL LETTER O WITH CURL AND ACUTE",
+        "mntity": "ocurlacute"
+    },
+    "EBB9": {
+        "base": "ꝛ́",
+        "desc": "LATIN SMALL LETTER R ROTUNDA WITH ACUTE",
+        "mntity": "rrotacute"
+    },
+    "EBBA": {
+        "base": "Ꝩ́",
+        "desc": "LATIN CAPITAL LETTER INSULAR V (VEND) WITH ACUTE",
+        "mntity": "Vinsacute"
+    },
+    "EBBB": {
+        "base": "ꝩ́",
+        "desc": "LATIN SMALL LETTER INSULAR V (VEND) WITH ACUTE",
+        "mntity": "vinsacute"
+    },
+    "EBBD": {
+        "base": "e᷍a",
+        "desc": "LATIN SMALL LETTER EA WITH CIRCUMFLEX",
+        "mntity": "eacombcirc"
+    },
+    "EBBE": {
+        "base": "e᷍u",
+        "desc": "LATIN SMALL LETTER EU WITH CIRCUMFLEX",
+        "mntity": "eucombcirc"
+    },
+    "EBBF": {
+        "base": "u͏̄",
+        "desc": "LATIN SMALL LETTER U WITH CURLY BAR ABOVE",
+        "mntity": "ucurlbar",
+        "otag": {
+            "tags": [
+                {
+                    "index": 1,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "EBC0": {
+        "base": "Ꜵ̋",
+        "desc": "LATIN CAPITAL LIGATURE AO WITH DOUBLE ACUTE",
+        "mntity": "AOligdblac"
+    },
+    "EBC1": {
+        "base": "ꜵ̋",
+        "desc": "LATIN SMALL LIGATURE AO WITH DOUBLE ACUTE",
+        "mntity": "aoligdblac"
+    },
+    "EBC2": {
+        "base": "Ꜹ̋",
+        "desc": "LATIN CAPITAL LIGATURE AV WITH DOUBLE ACUTE",
+        "mntity": "AVligdblac"
+    },
+    "EBC3": {
+        "base": "ꜹ̋",
+        "desc": "LATIN SMALL LIGATURE AV WITH DOUBLE ACUTE",
+        "mntity": "avligdblac"
+    },
+    "EBC4": {
+        "base": "Ǫ̋",
+        "desc": "LATIN CAPITAL LETTER O WITH OGONEK AND DOUBLE ACUTE",
+        "mntity": "Oogondblac"
+    },
+    "EBC5": {
+        "base": "ǫ̋",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND DOUBLE ACUTE",
+        "mntity": "oogondblac"
+    },
+    "EBC6": {
+        "base": "Ø̋",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND DOUBLE ACUTE",
+        "mntity": "Oslashdblac"
+    },
+    "EBC7": {
+        "base": "ø̋",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND DOUBLE ACUTE",
+        "mntity": "oslashdblac"
+    },
+    "EBC8": {
+        "base": "Œ̋",
+        "desc": "LATIN CAPITAL LIGATURE OE WITH DOUBLE ACUTE",
+        "mntity": "OEligdblac"
+    },
+    "EBC9": {
+        "base": "œ̋",
+        "desc": "LATIN SMALL LIGATURE OE WITH DOUBLE ACUTE",
+        "mntity": "oeligdblac"
+    },
+    "EBCA": {
+        "base": "Ꝡ͏̋",
+        "desc": "LATIN CAPITAL LIGATURE YY WITH DOUBLE ACUTE",
+        "mntity": "YYligdblac"
+    },
+    "EBCB": {
+        "base": "ꝡ͏̋",
+        "desc": "LATIN SMALL LIGATURE YY WITH DOUBLE ACUTE",
+        "mntity": "yyligdblac"
+    },
+    "EBCD": {
+        "base": "Ø̇",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND DOT ABOVE",
+        "mntity": "Oslashdot"
+    },
+    "EBCE": {
+        "base": "ø̇",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND DOT ABOVE",
+        "mntity": "oslashdot"
+    },
+    "EBCF": {
+        "desc": "LATIN LETTER SMALL CAPITAL P WITH DOT ABOVE",
+        "mntity": "pscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ᴘ̇"
+            },
+            "other": {
+                "base": "p%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD0": {
+        "desc": "LATIN LETTER SMALL CAPITAL B WITH DOT ABOVE",
+        "mntity": "bscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ʙ̇"
+            },
+            "other": {
+                "base": "b%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD1": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH DOT ABOVE",
+        "mntity": "drotdot",
+        "var": {
+            "insular": {
+                "base": "ꝺ̇"
+            },
+            "other": {
+                "base": "d%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD2": {
+        "desc": "LATIN LETTER SMALL CAPITAL D WITH DOT ABOVE",
+        "mntity": "dscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ᴅ̇"
+            },
+            "other": {
+                "base": "d%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD3": {
+        "desc": "LATIN CAPITAL LETTER INSULAR F WITH DOT ABOVE",
+        "mntity": "Finsdot",
+        "base": "Ꝼ̇"
+    },
+    "EBD4": {
+        "desc": "LATIN SMALL LETTER INSULAR F WITH DOT ABOVE",
+        "mntity": "finsdot",
+        "var": {
+            "insular": {
+                "base": "ꝼ̇"
+            },
+            "other": {
+                "base": "f%^%͏̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv12"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD5": {
+        "desc": "LATIN SMALL LETTER SEMI-CLOSED INSULAR F WITH DOT ABOVE",
+        "mntity": "finssemiclosedot",
+        "var": {
+            "insular": {
+                "base": "ꝼ%^%̇",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "f%^%͏̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 3,
+                            "name": "cv12"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD6": {
+        "desc": "LATIN SMALL LETTER CLOSED INSULAR F WITH DOT ABOVE",
+        "mntity": "finsclosedot",
+        "var": {
+            "insular": {
+                "base": "ꝼ%^%̇",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "f%^%͏̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 4,
+                            "name": "cv12"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBD7": {
+        "desc": "LATIN LETTER SMALL CAPITAL F WITH DOT ABOVE",
+        "mntity": "fscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ꜰ̇"
+            },
+            "other": {
+                "base": "f%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBDA": {
+        "desc": "LATIN LETTER SMALL CAPITAL H WITH DOT ABOVE",
+        "mntity": "hscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ʜ̇"
+            },
+            "other": {
+                "base": "h%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBDB": {
+        "desc": "LATIN LETTER SMALL CAPITAL K WITH DOT ABOVE",
+        "mntity": "kscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ᴋ̇"
+            },
+            "other": {
+                "base": "k%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBDC": {
+        "desc": "LATIN LETTER SMALL CAPITAL L WITH DOT ABOVE",
+        "mntity": "lscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ʟ̇"
+            },
+            "other": {
+                "base": "l%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBDD": {
+        "desc": "LATIN LETTER SMALL CAPITAL M WITH DOT ABOVE",
+        "mntity": "mscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ᴍ̇"
+            },
+            "other": {
+                "base": "m%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EBDE": {
+        "base": "Ǫ̇",
+        "desc": "LATIN CAPITAL LETTER O WITH OGONEK AND DOT ABOVE",
+        "mntity": "Oogondot"
+    },
+    "EBDF": {
+        "base": "ǫ̇",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND DOT ABOVE",
+        "mntity": "oogondot"
+    },
+    "EBE0": {
+        "base": "Ø̣",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND DOT BELOW",
+        "mntity": "Oslashdotbl"
+    },
+    "EBE1": {
+        "base": "ø̣",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND DOT BELOW",
+        "mntity": "oslashdotbl"
+    },
+    "EBE2": {
+        "base": "J̈",
+        "desc": "LATIN CAPITAL LETTER J WITH DIAERESIS",
+        "mntity": "Juml"
+    },
+    "EBE3": {
+        "base": "j̈",
+        "desc": "LATIN SMALL LETTER J WITH DIAERESIS",
+        "mntity": "juml"
+    },
+    "EBE4": {
+        "base": "Ꝏ̈",
+        "desc": "LATIN CAPITAL LIGATURE OO WITH DIAERESIS",
+        "mntity": "OOliguml"
+    },
+    "EBE5": {
+        "base": "ꝏ̈",
+        "desc": "LATIN SMALL LIGATURE OO WITH DIAERESIS",
+        "mntity": "ooliguml"
+    },
+    "EBE6": {
+        "base": "ṖṖ",
+        "desc": "LATIN CAPITAL LIGATURE PP WITH DIAERESIS",
+        "mntity": "PPliguml",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBE7": {
+        "base": "ṗṗ",
+        "desc": "LATIN SMALL LIGATURE PP WITH DIAERESIS",
+        "mntity": "ppliguml",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EBE8": {
+        "base": "Ꝡ͏̈",
+        "desc": "LATIN CAPITAL LIGATURE YY WITH DIAERESIS",
+        "mntity": "YYliguml"
+    },
+    "EBE9": {
+        "base": "ꝡ͏̈",
+        "desc": "LATIN SMALL LIGATURE YY WITH DIAERESIS",
+        "mntity": "yyliguml"
+    },
+    "EBEA": {
+        "base": "Æ᷎",
+        "desc": "LATIN CAPITAL LETTER AE WITH CURL",
+        "mntity": "AEligcurl"
+    },
+    "EBEB": {
+        "base": "æ᷎",
+        "desc": "LATIN SMALL LETTER AE WITH CURL",
+        "mntity": "aeligcurl"
+    },
+    "EBEC": {
+        "base": "Ø̄́",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND MACRON AND ACUTE",
+        "mntity": "Oslashmacracute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "EBED": {
+        "base": "ø̄́",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND MACRON AND ACUTE",
+        "mntity": "oslashmacracute"
+    },
+    "EBEE": {
+        "base": "Ø̆",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND BREVE",
+        "mntity": "Oslashbreve"
+    },
+    "EBEF": {
+        "base": "ø̆",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND BREVE",
+        "mntity": "oslashbreve"
+    },
+    "EBF0": {
+        "base": "Ꜹ̨",
+        "desc": "LATIN CAPITAL LIGATURE AV WITH OGONEK",
+        "mntity": "AVligogon"
+    },
+    "EBF1": {
+        "base": "ꜹ̨",
+        "desc": "LATIN SMALL LIGATURE AV WITH OGONEK",
+        "mntity": "avligogon"
+    },
+    "EBF2": {
+        "base": "Ę᷎",
+        "desc": "LATIN CAPITAL LETTER E WITH OGONEK AND CURL",
+        "mntity": "Eogoncurl"
+    },
+    "EBF3": {
+        "base": "ę᷎",
+        "desc": "LATIN SMALL LETTER E WITH OGONEK AND CURL",
+        "mntity": "eogoncurl"
+    },
+    "EBF4": {
+        "base": "Ȧ́",
+        "desc": "LATIN CAPITAL LETTER A WITH DOT ABOVE AND ACUTE",
+        "mntity": "Adotacute"
+    },
+    "EBF5": {
+        "base": "ȧ́",
+        "desc": "LATIN SMALL LETTER A WITH DOT ABOVE AND ACUTE",
+        "mntity": "adotacute"
+    },
+    "EBF6": {
+        "base": "İ́",
+        "desc": "LATIN CAPITAL LETTER I WITH DOT ABOVE AND ACUTE",
+        "mntity": "Idotacute"
+    },
+    "EBF7": {
+        "base": "i̇́",
+        "desc": "LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE",
+        "mntity": "idotacute"
+    },
+    "EBF8": {
+        "base": "Ȯ́",
+        "desc": "LATIN CAPITAL LETTER O WITH DOT ABOVE AND ACUTE",
+        "mntity": "Odotacute"
+    },
+    "EBF9": {
+        "base": "ȯ́",
+        "desc": "LATIN SMALL LETTER O WITH DOT ABOVE AND ACUTE",
+        "mntity": "odotacute"
+    },
+    "EBFA": {
+        "base": "Ǫ̇́",
+        "desc": "LATIN CAPITAL LETTER O WITH OGONEK AND DOT ABOVE AND ACUTE",
+        "mntity": "Oogondotacute"
+    },
+    "EBFB": {
+        "base": "ǫ̇́",
+        "desc": "LATIN SMALL LETTER O WITH OGONEK AND DOT ABOVE AND ACUTE",
+        "mntity": "oogondotacute"
+    },
+    "EBFC": {
+        "base": "Ø̇́",
+        "desc": "LATIN CAPITAL LETTER O WITH STROKE AND DOT ABOVE AND ACUTE",
+        "mntity": "Oslashdotacute"
+    },
+    "EBFD": {
+        "base": "ø̇́",
+        "desc": "LATIN SMALL LETTER O WITH STROKE AND DOT ABOVE AND ACUTE",
+        "mntity": "oslashdotacute"
+    },
+    "EBFE": {
+        "base": "U̇́",
+        "desc": "LATIN CAPITAL LETTER U WITH DOT ABOVE AND ACUTE",
+        "mntity": "Udotacute"
+    },
+    "EBFF": {
+        "base": "u̇́",
+        "desc": "LATIN SMALL LETTER U WITH DOT ABOVE AND ACUTE",
+        "mntity": "udotacute"
+    },
+    "EEC2": {
+        "base": "bb",
+        "desc": "LATIN SMALL LIGATURE BB",
+        "mntity": "bblig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEC3": {
+        "base": "bg",
+        "desc": "LATIN SMALL LIGATURE BG",
+        "mntity": "bglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEC4": {
+        "base": "ck",
+        "desc": "LATIN SMALL LIGATURE CK",
+        "mntity": "cklig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEC5": {
+        "base": "ct",
+        "desc": "LATIN SMALL LIGATURE CT",
+        "mntity": "ctlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEC6": {
+        "base": "d%^%d%^%",
+        "desc": "LATIN SMALL LIGATURE DD ROTUNDA",
+        "mntity": "drotdrotlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv08"
+                },
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "EEC7": {
+        "base": "ey",
+        "desc": "LATIN SMALL LIGATURE EY",
+        "mntity": "eylig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEC8": {
+        "base": "fä",
+        "desc": "LATIN SMALL LIGATURE F A WITH DIAERESIS",
+        "mntity": "faumllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEC9": {
+        "base": "fj",
+        "desc": "LATIN SMALL LIGATURE FJ",
+        "mntity": "fjlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "EECA": {
+        "base": "fr",
+        "desc": "LATIN SMALL LIGATURE FR",
+        "mntity": "frlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EECB": {
+        "base": "ft",
+        "desc": "LATIN SMALL LIGATURE FT",
+        "mntity": "ftlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EECC": {
+        "base": "fü",
+        "desc": "LATIN SMALL LIGATURE F U WITH DIAERESIS",
+        "mntity": "fuumllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EECD": {
+        "base": "fy",
+        "desc": "LATIN SMALL LIGATURE FY",
+        "mntity": "fylig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EECE": {
+        "base": "fft",
+        "desc": "LATIN SMALL LIGATURE FFT",
+        "mntity": "fftlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EECF": {
+        "base": "ffy",
+        "desc": "LATIN SMALL LIGATURE FFT",
+        "mntity": "fftlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F75B": {
+        "base": ";",
+        "desc": "Semicolon with dot",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv73",
+                    "index": 9
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "9"
+                }
+            ]
+        }
+    },
+    "EED0": {
+        "base": "fty",
+        "desc": "LATIN SMALL LIGATURE FTY",
+        "mntity": "ftylig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED1": {
+        "base": "gg",
+        "desc": "LATIN SMALL LIGATURE GG",
+        "mntity": "gglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED2": {
+        "base": "gd",
+        "desc": "LATIN SMALL LIGATURE GD",
+        "mntity": "gdlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED3": {
+        "desc": "LATIN SMALL LIGATURE G D ROTUNDA",
+        "mntity": "gdrotlig",
+        "var": {
+            "insular": {
+                "base": "gꝺ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {}
+            },
+            "other": {
+                "base": "gd",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {
+                    "utags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EED4": {
+        "base": "gð",
+        "desc": "LATIN SMALL LIGATURE G ETH",
+        "mntity": "gethlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED5": {
+        "base": "n%^%ſ",
+        "desc": "LATIN SMALL LIGATURE SMALL CAPITAL N LONG S",
+        "mntity": "nscapslonglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                },
+                {
+                    "name": "cv28",
+                    "index": 11
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "p"
+                },
+                {
+                    "name": "c"
+                }
+            ]
+        }
+    },
+    "EED6": {
+        "base": "pp",
+        "desc": "LATIN SMALL LIGATURE PP",
+        "mntity": "pplig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED7": {
+        "base": "ꝓp",
+        "desc": "LATIN SMALL LIGATURE PP WITH FLOURISH",
+        "mntity": "ppflourlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED8": {
+        "base": "tr",
+        "desc": "LATIN SMALL LIGATURE TR",
+        "mntity": "trlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EED9": {
+        "base": "tt",
+        "desc": "LATIN SMALL LIGATURE TT",
+        "mntity": "ttlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEDA": {
+        "base": "t%^%t%^%",
+        "desc": "LATIN SMALL LIGATURE T ROTUNDA T ROTUNDA",
+        "mntity": "trottrotlig",
+        "note": "fix so it can be made with a plain t.",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv40"
+                },
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "EEDB": {
+        "base": "ty",
+        "desc": "LATIN SMALL LIGATURE TY",
+        "mntity": "tylig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEDC": {
+        "base": "tz",
+        "desc": "LATIN SMALL LIGATURE TZ",
+        "mntity": "tzlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEDD": {
+        "base": "PP",
+        "desc": "LATIN CAPITAL LIGATURE PP",
+        "mntity": "PPlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEDE": {
+        "base": "go",
+        "desc": "LATIN SMALL LIGATURE GO",
+        "mntity": "golig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EEDF": {
+        "base": "ſ",
+        "desc": "LATIN ENLARGED LETTER SMALL LONG S",
+        "mntity": "slongenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE0": {
+        "base": "a",
+        "desc": "LATIN ENLARGED LETTER SMALL A",
+        "mntity": "aenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE1": {
+        "base": "b",
+        "desc": "LATIN ENLARGED LETTER SMALL B",
+        "mntity": "benl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE2": {
+        "base": "c",
+        "desc": "LATIN ENLARGED LETTER SMALL C",
+        "mntity": "cenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE3": {
+        "base": "d",
+        "desc": "LATIN ENLARGED LETTER SMALL D",
+        "mntity": "denl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE4": {
+        "desc": "LATIN ENLARGED LETTER D ROTUNDA",
+        "mntity": "drotenl",
+        "var": {
+            "insular": {
+                "base": "ꝺ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "e"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "enla": {}
+            },
+            "other": {
+                "base": "d",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "utag": {
+                    "base": "d",
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "e"
+                        }
+                    ]
+                },
+                "enla": {}
+            }
+        }
+    },
+    "EEE5": {
+        "base": "ð",
+        "desc": "LATIN ENLARGED LETTER SMALL ETH",
+        "mntity": "ethenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE6": {
+        "base": "e",
+        "desc": "LATIN ENLARGED LETTER SMALL E",
+        "mntity": "eenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE7": {
+        "base": "f",
+        "desc": "LATIN ENLARGED LETTER SMALL F",
+        "mntity": "fenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE8": {
+        "base": "g",
+        "desc": "LATIN ENLARGED LETTER SMALL G",
+        "mntity": "genl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEE9": {
+        "base": "h",
+        "desc": "LATIN ENLARGED LETTER SMALL H",
+        "mntity": "henl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEEA": {
+        "base": "i",
+        "desc": "LATIN ENLARGED LETTER SMALL I",
+        "mntity": "ienl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEEB": {
+        "base": "j",
+        "desc": "LATIN ENLARGED LETTER SMALL J",
+        "mntity": "jenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEEC": {
+        "base": "k",
+        "desc": "LATIN ENLARGED LETTER SMALL K",
+        "mntity": "kenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEED": {
+        "base": "l",
+        "desc": "LATIN ENLARGED LETTER SMALL L",
+        "mntity": "lenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEEE": {
+        "base": "m",
+        "desc": "LATIN ENLARGED LETTER SMALL M",
+        "mntity": "menl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEEF": {
+        "base": "n",
+        "desc": "LATIN ENLARGED LETTER SMALL N",
+        "mntity": "nenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF0": {
+        "base": "o",
+        "desc": "LATIN ENLARGED LETTER SMALL O",
+        "mntity": "oenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF1": {
+        "base": "p",
+        "desc": "LATIN ENLARGED LETTER SMALL P",
+        "mntity": "penl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF2": {
+        "base": "q",
+        "desc": "LATIN ENLARGED LETTER SMALL Q",
+        "mntity": "qenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF3": {
+        "base": "r",
+        "desc": "LATIN ENLARGED LETTER SMALL R",
+        "mntity": "renl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF4": {
+        "base": "s",
+        "desc": "LATIN ENLARGED LETTER SMALL S",
+        "mntity": "senl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF5": {
+        "base": "t",
+        "desc": "LATIN ENLARGED LETTER SMALL T",
+        "mntity": "tenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF6": {
+        "base": "þ",
+        "desc": "LATIN ENLARGED LETTER SMALL THORN",
+        "mntity": "thornenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF7": {
+        "base": "u",
+        "desc": "LATIN ENLARGED LETTER SMALL U",
+        "mntity": "uenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF8": {
+        "base": "v",
+        "desc": "LATIN ENLARGED LETTER SMALL V",
+        "mntity": "venl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEF9": {
+        "base": "w",
+        "desc": "LATIN ENLARGED LETTER SMALL W",
+        "mntity": "wenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv46"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEFA": {
+        "base": "x",
+        "desc": "LATIN ENLARGED LETTER SMALL X",
+        "mntity": "xenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEFB": {
+        "base": "y",
+        "desc": "LATIN ENLARGED LETTER SMALL Y",
+        "mntity": "yenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEFC": {
+        "base": "z",
+        "desc": "LATIN ENLARGED LETTER SMALL Z",
+        "mntity": "zenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EEFD": {
+        "desc": "LATIN ENLARGED LETTER SMALL DOTLESS I",
+        "mntity": "inodotenl",
+        "var": {
+            "alpha": {
+                "base": "ı",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "e"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "enla": {}
+            },
+            "other": {
+                "base": "i",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv18",
+                            "index": 8
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "e"
+                        }
+                    ]
+                },
+                "enla": {
+                    "utags": [
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EEFE": {
+        "base": "ȷ",
+        "desc": "LATIN ENLARGED LETTER SMALL DOTLESS J",
+        "mntity": "jnodotenl",
+        "var": {
+            "alpha": {
+                "base": "ȷ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "e"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "enla": {}
+            },
+            "other": {
+                "base": "j",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv20"
+                        },
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "e"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "enla": {
+                    "utags": [
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EEFF": {
+        "desc": "LATIN ENLARGED LETTER SMALL INSULAR F",
+        "mntity": "finsenl",
+        "var": {
+            "insular": {
+                "base": "ꝼ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "e"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "enla": {}
+            },
+            "other": {
+                "base": "f",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv12"
+                        },
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "e"
+                        }
+                    ]
+                },
+                "enla": {
+                    "utags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF11": {
+        "base": "x",
+        "desc": "LATIN LETTER SMALL CAPITAL X",
+        "mntity": "xscap",
+        "otag": {
+            "tags": [
+                {
+                    "name": "pcap"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "p"
+                },
+                {
+                    "name": "c"
+                }
+            ]
+        }
+    },
+    "EF15": {
+        "base": "þ",
+        "desc": "LATIN LETTER SMALL CAPITAL THORN",
+        "mntity": "thornscap",
+        "otag": {
+            "tags": [
+                {
+                    "name": "pcap"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "p"
+                },
+                {
+                    "name": "c"
+                }
+            ]
+        }
+    },
+    "EF20": {
+        "desc": "LATIN LETTER SMALL CAPITAL G WITH DOT ABOVE",
+        "mntity": "gscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ɢ̇"
+            },
+            "other": {
+                "base": "g%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF21": {
+        "desc": "LATIN LETTER SMALL CAPITAL N WITH DOT ABOVE",
+        "mntity": "nscapdot",
+        "var": {
+            "smallcap": {
+                "base": "n%^%̇"
+            },
+            "other": {
+                "base": "n%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF22": {
+        "desc": "LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",
+        "mntity": "rscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ʀ̇"
+            },
+            "other": {
+                "base": "r%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF23": {
+        "desc": "LATIN LETTER SMALL CAPITAL S WITH DOT ABOVE",
+        "mntity": "sscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ꜱ̇"
+            },
+            "other": {
+                "base": "s%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF24": {
+        "desc": "LATIN LETTER SMALL CAPITAL T WITH DOT ABOVE",
+        "mntity": "tscapdot",
+        "var": {
+            "smallcap": {
+                "base": "ᴛ̇"
+            },
+            "other": {
+                "base": "t%^%̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF25": {
+        "desc": "LATIN LETTER SMALL CAPITAL B WITH DOT BELOW",
+        "mntity": "bscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ʙ̣"
+            },
+            "other": {
+                "base": "b͏̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "base": "b%^%̣",
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF26": {
+        "desc": "LATIN LETTER SMALL CAPITAL D WITH DOT BELOW",
+        "mntity": "dscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ᴅ̣"
+            },
+            "other": {
+                "base": "d%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF27": {
+        "desc": "LATIN LETTER SMALL CAPITAL G WITH DOT BELOW",
+        "mntity": "gscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ɢ̣"
+            },
+            "other": {
+                "base": "g%^%͏̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF28": {
+        "desc": "LATIN LETTER SMALL CAPITAL L WITH DOT BELOW",
+        "mntity": "lscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ʟ̣"
+            },
+            "other": {
+                "base": "l%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF29": {
+        "desc": "LATIN LETTER SMALL CAPITAL M WITH DOT BELOW",
+        "mntity": "mscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ᴍ̣"
+            },
+            "other": {
+                "base": "m%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF2A": {
+        "base": "ṇ",
+        "desc": "LATIN LETTER SMALL CAPITAL N WITH DOT BELOW",
+        "mntity": "nscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ɴ̣"
+            },
+            "other": {
+                "base": "n%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF2B": {
+        "desc": "LATIN LETTER SMALL CAPITAL R WITH DOT BELOW",
+        "mntity": "rscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ʀ̣"
+            },
+            "other": {
+                "base": "r%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF2C": {
+        "desc": "LATIN LETTER SMALL CAPITAL S WITH DOT BELOW",
+        "mntity": "sscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ꜱ̣"
+            },
+            "other": {
+                "base": "s%^%͏̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EF2D": {
+        "base": "ṭ",
+        "desc": "LATIN LETTER SMALL CAPITAL T WITH DOT BELOW",
+        "mntity": "tscapdotbl",
+        "var": {
+            "smallcap": {
+                "base": "ᴛ̣"
+            },
+            "other": {
+                "base": "t%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EFA0": {
+        "base": "ꜳ",
+        "desc": "LATIN SMALL LIGATURE AA CLOSED FORM",
+        "mntity": "aacloselig",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv55"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "l"
+                }
+            ]
+        }
+    },
+    "EFA1": {
+        "base": "æ",
+        "desc": "LATIN SMALL LIGATURE NECKLESS A E",
+        "mntity": "anecklesselig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv57"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "EFA2": {
+        "base": "ꜹ",
+        "desc": "LATIN SMALL LIGATURE NECKLESS A V",
+        "mntity": "anecklessvlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv60"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "EFA3": {
+        "base": "af",
+        "desc": "LATIN SMALL LIGATURE AF",
+        "mntity": "aflig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFA4": {
+        "desc": "LATIN SMALL LIGATURE A INSULAR F",
+        "mntity": "afinslig",
+        "var": {
+            "insular": {
+                "base": "aꝼ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {}
+            },
+            "other": {
+                "base": "af",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv12"
+                        },
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {
+                    "utags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EFA5": {
+        "base": "ag",
+        "desc": "LATIN SMALL LIGATURE AG",
+        "mntity": "aglig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFA6": {
+        "base": "al",
+        "desc": "LATIN SMALL LIGATURE AL",
+        "mntity": "allig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFA7": {
+        "base": "an",
+        "desc": "LATIN SMALL LIGATURE AN",
+        "mntity": "anlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFA8": {
+        "desc": "LATIN SMALL LIGATURE A SMALL CAPITAL N",
+        "mntity": "anscaplig",
+        "var": {
+            "smallcap": {
+                "base": "aɴ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {}
+            },
+            "other": {
+                "base": "an",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        },
+                        {
+                            "name": "cv28",
+                            "index": 11
+                        }
+                    ]
+                },
+                "zwj": {
+                    "utags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EFA9": {
+        "base": "ap",
+        "desc": "LATIN SMALL LIGATURE AP",
+        "mntity": "aplig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFAA": {
+        "base": "ar",
+        "desc": "LATIN SMALL LIGATURE AR",
+        "mntity": "arlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFAB": {
+        "desc": "LATIN SMALL LIGATURE A SMALL CAPITAL R",
+        "mntity": "arscaplig",
+        "var": {
+            "smallcap": {
+                "base": "aʀ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {}
+            },
+            "other": {
+                "base": "ar",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        },
+                        {
+                            "name": "cv36",
+                            "index": 9
+                        }
+                    ]
+                },
+                "zwj": {
+                    "utags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "EFAC": {
+        "base": "aþ",
+        "desc": "LATIN SMALL LIGATURE A THORN",
+        "mntity": "athornlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFAD": {
+        "base": "oc",
+        "desc": "LATIN SMALL LIGATURE OC",
+        "mntity": "oclig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFAE": {
+        "base": "Æ",
+        "desc": "LATIN CAPITAL LIGATURE NECKLESS A E",
+        "mntity": "AnecklessElig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv56"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "EFB9": {
+        "base": "OꝚ",
+        "desc": "LATIN CAPITAL LIGATURE O R ROTUNDA",
+        "mntity": "ORrotlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFBA": {
+        "base": "oꝝ",
+        "desc": "LATIN SMALL LIGATURE O RUM",
+        "mntity": "orumlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFBB": {
+        "base": "OꝜ",
+        "desc": "LATIN CAPITAL LIGATURE O RUM",
+        "mntity": "ORUMlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFD8": {
+        "base": "úú",
+        "desc": "LATIN SMALL LIGATURE UU WITH DOUBLE ACUTE",
+        "mntity": "uuligdblac",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFD9": {
+        "base": "ÚÚ",
+        "desc": "LATIN CAPITAL LIGATURE UU WITH DOUBLE ACUTE",
+        "mntity": "UUligdblac",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "EFDB": {
+        "base": "Æ̇́",
+        "desc": "LATIN CAPITAL LETTER AE WITH DOT ABOVE AND ACUTE",
+        "mntity": "AEligdotacute"
+    },
+    "EFDC": {
+        "base": "æ̇́",
+        "desc": "LATIN SMALL LETTER AE WITH DOT ABOVE AND ACUTE",
+        "mntity": "aeligdotacute"
+    },
+    "EFDD": {
+        "base": "œ",
+        "desc": "LATIN ENLARGED LETTER SMALL LIGATURE OE",
+        "mntity": "oeligenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EFDE": {
+        "base": "ꜵ",
+        "desc": "LATIN ENLARGED LETTER SMALL LIGATURE AO",
+        "mntity": "aoligenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EFDF": {
+        "base": "ꜳ",
+        "desc": "LATIN ENLARGED LETTER SMALL LIGATURE AA",
+        "mntity": "aaligenl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "EFE0": {
+        "base": "Ꜳ́",
+        "desc": "LATIN CAPITAL LIGATURE AA WITH ACUTE",
+        "mntity": "AAligacute"
+    },
+    "EFE1": {
+        "base": "ꜳ́",
+        "desc": "LATIN SMALL LIGATURE AA WITH ACUTE",
+        "mntity": "aaligacute"
+    },
+    "EFE2": {
+        "base": "Ꜵ́",
+        "desc": "LATIN CAPITAL LIGATURE AO WITH ACUTE",
+        "mntity": "AOligacute"
+    },
+    "EFE3": {
+        "base": "ꜵ́",
+        "desc": "LATIN SMALL LIGATURE AO WITH ACUTE",
+        "mntity": "aoligacute"
+    },
+    "EFE4": {
+        "base": "Ꜷ́",
+        "desc": "LATIN CAPITAL LIGATURE AU WITH ACUTE",
+        "mntity": "AUligacute"
+    },
+    "EFE5": {
+        "base": "ꜷ́",
+        "desc": "LATIN SMALL LIGATURE AU WITH ACUTE",
+        "mntity": "auligacute"
+    },
+    "EFE6": {
+        "base": "Ꜹ́",
+        "desc": "LATIN CAPITAL LIGATURE AV WITH ACUTE",
+        "mntity": "AVligacute"
+    },
+    "EFE7": {
+        "base": "ꜹ́",
+        "desc": "LATIN SMALL LIGATURE AV WITH ACUTE",
+        "mntity": "avligacute"
+    },
+    "EFE8": {
+        "base": "Ꝏ́",
+        "desc": "LATIN CAPITAL LIGATURE OO WITH ACUTE",
+        "mntity": "OOligacute"
+    },
+    "EFE9": {
+        "base": "ꝏ́",
+        "desc": "LATIN SMALL LIGATURE OO WITH ACUTE",
+        "mntity": "ooligacute"
+    },
+    "EFEA": {
+        "base": "Ꜳ̋",
+        "desc": "LATIN CAPITAL LIGATURE AA WITH DOUBLE ACUTE",
+        "mntity": "AAligdblac"
+    },
+    "EFEB": {
+        "base": "ꜳ̋",
+        "desc": "LATIN SMALL LIGATURE AA WITH DOUBLE ACUTE",
+        "mntity": "aaligdblac"
+    },
+    "EFEC": {
+        "base": "Ꝏ̋",
+        "desc": "LATIN CAPITAL LIGATURE OO WITH DOUBLE ACUTE",
+        "mntity": "OOligdblac"
+    },
+    "EFED": {
+        "base": "ꝏ̋",
+        "desc": "LATIN SMALL LIGATURE OO WITH DOUBLE ACUTE",
+        "mntity": "ooligdblac"
+    },
+    "EFEE": {
+        "base": "Ꜳ̇",
+        "desc": "LATIN CAPITAL LIGATURE AA WITH DOT ABOVE",
+        "mntity": "AAligdot"
+    },
+    "EFEF": {
+        "base": "ꜳ̇",
+        "desc": "LATIN SMALL LIGATURE AA WITH DOT ABOVE",
+        "mntity": "aaligdot"
+    },
+    "EFF0": {
+        "base": "Ꜽ̇",
+        "desc": "LATIN CAPITAL LIGATURE AY WITH DOT ABOVE",
+        "mntity": "AYligdot"
+    },
+    "EFF1": {
+        "base": "ꜽ̇",
+        "desc": "LATIN SMALL LIGATURE AY WITH DOT ABOVE",
+        "mntity": "ayligdot"
+    },
+    "EFF2": {
+        "base": "Ꜳ̣",
+        "desc": "LATIN CAPITAL LIGATURE AA WITH DOT BELOW",
+        "mntity": "AAligdotbl"
+    },
+    "EFF3": {
+        "base": "ꜳ̣",
+        "desc": "LATIN SMALL LIGATURE AA WITH DOT BELOW",
+        "mntity": "aaligdotbl"
+    },
+    "EFF4": {
+        "base": "Ꜵ̣",
+        "desc": "LATIN CAPITAL LIGATURE AO WITH DOT BELOW",
+        "mntity": "AOligdotbl"
+    },
+    "EFF5": {
+        "base": "ꜵ̣",
+        "desc": "LATIN SMALL LIGATURE AO WITH DOT BELOW",
+        "mntity": "aoligdotbl"
+    },
+    "EFF6": {
+        "base": "Ꜷ̣",
+        "desc": "LATIN CAPITAL LIGATURE AU WITH DOT BELOW",
+        "mntity": "AUligdotbl"
+    },
+    "EFF7": {
+        "base": "ꜷ̣",
+        "desc": "LATIN SMALL LIGATURE AU WITH DOT BELOW",
+        "mntity": "auligdotbl"
+    },
+    "EFF8": {
+        "base": "Ꜹ̣",
+        "desc": "LATIN CAPITAL LIGATURE AV WITH DOT BELOW",
+        "mntity": "AVligdotbl"
+    },
+    "EFF9": {
+        "base": "ꜹ̣",
+        "desc": "LATIN SMALL LIGATURE AV WITH DOT BELOW",
+        "mntity": "avligdotbl"
+    },
+    "EFFA": {
+        "base": "Ꜽ̣",
+        "desc": "LATIN CAPITAL LIGATURE AY WITH DOT BELOW",
+        "mntity": "AYligdotbl"
+    },
+    "EFFB": {
+        "base": "ꜽ̣",
+        "desc": "LATIN SMALL LIGATURE AY WITH DOT BELOW",
+        "mntity": "ayligdotbl"
+    },
+    "EFFC": {
+        "base": "Ꝏ̣",
+        "desc": "LATIN CAPITAL LIGATURE OO WITH DOT BELOW",
+        "mntity": "OOligdotbl"
+    },
+    "EFFD": {
+        "base": "ꝏ̣",
+        "desc": "LATIN SMALL LIGATURE OO WITH DOT BELOW",
+        "mntity": "ooligdotbl"
+    },
+    "EFFE": {
+        "base": "Ꜳ̈",
+        "desc": "LATIN CAPITAL LIGATURE AA WITH DIAERESIS",
+        "mntity": "AAliguml"
+    },
+    "EFFF": {
+        "base": "ꜳ̈",
+        "desc": "LATIN SMALL LIGATURE AA WITH DIAERESIS",
+        "mntity": "aaliguml"
+    },
+    "F00A": {
+        "base": "̄",
+        "desc": "COMBINING HIGH MACRON WITH FIXED HEIGHT (PART-WIDTH)",
+        "mntity": "macrhigh",
+        "note": "should be deprecated."
+    },
+    "F00B": {
+        "base": "̄",
+        "desc": "COMBINING MEDIUM-HIGH MACRON WITH FIXED HEIGHT (PART-WIDTH)",
+        "mntity": "macrmed",
+        "note": "should be deprecated."
+    },
+    "F012": {
+        "base": "ᷨ",
+        "desc": "COMBINING LATIN SMALL LETTER B",
+        "note": "use 1DE8 instead of the PUA char."
+    },
+    "F013": {
+        "desc": "COMBINING LATIN LETTER SMALL CAPITAL B",
+        "mntity": "bscapsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 11
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_bsc;"
+                }
+            },
+            "other": {
+                "base": "ᷨ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "s"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_bsc;"
+                }
+            }
+        }
+    },
+    "F016": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN LETTER SMALL CAPITAL D",
+        "mntity": "dscapsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv84",
+                    "index": 12
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_dsc;"
+        }
+    },
+    "F01C": {
+        "desc": "COMBINING LATIN LETTER SMALL CAPITAL K",
+        "mntity": "kscapsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 18
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "8"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_ksc;"
+                }
+            },
+            "other": {
+                "base": "ᷜ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "s"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_ksc;"
+                }
+            }
+        }
+    },
+    "F01F": {
+        "desc": "COMBINING M UNCIAL FORM",
+        "mntity": "muncsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 19,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "9"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_munc;"
+                }
+            },
+            "other": {
+                "base": "ͫ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "u"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_munc;"
+                }
+            }
+        }
+    },
+    "F02A": {
+        "desc": "COMBINING LATIN LETTER SMALL CAPITAL T",
+        "mntity": "tscapsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 25,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_tsc;"
+                }
+            },
+            "other": {
+                "base": "ͭ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "s"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_tsc;"
+                }
+            }
+        }
+    },
+    "F02B": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER Y",
+        "note": "I can't find a suitable base character.",
+        "mntity": "ysup",
+        "otag": {
+            "tags": [
+                {
+                    "index": 26,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "6"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_y;"
+        }
+    },
+    "F02F": {
+        "desc": "COMBINING LATIN SMALL LETTER DOTLESS I",
+        "mntity": "inodotsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 15,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_idotl;"
+                }
+            },
+            "other": {
+                "base": "ͥ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_idotl;"
+                }
+            }
+        }
+    },
+    "F030": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER J",
+        "note": "I can't find a suitable base character.",
+        "mntity": "jsup",
+        "otag": {
+            "tags": [
+                {
+                    "index": 16,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "6"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_j;"
+        }
+    },
+    "F031": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER DOTLESS J",
+        "note": "I can't find a suitable base character.",
+        "mntity": "jnodotsup",
+        "otag": {
+            "tags": [
+                {
+                    "index": 17,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "7"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_jdotl;"
+        }
+    },
+    "F032": {
+        "desc": "COMBINING LATIN LETTER SMALL O WITH STROKE",
+        "mntity": "oslashsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 22,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_oslash;"
+                }
+            },
+            "other": {
+                "base": "ͦ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "s"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_oslash;"
+                }
+            }
+        }
+    },
+    "F033": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER Q",
+        "mntity": "qsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 23,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_q;"
+        }
+    },
+    "F036": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LIGATURE AN",
+        "mntity": "anligsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 7,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_an;"
+        }
+    },
+    "F038": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LIGATURE AR",
+        "mntity": "arligsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 9,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_ar;"
+        }
+    },
+    "F03A": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL N",
+        "mntity": "anscapligsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 8,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "8"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_ansc;"
+        }
+    },
+    "F03D": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER THORN",
+        "mntity": "thornsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 27,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "7"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_thorn;"
+        }
+    },
+    "F03E": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER O R ROTUNDA",
+        "mntity": "orrotsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 28,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "8"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_orr;"
+        }
+    },
+    "F03F": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LETTER O RUM",
+        "mntity": "orumsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "index": 29,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "9"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_oru;"
+        }
+    },
+    "F040": {
+        "desc": "COMBINING LATIN SMALL LETTER RUM",
+        "mntity": "rumsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 24,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_ru;"
+                }
+            },
+            "other": {
+                "base": "ᷣ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "r"
+                        },
+                        {
+                            "name": "m"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_ru;"
+                }
+            }
+        }
+    },
+    "F053": {
+        "base": "c̄",
+        "desc": "LATIN SMALL LETTER C WITH MACRON",
+        "mntity": "cmacr"
+    },
+    "F054": {
+        "base": "r̄",
+        "desc": "LATIN SMALL LETTER R WITH MACRON",
+        "mntity": "rmacr"
+    },
+    "F055": {
+        "base": "b%^%ͣ",
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "basup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F056": {
+        "base": "b%^%ͤ",
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "besup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F057": {
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "binodotsup",
+        "var": {
+            "mark": {
+                "base": "b%^%̄%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 15,
+                            "name": "cv84"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "b%^%ͥ%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        },
+                        {
+                            "name": "cv64"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F059": {
+        "base": "b%^%ͦ",
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "bosup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F05A": {
+        "base": "b%^%ͬ",
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER R ABOVE",
+        "mntity": "brsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F05C": {
+        "base": "b%^%ͧ",
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "busup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F05D": {
+        "base": "b%^%ͮ",
+        "desc": "LATIN SMALL LETTER B WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "bvsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F05E": {
+        "base": "b%^%ᷓ",
+        "desc": "LATIN SMALL LETTER B WITH FLATTENED OPEN A ABOVE",
+        "mntity": "bra",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F05F": {
+        "base": "b͛",
+        "desc": "LATIN SMALL LETTER B WITH ZIGZAG ABOVE",
+        "mntity": "ber"
+    },
+    "F062": {
+        "base": "b%^%ᷣ%^%",
+        "desc": "LATIN SMALL LETTER B WITH UR LEMNISKATE FORM ABOVE",
+        "mntity": "burlemn",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv87"
+                },
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F063": {
+        "base": "b᷒",
+        "desc": "LATIN SMALL LETTER B WITH US ABOVE",
+        "mntity": "busup"
+    },
+    "F064": {
+        "base": "h᷒",
+        "desc": "LATIN SMALL LETTER H WITH US ABOVE",
+        "mntity": "hus"
+    },
+    "F065": {
+        "base": "h%^%ͣ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "hasup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F066": {
+        "base": "h%^%ͤ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "hesup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F067": {
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "hinodotsup",
+        "var": {
+            "mark": {
+                "base": "h̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        },
+                        {
+                            "name": "cv84",
+                            "index": 15
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "h%^%ͥ%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv64"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F068": {
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER M UNCIAL FORM ABOVE",
+        "mntity": "hmuncsup",
+        "note": "stopped here",
+        "var": {
+            "mark": {
+                "base": "h%^%̄%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 19,
+                            "name": "cv84"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "9"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "h%^%ͫ%^%",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "u"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F069": {
+        "base": "h%^%ͦ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "hosup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F06A": {
+        "base": "h%^%ͬ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER R ABOVE",
+        "mntity": "hrsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F06B": {
+        "base": "h͛",
+        "desc": "LATIN SMALL LETTER H WITH ZIGZAG ABOVE",
+        "mntity": "her"
+    },
+    "F06C": {
+        "base": "h%^%ͧ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "husup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F06D": {
+        "base": "h%^%ͮ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "hvsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F06E": {
+        "base": "hͭ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN SMALL LETTER T ABOVE",
+        "mntity": "htsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "base": "h%^%ͭ",
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F06F": {
+        "base": "h%^%ᷓ",
+        "desc": "LATIN SMALL LETTER H WITH FLATTENED OPEN A ABOVE",
+        "mntity": "hra",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F074": {
+        "base": "h%^%ᷣ%^%",
+        "desc": "LATIN SMALL LETTER H WITH UR LEMNISKATE FORM ABOVE",
+        "mntity": "hurlemn",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv87"
+                },
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F075": {
+        "base": "k%^%ͣ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "kasup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F076": {
+        "base": "k%^%ͤ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "kesup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F077": {
+        "base": "k̄",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "kinodotsup",
+        "otag": {
+            "tags": [
+                {
+                    "index": 15,
+                    "name": "cv84"
+                },
+                {
+                    "name": "ss20"
+                }
+            ]
+        }
+    },
+    "F078": {
+        "base": "k%^%ᷞ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN LETTER SMALL CAPITAL L ABOVE",
+        "mntity": "klscapsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F079": {
+        "base": "k%^%ͦ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "kosup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F07A": {
+        "base": "k%^%ͬ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER R ABOVE",
+        "mntity": "krsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F07B": {
+        "base": "k%^%ᷢ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN LETTER SMALL CAPITAL R ABOVE",
+        "mntity": "krscapsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F07C": {
+        "base": "kͧ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER U ABOVE",
+        "mntity": "kusup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "base": "k%^%ͧ",
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F07D": {
+        "base": "k%^%ͮ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER V ABOVE",
+        "mntity": "kvsup",
+        "note": "need more info about this character.",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F07E": {
+        "base": "k᷒",
+        "desc": "LATIN SMALL LETTER K WITH US ABOVE",
+        "mntity": "kus"
+    },
+    "F07F": {
+        "base": "k%^%ᷦ",
+        "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER Z ABOVE",
+        "mntity": "kzsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F084": {
+        "base": "þ͛",
+        "desc": "LATIN SMALL LETTER THORN WITH ZIGZAG ABOVE",
+        "mntity": "thonrer"
+    },
+    "F085": {
+        "base": "þ%^%ͣ",
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER A ABOVE",
+        "mntity": "thornasup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F086": {
+        "base": "þ%^%ͤ",
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "thornesup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F087": {
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "thorninodotsup",
+        "var": {
+            "mark": {
+                "base": "þ%^%̄%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 15,
+                            "name": "cv84"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "þ%^%ͥ%^%",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                },
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv64"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F089": {
+        "base": "þ%^%ͦ",
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "thornosup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F08A": {
+        "base": "þ%^%ͬ",
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER R ABOVE",
+        "mntity": "thornrsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F08B": {
+        "base": "þ%^%ᷓ",
+        "desc": "LATIN SMALL LETTER THORN WITH FLATTENED OPEN A ABOVE",
+        "mntity": "thornra",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F08E": {
+        "base": "þ%^%ͭ",
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN SMALL LETTER T ABOVE",
+        "mntity": "thorntsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F08F": {
+        "base": "þ%^%ᫎ",
+        "desc": "LATIN SMALL LETTER THORN WITH LATIN LETTER INSULAR T ABOVE",
+        "mntity": "thorntrotsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F093": {
+        "desc": "LATIN SMALL LETTER INSULAR T WITH MACRON",
+        "mntity": "trotmacr",
+        "var": {
+            "insular": {
+                "base": "ꞇ̄"
+            },
+            "other": {
+                "base": "t%^%̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv40"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F094": {
+        "desc": "LATIN SMALL LETTER INSULAR T WITH DOT ABOVE",
+        "mntity": "trotdot",
+        "var": {
+            "insular": {
+                "base": "ꞇ̇"
+            },
+            "other": {
+                "base": "t%^%͏̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv40"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F096": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER E ABOVE",
+        "mntity": "drotesup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ͤ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ͤ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F097": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "drotinodotsup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ͥ%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv64"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ͥ%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "cv64"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F099": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER O ABOVE",
+        "mntity": "drotosup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ͦ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ͦ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F09A": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN LETTER SMALL R ABOVE",
+        "mntity": "drotrsup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ͬ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ͬ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F09B": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN LETTER SMALL CAPITAL R ABOVE",
+        "mntity": "drotrscapsup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ᷢ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ᷢ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F09C": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",
+        "mntity": "drotrscapdotsup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ᷢ̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ᷢ̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F09D": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH ZIGZAG ABOVE",
+        "mntity": "droter",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%͛",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%͛",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F09F": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH LATIN SMALL LETTER Z ABOVE",
+        "mntity": "drotzsup",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ᷦ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ᷦ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0A6": {
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH FLATTENED OPEN A ABOVE",
+        "mntity": "drotra",
+        "var": {
+            "insular": {
+                "base": "ꝺ%^%ᷓ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "d%^%ᷓ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0A7": {
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "ethinodotsup",
+        "var": {
+            "alpha": {
+                "base": "ð%^%̄%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 15
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "ð%^%ͥ%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv64"
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0A8": {
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER M UNCIAL FORM ABOVE",
+        "mntity": "ethmuncsup",
+        "var": {
+            "alpha": {
+                "base": "ð%^%̄%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 19
+                        },
+                        {
+                            "name": "ss20"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "9"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "ð%^%ͫ%^%",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "u"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0AA": {
+        "base": "ð%^%ͬ",
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER R ABOVE",
+        "mntity": "ethrsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0AB": {
+        "base": "ð%^%ᷢ",
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN LETTER SMALL CAPITAL R ABOVE",
+        "mntity": "ethrscapsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0AC": {
+        "base": "ð%^%ᷢ̇",
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",
+        "mntity": "ethrscapdotsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0AE": {
+        "base": "ð%^%ͭ",
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN SMALL LETTER T ABOVE",
+        "mntity": "ethtsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0AF": {
+        "base": "ð%^%͛",
+        "desc": "LATIN SMALL LETTER ETH WITH ZIGZAG ABOVE",
+        "mntity": "ether",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0B7": {
+        "desc": "LATIN SMALL LETTER INSULAR F WITH MACRON",
+        "mntity": "finsmacr",
+        "var": {
+            "insular": {
+                "base": "ꝼ̄"
+            },
+            "other": {
+                "base": "f͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv12"
+                        }
+                    ]
+                },
+                "utag": {
+                    "base": "f%^%̄",
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0B8": {
+        "base": "f͛",
+        "desc": "LATIN SMALL LETTER F WITH ZIGZAG ABOVE",
+        "mntity": "fer"
+    },
+    "F0B9": {
+        "base": "k͛",
+        "desc": "LATIN SMALL LETTER K WITH ZIGZAG ABOVE",
+        "mntity": "ker"
+    },
+    "F0BA": {
+        "base": "l͛",
+        "desc": "LATIN SMALL LETTER L WITH ZIGZAG ABOVE",
+        "mntity": "ler",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "F0BB": {
+        "base": "l¯",
+        "desc": "LATIN SMALL LETTER L WITH WORD-FINAL ZIGZAG ABOVE",
+        "mntity": "lerfin",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv67"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F0BC": {
+        "base": "ſ͛",
+        "desc": "LATIN SMALL LETTER LONG S WITH ZIGZAG ABOVE",
+        "mntity": "slonger"
+    },
+    "F0BE": {
+        "base": "k%^%ᷓ",
+        "desc": "LATIN SMALL LETTER K WITH FLATTENED OPEN A ABOVE",
+        "mntity": "kra",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0BF": {
+        "base": "k%^%ᷣ%^%",
+        "desc": "LATIN SMALL LETTER K WITH UR LEMNISKATE FORM ABOVE",
+        "mntity": "kurlemn",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv87"
+                },
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F0C2": {
+        "base": "é",
+        "desc": "LATIN ENLARGED LETTER SMALL E WITH ACUTE",
+        "mntity": "eenlacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "F0C3": {
+        "base": "h̵",
+        "desc": "LATIN ENLARGED LETTER SMALL H WITH MEDIUM-HIGH MACRON",
+        "mntity": "henlmacrmed",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "e"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        },
+        "enla": {}
+    },
+    "F0C4": {
+        "desc": "LATIN CAPITAL LETTER G WITH LATIN SMALL LETTER DOTLESS I ABOVE",
+        "mntity": "Ginodotsup",
+        "var": {
+            "mark": {
+                "base": "G͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 15,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "Gͥ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv64"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "d"
+                        },
+                        {
+                            "name": "l"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0C5": {
+        "base": "V͛",
+        "desc": "LATIN CAPITAL LETTER V WITH ZIGZAG ABOVE",
+        "mntity": "Ver",
+        "otag": {
+            "tags": [
+                {
+                    "name": "case"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "F0C7": {
+        "base": "ǿ᷎",
+        "desc": "LATIN SMALL LETTER O WITH CURL AND ACUTE",
+        "mntity": "oslashcurlacute"
+    },
+    "F0C8": {
+        "base": "͛́",
+        "desc": "COMBINING ZIGZAG AND ACUTE ABOVE",
+        "mntity": "eracute"
+    },
+    "F0C9": {
+        "base": "ͦ͏᷎",
+        "desc": "COMBINING LATIN SMALL LETTER O WITH CURL",
+        "mntity": "ocurlsup"
+    },
+    "F0CA": {
+        "base": "ͣ́",
+        "desc": "COMBINING LATIN SMALL LETTER A WITH ACUTE",
+        "mntity": "aacutesup"
+    },
+    "F0CB": {
+        "base": "ᷔ́",
+        "desc": "COMBINING LATIN SMALL LETTER AE WITH ACUTE",
+        "mntity": "aeligacutesup"
+    },
+    "F0CC": {
+        "base": "ͣ̄",
+        "desc": "COMBINING LATIN SMALL LETTER A WITH MACRON",
+        "mntity": "amacrsup"
+    },
+    "F0CD": {
+        "base": "ͤ́",
+        "desc": "COMBINING LATIN SMALL LETTER E WITH ACUTE",
+        "mntity": "eacutesup"
+    },
+    "F0CE": {
+        "base": "͛",
+        "desc": "COMBINING ZIGZAG ABOVE HIGH POSITION",
+        "mntity": "erhigh",
+        "note": "should be deprecated in favor of U+035B."
+    },
+    "F0CF": {
+        "base": "ᷢ̇",
+        "desc": "COMBINING LATIN LETTER SMALL CAPITAL R WITH DOT ABOVE",
+        "mntity": "rscapdotsup"
+    },
+    "F0D7": {
+        "base": "d%^%͏̵",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv08",
+                    "index": 7
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "s"
+                }
+            ]
+        }
+    },
+    "F0D8": {
+        "base": "ð̄",
+        "desc": "LATIN SMALL LETTER ETH WITH MACRON",
+        "mntity": "ethmacr"
+    },
+    "F0D9": {
+        "base": "ð%^%ᫎ",
+        "desc": "LATIN SMALL LETTER ETH WITH LATIN LETTER INSULAR T ABOVE",
+        "mntity": "ethtrotsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0DA": {
+        "base": "h%^%ᫎ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN LETTER INSULAR T ABOVE",
+        "mntity": "htrotsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F0DC": {
+        "desc": "LATIN SMALL LIGATURE D ROTUNDA V",
+        "mntity": "drotvlig",
+        "var": {
+            "insular": {
+                "base": "ꝺv",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {}
+            },
+            "other": {
+                "base": "d%^%v",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv08"
+                        },
+                        {
+                            "name": "hlig"
+                        }
+                    ]
+                },
+                "zwj": {
+                    "utags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F0DD": {
+        "base": "gv",
+        "desc": "LATIN SMALL LIGATURE G V",
+        "mntity": "gvlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F0DE": {
+        "base": "dv̄",
+        "desc": "LATIN SMALL LIGATURE D ROTUNDA V WITH MACRON",
+        "mntity": "drotvligmacr",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv08"
+                },
+                {
+                    "name": "ss17"
+                }
+            ]
+        }
+    },
+    "F0DF": {
+        "base": "ꜹ̄",
+        "desc": "LATIN SMALL LIGATURE A V WITH MACRON",
+        "mntity": "avligmacr"
+    },
+    "F0E9": {
+        "base": "ðv",
+        "desc": "LATIN SMALL LIGATURE ETH V",
+        "mntity": "ethrotvlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F0EA": {
+        "base": "þv",
+        "desc": "LATIN SMALL LIGATURE THORN V",
+        "mntity": "thornvlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F0EB": {
+        "base": "nv",
+        "desc": "LATIN SMALL LIGATURE N V",
+        "mntity": "nvlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F0EC": {
+        "base": "a%^%v",
+        "desc": "LATIN LIGATURE ENLARGED LETTER SMALL A AND LATIN SMALL LETTER V",
+        "mntity": "aenlvlig",
+        "otag": {
+            "tags": [
+                {
+                    "index": 12,
+                    "name": "cv02"
+                },
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F0F8": {
+        "base": "nv̄",
+        "desc": "LATIN SMALL LIGATURE N V WITH MACRON",
+        "mntity": "nvmacrlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F0F9": {
+        "base": "a͏̄n",
+        "desc": "LATIN LIGATURE SMALL LETTER A WITH MACRON AND SMALL CAPITAL N",
+        "mntity": "amacrnscaplig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                },
+                {
+                    "name": "cv28",
+                    "index": 11
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "p"
+                },
+                {
+                    "name": "c"
+                }
+            ]
+        }
+    },
+    "F0FA": {
+        "base": "a͏́v",
+        "desc": "LATIN SMALL LIGATURE AV WITH ACUTE",
+        "mntity": "aacutevlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "base": "a͏́‍v"
+        }
+    },
+    "F0FB": {
+        "base": "a%^%v̄",
+        "desc": "LATIN LIGATURE ENLARGED LETTER SMALL A AND LATIN SMALL LETTER V WITH MACRON",
+        "mntity": "aenlvmacrlig",
+        "otag": {
+            "tags": [
+                {
+                    "index": 12,
+                    "name": "cv02"
+                },
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F0FC": {
+        "base": "av̄",
+        "desc": "LATIN LIGATURE SMALL LETTER A AND LATIN LETTER V WITH MACRON",
+        "mntity": "avmacrlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "base": "a‍v̄"
+        }
+    },
+    "F0FD": {
+        "base": "a͏́v̄",
+        "desc": "LATIN SMALL LIGATURE A WITH ACUTE AND LATIN SMALL LETTER V WITH MACRON",
+        "mntity": "aacutevmacrlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {
+            "base": "a͏́‍v̄"
+        }
+    },
+    "F106": {
+        "base": "C",
+        "desc": "LATIN CAPITAL LETTER C SQUARE FORM",
+        "mntity": "Csqu",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv05"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "q"
+                }
+            ]
+        }
+    },
+    "F10A": {
+        "base": "E",
+        "desc": "LATIN CAPITAL LETTER E UNCIAL FORM",
+        "mntity": "Eunc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv09"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F10E": {
+        "base": "G",
+        "desc": "LATIN CAPITAL LETTER G SQUARE FORM",
+        "mntity": "Gsqu",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv13"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "q"
+                }
+            ]
+        }
+    },
+    "F110": {
+        "base": "H",
+        "desc": "LATIN CAPITAL LETTER UNCIAL H",
+        "mntity": "Hunc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv15"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F11A": {
+        "base": "M",
+        "desc": "LATIN CAPITAL LETTER UNCIAL M",
+        "mntity": "Munc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv25"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F126": {
+        "base": "Ꟙ",
+        "desc": "LATIN CAPITAL LETTER S CLOSED FORM",
+        "mntity": "Sclose",
+        "note": "Use U+A7D8 instead."
+    },
+    "F127": {
+        "desc": "LATIN SMALL LETTER LONG S DESCENDING",
+        "mntity": "slongdes",
+        "var": {
+            "alpha": {
+                "base": "s",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 4,
+                            "name": "cv38"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "ſ",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 4,
+                            "name": "cv38"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F128": {
+        "base": "ꟙ",
+        "desc": "LATIN SMALL LETTER S CLOSED FORM",
+        "mntity": "sclose",
+        "note": "Use U+A7D9 instead."
+    },
+    "F130": {
+        "base": "͏̄",
+        "desc": "COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL R",
+        "mntity": "arscapligsup",
+        "note": "I can't find a suitable base character.",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv84",
+                    "index": 10
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "0"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_arsc;"
+        }
+    },
+    "F135": {
+        "desc": "COMBINING LATIN SMALL LETTER E WITH OGONEK",
+        "mntity": "eogonsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 14,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_eogo;"
+                }
+            },
+            "other": {
+                "base": "ͤ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "o"
+                        },
+                        {
+                            "name": "g"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_eogo;"
+                }
+            }
+        }
+    },
+    "F136": {
+        "desc": "COMBINING LATIN SMALL LETTER E WITH MACRON",
+        "mntity": "emacrsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 13,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_emac;"
+                }
+            },
+            "other": {
+                "base": "ͤ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "m"
+                        },
+                        {
+                            "name": "a"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_emac;"
+                }
+            }
+        }
+    },
+    "F13A": {
+        "base": "A",
+        "desc": "LATIN CAPITAL LETTER A SQUARE FORM",
+        "mntity": "Asqu",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv01"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "q"
+                }
+            ]
+        }
+    },
+    "F13E": {
+        "desc": "COMBINING LATIN SMALL LETTER O WITH OGONEK",
+        "mntity": "oogonsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 21,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_oogo;"
+                }
+            },
+            "other": {
+                "base": "ͦ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "o"
+                        },
+                        {
+                            "name": "g"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_oogo;"
+                }
+            }
+        }
+    },
+    "F13F": {
+        "desc": "COMBINING LATIN SMALL LETTER O WITH MACRON",
+        "mntity": "omacrsup",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 20,
+                            "name": "cv84"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "0"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_omac;"
+                }
+            },
+            "other": {
+                "base": "ͦ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "m"
+                        },
+                        {
+                            "name": "a"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_omac;"
+                }
+            }
+        }
+    },
+    "F149": {
+        "base": "ꝥ",
+        "desc": "LATIN SMALL LETTER THORN WITH DIAGONAL STROKE",
+        "mntity": "thornbarslash",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv66"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F158": {
+        "base": "⁊",
+        "desc": "LATIN ABBREVIATION SIGN SMALL ET WITH STROKE",
+        "mntity": "etslash",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv69"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F159": {
+        "base": "",
+        "desc": "LATIN ABBREVIATION SIGN SMALL DE",
+        "mntity": "de",
+        "note": "need to think. Variant of d?"
+    },
+    "F160": {
+        "base": "?",
+        "desc": "PUNCTUS INTERROGATIVUS",
+        "mntity": "punctinter",
+        "note": "Should be deprecated in favor of 2E54",
+        "var": {
+            "punctuation": {
+                "base": "⹔"
+            },
+            "other": {
+                "base": "?",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv76"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "2E54": {
+        "desc": "MEDIEVAL QUESTION MARK",
+        "var": {
+            "punctuation": {
+                "base": "⹔"
+            },
+            "other": {
+                "base": "?",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv76"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F193": {
+        "base": "d",
+        "desc": "LATIN SMALL LETTER D WITH CURL",
+        "mntity": "dcurl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv08"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F194": {
+        "base": "f",
+        "desc": "LATIN SMALL LETTER F WITH CURL",
+        "mntity": "fcurl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 6,
+                    "name": "cv12"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F195": {
+        "base": "k",
+        "desc": "LATIN SMALL LETTER K WITH CURL",
+        "mntity": "kcurl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv22"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F196": {
+        "base": "g",
+        "desc": "LATIN SMALL LETTER G WITH CURL",
+        "mntity": "gcurl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 7,
+                    "name": "cv14"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F198": {
+        "base": "c",
+        "desc": "LATIN SMALL LETTER C WITH CURL",
+        "mntity": "ccurl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F199": {
+        "base": "t",
+        "desc": "LATIN SMALL LETTER T WITH CURL",
+        "mntity": "tcurl",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv40"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F19A": {
+        "base": "n",
+        "desc": "LATIN SMALL LETTER N WITH FLOURISH",
+        "mntity": "nflour",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv28"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F19B": {
+        "base": "r",
+        "desc": "LATIN SMALL LETTER R WITH FLOURISH",
+        "mntity": "rflour",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv36"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "u"
+                }
+            ]
+        }
+    },
+    "F1A5": {
+        "base": "ꝰ",
+        "desc": "LATIN ABBREVIATION SIGN SPACING BASE-LINE CAPITAL US",
+        "mntity": "USbase",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv82",
+                    "index": 2
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F1A6": {
+        "base": "ꝰ",
+        "desc": "LATIN ABBREVIATION SIGN SPACING BASE-LINE US",
+        "mntity": "usbase",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv82"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F1A7": {
+        "base": "⹒",
+        "desc": "LATIN ABBREVIATION SIGN CAPITAL ET WITH STROKE",
+        "mntity": "ETslash",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv69"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "2E53": {
+        "desc": "MEDIEVAL EXCLAMATION MARK",
+        "note": "Should be included in MUFI, and F1E7 deprecated.",
+        "var": {
+            "punctuation": {
+                "base": "⹓"
+            },
+            "other": {
+                "base": "!",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv75"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1AC": {
+        "base": "ꝫ",
+        "desc": "LATIN ABBREVIATION SIGN SEMICOLON",
+        "mntity": "sem",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv83"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F1BB": {
+        "base": "ch",
+        "desc": "LATIN SMALL LIGATURE CH",
+        "mntity": "chlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F1BC": {
+        "base": "fö",
+        "desc": "LATIN SMALL LIGATURE F O WITH DIAERESIS",
+        "mntity": "foumllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "dlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F1BD": {
+        "base": "0",
+        "desc": "SMALL BASE LINE ZERO SIGN",
+        "mntity": "smallzero",
+        "utag": {
+            "tags": [
+                {
+                    "name": "b"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "F1BF": {
+        "base": "X",
+        "desc": "MODIFIER LETTER CAPITAL X",
+        "mntity": "Xmod",
+        "otag": {
+            "tags": [
+                {
+                    "name": "sups"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "m"
+                },
+                {
+                    "name": "o"
+                }
+            ]
+        }
+    },
+    "F1C0": {
+        "base": "͏̄",
+        "desc": "COMBINING ABBREVIATION MARK BAR ABOVE WITH DOT",
+        "mntity": "arbar",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_ovdt;"
+        }
+    },
+    "F1C1": {
+        "base": "ᷓ",
+        "desc": "COMBINING ABBREVIATION MARK SUPERSCRIPT RA OPEN A FORM WITH BAR ABOVE",
+        "mntity": "rabar",
+        "note": "I can't find a suitable base for this.",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv85"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F1C2": {
+        "base": "ᷣ",
+        "desc": "COMBINING ABBREVIATION MARK SUPERSCRIPT UR LEMNISKATE FORM",
+        "mntity": "urlemn",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv87"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F1C5": {
+        "base": "᷎",
+        "desc": "COMBINING CURL HIGH POSITION",
+        "mntity": "combcurlhigh"
+    },
+    "F1C7": {
+        "desc": "COMBINING ABBREVIATION MARK ZIGZAG ABOVE ANGLE FORM",
+        "mntity": "erang",
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 4
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_zzan;"
+                }
+            },
+            "other": {
+                "base": "͛",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv81"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_zzan;"
+                }
+            }
+        }
+    },
+    "F1C8": {
+        "desc": "COMBINING ABBREVIATION MARK ZIGZAG ABOVE CURLY FORM",
+        "mntity": "ercurl",
+        "var": {
+            "mark": {
+                "base": "̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 5
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_zzcr;"
+                }
+            },
+            "other": {
+                "base": "͛",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 2,
+                            "name": "cv81"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "c"
+                        },
+                        {
+                            "name": "u"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_zzcr;"
+                }
+            }
+        }
+    },
+    "F1CA": {
+        "base": "̇",
+        "desc": "COMBINING DOT ABOVE HIGH POSITION",
+        "mntity": "combdothigh",
+        "note": "This should be deprecated."
+    },
+    "F1CC": {
+        "base": "͏̄",
+        "desc": "COMBINING CURLY BAR ABOVE",
+        "mntity": "combcurlbar",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv84"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        },
+        "entity": {
+            "base": "&_cumc;"
+        }
+    },
+    "F1E2": {
+        "desc": "COMMA POSITURA",
+        "mntity": "posit",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 2
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ",",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv72"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1E3": {
+        "desc": "HIGH COMMA POSITURA (SIMPLEX DUCTUS)",
+        "mntity": "ductsimpl",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 3
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ",",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 2,
+                            "name": "cv72"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1E4": {
+        "base": ";",
+        "desc": "PUNCTUS WITH COMMA POSITURA",
+        "mntity": "punctposit",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 5
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ";",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 2,
+                            "name": "cv73"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1E5": {
+        "desc": "COLON WITH MIDDLE COMMA POSITURA",
+        "mntity": "colmidcomposit",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 6
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "6"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ";",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 3,
+                            "name": "cv73"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1E6": {
+        "base": ";",
+        "desc": "THREE DOTS WITH COMMA POSITURA",
+        "mntity": "tridotscomposit",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 8
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "8"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ";",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 5,
+                            "name": "cv73"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1E7": {
+        "base": "!",
+        "desc": "PUNCTUS EXCLAMATIVUS",
+        "mntity": "punctexclam",
+        "note": "Should be deprecated in favor of 2E53.",
+        "var": {
+            "punctuation": {
+                "base": "⹓"
+            },
+            "other": {
+                "base": "!",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv75"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1E8": {
+        "base": "?",
+        "desc": "PUNCTUS INTERROGATIVUS HORIZONTAL TILDE",
+        "mntity": "punctintertilde",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv76"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F1EA": {
+        "desc": "PUNCTUS VERSUS",
+        "mntity": "punctvers",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 4
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ";",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv73"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1EC": {
+        "desc": "SIGNE DE RENVOI",
+        "mntity": "renvoi",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 18
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "8"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "*",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv78"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1F0": {
+        "desc": "PUNCTUS ELEVATUS DIAGONAL STROKE",
+        "mntity": "punctelevdiag",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 9
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "9"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "⹎",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv74"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "2E4A": {
+        "desc": "Dotted Solidus",
+        "mntity": "virgsusp",
+        "var": {
+            "punctuation": {
+                "base": "⹊"
+            },
+            "other": {
+                "base": "/",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv79"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1F1": {
+        "base": "?",
+        "desc": "PUNCTUS INTERROGATIVUS LEMNISKATE FORM",
+        "mntity": "punctinterlemn",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv76"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        }
+    },
+    "F1F2": {
+        "desc": "TWO DOTS OVER COMMA POSITURA",
+        "mntity": "bidotscomposit",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 7
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "7"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": ";",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 4,
+                            "name": "cv73"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1F4": {
+        "base": "/",
+        "desc": "VIRGULA SUSPENSIVA",
+        "note": "deprecated",
+        "var": {
+            "punctuation": {
+                "base": "⹊"
+            },
+            "other": {
+                "base": "/",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv79"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1F5": {
+        "desc": "PUNCTUS FLEXUS",
+        "mntity": "punctflex",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 12
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "⹎",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 4,
+                            "name": "cv74"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1F7": {
+        "base": "/",
+        "desc": "SHORT VIRGULA",
+        "mntity": "virgmin",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv79",
+                    "index": 2
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F1F8": {
+        "desc": "DISTINCTIO",
+        "mntity": "hidot",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "·",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv71"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "h"
+                        },
+                        {
+                            "name": "i"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1F9": {
+        "base": "~",
+        "desc": "WAVY LINE",
+        "mntity": "wavylin",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv77"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F1FA": {
+        "desc": "PUNCTUS ELEVATUS WITH HIGH BACK",
+        "mntity": "punctelevhiback",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 10
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "0"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "⹎",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 2,
+                            "name": "cv74"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1FB": {
+        "desc": "PUNCTUS ELEVATUS WITH ONSET",
+        "mntity": "punctelevhack",
+        "var": {
+            "punctuation": {
+                "base": ".",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv70",
+                            "index": 11
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "⹎",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 3,
+                            "name": "cv74"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F1FC": {
+        "base": "̮",
+        "desc": "COMBINING TRIPLE BREVE BELOW",
+        "mntity": "combtripbrevebl",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv92"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F200": {
+        "base": "a",
+        "desc": "LATIN SMALL LETTER A INSULAR FORM",
+        "mntity": "ains",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv02"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F201": {
+        "base": "A",
+        "desc": "LATIN CAPITAL LETTER A INSULAR FORM",
+        "mntity": "Ains",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv01"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F202": {
+        "base": "a",
+        "desc": "LATIN SMALL LETTER OPEN A CAROLINGIAN FORM",
+        "mntity": "aopen",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv02"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "o"
+                },
+                {
+                    "name": "p"
+                }
+            ]
+        }
+    },
+    "F203": {
+        "desc": "LATIN SMALL LETTER CLOSED A GOTHIC FORM",
+        "mntity": "aclose",
+        "base": "a",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv02"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "l"
+                }
+            ]
+        }
+    },
+    "F204": {
+        "base": "æ",
+        "desc": "LATIN SMALL LETTER AE WITH RIGHT UPPER LOOP",
+        "mntity": "aeligred",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv57"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "o"
+                },
+                {
+                    "name": "p"
+                }
+            ]
+        }
+    },
+    "F205": {
+        "base": "Ꜵ",
+        "desc": "LATIN CAPITAL LIGATURE AO NECKLESS",
+        "mntity": "AOligred",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv58"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F206": {
+        "base": "ꜵ",
+        "desc": "LATIN SMALL LIGATURE AO NECKLESS",
+        "mntity": "aoligred",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv59"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F207": {
+        "base": "f",
+        "desc": "LATIN SMALL LETTER CLOSED INSULAR F",
+        "mntity": "finsclose",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv12"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        }
+    },
+    "F208": {
+        "base": "k",
+        "desc": "LATIN LETTER UNCIAL K",
+        "mntity": "kunc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv22"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F209": {
+        "base": "k",
+        "desc": "LATIN SMALL LETTER K CLOSED FORM",
+        "mntity": "kclose",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv22"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F20E": {
+        "base": "ꝛ",
+        "desc": "LATIN SMALL LETTER R ROTUNDA",
+        "note": "deprecated"
+    },
+    "F214": {
+        "base": "a",
+        "desc": "LATIN SMALL LETTER A UNCIAL FORM",
+        "mntity": "aunc",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv02"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F215": {
+        "base": "a",
+        "desc": "LATIN SMALL LETTER NECKLESS A",
+        "mntity": "aneckless",
+        "otag": {
+            "tags": [
+                {
+                    "index": 5,
+                    "name": "cv02"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "n"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F217": {
+        "base": "E",
+        "desc": "LATIN CAPITAL LETTER CLOSED E UNCIAL FORM",
+        "mntity": "Euncclose",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv09"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "c"
+                }
+            ]
+        }
+    },
+    "F218": {
+        "base": "e",
+        "desc": "LATIN SMALL LETTER E UNCIAL FORM",
+        "mntity": "eunc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv10"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F219": {
+        "base": "e",
+        "desc": "LATIN SMALL LETTER E EXTENDED BAR FORM",
+        "mntity": "eext",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv10"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "b"
+                },
+                {
+                    "name": "a"
+                }
+            ]
+        }
+    },
+    "F21A": {
+        "base": "e",
+        "desc": "LATIN SMALL LETTER E TALL FORM",
+        "mntity": "etall",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv10"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "b"
+                },
+                {
+                    "name": "h"
+                }
+            ]
+        }
+    },
+    "F21B": {
+        "base": "f",
+        "desc": "LATIN SMALL LETTER SEMI-CLOSED INSULAR F",
+        "mntity": "finssemiclose",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv12"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F21C": {
+        "base": "f",
+        "desc": "LATIN SMALL LETTER INSULAR F WITH DOTTED HOOKS",
+        "mntity": "finsdothook",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv12"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F21D": {
+        "base": "g",
+        "desc": "LATIN SMALL LETTER G WITH SEPARATE LOOPS",
+        "mntity": "gdivloop",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv14"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F21E": {
+        "base": "g",
+        "desc": "LATIN SMALL LETTER CLOSED G WITH LARGE LOWER LOOP",
+        "mntity": "glglowloop",
+        "otag": {
+            "tags": [
+                {
+                    "index": 5,
+                    "name": "cv14"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "2"
+                }
+            ]
+        }
+    },
+    "F21F": {
+        "base": "g",
+        "desc": "LATIN SMALL LETTER CLOSED G WITH SMALL LOWER LOOP",
+        "mntity": "gsmlowloop",
+        "otag": {
+            "tags": [
+                {
+                    "index": 6,
+                    "name": "cv14"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        }
+    },
+    "F220": {
+        "base": "i",
+        "desc": "LATIN SMALL LETTER LONG I",
+        "mntity": "ilong",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv18"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "o"
+                }
+            ]
+        }
+    },
+    "F221": {
+        "base": "k",
+        "desc": "LATIN SMALL LETTER K SEMI-CLOSED FORM",
+        "mntity": "ksemiclose",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv22"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "c"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F222": {
+        "base": "l",
+        "desc": "LATIN SMALL LETTER L DESCENDING",
+        "mntity": "ldes",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv24"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F223": {
+        "base": "m",
+        "desc": "LATIN SMALL LETTER M WITH RIGHT DESCENDER",
+        "mntity": "mrdes",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv26"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F224": {
+        "base": "M",
+        "desc": "LATIN CAPITAL LETTER UNCIAL M WITH RIGHT DESCENDER",
+        "mntity": "Muncdes",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv25"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F225": {
+        "base": "m",
+        "desc": "LATIN MEDIUSCULE LETTER M UNCIAL FORM",
+        "mntity": "mmeduncacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv26"
+                },
+                {
+                    "name": "smcp"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F226": {
+        "base": "m",
+        "desc": "LATIN SMALL LETTER UNCIAL M WITH RIGH DESCENDER",
+        "mntity": "muncdes",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv26"
+                },
+                {
+                    "name": "smcp"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "m"
+                }
+            ]
+        }
+    },
+    "F228": {
+        "base": "n",
+        "desc": "LATIN SMALL LETTER N WITH RIGHT DESCENDER",
+        "mntity": "nrdes",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv28"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F229": {
+        "base": "N",
+        "desc": "LATIN CAPITAL LETTER N WITH RIGHT DESCENDER",
+        "mntity": "Nrdes",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv27"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F22A": {
+        "base": "n",
+        "desc": "LATIN LETTER SMALL CAPITAL N WITH RIGHT DESCENDER",
+        "mntity": "nscaprdes",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv28"
+                },
+                {
+                    "name": "smcp"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "r"
+                }
+            ]
+        }
+    },
+    "F22B": {
+        "base": "n",
+        "desc": "LATIN LETTER SMALL CAPITAL N WITH LEFT DESCENDER",
+        "mntity": "nscapldes",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv28"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F22C": {
+        "base": "Q",
+        "desc": "LATIN CAPITAL LETTER Q WITH STEM",
+        "mntity": "Qstem",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv33"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "s"
+                },
+                {
+                    "name": "m"
+                }
+            ]
+        }
+    },
+    "F233": {
+        "base": "y",
+        "desc": "LATIN SMALL LETTER Y WITH RIGHT MAIN STROKE",
+        "mntity": "yrgmainstrok",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv50"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "r"
+                },
+                {
+                    "name": "m"
+                }
+            ]
+        }
+    },
+    "F238": {
+        "base": "z",
+        "desc": "LATIN SMALL LETTER MIDDLE HIGH GERMAN ZED",
+        "mntity": "mhgzed",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv52"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "m"
+                },
+                {
+                    "name": "g"
+                }
+            ]
+        }
+    },
+    "F239": {
+        "base": "iz",
+        "desc": "LATIN SMALL LIGATURE I MIDDLE HIGH GERMAN ZED",
+        "mntity": "imhgzedlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv52",
+                    "index": 2
+                },
+                {
+                    "name": "liga"
+                }
+            ]
+        },
+        "zwj": {
+            "utags": [
+                {
+                    "name": "m"
+                },
+                {
+                    "name": "g"
+                }
+            ]
+        }
+    },
+    "F23A": {
+        "base": "h",
+        "desc": "LATIN SMALL LETTER H WITH RIGHT DESCENDER",
+        "mntity": "hrdes",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv16"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "e"
+                }
+            ]
+        }
+    },
+    "F23C": {
+        "base": "m",
+        "desc": "LATIN SMALL LETTER M UNCIAL FORM",
+        "mntity": "munc",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv26"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F23D": {
+        "base": "m",
+        "desc": "LATIN SMALL LETTER M UNCIAL FORM WITH RIGHT DESCENDER",
+        "mntity": "muncdes",
+        "otag": {
+            "tags": [
+                {
+                    "index": 2,
+                    "name": "cv26"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
+    },
+    "F23E": {
+        "base": "m͏́",
+        "desc": "LATIN SMALL LETTER M UNCIAL FORM WITH ACUTE ACCENT",
+        "mntity": "muncsmallacute",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv26"
+                }
+            ]
+        },
+        "utag": {
+            "base": "m%^%́",
+            "tags": [
+                {
+                    "name": "u"
+                },
+                {
+                    "name": "n"
+                }
+            ]
+        }
+    },
+    "F23F": {
+        "base": "Ↄ̅",
+        "desc": "ROMAN NUMERAL REVERSED ONE HUNDRED WITH OVERLINE",
+        "mntity": "romnumCrevovl"
+    },
+    "F2E0": {
+        "base": "¤",
+        "desc": "LATIN AS LIBRALIS SIGN",
+        "mntity": "romaslibr",
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F2E2": {
+        "desc": "LATIN SMALL CAPITAL LETTER X WITH BAR",
+        "mntity": "romscapxbar",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 2,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "x%^%̵",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "pcap"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2E3": {
+        "desc": "LATIN SMALL CAPITAL LETTER Y WITH BAR",
+        "mntity": "romscapybar",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 3,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "ʏ̵"
+            }
+        }
+    },
+    "F2E4": {
+        "desc": "LATIN SMALL CAPITAL LETTER D WITH SLASH",
+        "mntity": "romscapdslash",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 4,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "ᴅ̸"
+            }
+        }
+    },
+    "F2E6": {
+        "base": "¤",
+        "desc": "PHARMACEUTICAL DRAM SIGN",
+        "mntity": "dram",
+        "otag": {
+            "tags": [
+                {
+                    "index": 5,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "5"
+                }
+            ]
+        }
+    },
+    "F2E7": {
+        "base": "¤",
+        "desc": "ECU SIGN",
+        "mntity": "ecu",
+        "otag": {
+            "tags": [
+                {
+                    "index": 6,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "6"
+                }
+            ]
+        }
+    },
+    "F2E8": {
+        "desc": "FLOREN SIGN WITH LOOP",
+        "mntity": "florloop",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 7,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "0"
+                        },
+                        {
+                            "name": "7"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "ƒ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv97"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2E9": {
+        "base": "¤",
+        "desc": "GROSCHEN SIGN",
+        "mntity": "grosch",
+        "otag": {
+            "tags": [
+                {
+                    "index": 8,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "8"
+                }
+            ]
+        }
+    },
+    "F2EA": {
+        "desc": "DUTCH LIBRA SIGN",
+        "mntity": "libradut",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 11,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "£",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv95"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2EB": {
+        "desc": "FRENCH LIBRA SIGN",
+        "mntity": "librafren",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 12,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "℔",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv94"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2EC": {
+        "desc": "ITALIAN LIBRA SIGN",
+        "mntity": "libraital",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 13,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "£",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv95",
+                            "index": 3
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "3"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2ED": {
+        "desc": "FLEMISH LIBRA SIGN",
+        "mntity": "libraflem",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 14,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "£",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv95",
+                            "index": 4
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "4"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2EE": {
+        "desc": "LIRA NUOVA SIGN",
+        "mntity": "liranuov",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 15,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "£",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv95",
+                            "index": 5
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2EF": {
+        "desc": "LIRA STERLINA SIGN",
+        "mntity": "lirasterl",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 16,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "6"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "£",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv95",
+                            "index": 6
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "6"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2F0": {
+        "base": "¤",
+        "desc": "OLD MARK SIGN",
+        "mntity": "markold",
+        "otag": {
+            "tags": [
+                {
+                    "index": 17,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "7"
+                }
+            ]
+        }
+    },
+    "F2F1": {
+        "base": "¤",
+        "desc": "OLD FLOURISH MARK SIGN",
+        "mntity": "markflour",
+        "otag": {
+            "tags": [
+                {
+                    "index": 18,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "8"
+                }
+            ]
+        }
+    },
+    "F2F2": {
+        "base": "¤",
+        "desc": "MARKED SMALL LETTER M SIGN",
+        "mntity": "msign",
+        "otag": {
+            "tags": [
+                {
+                    "index": 19,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "9"
+                }
+            ]
+        }
+    },
+    "F2F3": {
+        "base": "¤",
+        "desc": "FLOURISHED SMALL LETTER M SIGN",
+        "mntity": "msignflour",
+        "otag": {
+            "tags": [
+                {
+                    "index": 20,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "0"
+                }
+            ]
+        }
+    },
+    "F2F4": {
+        "base": "¤",
+        "desc": "PHARMACEUTICAL OBOLUS SIGN",
+        "mntity": "obol",
+        "otag": {
+            "tags": [
+                {
+                    "index": 21,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
+    },
+    "F2F5": {
+        "desc": "PENNING SIGN",
+        "mntity": "penningar",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 22,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "₰",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv96"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2F6": {
+        "base": "¤",
+        "desc": "OLD REICHSTALER SIGN",
+        "mntity": "reichtalold",
+        "otag": {
+            "tags": [
+                {
+                    "index": 23,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "3"
+                }
+            ]
+        }
+    },
+    "F2F7": {
+        "base": "¤",
+        "desc": "GERMAN SCHILLING SIGN",
+        "mntity": "schillgerm",
+        "otag": {
+            "tags": [
+                {
+                    "index": 24,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "4"
+                }
+            ]
+        }
+    },
+    "F2F8": {
+        "base": "¤",
+        "desc": "GERMAN SCRIPT SCHILLING SIGN",
+        "mntity": "schillgermscript",
+        "otag": {
+            "tags": [
+                {
+                    "index": 25,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "5"
+                }
+            ]
+        }
+    },
+    "F2F9": {
+        "base": "¤",
+        "desc": "SCUDI SIGN",
+        "mntity": "scudi",
+        "otag": {
+            "tags": [
+                {
+                    "index": 26,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "6"
+                }
+            ]
+        }
+    },
+    "F2FA": {
+        "base": "¤",
+        "desc": "KRONE SIGN",
+        "mntity": "krone",
+        "otag": {
+            "tags": [
+                {
+                    "index": 10,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "0"
+                }
+            ]
+        }
+    },
+    "F2FB": {
+        "base": "¤",
+        "desc": "HELBING SIGN",
+        "mntity": "helbing",
+        "otag": {
+            "tags": [
+                {
+                    "index": 9,
+                    "name": "cv93"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "0"
+                },
+                {
+                    "name": "9"
+                }
+            ]
+        }
+    },
+    "F2FD": {
+        "desc": "SCRIPT OUNCE SIGN",
+        "mntity": "ouncescript",
+        "var": {
+            "currency": {
+                "base": "¤",
+                "otag": {
+                    "tags": [
+                        {
+                            "index": 27,
+                            "name": "cv93"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "7"
+                        }
+                    ]
+                }
+            },
+            "other": {
+                "base": "℥",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv98"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "a"
+                        },
+                        {
+                            "name": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "F2FE": {
+        "base": "C",
+        "desc": "ROMAN NUMERAL CAPITAL C WITH TWO BARS",
+        "mntity": "Cnumbar",
+        "otag": {
+            "tags": [
+                {
+                    "index": 3,
+                    "name": "cv05"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "b"
+                }
+            ]
+        }
+    },
+    "F2FF": {
+        "base": "c",
+        "desc": "ROMAN NUMERAL SMALL C WITH TWO BARS",
+        "mntity": "cnumbar",
+        "otag": {
+            "tags": [
+                {
+                    "index": 4,
+                    "name": "cv06"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "2"
+                },
+                {
+                    "name": "b"
+                }
+            ]
+        }
+    },
+    "F4C2": {
+        "base": "",
+        "note": "proposed--not yet in Junicode"
+    },
+    "F4F7": {
+        "base": "ſ̶l̶",
+        "desc": "LATIN SMALL LIGATURE LONG S L WITH MEDIUM-HIGH OVERLINE",
+        "mntity": "slonglovlmed"
+    },
+    "F4F8": {
+        "base": "ſł",
+        "desc": "LATIN SMALL LIGATURE LONG S L WITH DIAGONAL STROKE",
+        "mntity": "slonglslashlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "F4F9": {
+        "base": "ll",
+        "desc": "LATIN SMALL LIGATURE LL",
+        "mntity": "lllig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F4FA": {
+        "base": "ſch",
+        "desc": "LATIN SMALL LIGATURE LONG S CH",
+        "mntity": "slongchlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F4FB": {
+        "base": "ſj",
+        "desc": "LATIN SMALL LIGATURE LONG S J",
+        "mntity": "slongjlig",
+        "note": "no ligature needed--taken care of in calt"
+    },
+    "F4FC": {
+        "base": "ſk",
+        "desc": "LATIN SMALL LIGATURE LONG S K",
+        "mntity": "slongklig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "F4FD": {
+        "base": "ſs",
+        "desc": "LATIN SMALL LIGATURE LONG S S",
+        "mntity": "slongslig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "F4FE": {
+        "base": "ſſk",
+        "desc": "LATIN SMALL LIGATURE LONG S LONG S K",
+        "mntity": "slongslongklig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "F4FF": {
+        "base": "ſſt",
+        "desc": "LATIN SMALL LIGATURE LONG S LONG S T",
+        "mntity": "slongslongtlig",
+        "otag": {
+            "tags": [
+                {
+                    "name": "liga"
+                }
+            ]
+        }
+    },
+    "F704": {
+        "base": "–́",
+        "desc": "METRICAL SYMBOL LONGUM WITH ACUTE (PRIMARY STRESS)",
+        "mntity": "metrmacracute"
+    },
+    "F705": {
+        "base": "–̀",
+        "desc": "METRICAL SYMBOL LONGUM WITH GRAVE (SECONDARY STRESS)",
+        "mntity": "metrmacrgrave"
+    },
+    "F706": {
+        "base": "⏑́",
+        "desc": "METRICAL SYMBOL BREVE WITH ACUTE (PRIMARY STRESS)",
+        "mntity": "metrbreveacute"
+    },
+    "F707": {
+        "base": "⏑̀",
+        "desc": "METRICAL SYMBOL BREVE WITH GRAVE (SECONDARY STRESS)",
+        "mntity": "metrbrevegrave"
+    },
+    "F708": {
+        "base": "⏓́",
+        "desc": "METRICAL SYMBOL BREVE ABOVE LONGUM WITH ACUTE (SHORT OR LONG SYLLABLE WITH PRIMARY STRESS)",
+        "mntity": "metrmacrbreveacute"
+    },
+    "F709": {
+        "base": "⏓̀",
+        "desc": "METRICAL SYMBOL BREVE ABOVE LONGUM WITH GRAVE (SHORT OR LONG SYLLABLE WITH SECONDARY STRESS)",
+        "mntity": "metrmacrbrevegrave"
+    },
+    "F70A": {
+        "base": "×",
+        "desc": "METRICAL SYMBOL ANCEPS",
+        "mntity": "metranc"
+    },
+    "F70B": {
+        "base": "×́",
+        "desc": "METRICAL SYMBOL ANCEPS WITH ACUTE (PRIMARY STRESS)",
+        "mntity": "metrancacute"
+    },
+    "F70C": {
+        "base": "×̀",
+        "desc": "METRICAL SYMBOL ANCEPS WITH GRAVE (SECONDARY STRESS)",
+        "mntity": "metrancgrave"
+    },
+    "F715": {
+        "base": "–̋",
+        "desc": "METRICAL SYMBOL LONGUM WITH DOUBLE ACUTE (SECONDARY STRESS)",
+        "mntity": "metrmacrdblac"
+    },
+    "F716": {
+        "base": "–̏",
+        "desc": "METRICAL SYMBOL LONGUM WITH DOUBLE GRAVE (SECONDARY STRESS AND ALLITERATION)",
+        "mntity": "metrmacrdblgrave"
+    },
+    "F717": {
+        "base": "⏑̋",
+        "desc": "METRICAL SYMBOL BREVE WITH DOUBLE ACUTE (PRIMARY STRESS AND ALLITERATION)",
+        "mntity": "metrbrevedblac"
+    },
+    "F718": {
+        "base": "⏑̏",
+        "desc": "METRICAL SYMBOL BREVE WITH DOUBLE GRAVE (SECONDARY STRESS AND ALLITERATION)",
+        "mntity": "metrbrevedblgrave"
+    },
+    "F719": {
+        "base": "×̋",
+        "desc": "METRICAL SYMBOL ANCEPS WITH DOUBLE ACUTE (PRIMARY STRESS AND ALLITERATION)",
+        "mntity": "metrancdblac"
+    },
+    "F71A": {
+        "base": "×̏",
+        "desc": "METRICAL SYMBOL ANCEPS WITH DOUBLE GRAVE (SECONDARY STRESS AND ALLITERATION)",
+        "mntity": "metrancdblgrave"
+    },
+    "F71B": {
+        "base": "⏔́",
+        "desc": "METRICAL SYMBOL RESOLVED LIFT WITH ACUTE (PRIMARY STRESS)",
+        "mntity": "metrdblbrevemacracute"
+    },
+    "F71C": {
+        "base": "⏔̋",
+        "desc": "METRICAL SYMBOL RESOLVED LIFT WITH DOUBLE ACUTE (PRIMARY STRESS AND ALLITERATION)",
+        "mntity": "metrdblbrevemacrdblac"
+    },
+    "F7B2": {
+        "base": "V̅",
+        "desc": "LATIN CAPITAL LETTER V WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Vovlhigh"
+    },
+    "F7B3": {
+        "base": "X̅",
+        "desc": "LATIN CAPITAL LETTER X WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Xovlhigh"
+    },
+    "F7B4": {
+        "base": "L̅",
+        "desc": "LATIN CAPITAL LETTER L WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Lovlhigh"
+    },
+    "F7B5": {
+        "base": "C̅",
+        "desc": "LATIN CAPITAL LETTER C WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Covlhigh"
+    },
+    "F7B6": {
+        "base": "D̅",
+        "desc": "LATIN CAPITAL LETTER C WITH HIGH OVERLINE (ABOVE CHARACTER)",
+        "mntity": "Dovlhigh"
+    }
+}

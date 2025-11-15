@@ -36,10 +36,13 @@
             .hex,  .desc, .basec, .utag, .entity {
                 background-color: MistyRose;
             }
-            .char, .otag, .zwj, .varc {
+            .hex {
+                font-feature-settings: "lnum", "tnum";
+            }
+            .char, .otag, .zwj, .varc, .enla {
                 background-color: PowderBlue;
             }
-            .utag, .zwj, .entity {
+            .utag, .zwj, .entity, .enla {
                 font-feature-settings: "ss10";
             }
             .desc {
@@ -68,13 +71,27 @@
             </style>
     </head>
     <body lang="is">
-        <p>
-            For proofing. In each row, the characters in the last four columns
-            (those with content) should look the same as in the “char” column,
-            which displays the PUA character. Click on a cell in the "Base"
-            column to view the Unicodes that make up the base. Click on any of
+        <h1 lang="en">Private Use to OpenType Reference Page</h1>
+        <p lang="en">
+            This page demonstrates all of the conversions that the Junicode 
+            utility pua2ot is capable of. If you want to know how to convert
+            a Private Use character, either search for the hexadecimal code
+            (e.g. E010) or for the character itself (you will find it in 
+            the “pua” column, which displays the character to be converted).
+        </p>
+        <p lang="en">
+            Next, check to make sure that any characters appearing in the last
+            four columns match the Private Use character. If the last four 
+            columns are blank for the row you have located, the contents of
+            the “base” column are the replacement. This must also match
+            the Private Use character.
+        </p>
+        <p lang="en">
+            Click on a cell in the “base”
+            column to see the Unicodes that make up the base. Click on any of
             the rightmost four columns to see the code that generates its
-            content.
+            content. The dialog that displays this information has a “Copy”
+            button, which copies it to the clipboard.
         </p>
         <div class="table-container">
         <table id="tbl">
@@ -97,6 +114,16 @@
         <script>
             options.defaultTags = {"ss10": 1};
             options.lang = "is";
+            // options.enlargedScale = 32;
+            // options.utagEntities = false;
+            // options.nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "font-variation-settings" ];
+            // options.keepUnicode = false;
+            // options.methodPriority = "compact";
+            // options.prefList = [ "utag", "zwj", "enla", "otag", "entity" ];
+            // options.defaultTags = {ss10: 1};
+            // options.basePreferences = [];
+            // options.replaceMUFIEntities = true;
+            // options.enlargedScale = 32;
         </script>
         <script src="./mklist.js"></script>
     </body>

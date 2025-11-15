@@ -504,6 +504,19 @@ varWidget.addEventListener('change', ()=> {
     textCaller(!codeOn);
 } );
 
+let enlaWidget = document.getElementById('enlarge_scale');
+enlaWidget.addEventListener('change', ()=> {
+    s = parseInt(enlaWidget.value);
+    console.log("s:", enlaWidget.value);
+    if (s != NaN) {
+        if (s >= 0 && s <=100) {
+            options.enlargedScale = s
+        }
+    }
+    textCaller(!codeOn);
+    console.log("scale:", options.enlargedScale);
+} );
+
 /*
     Now complete initialization by cleaning up the source text (convert 
     any whitespace sequence to a space), converting, and displaying in

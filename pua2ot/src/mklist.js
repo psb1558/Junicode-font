@@ -1,7 +1,8 @@
-const otagpref =   ['otag', 'utag', 'zwj', 'entity'];
-const utagpref =   ['utag', 'otag', 'zwj', 'entity'];
-const zwjpref =    ['zwj', 'utag', 'otag', 'entity'];
-const entitypref = ['entity', 'zwj', 'utag', 'otag'];
+const otagpref =   ['otag', 'utag', 'zwj', 'entity', 'enla'];
+const utagpref =   ['utag', 'otag', 'zwj', 'entity', 'enla'];
+const zwjpref =    ['zwj', 'utag', 'otag', 'entity', 'enla'];
+const entitypref = ['entity', 'zwj', 'utag', 'otag', 'enla'];
+const enlapref =   ['enla', 'entity', 'zwj', 'utag', 'otag'];
 
 const table = document.getElementById('tbl');
 const dialog = document.getElementById('method_info');
@@ -116,7 +117,7 @@ function makeRow(hex, vartext, block, desc) {
     }
     row.appendChild(utagcell);
     //
-    // ZWJ
+    // ZWJ 
     //
     const zwjcell = document.createElement("td");
     zwjcell.classList.add("zwj");
@@ -143,6 +144,18 @@ function makeRow(hex, vartext, block, desc) {
         entitycell.textContent = b;
     }
     row.appendChild(entitycell);
+    //
+    // ENLA
+    //
+    const enlacell = document.createElement("td");
+    enlacell.classList.add("enla");
+    if ("enla" in block) {
+        options.prefList = enlapref;
+        b = convert(ch);
+        enlacell.innerHTML = b;
+    }
+    row.appendChild(enlacell);
+
     return row;
 }
 
@@ -213,6 +226,7 @@ tableHeaderCell("otag", toprow);
 tableHeaderCell("utag", toprow);
 tableHeaderCell("zwj", toprow);
 tableHeaderCell("entity", toprow);
+tableHeaderCell("enla", toprow);
 tbl_head.appendChild(toprow);
 
 for (h in PUA_DATA) {
@@ -220,11 +234,7 @@ for (h in PUA_DATA) {
     let block = PUA_DATA[h];
     if ("desc" in block) {
         description = block.desc;
-        if (block.desc.includes("COMBINING")) {
-            isMark = true;
-        } else {
-            isMark = false;
-        }
+        isMark = block.desc.includes("COMBINING");
     } else {
         isMark = false;
     }

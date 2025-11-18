@@ -310,6 +310,7 @@ Object.defineProperty(options, 'enlargedScale', {
  *  Converts all whitespace characters to spaces and changes ampersand
  *  entity to a plain ampersand.
  *  @param {string} s - The string to clean up.
+ *  @return {string} The cleaned up string.
 */
 const cleanup_string = s => s.replace(/\s+/g, " ").trim().replace(/&amp;/g, '&');
 
@@ -324,7 +325,7 @@ const placeholderCount = (s) => (s.match(phRegExp) || []).length;
  * Converts an object containing OpenType tags with indices into a
  * string that can be used with CSS font-feature-settings.
  * @param {{string: number}} tag_dict 
- * @returns {string} A string that can be used with CSS font-feature-settings.
+ * @return {string} A string that can be used with CSS font-feature-settings.
  */
 function featureString(tag_dict) {
     /*
@@ -356,7 +357,7 @@ function featureString(tag_dict) {
  * Tests whether a character is MUFI PUA or problematic Unicode
  * (note that the return value may depend on the value of option.keepUnicodes).
  * @param {string} ch - the character to test.
- * @returns {boolean} True if character is MUFI PUA or problematic Unicode.
+ * @return {boolean} True if character is MUFI PUA or problematic Unicode.
  */
 function isMufiPua(ch) {
     let uni = ch.codePointAt(0);
@@ -374,7 +375,7 @@ function isMufiPua(ch) {
  * Tests whether a feature is on. This is a helper for resolveOtag().
  * @param {{string: number}} feature_dict - one-entry Object with the feature we're testing for.
  * @param {{string: number}} current_features - features currently on.
- * @returns {boolean} True if the feature is currently on.
+ * @return {boolean} True if the feature is currently on.
  */
 function isFeatureOn(feature_dict, current_features) {
     let tagname  = feature_dict.name;
@@ -391,7 +392,8 @@ function isFeatureOn(feature_dict, current_features) {
 }
 
 /**
- * Helper for resolveUtag() and resolveZwj(). Given a list of 
+ * Helper for resolveUtag(), applyEnlargeAxis(), and resolveZwj().
+ * Given a list of 
  * Unicode tags and a string, this function substitutes pairs of 
  * tags for placeholders (%^%) or, if there are no placeholders, 
  * appends them to the end of the string.
@@ -402,7 +404,7 @@ function isFeatureOn(feature_dict, current_features) {
  * @param {string} base - The string that forms the basis of the
  * output of resolveUtag() or resolveZwj().
  * @param {array} taglist - Array of one-character strings representing utags.
- * @returns {string} The base with tags merged in.
+ * @return {string} The base with tags merged in.
  */
 function mergeTags(base, taglist) {
     if (taglist.length >= 2) {
@@ -458,7 +460,7 @@ function applyEnlargeAxis(enla, base, current_tags) {
  * @param {array} current_tags - array of OpenType features currently on.
  * @param {number} current_pass - 0 for first pass, 1 for second.
  * @param {string} tags_name - name of the tags key to look for
- * @returns {array} - Array with converted base and number of replacements made.
+ * @return {array} - Array with converted base and number of replacements made.
  */
 function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags") {
     let word_tag_count = 0;
@@ -534,7 +536,7 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
  * @param {string} base  - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently on.
  * @param {number} current_pass - 0 for first pass, 1 for second.
- * @returns {string} - the converted base.
+ * @return {string} - the converted base.
  */
 function resolveZwj(zwj, base, current_tags, current_pass=1) {
     const loclbase = ("base" in zwj) ? zwj.base : base;
@@ -581,7 +583,7 @@ function resolveZwj(zwj, base, current_tags, current_pass=1) {
  * @param {string} base - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently active.
  * @param {number} current_pass - 0 for first pass, 1 for second.
- * @returns {string} - the converted base.
+ * @return {string} - the converted base.
  */
 function resolveUtag(utag, base, current_tags, current_pass=1) {
     let loclbase = "base" in utag ? utag.base : base;
@@ -614,7 +616,7 @@ function resolveUtag(utag, base, current_tags, current_pass=1) {
  * @param {string} base - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently active.
  * @param {number} current_pass - 0 for first pass, 1 for second.
- * @returns {string} - the converted base.
+ * @return {string} - the converted base.
  */
 function resolveEntity(entity, base, current_tags, current_pass=1) {
     let loclbase = ("base" in entity) ? entity.base : base;
@@ -631,7 +633,7 @@ function resolveEntity(entity, base, current_tags, current_pass=1) {
  * json block needed for the next method.
  * @param {*} char_block {object} - The character block to search for
  * a suitable conversion method for the current character.
- * @returns {array} - 0: a string with the selected type; 1: section
+ * @return {array} - 0: a string with the selected type; 1: section
  * of the character block needed for pending operation.
  */
 function getMethodBlock(char_block, h) {
@@ -655,7 +657,7 @@ function getMethodBlock(char_block, h) {
  * @param {string} text_buffer - The text in which to perform a 
  * search-and-replace operation substituting characters for MUFI
  * entitys.
- * @returns {string} the text_buffer after the search-and-replace
+ * @return {string} the text_buffer after the search-and-replace
  */
 function replaceEntities(text_buffer) {
     return text_buffer.replace(ENTITY_MAP, matched => entityDict[matched]);
@@ -666,23 +668,24 @@ function replaceEntities(text_buffer) {
  * Not currently used, but ready!
  * @param {object} codepoint_entry - block in which to search for the
  * currently active language.
- * @returns {object} The block for the selected language, or null if the function has failed.
+ * @return {object} The block for the selected language, or null if the function has failed.
  */
 function getLangBlock(codepoint_entry) {
     lang = _language;
-    if (lang in codepoint_entry.lang){
+    return lang in codepoint_entry.lang ? codepoint_entry.lang[lang] : codepoint_entry.lang["other"];
+    /* if (lang in codepoint_entry.lang){
         return codepoint_entry.lang[lang];
     } else if ("other" in codepoint_entry.lang) {
         return codepoint_entry.lang["other"];
     }
-    return null;
+    return null; */
 }
 
 /**
  * Allows you to select alternate bases for certain categories of character: number,
  * insular, alpha, currency, punctuation, mark, smallcap.
  * @param {object} codepoint_entry - The json block for the current character
- * @returns {object} - The block for the selected base, or null if the function has failed.
+ * @return {object} - The block for the selected base, or null if the function has failed.
  */
 function getVarBlock(codepoint_entry) {
     for (const v in _basePreferences) {
@@ -707,7 +710,7 @@ function getVarBlock(codepoint_entry) {
  * @param {boolean} code_on - In the GUI flavor, whether the "Show code" box is checked, and the
  * underlying code is showing in the "Destination" box. In embedded and Node flavors you must
  * also set options.replaceMUFIEntities.
- * @returns {string} The processed text.
+ * @return {string} The processed text.
  */
 function convert(text_buffer, repl_ent = true, code_on = false) {
     /*

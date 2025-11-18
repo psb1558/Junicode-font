@@ -1,9 +1,9 @@
 \documentclass[12pt,letterpaper,openany]{article}
-\title{Converting PUA characters to Unicode}
+\title{pua2ot: A Utility for Junicode}
 \author{Peter S. Baker}
 \date{\today}
 
-\usepackage{junicodevf}
+\usepackage[MainFeatures={Language=English,StylisticSet=9}]{junicodevf}
 \setsansfont{Noto Sans}[Scale=MatchLowercase,Numbers=Lowercase]
 
 \usepackage[hypertexnames=true, plainpages=false, pdfpagelabels]{hyperref}
@@ -15,9 +15,11 @@
 
 \definecolor{GGOrange}{RGB}{240,74,6}
 \definecolor{BrickRed}{RGB}{146,18,6}
+\definecolor{myLightPurple}{RGB}{138,43,226}
 \newcommand\textSourceText[1]{{\color{GGOrange}\textsf{#1}}}
 \newcommand\textex[1]{\textrm{\textbf{\color{BrickRed}#1}}}
 \newcommand{\unic}[1]{{\jSmCond\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
+\newcommand{\pto}{\textsf{\color{myLightPurple}pua2ot}}
 
 \begin{document}
 
@@ -27,40 +29,131 @@
 
 Modern best practice, when typesetting documents or creating web pages, is to
 avoid the use of characters from the Unicode Private Use Area (PUA) whenever
-possible.\footnote{For an explanation, see the \textit{Junicode Manual}, §\,4.1} 
-The Medieval Unicode Font Initiative (MUFI) defines more than 
-850 PUA characters, and Junicode includes all of them. Junicode also offers alternatives
-to all but a handful of these PUA characters, based on standard (non-PUA)
-Unicode with OpenType features applied.
+possible, instead preferring standard Unicode characters styled with OpenType
+features.\footnote{For an explanation, see the \textit{Junicode Manual}, §\,4.1} 
+The Medieval Unicode Font Initiative (MUFI), founded before OpenType
+was widely supported by software, defines more than 850 PUA characters, and
+Junicode includes all of them. But the font also offers more-accessible 
+alternatives to all but a handful of these characters.
 
 OpenType is a powerful technology, but it is undeniably more difficult 
 to work with than MUFI’s PUA characters and entities. To copy any character (or its 
 corresponding entity) from the MUFI website and paste it into your text is a 
-straightforward procedure. By contrast,
-to work with OpenType one must locate the correct base character and the 
-best OpenType feature, and then figure out how to include the needed markup, 
-the syntax of which differs from one application to another.
+straightforward procedure. To do the same job with OpenType features is more 
+complex, requiring users to locate the correct Unicode characters
+and features and to figure out how to make them work together in various software 
+programs.
 
-For many users, a better procedure than struggling with OpenType tags may be to 
-enter a PUA code or (better) an entity and let software handle the task 
-of marking up the text appropriately. To help with this, the Junicode package
-includes a database that maps the relationships between MUFI’s PUA
-characters and Junicode’s OpenType features and a script that uses
-this database to convert any text’s PUA characters to standard Unicode with
-OpenType. This script, \textSourceText{pua2ot}, comes in several flavors, 
-all based on the script’s base file, \textSourceText{pua2ot-common.js}:
-one is a web app, the second a script to embed in a web page, and a third
-a Node module. \textSourceText{pua2ot} works with html/css markup because it 
-can easily be edited and can be imported into many applications.
+{\pto} automates this task. For each PUA character or MUFI entity in a 
+text or HTML document, the script substitutes a \textbf{base} consisting of 
+one or more standard Unicode characters and, if necessary, applies one or 
+more \textbf{methods} (grounded in OpenType technology) to style this base. For 
+many characters, more than one base is available, and more than one method.
 
-Before you do anything else with \textSourceText{pua2ot}, copy the two font files
+The methods employed by {\pto} are these:
+
+\begin{description}
+  \item[otag (OpenType tag).] One or more OpenType features is turned on for a 
+  character or sequence of characters in much the same way that, say, italics
+  can be applied to a run of text in a word processor: it is a modal method,
+  which has the advantage of being legible and widely understood but can greatly
+  swell the size of a text containing many PUA characters.
+
+  \item[utag (Unicode tag).] An alternative to the otag method is one (exclusive
+  to Junicode) that uses characters from the Unicode “Tags” range (U+E0020–E007E)
+  as a modeless style of markup in which a single base character is modified by 
+  two following tag characters. When used in a browser, tag characters are 
+  invisible and do not interfere with searches, but their invisibility can make 
+  them difficult to work with. {\pto} can use entities for tag characters to 
+  make them visible: the entities are resolved to tag characters when the text 
+  is displayed.
+
+  \item[zwj (Zero-width joiner).] The zwj character (U+200D) can be used to signal 
+  that two characters should be joined in a ligature: it provides an alternative 
+  to otag-style markup. For example, the PUA code point U+EBAC is a ligature of 
+  long \textex{s} (ſ) and insular \textex{v} (ꝩ): to obtain an equivalent one can 
+  apply the OpenType feature \textSourceText{hlig} (Historic Ligatures) to the 
+  base \textex{ſꝩ}—or one can place a zwj between the two characters. This method 
+  is similar to the utag method in that it is modeless and employs a character
+  that is typically invisible.
+
+  \item[entity (Junicode entities).] For technical reasons, combining marks 
+  encoded in the PUA should not be used, since software cannot position them 
+  correctly over their bases. One alternative is to use Junicode entities,
+  which resemble HTML entities but begin with an underscore. For example, in the
+  sequence \textSourceText{a\&\_upmc;}, the entity \textSourceText{\&\_upmc;}
+  represents an upward-curving macron, which will be correctly positioned
+  over the preceding a: \textex{\addfontfeature{StylisticSet=10}a\&\_upmc;}.
+
+  \item[enla (Enlarge axis).] For some forty-five of MUFI’s “enlarged” letters,
+  used to represent the \textit{litterae notabiliores} of medieval manuscripts,
+  one can use Junicode’s Enlarge axis, which allows one to control the size 
+  of the letters precisely (on a scale from 0 to 100, where 0 produces a 
+  letter the size of other lowercase letters, and 100 produces a lowercase 
+  letter the size of a capital—the default value is 32) without using either 
+  MUFI’s PUA characters or Junicode’s \textSourceText{ss06} “Enlarged minusucles”
+  feature.
+\end{description}
+
+Alternate bases are grouped as follows (their names are followed by the 
+identifiers to be used with the “Alternate bases” option, discussed below):
+
+\begin{description}
+  \item[Insular (\textSourceText{insular}).] By default, {\pto} replaces Unicode 
+  characters described as 
+  “insular” because these characters are often not searchable as their 
+  alphabetic equivalents. However, since some projects have have good reasons 
+  to retain these characters, {\pto}'s default behavior can be overridden (see 
+  “Options” below for details).
+
+  \item[Small caps (\textSourceText{smallcap}).] MUFI PUA characters described as 
+  “small capitals” are 
+  by default replaced by normal alphabetic characters with OpenType markup applied 
+  (typically \textSourceText{pcap} “Petite capitals”). But Unicode has characters 
+  labeled “small capital.” These are not intended as variants of alphabetic
+  characters (they are instead phonetic characters), and in some software they 
+  can’t be searched by their apparent alphabetic equivalents. But if you 
+  prefer, the Unicode small caps can be used as a base.
+
+  \item[Punctuation (\textSourceText{punctuation}).] MUFI encodes a number of 
+  punctuation marks in the PUA.
+  Often it is difficult to find a plausible Unicode base for these marks;
+  instead, Junicode uses the period as a base for all of them. Where
+  plausible bases are available, {\pto} uses them by default; but you can
+  use the period as a base if you prefer.
+
+  \item[Marks (\textSourceText{mark}).] As with punctuation, so with marks. 
+  All of MUFI's combining 
+  marks can be handled in Junicode as variants of the macron (U+0304), but 
+  where better bases are available, they are used by default. If you prefer,
+  you can use the macron for all PUA-encoded punctuation marks.
+
+  \item[Currency (\textSourceText{currency}).] All of MUFI's PUA-encoded currency
+  symbols are treated by 
+  Junicode as variants of U+00A4, Unicode's generic currency sign, but where 
+  plausible Unicode bases are available, those are used instead. If you prefer,
+  it is possible to use U+00A4 as the base for all PUA-encoded currency symbols.
+
+  \item[Miscellaneous alphabetic (\textSourceText{alpha}).] For a few alphabetic 
+  characters (U+E7E4 , 
+  U+EEFD , U+EEFE , U+F0A7 , U+F0A8 , U+F127 \,) more than one base can be 
+  used. The defaults here are chosen to promote accessibility, but these 
+  defaults can be overridden.
+\end{description}
+
+\noindent For both methods and bases, {\pto} consults a priority list: methods or base 
+classes are listed in order of preference: if more than one method or base class 
+is listed for a PUA character, the one that comes earliest in the priority list 
+is preferred. These lists are discussed further in the “Options” section below.
+
+Before you do anything else with {\pto}, copy the two font files
 \textSourceText{JunicodeVF-Roman.woff2} and \textSourceText{JunicodeVF-Italic.woff2}
 into the \textSourceText{pua2ot/fonts} directory in the unzipped
 Junicode file tree.
 
 \subsection{With Graphical User Interface}
 
-To use \textSourceText{pua2ot} with a GUI, find the file \textSourceText{pua2ot-gui.html} in
+To use {\pto} with a GUI, find the file \textSourceText{pua2ot-gui.html} in
 the \textSourceText{pua2ot/gui} directory and double-click or
 drag it into an up-to-date web browser. The program will look like this:
 
@@ -109,6 +202,7 @@ these lines at the very end of the {\textless}body{\textgreater}:
     // options.defaultTags = {"ss10": 1, "cv69": 7};
     // options.language = "en";
     // options.basePreferences = [];
+    // options.enlargedScale = 32;
     convertAll();
 </script>\end{verbatim}\end{scriptsize}
 
@@ -131,7 +225,7 @@ command are options, explained in a later section.
 
 The file \textSourceText{pua2ot-common.js} includes instructions for using it as
 a Node module, but if you are not making changes in the programming you can use
-\textSourceText{node/pua2ot-node-min.js}, which packages the \textSourceText{pua2ot}
+\textSourceText{node/pua2ot-node-min.js}, which packages the {\pto}
 database and program code in a single minified file. The file exports the object
 \textSourceText{options} (the options it supplies are listed in the next section)
 and two functions: \textSourceText{pua2otNode.cleanup\_string(s)}, which collapses
@@ -155,30 +249,34 @@ manipulated to affect the program's output.
 \subsection{More legible markup}
 
 Default: \textSourceText{options.methodPriority="compact"}.
-By default, \textSourceText{pua2ot} substitutes standard Unicode characters modified by 
-Unicode tag characters (characters from the Unicode tag range) for MUFI PUA characters 
-whenever possible. This method produces
-relatively compact and accessible web pages. However, Unicode tags are invisible, making 
-them hard to edit, and Junicode 
-is the only font that uses them in this way: the method is not exactly portable. If 
-you check the “More legible markup” box or set
-\textSourceText{options.methodPriority="legible"}, \textSourceText{pua2ot} will instead 
-use {\textless}span{\textgreater} elements with inline style
-attributes that turn on OpenType features. The chief advantages of this method are that 
-you can see and easily edit the markup, and HTML
-elements are more familiar to users than Unicode tags. However, the resulting files
-are a good bit bulkier than those that use Unicode tags. You can produce smaller and 
-better organized files by running the output of this script through a utility (e.g. the 
+By default, {\pto} uses the \textbf{utag} method for most of its 
+conversions of single characters and the \textbf{zwj} method for most ligatures: these 
+two methods occur first in the “compact” preference list. Because the Unicode tags and
+zero-width joiner employed by these methods are zero-width and invisible, they can
+make it difficult to diagnose problems in your code. If you set this option to 
+“legible,” {\pto} will prefer the \textbf{otag} and (where appropriate) \textbf{enla} 
+methods, which insert HTML tags into the text so that you can see clearly what the code 
+is doing. If you choose the “legible” option to generate a web page, the HTML file 
+for the page will be noticeably larger than with the “compact” option: you should 
+consider running the output of this script through a utility (e.g. the 
 \href{https://www.npmjs.com/package/html-style-converter}{Javascript HTML Style 
 Converter}) that converts inline styles to a CSS stylesheet.
+
+\subsection{options.prefList}
+
+Default: options.prefList = [\char"0022utag\char"0022, \char"0022zwj\char"0022,%
+\char"0022enla\char"0022, \char"0022otag\char"0022, \char"0022entity\char"0022].
+Not available in the GUI flavor. Use this option to install a custom priority 
+list instead of the two predefined lists labeled “compact” and “legible.”
+Methods that come earlier in the array are preferred over those that come later.
 
 \subsection{Use entities for Unicode tags}
 
 Default: \textSourceText{options.utagEntities=false}.
-If \textSourceText{true}, \textSourceText{pua2ot} uses entities to represent Unicode tags. (These are not 
+If \textSourceText{true}, {\pto} uses entities to represent Unicode tags. (These are not 
 HTML entities, but unique to Junicode.) This makes the code produced by this script more 
 legible, but the entities make the page somewhat larger and can interfere with searching.
-It is probably best to use this feature to help you spot problems with your Unicode tags
+The best use of this feature may be to help you spot problems with your Unicode tags
 and turn it off before publishing your text.
 
 \subsection{Keep problematic Unicodes}
@@ -186,34 +284,24 @@ and turn it off before publishing your text.
 Default: \textSourceText{options.keepUnicode=false}. “Problematic Unicodes” 
 are characters that are standard Unicode (not PUA) and look like 
 variants of common characters, but that many applications do not recognize as 
-variants. Examples include dotless i (\textex{ı}, \unic{U+0131}) and the “insular” letter-shapes 
-(e.g. \textex{ꝺ}, \unic{U+A77A}). By default, this script replaces these characters with ones that can 
-be searched as letters of the alphabet (e.g. \textex{ꝺ} as \textex{d}). To retain the 
-“problematic Unicodes,” likely simplifying your markup and making your file smaller, but 
-making your text less accessible in some applications, check this box in the GUI version 
-or set \textSourceText{options.keepUnicode=true}.
+variants. Examples include dotless i (\textex{ı}, \unic{U+0131}) and the “insular” 
+letter-shapes (e.g. \textex{ꝺ}, \unic{U+A77A}). By default, this script replaces these 
+characters with ones that can be searched as letters of the alphabet (e.g. \textex{ꝺ} as
+\textex{d}). To retain the “problematic Unicodes,” likely simplifying your markup and
+making your file smaller, but making your text less accessible in some applications, 
+check this box in the GUI version or set \textSourceText{options.keepUnicode=true}.
 
 \subsection{Alternate bases}
 
 Default: \textSourceText{options.basePreferences=[]}.
 As a large font with many OpenType features, Junicode often provides more than one way 
-to achieve the outcome you want. \textSourceText{Pua2ot} operates by substituting a standard Unicode
-\textbf{base} character for a PUA character and then applying OpenType markup to that 
-base: \textSourceText{pua2ot} options affect both the base and the markup. This option affects several
-classes of character (\textbf{insular} letters, Unicode-encoded \textbf{small caps},
-\textbf{punctuation}, combining \textbf{marks}, \textbf{currency} signs, and a small 
-collection of alphabetic characters (\textbf{alpha})). Select
-one or more of the items in this list (use the Shift or Control/Command keys to make
-multiple selections) or assign an array to \textSourceText{options.basePreferences}
-to alter the substitutions \textSourceText{pua2ot} makes for many characters in these classes. The
-default settings are chosen to maximize accessibility and minimize the size of 
-the output file, but you may have good reasons for preferring alternate choices. For 
-example, small caps can by default be searched as their lowercase equivalents (e.g. 
-as \textex{a}), but if these small caps make a meaningful distinction in your text,
-you may wish readers to be able to search for them by their Unicode values instead 
-(\unic{U+1D00} for \textex{ᴀ}). Use this option to maintain that distinction.
+to achieve the outcome you want. This option affects the character classes
+mentioned above, pp. 2–3. Select one or more of the items in the GUI list (use the 
+Shift or Control/Command keys to make multiple selections) or assign an array
+containing the identifiers for these classes to \textSourceText{options.basePreferences}:
+{\pto} will use alternate bases for the classes you select.
 
-\subsection{replaceMUFIEntities}
+\subsection{options.replaceMUFIEntities}
 
 Default: \textSourceText{options.replaceMUFIEntities=true}.
 If \textSourceText{true}, MUFI’s entities (those that
@@ -238,7 +326,8 @@ by a colon and a number (1 means “on,” but some features (especially the \te
 \subsection{Non-word tags}
 
 Default: \textSourceText{options.nonWordTags=[\char"0022ss04\char"0022,\,\char"0022ss05\char"0022,\,\char"0022%
-ss06\char"0022,\,\char"0022pcap\char"0022,\,\char"0022smcp\char"0022,\,\char"0022hlig\char"0022]}.
+ss06\char"0022,\,\char"0022pcap\char"0022,\,\char"0022smcp\char"0022,\,\char"0022hlig\char"0022,\,%
+\char"0022enla\char"0022]}.
 When “More legible markup” 
 is checked, the script applies most <span> tags to whole words, but 
 a few to individual characters. This distinction is based on an educated guess as to which OpenType 
@@ -260,5 +349,15 @@ language is not in the drop-down list (available
 only in the GUI version of this script), choose 
 “Other” and type in the two-letter code for the language (you can look it up 
 \href{https://www.w3schools.com/tags/ref_language_codes.asp}{here}.)
+
+\subsection{Enlarge axis scale}
+
+Default: \textSourceText{options.enlargedScale=32}.
+When \textSourceText{options.methodPriority="compact"}, or when you use a custom priority list 
+with \textSourceText{“enla”} near the top, {\pto} will invoke Junicode’s Enlarge Axis for 
+“enlarged minuscules.” One advantage of this method is that you can precisely control their 
+size on a scale from 0 (the letter is the same size as other lowercase letters) to 100 (the
+letter is the same size and weight as a capital). The default is 32, which makes it the same 
+size as the enlarged minuscules produced by other means.
 
 \end{document}

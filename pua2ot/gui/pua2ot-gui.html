@@ -43,8 +43,12 @@
                 display: flex;
                 column-gap: 10px;
             }
-            #destbox {
+            /* #destbox {
                 font-feature-settings: "ss10", "cv69" 7;
+            } */
+            #char_skip {
+                font-family: junicode;
+                font-feature-settings: "lnum", "tnum";
             }
             .edit-box {
                 padding: 10px;
@@ -192,7 +196,9 @@
                             <option value="mark">Marks</option>
                             <option value="currency">Currency</option>
                             <option value="alpha">Misc. alphabetic</option>
-                        </select>
+                        </select><br>
+                        <label for="char_skip">Skip characters:</label>
+                        <input type="text" id="char_skip" value=""><br>
                     </td>
                     <td>
                         <label for="problem_unicodes">Keep problematic Unicodes:</label>
@@ -200,11 +206,11 @@
                         <label for="enlarge_scale">Enlarge axis scale:</label>
                         <input type="number" id="enlarge_scale" value="32" min="0" max="100"><br>
                         <label for="default_features">Default features:</label>
-                        <input type="text" id="default_features" value='"ss10": 1, "cv69": 7'
+                        <input type="text" id="default_features" value="ss10 cv69[7]"
                             style="background-color: initial;"><br>
                         <label for="non_word_tags">Non-word tags:</label>
                         <input type="text" id="non_word_tags"
-                            value='"ss04", "ss05", "ss06", "pcap", "smcp", "hlig"'
+                            value='ss04 ss05 ss06 pcap smcp hlig'
                             style="background-color: initial;"><br>
                         <label for="language_choice">Language:</label>
                         <select id="language_choice">
@@ -246,7 +252,7 @@
             <li>
                 <b>Use entities for Unicode tags.</b> The conversion will insert
                 entities (not HTML entities, but Junicode’s). These may interfere with 
-                searching.
+                searching, but they make Unicode tags visible.
             </li>
             <li>
                 <b>Alternate bases.</b> For several categories of character, there
@@ -258,6 +264,14 @@
                 the alternate bases for that category.
             </li>
             <li>
+                <b>Skip characters.</b> This is a space-separated list of characters 
+                (and/or hexadecimal codes) that you would rather not have converted.
+                For this list to be valid, the characters must all be part of the 
+                collection of PUA and other characters that this script replaces;
+                any hexadecimal codes must be at least four characters long (pad 
+                with zeros if necessary).
+            </li>
+            <li>
                 <b>Keep problematic Unicodes.</b> In addition to PUA characters,
                 the script converts Unicodes that <i>look</i> like letters of the 
                 alphabet, but that many apps do not recognize as such. If you want to
@@ -266,7 +280,7 @@
             <li>
                 <b>Enlarge axis scale.</b> In “legible” mode, this app uses
                 Junicode’s Enlarge axis to produce MUFI’s Enlarged minuscules (see 
-                the \textit{Junicode Manual, Chapter 7). In this mode, you can
+                the <i>Junicode Manual</i>, Chapter 7). In this mode, you can
                 adjust the size of these letters precisely, on a scale from 0 (letters
                 are the size and weight of lowercase letters) to 100 (letters are 
                 the same size and weight as capitals). The default value is 32, which
@@ -276,26 +290,28 @@
             <li>
                 <b>Default features.</b> These are the OpenType features that should
                 always be on in your document: the script needs to track them. On
-                export, they will be output to a &lt;div&gt; enclosing the text. This
-                is a list of key-value pairs, with the keys in quotation marks 
-                followed by a colon and a number (1 = “on”).
+                export, they will be output to a &lt;div&gt; enclosing the text. This 
+                is a space-separated series of four-letter OpenType tags. If the feature
+                requires an index, type the number in brackets after the tag (e.g.
+                <b>cv69[7]</b>). These tags are not validated aside from checking that
+                they are four characters long.
             </li>
             <li>
                 <b>Non-word tags.</b> Most OpenType features are applied to whole words;
                 the features listed here are instead applied to individual letters.
                 If you decide that another feature should be applied only to individual
-                letters, add it to this list. Tag names must be enclosed in quotation
-                marks and separated by commas.
+                letters, add it to this list. Only feature tags used by pua2ot are 
+                accepted here.
             </li>
             <li>
                 <b>Language.</b> The language of the text. Be sure to set this, since
                 OpenType features may act differently depending on the language.
             </li>
         </ul>
-        <!-- <script src="pua2ot-gui-min.js"></script> -->
-        <script src="../src/PUA2OT_DATA.js"></script>
+        <script src="./pua2ot-gui-min.js"></script>
+        <!-- <script src="../src/PUA2OT_DATA.js"></script>
         <script src="../src/pua2ot-common.js"></script>
-        <script src="../src/pua2ot-gui.js"></script>
+        <script src="../src/pua2ot-gui.js"></script> -->
     </body>
 
 </html>

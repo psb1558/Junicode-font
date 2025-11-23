@@ -23,9 +23,156 @@ let textBackup = "";
 */
 let htmlDoc = null;
 
+const cvRegEx = /^cv\d\d$/;
+const ssRegEx = /^ss\d\d$/;
+
+const OTTags = ["case", "hlig", "dlig", "liga", "pcap", "smcp", "sups"];
+
 // ---------------------------------------------
 // END OF VARIABLE SETUP. FUNCTIONS BEGIN.
 // ---------------------------------------------
+
+/**
+ * Tests if this is a Character Variant (cvNN) tag.
+ * 
+ * @param {string} s - The string to test.
+ * @returns {boolean} True if the string is a Stylistic Set tag.
+ */
+const is_cv_tag = s => s.match(cvRegEx) != null;
+
+/**
+ * Tests if this is a Stylistic Set (ssNN) tag.
+ * 
+ * @param {string} s - The string to test.
+ * @returns {boolean} True if the string is a Stylistic Set tag.
+ */
+const is_ss_tag = s => s.match(ssRegEx) != null;
+
+/**
+ * Tests if this is one of the tags (other than
+ * ssNN or cvNN) used by this program.
+ * 
+ * @param {string} s - The string to test.
+ * @returns {boolean} True if the tag is valid.
+ */
+const is_other_tag = s => OTTags.includes(s);
+
+/**
+ * Tests whether a string is one of the OpenType tags used by this
+ * program.
+ * 
+ * @param {string} - The string to test.
+ * @return {boolean} True if this is a valid tag.
+ */
+const is_OT_tag = (s) => is_cv_tag(s) || is_ss_tag(s) || is_other_tag(s);
+
+/**
+ * Tests if the argument is a valid hexadecimal number. Number
+ * should have been converted to uppercase before the test.
+ * 
+ * @param {string} s - String to test.
+ * @returns {boolean} Result of the test.
+ */
+function isHex(s) {
+  return /^[0-9a-fA-F]+$/.test(s);
+}
+
+/**
+ * Converts a string consisting of a space-separated series of
+ * hexadecimal numbers and/or single characters to an array of
+ * hexadecimal strings.
+ * 
+ * @param {string} s - The string to convert.
+ * @returns {array} An array of hexadecimal codes, or null if
+ * any of the elements of the input string are not hexadecimal
+ * numbers or not single characters or not in this app's collection
+ * of codes/characters to replace.
+ */
+function mkHexArray(s) {
+    const hexArray = [];
+    if (s.length == 0) {
+        return hexArray;
+    }
+    const a = cleanup_string(s).split(" ");
+    for (i in a) {
+        let ss = a[i];
+        if (realLength(ss) == 1) {
+            let h = int2hex(ss.codePointAt(0));
+            if (h in PUA_DATA) {
+                hexArray.push(h);
+            } else {
+                return null;
+            }
+        } else {
+            ss = ss.toUpperCase();
+            if (realLength(ss) < 4 || !isHex(ss)) {
+                return null;
+            }
+            if (ss in PUA_DATA) {
+                hexArray.push(ss);
+            } else {
+                return null;
+            }
+        }
+    }
+    return hexArray;
+}
+
+/**
+ * Converts a string consisting of a space-separated series of
+ * four-letter tags to an array of tags. Note that these tags
+ * are not validated, beyond testing that they are four characters
+ * long.
+ * 
+ * @param {string} s - The string to convert.
+ * @return {array} The array of tags. Null if any of the tags
+ * are not four characters long.
+ */
+function mkTagArray(s) {
+    const tagArray = [];
+    if (s.length == 0) {
+        return tagArray;
+    }
+    const a = cleanup_string(s).split(" ");
+    for (i in a) {
+        ss = a[i];
+        //if (realLength(ss) != 4) {
+        if (!is_OT_tag(ss)) {
+            return null;
+        }
+        tagArray.push(ss);
+    }
+    return tagArray;
+}
+
+/**
+ * Parses a tag and optional index in the format tag or tag[number]
+ * and returns an array where a[0] is the tag and a[1] the index.
+ * 
+ * @param {string} s - The string to parse.
+ * @returns {array} Array with tag and index.
+ */
+function parseIndexedTag(s) {
+    openBracket = s.indexOf("[");
+    closeBracket = s.indexOf("]");
+    if (openBracket == -1 || closeBracket == -1) {
+        if (s.length == 4) {
+            return [s, 1];
+        }
+        return null;
+    }
+    const tag = s.slice(0, openBracket);
+    if (tag.length != 4) {
+        return null;
+    }
+    const idxs = s.slice(openBracket + 1, closeBracket);
+    const idx = parseInt(idxs);
+    // Test if idx is NaN.
+    if (idx !== idx) {
+        return null;
+    }
+    return [tag, idx];
+}
 
 /**
  * Tests whether the text we're working with is plain text or html.
@@ -182,11 +329,23 @@ function htmlCaller(repl_ent) {
     }
     let node;
     while ((node = walker.nextNode())) {
-        let nv = node.nodeValue.trim();
-        if (nv.length > 0) {
-            const newNode = document.createElement('span');
-            newNode.innerHTML = " " + convert(nv, repl_ent, codeOn) + " ";
-            replacementList.push([node, newNode]);
+        console.log(typeof node.parentNode.classList);
+        console.log(node.parentNode.classList);
+        if (node.parentNode.classList.contains("noconv")) {
+            console.log("text",node.textContent);
+            //replacementList.push([node, null])
+        } else {
+            let nv = node.nodeValue;
+            const hasLeadingWhitespace = /^\s/.test(nv);
+            const hasTrailingWhitespace = /\s$/.test(nv);
+            const leading = hasLeadingWhitespace ? " " : "";
+            const trailing = hasTrailingWhitespace ? " " : "";
+            nv = nv.trim();
+            if (nv.length > 0) {
+                const newNode = document.createElement('span');
+                newNode.innerHTML = leading + convert(nv, repl_ent, codeOn) + trailing;
+                replacementList.push([node, newNode]);
+            }
         }
     }
     for (var idx in replacementList) {
@@ -283,6 +442,7 @@ let restoreSource = restoreSourceText;
     Load file via input button
     Edit source
     Variant bases
+    Enlarge axis scale
    --------------------------------------------- */
 
 // Access to our two text boxes.
@@ -314,33 +474,61 @@ keepUnicodesWidget.addEventListener('change', function() {
     textCaller(!codeOn);
 } );
 
+/**
+ * Parse a space-separated series of tags in JunicodeManual format
+ * (tag[index] or unindexed tag), plug it into options.defaultTags,
+ * and regenerate the destination text.
+ * 
+ * @param {string} tagString - The string to parse.
+ * @returns {boolean} whether the operation was successful.
+ */
+function applyDefaultTags(tagString) {
+    let err = false;
+    const ar = cleanup_string(tagString).split(' ');
+    const result = {};
+    for (i in ar) {
+        const arr = parseIndexedTag(ar[i]);
+        err = (arr == null);
+        if (err) {
+            break
+        } else {
+            result[arr[0]] = arr[1];
+        }
+    }
+    if (!err) {
+        options.defaultTags = result;
+        destElement.style.fontFeatureSettings = featureString(options.defaultTags);
+        textCaller(!codeOn);
+    }
+    return err;
+}
+
 // "Default features" edit box.
 let defaultFeaturesWidget = document.getElementById('default_features');
 defaultFeaturesWidget.addEventListener('input', function () {
-    let effort = "{" + this.value + "}";
-    try {
-        let result = JSON.parse(effort);
-        options.defaultTags = result;
-        let box_feature_string = featureString(options.defaultTags);
-        destElement.style.fontFeatureSettings = box_feature_string;
+    let raws = this.value;
+    let err = false;
+    if (raws.length == 0) {
+        options.defaultTags = {};
+        destElement.style.fontFeatureSettings = "";
         textCaller(!codeOn);
         this.style.backgroundColor = 'initial';
-    } catch (error) {
-        this.style.backgroundColor = 'lightcoral';
+    } else {
+        err = applyDefaultTags(raws);
+        this.style.backgroundColor = err ? 'lightcoral' : 'initial';
     }
 } );
 
 // "Non-word tags" edit box.
 let nonWordWidget = document.getElementById('non_word_tags');
 nonWordWidget.addEventListener('input', function () {
-    let effort = "[" + nonWordWidget.value + "]";
-    try {
-        let result = JSON.parse(effort);
-        options.nonWordTags = result;
+    const e = mkTagArray(nonWordWidget.value);
+    if (e == null) {
+        this.style.backgroundColor = 'lightcoral';
+    } else {
+        options.nonWordTags = e;
         textCaller(!codeOn);
         this.style.backgroundColor = 'initial';
-    } catch (error) {
-        this.style.backgroundColor = 'lightcoral';
     }
 } );
 
@@ -507,15 +695,29 @@ varWidget.addEventListener('change', ()=> {
 let enlaWidget = document.getElementById('enlarge_scale');
 enlaWidget.addEventListener('change', ()=> {
     s = parseInt(enlaWidget.value);
-    console.log("s:", enlaWidget.value);
     if (s != NaN) {
         if (s >= 0 && s <=100) {
             options.enlargedScale = s
         }
     }
     textCaller(!codeOn);
-    console.log("scale:", options.enlargedScale);
 } );
+
+let charSkipWidget = document.getElementById("char_skip");
+charSkipWidget.addEventListener('input', function() {
+    a = mkHexArray(this.value);
+    if (a == null) {
+        this.style.backgroundColor = 'lightcoral';
+    } else {
+        options.charSkip = a;
+        if (puaWidget.checked) {
+            restoreSource();
+            puaMarker();
+        }
+        textCaller(!codeOn);
+        this.style.backgroundColor = 'initial';
+    }
+});
 
 /*
     Now complete initialization by cleaning up the source text (convert 
@@ -523,6 +725,7 @@ enlaWidget.addEventListener('change', ()=> {
     the destinaton box.
 */
 
-sourceElement.innerText = textBackup = cleanup_string(sourceElement.innerText)
+sourceElement.innerText = textBackup = cleanup_string(sourceElement.innerText);
+applyDefaultTags(defaultFeaturesWidget.value);
 
 textCaller(!codeOn);

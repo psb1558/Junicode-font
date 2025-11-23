@@ -262,7 +262,6 @@ function setupListeners() {
     });
 }
 
-
 // We need to be able to see these Unicode tags.
 options.utagEntities = true;
 
@@ -279,7 +278,14 @@ tableHeaderCell("entity", toprow);
 tableHeaderCell("enla", toprow);
 tbl_head.appendChild(toprow);
 
+let PUA_LIST = [];
 for (h in PUA_DATA) {
+    PUA_LIST.push(hex2int(h));
+}
+let puaCounter = 0
+PUA_LIST.sort((a, b) => a - b);
+for (const hi of PUA_LIST) {
+    const h = int2hex(hi);
     let description = "";
     let block = PUA_DATA[h];
     if ("desc" in block) {
@@ -300,11 +306,14 @@ for (h in PUA_DATA) {
             let r = makeRow(h, d, dbl[d], description);
             tbl_body.appendChild(r);
             options.basePreferences = varbackup;
+            puaCounter += 1;
         }
     } else {
         r = makeRow(h, null, block, description);
         tbl_body.appendChild(r);
+        puaCounter += 1;
     }
 }
+console.log("Rows:", puaCounter);
 
 setupListeners();

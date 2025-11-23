@@ -966,6 +966,35 @@ const PUA_DATA = {
             }
         }
     },
+    "A779": {
+        "desc": "LATIN CAPITAL LETTER INSULAR D",
+        "mntity": "Drot",
+        "var": {
+            "insular": {
+                "base": "Ꝺ"
+            },
+            "other": {
+                "base": "D",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv07"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
     "A77A": {
         "desc": "LATIN SMALL LETTER INSULAR D",
         "mntity": "drot",
@@ -1026,6 +1055,64 @@ const PUA_DATA = {
             }
         }
     },
+    "A77D": {
+        "desc": "LATIN CAPITAL LETTER INSULAR G",
+        "mntity": "fins",
+        "var": {
+            "insular": {
+                "base": "Ᵹ"
+            },
+            "other": {
+                "base": "G",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv13"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A782": {
+        "desc": "LATIN CAPITAL LETTER INSULAR R",
+        "mntity": "Rins",
+        "var": {
+            "insular": {
+                "base": "Ꞃ"
+            },
+            "other": {
+                "base": "R",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv35"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
     "A783": {
         "base": "r",
         "desc": "LATIN SMALL LETTER INSULAR R",
@@ -1057,6 +1144,35 @@ const PUA_DATA = {
             }
         }
     },
+    "A784": {
+        "desc": "LATIN CAPITAL LETTER INSULAR S",
+        "mntity": "Sins",
+        "var": {
+            "insular": {
+                "base": "Ꞅ"
+            },
+            "other": {
+                "base": "S",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv37"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
     "A785": {
         "desc": "LATIN SMALL LETTER INSULAR S",
         "mntity": "sins",
@@ -1071,6 +1187,35 @@ const PUA_DATA = {
                     "tags": [
                         {
                             "name": "cv38"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "A786": {
+        "desc": "LATIN CAPITAL LETTER INSULAR T",
+        "mntity": "Trot",
+        "var": {
+            "insular": {
+                "base": "Ꞇ"
+            },
+            "other": {
+                "base": "T",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv39"
                         }
                     ]
                 },
@@ -1929,9 +2074,33 @@ const PUA_DATA = {
         "mntity": "Oslashcurl"
     },
     "E3E5": {
-        "base": "Ꝼ̣",
         "desc": "LATIN CAPITAL LETTER INSULAR F WITH DOT BELOW",
-        "mntity": "Finsdotbl"
+        "mntity": "Finsdotbl",
+        "var": {
+            "insular": {
+                "base": "Ꝼ̣"
+            },
+            "other": {
+                "base": "F%^%̣",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv11"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
     },
     "E3E6": {
         "base": "Ꝩ̣",
@@ -3929,9 +4098,39 @@ const PUA_DATA = {
         }
     },
     "EBB3": {
-        "base": "Ꝼ́",
         "desc": "LATIN CAPITAL LETTER INSULAR F WITH ACUTE",
-        "mntity": "Finsacute"
+        "mntity": "Finsacute",
+        "var": {
+            "insular": {
+                "base": "Ꝼ́"
+            },
+            "other": {
+                "base": "F%^%́%^%",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv11"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        },
+                        {
+                            "name": "c"
+                        },
+                        {
+                            "name": "a"
+                        }
+                    ]
+                }
+            }
+        }
     },
     "EBB4": {
         "base": "ꝼ́",
@@ -4237,7 +4436,31 @@ const PUA_DATA = {
     "EBD3": {
         "desc": "LATIN CAPITAL LETTER INSULAR F WITH DOT ABOVE",
         "mntity": "Finsdot",
-        "base": "Ꝼ̇"
+        "var": {
+            "insular": {
+                "base": "Ꝼ̇"
+            },
+            "other": {
+                "base": "F%^%͏̇",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv11"
+                        }
+                    ]
+                },
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "i"
+                        },
+                        {
+                            "name": "n"
+                        }
+                    ]
+                }
+            }
+        }
     },
     "EBD4": {
         "desc": "LATIN SMALL LETTER INSULAR F WITH DOT ABOVE",
@@ -5321,8 +5544,7 @@ const PUA_DATA = {
                             "name": "e"
                         }
                     ]
-                },
-                "enla": {}
+                }
             }
         }
     },

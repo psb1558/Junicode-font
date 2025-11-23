@@ -33,11 +33,16 @@
             td, th {
                 padding: 4px;
             }
+            th {
+                font-family: notosans, Arial, sans-serif;
+                font-weight: normal;
+                font-size: 80%;
+            }
             .hex,  .desc, .basec, .utag, .entity {
                 background-color: MistyRose;
             }
             .hex {
-                font-feature-settings: "lnum", "tnum";
+                font-feature-settings: "lnum", "tnum", "zero";
             }
             .char, .otag, .zwj, .varc, .enla {
                 background-color: PowderBlue;
@@ -57,9 +62,13 @@
                 opacity: 1;
                 visibility: visible;
             }
-            #dialogtext {
-                font-family: notosans;
+            #dialogheadertext {
+                font-family: notosans, Arial, sans-serif;
                 font-size: 80%;
+            }
+            #dialogtext {
+                font-family: junicode;
+                font-feature-settings: "lnum", "tnum", "zero";
             }
             .table-container table thead th {
                 position: sticky;
@@ -84,7 +93,7 @@
         </p>
         <p lang="en">
             Next, check to make sure that any characters appearing in the last
-            four columns match the Private Use character. If the last four 
+            five columns match the Private Use character. If the last five 
             columns are blank for the row you have located, the contents of
             the “base” column are the replacement. This must also match
             the Private Use character.
@@ -92,7 +101,7 @@
         <p lang="en">
             Click on a cell in the “base”
             column to see the Unicodes that make up the base. Click on any of
-            the rightmost four columns to see the code that generates its
+            the rightmost five columns to see the code that generates its
             content. The dialog that displays this information has a “Copy”
             button, which copies it to the clipboard.
         </p>
@@ -117,9 +126,8 @@
         <script>
             options.defaultTags = {"ss10": 1};
             options.lang = "is";
-            // options.enlargedScale = 32;
             // options.utagEntities = false;
-            // options.nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "font-variation-settings" ];
+            // options.nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "ENLA" ];
             // options.keepUnicode = false;
             // options.methodPriority = "compact";
             // options.prefList = [ "utag", "zwj", "enla", "otag", "entity" ];
@@ -127,6 +135,7 @@
             // options.basePreferences = [];
             // options.replaceMUFIEntities = true;
             // options.enlargedScale = 32;
+            // options.charSkip = [];
         </script>
         <script src="./mklist.js"></script>
     </body>

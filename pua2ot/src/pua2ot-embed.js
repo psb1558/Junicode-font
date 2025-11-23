@@ -40,9 +40,13 @@ function convertAll() {
         }
         nv = cleanup_string(nv);
         if (nv.length > 0) {
+            const hasLeadingWhitespace = /^\s/.test(nv);
+            const hasTrailingWhitespace = /\s$/.test(nv);
+            const leading = hasLeadingWhitespace ? " " : "";
+            const trailing = hasTrailingWhitespace ? " " : "";
             nv = convert(nv, true, false);
             newSpan = document.createElement("span");
-            newSpan.innerHTML = " " + nv + " ";
+            newSpan.innerHTML = leading + nv + trailing;
             replacements.push([parentEl, node, newSpan]);
         }
     }

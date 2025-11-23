@@ -42,12 +42,13 @@
      * Defines Unicodes for problematic Unicodes (those that look like variants
      * on letters of the alphabet but are not).
      */
-    const UNICODE_HEXES = [ '0131', '1D00', '1D01', '0299', '1D04', '1D05', '1D06',
-                            '1D07', 'A730', '0262', '029C', '026A', '1D0A', '1D0B',
-                            '029F', '1D0D', '0274', '1D0F', '0276', '1D18', '0280',
-                            'A731', '1D1B', '1D1C', '1D20', '1D21', '028F', '1D22',
-                            '1D79', 'A77A', 'A77C', 'A783', 'A785', 'A787', 'A75A',
-                            'A75B' ];
+    const UNICODE_HEXES = [ '0131', '0262', '026A', '0274', '0276', '0280', '028F',
+                            '029C', '0299', '029F', '1D00', '1D01', '1D04', '1D05',
+                            '1D06', '1D07', '1D0A', '1D0B', '1D0D', '1D0F', '1D18',
+                            '1D1B', '1D1C', '1D20', '1D21', '1D22', '1D79', '2E4A',
+                            '2E53', '2E54', 'A730', 'A731', 'A75A', 'A75B', 'A779',
+                            'A77A', 'A77C', 'A77D', 'A782', 'A783', 'A784', 'A785',
+                            'A786', 'A787', 'A7AF' ];
 
     /**
      * The default lookup for Unicode tags. This replaces directly with tag characters.
@@ -168,13 +169,15 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
 
     let _keepUnicode = false
 
-    let _nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "font-variation-settings" ];
+    let _nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "ENLA" ];
 
     let _language = "en";
 
     let _replaceMUFIEntities = true;
 
     let _utagLookup = UTAG_DICT;
+
+    let _charSkip = [];
 
     //const variantLabels = [ "insular", "smallcap", "punctuation", "alpha", "mark", "currency" ];
 
@@ -209,6 +212,7 @@ const ENTITY_MAP = new RegExp(Object.keys(entityDict).join("|"), "g");
 
 /**
  * Stores options for controlling the behavior of this script.
+ * 
  * @property {string} language - The language of the text being converted.
  * @property {boolean} utagEntities - Whether to substitute entities (instead of characters) for Unicode tags.
  * @property {string[]} nonWordTags - Lists OpenType features that can be applied only to letters, not to words.
@@ -219,9 +223,15 @@ const ENTITY_MAP = new RegExp(Object.keys(entityDict).join("|"), "g");
  * @property {string[]} basePreferences - Choose among different bases for certain categories of character.
  * @property {boolean} replaceMUFIEntities - Whether to search and replace MUFI entities.
  * @property {number} enlargedScale - Scale (0-100) for Enlarge axis.
+ * @property {string[]} charSkip - List of characters to skip (not convert).
  * @type {{string: string | boolean | string[] | object}}
  */
 let options = {}
+
+Object.defineProperty(options, 'charSkip', {
+    get: () => _charSkip,
+    set: a => _charSkip = a
+} );
 
 Object.defineProperty(options, 'language', {
     get: () => {return _language},
@@ -301,14 +311,23 @@ Object.defineProperty(options, 'enlargedScale', {
     set: s => _enlargedScale = s
 } );
 
-
 // ---------------------
 // FUNCTIONS
 // ---------------------
 
 /**
+ * Gets the length of a string, accounting correctly for characters
+ * that consist of more than one UTF-16 code unit.
+ * 
+ * @param {string} s - The string whose length we want.
+ * @return {number} Length of the string s.
+ */
+const realLength = s => [...s].length;
+
+/**
  *  Converts all whitespace characters to spaces and changes ampersand
  *  entity to a plain ampersand.
+ * 
  *  @param {string} s - The string to clean up.
  *  @return {string} The cleaned up string.
 */
@@ -316,29 +335,42 @@ const cleanup_string = s => s.replace(/\s+/g, " ").trim().replace(/&amp;/g, '&')
 
 /**
  * Gets a count of the placeholder sequences ("%^%") in a string.
+ * 
  * @param {string} s - The string to survey
  * @return {number} The number of placeholders in the string.
 */
-const placeholderCount = (s) => (s.match(phRegExp) || []).length;
+const placeholderCount = s => (s.match(phRegExp) || []).length;
+
+/**
+ * Converts a hexadecimal string to an integer.
+ * 
+ * @param {string} h - Hexadecimal number (as string).
+ * @returns {number} Integer derived from the hex sring.
+ */
+const hex2int = h => parseInt(h, 16);
+
+/**
+ * Converts an integer to a hexadecimal string.
+ * 
+ * @param {number} i - The number to be converted.
+ * @returns {string} Hexadecimal representation of the number.
+ */
+function int2hex(i) {
+    let h = i.toString(16).toUpperCase();
+    while (h.length < 4) {
+        h = '0' + h;
+    }
+    return h;
+}
 
 /**
  * Converts an object containing OpenType tags with indices into a
  * string that can be used with CSS font-feature-settings.
- * @param {{string: number}} tag_dict 
+ * 
+ * @param {{string: number}} Object containing tags and indices.
  * @return {string} A string that can be used with CSS font-feature-settings.
  */
 function featureString(tag_dict) {
-    /*
-    Converts a dict containing OpenType tags with
-    indices into a string that can be used with CSS
-    font-feature-settings.
-
-    Args:
-      tag_dict (dict): The dict to convert
-
-    Returns:
-      a string to be used with font-feature-settings
-    */
     let result_string = "";
     for (const key in tag_dict) {
         let idx = tag_dict[key];
@@ -356,14 +388,14 @@ function featureString(tag_dict) {
 /**
  * Tests whether a character is MUFI PUA or problematic Unicode
  * (note that the return value may depend on the value of option.keepUnicodes).
+ * 
  * @param {string} ch - the character to test.
  * @return {boolean} True if character is MUFI PUA or problematic Unicode.
  */
 function isMufiPua(ch) {
-    let uni = ch.codePointAt(0);
-    let hexstr = uni.toString(16).toUpperCase();
-    if (hexstr.length == 3) {
-        hexstr = "0" + hexstr;
+    const hexstr = int2hex(ch.codePointAt(0));
+    if (_charSkip.includes(hexstr)) {
+        return false;
     }
     if (UNICODE_HEXES.includes(hexstr)) {
         return !_keepUnicode;
@@ -373,6 +405,7 @@ function isMufiPua(ch) {
 
 /**
  * Tests whether a feature is on. This is a helper for resolveOtag().
+ * 
  * @param {{string: number}} feature_dict - one-entry Object with the feature we're testing for.
  * @param {{string: number}} current_features - features currently on.
  * @return {boolean} True if the feature is currently on.
@@ -401,6 +434,7 @@ function isFeatureOn(feature_dict, current_features) {
  * placeholders in the string. If it is shorter, the function
  * will repeat the last pair of tags until the placeholders are
  * all replaced.
+ * 
  * @param {string} base - The string that forms the basis of the
  * output of resolveUtag() or resolveZwj().
  * @param {array} taglist - Array of one-character strings representing utags.
@@ -436,6 +470,15 @@ function mergeTags(base, taglist) {
     return base;
 }
 
+/**
+ * Applies the ENLA axis to a base and returns the necessary
+ * markup.
+ * 
+ * @param {object} enla - Information for applying the ENLA axis.
+ * @param {string} base - The base for this operation.
+ * @param {array} current_tags - current active OT tags (not used).
+ * @returns {string} string with base and markup.
+ */
 function applyEnlargeAxis(enla, base, current_tags) {
     let loclbase = ("base" in enla) ? enla.base : base;
     if ("utags" in enla) {
@@ -455,6 +498,7 @@ function applyEnlargeAxis(enla, base, current_tags) {
  * generate the correctly formatted arguments for
  * font_feature_settings, which we plug into a "style"
  * attribute of a &lt;span&gt;. We wrap the "base" into the &lt;span&gt;.
+ * 
  * @param {object} otag - The block of json data we are using for the transformation.
  * @param {string} base - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently on.
@@ -532,6 +576,7 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
  * has a "utags" key, merge the utags into the base. A zwj block can
  * also have a "tags" section: if so, run resolveOtag after the other
  * processing.
+ * 
  * @param {object} zwj - The block of json data we are using for the transformation.
  * @param {string} base  - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently on.
@@ -579,6 +624,7 @@ function resolveZwj(zwj, base, current_tags, current_pass=1) {
  * characters. It can greatly reduce the amount of html required
  * in a file. If an OpenType tag is needed, just call
  * resolveOtag. If there's an error we just return the base.
+ * 
  * @param {object} utag - The block of json data we are using for the transformation.
  * @param {string} base - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently active.
@@ -612,6 +658,7 @@ function resolveUtag(utag, base, current_tags, current_pass=1) {
  * Place a Junicode (not MUFI) entity in the text in the place of the PUA
  * character. Junicode uses this for combining marks that
  * have only PUA code points.
+ * 
  * @param {object} entity - The block of json data we are using for the transformation.
  * @param {string} base - The letter(s) we are transforming.
  * @param {array} current_tags - array of OpenType features currently active.
@@ -631,6 +678,7 @@ function resolveEntity(entity, base, current_tags, current_pass=1) {
 /**
  * A helper for convert(). This function locates and returns the
  * json block needed for the next method.
+ * 
  * @param {*} char_block {object} - The character block to search for
  * a suitable conversion method for the current character.
  * @return {array} - 0: a string with the selected type; 1: section
@@ -654,6 +702,7 @@ function getMethodBlock(char_block, h) {
  * Run to replace MUFI entities with PUA code points. Uses
  * a regex method that's said to be efficient (important,
  * since we're doing 850+ searches).
+ * 
  * @param {string} text_buffer - The text in which to perform a 
  * search-and-replace operation substituting characters for MUFI
  * entitys.
@@ -666,6 +715,7 @@ function replaceEntities(text_buffer) {
 /**
  * Lets us define different method blocks for different languages.
  * Not currently used, but ready!
+ * 
  * @param {object} codepoint_entry - block in which to search for the
  * currently active language.
  * @return {object} The block for the selected language, or null if the function has failed.
@@ -673,17 +723,12 @@ function replaceEntities(text_buffer) {
 function getLangBlock(codepoint_entry) {
     lang = _language;
     return lang in codepoint_entry.lang ? codepoint_entry.lang[lang] : codepoint_entry.lang["other"];
-    /* if (lang in codepoint_entry.lang){
-        return codepoint_entry.lang[lang];
-    } else if ("other" in codepoint_entry.lang) {
-        return codepoint_entry.lang["other"];
-    }
-    return null; */
 }
 
 /**
  * Allows you to select alternate bases for certain categories of character: number,
  * insular, alpha, currency, punctuation, mark, smallcap.
+ * 
  * @param {object} codepoint_entry - The json block for the current character
  * @return {object} - The block for the selected base, or null if the function has failed.
  */
@@ -691,7 +736,7 @@ function getVarBlock(codepoint_entry) {
     for (const v in _basePreferences) {
         const vv = _basePreferences[v];
         if (vv in codepoint_entry.var) {
-            return codepoint_entry.var[vv]
+            return codepoint_entry.var[vv];
         }
     }
     if ("other" in codepoint_entry.var) {
@@ -704,6 +749,7 @@ function getVarBlock(codepoint_entry) {
  * Runs the program. Splits the text_buffer into an array of
  * words and processes each word in two passes. Then
  * reassembles text from array (space-separated).
+ * 
  * @param {string} text_buffer - The text to be converted. This can contain multiple
  * and nested HTML elements.
  * @param {boolean} repl_ent - Whether to replace MUFI entities before running the rest of the function.
@@ -713,11 +759,6 @@ function getVarBlock(codepoint_entry) {
  * @return {string} The processed text.
  */
 function convert(text_buffer, repl_ent = true, code_on = false) {
-    /*
-        Runs the program. Splits the text_buffer into an array of
-        words and processes each word in two passes. Then
-        reassembled text from array (space-separated).
-    */
     let processed_word_list = [];
 
     if (options.replaceMUFIEntities && repl_ent) {
@@ -743,10 +784,10 @@ function convert(text_buffer, repl_ent = true, code_on = false) {
             }
             // work through the word character by character.
             for (const _char of word_string) {
-                let uni = _char.codePointAt(0);
-                let hexstr = uni.toString(16).toUpperCase();
-                if (hexstr.length == 3) {
-                    hexstr = "0" + hexstr;
+                const hexstr = int2hex(_char.codePointAt(0));
+                if (_charSkip.includes(hexstr)) {
+                    result_string = result_string + _char;
+                    continue;
                 }
                 if (options.keepUnicode && UNICODE_HEXES.includes(hexstr)) {
                     result_string = result_string + _char;

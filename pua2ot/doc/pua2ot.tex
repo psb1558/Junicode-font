@@ -178,6 +178,11 @@ Source” box. To view the code that underlies the text displayed in the
 Destination Box, check the “Show Code” box. To export the converted text,
 click the “Download” or the “Copy” button.
 
+To skip the conversion of any element of an HTML file, add the class
+\textSourceText{noconv} to the element. You can add a 
+\textSourceText{{\textless}span{\textgreater}} with 
+class \textSourceText{noconv} to skip an arbitrary stretch of text.
+
 The other options on the page affect the conversion. These are explained below,
 in the “Options” section.
 
@@ -203,6 +208,7 @@ these lines at the very end of the {\textless}body{\textgreater}:
     // options.language = "en";
     // options.basePreferences = [];
     // options.enlargedScale = 32;
+    // options.charSkip = [];
     convertAll();
 </script>\end{verbatim}\end{scriptsize}
 
@@ -210,13 +216,10 @@ these lines at the very end of the {\textless}body{\textgreater}:
 simply to include the command \textSourceText{convertAll()} at the end of the 
 HTML file, as it will likely be executed before the text is loaded. Instead,
 have the process that loads the text trigger an event when the loading is done 
-and run \textSourceText{convertAll()} from inside the event handler.
+and call \textSourceText{convertAll()} from inside the event handler.
 
-In the html file, include “noconv” in the class list of any element whose
+In the html file, include \textSourceText{noconv} in the class list of any element whose
 content you don't want converted: the script will skip over such elements.
-
-Other scripts may use this one: simply call the function \textSourceText{convert()},
-passing a string as an argument; the function will return a converted string.
 
 In the example above, the commented lines before the \textSourceText{convertAll()} 
 command are options, explained in a later section.
@@ -248,7 +251,7 @@ manipulated to affect the program's output.
 
 \subsection{More legible markup}
 
-Default: \textSourceText{options.methodPriority="compact"}.
+Program default: \textSourceText{options.methodPriority="compact"}.\\
 By default, {\pto} uses the \textbf{utag} method for most of its 
 conversions of single characters and the \textbf{zwj} method for most ligatures: these 
 two methods occur first in the “compact” preference list. Because the Unicode tags and
@@ -264,15 +267,15 @@ Converter}) that converts inline styles to a CSS stylesheet.
 
 \subsection{options.prefList}
 
-Default: options.prefList = [\char"0022utag\char"0022, \char"0022zwj\char"0022,%
-\char"0022enla\char"0022, \char"0022otag\char"0022, \char"0022entity\char"0022].
+Program default: \textSourceText{options.prefList = [\char"0022utag\char"0022, \char"0022zwj\char"0022,
+\char"0022enla\char"0022, \char"0022otag\char"0022, \char"0022entity\char"0022]}.\\
 Not available in the GUI flavor. Use this option to install a custom priority 
 list instead of the two predefined lists labeled “compact” and “legible.”
 Methods that come earlier in the array are preferred over those that come later.
 
 \subsection{Use entities for Unicode tags}
 
-Default: \textSourceText{options.utagEntities=false}.
+Program default: \textSourceText{options.utagEntities=false}.\\
 If \textSourceText{true}, {\pto} uses entities to represent Unicode tags. (These are not 
 HTML entities, but unique to Junicode.) This makes the code produced by this script more 
 legible, but the entities make the page somewhat larger and can interfere with searching.
@@ -281,7 +284,8 @@ and turn it off before publishing your text.
 
 \subsection{Keep problematic Unicodes}
 
-Default: \textSourceText{options.keepUnicode=false}. “Problematic Unicodes” 
+Program default: \textSourceText{options.keepUnicode=false}.\\
+“Problematic Unicodes” 
 are characters that are standard Unicode (not PUA) and look like 
 variants of common characters, but that many applications do not recognize as 
 variants. Examples include dotless i (\textex{ı}, \unic{U+0131}) and the “insular” 
@@ -293,7 +297,7 @@ check this box in the GUI version or set \textSourceText{options.keepUnicode=tru
 
 \subsection{Alternate bases}
 
-Default: \textSourceText{options.basePreferences=[]}.
+Program example: \textSourceText{options.basePreferences=["insular", "punctuation"]}.\\
 As a large font with many OpenType features, Junicode often provides more than one way 
 to achieve the outcome you want. This option affects the character classes
 mentioned above, pp. 2–3. Select one or more of the items in the GUI list (use the 
@@ -303,7 +307,7 @@ containing the identifiers for these classes to \textSourceText{options.basePref
 
 \subsection{options.replaceMUFIEntities}
 
-Default: \textSourceText{options.replaceMUFIEntities=true}.
+Program default: \textSourceText{options.replaceMUFIEntities=true}.\\
 If \textSourceText{true}, MUFI’s entities (those that
 resolve to PUA code points) are replaced by those code points before any other processing
 takes place. Set this to \textSourceText{false} if the text you want to convert contains 
@@ -312,22 +316,26 @@ Not available in the GUI version, where entities are always converted.
 
 \subsection{Default features}
 
-Default: \textSourceText{options.defaultTags=\{\char"0022ss10\char"0022:\,1,\,\char"0022cv69\char"0022:\,7\}}.
+Program default: \textSourceText{options.defaultTags=\{\char"0022ss10\char"0022:\,1,\,\char"0022cv69\char"0022:\,7\}}.\\
+GUI default: \textSourceText{ss10 cv69[7]}.\\
 You may wish some OpenType features to be on for the whole document. For example, 
 \textSourceText{ss10} “Entities and Tags” must be on in any document that uses Junicode entities or 
 Unicode tags. To manage 
 your text’s OpenType features, this script needs to know about these default features; 
 and when you download or copy your text, they will be recorded in an enclosing {\textless}div{\textgreater}. 
-Note the format: this is a comma-separated list of key-value pairs, where the keys 
+Note the formats: In the GUI this is a space-separated list of four-letter OpenType tags; if you need 
+to add an index, do so in square brackets immediately after the tag (the format used in the
+\textit{Junicode Manual}). Elsewhere it is a comma-separated list of key-value pairs, where the keys 
 (four-letter tags identifying OpenType features) are in double quotation marks, followed 
 by a colon and a number (1 means “on,” but some features (especially the \textSourceText{cvnn} 
 “Character Variant” features) require a numerical index).
 
 \subsection{Non-word tags}
 
-Default: \textSourceText{options.nonWordTags=[\char"0022ss04\char"0022,\,\char"0022ss05\char"0022,\,\char"0022%
-ss06\char"0022,\,\char"0022pcap\char"0022,\,\char"0022smcp\char"0022,\,\char"0022hlig\char"0022,\,%
-\char"0022enla\char"0022]}.
+Program default: \textSourceText{options.nonWordTags=[\char"0022ss04\char"0022,\char"0022ss05\char"0022,\char"0022%
+ss06\char"0022,\char"0022pcap\char"0022,\char"0022smcp\char"0022,\char"0022hlig\char"0022,%
+\char"0022enla\char"0022]}.\\
+GUI default: \textSourceText{ss04 ss05 ss06 pcap smcp hlig enla}.\\
 When “More legible markup” 
 is checked, the script applies most <span> tags to whole words, but 
 a few to individual characters. This distinction is based on an educated guess as to which OpenType 
@@ -335,14 +343,15 @@ features are appropriate to apply to whole words. Sometimes this guess will be w
 word \textit{rectificaꞇionem} (about halfway through the sample \textit{Ancrene Wisse} text) contains two different 
 styles of \textex{t}, but when \textSourceText{cv40} (which transforms default \textex{t} into insular 
 \textex{ꞇ}) is applied to the whole word, 
-that difference is erased. If you add \textSourceText{cv40} to the list in this box (remember that items in the list 
-are enclosed in quotation marks and separated by commas), the feature \textSourceText{cv40} will always be applied to 
-single letters rather than whole words. (An alternative to editing this list is to edit the markup 
-for this word after you have exported your text.)
+that difference is erased. If you add \textSourceText{cv40} to this list, the feature \textSourceText{cv40} 
+will always be applied to single letters rather than whole words. In the GUI version of {\pto},
+this is a space-separated list of four-letter tags (only tags used by this program are accepted here);
+elsewhere these tags must be enclosed in 
+quotation marks and separated by commas, and the whole list must be enclosed in square brackets.
 
 \subsection{Language}
 
-Default: \textSourceText{options.language=\char"0022en\char"0022}.
+Program default: \textSourceText{options.language=\char"0022en\char"0022}.\\
 It is important to set the language properly, both here and in your document, since this script
 and some of Junicode’s OpenType features behave differently depending on the language. If your 
 language is not in the drop-down list (available
@@ -352,12 +361,23 @@ only in the GUI version of this script), choose
 
 \subsection{Enlarge axis scale}
 
-Default: \textSourceText{options.enlargedScale=32}.
-When \textSourceText{options.methodPriority="compact"}, or when you use a custom priority list 
+Program default: \textSourceText{options.enlargedScale=32}.\\
+When \textSourceText{options.methodPriority="legible"}, or when you use a custom priority list 
 with \textSourceText{“enla”} near the top, {\pto} will invoke Junicode’s Enlarge Axis for 
 “enlarged minuscules.” One advantage of this method is that you can precisely control their 
 size on a scale from 0 (the letter is the same size as other lowercase letters) to 100 (the
 letter is the same size and weight as a capital). The default is 32, which makes it the same 
 size as the enlarged minuscules produced by other means.
+
+\subsection{Skip character}
+
+Program example: \textSourceText{options.charSkip=["0131", "A787", "A77A", "F0AE"]}.\\
+GUI example: \textSourceText{\jRegular ı A787 A77A }.\\
+To cause {\pto} to skip over all instances 
+of a character, enter it here. In the GUI version, you can type or paste a space-separated 
+list of characters and hexadecimal codes in the blank. In programming, only hexadecimal 
+codes are allowed; they must be
+enclosed in quotation marks and separated by commas, and the whole list must be enclosed in 
+square brackets.
 
 \end{document}

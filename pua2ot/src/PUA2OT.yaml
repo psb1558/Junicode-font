@@ -502,6 +502,21 @@ A7AF:
         tags:
         - name: i
         - name: n
+A779:
+  desc: LATIN CAPITAL LETTER INSULAR D
+  mntity: Drot
+  var:
+    insular:
+      base: "\uA779"
+    other:
+      base: D
+      otag:
+        tags:
+        - name: cv07
+      utag:
+        tags:
+        - name: i
+        - name: n
 A77A:
   desc: LATIN SMALL LETTER INSULAR D
   mntity: drot
@@ -534,6 +549,36 @@ A77C:
         tags:
         - name: i
         - name: n
+A77D:
+  desc: LATIN CAPITAL LETTER INSULAR G
+  mntity: fins
+  var:
+    insular:
+      base: "\uA77D"
+    other:
+      base: G
+      otag:
+        tags:
+        - name: cv13
+      utag:
+        tags:
+        - name: i
+        - name: n
+A782:
+  desc: LATIN CAPITAL LETTER INSULAR R
+  mntity: Rins
+  var:
+    insular:
+      base: "\uA782"
+    other:
+      base: R
+      otag:
+        tags:
+        - name: cv35
+      utag:
+        tags:
+        - name: i
+        - name: n
 A783:
   base: r
   desc: LATIN SMALL LETTER INSULAR R
@@ -551,6 +596,21 @@ A783:
         tags:
         - name: i
         - name: n
+A784:
+  desc: LATIN CAPITAL LETTER INSULAR S
+  mntity: Sins
+  var:
+    insular:
+      base: "\uA784"
+    other:
+      base: S
+      otag:
+        tags:
+        - name: cv37
+      utag:
+        tags:
+        - name: i
+        - name: n
 A785:
   desc: LATIN SMALL LETTER INSULAR S
   mntity: sins
@@ -563,6 +623,21 @@ A785:
       otag:
         tags:
         - name: cv38
+      utag:
+        tags:
+        - name: i
+        - name: n
+A786:
+  desc: LATIN CAPITAL LETTER INSULAR T
+  mntity: Trot
+  var:
+    insular:
+      base: "\uA786"
+    other:
+      base: T
+      otag:
+        tags:
+        - name: cv39
       utag:
         tags:
         - name: i
@@ -1127,9 +1202,20 @@ E3D4:
   desc: LATIN CAPITAL LETTER O WITH STROKE AND CURL
   mntity: Oslashcurl
 E3E5:
-  base: "\uA77B\u0323"
   desc: LATIN CAPITAL LETTER INSULAR F WITH DOT BELOW
   mntity: Finsdotbl
+  var:
+    insular:
+      base: "\uA77B\u0323"
+    other:
+      base: "F%^%\u0323"
+      otag:
+        tags:
+        - name: cv11
+      utag:
+        tags:
+        - name: i
+        - name: n
 E3E6:
   base: "\uA768\u0323"
   desc: LATIN CAPITAL LETTER INSULAR V (VEND) WITH DOT BELOW
@@ -2456,9 +2542,22 @@ EBB2:
         - name: i
         - name: '1'
 EBB3:
-  base: "\uA77B\u0301"
   desc: LATIN CAPITAL LETTER INSULAR F WITH ACUTE
   mntity: Finsacute
+  var:
+    insular:
+      base: "\uA77B\u0301"
+    other:
+      base: "F%^%\u0301%^%"
+      otag:
+        tags:
+        - name: cv11
+      utag:
+        tags:
+        - name: i
+        - name: n
+        - name: c
+        - name: a
 EBB4:
   base: "\uA77C\u0301"
   desc: LATIN SMALL LETTER INSULAR F WITH ACUTE
@@ -2648,7 +2747,18 @@ EBD2:
 EBD3:
   desc: LATIN CAPITAL LETTER INSULAR F WITH DOT ABOVE
   mntity: Finsdot
-  base: "\uA77B\u0307"
+  var:
+    insular:
+      base: "\uA77B\u0307"
+    other:
+      base: "F%^%\u034F\u0307"
+      otag:
+        tags:
+        - name: cv11
+      utag:
+        tags:
+        - name: i
+        - name: n
 EBD4:
   desc: LATIN SMALL LETTER INSULAR F WITH DOT ABOVE
   mntity: finsdot
@@ -3283,7 +3393,6 @@ EEE4:
         tags:
         - name: i
         - name: e
-      enla: {}
 EEE5:
   base: "\xF0"
   desc: LATIN ENLARGED LETTER SMALL ETH

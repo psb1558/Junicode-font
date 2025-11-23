@@ -60,7 +60,7 @@
         </p>
         <p class="noconv small" lang="en">
             To convert any web page in this way, simply include these lines at the
-            end of your &lt;body&gt; element (On a 2021-vintage MacBook Pro with M1
+            end of your &lt;body&gt; element (On a 2022-vintage MacBook Pro with M1
             chip, processing takes approximately 15 milliseconds):
         </p>
         <pre class="noconv">        &lt;script class="noconv"&gt;
@@ -70,6 +70,7 @@
             //options.methodPriority = "compact";
             //options.prefList = ["utag", "zwj", "otag", "entity"];
             //options.defaultTags = {"ss10": 1, "cv69": 7};
+            //options.charSkip = [];
             options.language = "is"
             convertAll();
         &lt;/script&gt;</pre>
@@ -373,17 +374,18 @@
             huarꝼ ꞇ  ⁊ bað ħ vel ꝼara ⁊ bað þa heıla h
             ıꞇꞇaz.
         </p>
-        <script src="../src/PUA2OT_DATA.js"></script>
+        <!-- <script src="../src/PUA2OT_DATA.js"></script>
         <script src="../src/pua2ot-common.js"></script>
-        <script src="../src/pua2ot-embed.js"></script>
-        <!-- <script src="./pua2ot-embed-min.js"></script> -->
+        <script src="../src/pua2ot-embed.js"></script> -->
+        <script src="./pua2ot-embed-min.js"></script>
         <script class="noconv">
             //options.utagEntities = false;
             //options.nonWordTags = ["ss04", "ss05", "ss06", "pcap", "smcp", "hlig"];
             //options.keepUnicode = false;
-            //options.methodPriority = "compact";
+            options.methodPriority = "legible";
             //options.prefList = ["utag", "zwj", "otag", "entity"];
             //options.defaultTags = {"ss10": 1, "cv69": 7};
+            //options.charSkip = [];
             options.language = "is"
             convertAll();
         </script>

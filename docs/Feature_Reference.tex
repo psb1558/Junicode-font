@@ -1459,11 +1459,11 @@ characters with this feature. \textSourceText{[2]} produces a subscript version 
 the character, a common variant in early printed books. \textSourceText{[4]} has a lower extension that
 crosses the descender of a preceding \textex{q}.
 
-\subsection{\textSourceText{cv67} – Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}\index{cv67|textbf}
-A spacing version of ◌͛ (\unic{U+035B}, combining zigzag) appears in John Hutchins,
-\textit{The History and Antiquities of the County of Dorset} (London, 1774). It
-is not in Unicode or MUFI. In the future this feature may be used, as necessary,
-for other spacing marks of abbreviation.
+% \subsection{\textSourceText{cv67} – Spacing zigzag (variant of \unic{U+00AF}, spacing macron)}\index{cv67|textbf}
+% A spacing version of ◌͛ (\unic{U+035B}, combining zigzag) appears in John Hutchins,
+% \textit{The History and Antiquities of the County of Dorset} (London, 1774). It
+% is not in Unicode or MUFI. In the future this feature may be used, as necessary,
+% for other spacing marks of abbreviation.
 
 \subsection{\textSourceText{cv99} – Word omitted symbol (variant of \unic{U+00B0}, degree)}\index{cv99|textbf}
 The degree sign is often used as an editorial sign in editions of the Greek New Testament. This feature
@@ -1620,6 +1620,15 @@ with the diacritic properly positioned.
 39\hfill=\hfill\cvd[38]{84}{◌͏̄}
 \end{multicols}\index{cv84}
 
+\subsection{\textSourceText{ss11} – Zero-width to spacing mark}\index{ss11|textbf}
+Converts combining marks (including zero-width abbreviations) to their spacing equivalents.
+At present, the conversion most likely to be of interest to medievalists is of \unic{U+035B}
+combining zigzag, ◌͛  to {\addfontfeature{StylisticSet=11}(◌͛)}.
+
+\subsection{\textSourceText{cv67} – Variant of combining r rotunda (U+1DE3)}
+1=\cvd{67}{◌ᷣ}. The spacing zigzag abbreviation that was available via \textSourceText{cv67} is now available 
+via \textSourceText{s11}. The \textit{enim} abbreviation that was formerly available here can be accessed via 
+\textbf{n} + \textSourceText{salt[4]} or N with \textSourceText{salt[3]}.
 
 \subsection{\textSourceText{cv81} – Variants of ◌͛ (\unic{U+035B}, combining
 zigzag above)}\index{cv81|textbf}
@@ -1757,8 +1766,8 @@ other base characters). Examples:
 d)}
 1=\cvd{86}{◌ᷘ}.\index{cv86|textbf}
 
-\subsection{\textSourceText{cv87} – Variant of ◌ᷣ (\unic{U+1DE3}, combining r rotunda)}
-1=\cvd{87}{◌ᷣ}.\index{cv87|textbf}
+\subsection{\textSourceText{cv87} – Variant of ◌᷑ (\unic{U+1DD1}, combining r rotunda)}
+1=\cvd{87}{◌᷑}.\index{cv87|textbf}
 
 \subsection{\textSourceText{cv88} – Variant of combining dieresis (\unic{U+0308})}\index{cv88|textbf}
 1=\cvd{88}{◌̈}. This also affects precomposed characters on which this variant dieresis may occur, e.g.

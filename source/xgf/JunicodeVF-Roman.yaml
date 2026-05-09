@@ -32294,11 +32294,11 @@ glyphs:
           - 9
           rel: shift
         - ptid: 39
-          rel: blackdist
+          rel: stem
       - ptid: 27
         points:
         - ptid: 18
-          rel: blackdist
+          rel: stem
   uni1DE4:
     y:
       points:
@@ -33285,19 +33285,19 @@ glyphs:
   uni203F:
     y:
       points:
-      - ptid: '{0;-271}'
+      - ptid: '{320;-271}'
         pos: dot-height
         points:
-        - ptid: '{0;-231}'
-          rel: blackdist
+        - ptid: '{320;-231}'
+          rel: stem
           round: false
   uni2040:
     y:
       points:
-      - ptid: '{0;726}'
+      - ptid: '{323;726}'
         points:
-        - ptid: '{0;686}'
-          rel: blackdist
+        - ptid: '{323;686}'
+          rel: stem
           round: false
   uni2041:
     y:
@@ -69143,61 +69143,6 @@ glyphs:
       serif-top-b-sh:
       - '{37;386}'
       - '{328;386}'
-  pp:
-    y:
-      points:
-      - ptid:
-          base: '{130;-269}'
-          pt-a: '{28;-273}'
-          pt-b: '{28;-245}'
-          base-sh: '{433;-269}'
-          pt-a-sh: serif-a-sh
-          pt-b-sh: serif-b-sh
-        macro:
-          nm: lc-serif
-          base-cv: lc-descender
-          cup-cv: lc-serif-undershoot
-          ppem: '180'
-      - ptid: '{248;-11}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{551;-11}'
-          rel: shift
-        - ptid: '{253;20}'
-          rel: stem
-          round: false
-          points:
-          - ptid: '{556;20}'
-            rel: shift
-      - ptid: '{282;425}'
-        pos: xheight-overshoot
-        points:
-        - ptid: '{585;425}'
-          rel: shift
-        - ptid: '{261;385}'
-          rel: stem
-          round: false
-          points:
-          - ptid: '{564;385}'
-            rel: shift
-      - ptid:
-          p1: '{154;431}'
-          p2: '{43;371}'
-          p3: '{43;344}'
-        macro:
-          nm: lc-ascender-top
-          cv: lc-minim
-    names:
-      serif-a-sh:
-      - '{232;-273}'
-      - '{331;-273}'
-      - '{535;-273}'
-      serif-b-sh:
-      - '{232;-245}'
-      - '{331;-245}'
-      - '{535;-245}'
-    props:
-      category: Ll
   u.alt3:
     y:
       points:

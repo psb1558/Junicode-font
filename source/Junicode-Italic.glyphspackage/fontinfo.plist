@@ -1,5 +1,5 @@
 {
-.appVersion = "3425";
+.appVersion = "3516";
 .formatVersion = 3;
 axes = (
 {
@@ -1167,7 +1167,7 @@ dcomb dotacutecomb dotlessicomb ecomb ethcomb flattenedopenaabovecomb
 gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb muncialcomb
 ncomb ocomb rcomb rrotundacomb scomb tcomb thorncomb ucomb uniF1CC
 vcomb xcomb zcomb dieresiscomb.alt flattenedopenaabovecomb.alt
-insulardcomb.alt rrotundacomb.alt brevehook.case circumacute.viet
+insulardcomb.alt urabovecomb.alt brevehook.case circumacute.viet
 circumgrave.viet circumhook.viet dotacutecomb.case dotacutecomb.sc
 ethcomb.loclENG thorncomb.loclENG circumacute.viet.case circumgrave.viet.case
 circumhook.viet.case Vmod
@@ -2017,7 +2017,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2025-10-12 13:15:54 +0000";
+date = "2026-05-09 17:27:45 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2367,7 +2367,6 @@ code = "feature locl;
 feature ss10;
 feature cv84;
 feature cv90;
-feature cv67;
 feature case;
 feature nalt;
 feature sinf;
@@ -2387,6 +2386,7 @@ feature ss01;
 feature ss04;
 feature ss05;
 feature ss09;
+feature ss11;
 feature ss12;
 feature ss13;
 feature ss14;
@@ -2394,7 +2394,6 @@ feature ss15;
 feature ss16;
 feature ss18;
 feature ss19;
-feature ss20;
 feature salt;
 feature ordn;
 feature cv01;
@@ -2492,6 +2491,7 @@ feature cv95;
 feature cv96;
 feature cv97;
 feature cv98;
+feature cv99;
 feature c2pc;
 feature pcap;
 feature c2sc;
@@ -2500,6 +2500,7 @@ feature ss06;
 feature ss07;
 feature rtlm;
 feature calt;
+feature ss20;
 feature ss17;
 ";
 tag = aalt;
@@ -2778,6 +2779,7 @@ lookup diacritics {
   sub ecomb macroncomb by emacroncomb ;
   sub ocomb ogonekabovecomb by oogonekabovecomb ;
   sub Rcomb dotaccentcomb by Rdotaccentcomb ;
+  sub h strokeshortcomb by hbar ;
   sub v strokeshortcomb by v.alt4 ;
   sub y strokeshortcomb by y.alt2 ;
   sub n strokeshortcomb by n.alt3 ;
@@ -3452,6 +3454,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub B i.tag n.tag by B.alt1 ;
  sub b l.tag d.tag by b.lowtop ;
  sub b e.tag n.tag by b.enlarged ;
+ sub b o.tag m.tag by b.medhighoverline ;
  sub C s.tag q.tag by C.alt ;
  sub C e.tag n.tag by C.enlarged ;
  sub C two.tag b.tag by C.alt01 ;
@@ -3459,8 +3462,9 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub c e.tag n.tag by c.enlarged ;
  sub c h.tag o.tag by c.alt01 ;
  sub c two.tag b.tag by c.alt02 ;
+ sub c o.tag m.tag by c.medhighoverline ;
  sub D i.tag e.tag by Dinsular.enlarged ;
- sub D i.tag n.tag by Dinsular ;
+ sub D i.tag n.tag by D.insular ;
  sub D e.tag n.tag by D.enlarged ;
  sub d i.tag one.tag by d.insular ;
  sub d i.tag two.tag by d.insular.alt ;
@@ -3474,6 +3478,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub d c.tag u.tag by d.mecurl ;
  sub d e.tag n.tag by d.enlarged ;
  sub d i.tag s.tag by d.insular.alt3 ;
+ sub d o.tag m.tag by d.medhighoverline ;
  sub eth.loclENG e.tag a.tag by eth.loclENG.enlarged.alt ;
  sub eth.enlarged.loclENG e.tag a.tag by eth.loclENG.enlarged.alt ;
  sub eth.loclENG.alt e.tag a.tag by eth.loclENG.enlarged.alt ;
@@ -3492,7 +3497,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub e s.tag t.tag by e.alt05 ;
  sub e h.tag t.tag by e.alt11 ;
  sub e h.tag h.tag by e.alt06 ;
- sub F i.tag n.tag by Finsular ;
+ sub F i.tag n.tag by F.insular ;
  sub F e.tag n.tag by F.enlarged ;
  sub F i.tag e.tag by Finsular.enlarged ;
  sub f i.tag n.tag by f.insular ;
@@ -3508,7 +3513,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub f c.tag u.tag by f.mecurl ;
  sub f e.tag n.tag by f.enlarged ;
  sub f h.tag d.tag by f.alt05 ;
- sub G i.tag n.tag by Ginsular ;
+ sub G i.tag n.tag by G.insular ;
  sub G o.tag r.tag by Gormulum ;
  sub G s.tag q.tag by G.alt ;
  sub G e.tag n.tag by G.enlarged ;
@@ -3539,6 +3544,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub h d.tag b.tag by hbar.alt ;
  sub h c.tag u.tag by h.mecurl ;
  sub hbar e.tag n.tag by hbar.enlarged ;
+ sub h o.tag m.tag by h.medhighoverline ;
  sub I d.tag a.tag by Idotaccent ;
  sub I d.tag e.tag by Longaepigraphici ;
  sub I e.tag n.tag by I.enlarged ;
@@ -3549,6 +3555,8 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub i f.tag one.tag by i.romnum ;
  sub i f.tag two.tag by i.romnum1 ;
  sub i e.tag n.tag by i.enlarged ;
+ sub i o.tag m.tag by i.medhighoverline ;
+ sub dotlessi o.tag m.tag by i.medhighoverline ;
  sub dotlessi e.tag n.tag by idotless.enlarged ;
  sub i.alt2 e.tag n.tag by idotless.enlarged ;
  sub i d.tag e.tag by idotless.enlarged ;
@@ -3558,6 +3566,8 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub j s.tag d.tag by j.alt2 ;
  sub j d.tag a.tag by jdotaccent ;
  sub j e.tag n.tag by j.enlarged ;
+ sub j o.tag m.tag by j.medhighoverline ;
+ sub jdotless o.tag m.tag by j.medhighoverline ;
  sub jdotless e.tag n.tag by jdotless.enlarged ;
  sub j.alt3 e.tag n.tag by jdotless.enlarged ;
  sub K e.tag n.tag by K.enlarged ;
@@ -3568,12 +3578,14 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub k e.tag n.tag by k.enlarged ;
  sub k u.tag d.tag by k.alt4 ;
  sub k c.tag l.tag by k.alt05 ;
+ sub k o.tag m.tag by k.medhighoverline ;
  sub L e.tag n.tag by L.enlarged ;
  sub l d.tag e.tag by l.alt ;
  sub l e.tag n.tag by l.enlarged ;
  sub l s.tag h.tag by lhighstroke ;
  sub l s.tag f.tag by lhighstroke.alt ;
  sub l i.tag n.tag by l.alt2 ;
+ sub l o.tag m.tag by l.medhighoverline ;
  sub lbar c.tag u.tag by lbar.mecurl ;
  sub M u.tag d.tag by M.alt2 ;
  sub M u.tag n.tag by M.alt1 ;
@@ -3585,6 +3597,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub m e.tag n.tag by m.enlarged ;
  sub m u.tag e.tag by m.alt1.enlarged ;
  sub m u.tag m.tag by m.alt2.sc ;
+ sub m o.tag m.tag by m.medhighoverline ;
  sub N d.tag e.tag by N.alt1 ;
  sub N e.tag n.tag by N.enlarged ;
  sub N l.tag d.tag by N.alt2 ;
@@ -3613,7 +3626,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub Q e.tag n.tag by Q.enlarged ;
  sub q s.tag d.tag by q.alt ;
  sub q e.tag n.tag by q.enlarged ;
- sub R i.tag n.tag by Rinsular ;
+ sub R i.tag n.tag by R.insular ;
  sub R r.tag o.tag by Rrotunda ;
  sub R e.tag n.tag by R.enlarged ;
  sub r i.tag n.tag by r.insular ;
@@ -3624,7 +3637,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub r i.tag b.tag by rinsular.alt01 ;
  sub r i.tag s.tag by rinsular.alt02 ;
  sub r l.tag s.tag by r.alt1 ;
- sub S i.tag n.tag by Sinsular ;
+ sub S i.tag n.tag by S.insular ;
  sub S s.tag g.tag by Ssigmoid ;
  sub S e.tag n.tag by S.enlarged ;
  sub S s.tag d.tag by Sanctus ;
@@ -3656,8 +3669,9 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub longs l.tag p.tag by longs.alt07 ;
  sub s l.tag e.tag by longs.enlarged ;
  sub longs e.tag n.tag by longs.enlarged ;
- sub longs m.tag o.tag by longs.medhighoverline ;
- sub T i.tag n.tag by Tinsular ;
+# sub longs m.tag o.tag by longs.medhighoverline ;
+ sub longs o.tag m.tag by longs.medhighoverline ;
+ sub T i.tag n.tag by T.insular ;
  sub T e.tag n.tag by T.enlarged ;
  sub t i.tag n.tag by t.insular ;
  sub t c.tag u.tag by t.mecurl ;
@@ -3676,6 +3690,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub v e.tag n.tag by v.enlarged ;
  sub v s.tag two.tag by v.alt3 ;
  sub v e.tag l.tag by v.enlarged.alt ;
+ sub v o.tag m.tag by v.medhighoverline ;
  sub W e.tag n.tag by W.enlarged ;
  sub w e.tag n.tag by w.enlarged ;
  sub W a.tag n.tag by uniA7C2 ; # W Anglicana
@@ -3689,6 +3704,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub x s.tag one.tag by x.alt2 ;
  sub x s.tag two.tag by x.alt3 ;
  sub x s.tag three.tag by x.alt4 ;
+ sub x o.tag m.tag by x.medhighoverline ;
  sub Y s.tag d.tag by Y.alt ;
  sub Y e.tag n.tag by Y.enlarged ;
  sub y r.tag m.tag by y.alt ;
@@ -3764,6 +3780,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub thorn.loclENG e.tag n.tag by thorn.enlarged.loclENG ;
  sub Thorn e.tag n.tag by Thorn.enlarged ;
  sub Thorn.loclENG e.tag n.tag by Thorn.enlarged.loclENG ;
+ sub thorn o.tag m.tag by thorn.medhighoverline ;
  sub glottalstop a.tag one.tag by glottalstop.alt ;
  sub etTironian a.tag one.tag by tironiansignet.alt1 ;
  sub etTironian a.tag two.tag by tironiansignet.alt2 ;
@@ -3789,6 +3806,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub EtTironian a.tag nine.tag by EtTironian.alt9 ;
  sub EtTironian a.tag zero.tag by EtTironian.alt10 ;
  sub macron zero.tag one.tag by zigzagmod ;
+ sub zigzagabovecomb s.tag p.tag by zigzagmod ;
  sub doublemacroncomb a.tag one.tag by doublemacroncomb.alt1 ;
  sub doublemacroncomb a.tag two.tag by doublemacroncomb.alt2 ;
  sub periodcentered h.tag i.tag by periodcentered.alt ;
@@ -3858,7 +3876,7 @@ sub et a.tag three.tag by et.alt2 ;
 sub et a.tag four.tag by et.alt3 ;
 sub flattenedopenaabovecomb a.tag one.tag by flattenedopenaabovecomb.alt ;
 sub insulardcomb a.tag one.tag by insulardcomb.alt ;
-sub rrotundacomb a.tag one.tag by rrotundacomb.alt ;
+sub urabovecomb a.tag one.tag by urabovecomb.alt ;
 sub adieresis d.tag i.tag by adieresis.alt ;
 sub odieresis d.tag i.tag by odieresis.alt ;
 sub dieresiscomb d.tag i.tag by dieresiscomb.alt ;
@@ -4136,23 +4154,6 @@ code = "cvParameters {
 sub doublemacroncomb from [ doublemacroncomb.alt1 doublemacroncomb.alt2 ] ;
 ";
 tag = cv90;
-},
-{
-code = "cvParameters {
-  FeatUILabelNameID {
-    name 3 1 0x0409 \"Variants of spacing macron\";
-  };
-  ParamUILabelNameID {
-    name 3 1 0x0409 \"Spacing zigzag\";
-  };
-  ParamUILabelNameID {
-    name 3 1 0x0409 \"enim abbreviation\";
-  };
-#  Character 0x00AF;
-};
-sub macron from [ zigzagmod enim ] ;
-";
-tag = cv67;
 },
 {
 code = "sub brevehook by brevehook.case;
@@ -4918,6 +4919,36 @@ value = "Alternate Figures";
 tag = ss09;
 },
 {
+code = "sub zigzagabovecomb by zigzagmod ;
+sub macroncomb by macron ;
+sub macroncomb.case by macron.case ;
+sub acutecomb by acute ;
+sub acutecomb.case by acute.case ;
+sub tildecomb by tilde ;
+sub tildecomb.case by tilde.case ;
+sub brevecomb by breve ;
+sub gravecomb by grave ;
+sub gravecomb.case by grave.case ;
+sub hungarumlautcomb by hungarumlaut ;
+sub hungarumlautcomb.case by hungarumlaut.case ;
+sub circumflexcomb by circumflex ;
+sub circumflexcomb.case by circumflexcomb.case ;
+sub caroncomb by caron ;
+sub caroncomb.case by caron.case ;
+sub dieresiscomb by dieresis ;
+sub dotaccentcomb by dotaccent ;
+sub ringcomb by ring ;
+sub cedillacomb by cedilla ;
+sub ogonekcomb by ogonek ;";
+labels = (
+{
+language = dflt;
+value = "Zero-width to spacing mark";
+}
+);
+tag = ss11;
+},
+{
 code = "lookup ss12_01 {
   sub e o by iwazEoh-runic ;
   sub e a by ear-runic ;
@@ -5303,6 +5334,8 @@ code = "lookup salt_three {
   sub T from [  T.rustic T.lombardic T.lombardic.alt ]  ;
   sub f from [  f.rustic f.lombardic f.lombardic.alt]  ;
   sub g from [  g.rustic g.lombardic g.rustic.alt ]  ;
+  sub N from [  N.rustic N.lombardic enim ]  ;
+  sub n from [  n.rustic n.lombardic enim ]  ;
   sub t from [  t.rustic t.lombardic t.lombardic.alt ]  ;
   sub eth.loclENG from [ eth.loclENG.enlarged.alt eth.loclENG.alt01 eth.loclENG.alt02 ] ;
 } salt_three ;
@@ -5319,7 +5352,6 @@ lookup salt_two {
   sub K from [  K.rustic K.lombardic ]  ;
   sub L from [  L.rustic L.lombardic ]  ;
   sub M from [  M.rustic M.lombardic ]  ;
-  sub N from [  N.rustic N.lombardic ]  ;
   sub O from [  O.rustic O.lombardic ]  ;
   sub P from [  P.rustic P.lombardic ]  ;
   sub Q from [  Q.rustic Q.lombardic ]  ;
@@ -5343,7 +5375,6 @@ lookup salt_two {
   sub k from [  k.rustic k.lombardic ]  ;
   sub l from [  l.rustic l.lombardic ]  ;
   sub m from [  m.rustic m.lombardic ]  ;
-  sub n from [  n.rustic n.lombardic ]  ;
   sub o from [  o.rustic o.lombardic ]  ;
   sub p from [  p.rustic p.lombardic ]  ;
   sub q from [  q.rustic q.lombardic ]  ;
@@ -5583,7 +5614,7 @@ code = "cvParameters {
   };
 #  Character 0x0044;
 };
-sub D from [ D Dinsular D.enlarged Dinsular.enlarged ] ;
+sub D from [ D.insular D.enlarged Dinsular.enlarged ] ;
 ";
 tag = cv07;
 },
@@ -5744,7 +5775,7 @@ code = "cvParameters {
   };
 #  Character 0x0046;
 };
-sub F from [ Finsular F.enlarged Finsular.enlarged ] ;
+sub F from [ F.insular F.enlarged Finsular.enlarged ] ;
 #sub Fdotbelow from [ Finsulardotbelow ] ;
 
 ";
@@ -5865,7 +5896,7 @@ code = "cvParameters {
   };
 #  Character 0x0047;
 };
-sub G from [ Ginsular Gormulum G.alt G.enlarged Gormulum.enlarged ] ;
+sub G from [ G.insular Gormulum G.alt G.enlarged Gormulum.enlarged ] ;
 ";
 tag = cv13;
 },
@@ -6498,7 +6529,7 @@ code = "cvParameters {
   };
 #  Character 0x0052;
 };
-sub R from [ Rinsular Rrotunda R.enlarged ] ;
+sub R from [ R.insular Rrotunda R.enlarged ] ;
 ";
 tag = cv35;
 },
@@ -6615,7 +6646,7 @@ code = "cvParameters {
   };
 #  Character 0x0053;
 };
-sub S from [ Sinsular Ssigmoid S.enlarged Sanctus uniA7D6 S.alt1 S.alt3 ] ;
+sub S from [ S.insular Ssigmoid S.enlarged Sanctus uniA7D6 S.alt1 S.alt3 ] ;
 ";
 tag = cv37;
 },
@@ -6671,12 +6702,12 @@ code = "cvParameters {
   };
 #  Character 0x0073;
 };
-sub s from [ s.insular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5
-             longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
-sub sinsular from [ s ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5
-                    longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
-sub longs from [ sinsular ssigmoid s longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7 s.alt1 s.alt2 longs.alt5
-                 longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
+sub s from        [ s.insular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7
+                    s.alt1 s.alt2 longs.alt5 longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
+sub sinsular from [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7
+                    s.alt1 s.alt2 longs.alt5 longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
+sub longs from    [ sinsular ssigmoid longs longs.alt2 longs.alt3 longs.alt4 s.enlarged uniA7D7
+                    s.alt1 s.alt2 longs.alt5 longs.alt6 s.alt3 s.alt4 longs.alt07 ] ;
 
 ";
 tag = cv38;
@@ -6694,7 +6725,7 @@ code = "cvParameters {
   };
 #  Character 0x0054;
 };
-sub T from [ Tinsular T.enlarged ] ;
+sub T from [ T.insular T.enlarged ] ;
 ";
 tag = cv39;
 },
@@ -7288,6 +7319,23 @@ tag = cv66;
 {
 code = "cvParameters {
   FeatUILabelNameID {
+    name 3 1 0x0409 \"Variant of combining r rotunda\";
+  };
+  ParamUILabelNameID {
+    name 3 1 0x0409 \"Combining rum abbreviation\";
+  };
+#  ParamUILabelNameID {
+#    name 3 1 0x0409 \"enim abbreviation\";
+#  };
+#  Character 0x00AF;
+};
+sub rrotundacomb from [ rumrotundacomb ] ;
+";
+tag = cv67;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID {
     name 3 1 0x0409 \"Variants of glottal stop\";
   };
   ParamUILabelNameID {
@@ -7751,7 +7799,7 @@ code = "cvParameters {
   };
 #  Character 0x1DE3;
 };
-sub rrotundacomb from [ rrotundacomb.alt ] ;
+sub urabovecomb from [ urabovecomb.alt ] ;
 #sub rrotundacomb.low from [ rrotundacomb.alt.low ] ;
 ";
 tag = cv87;
@@ -9293,6 +9341,7 @@ sub h.lf by h.sc ;
 sub i.lf by i.sc ;
 sub i.alt2 by i.sc ;
 sub j.lf by j.sc ;
+sub j.alt by j.sc ;
 sub jdotaccent by jdotaccent.sc ;
 sub jacute by jacute.sc ;
 #sub jdotbelow by jdotbelow.sc ;
@@ -9877,6 +9926,7 @@ lookup ss06_dflt {
   sub h by h.enlarged ;
   sub h.alt by h.alt.enlarged ;
   sub h.alt3 by h.alt3.enlarged ;
+  sub hbar by hbar.enlarged ;
   sub i by i.enlarged ;
   sub dotlessi by idotless.enlarged ;
   sub i.alt2 by idotless.enlarged ;
@@ -10251,7 +10301,13 @@ language ENG ;
 tag = calt;
 },
 {
-code = "lookup rlig_main {
+code = "lookup digraphs {
+  lookupflag IgnoreMarks;
+	sub d.insular exclam zerowidthnonjoiner v by dv ;
+	sub dinsular exclam zerowidthnonjoiner v by dv ;
+} digraphs ;
+
+lookup rlig_main {
 sub one.circled zero.circled by one_zero.circled ;
 sub one.circled one.circled by one_one.circled ;
 sub one.circled two.circled by one_two.circled ;
@@ -10691,6 +10747,8 @@ sub uacute uacute by uacute_uacute.hlig ;
 sub Pdotaccent Pdotaccent by Pdotaccent_Pdotaccent.hlig ;
 sub pdotaccent pdotaccent by pdotaccent_pdotaccent.hlig ;
 sub U cross D by U_cross_D ;
+sub A A by A_A.xlig ;
+sub a a by a_a.xlig ;
 sub a f by a_f.hlig ;
 sub a f.insular by a_finsular.hlig ;
 sub a finsular by a_finsular.hlig ;
@@ -10869,7 +10927,7 @@ sub t y by t_y.dlig ;
 tag = dlig;
 },
 {
-code = "@latincombtopanchor = [ Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb brevehook ccomb dcomb dotacutecomb dotlessicomb ecomb ethcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb muncialcomb ncomb ocomb rcomb rrotundacomb scomb tcomb thorncomb ucomb vcomb xcomb zcomb dieresiscomb.alt flattenedopenaabovecomb.alt insulardcomb.alt rrotundacomb.alt circumacute.viet circumgrave.viet circumhook.viet ethcomb.loclENG thorncomb.loclENG Bcomb Dcomb Kcomb Tcomb aNcomb aRcomb aacutecomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commaabovecomb_gravecomb commareversedabovecomb commareversedabovecomb_gravecomb commareversedabovecomb_acutecomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb aeacutecomb amacroncomb ancomb arcomb bcomb breveacutecomb brevegravecomb carondotcomb ccedillacomb circumflextildecomb eacutecomb emacroncomb eogonekcomb etcomb fcomb jcomb jdotlesscomb macronacutecomb omacroncomb oogonekabovecomb oogonekcomb orrotcomb orumrotundacomb oslashcomb pcomb qcomb ringacutecomb rumrotundacomb spiritusasper u035B0301 uni1ACB uni1ACC uni1ACD tinsularcomb urabovecomb wcomb ycomb overlinecomb.alt macroncomb.alt1 zigzagabovecomb.alt1 macroncomb.alt2 macroncomb.alt3 zigzagabovecomb.alt3 macroncomb.alt4 macroncomb.alt5 zigzagabovecomb.d eogonekcomb.alt eogonekcomb.alt1 zigzagabovecomb.mkmk ogonekabovecomb.mkmk macroncomb.narrow tildecomb.wide macroncomb.wide zigzagabovecomb.alt1.mkmk zigzagabovecomb.alt2.mkmk zigzagabovecomb.alt3.mkmk macroncomb.alt3.wide
+code = "@latincombtopanchor = [ Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb brevehook ccomb dcomb dotacutecomb dotlessicomb ecomb ethcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb muncialcomb ncomb ocomb rcomb rrotundacomb scomb tcomb thorncomb ucomb vcomb xcomb zcomb dieresiscomb.alt flattenedopenaabovecomb.alt insulardcomb.alt urabovecomb.alt circumacute.viet circumgrave.viet circumhook.viet ethcomb.loclENG thorncomb.loclENG Bcomb Dcomb Kcomb Tcomb aNcomb aRcomb aacutecomb dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb overlinecomb hookabovecomb verticallineabovecomb dblverticallineabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb commaabovecomb_gravecomb commareversedabovecomb commareversedabovecomb_gravecomb commareversedabovecomb_acutecomb leftangleabovecomb xabovecomb tildeverticalcomb dbloverlinecomb gravetonecomb acutetonecomb gbridgeabovecomb nottildeabovecomb homotheticabovecomb almostequaltoabovecomb arrowheadrightabovecomb lefthalfringabovecomb fermatacomb righthalfringabovecomb zigzagabovecomb aeacutecomb amacroncomb ancomb arcomb bcomb breveacutecomb brevegravecomb carondotcomb ccedillacomb circumflextildecomb eacutecomb emacroncomb eogonekcomb etcomb fcomb jcomb jdotlesscomb macronacutecomb omacroncomb oogonekabovecomb oogonekcomb orrotcomb orumrotundacomb oslashcomb pcomb qcomb ringacutecomb rumrotundacomb spiritusasper u035B0301 uni1ACB uni1ACC uni1ACD tinsularcomb urabovecomb wcomb ycomb overlinecomb.alt macroncomb.alt1 zigzagabovecomb.alt1 macroncomb.alt2 macroncomb.alt3 zigzagabovecomb.alt3 macroncomb.alt4 macroncomb.alt5 zigzagabovecomb.d eogonekcomb.alt eogonekcomb.alt1 zigzagabovecomb.mkmk ogonekabovecomb.mkmk macroncomb.narrow tildecomb.wide macroncomb.wide zigzagabovecomb.alt1.mkmk zigzagabovecomb.alt2.mkmk zigzagabovecomb.alt3.mkmk macroncomb.alt3.wide
     Rdotaccentcomb zigzagabovecomb.eth ] ;
 
 @targetbase = [ thorn.lf thorn.loclENG.lf b.lf h.lf k.lf b d dinsular d.insular h hbar k thorn thorndouble h.alt k.alt1 h.alt3 k.alt3 k.alt4 b.enlarged thorn.loclENG eth h.alt.enlarged h.alt3.enlarged thorn_thorn.hlig
@@ -13072,6 +13130,12 @@ axesValues = (
 100,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "7904EAEE-2B64-409E-B923-0048172372BE" = 1;
 };
@@ -13086,6 +13150,12 @@ axesValues = (
 100,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 master01 = 1;
 };
@@ -13098,6 +13168,12 @@ axesValues = (
 500,
 100,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
@@ -13114,13 +13190,19 @@ axesValues = (
 100,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
 master01 = 0.33333;
 };
 isItalic = 1;
-linkStyle = SmBold;
-name = "SmBold Italic";
+linkStyle = SemiBold;
+name = "SemiBold Italic";
 weightClass = 600;
 },
 {
@@ -13128,6 +13210,12 @@ axesValues = (
 700,
 100,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1;
@@ -13143,6 +13231,12 @@ axesValues = (
 300,
 75,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.08333;
@@ -13163,6 +13257,12 @@ axesValues = (
 75,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 1;
 };
@@ -13176,6 +13276,12 @@ axesValues = (
 500,
 75,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
@@ -13195,6 +13301,12 @@ axesValues = (
 75,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = -0.16667;
@@ -13202,8 +13314,8 @@ instanceInterpolations = {
 master01 = -0.33333;
 };
 isItalic = 1;
-linkStyle = "Cond SmBold";
-name = "Cond SmBold Italic";
+linkStyle = "Cond SemiBold";
+name = "Cond SemiBold Italic";
 weightClass = 600;
 widthClass = 3;
 },
@@ -13212,6 +13324,12 @@ axesValues = (
 700,
 75,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 exports = 0;
 instanceInterpolations = {
@@ -13232,6 +13350,12 @@ axesValues = (
 87.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = -0.04167;
 "7904EAEE-2B64-409E-B923-0048172372BE" = 0.875;
@@ -13240,8 +13364,8 @@ instanceInterpolations = {
 master01 = 0.05556;
 };
 isItalic = 1;
-linkStyle = "SmCond Light";
-name = "SmCond Light Italic";
+linkStyle = "SemiCond Light";
+name = "SemiCond Light Italic";
 weightClass = 300;
 widthClass = 4;
 },
@@ -13251,13 +13375,19 @@ axesValues = (
 87.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.5;
 master01 = 0.5;
 };
 isItalic = 1;
-linkStyle = SmCond;
-name = "SmCond Italic";
+linkStyle = SemiCond;
+name = "SemiCond Italic";
 widthClass = 4;
 },
 {
@@ -13266,14 +13396,20 @@ axesValues = (
 87.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
 "E06D8587-1A71-4EC2-BD94-397D882F5FC1" = 0.5;
 master01 = 0.16667;
 };
 isItalic = 1;
-linkStyle = "SmCond Medium";
-name = "SmCond Medium Italic";
+linkStyle = "SemiCond Medium";
+name = "SemiCond Medium Italic";
 weightClass = 500;
 widthClass = 4;
 },
@@ -13283,6 +13419,12 @@ axesValues = (
 87.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.65278;
 "7904EAEE-2B64-409E-B923-0048172372BE" = -0.04167;
@@ -13291,8 +13433,8 @@ instanceInterpolations = {
 master01 = -0.05556;
 };
 isItalic = 1;
-linkStyle = "SmCond SmBold";
-name = "SmCond SmBold Italic";
+linkStyle = "SemiCond SemiBold";
+name = "SemiCond SemiBold Italic";
 weightClass = 600;
 widthClass = 4;
 },
@@ -13301,6 +13443,12 @@ axesValues = (
 700,
 87.5,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 exports = 0;
 instanceInterpolations = {
@@ -13311,8 +13459,8 @@ instanceInterpolations = {
 master01 = 0.05556;
 };
 isItalic = 1;
-linkStyle = "SmCond Bold";
-name = "SmCond Bold Italic";
+linkStyle = "SemiCond Bold";
+name = "SemiCond Bold Italic";
 weightClass = 700;
 widthClass = 4;
 },
@@ -13321,6 +13469,12 @@ axesValues = (
 400,
 125,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 1;
@@ -13335,6 +13489,12 @@ axesValues = (
 300,
 125,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 exports = 0;
 instanceInterpolations = {
@@ -13356,6 +13516,12 @@ axesValues = (
 125,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.91667;
@@ -13374,6 +13540,12 @@ axesValues = (
 125,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.66667;
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.83333;
@@ -13381,8 +13553,8 @@ instanceInterpolations = {
 master01 = -0.33333;
 };
 isItalic = 1;
-linkStyle = "Exp SmBold";
-name = "Exp SmBold Italic";
+linkStyle = "Exp SemiBold";
+name = "Exp SemiBold Italic";
 weightClass = 600;
 widthClass = 7;
 },
@@ -13391,6 +13563,12 @@ axesValues = (
 700,
 125,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.0625;
@@ -13411,13 +13589,19 @@ axesValues = (
 112.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
 master01 = 0.5;
 };
 isItalic = 1;
-linkStyle = SmExp;
-name = "SmExp Italic";
+linkStyle = SemiExp;
+name = "SemiExp Italic";
 widthClass = 6;
 },
 {
@@ -13425,6 +13609,12 @@ axesValues = (
 300,
 112.5,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = -0.04167;
@@ -13434,8 +13624,8 @@ instanceInterpolations = {
 master01 = 0.05556;
 };
 isItalic = 1;
-linkStyle = "SmExp Light";
-name = "SmExp Light Italic";
+linkStyle = "SemiExp Light";
+name = "SemiExp Light Italic";
 weightClass = 300;
 widthClass = 6;
 },
@@ -13445,14 +13635,20 @@ axesValues = (
 112.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.33333;
 "8F7CDE40-C368-4484-AA71-76B7ABD5539F" = 0.5;
 master01 = 0.16667;
 };
 isItalic = 1;
-linkStyle = "SmExp Medium";
-name = "SmExp Medium Italic";
+linkStyle = "SemiExp Medium";
+name = "SemiExp Medium Italic";
 weightClass = 500;
 widthClass = 6;
 },
@@ -13462,6 +13658,12 @@ axesValues = (
 112.5,
 0
 );
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
+);
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 0.65278;
 "7904EAEE-2B64-409E-B923-0048172372BE" = -0.04167;
@@ -13470,8 +13672,8 @@ instanceInterpolations = {
 master01 = -0.05556;
 };
 isItalic = 1;
-linkStyle = "SmExp SmBold";
-name = "SmExp SmBold Italic";
+linkStyle = "SemiExp SemiBold";
+name = "SemiExp SemiBold Italic";
 weightClass = 600;
 widthClass = 6;
 },
@@ -13480,6 +13682,12 @@ axesValues = (
 700,
 112.5,
 0
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "2438E31C-45B5-47A7-9B3D-1A0FEFB47671" = 1.01667;
@@ -13490,8 +13698,8 @@ master01 = 0.05556;
 };
 isBold = 1;
 isItalic = 1;
-linkStyle = SmExp;
-name = "SmExp Bold Italic";
+linkStyle = SemiExp;
+name = "SemiExp Bold Italic";
 weightClass = 700;
 widthClass = 6;
 },
@@ -13499,22 +13707,13 @@ widthClass = 6;
 axesValues = (
 400,
 100,
-47
-);
-exports = 0;
-instanceInterpolations = {
-"997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 0.47;
-master01 = 0.53;
-};
-isItalic = 1;
-linkStyle = SmEnlarged;
-name = "SmEnlarged Italic";
-},
-{
-axesValues = (
-400,
-100,
 100
+);
+customParameters = (
+{
+name = "Use Typo Metrics";
+value = 1;
+}
 );
 instanceInterpolations = {
 "997BDFA1-EC67-4686-8CFE-E56BDBE179FE" = 1;
@@ -16565,7 +16764,7 @@ rhotichookmod = -30;
 "@MMK_R_KO_ssigmoid" = 17;
 "@MMK_R_KO_t" = 0;
 "@MMK_R_KO_tinsular" = 52;
-"@MMK_R_KO_u" = 6;
+"@MMK_R_KO_u" = 36;
 "@MMK_R_KO_uniA7C3" = 62;
 "@MMK_R_KO_uniA7D7" = 45;
 "@MMK_R_KO_vy" = 6;
@@ -16575,6 +16774,7 @@ rhotichookmod = -30;
 "@MMK_R_KO_z.alt1" = 150;
 "@MMK_R_KO_zvisigothic" = 92;
 "@MMK_R_idieresis" = 120;
+igrave = 66;
 };
 "@MMK_L_KO_f_j" = {
 "@MMK_R_Jsmall" = -18;
@@ -24294,7 +24494,7 @@ rhotichookmod = -20;
 "@MMK_R_KO_ssigmoid" = 40;
 "@MMK_R_KO_t" = 30;
 "@MMK_R_KO_tinsular" = 58;
-"@MMK_R_KO_u" = 26;
+"@MMK_R_KO_u" = 76;
 "@MMK_R_KO_uniA7C3" = 85;
 "@MMK_R_KO_uniA7D7" = 122;
 "@MMK_R_KO_vy" = 27;
@@ -24304,6 +24504,7 @@ rhotichookmod = -20;
 "@MMK_R_KO_z.alt1" = 243;
 "@MMK_R_KO_zvisigothic" = 161;
 "@MMK_R_idieresis" = 190;
+igrave = 126;
 };
 "@MMK_L_KO_f_j" = {
 "@MMK_R_Jsmall" = -14;
@@ -32022,7 +32223,7 @@ rhotichookmod = -33;
 "@MMK_R_KO_ssigmoid" = 12;
 "@MMK_R_KO_t" = 0;
 "@MMK_R_KO_tinsular" = 31;
-"@MMK_R_KO_u" = 0;
+"@MMK_R_KO_u" = 30;
 "@MMK_R_KO_uniA7C3" = 53;
 "@MMK_R_KO_uniA7D7" = 49;
 "@MMK_R_KO_vy" = 0;
@@ -32032,6 +32233,7 @@ rhotichookmod = -33;
 "@MMK_R_KO_z.alt1" = 147;
 "@MMK_R_KO_zvisigothic" = 98;
 "@MMK_R_idieresis" = 90;
+igrave = 60;
 };
 "@MMK_L_KO_f_j" = {
 "@MMK_R_Jsmall" = -11;
@@ -39702,7 +39904,7 @@ rhotichookmod = -12;
 "@MMK_R_KO_U" = 90;
 "@MMK_R_KO_V" = 151;
 "@MMK_R_KO_Z" = 106;
-"@MMK_R_KO_a" = 28;
+"@MMK_R_KO_a" = 0;
 "@MMK_R_KO_a.alt1" = 0;
 "@MMK_R_KO_a.alt4" = 48;
 "@MMK_R_KO_a.alt5" = 0;
@@ -39751,7 +39953,7 @@ rhotichookmod = -12;
 "@MMK_R_KO_ssigmoid" = 66;
 "@MMK_R_KO_t" = 55;
 "@MMK_R_KO_tinsular" = 93;
-"@MMK_R_KO_u" = 62;
+"@MMK_R_KO_u" = 52;
 "@MMK_R_KO_uniA7C3" = 100;
 "@MMK_R_KO_uniA7D7" = 88;
 "@MMK_R_KO_vy" = 62;
@@ -39761,6 +39963,7 @@ rhotichookmod = -12;
 "@MMK_R_KO_z.alt1" = 73;
 "@MMK_R_KO_zvisigothic" = 104;
 "@MMK_R_idieresis" = 110;
+igrave = 62;
 };
 "@MMK_L_KO_f_j" = {
 "@MMK_R_Jsmall" = -13;
@@ -47484,7 +47687,7 @@ is = 5;
 "@MMK_R_KO_ssigmoid" = -12;
 "@MMK_R_KO_t" = -3;
 "@MMK_R_KO_tinsular" = 10;
-"@MMK_R_KO_u" = -15;
+"@MMK_R_KO_u" = 25;
 "@MMK_R_KO_uniA7C3" = 0;
 "@MMK_R_KO_uniA7D7" = -21;
 "@MMK_R_KO_vy" = -17;
@@ -47494,6 +47697,7 @@ is = 5;
 "@MMK_R_KO_z.alt1" = 0;
 "@MMK_R_KO_zvisigothic" = 0;
 "@MMK_R_idieresis" = 100;
+igrave = 55;
 };
 "@MMK_L_KO_f_j" = {
 "@MMK_R_Jsmall" = -30;
@@ -55226,7 +55430,7 @@ rhotichookmod = -30;
 "@MMK_R_KO_ssigmoid" = 17;
 "@MMK_R_KO_t" = 0;
 "@MMK_R_KO_tinsular" = 52;
-"@MMK_R_KO_u" = 6;
+"@MMK_R_KO_u" = 46;
 "@MMK_R_KO_uniA7C3" = 62;
 "@MMK_R_KO_uniA7D7" = 45;
 "@MMK_R_KO_vy" = 6;
@@ -55236,6 +55440,7 @@ rhotichookmod = -30;
 "@MMK_R_KO_z.alt1" = 150;
 "@MMK_R_KO_zvisigothic" = 92;
 "@MMK_R_idieresis" = 120;
+igrave = 86;
 };
 "@MMK_L_KO_f_j" = {
 "@MMK_R_Jsmall" = -18;
@@ -59987,7 +60192,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright (c) 1998-2025 by Peter S. Baker";
+value = "Copyright (c) 1998-2026 by Peter S. Baker";
 }
 );
 },
@@ -60052,5 +60257,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 222;
+versionMinor = 223;
 }

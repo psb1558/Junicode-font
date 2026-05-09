@@ -85,25 +85,24 @@
     <body lang="is">
         <h1 lang="en">Private Use to OpenType Reference Page</h1>
         <p lang="en">
-            This page demonstrates all of the conversions that the Junicode 
-            utility pua2ot is capable of. If you want to know how to convert
-            a Private Use character, either search for the hexadecimal code
-            (e.g. E010) or for the character itself (you will find it in 
-            the “pua” column, which displays the character to be converted).
-        </p>
-        <p lang="en">
-            Next, check to make sure that any characters appearing in the last
-            five columns match the Private Use character. If the last five 
-            columns are blank for the row you have located, the contents of
-            the “base” column are the replacement. This must also match
-            the Private Use character.
-        </p>
-        <p lang="en">
-            Click on a cell in the “base”
+            This page tests and demonstrates all of the conversions that the 
+            Junicode utility pua2ot is capable of. If you want to know how to 
+            convert a Private Use or other character, locate the row or rows 
+            of the character. Click on a cell in the “base”
             column to see the Unicodes that make up the base. Click on any of
             the rightmost five columns to see the code that generates its
             content. The dialog that displays this information has a “Copy”
             button, which copies it to the clipboard.
+        </p>
+        <p>
+            To filter the table, type the first digit or digits of a hexadecimal
+            number (to search the “hex” column) or any other text (to search the 
+            “description” column) in the box below. For example, to find
+            characters with hex codes beginning <b>E0</b>, type that sequence in
+            the box; to find combining marks, type <b>combining</b>.
+        </p>
+        <p>
+            Filter: <input type="search" id="tblfilter" placeholder="Hex or description...">
         </p>
         <div class="table-container">
         <table id="tbl">
@@ -121,7 +120,7 @@
                 <button id="copyText">Copy</button>
             </form>
         </dialog>
-        <script src="./PUA2OT_DATA.js"></script>
+        <script src="PUA2OT_DATA.js"></script>
         <script src="./pua2ot-common.js"></script>
         <script>
             options.defaultTags = {"ss10": 1};
@@ -129,7 +128,7 @@
             // options.utagEntities = false;
             // options.nonWordTags = [ "ss04", "ss05", "ss06", "pcap", "smcp", "hlig", "case", "ENLA" ];
             // options.keepUnicode = false;
-            // options.methodPriority = "compact";
+            // options.methodPriority = "legible";
             // options.prefList = [ "utag", "zwj", "enla", "otag", "entity" ];
             // options.defaultTags = {ss10: 1};
             // options.basePreferences = [];

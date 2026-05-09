@@ -243,6 +243,22 @@ line 3, the \textSourceText{options} object in line 13, and the invocation of
 \textSourceText{convert()} in line 15.
 
 
+\subsection{Reference page}
+
+In the \textSourceText{src} folder is a file \textSourceText{charlist.html}. Drag this 
+into a web browser to view a list of all the transformations that {\pto} is capable
+of. Originally intended as a tool for proofing the database that powers {\pto},
+the page can also be used to look up the methods for individual PUA codes. Type the
+hexadecimal code for any of MUFI's PUA characters into the “Filter” box. Alternatively,
+type any word or phrase (e.g. “combining,” “small capital”) to search for in the 
+“description” column. To view the hexadecimal codes for the Unicode base for any 
+conversion, click on a cell in the “base” column. To view the underlying code for 
+any character, click on any of the last five columns of the row for the character 
+you are interested in. You can copy any of these methods onto the clipboard and 
+paste them into a document: just click the “Copy” button in the dialog that appears
+when you click on one of the last five cells in a row.
+
+
 \section{Options}
 
 In addition to the checkboxes, menus, and text-entry blanks in the web app, the
@@ -312,7 +328,7 @@ If \textSourceText{true}, MUFI’s entities (those that
 resolve to PUA code points) are replaced by those code points before any other processing
 takes place. Set this to \textSourceText{false} if the text you want to convert contains 
 no entities and you want to save a little time processing a large text.
-Not available in the GUI version, where entities are always converted.
+Not available in the GUI, where entities are always converted.
 
 \subsection{Default features}
 
@@ -355,9 +371,8 @@ Program default: \textSourceText{options.language=\char"0022en\char"0022}.\\
 It is important to set the language properly, both here and in your document, since this script
 and some of Junicode’s OpenType features behave differently depending on the language. If your 
 language is not in the drop-down list (available
-only in the GUI version of this script), choose 
-“Other” and type in the two-letter code for the language (you can look it up 
-\href{https://www.w3schools.com/tags/ref_language_codes.asp}{here}.)
+only in the GUI), choose “Other” and type in the two-letter code for the language (you can look
+it up \href{https://www.w3schools.com/tags/ref_language_codes.asp}{here}.).
 
 \subsection{Enlarge axis scale}
 
@@ -374,7 +389,7 @@ size as the enlarged minuscules produced by other means.
 Program example: \textSourceText{options.charSkip=["0131", "A787", "A77A", "F0AE"]}.\\
 GUI example: \textSourceText{\jRegular ı A787 A77A }.\\
 To cause {\pto} to skip over all instances 
-of a character, enter it here. In the GUI version, you can type or paste a space-separated 
+of a character, enter it here. In the GUI, you can type or paste a space-separated 
 list of characters and hexadecimal codes in the blank. In programming, only hexadecimal 
 codes are allowed; they must be
 enclosed in quotation marks and separated by commas, and the whole list must be enclosed in 

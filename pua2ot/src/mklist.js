@@ -1,7 +1,14 @@
 /*
-    Tests all the operations of pua2ot and allows the user to
-    view and copy any of them.
+    PUA2OT: A utility for converting MUFI PUA characters to standard
+    Unicode with Junicode's OpenType features.
+
+    Code for charlist.html, a test and reference page for pua2ot.
+
+    Copyright © 2025-26 by Peter S. Baker
+    Licensed under the Apache License, version 2.0:
+    https://www.apache.org/licenses/LICENSE-2.0
 */
+
 
 const otagpref =   ['otag', 'utag', 'zwj', 'entity', 'enla'];
 const utagpref =   ['utag', 'otag', 'zwj', 'entity', 'enla'];
@@ -9,13 +16,13 @@ const zwjpref =    ['zwj', 'utag', 'otag', 'entity', 'enla'];
 const entitypref = ['entity', 'zwj', 'utag', 'otag', 'enla'];
 const enlapref =   ['enla', 'entity', 'zwj', 'utag', 'otag'];
 
-const table = document.getElementById('tbl');
-const dialog = document.getElementById('method_info');
-const info_para = document.getElementById("dialogtext");
+//const table = document.getElementById('tbl');
+const dialog =     document.getElementById('method_info');
+const info_para =  document.getElementById("dialogtext");
 const dlg_header = document.getElementById("dialogheadertext");
-const tbl_head = document.getElementById("table_head");
-const tbl_body = document.getElementById("table_body");
-const copy_text = document.getElementById("copyText");
+const tbl_head =   document.getElementById("table_head");
+const tbl_body =   document.getElementById("table_body");
+const copy_text =  document.getElementById("copyText");
 
 let isMark = false;
 
@@ -193,7 +200,7 @@ function makeRow(hex, vartext, block, desc) {
  * @param {object} parent - the parent element to which we will add this cell.
 */
 function tableHeaderCell(name, parent) {
-    let cell = document.createElement("th");
+    const cell = document.createElement("th");
     cell.textContent = name;
     parent.appendChild(cell);
 }
@@ -226,6 +233,30 @@ async function toClipboard(t) {
         console.error('Failed to copy text: ', err);
     }
 }
+
+/*
+  Helper for "Filter" input event.
+*/
+function filterTable () {
+  let input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("tblfilter");
+  filter = input.value.toUpperCase();
+  isFilterHex = isHex(filter);
+  table = document.getElementById("tbl");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[isFilterHex ? 0 : 2];
+    if (td) {
+        txtValue = td.textContent || td.innerText;
+        idx = txtValue.toUpperCase().indexOf(filter);
+        tr[i].style.display = (isFilterHex ? idx == 0 : idx > -1) ? "" : "none";
+    }
+  }
+}
+
+document.getElementById("tblfilter").addEventListener("input", function(e) {
+    filterTable();
+});
 
 /**
  * Sets up listeners that make many cells in the table

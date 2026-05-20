@@ -1,3 +1,14 @@
+/*
+    PUA2OT: A utility for converting MUFI PUA characters to standard
+    Unicode with Junicode's OpenType features.
+
+    Common variables and functions
+
+    Copyright © 2025-26 by Peter S. Baker
+    Licensed under the Apache License, version 2.0:
+    https://www.apache.org/licenses/LICENSE-2.0
+*/
+
 /* To use this file as a Node module, uncomment the following two lines */
 
 // puaData = require("./PUA2OT_DATA-node.js")
@@ -91,7 +102,7 @@
                         "9": "\u{0E0039}" };
 
 /**
- * Lookup for replacing letters and number with entities. This makes them
+ * Lookup for replacing Unicode tags with entities. This makes them
  * visible and easy to debug.
  */
 const UTAG_ENTITY_DICT = { "a": "&__a;",
@@ -160,7 +171,16 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
                             '\uf02b': '&_y;',
                             '\uf03d': '&_thorn;' };
 
-    /*
+// Regular expression for testing for a cvNN tag. Used by is_cv_tag().
+const cvRegEx = /^cv\d\d$/;
+
+// Regular expression for testing for a ssNN tag. Used by is_ss_tag().
+const ssRegEx = /^ss\d\d$/;
+
+// Tags (aside from cvNN and ssNN) used by this program.
+const OTTags = ["case", "hlig", "dlig", "liga", "pcap", "smcp", "sups"];
+
+/*
         For internal use. No need to document.
     */
     let _prefList = COMPACT_PREF_LIST;
@@ -187,7 +207,7 @@ const MARK_TAG_ENTITIES = { '\uf03a': '&_ansc;',
 
     const phRegExp = new RegExp("%\\^%", "g");
 
-/**
+/*
  * Object mapping MUFI PUA hexes to entries in the database. We build this from the
  * database rather than coding it into this file.
  */
@@ -201,7 +221,7 @@ for (const pua_code in PUA_DATA) {
     }
 }
 
-/**
+/*
  * RegExp for doing rapid searches for entities.
  */
 const ENTITY_MAP = new RegExp(Object.keys(entityDict).join("|"), "g");
@@ -213,20 +233,21 @@ const ENTITY_MAP = new RegExp(Object.keys(entityDict).join("|"), "g");
 /**
  * Stores options for controlling the behavior of this script.
  * 
- * @property {string} language - The language of the text being converted.
- * @property {boolean} utagEntities - Whether to substitute entities (instead of characters) for Unicode tags.
- * @property {string[]} nonWordTags - Lists OpenType features that can be applied only to letters, not to words.
- * @property {boolean} keepUnicode - Whether to keep problematic Unicodes.
- * @property {string} methodPriority - Selects a predefined priority list: "compact" or "legible".
- * @property {string[]} prefList - Use to supply a custom priority list.
- * @property {{string: number}} defaultTags - OpenType features that are always on.
- * @property {string[]} basePreferences - Choose among different bases for certain categories of character.
- * @property {boolean} replaceMUFIEntities - Whether to search and replace MUFI entities.
- * @property {number} enlargedScale - Scale (0-100) for Enlarge axis.
- * @property {string[]} charSkip - List of characters to skip (not convert).
- * @type {{string: string | boolean | string[] | object}}
+ * @property {string}            language            - The language of the text being converted.
+ * @property {boolean}           utagEntities        - Whether to show entities for Unicode tags.
+ * @property {{string: string}}  utagLookup          - Get or set lookups for the utag method.
+ * @property {string[]}          nonWordTags         - List of OpenType features that can be applied only to letters.
+ * @property {boolean}           keepUnicode         - Whether to keep problematic Unicodes.
+ * @property {string}            methodPriority      - Selects a predefined priority list: "compact" or "legible".
+ * @property {string[]}          prefList            - Supplies a custom priority list.
+ * @property {{string:  number}} defaultTags         - OpenType features that are always on.
+ * @property {string[]}          basePreferences     - Different bases for certain categories of character.
+ * @property {boolean}           replaceMUFIEntities - Whether to search and replace MUFI entities.
+ * @property {number}            enlargedScale       - Scale (0-100) for Enlarge axis.
+ * @property {string[]}          charSkip            - List of characters to skip (not convert).
+ * @type     {{string: string | boolean | string[] | object}}
  */
-let options = {}
+const options = {}
 
 Object.defineProperty(options, 'charSkip', {
     get: () => _charSkip,
@@ -315,6 +336,35 @@ Object.defineProperty(options, 'enlargedScale', {
 // FUNCTIONS
 // ---------------------
 
+// Tests if a string is a Character Variant (cvNN) tag. Helper for is_OT_tag.
+const is_cv_tag = s => s.match(cvRegEx) != null;
+
+// Tests if a string is a Stylistic Set (ssNN) tag. Helper for is_OT_tag.
+const is_ss_tag = s => s.match(ssRegEx) != null;
+
+// Tests if a string is one of the tags (other than
+// ssNN or cvNN) used by this program. Helper for is_OT_tag.
+const is_other_tag = s => OTTags.includes(s);
+
+/**
+ * Tests whether a string is one of the OpenType tags used by this
+ * program.
+ * 
+ * @param {string} - The string to test.
+ * @return {boolean} True if this is a valid tag.
+ */
+const is_OT_tag = (s) => is_cv_tag(s) || is_ss_tag(s) || is_other_tag(s);
+
+/**
+ * Tests if the argument is a valid hexadecimal number.
+ * 
+ * @param {string} s - String to test.
+ * @returns {boolean} Result of the test.
+ */
+function isHex(s) {
+  return /^[0-9A-F]+$/.test(s.toUpperCase());
+}
+
 /**
  * Gets the length of a string, accounting correctly for characters
  * that consist of more than one UTF-16 code unit.
@@ -392,7 +442,7 @@ function featureString(tag_dict) {
  * @param {string} ch - the character to test.
  * @return {boolean} True if character is MUFI PUA or problematic Unicode.
  */
-function isMufiPua(ch) {
+function isReplaceable(ch) {
     const hexstr = int2hex(ch.codePointAt(0));
     if (_charSkip.includes(hexstr)) {
         return false;
@@ -403,7 +453,7 @@ function isMufiPua(ch) {
     return (hexstr in PUA_DATA);
 }
 
-/**
+/*
  * Tests whether a feature is on. This is a helper for resolveOtag().
  * 
  * @param {{string: number}} feature_dict - one-entry Object with the feature we're testing for.
@@ -424,7 +474,7 @@ function isFeatureOn(feature_dict, current_features) {
     return false;
 }
 
-/**
+/*
  * Helper for resolveUtag(), applyEnlargeAxis(), and resolveZwj().
  * Given a list of 
  * Unicode tags and a string, this function substitutes pairs of 
@@ -585,10 +635,6 @@ function resolveOtag(otag, base, current_tags, current_pass=0, tags_name="tags")
  */
 function resolveZwj(zwj, base, current_tags, current_pass=1) {
     const loclbase = ("base" in zwj) ? zwj.base : base;
-    /* let loclbase = base;
-    if ("base" in zwj) {
-        loclbase = zwj.base;
-    } */
     if (loclbase.length < 2) {
         return loclbase;
     }
@@ -633,11 +679,6 @@ function resolveZwj(zwj, base, current_tags, current_pass=1) {
  */
 function resolveUtag(utag, base, current_tags, current_pass=1) {
     let loclbase = "base" in utag ? utag.base : base;
-    /* let loclbase = base;
-    let taglist = [];
-    if ("base" in utag) {
-        loclbase = utag.base;
-    } */
     taglist = utag.tags;
     if (taglist === undefined) {
         if (!("otags" in utag)) {
@@ -675,7 +716,7 @@ function resolveEntity(entity, base, current_tags, current_pass=1) {
     return loclbase;
 }
 
-/**
+/*
  * A helper for convert(). This function locates and returns the
  * json block needed for the next method.
  * 
@@ -712,7 +753,7 @@ function replaceEntities(text_buffer) {
     return text_buffer.replace(ENTITY_MAP, matched => entityDict[matched]);
 }
 
-/**
+/*
  * Lets us define different method blocks for different languages.
  * Not currently used, but ready!
  * 
@@ -725,7 +766,7 @@ function getLangBlock(codepoint_entry) {
     return lang in codepoint_entry.lang ? codepoint_entry.lang[lang] : codepoint_entry.lang["other"];
 }
 
-/**
+/*
  * Allows you to select alternate bases for certain categories of character: number,
  * insular, alpha, currency, punctuation, mark, smallcap.
  * 

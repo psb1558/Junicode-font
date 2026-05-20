@@ -1956,10 +1956,26 @@ const PUA_DATA = {
         "mntity": "Ucurl"
     },
     "E337": {
-        "base": "",
+        "base": "Ꝥ",
         "desc": "LATIN CAPITAL LETTER THORN WITH DIAGONAL STROKE",
         "mntity": "THORNbarslash",
-        "note": "Not done yet"
+        "otag": {
+            "tags": [
+                {
+                    "name": "cv66"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "a"
+                },
+                {
+                    "name": "1"
+                }
+            ]
+        }
     },
     "E33A": {
         "base": "V́",
@@ -2505,7 +2521,7 @@ const PUA_DATA = {
         "mntity": "lovlmed"
     },
     "E5B8": {
-        "base": "m̶",
+        "base": "m̄",
         "desc": "LATIN SMALL LETTER M WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)",
         "mntity": "mmacrmed"
     },
@@ -5106,7 +5122,7 @@ const PUA_DATA = {
         "otag": {
             "tags": [
                 {
-                    "name": "dlig"
+                    "name": "dlig\\U"
                 }
             ]
         },
@@ -5133,6 +5149,30 @@ const PUA_DATA = {
                 }
             ]
         }
+    },
+    "F75E": {
+        "base": "a͏́a",
+        "desc": "LATIN LIGATURE SMALL LETTER A WITH ACUTE AND LATIN LETTER A",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
+    },
+    "F75F": {
+        "base": "aa͏́",
+        "desc": "LATIN LIGATURE SMALL LETTER A AND LATIN LETTER A WITH ACUTE",
+        "otag": {
+            "tags": [
+                {
+                    "name": "hlig"
+                }
+            ]
+        },
+        "zwj": {}
     },
     "EED0": {
         "base": "fty",
@@ -6165,6 +6205,13 @@ const PUA_DATA = {
         "var": {
             "alpha": {
                 "base": "ȷ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "ss06"
+                        }
+                    ]
+                },
                 "utag": {
                     "tags": [
                         {
@@ -6172,13 +6219,6 @@ const PUA_DATA = {
                         },
                         {
                             "name": "n"
-                        }
-                    ]
-                },
-                "otag": {
-                    "tags": [
-                        {
-                            "name": "ss06"
                         }
                     ]
                 },
@@ -6363,7 +6403,7 @@ const PUA_DATA = {
         "mntity": "nscapdot",
         "var": {
             "smallcap": {
-                "base": "n%^%̇"
+                "base": "ɴ̇"
             },
             "other": {
                 "base": "n%^%̇",
@@ -7956,6 +7996,14 @@ const PUA_DATA = {
             },
             "other": {
                 "base": "ᷣ",
+                "index": 1,
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv67"
+                        }
+                    ]
+                },
                 "utag": {
                     "tags": [
                         {
@@ -8207,7 +8255,7 @@ const PUA_DATA = {
         "mntity": "ber"
     },
     "F062": {
-        "base": "b%^%ᷣ%^%",
+        "base": "b%^%᷑%^%",
         "desc": "LATIN SMALL LETTER B WITH UR LEMNISKATE FORM ABOVE",
         "mntity": "burlemn",
         "otag": {
@@ -9820,23 +9868,24 @@ const PUA_DATA = {
         }
     },
     "F0BB": {
-        "base": "l¯",
+        "base": "l͛",
         "desc": "LATIN SMALL LETTER L WITH WORD-FINAL ZIGZAG ABOVE",
         "mntity": "lerfin",
         "otag": {
             "tags": [
                 {
-                    "name": "cv67"
+                    "name": "ss11"
                 }
             ]
         },
         "utag": {
+            "base": "l͛",
             "tags": [
                 {
-                    "name": "0"
+                    "name": "s"
                 },
                 {
-                    "name": "1"
+                    "name": "p"
                 }
             ]
         }
@@ -9845,6 +9894,28 @@ const PUA_DATA = {
         "base": "ſ͛",
         "desc": "LATIN SMALL LETTER LONG S WITH ZIGZAG ABOVE",
         "mntity": "slonger"
+    },
+    "F0BD": {
+        "base": "h%^%ᷟ",
+        "desc": "LATIN SMALL LETTER H WITH LATIN CAPITAL LETTER M ABOVE",
+        "mntity": "hmscapsup",
+        "otag": {
+            "tags": [
+                {
+                    "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                }
+            ]
+        }
     },
     "F0BE": {
         "base": "k%^%ᷓ",
@@ -10196,6 +10267,17 @@ const PUA_DATA = {
                     "name": "ss17"
                 }
             ]
+        },
+        "zwj": {
+            "base": "d%^%!v̄",
+            "utags": [
+                {
+                    "name": "i"
+                },
+                {
+                    "name": "1"
+                }
+            ]
         }
     },
     "F0DF": {
@@ -10206,7 +10288,7 @@ const PUA_DATA = {
     "F0E9": {
         "base": "ðv",
         "desc": "LATIN SMALL LIGATURE ETH V",
-        "mntity": "ethrotvlig",
+        "mntity": "ethvlig",
         "otag": {
             "tags": [
                 {
@@ -10282,29 +10364,44 @@ const PUA_DATA = {
         "zwj": {}
     },
     "F0F9": {
-        "base": "a͏̄n",
         "desc": "LATIN LIGATURE SMALL LETTER A WITH MACRON AND SMALL CAPITAL N",
         "mntity": "amacrnscaplig",
-        "otag": {
-            "tags": [
-                {
-                    "name": "hlig"
+        "var": {
+            "smallcap": {
+                "base": "a͏̄ɴ",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        }
+                    ]
                 },
-                {
-                    "name": "cv28",
-                    "index": 11
-                }
-            ]
-        },
-        "zwj": {
-            "utags": [
-                {
-                    "name": "p"
+                "zwj": {}
+            },
+            "other": {
+                "base": "a͏̄n",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "hlig"
+                        },
+                        {
+                            "name": "cv28",
+                            "index": 11
+                        }
+                    ]
                 },
-                {
-                    "name": "c"
+                "zwj": {
+                    "utags": [
+                        {
+                            "name": "p"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
                 }
-            ]
+            }
         }
     },
     "F0FA": {
@@ -11308,7 +11405,7 @@ const PUA_DATA = {
         }
     },
     "F1C2": {
-        "base": "ᷣ",
+        "base": "᷑",
         "desc": "COMBINING ABBREVIATION MARK SUPERSCRIPT UR LEMNISKATE FORM",
         "mntity": "urlemn",
         "otag": {

@@ -1114,10 +1114,16 @@ E331:
   desc: LATIN CAPITAL LETTER U WITH CURL
   mntity: Ucurl
 E337:
-  base: "\uE337"
+  base: "\uA764"
   desc: LATIN CAPITAL LETTER THORN WITH DIAGONAL STROKE
   mntity: THORNbarslash
-  note: Not done yet
+  otag:
+    tags:
+    - name: cv66
+  utag:
+    tags:
+    - name: a
+    - name: "1"
 E33A:
   base: "V\u0301"
   desc: LATIN CAPITAL LETTER V WITH ACUTE
@@ -1526,7 +1532,7 @@ E5B1:
   desc: LATIN SMALL LETTER L WITH MEDIUM-HIGH OVERLINE (ACROSS ASCENDER)
   mntity: lovlmed
 E5B8:
-  base: "m\u0336"
+  base: "m\u0304"
   desc: LATIN SMALL LETTER M WITH MEDIUM-HIGH MACRON (ABOVE CHARACTER)
   mntity: mmacrmed
 E5C5:
@@ -3153,7 +3159,7 @@ EECF:
   mntity: fftlig
   otag:
     tags:
-    - name: dlig
+    - name: dlig\U
   zwj: {}
 F75B:
   base: ';'
@@ -3166,6 +3172,20 @@ F75B:
     tags:
     - name: a
     - name: '9'
+F75E:
+  base: "a\u034F\u0301a"
+  desc: LATIN LIGATURE SMALL LETTER A WITH ACUTE AND LATIN LETTER A
+  otag:
+    tags:
+    - name: hlig
+  zwj: {}
+F75F:
+  base: "aa\u034F\u0301"
+  desc: LATIN LIGATURE SMALL LETTER A AND LATIN LETTER A WITH ACUTE
+  otag:
+    tags:
+    - name: hlig
+  zwj: {}
 EED0:
   base: fty
   desc: LATIN SMALL LIGATURE FTY
@@ -3716,13 +3736,13 @@ EEFE:
   var:
     alpha:
       base: "\u0237"
+      otag:
+        tags:
+        - name: ss06
       utag:
         tags:
         - name: e
         - name: n
-      otag:
-        tags:
-        - name: ss06
       enla: {}
     other:
       base: "j"
@@ -3810,7 +3830,7 @@ EF21:
   mntity: nscapdot
   var:
     smallcap:
-      base: "ɴ%^%\u0307"
+      base: "ɴ\u0307"
     other:
       base: "n%^%\u0307"
       otag:
@@ -4718,6 +4738,10 @@ F040:
         base: '&_ru;'
     other:
       base: "\u1DE3"
+      index: 1
+      otag:
+        tags:
+        - name: cv67
       utag:
         tags:
         - name: r
@@ -4843,7 +4867,7 @@ F05F:
   desc: LATIN SMALL LETTER B WITH ZIGZAG ABOVE
   mntity: ber
 F062:
-  base: "b%^%\u1DE3%^%"
+  base: "b%^%\u1DD1%^%"
   desc: LATIN SMALL LETTER B WITH UR LEMNISKATE FORM ABOVE
   mntity: burlemn
   otag:
@@ -5632,20 +5656,32 @@ F0BA:
     - name: c
     - name: a
 F0BB:
-  base: "l\xAF"
+  base: "l\u035B"
   desc: LATIN SMALL LETTER L WITH WORD-FINAL ZIGZAG ABOVE
   mntity: lerfin
   otag:
     tags:
-    - name: cv67
+    - name: ss11
   utag:
+    base: "l\u035B"
     tags:
-    - name: '0'
-    - name: '1'
+    - name: s
+    - name: p
 F0BC:
   base: "\u017F\u035B"
   desc: LATIN SMALL LETTER LONG S WITH ZIGZAG ABOVE
   mntity: slonger
+F0BD:
+  base: "h%^%\u1DDF"
+  desc: LATIN SMALL LETTER H WITH LATIN CAPITAL LETTER M ABOVE
+  mntity: hmscapsup
+  otag:
+    tags:
+    - name: ss20
+  utag:
+    tags:
+    - name: l
+    - name: d
 F0BE:
   base: "k%^%\u1DD3"
   desc: LATIN SMALL LETTER K WITH FLATTENED OPEN A ABOVE
@@ -5838,6 +5874,11 @@ F0DE:
     tags:
     - name: cv08
     - name: ss17
+  zwj:
+    base: "d%^%!v\u0304"
+    utags:
+    - name: i
+    - name: '1'
 F0DF:
   base: "\uA739\u0304"
   desc: LATIN SMALL LIGATURE A V WITH MACRON
@@ -5845,7 +5886,7 @@ F0DF:
 F0E9:
   base: "\xF0v"
   desc: LATIN SMALL LIGATURE ETH V
-  mntity: ethrotvlig
+  mntity: ethvlig
   otag:
     tags:
     - name: hlig
@@ -5888,18 +5929,26 @@ F0F8:
     - name: hlig
   zwj: {}
 F0F9:
-  base: "a\u034F\u0304n"
   desc: LATIN LIGATURE SMALL LETTER A WITH MACRON AND SMALL CAPITAL N
   mntity: amacrnscaplig
-  otag:
-    tags:
-    - name: hlig
-    - name: cv28
-      index: 11
-  zwj:
-    utags:
-    - name: p
-    - name: c
+  var:
+    smallcap:
+      base: "a\u034F\u0304\u0274"
+      otag:
+        tags:
+        - name: hlig
+      zwj: {}
+    other:
+      base: "a\u034F\u0304n"
+      otag:
+        tags:
+        - name: hlig
+        - name: cv28
+          index: 11
+      zwj:
+        utags:
+        - name: p
+        - name: c
 F0FA:
   base: "a\u034F\u0301v"
   desc: LATIN SMALL LIGATURE AV WITH ACUTE
@@ -6430,7 +6479,7 @@ F1C1:
     - name: a
     - name: '1'
 F1C2:
-  base: "\u1DE3"
+  base: "\u1DD1"
   desc: COMBINING ABBREVIATION MARK SUPERSCRIPT UR LEMNISKATE FORM
   mntity: urlemn
   otag:
@@ -6737,7 +6786,7 @@ F1F0:
         tags:
         - name: a
         - name: '1'
-2E4A:
+'2E4A':
   desc: Dotted Solidus
   mntity: virgsusp
   var:

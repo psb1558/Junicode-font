@@ -1,4 +1,15 @@
 /*
+    PUA2OT: A utility for converting MUFI PUA characters to standard
+    Unicode with Junicode's OpenType features.
+
+    Programming for the HTML GUI
+
+    Copyright © 2025-26 by Peter S. Baker
+    Licensed under the Apache License, version 2.0:
+    https://www.apache.org/licenses/LICENSE-2.0
+*/
+
+/*
     Load this after pua2ot-common.js.
 */
 
@@ -6,78 +17,25 @@
 // SET UP GLOBAL VARIABLES
 // ------------------------
 
-/*
-    Whether "Show code" is currently active.
-*/
+// Whether "Show code" is currently active.
 let codeOn = false;
 
-/*
-    Here's where we keep the text we're working with. Don't edit
-    these, but only a copy.
-*/
+// Here's where we keep the HTML text we're working with. Don't edit
+// this, but only a copy.
 let htmlBackup = document.createElement('div');
+
+// Here's where we keep the plain text we're working with. Don't edit
+// this, but only a copy.
 let textBackup = "";
 
-/*
-    Keep original html file here
-*/
+// Keep original html file here
 let htmlDoc = null;
-
-const cvRegEx = /^cv\d\d$/;
-const ssRegEx = /^ss\d\d$/;
-
-const OTTags = ["case", "hlig", "dlig", "liga", "pcap", "smcp", "sups"];
 
 // ---------------------------------------------
 // END OF VARIABLE SETUP. FUNCTIONS BEGIN.
 // ---------------------------------------------
 
-/**
- * Tests if this is a Character Variant (cvNN) tag.
- * 
- * @param {string} s - The string to test.
- * @returns {boolean} True if the string is a Stylistic Set tag.
- */
-const is_cv_tag = s => s.match(cvRegEx) != null;
-
-/**
- * Tests if this is a Stylistic Set (ssNN) tag.
- * 
- * @param {string} s - The string to test.
- * @returns {boolean} True if the string is a Stylistic Set tag.
- */
-const is_ss_tag = s => s.match(ssRegEx) != null;
-
-/**
- * Tests if this is one of the tags (other than
- * ssNN or cvNN) used by this program.
- * 
- * @param {string} s - The string to test.
- * @returns {boolean} True if the tag is valid.
- */
-const is_other_tag = s => OTTags.includes(s);
-
-/**
- * Tests whether a string is one of the OpenType tags used by this
- * program.
- * 
- * @param {string} - The string to test.
- * @return {boolean} True if this is a valid tag.
- */
-const is_OT_tag = (s) => is_cv_tag(s) || is_ss_tag(s) || is_other_tag(s);
-
-/**
- * Tests if the argument is a valid hexadecimal number. Number
- * should have been converted to uppercase before the test.
- * 
- * @param {string} s - String to test.
- * @returns {boolean} Result of the test.
- */
-function isHex(s) {
-  return /^[0-9a-fA-F]+$/.test(s);
-}
-
-/**
+/*
  * Converts a string consisting of a space-separated series of
  * hexadecimal numbers and/or single characters to an array of
  * hexadecimal strings.
@@ -104,7 +62,6 @@ function mkHexArray(s) {
                 return null;
             }
         } else {
-            ss = ss.toUpperCase();
             if (realLength(ss) < 4 || !isHex(ss)) {
                 return null;
             }
@@ -118,15 +75,13 @@ function mkHexArray(s) {
     return hexArray;
 }
 
-/**
+/*
  * Converts a string consisting of a space-separated series of
- * four-letter tags to an array of tags. Note that these tags
- * are not validated, beyond testing that they are four characters
- * long.
+ * four-letter tags to an array of tags (which must be among
+ * those used by this program).
  * 
  * @param {string} s - The string to convert.
- * @return {array} The array of tags. Null if any of the tags
- * are not four characters long.
+ * @return {array} The array of tags, or null if string could not be parsed.
  */
 function mkTagArray(s) {
     const tagArray = [];
@@ -136,7 +91,6 @@ function mkTagArray(s) {
     const a = cleanup_string(s).split(" ");
     for (i in a) {
         ss = a[i];
-        //if (realLength(ss) != 4) {
         if (!is_OT_tag(ss)) {
             return null;
         }
@@ -145,9 +99,11 @@ function mkTagArray(s) {
     return tagArray;
 }
 
-/**
+/*
  * Parses a tag and optional index in the format tag or tag[number]
  * and returns an array where a[0] is the tag and a[1] the index.
+ * Tag names are not validated beyond making sure they are four
+ * characters long.
  * 
  * @param {string} s - The string to parse.
  * @returns {array} Array with tag and index.
@@ -174,16 +130,16 @@ function parseIndexedTag(s) {
     return [tag, idx];
 }
 
-/**
+/*
  * Tests whether the text we're working with is plain text or html.
  * @returns {boolean} result of the test.
  */
 const isHTMLType = () => htmlDoc != null;
 
-/**
+/*
  * Prepares a string for export by doing some replacements and
  * wrapping it in a &lt;div&gt; that turns on the default OpenType
- * features.
+ * features. Helper for saving and copying.
  * @returns {string} The processed string.
  */
 function exportString() {
@@ -232,7 +188,7 @@ function markPuaCharsText() {
     let found_PUA = false;
     let resultStr = "";
     for (var ch of textBackup) {
-        if (isMufiPua(ch)) {
+        if (isReplaceable(ch)) {
             found_PUA = true;
             resultStr += ("<span class='pua'>" + ch + "</span>");
         } else {
@@ -272,7 +228,7 @@ function markPuaCharsHtml() {
         if (nv.length > 0) {
             let resultString = "";
             for (var ch of nv) {
-                if (isMufiPua(ch)) {
+                if (isReplaceable(ch)) {
                     PUA_found = locl_found = true;
                     resultString += ("<span class='pua'>" + ch + "</span>");
                 } else {
@@ -356,7 +312,7 @@ function htmlCaller(repl_ent) {
     console.timeEnd("PUATimer");
 }
 
-/**
+/*
  * Display contents of "body" element of html file in source box.
  */
 function displayInSourceBox() {
@@ -474,7 +430,7 @@ keepUnicodesWidget.addEventListener('change', function() {
     textCaller(!codeOn);
 } );
 
-/**
+/*
  * Parse a space-separated series of tags in JunicodeManual format
  * (tag[index] or unindexed tag), plug it into options.defaultTags,
  * and regenerate the destination text.
@@ -574,6 +530,7 @@ dnlButtonElement.onclick = () => {
 // "Copy" button.
 let cpyButtonElement = document.querySelector("#cpybutton");
 cpyButtonElement.onclick = () => {
+    console.log("copying...")
     copyToClipboard(exportString());
 }
 
@@ -602,7 +559,6 @@ let puaLabel = document.getElementById("mark_pua_label");
 puaWidget.addEventListener('change', function () {
     this.checked ? puaMarker() : restoreSource();
 } );
-
 
 // Drag and drop events, for the source box.
 sourceElement.addEventListener('dragover', function(e) {
@@ -637,8 +593,8 @@ fileInputWidget.addEventListener('change', (event) => {
     }
 } );
 
-/**
- * Helper for change event for "Edit source" button.
+/*
+ * Helper for change event for "Edit source" checkbox.
  */
 function handleSourceInput() {
     if (isHTMLType()) {
@@ -649,7 +605,7 @@ function handleSourceInput() {
     textCaller(!codeOn);
 }
 
-// "Edit Source" button.
+// "Edit Source" checkbox.
 let editSrcWidget = document.getElementById('edit_source');
 editSrcWidget.addEventListener('change', (event) => {
     if (editSrcWidget.checked) {
@@ -673,7 +629,7 @@ editSrcWidget.addEventListener('change', (event) => {
     }
 } );
 
-/**
+/*
  * Helper for "Alternate bases" event.
  */
 function varValues() {

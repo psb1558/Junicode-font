@@ -1,3 +1,14 @@
+/*
+    PUA2OT: A utility for converting MUFI PUA characters to standard
+    Unicode with Junicode's OpenType features.
+
+    Code for converting a web page on the fly.
+
+    Copyright © 2025-26 by Peter S. Baker
+    Licensed under the Apache License, version 2.0:
+    https://www.apache.org/licenses/LICENSE-2.0
+*/
+
 /**
  * Finds all text nodes in the &lt;body&gt; of an
  * html file and calls convert() to convert them all. Sets

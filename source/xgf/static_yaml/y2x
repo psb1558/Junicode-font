@@ -1,6 +1,0 @@
-#!/bin/bash
-
-f=$1
-ff="$(basename -- $f)"
-outfile="${ff%.*}".xgf
-xgridfit -y $f $outfile

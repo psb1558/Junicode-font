@@ -1,0 +1,619 @@
+font:
+  in: /Users/peterbaker/work/GitHub/Junicode-New/fonts/ttf/Junicode-CondMedium.ttf
+  out: /Users/peterbaker/work/GitHub/Junicode-New/fonts/ttf/Junicode-CondMedium-hinted.ttf
+defaults:
+  no-round:
+  - blackdist
+  function-base: 140
+  cleartype: true
+  merge-mode: true
+  init-graphics: false
+  assume-always-y: true
+cvt:
+  baseline:
+    val: 0
+    type: pos
+    axis: y
+  cap-height:
+    val: 666
+    type: pos
+    axis: y
+    cat: Lu
+    origin:
+      glyph: H
+      ptnum:
+      - 14
+  xheight:
+    val: 418
+    type: pos
+    axis: y
+    cat: Ll
+    origin:
+      glyph: x
+      ptnum:
+      - 13
+  cap-height-overshoot:
+    val: 676
+    type: pos
+    axis: y
+    cat: Lu
+    same-as:
+      below:
+        ppem: 40
+        cv: cap-height
+    origin:
+      glyph: O
+      ptnum:
+      - 9
+  cap-baseline-undershoot:
+    val: -13
+    type: pos
+    axis: y
+    cat: Lu
+    same-as:
+      below:
+        ppem: 40
+        cv: baseline
+    origin:
+      glyph: O
+      ptnum:
+      - 0
+  xheight-overshoot:
+    val: 425
+    type: pos
+    axis: y
+    cat: Ll
+    same-as:
+      below:
+        ppem: 40
+        cv: xheight
+    origin:
+      glyph: o
+      ptnum:
+      - 7
+  lc-baseline-undershoot:
+    val: -11
+    type: pos
+    axis: y
+    cat: Ll
+    same-as:
+      below:
+        ppem: 40
+        cv: baseline
+    origin:
+      glyph: o
+      ptnum:
+      - 0
+  lc-ascender:
+    val: 725
+    type: pos
+    axis: y
+    cat: Ll
+    origin:
+      glyph: b
+      ptnum:
+      - 27
+  lc-descender:
+    val: -273
+    type: pos
+    axis: y
+    cat: Ll
+    origin:
+      glyph: p
+      ptnum:
+      - 0
+  num-round-top:
+    val: 651
+    type: pos
+    axis: y
+    cat: Nd
+    same-as:
+      below:
+        ppem: 40
+        cv: num-flat-top
+    origin:
+      glyph: eight
+      ptnum:
+      - 12
+  num-baseline-undershoot:
+    val: -8
+    type: pos
+    axis: y
+    cat: Nd
+    same-as:
+      below:
+        ppem: 40
+        cv: baseline
+    origin:
+      glyph: eight
+      ptnum:
+      - 0
+  num-flat-top:
+    val: 643
+    type: pos
+    axis: y
+    cat: Nd
+    origin:
+      glyph: five
+      ptnum:
+      - 25
+  tildedist:
+    axis: y
+    type: dist
+    val: 68
+    origin:
+      glyph: tilde
+      ptnum:
+      - 0
+      - 20
+  f-left-top:
+    axis: y
+    type: pos
+    val: 714
+    origin:
+      glyph: f.rf
+      ptnum:
+      - 33
+    same-as:
+      below:
+        cv: lc-ascender
+        ppem: 40
+  f-bar-top:
+    axis: y
+    type: pos
+    val: 415
+    origin:
+      glyph: f.rf
+      ptnum:
+      - 46
+    same-as:
+      below:
+        cv: xheight
+        ppem: 40
+prep:
+  code: |-
+    <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+                <!-- Turn off hinting above 300 ppem -->
+                <if test="pixels-per-em &gt; 300">
+                    <disable-instructions/>
+                </if>
+                <!-- Dropout control -->
+                <push>4 511</push>
+                <command name="SCANCTRL"/>
+                <command name="SCANTYPE"/>
+                </code>
+functions:
+  delta:
+    primitive: true
+    stack-safe: true
+    size:
+      type: int
+      val: 25
+    distance:
+      type: int
+      val: 0
+    pt:
+      type: point
+      subtype: target
+    code: |-
+      <code xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+              <command name="SDB"/>
+              <command name="DUP"/>
+              <push>0</push>
+              <command name="NEQ"/>
+              <command name="IF"/>
+              <command name="DUP"/>
+              <push>0</push>
+              <command name="LT"/>
+              <command name="IF"/>
+              <push>8</push>
+              <command name="ADD"/>
+              <command name="ELSE"/>
+              <push>7</push>
+              <command name="ADD"/>
+              <command name="EIF"/>
+              <command name="SWAP"/>
+              <push>1</push>
+              <command name="DELTAP1"/>
+              <command name="ELSE"/>
+              <command name="POP"/>
+              <command name="POP"/>
+              <command name="EIF"/>
+              <push>8</push>
+              <command name="SDB"/>
+              </code>
+macros: {}
+glyphs:
+  tilde:
+    y:
+      points:
+      - ptid: '{200;502}'
+        points:
+        - ptid: '{204;570}'
+          rel: blackdist
+          dist: tildedist
+        - ptid: '{83;548}'
+          rel: graydist
+          points:
+          - ptid: '{87;617}'
+            rel: blackdist
+            dist: tildedist
+  tildecomb:
+    y:
+      points:
+      - ptid: '{-139;502}'
+        points:
+        - ptid: '{-135;564}'
+          rel: blackdist
+          dist: tildedist
+        - ptid: '{-256;548}'
+          rel: graydist
+          points:
+          - ptid: '{-252;610}'
+            rel: blackdist
+            dist: tildedist
+  tildecomb.case:
+    y:
+      points:
+      - ptid: '{-156;718}'
+        points:
+        - ptid: '{-152;780}'
+          rel: blackdist
+          dist: tildedist
+        - ptid: '{-273;764}'
+          rel: graydist
+          points:
+          - ptid: '{-269;826}'
+            rel: blackdist
+            dist: tildedist
+  tildecomb.sc:
+    y:
+      points:
+      - ptid: '{-155;512}'
+        points:
+        - ptid: '{-152;574}'
+          rel: blackdist
+          dist: tildedist
+        - ptid: '{-273;558}'
+          rel: graydist
+          points:
+          - ptid: '{-268;620}'
+            rel: blackdist
+            dist: tildedist
+  f.rf:
+    y:
+      points:
+      - ptid: '{262;714}'
+        pos: f-left-top
+        points:
+        - ptid: '{245;662}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{76;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{120;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{206;27}'
+            rel: shift
+  f.alt.lf:
+    y:
+      points:
+      - ptid: '{221;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{196;689}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{41;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{126;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{216;27}'
+            rel: shift
+  f.lf:
+    y:
+      points:
+      - ptid: '{265;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{225;677}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{125;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  f.lf.alt:
+    y:
+      points:
+      - ptid: '{222;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{196;689}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{78;370}'
+            rel: shift
+          - ptid: '{41;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{126;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  f.lfrij:
+    y:
+      points:
+      - ptid: '{278;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{242;674}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{125;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  f.lfrl:
+    y:
+      points:
+      - ptid: '{265;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{244;677}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{125;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  f.lfrtall:
+    y:
+      points:
+      - ptid: '{265;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{244;677}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{125;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  f.rij:
+    y:
+      points:
+      - ptid: '{275;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{239;674}'
+          rel: blackdist
+          round: false
+      - ptid: '{161;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{161;367}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{78;367}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{123;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;30}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{212;30}'
+            rel: shift
+  f.rl:
+    y:
+      points:
+      - ptid: '{265;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{244;677}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{125;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  f.rtall:
+    y:
+      points:
+      - ptid: '{265;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{244;677}'
+          rel: blackdist
+          round: false
+      - ptid: '{164;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{164;370}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{77;370}'
+            rel: shift
+          - ptid: '{40;400}'
+            rel: blackdist
+            round: false
+      - ptid: '{125;0}'
+        pos: baseline
+        points:
+        - ptid: '{34;27}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{217;27}'
+            rel: shift
+  i.lf:
+    y:
+      points:
+      - ptid: '{5;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{5;370}'
+          rel: blackdist
+          round: false
+      - ptid: '{93;0}'
+        pos: baseline
+        points:
+        - ptid: '{10;30}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{176;30}'
+            rel: shift
+      - ptid: '{129;431}'
+        pos: xheight-overshoot
+  j.lf:
+    y:
+      points:
+      - ptid: '{132;431}'
+        pos: xheight-overshoot
+      - ptid: '{5;415}'
+        pos: f-bar-top
+        points:
+        - ptid: '{5;370}'
+          rel: blackdist
+          round: false
+      - ptid: '{-13;-271}'
+        pos: lc-descender
+        points:
+        - ptid: '{32;-225}'
+          rel: blackdist
+          round: false

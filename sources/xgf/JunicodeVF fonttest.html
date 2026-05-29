@@ -1,0 +1,671 @@
+﻿<html>
+	<!--<base href="..">--> <!-- uncomment for keeping the HTML in a subfolder -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<head>
+		<title>OTVar Test: Junicode</title>
+		<style id="font-declaration">
+			@font-face { 
+				font-family: "Junicode";
+				src: url("JunicodeVF-Italic.ttf");
+			}
+		</style>
+		<style>
+			body {
+				padding: 0;
+				margin: auto;
+				overflow-x: hidden;
+			}
+			#flexbox {
+				display: flex;
+				flex-flow: column;
+				height: 100%;
+			}
+			#controls {
+				flex: 0 1 auto;
+				background-color: white;
+				margin: 2px 0 0 0;
+				padding: 0;
+				width: 100%;
+				border: 0px solid transparent;
+				height: auto;
+				user-select: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+			}
+		
+
+/* OTVar Sliders: */
+			.labeldiv {
+				width: 49.2%;
+				padding: 0 0 0 0.2%;
+				margin: auto;
+				display: inline-block;
+			}
+ 			label {
+				z-index: 2;
+				position: absolute;
+				pointer-events: none;
+				height: 2em;
+				margin: 0;
+				padding: 0.5em 1em;
+				vertical-align: text-top;
+				font: x-small sans-serif;
+				color: black;
+				opacity: 0.5;
+			}
+			.slider {
+				z-index: 1;
+				position: relative;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 100%;
+				height: 2em;
+				border-radius: 5px;
+				background: #eee;
+				padding: auto;
+				margin: auto;
+			}
+			.slider::-webkit-slider-thumb {
+				z-index: 3;
+				position: relative;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 16px;
+				height: 2em;
+				border-radius: 5px; 
+				background: #777;
+				cursor: auto;
+			}
+
+/* Feature Buttons: */
+			#featureControls {
+				font-size: x-small;
+				font-family: sans-serif;
+				padding: 0 0.2%;
+			}
+			#featureControls .emojiButton {
+				vertical-align: -50%;
+				font-size: small;
+			}
+			.emojiButton {
+				cursor: pointer;
+				text-decoration: none;
+			}
+			.otFeatureLabel, .otFeature {
+				font-size: small;
+				position: relative;
+				opacity: 1;
+				pointer-events: auto;
+				white-space: nowrap;
+			}
+			.otFeatureLabel, select {
+				padding: 0.2em 0.5em 0.3em 0.5em;
+				margin: 0 .04em;
+				line-height: 2em;
+				color: #666;
+				background-color: #ddd;
+				border-radius: 0.3em;
+				border: 0;
+				text-align: center;
+				z-index: 6;
+			}
+ 			select {
+				position: relative;
+				margin: 0.25em 0.15em;
+				height: 2.1em;
+				font: x-small sans-serif;
+				vertical-align: top;
+			}
+			.otFeature {
+				visibility: collapse;
+				margin: 0 -1em 0 0;
+			}
+			input[type=checkbox]:checked + label { 
+				visibility: visible;
+				color: #eee;
+				background-color: #555; 
+				position: relative;
+			}
+			.otFeatureLabel .tooltip {
+				visibility: hidden;
+				background-color: #333;
+				color: white;
+				text-align: center;
+				padding: 0px 5px;
+				top: -2em;
+				left: 0;
+				position: absolute;
+				z-index: 8;
+			}
+			.otFeatureLabel:hover .tooltip {
+				visibility: visible;
+			}
+
+/* Sample Text Area: */
+			#textarea {
+				flex: 1 1 auto;
+				border: 0 solid transparent;
+				margin: auto;
+				padding: 0 0 0.6em 0;
+				line-height: 1em;
+				width: 100%;
+				color: black;
+				font: 40px "Junicode";
+				font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-moz-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-webkit-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-ms-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-o-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				font-variation-settings: "wght" 400.0, "wdth" 100.0, "ENLA" 0.0;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				word-wrap: break-word;
+			}
+			.○ {
+				-webkit-text-stroke: 1px black;
+				-webkit-text-fill-color: #FFF0;
+			}
+			div:focus {
+				outline: 0px solid transparent;
+			}
+		
+/* Footer paragraph: */
+			#helptext {
+				position: fixed;
+				background: transparent;
+				bottom: 0;
+				width: 100%;
+				color: #888;
+				font: x-small sans-serif;
+			}
+			a {
+				color: #333;
+			}
+		
+/* Dark Mode: */
+			@media (prefers-color-scheme: dark) {
+				body { background: #000; }
+				p { color: #eee; }
+			
+				#textInput{
+					color: #eee;
+					background-color: #222;
+					background: #222;
+				}
+	 			label { color: #fff; }
+				.otFeatureLabel {
+					color: #999;
+					background-color: #333;
+				}
+				input[type=checkbox]:checked + label { 
+					color: #111;
+					background-color: #888; 
+				}
+
+				.slider { background: #333; }
+				.slider::-webkit-slider-thumb { background: #888; }
+				a { color: #ccc; }
+
+				#controls {
+					background-color: black;
+				}
+				#textarea {
+					color: white;
+					background-color: black;
+				}
+				.○ {
+					-webkit-text-stroke: 1px white;
+					-webkit-text-fill-color: #0000;
+				}
+			}
+		
+		</style>
+		<script>
+			document.addEventListener('keyup', keyAnalysis);
+			document.addEventListener('keyup', sliderPrecision);
+			document.addEventListener('keydown', sliderPrecision);
+		
+			const sliders = document.getElementsByClassName('slider');
+		
+			function sliderPrecision(event) {
+				if (event.shiftKey) {
+					for (i = 0; i < sliders.length; i++) {
+						sliders[i].step = 0.005;
+					} 
+				} else {
+					for (i = 0; i < sliders.length; i++) {
+						if (sliders[i].id == "ital") {
+							sliders[i].step = 0.05;
+						} else {
+							sliders[i].step = 1;
+						}
+					}
+				}
+			}
+			function keyAnalysis(event) {
+				const sizeSlider = document.getElementById("fontsize");
+				const lineheightSlider = document.getElementById("lineheight");
+				const styleMenu = document.getElementById("styleMenu");
+				const styleMenuLength = styleMenu.options.length;
+				
+				if (event.ctrlKey) {
+					if (event.code == 'KeyR') {
+						resetParagraph();
+					} else if (event.code == 'KeyL') {
+						setLat1();
+					} else if (event.code == 'KeyJ') {
+						toggleLeftRight();
+					} else if (event.code == 'KeyX') {
+						toggleInverse();
+					} else if (event.code == 'KeyC') {
+						toggleCenter();
+					} else if (event.code == 'KeyM') {
+						toggleMenu();
+					} else if (event.code == 'Period') {
+						styleMenu.selectedIndex = (styleMenu.selectedIndex + 1) % styleMenuLength;
+						setStyle(styleMenu.value);
+					} else if (event.code == 'Comma') {
+						var newIndex = styleMenu.selectedIndex - 1;
+						if (newIndex<0) {
+							newIndex = styleMenuLength - 1;
+						}
+						styleMenu.selectedIndex = newIndex;
+						setStyle(styleMenu.value);
+					} else if (event.key == '+') {
+						sizeSlider.value = Math.round(sizeSlider.value*1.25);
+						if (sizeSlider.value > parseInt(sizeSlider.max)) {
+							sizeSlider.value = sizeSlider.max;
+						}
+						updateSlider();
+					} else if (event.key == '-') {
+						sizeSlider.value = Math.round(sizeSlider.value*0.8);
+						if (sizeSlider.value < parseInt(sizeSlider.min)) {
+							sizeSlider.value = sizeSlider.min;
+						}
+						updateSlider();
+					} else if (event.key == '1') {
+						lineheightSlider.value = Math.round(parseInt(lineheightSlider.value)-20);
+						if (lineheightSlider.value < parseInt(lineheightSlider.min)) {
+							lineheightSlider.value = lineheightSlider.min;
+						}
+						updateSlider();
+					} else if (event.key == '2') {
+						lineheightSlider.value = Math.round(parseInt(lineheightSlider.value)+20);
+						if (lineheightSlider.value > parseInt(lineheightSlider.max)) {
+							lineheightSlider.value = lineheightSlider.max;
+						}
+						updateSlider();
+					}
+				}
+			}
+			function setLanguage(lang) {
+				document.body.setAttribute('lang',lang);
+			}
+			function updateFeatures() {
+				// update features based on user input:
+				var testtext = getTestText();
+				var codeLine = "";
+				var checkboxes = document.getElementsByClassName("otFeature")
+				for (i = 0; i < checkboxes.length; i++) {
+					var checkbox = checkboxes[i];
+					if (i!=0) { codeLine += ", " };
+					codeLine += '"'+checkbox.name+'" ';
+					codeLine += checkbox.checked ? '1' : '0';
+					if (checkbox.name=="kern") {
+						testtext.style.setProperty("font-kerning", checkbox.checked ? 'normal' : 'none');
+					} else if (checkbox.name=="liga") {
+						testtext.style.setProperty("font-variant-ligatures", checkbox.checked ? 'common-ligatures contextual' : 'no-common-ligatures no-contextual');
+					} else if (checkbox.name=="dlig") {
+						testtext.style.setProperty("font-variant-ligatures", checkbox.checked ? 'discretionary-ligatures' : 'no-discretionary-ligatures');
+					} else if (checkbox.name=="hlig") {
+						testtext.style.setProperty("font-variant-ligatures", checkbox.checked ? 'historical-ligatures' : 'no-historical-ligatures');
+					}
+				}
+				testtext.style.setProperty("font-feature-settings", codeLine);
+			}
+			function resetParagraph() {
+				const defaulttext = "&#x0041; &#xA732; &#xA73A; &#xA73C; &#x00C1; &#x0102; &#x1EAE; &#x1EB6; &#x1EB0; &#x1EB2; &#x1EB4; &#x01CD; &#x00C2; &#x1EA4; &#x1EAC; &#x1EA6; &#x1EA8; &#x1EAA; &#x0200; &#x00C4; &#x01DE; &#x0226; &#x1EA0; &#x01E0; &#x00C0; &#x1EA2; &#xA724; &#x0202; &#xA722; &#x0100; &#xA734; &#x0104; &#x00C5; &#x01FA; &#x1E00; &#x023A; &#x00C3; &#xA736; &#xA738; &#x00C6; &#x01FC; &#x01E2; &#x0042; &#x1E02; &#x1E04; &#x0181; &#x1E06; &#x0182; &#x0043; &#x0106; &#x010C; &#x00C7; &#x1E08; &#x0108; &#x010A; &#x0187; &#xA76E; &#xA73E; &#x0044; &#x01F1; &#x01C4; &#x0189; &#x010E; &#x1E10; &#x1E12; &#x0110; &#x1E0A; &#x1E0C; &#x018A; &#xA779; &#x1E0E; &#x018B; &#x01F2; &#x01C5; &#x00D0; &#x0045; &#x00C9; &#x0114; &#x011A; &#x0228; &#x1E1C; &#x00CA; &#x1EBE; &#x1E18; &#x1EC6; &#x1EC0; &#x1EC2; &#x1EC4; &#x0204; &#x00CB; &#x0116; &#x1EB8; &#x00C8; &#x1EBA; &#x0206; &#x0112; &#x1E16; &#x1E14; &#x0118; &#x0190; &#x018E; &#x01A9; &#x0246; &#xA76A; &#x1EBC; &#x1E1A; &#x018F; &#x01B7; &#x01EE; &#x01B8; &#x0046; &#x1E1E; &#x0191; &#xA77B; &#x0047; &#x01F4; &#x011E; &#x01E6; &#x011C; &#x0122; &#x0120; &#x0193; &#xA77D; &#x0241; &#x1E20; &#x01E4; &#xA77E; &#x021C; &#x0048; &#x2C75; &#x0126; &#x1E2A; &#x021E; &#x1E28; &#x0124; &#x1E26; &#x1E22; &#x1E24; &#xA726; &#x01F6; &#x0049; &#x0132; &#x00CD; &#x012C; &#x01CF; &#x00CE; &#x0208; &#x00CF; &#x1E2E; &#x0130; &#x1ECA; &#x00CC; &#x1EC8; &#x020A; &#x012A; &#x012E; &#x0196; &#xA76C; &#x0197; &#x0128; &#x1E2C; &#x004A; &#x0134; &#x0248; &#x004B; &#x1E30; &#x01E8; &#x0136; &#xA742; &#x1E32; &#x0198; &#x1E34; &#xA740; &#xA744; &#x004C; &#x01C7; &#x1EFA; &#x0139; &#xA746; &#x013D; &#x1E3C; &#x013B; &#x013F; &#x1E36; &#x1E38; &#xA748; &#x01C8; &#x1E3A; &#x0141; &#xA780; &#x004D; &#x1E3E; &#x1E40; &#x1E42; &#x019C; &#x004E; &#x01CA; &#x0143; &#x0147; &#x1E4A; &#x0145; &#x1E44; &#x1E46; &#x01F8; &#x019D; &#x01CB; &#x0220; &#x1E48; &#x00D1; &#x014A; &#x004F; &#xA74E; &#x0222; &#x00D3; &#x014E; &#x01D1; &#x019F; &#x00D4; &#x1ED0; &#x1ED8; &#x1ED2; &#x1ED4; &#x1ED6; &#x020C; &#x00D6; &#x022A; &#x022E; &#x0230; &#x1ECC; &#x00D2; &#x1ECE; &#x01A0; &#x1EDA; &#x1EE2; &#x1EDC; &#x1EDE; &#x1EE0; &#x0150; &#x01A2; &#x020E; &#xA74A; &#xA74C; &#x014C; &#x1E52; &#x1E50; &#x01EA; &#x01EC; &#x0186; &#x00D8; &#x01FE; &#x00D5; &#x1E4C; &#x1E4E; &#x022C; &#x0152; &#x0050; &#x1E54; &#x1E56; &#xA752; &#x01A4; &#x00DE; &#xA754; &#xA750; &#x0051; &#xA758; &#xA756; &#x0052; &#x0154; &#x0158; &#x0156; &#x0210; &#x1E58; &#x1E5A; &#x1E5C; &#xA782; &#x0212; &#x1E5E; &#xA75A; &#xA75C; &#x0053; &#x015A; &#x1E64; &#x0160; &#x1E66; &#x015E; &#x015C; &#x0218; &#x1E60; &#x1E62; &#x1E68; &#x1E9E; &#xA784; &#x0054; &#x0166; &#x0164; &#x0162; &#x1E70; &#x021A; &#x1E6A; &#x1E6C; &#x01AC; &#xA764; &#xA766; &#xA786; &#x1E6E; &#x01BC; &#x0184; &#x01A7; &#x01AE; &#xA728; &#x0055; &#x00DA; &#x016C; &#x01D3; &#x00DB; &#x1E76; &#x0214; &#x00DC; &#x01D7; &#x1E72; &#x01D9; &#x01DB; &#x01D5; &#x1EE4; &#x00D9; &#x1EE6; &#x01AF; &#x1EE8; &#x1EF0; &#x1EEA; &#x1EEC; &#x1EEE; &#x0170; &#x0216; &#x016A; &#x1E7A; &#x0172; &#x01B1; &#x016E; &#x0168; &#x1E78; &#x1E74; &#x0056; &#x1EFC; &#xA760; &#x0194; &#xA75E; &#x1E7E; &#xA768; &#x01B2; &#x1E7C; &#x0057; &#x1E82; &#x0174; &#x1E84; &#x1E86; &#x1E88; &#x1E80; &#x2C72; &#x01F7; &#x0058; &#x1E8C; &#x1E8A; &#x0059; &#x00DD; &#x0176; &#x0178; &#x1E8E; &#x1EF4; &#x1EF2; &#x01B3; &#x1EF6; &#x0232; &#x01A6; &#x1EF8; &#x005A; &#x0179; &#x017D; &#x1E90; &#x017B; &#x1E92; &#x0224; &#x1E94; &#x01B5; &#xA7BA; &#xA7BC; &#xA7BE; &#xA7C0; &#xA7C2; &#xA7D0; &#xA7D6; &#xA7D8; &#x1EFE; &#x1D01; &#x1D00; &#x1D03; &#x0299; &#x1D04; &#x1D05; &#x1D07; &#x1D06; &#x1D23; &#xA730; &#x0262; &#x029B; &#x029C; &#x026A; &#x1D7B; &#x1D0A; &#x1D0B; &#x029F; &#x1D0C; &#x1D0D; &#x1D0E; &#x0274; &#x0276; &#x1D15; &#x1D10; &#x1D0F; &#x1D18; &#x1D19; &#x0280; &#x0281; &#x1D1A; &#xA731; &#x1D1B; &#x1D1C; &#x1D20; &#x1D21; &#x028F; &#x1D22; &#x0061; &#xA733; &#x00E1; &#x0103; &#x1EAF; &#x1EB7; &#x1EB1; &#x1EB3; &#x1EB5; &#x01CE; &#x00E2; &#x1EA5; &#x1EAD; &#x1EA7; &#x1EA9; &#x1EAB; &#x0201; &#x00E4; &#x01DF; &#x0227; &#x1EA1; &#x01E1; &#x1D02; &#x00E0; &#x1EA3; &#x1D25; &#xA725; &#x0203; &#xA723; &#x0251; &#x0252; &#x0101; &#xA735; &#x0105; &#x1E9A; &#x00E5; &#x01FB; &#x1E01; &#x2C65; &#x00E3; &#x0250; &#xA737; &#xA739; &#xA73B; &#xA73D; &#x00E6; &#x01FD; &#x01E3; &#x0062; &#x1E03; &#x1E05; &#x0253; &#x02AD; &#x0298; &#x02AC; &#x1E07; &#x0180; &#x0183; &#x0063; &#x0107; &#x010D; &#x00E7; &#x1E09; &#x0109; &#x0255; &#x010B; &#x0188; &#xA76F; &#x2184; &#xA73F; &#x0297; &#x0064; &#x0238; &#x010F; &#x1E11; &#x1E13; &#x0111; &#x0221; &#x1E0B; &#x1E0D; &#x1E9F; &#x018D; &#x02A4; &#x0257; &#xA77A; &#x1E0F; &#x0256; &#x018C; &#xA771; &#x01F3; &#x02A3; &#x01C6; &#x02A5; &#x00F0; &#x0065; &#x1D08; &#x00E9; &#x0115; &#x011B; &#x0229; &#x1E1D; &#x00EA; &#x1EBF; &#x1E19; &#x1EC7; &#x1EC1; &#x1EC3; &#x1EC5; &#x0205; &#x00EB; &#x0117; &#x1EB9; &#x00E8; &#x1EBB; &#x0207; &#x0113; &#x1E17; &#x1E15; &#x0119; &#x025B; &#x029A; &#x025C; &#x025E; &#x025D; &#x0258; &#x0283; &#x0286; &#x01AA; &#x0285; &#x0247; &#xA76B; &#x1EBD; &#x1E1B; &#x01DD; &#x0259; &#x025A; &#x0292; &#x01EF; &#x0293; &#x01B9; &#x01BA; &#x0066; &#x1E1F; &#x02A9; &#xA77C; &#x0067; &#x01F5; &#x0263; &#x011F; &#x01E7; &#x011D; &#x0123; &#x0121; &#x0260; &#x1D79; &#x01BE; &#x0296; &#x0295; &#x0242; &#x02A1; &#x02A2; &#x1E21; &#x0261; &#x01E5; &#xA77F; &#x021D; &#x0068; &#x2C76; &#x0127; &#x1E2B; &#x021F; &#x1E29; &#x0125; &#x1E27; &#x1E23; &#x1E25; &#xA727; &#x0267; &#x0266; &#x1E96; &#x0265; &#x02AE; &#x02AF; &#x0195; &#x0069; &#x1D09; &#x0131; &#x00ED; &#x012D; &#x01D0; &#x00EE; &#x0209; &#x00EF; &#x1E2F; &#x1ECB; &#x00EC; &#x1EC9; &#x020B; &#x012B; &#x012F; &#x0269; &#xA76D; &#x0268; &#x0129; &#x1E2D; &#x0133; &#x006A; &#x0237; &#x01F0; &#x0135; &#x029D; &#x025F; &#x0284; &#x0249; &#x006B; &#x1E31; &#x01E9; &#x0137; &#xA743; &#x1E33; &#x0138; &#x0199; &#x1E35; &#xA741; &#xA745; &#x029E; &#x006C; &#x013A; &#x019B; &#x019A; &#x026C; &#xA747; &#x013E; &#x1E3D; &#x013C; &#x0140; &#x1E37; &#x1E39; &#x026E; &#xA749; &#x026D; &#x01C9; &#x1EFB; &#x1E3B; &#x026B; &#x1E9C; &#x1E9B; &#x1E9D; &#x02AA; &#x0142; &#xA781; &#xA772; &#x02AB; &#x006D; &#x1D1F; &#x1E3F; &#x1E41; &#x1E43; &#x0271; &#x0270; &#x026F; &#xA773; &#x006E; &#x0144; &#x0149; &#x0148; &#x1E4B; &#x0146; &#x1E45; &#x1E47; &#x01F9; &#x0272; &#x0273; &#x01CC; &#x019E; &#x1E49; &#x00F1; &#xA774; &#x014B; &#x006F; &#x1D17; &#x1D11; &#x1D12; &#x1D16; &#x00F3; &#x0275; &#x014F; &#x01D2; &#x00F4; &#x1ED1; &#x1ED9; &#x1ED3; &#x1ED5; &#x1ED7; &#x020D; &#x00F6; &#x022B; &#x022F; &#x0231; &#x1ECD; &#x1D14; &#x00F2; &#x1ECF; &#x01A1; &#x1EDB; &#x1EE3; &#x1EDD; &#x1EDF; &#x1EE1; &#x0151; &#x01A3; &#x020F; &#xA74B; &#xA74D; &#x014D; &#x1E53; &#x1E51; &#x0277; &#xA74F; &#x01EB; &#x01ED; &#x0254; &#x00F8; &#x1D13; &#x01FF; &#x00F5; &#x1E4D; &#x1E4F; &#x022D; &#x0223; &#x0153; &#x0070; &#x1E55; &#x1E57; &#xA753; &#x0278; &#x01A5; &#x00FE; &#xA755; &#xA751; &#x0071; &#xA759; &#x02A0; &#x0239; &#xA757; &#x0072; &#x0155; &#x0264; &#x0159; &#x0157; &#x0211; &#x1E59; &#x1E5B; &#x1E5D; &#x027E; &#x027F; &#x027B; &#xA783; &#x0213; &#x027C; &#x027A; &#x1E5F; &#xA75B; &#x027D; &#x0279; &#xA775; &#xA75D; &#xA776; &#x0073; &#x015B; &#x1E65; &#x0161; &#x1E67; &#x015F; &#x015D; &#x0219; &#x1E61; &#x1E63; &#x1E69; &#x00DF; &#x0282; &#xA785; &#x1D24; &#x017F; &#x0074; &#x0167; &#x0165; &#x02A8; &#x0163; &#x1E71; &#x021B; &#x1E97; &#x1E6B; &#x1E6D; &#x02A7; &#x01AD; &#xA765; &#xA767; &#xA787; &#x1E6F; &#x01BD; &#x0185; &#x01A8; &#x01AB; &#x0288; &#x02A6; &#x0287; &#xA777; &#xA729; &#x0075; &#x1D1D; &#x00FA; &#x0289; &#x016D; &#x01D4; &#x00FB; &#x1E77; &#x0215; &#x00FC; &#x1D1E; &#x01D8; &#x1E73; &#x01DA; &#x01DC; &#x01D6; &#x1EE5; &#x1D6B; &#x00F9; &#x1EE7; &#x01B0; &#x1EE9; &#x1EF1; &#x1EEB; &#x1EED; &#x1EEF; &#x0171; &#x0217; &#xAB52; &#xA778; &#x016B; &#x1E7B; &#xA7BB; &#xA7BD; &#xA7BF; &#xA7C1; &#xA7C3; &#xA7D1; &#xA7D3; &#xA7D5; &#xA7D7; &#xA7D9; &#xE8AD; &#xEBBE; &#x0173; &#x028A; &#x1D7F; &#x016F; &#x0169; &#x1E79; &#x1E75; &#x0076; &#x1EFD; &#xA75F; &#x1E7F; &#xA769; &#x028B; &#x2C71; &#x1E7D; &#x028C; &#xA761; &#x0077; &#x1E83; &#x0175; &#x1E85; &#x1E87; &#x1E89; &#x1E81; &#x2C73; &#x1E98; &#x028D; &#x01BF; &#x0078; &#x1E8D; &#x1E8B; &#xAB57; &#x0079; &#x00FD; &#x0177; &#x00FF; &#x1E8F; &#x1EF5; &#x1EF3; &#x01B4; &#x1EF7; &#x1EFF; &#x0233; &#x1E99; &#x1EF9; &#x028E; &#x007A; &#x017A; &#x017E; &#x1E91; &#x0291; &#x017C; &#x1E93; &#x0225; &#x1E95; &#x0290; &#x01B6; &#xFB00; &#xFB03; &#xFB04; &#xFB01; &#xFB02; &#xFB05; &#xFB06; &#x1D62; &#x1D63; &#x1D64; &#x1D65; &#xA7FB; &#xA7FE; &#xA7FF; &#xA7FD; &#xA7FC; &#x01C2; &#x01C0; &#x01C1; &#x01C3; &#x0294; &#x01BB; &#xE337; &#xE39F; &#xE48F; &#xE734; &#xE8AE; &#xE8AF; &#xE8C6; &#xE8DA; &#xE8DB; &#xE8DC; &#xE8DD; &#xE8DE; &#xE8DF; &#xEAD0; &#xEAD1; &#xEAD2; &#xEADA; &#xEADC; &#xEADD; &#xEADE; &#xEAF0; &#xEAF1; &#xEAF2; &#xEAF3; &#xEBA0; &#xEBA1; &#xEBA2; &#xEBA3; &#xEBA4; &#xEBA5; &#xEBA6; &#xEBA7; &#xEBA8; &#xEBA9; &#xEBAA; &#xEBAB; &#xEBAC; &#xEBAD; &#xEBAE; &#xEBB0; &#xEBB1; &#xEBB6; &#xEBBB; &#xEBBD; &#xEBC1; &#xEBC3; &#xEBCB; &#xEBCF; &#xEBD0; &#xEBD2; &#xEBD6; &#xEBD7; &#xEBDA; &#xEBDB; &#xEBDC; &#xEBDD; &#xEBE3; &#xEBE7; &#xEBE9; &#xEBEB; &#xEBED; &#xEBEF; &#xEBF1; &#xEBF3; &#xEEC2; &#xEEC3; &#xEEC4; &#xEEC5; &#xEEC6; &#xEEC7; &#xEEC8; &#xEEC9; &#xEECA; &#xEECB; &#xEECC; &#xEECD; &#xEECE; &#xEECF; &#xEED0; &#xEED1; &#xEED2; &#xEED3; &#xEED4; &#xEED5; &#xEED6; &#xEED7; &#xEED8; &#xEED9; &#xEEDA; &#xEEDB; &#xEEDC; &#xEEDD; &#xEEDE; &#xEEDF; &#xEEE0; &#xEEE1; &#xEEE2; &#xEEE3; &#xEEE4; &#xEEE5; &#xEEE6; &#xEEE7; &#xEEE8; &#xEEE9; &#xEEEA; &#xEEEB; &#xEEEC; &#xEEED; &#xEEEE; &#xEEEF; &#xEEF0; &#xEEF1; &#xEEF2; &#xEEF3; &#xEEF4; &#xEEF5; &#xEEF6; &#xEEF7; &#xEEF8; &#xEEF9; &#xEEFA; &#xEEFB; &#xEEFC; &#xEEFD; &#xEEFE; &#xEEFF; &#xEF0C; &#xEF11; &#xEF15; &#xEF20; &#xEF21; &#xEF22; &#xEF23; &#xEF24; &#xEF25; &#xEF26; &#xEF27; &#xEF28; &#xEF29; &#xEF2A; &#xEF2B; &#xEF2C; &#xEF2D; &#xEFA0; &#xEFA1; &#xEFA2; &#xEFA3; &#xEFA4; &#xEFA5; &#xEFA6; &#xEFA7; &#xEFA8; &#xEFA9; &#xEFAA; &#xEFAB; &#xEFAC; &#xEFAD; &#xEFAE; &#xEFB9; &#xEFBA; &#xEFBB; &#xEFDD; &#xEFDE; &#xEFDF; &#xEFE3; &#xEFE5; &#xEFE7; &#xEFF1; &#xEFF5; &#xEFF7; &#xEFF9; &#xEFFB; &#xF056; &#xF057; &#xF059; &#xF05A; &#xF05D; &#xF065; &#xF066; &#xF067; &#xF068; &#xF069; &#xF06A; &#xF06D; &#xF06E; &#xF075; &#xF076; &#xF077; &#xF079; &#xF07A; &#xF07B; &#xF07D; &#xF07F; &#xF086; &#xF087; &#xF089; &#xF08A; &#xF08E; &#xF096; &#xF097; &#xF099; &#xF09A; &#xF09B; &#xF09F; &#xF0A7; &#xF0A8; &#xF0AA; &#xF0AB; &#xF0AE; &#xF127; &#xF128; &#xF149; &#xF193; &#xF194; &#xF195; &#xF196; &#xF198; &#xF199; &#xF19A; &#xF19B; &#xF1BB; &#xF1BC; &#xF1BF; &#xF200; &#xF201; &#xF202; &#xF203; &#xF204; &#xF205; &#xF206; &#xF208; &#xF209; &#xF214; &#xF215; &#xF217; &#xF218; &#xF219; &#xF21A; &#xF21C; &#xF21D; &#xF21E; &#xF21F; &#xF220; &#xF222; &#xF223; &#xF224; &#xF225; &#xF226; &#xF228; &#xF229; &#xF22A; &#xF22B; &#xF22C; &#xF233; &#xF238; &#xF239; &#xF23A; &#xF23C; &#xF23D; &#xF23E; &#xF2E2; &#xF2E3; &#xF2E4; &#xF2E6; &#xF2E7; &#xF2FE; &#xF4F7; &#xF4F9; &#xF4FA; &#xF4FB; &#xF4FC; &#xF4FD; &#xF4FE; &#xF4FF; &#xF7B2; &#xF7B3; &#xF7B4; &#xF7B5; &#xF7B6; &#xF0000; &#xF0001; &#xF0002; &#xF0003; &#xF0004; &#xF0005; &#xF0006; &#xF0007; &#xF0008; &#xF0009; &#xF000A; &#xF000B; &#xF000C; &#xF000D; &#xF000E; &#xF000F; &#xF0010; &#xF0011; &#xF0012; &#xF0013; &#xF0014; &#xF0017; &#xF0018; &#xF0019; &#xF001A; &#xF001E; &#xF001F; &#xF0020; &#xF0021; &#x1D34; &#x02B6; &#x1D45; &#x02B1; &#x02B0; &#x2071; &#x02B2; &#x02E1; &#x207F; &#x02B5; &#x02B3; &#x02B4; &#x02E2; &#x02B7; &#x02E3; &#x02B8; &#xE004; &#xE00A; &#xE010; &#xE025; &#xE02C; &#xE033; &#xE036; &#xE03A; &#xE03D; &#xE03F; &#xE040; &#xE041; &#xE042; &#xE043; &#xE044; &#xE066; &#xE076; &#xE077; &#xE08F; &#xE099; &#xE0B7; &#xE0BC; &#xE0C8; &#xE0D1; &#xE0E1; &#xE0E8; &#xE0E9; &#xE0EA; &#xE0EB; &#xE0EC; &#xE0EE; &#xE0F0; &#xE101; &#xE116; &#xE120; &#xE12A; &#xE135; &#xE137; &#xE143; &#xE150; &#xE151; &#xE152; &#xE153; &#xE154; &#xE15C; &#xE162; &#xE163; &#xE168; &#xE19E; &#xE1B8; &#xE1D2; &#xE1DC; &#xE208; &#xE20C; &#xE21B; &#xE22D; &#xE244; &#xE246; &#xE24F; &#xE252; &#xE253; &#xE255; &#xE257; &#xE259; &#xE25D; &#xE260; &#xE262; &#xE268; &#xE26D; &#xE282; &#xE288; &#xE2E2; &#xE2EE; &#xE309; &#xE30B; &#xE315; &#xE317; &#xE324; &#xE32B; &#xE32D; &#xE331; &#xE33A; &#xE33B; &#xE342; &#xE34B; &#xE34C; &#xE34D; &#xE34E; &#xE350; &#xE353; &#xE357; &#xE373; &#xE375; &#xE376; &#xE37C; &#xE384; &#xE385; &#xE3D3; &#xE3D4; &#xE3E5; &#xE3E6; &#xE3E7; &#xE8C2; &#xE8C8; &#xEBB3; &#xEBB5; &#xEBB7; &#xEBBA; &#xEBC0; &#xEBC2; &#xEBC4; &#xEBC6; &#xEBC8; &#xEBCA; &#xEBCD; &#xEBD3; &#xEBDE; &#xEBE0; &#xEBE2; &#xEBE4; &#xEBE6; &#xEBE8; &#xEBEA; &#xEBEC; &#xEBEE; &#xEBF0; &#xEBF2; &#xEBF4; &#xEBF6; &#xEBF8; &#xEBFA; &#xEBFC; &#xEBFE; &#xEFD9; &#xEFDB; &#xEFE0; &#xEFE2; &#xEFE4; &#xEFE6; &#xEFE8; &#xEFEA; &#xEFEC; &#xEFEE; &#xEFF0; &#xEFF2; &#xEFF4; &#xEFF6; &#xEFF8; &#xEFFA; &#xEFFC; &#xEFFE; &#xF106; &#xF10A; &#xF10E; &#xF110; &#xF11A; &#xF126; &#xF13A; &#xE404; &#xE40A; &#xE410; &#xE41A; &#xE41D; &#xE41F; &#xE425; &#xE42C; &#xE42D; &#xE42E; &#xE433; &#xE436; &#xE43A; &#xE43D; &#xE43F; &#xE440; &#xE441; &#xE442; &#xE443; &#xE444; &#xE44D; &#xE466; &#xE476; &#xE477; &#xE491; &#xE498; &#xE499; &#xE49F; &#xE4B7; &#xE4BC; &#xE4C8; &#xE4CD; &#xE4CF; &#xE4D1; &#xE4E1; &#xE4E2; &#xE4E3; &#xE4E8; &#xE4E9; &#xE4EA; &#xE4EB; &#xE4EC; &#xE4EE; &#xE4F0; &#xE501; &#xE516; &#xE517; &#xE52A; &#xE535; &#xE537; &#xE543; &#xE548; &#xE54A; &#xE54B; &#xE550; &#xE551; &#xE552; &#xE553; &#xE554; &#xE562; &#xE563; &#xE568; &#xE58C; &#xE596; &#xE59E; &#xE5A4; &#xE5B1; &#xE5B8; &#xE5C5; &#xE5D2; &#xE5D7; &#xE5DC; &#xE5EE; &#xE608; &#xE60C; &#xE60E; &#xE61B; &#xE62C; &#xE62D; &#xE637; &#xE643; &#xE644; &#xE645; &#xE646; &#xE647; &#xE64F; &#xE652; &#xE653; &#xE655; &#xE657; &#xE659; &#xE65D; &#xE660; &#xE662; &#xE665; &#xE668; &#xE66D; &#xE681; &#xE682; &#xE688; &#xE68B; &#xE6A3; &#xE6E2; &#xE6EE; &#xE709; &#xE70B; &#xE715; &#xE717; &#xE724; &#xE727; &#xE72B; &#xE72C; &#xE72D; &#xE731; &#xE735; &#xE737; &#xE73A; &#xE73B; &#xE742; &#xE743; &#xE74B; &#xE74C; &#xE74D; &#xE74E; &#xE74F; &#xE750; &#xE753; &#xE754; &#xE757; &#xE773; &#xE775; &#xE776; &#xE77B; &#xE77C; &#xE781; &#xE784; &#xE785; &#xE79E; &#xE79F; &#xE7A2; &#xE7B2; &#xE7C1; &#xE7C2; &#xE7C3; &#xE7C7; &#xE7C8; &#xE7CC; &#xE7D3; &#xE7D4; &#xE7E4; &#xE7E5; &#xE7E6; &#xE7E7; &#xE8A1; &#xE8A2; &#xE8A3; &#xE8B3; &#xE8B4; &#xE8B7; &#xE8B8; &#xE8BA; &#xE8BB; &#xE8BC; &#xE8BD; &#xE8BE; &#xE8BF; &#xE8C3; &#xE8C5; &#xE8C9; &#xE8CE; &#xE8D1; &#xE8D3; &#xE8D5; &#xE8D7; &#xE8E0; &#xE8E1; &#xE8E2; &#xE8E3; &#xE8E4; &#xE8E5; &#xE8E6; &#xE8E7; &#xE8E8; &#xE8E9; &#xE8EA; &#xE8EB; &#xE8EC; &#xE8ED; &#xE8F0; &#xE8F1; &#xE8F2; &#xE8F3; &#xEBAF; &#xEBB2; &#xEBB4; &#xEBB8; &#xEBB9; &#xEBBF; &#xEBC5; &#xEBC7; &#xEBC9; &#xEBCE; &#xEBD1; &#xEBD4; &#xEBD5; &#xEBDF; &#xEBE1; &#xEBE5; &#xEBF5; &#xEBF7; &#xEBF9; &#xEBFB; &#xEBFD; &#xEBFF; &#xEFD8; &#xEFDC; &#xEFE1; &#xEFE9; &#xEFEB; &#xEFED; &#xEFEF; &#xEFF3; &#xEFFD; &#xEFFF; &#xF159; &#xF171; &#xF175; &#xF177; &#xF179; &#xF17B; &#xF181; &#xF183; &#xF185; &#xF187; &#xF189; &#xF18B; &#xF191; &#xF207; &#xF21B; &#xF221; &#xE8C1; &#xE8C7; &#x00AA; &#x00BA; &#x1D2B; &#x044C; &#x044A; &#x0391; &#x0392; &#x0393; &#x0394; &#x0395; &#x0396; &#x0397; &#x0398; &#x0399; &#x039A; &#x039B; &#x039C; &#x039D; &#x039E; &#x039F; &#x03A0; &#x03A1; &#x03A3; &#x03A4; &#x03A5; &#x03A6; &#x03A7; &#x03A8; &#x03A9; &#x0386; &#x0388; &#x0389; &#x038A; &#x038C; &#x038E; &#x038F; &#x03AA; &#x03AB; &#x03D8; &#x03DA; &#x03DC; &#x03DE; &#x03E0; &#x03CF; &#x1F08; &#x1F09; &#x1F0A; &#x1F0B; &#x1F0C; &#x1F0D; &#x1F0E; &#x1F0F; &#x1FBA; &#x1FBB; &#x1FB8; &#x1FB9; &#x1FBC; &#x1F88; &#x1F89; &#x1F8A; &#x1F8B; &#x1F8C; &#x1F8D; &#x1F8E; &#x1F8F; &#x1F18; &#x1F19; &#x1F1A; &#x1F1B; &#x1F1C; &#x1F1D; &#x1FC8; &#x1FC9; &#x1F28; &#x1F29; &#x1F2A; &#x1F2B; &#x1F2C; &#x1F2D; &#x1F2E; &#x1F2F; &#x1FCA; &#x1FCB; &#x1FCC; &#x1F98; &#x1F99; &#x1F9A; &#x1F9B; &#x1F9C; &#x1F9D; &#x1F9E; &#x1F9F; &#x1F38; &#x1F39; &#x1F3A; &#x1F3B; &#x1F3C; &#x1F3D; &#x1F3E; &#x1F3F; &#x1FDA; &#x1FDB; &#x1FD8; &#x1FD9; &#x1F48; &#x1F49; &#x1F4A; &#x1F4B; &#x1F4C; &#x1F4D; &#x1FF8; &#x1FF9; &#x1FEC; &#x1F59; &#x1F5B; &#x1F5D; &#x1F5F; &#x1FEA; &#x1FEB; &#x1FE8; &#x1FE9; &#x1F68; &#x1F69; &#x1F6A; &#x1F6B; &#x1F6C; &#x1F6D; &#x1F6E; &#x1F6F; &#x1FFA; &#x1FFB; &#x1FFC; &#x1FA8; &#x1FA9; &#x1FAA; &#x1FAB; &#x1FAC; &#x1FAD; &#x1FAE; &#x1FAF; &#x1D26; &#x1D27; &#x1D28; &#x1D2A; &#x1D29; &#x03B1; &#x03B2; &#x03B3; &#x03B4; &#x03B5; &#x03B6; &#x03B7; &#x03B8; &#x03B9; &#x03BA; &#x03BB; &#x03BC; &#x03BD; &#x03BE; &#x03BF; &#x03C0; &#x03C1; &#x03C2; &#x03C3; &#x03C4; &#x03C5; &#x03C6; &#x03C7; &#x03C8; &#x03C9; &#x03AF; &#x03CA; &#x0390; &#x03CD; &#x03CB; &#x03B0; &#x03CC; &#x03CE; &#x03AC; &#x03AD; &#x03AE; &#x03D9; &#x03DB; &#x03DD; &#x03DF; &#x03E1; &#x03D7; &#x03D1; &#x03D5; &#x03D6; &#x03F0; &#x03F1; &#x03F5; &#x1F00; &#x1F01; &#x1F02; &#x1F03; &#x1F04; &#x1F05; &#x1F06; &#x1F07; &#x1F70; &#x1F71; &#x1FB6; &#x1FB0; &#x1FB1; &#x1FB3; &#x1FB2; &#x1FB4; &#x1F80; &#x1F81; &#x1F82; &#x1F83; &#x1F84; &#x1F85; &#x1F86; &#x1F87; &#x1FB7; &#x1F10; &#x1F11; &#x1F12; &#x1F13; &#x1F14; &#x1F15; &#x1F72; &#x1F73; &#x1F20; &#x1F21; &#x1F22; &#x1F23; &#x1F24; &#x1F25; &#x1F26; &#x1F27; &#x1F74; &#x1F75; &#x1FC6; &#x1FC3; &#x1FC2; &#x1FC4; &#x1F90; &#x1F91; &#x1F92; &#x1F93; &#x1F94; &#x1F95; &#x1F96; &#x1F97; &#x1FC7; &#x1F30; &#x1F31; &#x1F32; &#x1F33; &#x1F34; &#x1F35; &#x1F36; &#x1F37; &#x1F76; &#x1F77; &#x1FD6; &#x1FD0; &#x1FD1; &#x1FD2; &#x1FD3; &#x1FD7; &#x1F40; &#x1F41; &#x1F42; &#x1F43; &#x1F44; &#x1F45; &#x1F78; &#x1F79; &#x1FE4; &#x1FE5; &#x1F50; &#x1F51; &#x1F52; &#x1F53; &#x1F54; &#x1F55; &#x1F56; &#x1F57; &#x1F7A; &#x1F7B; &#x1FE6; &#x1FE0; &#x1FE1; &#x1FE2; &#x1FE3; &#x1FE7; &#x1F60; &#x1F61; &#x1F62; &#x1F63; &#x1F64; &#x1F65; &#x1F66; &#x1F67; &#x1F7C; &#x1F7D; &#x1FF6; &#x1FF3; &#x1FF2; &#x1FF4; &#x1FA0; &#x1FA1; &#x1FA2; &#x1FA3; &#x1FA4; &#x1FA5; &#x1FA6; &#x1FA7; &#x1FF7; &#x1FBE; &#x1D66; &#x1D6A; &#x1D67; &#x1D69; &#x1D68; &#x1D5E; &#x1D60; &#xA762; &#xA763; &#x10330; &#x10331; &#x10332; &#x10333; &#x10334; &#x10335; &#x10336; &#x10337; &#x10338; &#x10339; &#x1033A; &#x1033B; &#x1033C; &#x1033D; &#x1033E; &#x1033F; &#x10340; &#x10341; &#x10342; &#x10343; &#x10344; &#x10345; &#x10346; &#x10347; &#x10348; &#x10349; &#x1034A; &#x16A0; &#x16A1; &#x16A2; &#x16A3; &#x16A4; &#x16A5; &#x16A6; &#x16A7; &#x16A8; &#x16A9; &#x16AA; &#x16AB; &#x16AC; &#x16AD; &#x16AE; &#x16AF; &#x16B0; &#x16B1; &#x16B2; &#x16B3; &#x16B4; &#x16B5; &#x16B6; &#x16B7; &#x16B8; &#x16B9; &#x16BA; &#x16BB; &#x16BC; &#x16BD; &#x16BE; &#x16BF; &#x16C0; &#x16C1; &#x16C2; &#x16C3; &#x16C4; &#x16C5; &#x16C6; &#x16C7; &#x16C8; &#x16C9; &#x16CA; &#x16CB; &#x16CC; &#x16CD; &#x16CE; &#x16CF; &#x16D0; &#x16D1; &#x16D2; &#x16D3; &#x16D4; &#x16D5; &#x16D6; &#x16D7; &#x16D8; &#x16D9; &#x16DA; &#x16DB; &#x16DC; &#x16DD; &#x16DE; &#x16DF; &#x16E0; &#x16E1; &#x16E2; &#x16E3; &#x16E4; &#x16E5; &#x16E6; &#x16E7; &#x16E8; &#x16E9; &#x16EA; &#x16EE; &#x16EF; &#x2132; &#x214E; &#x1D2D; &#x1D2C; &#x1D2F; &#x1D2E; &#x1D30; &#x1D32; &#x1D31; &#x1D33; &#x1D35; &#x1D36; &#x1D37; &#x1D38; &#x1D39; &#x1D3B; &#x1D3A; &#x1D3D; &#x1D3C; &#x1D3E; &#x1D3F; &#x1D40; &#x1D41; &#x1D42; &#x1D44; &#x1D46; &#x1D5C; &#x1D43; &#x1D5D; &#x1D47; &#x1D61; &#x1D9C; &#x1D5F; &#x1D48; &#x1D4B; &#x1D4C; &#x1D49; &#x1D51; &#x1DA0; &#x1D4D; &#x1D4E; &#x1D4F; &#x1D5A; &#x1D50; &#x1D55; &#x1D53; &#x1D54; &#x1D52; &#x1D56; &#x1D4A; &#x1D57; &#x1D59; &#x1D58; &#x2E2F; &#xA770; &#x1D5B; &#x1DBB; &#x2160; &#x2161; &#x2162; &#x2163; &#x2164; &#x2165; &#x2166; &#x2167; &#x2168; &#x2169; &#x216A; &#x216B; &#x216C; &#x216D; &#x216E; &#x216F; &#x2170; &#x2171; &#x2172; &#x2173; &#x2174; &#x2175; &#x2176; &#x2177; &#x2178; &#x2179; &#x217A; &#x217B; &#x217C; &#x217D; &#x217E; &#x217F; &#x2180; &#x2181; &#x2182; &#x2183; &#x2185; &#x2186; &#x2187; &#x2188; &#x0030; &#x0031; &#x0032; &#x0033; &#x0034; &#x0035; &#x0036; &#x0037; &#x0038; &#x0039; &#x24FF; &#x2776; &#x2777; &#x2778; &#x2779; &#x277A; &#x277B; &#x277C; &#x277D; &#x277E; &#x277F; &#x24EB; &#x24EC; &#x24ED; &#x24EE; &#x24EF; &#x24F0; &#x24F1; &#x24F2; &#x24F3; &#x24F4; &#x24EA; &#x2460; &#x2461; &#x2462; &#x2463; &#x2464; &#x2465; &#x2466; &#x2467; &#x2468; &#x2469; &#x246A; &#x246B; &#x246C; &#x246D; &#x246E; &#x246F; &#x2470; &#x2471; &#x2472; &#x2473; &#x2474; &#x2475; &#x2476; &#x2477; &#x2478; &#x2479; &#x247A; &#x247B; &#x247C; &#x247D; &#x247E; &#x247F; &#x2480; &#x2481; &#x2482; &#x2483; &#x2484; &#x2485; &#x2486; &#x2487; &#x24F5; &#x24F6; &#x24F7; &#x24F8; &#x24F9; &#x24FA; &#x24FB; &#x24FC; &#x24FD; &#x24FE; &#x1F100; &#x2488; &#x2489; &#x248A; &#x248B; &#x248C; &#x248D; &#x248E; &#x248F; &#x2490; &#x2491; &#x2492; &#x2493; &#x2494; &#x2495; &#x2496; &#x2497; &#x2498; &#x2499; &#x249A; &#x249B; &#x2044; &#x215F; &#x00BD; &#x2189; &#x2153; &#x2154; &#x00BC; &#x00BE; &#x2155; &#x2156; &#x2157; &#x2158; &#x2159; &#x215A; &#x2150; &#x215B; &#x215C; &#x215D; &#x215E; &#x2151; &#x2152; &#x2080; &#x2081; &#x2082; &#x2083; &#x2084; &#x2085; &#x2086; &#x2087; &#x2088; &#x2089; &#x2070; &#x00B9; &#x00B2; &#x00B3; &#x2074; &#x2075; &#x2076; &#x2077; &#x2078; &#x2079; &#x0020; &#x00A0; &#x2002; &#x2003; &#x2000; &#x2001; &#x2004; &#x2005; &#x2006; &#x2007; &#x2008; &#x2009; &#x200A; &#x200B; &#x200C; &#x200D; &#x202F; &#x000D; &#x2E52; &#x2E4C; &#x2E4D; &#x0387; &#x037E; &#x10FB; &#x27E8; &#x27E6; &#x27E9; &#x27E7; &#x16EB; &#x16EC; &#x16ED; &#x002E; &#x002C; &#x003A; &#x003B; &#x2026; &#x0021; &#x00A1; &#x003F; &#x00BF; &#x00B7; &#x2022; &#x002A; &#x2042; &#x204C; &#x204D; &#x2045; &#x2046; &#x2038; &#x2041; &#x2050; &#x2016; &#x205C; &#x204A; &#x2049; &#x203C; &#x2E2D; &#x2058; &#x2027; &#x2043; &#x203D; &#x2E1C; &#x2E20; &#x204E; &#x0023; &#xFE5F; &#x2024; &#x2E2B; &#x203E; &#x2E19; &#x204B; &#xFE6A; &#x2047; &#x2048; &#x2E2E; &#x2E00; &#x2E1D; &#x2E21; &#x002F; &#x005C; &#x2E2C; &#x2E1E; &#x2E1F; &#x2E1B; &#x2023; &#x2051; &#x2025; &#x2E2A; &#x2E53; &#x2E54; &#x2E5D; &#xF1D2; &#x203B; &#x203F; &#x2040; &#x204F; &#x2056; &#x2E0C; &#x2E0D; &#x002D; &#x00AD; &#x2013; &#x2014; &#x2E17; &#x2012; &#x2015; &#x2E1A; &#x2E40; &#x2010; &#x2011; &#x2E3B; &#x2E3A; &#x005F; &#x2017; &#x208D; &#x208E; &#x0028; &#x0029; &#x007B; &#x007D; &#x005B; &#x005D; &#x2329; &#x232A; &#x2E24; &#x2E25; &#x2E22; &#x2E23; &#x2E28; &#x2E29; &#x2308; &#x2E26; &#x2309; &#x2E27; &#x207D; &#x207E; &#x201A; &#x201E; &#x201C; &#x201D; &#x2018; &#x2019; &#x201B; &#x201F; &#x2036; &#x00AB; &#x00BB; &#x2039; &#x203A; &#x2035; &#x2057; &#x2034; &#x2037; &#x0022; &#x0027; &#x2E4A; &#x02E0; &#x10190; &#x10191; &#x10192; &#x10193; &#x10194; &#x10195; &#x10196; &#x10197; &#x10198; &#x10199; &#x1019A; &#x0192; &#x0374; &#x0375; &#x16F0; &#xE0061; &#xE0062; &#xE0063; &#xE007F; &#xE0064; &#xE0065; &#xE0038; &#xE0066; &#xE0035; &#xE0034; &#xE0067; &#xE0068; &#xE0069; &#xE006A; &#xE006B; &#xE006C; &#xE006D; &#xE006E; &#xE0039; &#xE006F; &#xE0031; &#xE0070; &#xE0071; &#xE0072; &#xE0073; &#xE0037; &#xE0036; &#xE0074; &#xE0033; &#xE0032; &#xE0075; &#xE0076; &#xE0077; &#xE0078; &#xE0079; &#xE007A; &#xE0030; &#x02C5; &#x02C2; &#x02C3; &#x02C4; &#x02F9; &#x02FB; &#x02EE; &#x02D5; &#x02FA; &#x02FC; &#x02EF; &#x02FF; &#x02F3; &#x02F7; &#x02F0; &#x02F6; &#x02F5; &#x02F4; &#x02D7; &#x02D6; &#x02F8; &#x02D3; &#x02D2; &#x02E5; &#x02E9; &#x02E6; &#x02E8; &#x02E7; &#x02ED; &#x02F1; &#x02F2; &#x02FD; &#x02FE; &#x02D4; &#x02EC; &#x02DF; &#x02DE; &#x02E4; &#x2619; &#x261A; &#x261B; &#x261C; &#x261D; &#x261E; &#x261F; &#x271D; &#x2720; &#x2740; &#x2766; &#x2767; &#x0040; &#x0026; &#x00B6; &#x00A7; &#x00A9; &#x00AE; &#x2122; &#x00B0; &#x2032; &#x2033; &#x007C; &#x00A6; &#x2020; &#x2021; &#x2114; &#x23D1; &#x2125; &#x1F110; &#x1F111; &#x1F112; &#x1F113; &#x1F114; &#x1F115; &#x1F116; &#x1F117; &#x1F118; &#x1F119; &#x1F11A; &#x1F11B; &#x1F11C; &#x1F11D; &#x1F11E; &#x1F11F; &#x1F120; &#x1F121; &#x1F122; &#x1F123; &#x1F124; &#x1F125; &#x1F126; &#x1F127; &#x1F128; &#x1F129; &#x249C; &#x249D; &#x249E; &#x249F; &#x24A0; &#x24A1; &#x24A2; &#x24A3; &#x24A4; &#x24A5; &#x24A6; &#x24A7; &#x24A8; &#x24A9; &#x24AA; &#x24AB; &#x24AC; &#x24AD; &#x24AE; &#x24AF; &#x24B0; &#x24B1; &#x24B2; &#x24B3; &#x24B4; &#x24B5; &#x211E; &#xFFFD; &#x211F; &#x2108; &#xE270; &#xE27D; &#xE670; &#xE67D; &#xE68A; &#xE736; &#xE8B0; &#xE8B1; &#xEF90; &#xEF91; &#xEF92; &#xEF93; &#xEF94; &#xEF95; &#xEF96; &#xEF97; &#xEF98; &#xEF99; &#xEF9A; &#xEF9B; &#xEF9C; &#xEF9F; &#xF011; &#xF014; &#xF018; &#xF019; &#xF01B; &#xF01D; &#xF01E; &#xF19F; &#x23D2; &#x23D3; &#x23D4; &#x2123; &#x24B6; &#x24B7; &#x24B8; &#x24B9; &#x24BA; &#x24BB; &#x24BC; &#x24BD; &#x24BE; &#x24BF; &#x24C0; &#x24C1; &#x24C2; &#x24C3; &#x24C4; &#x24C5; &#x24C6; &#x24C7; &#x24C8; &#x24C9; &#x24CA; &#x24CB; &#x24CC; &#x24CD; &#x24CE; &#x24CF; &#x24D0; &#x24D1; &#x24D2; &#x24D3; &#x24D4; &#x24D5; &#x24D6; &#x24D7; &#x24D8; &#x24D9; &#x24DA; &#x24DB; &#x24DC; &#x24DD; &#x24DE; &#x24DF; &#x24E0; &#x24E1; &#x24E2; &#x24E3; &#x24E4; &#x24E5; &#x24E6; &#x24E7; &#x24E8; &#x24E9; &#x20AC; &#x00A2; &#x00A4; &#x0024; &#x20B0; &#x00A3; &#x00A5; &#x2235; &#x2219; &#x2052; &#x2215; &#x2AFD; &#x208C; &#x207C; &#x22D7; &#x223B; &#x208B; &#x207B; &#x002B; &#x2212; &#x00D7; &#x00F7; &#x003D; &#x2260; &#x003E; &#x003C; &#x2265; &#x2264; &#x00B1; &#x2248; &#x00AC; &#x007E; &#x005E; &#x221E; &#x2205; &#x2227; &#x222B; &#x2126; &#x2206; &#x220F; &#x2211; &#x221A; &#x00B5; &#x2202; &#x0025; &#x2030; &#x2031; &#x208A; &#x207A; &#x2237; &#x2234; &#x2191; &#x2192; &#x2193; &#x2190; &#x21A9; &#x25CC; &#x25CA; &#x25AA; &#x25AB; &#x25B9; &#x25C3; &#x1DDB; &#x1DDE; &#x1DDF; &#x1DE1; &#x1DE2; &#x0363; &#x1DD4; &#x1DD5; &#x1DD6; &#x0368; &#x0369; &#x0364; &#x1DD9; &#x1DD3; &#x1DDA; &#x036A; &#x0365; &#x1DD8; &#x1DDC; &#x1DDD; &#x1DE5; &#x036B; &#x1DE0; &#x0366; &#x036C; &#x1DE3; &#x1DE4; &#x036D; &#x0367; &#xF1CC; &#x036E; &#x036F; &#x1DE6; &#x2C7D; &#x0342; &#x0343; &#x0344; &#x0345; &#x0384; &#x0385; &#x1FBF; &#x1FBD; &#x1FFE; &#x1FCD; &#x1FDD; &#x1FCE; &#x1FDE; &#x1FCF; &#x1FDF; &#x1FED; &#x1FEE; &#x1FEF; &#x1FFD; &#x1FC0; &#x20DD; &#x0308; &#x0307; &#x0300; &#x0301; &#x030B; &#x0302; &#x030C; &#x0306; &#x030A; &#x0303; &#x0304; &#x0305; &#x0309; &#x030D; &#x030E; &#x030F; &#x0310; &#x0311; &#x0312; &#x0313; &#x0314; &#x0315; &#x0316; &#x0317; &#x0318; &#x0319; &#x031A; &#x031B; &#x031C; &#x031D; &#x031E; &#x031F; &#x0320; &#x0321; &#x0322; &#x0323; &#x0324; &#x0325; &#x0326; &#x0327; &#x0328; &#x0329; &#x032A; &#x032B; &#x032C; &#x032D; &#x032E; &#x032F; &#x0330; &#x0331; &#x0332; &#x0333; &#x0334; &#x0335; &#x0336; &#x0337; &#x0338; &#x0339; &#x033A; &#x033B; &#x033C; &#x033D; &#x033E; &#x033F; &#x0340; &#x0341; &#x0346; &#x0347; &#x0348; &#x0349; &#x034A; &#x034B; &#x034C; &#x034D; &#x034E; &#x034F; &#x0350; &#x0351; &#x0352; &#x0353; &#x0354; &#x0355; &#x0356; &#x0357; &#x0359; &#x035B; &#x035C; &#x035D; &#x035E; &#x035F; &#x0360; &#x0361; &#x0362; &#x1DE8; &#x1DD7; &#x1DCD; &#x1DEB; &#x1DD0; &#x1DCE; &#x1DEE; &#x1ACB; &#x1ACC; &#x1ACD; &#x1ACE; &#x1DD1; &#x1DD2; &#x1DF1; &#x1DCF; &#x00A8; &#x02D9; &#x0060; &#x00B4; &#x02DD; &#x02C6; &#x02C9; &#x02CA; &#x02C7; &#x02CB; &#x02EA; &#x02EB; &#x02D8; &#x02DA; &#x02DC; &#x00AF; &#x00B8; &#x02DB; &#x02CF; &#x02BC; &#x02BD; &#x02BB; &#x02BA; &#x02C0; &#x02C1; &#x02CE; &#x02B9; &#x02BE; &#x02BF; &#x02C8; &#x02CC; &#x02CD; &#x02D0; &#x02D1; &#x2E4B; &#x2E4E; &#xF00A; &#xF00B; &#xF00C; &#xF00D; &#xF012; &#xF013; &#xF016; &#xF017; &#xF01C; &#xF01F; &#xF025; &#xF02A; &#xF02B; &#xF02F; &#xF030; &#xF031; &#xF032; &#xF033; &#xF036; &#xF038; &#xF03A; &#xF03B; &#xF03C; &#xF03D; &#xF03E; &#xF03F; &#xF040; &#xF130; &#xF135; &#xF136; &#xF13E; &#xF13F; &#xF158; &#xF160; &#xF161; &#xF162; &#xF1A5; &#xF1A6; &#xF1A7; &#xF1AC; &#xF1BD; &#xF1C0; &#xF1C1; &#xF1C2; &#xF1C5; &#xF1C7; &#xF1C8; &#xF1CA; &#xF1DA; &#xF1E0; &#xF1E1; &#xF1E2; &#xF1E3; &#xF1E4; &#xF1E5; &#xF1E6; &#xF1E7; &#xF1E8; &#xF1EA; &#xF1EC; &#xF1F0; &#xF1F1; &#xF1F2; &#xF1F4; &#xF1F5; &#xF1F7; &#xF1F8; &#xF1F9; &#xF1FA; &#xF1FB; &#xF1FC; &#xF23F; &#xF2E0; &#xF2E8; &#xF2E9; &#xF2EA; &#xF2EB; &#xF2EC; &#xF2ED; &#xF2EE; &#xF2EF; &#xF2F0; &#xF2F1; &#xF2F2; &#xF2F3; &#xF2F4; &#xF2F5; &#xF2F6; &#xF2F7; &#xF2F8; &#xF2F9; &#xF2FA; &#xF2FB; &#xF2FD; &#xF2FF; &#xF700; &#xF701; &#xF702; &#xF703; &#xF704; &#xF705; &#xF706; &#xF707; &#xF708; &#xF709; &#xF70A; &#xF70B; &#xF70C; &#xF714; &#xF715; &#xF716; &#xF717; &#xF718; &#xF719; &#xF71A; &#xF71B; &#xF71C; &#xF0015; &#xF0016; &#xF001B; &#xF001C; &#xF001D;";
+				const testtext = getTestText();
+				testtext.innerHTML = defaulttext;
+			}
+			function setLat1() {
+				const lat1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz &Agrave;&Aacute;&Acirc;&Atilde;&Auml;&Aring;&AElig;&Ccedil;&Egrave;&Eacute;&Ecirc;&Euml;&Igrave;&Iacute;&Icirc;&Iuml;&ETH;&Ntilde;&Ograve;&Oacute;&Ocirc;&Otilde;&Ouml;&Oslash;&OElig;&THORN;&Ugrave;&Uacute;&Ucirc;&Uuml;&Yacute;&Yuml; &agrave;&aacute;&acirc;&atilde;&auml;&aring;&aelig;&ccedil;&egrave;&eacute;&ecirc;&euml;&igrave;&iacute;&icirc;&iuml;&eth;&ntilde;&ograve;&oacute;&ocirc;&otilde;&ouml;&oslash;&oelig;&thorn;&szlig;&ugrave;&uacute;&ucirc;&uuml;&yacute;&yuml; .,:;&middot;&hellip;&iquest;?&iexcl;!&laquo;&raquo;&lsaquo;&rsaquo; /|&brvbar;\()[]{}_-&ndash;&mdash;&sbquo;&bdquo;&lsquo;&rsquo;&ldquo;&rdquo;&quot;&#x27; #&amp;&sect;@&bull;&shy;*&dagger;&Dagger;&para; +&times;&divide;&plusmn;=&lt;&gt;&not;&mu; ^~&acute;`&circ;&macr;&tilde;&uml;&cedil; &yen;&euro;&pound;$&cent;&curren;&fnof; &trade;&reg;&copy; 1234567890 &ordf;&ordm;&deg;%&permil; &sup1;&sup2;&sup3;&frac14;&frac12;&frac34;";
+				const testtext = getTestText();
+				testtext.innerHTML = lat1;
+			}
+			function getTestText() {
+				return document.getElementById("textarea");
+			}
+			function updateSlider() {
+				var body = getTestText();
+				var sliders = document.getElementsByClassName("slider");
+				var settingtext = "";
+				for (var i = 0; i < sliders.length; i++) {
+					var sliderID = sliders[i].id;
+					var sliderValue = sliders[i].value;
+					var label = document.getElementById("label_"+sliderID);
+					var labelName = label.getAttribute("name");
+				
+					label.textContent = ""+labelName+": "+sliderValue;
+				
+					if (sliderID == "fontsize") {
+						// Text Size Slider
+						body.style.setProperty("font-size", ""+sliderValue+"px");
+						label.textContent += "px";
+					} else if (sliderID == "lineheight") {
+						// Line Height Slider
+						body.style.setProperty("line-height", ""+sliderValue/100.0+"em");
+						label.textContent += "%";
+					} else {
+						// OTVar Slider: collect settings
+						if (settingtext != "") { settingtext += ", " };
+						settingtext += '"' + sliderID + '" ' + sliderValue;
+					}
+				}
+				// apply OTVar slider settings:
+				body.style.setProperty("font-variation-settings", settingtext);
+			}
+			function vanish(item) {
+				item.style.setProperty("display", "none");
+			}
+			function toggleLeftRight() {
+				const waterfall = document.getElementById("textarea");
+				if (waterfall.dir != "rtl") {
+					waterfall.dir = "rtl";
+					waterfall.align = "right";
+				} else {
+					waterfall.dir = "";
+					waterfall.align = "";
+				}
+			}
+			function toggleCenter() {
+				const waterfall = document.getElementById("textarea");
+				if (waterfall.align != "center") {
+					waterfall.align = "center";
+				} else {
+					if (waterfall.dir == "rtl") {
+						waterfall.align = "right";
+					} else {
+						waterfall.align = "left";
+					}
+				}
+			}
+			function toggleInverse() {
+				const testText = document.getElementById("textarea");
+				if (testText) {
+					const link = document.getElementById("invert");
+					if (testText.className == "●") {
+						testText.className = "○";
+						link.textContent = "🔳";
+					} else {
+						testText.className = "●";
+						link.textContent = "🔲";
+					}
+				}
+			}
+			function toggleMenu() {
+				const menu = document.getElementById("featureControls");
+				menu.hidden = !menu.hidden;
+			}
+			function setFontTypeTo(suffix) {
+				const styleId = "font-declaration";
+				var fontStyleSheet = document.getElementById(styleId);
+				var newFontStyleSheet = document.createElement("style");
+				newFontStyleSheet.id = styleId;
+				newFontStyleSheet.textContent = `
+				@font-face { 
+					font-family: "Junicode";
+					src: url("JunicodeVF.${suffix}");
+				}`;
+				fontStyleSheet.replaceWith(newFontStyleSheet);
+			}
+			function toggleType() {
+				const link = document.getElementById("type");
+				if (link.textContent == "TT") {
+					link.textContent = "W1";
+					setFontTypeTo("woff");
+				} else if (link.textContent == "W1") {
+					link.textContent = "W2";
+					setFontTypeTo("woff2");
+				} else {
+					link.textContent = "TT";
+					setFontTypeTo("ttf");
+				}
+			}
+			function setStyle(styleString) {
+				const axisStrings = styleString.split(",");
+				for (var i = axisStrings.length - 1; i >= 0; i--) {
+					const axisSetting = axisStrings[i].split(":");
+					const axisTag = axisSetting[0];
+					const axisValue = parseInt(axisSetting[1]);
+					document.getElementById(axisTag).value=axisValue;
+					updateSlider();
+				}
+			}
+		</script>
+	</head>
+	<body onload="updateSlider();resetParagraph();document.getElementById('textarea').focus()">
+	<div id="flexbox">
+		<div id="controls">
+			<!-- OTVar sliders -->
+			<div class="labeldiv"><label class="sliderlabel" id="label_fontsize" name="Font Size">Font Size</label><input type="range" min="10" max="1000" value="40" class="slider" id="fontsize" oninput="updateSlider();"></div>
+			<div class="labeldiv"><label class="sliderlabel" id="label_lineheight" name="Line Height">Line Height</label><input type="range" min="30" max="300" value="120" class="slider" id="lineheight" oninput="updateSlider();"></div>
+			<div class='labeldiv'><label class='sliderlabel' id='label_wght' name='Weight'>Weight</label><input type='range' min='300' max='700' value='300' class='slider' id='wght' oninput='updateSlider();'></div>
+			<div class='labeldiv'><label class='sliderlabel' id='label_wdth' name='Width'>Width</label><input type='range' min='75' max='125' value='75' class='slider' id='wdth' oninput='updateSlider();'></div>
+			<div class='labeldiv'><label class='sliderlabel' id='label_ENLA' name='Enlarge'>Enlarge</label><input type='range' min='0' max='100' value='0' class='slider' id='ENLA' oninput='updateSlider();'></div>
+
+			<div id="featureControls">
+			<!-- style menu -->
+			<select id='styleMenu' name='styleMenu' onchange='setStyle(this.value);'>
+				<option value='wght: 400.0,wdth: 100.0,ENLA: 0.0'>Origin</option>
+				<option value='wght: 300.0,wdth: 100.0,ENLA: 0.0'>Light Italic</option>
+				<option value='wght: 400.0,wdth: 100.0,ENLA: 0.0'>Italic</option>
+				<option value='wght: 500.0,wdth: 100.0,ENLA: 0.0'>Medium Italic</option>
+				<option value='wght: 600.0,wdth: 100.0,ENLA: 0.0'>SmBold Italic</option>
+				<option value='wght: 700.0,wdth: 100.0,ENLA: 0.0'>Bold Italic</option>
+				<option value='wght: 300.0,wdth: 75.0,ENLA: 0.0'>Cond Light Italic</option>
+				<option value='wght: 400.0,wdth: 75.0,ENLA: 0.0'>Cond Italic</option>
+				<option value='wght: 500.0,wdth: 75.0,ENLA: 0.0'>Cond Medium Italic</option>
+				<option value='wght: 600.0,wdth: 75.0,ENLA: 0.0'>Cond SmBold Italic</option>
+				<option value='wght: 300.0,wdth: 87.5,ENLA: 0.0'>SmCond Light Italic</option>
+				<option value='wght: 400.0,wdth: 87.5,ENLA: 0.0'>SmCond Italic</option>
+				<option value='wght: 500.0,wdth: 87.5,ENLA: 0.0'>SmCond Medium Italic</option>
+				<option value='wght: 600.0,wdth: 87.5,ENLA: 0.0'>SmCond SmBold Italic</option>
+				<option value='wght: 400.0,wdth: 125.0,ENLA: 0.0'>Exp Italic</option>
+				<option value='wght: 500.0,wdth: 125.0,ENLA: 0.0'>Exp Medium Italic</option>
+				<option value='wght: 600.0,wdth: 125.0,ENLA: 0.0'>Exp SmBold Italic</option>
+				<option value='wght: 700.0,wdth: 125.0,ENLA: 0.0'>Exp Bold Italic</option>
+				<option value='wght: 400.0,wdth: 112.5,ENLA: 0.0'>SmExp Italic</option>
+				<option value='wght: 300.0,wdth: 112.5,ENLA: 0.0'>SmExp Light Italic</option>
+				<option value='wght: 500.0,wdth: 112.5,ENLA: 0.0'>SmExp Medium Italic</option>
+				<option value='wght: 600.0,wdth: 112.5,ENLA: 0.0'>SmExp SmBold Italic</option>
+				<option value='wght: 700.0,wdth: 112.5,ENLA: 0.0'>SmExp Bold Italic</option>
+				<option value='wght: 400.0,wdth: 100.0,ENLA: 100.0'>Enlarged Italic</option>
+{tabbing}</select>
+
+			<!-- file type -->
+				<a onclick="toggleType();" id="type" class="emojiButton">TT</a>
+
+			<!-- Samsa -->
+				<!-- placeholder for external links, hold down OPTION and SHIFT while running the script -->
+
+			<!-- display type (x-ray vs. filled) -->
+				<a onclick="toggleInverse();" id="invert" class="emojiButton">🔲</a>
+
+			<!-- OT features -->
+				<input type="checkbox" name="kern" id="kern" value="kern" class="otFeature" onchange="updateFeatures()" checked><label for="kern" class="otFeatureLabel">kern</label>
+				<input type="checkbox" name="liga" id="liga" value="liga" class="otFeature" onchange="updateFeatures()" checked><label for="liga" class="otFeatureLabel">liga</label>
+				<input type="checkbox" name="calt" id="calt" value="calt" class="otFeature" onchange="updateFeatures()" checked><label for="calt" class="otFeatureLabel">calt</label>
+				<input type="checkbox" name="ss10" id="ss10" value="ss10" class="otFeature" onchange="updateFeatures()"><label for="ss10" class="otFeatureLabel">ss10</label>
+				<input type="checkbox" name="cv84" id="cv84" value="cv84" class="otFeature" onchange="updateFeatures()"><label for="cv84" class="otFeatureLabel">cv84</label>
+				<input type="checkbox" name="cv90" id="cv90" value="cv90" class="otFeature" onchange="updateFeatures()"><label for="cv90" class="otFeatureLabel">cv90</label>
+				<input type="checkbox" name="cv67" id="cv67" value="cv67" class="otFeature" onchange="updateFeatures()"><label for="cv67" class="otFeatureLabel">cv67</label>
+				<input type="checkbox" name="case" id="case" value="case" class="otFeature" onchange="updateFeatures()"><label for="case" class="otFeatureLabel">case</label>
+				<input type="checkbox" name="nalt" id="nalt" value="nalt" class="otFeature" onchange="updateFeatures()"><label for="nalt" class="otFeatureLabel">nalt</label>
+				<input type="checkbox" name="sinf" id="sinf" value="sinf" class="otFeature" onchange="updateFeatures()"><label for="sinf" class="otFeatureLabel">sinf</label>
+				<input type="checkbox" name="frac" id="frac" value="frac" class="otFeature" onchange="updateFeatures()"><label for="frac" class="otFeatureLabel">frac</label>
+				<input type="checkbox" name="numr" id="numr" value="numr" class="otFeature" onchange="updateFeatures()"><label for="numr" class="otFeatureLabel">numr</label>
+				<input type="checkbox" name="dnom" id="dnom" value="dnom" class="otFeature" onchange="updateFeatures()"><label for="dnom" class="otFeatureLabel">dnom</label>
+				<input type="checkbox" name="tnum" id="tnum" value="tnum" class="otFeature" onchange="updateFeatures()"><label for="tnum" class="otFeatureLabel">tnum</label>
+				<input type="checkbox" name="onum" id="onum" value="onum" class="otFeature" onchange="updateFeatures()"><label for="onum" class="otFeatureLabel">onum</label>
+				<input type="checkbox" name="pnum" id="pnum" value="pnum" class="otFeature" onchange="updateFeatures()"><label for="pnum" class="otFeatureLabel">pnum</label>
+				<input type="checkbox" name="lnum" id="lnum" value="lnum" class="otFeature" onchange="updateFeatures()"><label for="lnum" class="otFeatureLabel">lnum</label>
+				<input type="checkbox" name="zero" id="zero" value="zero" class="otFeature" onchange="updateFeatures()"><label for="zero" class="otFeatureLabel">zero</label>
+				<input type="checkbox" name="sups" id="sups" value="sups" class="otFeature" onchange="updateFeatures()"><label for="sups" class="otFeatureLabel">sups</label>
+				<input type="checkbox" name="subs" id="subs" value="subs" class="otFeature" onchange="updateFeatures()"><label for="subs" class="otFeatureLabel">subs</label>
+				<input type="checkbox" name="ornm" id="ornm" value="ornm" class="otFeature" onchange="updateFeatures()"><label for="ornm" class="otFeatureLabel">ornm</label>
+				<input type="checkbox" name="swsh" id="swsh" value="swsh" class="otFeature" onchange="updateFeatures()"><label for="swsh" class="otFeatureLabel">swsh</label>
+				<input type="checkbox" name="ss01" id="ss01" value="ss01" class="otFeature" onchange="updateFeatures()"><label for="ss01" class="otFeatureLabel">ss01</label>
+				<input type="checkbox" name="ss02" id="ss02" value="ss02" class="otFeature" onchange="updateFeatures()"><label for="ss02" class="otFeatureLabel">ss02</label>
+				<input type="checkbox" name="ss03" id="ss03" value="ss03" class="otFeature" onchange="updateFeatures()"><label for="ss03" class="otFeatureLabel">ss03</label>
+				<input type="checkbox" name="ss04" id="ss04" value="ss04" class="otFeature" onchange="updateFeatures()"><label for="ss04" class="otFeatureLabel">ss04</label>
+				<input type="checkbox" name="ss05" id="ss05" value="ss05" class="otFeature" onchange="updateFeatures()"><label for="ss05" class="otFeatureLabel">ss05</label>
+				<input type="checkbox" name="ss06" id="ss06" value="ss06" class="otFeature" onchange="updateFeatures()"><label for="ss06" class="otFeatureLabel">ss06</label>
+				<input type="checkbox" name="ss08" id="ss08" value="ss08" class="otFeature" onchange="updateFeatures()"><label for="ss08" class="otFeatureLabel">ss08</label>
+				<input type="checkbox" name="ss12" id="ss12" value="ss12" class="otFeature" onchange="updateFeatures()"><label for="ss12" class="otFeatureLabel">ss12</label>
+				<input type="checkbox" name="ss13" id="ss13" value="ss13" class="otFeature" onchange="updateFeatures()"><label for="ss13" class="otFeatureLabel">ss13</label>
+				<input type="checkbox" name="ss14" id="ss14" value="ss14" class="otFeature" onchange="updateFeatures()"><label for="ss14" class="otFeatureLabel">ss14</label>
+				<input type="checkbox" name="ss15" id="ss15" value="ss15" class="otFeature" onchange="updateFeatures()"><label for="ss15" class="otFeatureLabel">ss15</label>
+				<input type="checkbox" name="ss16" id="ss16" value="ss16" class="otFeature" onchange="updateFeatures()"><label for="ss16" class="otFeatureLabel">ss16</label>
+				<input type="checkbox" name="ss18" id="ss18" value="ss18" class="otFeature" onchange="updateFeatures()"><label for="ss18" class="otFeatureLabel">ss18</label>
+				<input type="checkbox" name="ss19" id="ss19" value="ss19" class="otFeature" onchange="updateFeatures()"><label for="ss19" class="otFeatureLabel">ss19</label>
+				<input type="checkbox" name="ss20" id="ss20" value="ss20" class="otFeature" onchange="updateFeatures()"><label for="ss20" class="otFeatureLabel">ss20</label>
+				<input type="checkbox" name="ordn" id="ordn" value="ordn" class="otFeature" onchange="updateFeatures()"><label for="ordn" class="otFeatureLabel">ordn</label>
+				<input type="checkbox" name="cv01" id="cv01" value="cv01" class="otFeature" onchange="updateFeatures()"><label for="cv01" class="otFeatureLabel">cv01</label>
+				<input type="checkbox" name="cv02" id="cv02" value="cv02" class="otFeature" onchange="updateFeatures()"><label for="cv02" class="otFeatureLabel">cv02</label>
+				<input type="checkbox" name="cv03" id="cv03" value="cv03" class="otFeature" onchange="updateFeatures()"><label for="cv03" class="otFeatureLabel">cv03</label>
+				<input type="checkbox" name="cv04" id="cv04" value="cv04" class="otFeature" onchange="updateFeatures()"><label for="cv04" class="otFeatureLabel">cv04</label>
+				<input type="checkbox" name="cv05" id="cv05" value="cv05" class="otFeature" onchange="updateFeatures()"><label for="cv05" class="otFeatureLabel">cv05</label>
+				<input type="checkbox" name="cv06" id="cv06" value="cv06" class="otFeature" onchange="updateFeatures()"><label for="cv06" class="otFeatureLabel">cv06</label>
+				<input type="checkbox" name="cv07" id="cv07" value="cv07" class="otFeature" onchange="updateFeatures()"><label for="cv07" class="otFeatureLabel">cv07</label>
+				<input type="checkbox" name="cv08" id="cv08" value="cv08" class="otFeature" onchange="updateFeatures()"><label for="cv08" class="otFeatureLabel">cv08</label>
+				<input type="checkbox" name="cv09" id="cv09" value="cv09" class="otFeature" onchange="updateFeatures()"><label for="cv09" class="otFeatureLabel">cv09</label>
+				<input type="checkbox" name="cv10" id="cv10" value="cv10" class="otFeature" onchange="updateFeatures()"><label for="cv10" class="otFeatureLabel">cv10</label>
+				<input type="checkbox" name="cv11" id="cv11" value="cv11" class="otFeature" onchange="updateFeatures()"><label for="cv11" class="otFeatureLabel">cv11</label>
+				<input type="checkbox" name="cv12" id="cv12" value="cv12" class="otFeature" onchange="updateFeatures()"><label for="cv12" class="otFeatureLabel">cv12</label>
+				<input type="checkbox" name="cv13" id="cv13" value="cv13" class="otFeature" onchange="updateFeatures()"><label for="cv13" class="otFeatureLabel">cv13</label>
+				<input type="checkbox" name="cv14" id="cv14" value="cv14" class="otFeature" onchange="updateFeatures()"><label for="cv14" class="otFeatureLabel">cv14</label>
+				<input type="checkbox" name="cv15" id="cv15" value="cv15" class="otFeature" onchange="updateFeatures()"><label for="cv15" class="otFeatureLabel">cv15</label>
+				<input type="checkbox" name="cv16" id="cv16" value="cv16" class="otFeature" onchange="updateFeatures()"><label for="cv16" class="otFeatureLabel">cv16</label>
+				<input type="checkbox" name="cv17" id="cv17" value="cv17" class="otFeature" onchange="updateFeatures()"><label for="cv17" class="otFeatureLabel">cv17</label>
+				<input type="checkbox" name="cv18" id="cv18" value="cv18" class="otFeature" onchange="updateFeatures()"><label for="cv18" class="otFeatureLabel">cv18</label>
+				<input type="checkbox" name="cv19" id="cv19" value="cv19" class="otFeature" onchange="updateFeatures()"><label for="cv19" class="otFeatureLabel">cv19</label>
+				<input type="checkbox" name="cv20" id="cv20" value="cv20" class="otFeature" onchange="updateFeatures()"><label for="cv20" class="otFeatureLabel">cv20</label>
+				<input type="checkbox" name="cv21" id="cv21" value="cv21" class="otFeature" onchange="updateFeatures()"><label for="cv21" class="otFeatureLabel">cv21</label>
+				<input type="checkbox" name="cv22" id="cv22" value="cv22" class="otFeature" onchange="updateFeatures()"><label for="cv22" class="otFeatureLabel">cv22</label>
+				<input type="checkbox" name="cv23" id="cv23" value="cv23" class="otFeature" onchange="updateFeatures()"><label for="cv23" class="otFeatureLabel">cv23</label>
+				<input type="checkbox" name="cv24" id="cv24" value="cv24" class="otFeature" onchange="updateFeatures()"><label for="cv24" class="otFeatureLabel">cv24</label>
+				<input type="checkbox" name="cv25" id="cv25" value="cv25" class="otFeature" onchange="updateFeatures()"><label for="cv25" class="otFeatureLabel">cv25</label>
+				<input type="checkbox" name="cv26" id="cv26" value="cv26" class="otFeature" onchange="updateFeatures()"><label for="cv26" class="otFeatureLabel">cv26</label>
+				<input type="checkbox" name="cv27" id="cv27" value="cv27" class="otFeature" onchange="updateFeatures()"><label for="cv27" class="otFeatureLabel">cv27</label>
+				<input type="checkbox" name="cv28" id="cv28" value="cv28" class="otFeature" onchange="updateFeatures()"><label for="cv28" class="otFeatureLabel">cv28</label>
+				<input type="checkbox" name="cv29" id="cv29" value="cv29" class="otFeature" onchange="updateFeatures()"><label for="cv29" class="otFeatureLabel">cv29</label>
+				<input type="checkbox" name="cv30" id="cv30" value="cv30" class="otFeature" onchange="updateFeatures()"><label for="cv30" class="otFeatureLabel">cv30</label>
+				<input type="checkbox" name="cv31" id="cv31" value="cv31" class="otFeature" onchange="updateFeatures()"><label for="cv31" class="otFeatureLabel">cv31</label>
+				<input type="checkbox" name="cv32" id="cv32" value="cv32" class="otFeature" onchange="updateFeatures()"><label for="cv32" class="otFeatureLabel">cv32</label>
+				<input type="checkbox" name="cv33" id="cv33" value="cv33" class="otFeature" onchange="updateFeatures()"><label for="cv33" class="otFeatureLabel">cv33</label>
+				<input type="checkbox" name="cv34" id="cv34" value="cv34" class="otFeature" onchange="updateFeatures()"><label for="cv34" class="otFeatureLabel">cv34</label>
+				<input type="checkbox" name="cv35" id="cv35" value="cv35" class="otFeature" onchange="updateFeatures()"><label for="cv35" class="otFeatureLabel">cv35</label>
+				<input type="checkbox" name="cv36" id="cv36" value="cv36" class="otFeature" onchange="updateFeatures()"><label for="cv36" class="otFeatureLabel">cv36</label>
+				<input type="checkbox" name="cv37" id="cv37" value="cv37" class="otFeature" onchange="updateFeatures()"><label for="cv37" class="otFeatureLabel">cv37</label>
+				<input type="checkbox" name="cv38" id="cv38" value="cv38" class="otFeature" onchange="updateFeatures()"><label for="cv38" class="otFeatureLabel">cv38</label>
+				<input type="checkbox" name="cv39" id="cv39" value="cv39" class="otFeature" onchange="updateFeatures()"><label for="cv39" class="otFeatureLabel">cv39</label>
+				<input type="checkbox" name="cv40" id="cv40" value="cv40" class="otFeature" onchange="updateFeatures()"><label for="cv40" class="otFeatureLabel">cv40</label>
+				<input type="checkbox" name="cv41" id="cv41" value="cv41" class="otFeature" onchange="updateFeatures()"><label for="cv41" class="otFeatureLabel">cv41</label>
+				<input type="checkbox" name="cv42" id="cv42" value="cv42" class="otFeature" onchange="updateFeatures()"><label for="cv42" class="otFeatureLabel">cv42</label>
+				<input type="checkbox" name="cv43" id="cv43" value="cv43" class="otFeature" onchange="updateFeatures()"><label for="cv43" class="otFeatureLabel">cv43</label>
+				<input type="checkbox" name="cv44" id="cv44" value="cv44" class="otFeature" onchange="updateFeatures()"><label for="cv44" class="otFeatureLabel">cv44</label>
+				<input type="checkbox" name="cv45" id="cv45" value="cv45" class="otFeature" onchange="updateFeatures()"><label for="cv45" class="otFeatureLabel">cv45</label>
+				<input type="checkbox" name="cv46" id="cv46" value="cv46" class="otFeature" onchange="updateFeatures()"><label for="cv46" class="otFeatureLabel">cv46</label>
+				<input type="checkbox" name="cv47" id="cv47" value="cv47" class="otFeature" onchange="updateFeatures()"><label for="cv47" class="otFeatureLabel">cv47</label>
+				<input type="checkbox" name="cv48" id="cv48" value="cv48" class="otFeature" onchange="updateFeatures()"><label for="cv48" class="otFeatureLabel">cv48</label>
+				<input type="checkbox" name="cv49" id="cv49" value="cv49" class="otFeature" onchange="updateFeatures()"><label for="cv49" class="otFeatureLabel">cv49</label>
+				<input type="checkbox" name="cv50" id="cv50" value="cv50" class="otFeature" onchange="updateFeatures()"><label for="cv50" class="otFeatureLabel">cv50</label>
+				<input type="checkbox" name="cv51" id="cv51" value="cv51" class="otFeature" onchange="updateFeatures()"><label for="cv51" class="otFeatureLabel">cv51</label>
+				<input type="checkbox" name="cv52" id="cv52" value="cv52" class="otFeature" onchange="updateFeatures()"><label for="cv52" class="otFeatureLabel">cv52</label>
+				<input type="checkbox" name="cv53" id="cv53" value="cv53" class="otFeature" onchange="updateFeatures()"><label for="cv53" class="otFeatureLabel">cv53</label>
+				<input type="checkbox" name="cv54" id="cv54" value="cv54" class="otFeature" onchange="updateFeatures()"><label for="cv54" class="otFeatureLabel">cv54</label>
+				<input type="checkbox" name="cv55" id="cv55" value="cv55" class="otFeature" onchange="updateFeatures()"><label for="cv55" class="otFeatureLabel">cv55</label>
+				<input type="checkbox" name="cv56" id="cv56" value="cv56" class="otFeature" onchange="updateFeatures()"><label for="cv56" class="otFeatureLabel">cv56</label>
+				<input type="checkbox" name="cv57" id="cv57" value="cv57" class="otFeature" onchange="updateFeatures()"><label for="cv57" class="otFeatureLabel">cv57</label>
+				<input type="checkbox" name="cv58" id="cv58" value="cv58" class="otFeature" onchange="updateFeatures()"><label for="cv58" class="otFeatureLabel">cv58</label>
+				<input type="checkbox" name="cv59" id="cv59" value="cv59" class="otFeature" onchange="updateFeatures()"><label for="cv59" class="otFeatureLabel">cv59</label>
+				<input type="checkbox" name="cv60" id="cv60" value="cv60" class="otFeature" onchange="updateFeatures()"><label for="cv60" class="otFeatureLabel">cv60</label>
+				<input type="checkbox" name="cv61" id="cv61" value="cv61" class="otFeature" onchange="updateFeatures()"><label for="cv61" class="otFeatureLabel">cv61</label>
+				<input type="checkbox" name="cv62" id="cv62" value="cv62" class="otFeature" onchange="updateFeatures()"><label for="cv62" class="otFeatureLabel">cv62</label>
+				<input type="checkbox" name="cv63" id="cv63" value="cv63" class="otFeature" onchange="updateFeatures()"><label for="cv63" class="otFeatureLabel">cv63</label>
+				<input type="checkbox" name="cv64" id="cv64" value="cv64" class="otFeature" onchange="updateFeatures()"><label for="cv64" class="otFeatureLabel">cv64</label>
+				<input type="checkbox" name="cv65" id="cv65" value="cv65" class="otFeature" onchange="updateFeatures()"><label for="cv65" class="otFeatureLabel">cv65</label>
+				<input type="checkbox" name="cv66" id="cv66" value="cv66" class="otFeature" onchange="updateFeatures()"><label for="cv66" class="otFeatureLabel">cv66</label>
+				<input type="checkbox" name="cv68" id="cv68" value="cv68" class="otFeature" onchange="updateFeatures()"><label for="cv68" class="otFeatureLabel">cv68</label>
+				<input type="checkbox" name="cv69" id="cv69" value="cv69" class="otFeature" onchange="updateFeatures()"><label for="cv69" class="otFeatureLabel">cv69</label>
+				<input type="checkbox" name="cv70" id="cv70" value="cv70" class="otFeature" onchange="updateFeatures()"><label for="cv70" class="otFeatureLabel">cv70</label>
+				<input type="checkbox" name="cv71" id="cv71" value="cv71" class="otFeature" onchange="updateFeatures()"><label for="cv71" class="otFeatureLabel">cv71</label>
+				<input type="checkbox" name="cv72" id="cv72" value="cv72" class="otFeature" onchange="updateFeatures()"><label for="cv72" class="otFeatureLabel">cv72</label>
+				<input type="checkbox" name="cv73" id="cv73" value="cv73" class="otFeature" onchange="updateFeatures()"><label for="cv73" class="otFeatureLabel">cv73</label>
+				<input type="checkbox" name="cv74" id="cv74" value="cv74" class="otFeature" onchange="updateFeatures()"><label for="cv74" class="otFeatureLabel">cv74</label>
+				<input type="checkbox" name="cv75" id="cv75" value="cv75" class="otFeature" onchange="updateFeatures()"><label for="cv75" class="otFeatureLabel">cv75</label>
+				<input type="checkbox" name="cv76" id="cv76" value="cv76" class="otFeature" onchange="updateFeatures()"><label for="cv76" class="otFeatureLabel">cv76</label>
+				<input type="checkbox" name="cv77" id="cv77" value="cv77" class="otFeature" onchange="updateFeatures()"><label for="cv77" class="otFeatureLabel">cv77</label>
+				<input type="checkbox" name="cv78" id="cv78" value="cv78" class="otFeature" onchange="updateFeatures()"><label for="cv78" class="otFeatureLabel">cv78</label>
+				<input type="checkbox" name="cv79" id="cv79" value="cv79" class="otFeature" onchange="updateFeatures()"><label for="cv79" class="otFeatureLabel">cv79</label>
+				<input type="checkbox" name="cv80" id="cv80" value="cv80" class="otFeature" onchange="updateFeatures()"><label for="cv80" class="otFeatureLabel">cv80</label>
+				<input type="checkbox" name="cv81" id="cv81" value="cv81" class="otFeature" onchange="updateFeatures()"><label for="cv81" class="otFeatureLabel">cv81</label>
+				<input type="checkbox" name="cv82" id="cv82" value="cv82" class="otFeature" onchange="updateFeatures()"><label for="cv82" class="otFeatureLabel">cv82</label>
+				<input type="checkbox" name="cv83" id="cv83" value="cv83" class="otFeature" onchange="updateFeatures()"><label for="cv83" class="otFeatureLabel">cv83</label>
+				<input type="checkbox" name="cv85" id="cv85" value="cv85" class="otFeature" onchange="updateFeatures()"><label for="cv85" class="otFeatureLabel">cv85</label>
+				<input type="checkbox" name="cv86" id="cv86" value="cv86" class="otFeature" onchange="updateFeatures()"><label for="cv86" class="otFeatureLabel">cv86</label>
+				<input type="checkbox" name="cv87" id="cv87" value="cv87" class="otFeature" onchange="updateFeatures()"><label for="cv87" class="otFeatureLabel">cv87</label>
+				<input type="checkbox" name="cv88" id="cv88" value="cv88" class="otFeature" onchange="updateFeatures()"><label for="cv88" class="otFeatureLabel">cv88</label>
+				<input type="checkbox" name="cv89" id="cv89" value="cv89" class="otFeature" onchange="updateFeatures()"><label for="cv89" class="otFeatureLabel">cv89</label>
+				<input type="checkbox" name="cv92" id="cv92" value="cv92" class="otFeature" onchange="updateFeatures()"><label for="cv92" class="otFeatureLabel">cv92</label>
+				<input type="checkbox" name="cv93" id="cv93" value="cv93" class="otFeature" onchange="updateFeatures()"><label for="cv93" class="otFeatureLabel">cv93</label>
+				<input type="checkbox" name="cv94" id="cv94" value="cv94" class="otFeature" onchange="updateFeatures()"><label for="cv94" class="otFeatureLabel">cv94</label>
+				<input type="checkbox" name="cv95" id="cv95" value="cv95" class="otFeature" onchange="updateFeatures()"><label for="cv95" class="otFeatureLabel">cv95</label>
+				<input type="checkbox" name="cv96" id="cv96" value="cv96" class="otFeature" onchange="updateFeatures()"><label for="cv96" class="otFeatureLabel">cv96</label>
+				<input type="checkbox" name="cv97" id="cv97" value="cv97" class="otFeature" onchange="updateFeatures()"><label for="cv97" class="otFeatureLabel">cv97</label>
+				<input type="checkbox" name="cv98" id="cv98" value="cv98" class="otFeature" onchange="updateFeatures()"><label for="cv98" class="otFeatureLabel">cv98</label>
+				<input type="checkbox" name="pcap" id="pcap" value="pcap" class="otFeature" onchange="updateFeatures()"><label for="pcap" class="otFeatureLabel">pcap</label>
+				<input type="checkbox" name="c2sc" id="c2sc" value="c2sc" class="otFeature" onchange="updateFeatures()"><label for="c2sc" class="otFeatureLabel">c2sc</label>
+				<input type="checkbox" name="smcp" id="smcp" value="smcp" class="otFeature" onchange="updateFeatures()"><label for="smcp" class="otFeatureLabel">smcp</label>
+				<input type="checkbox" name="ss07" id="ss07" value="ss07" class="otFeature" onchange="updateFeatures()"><label for="ss07" class="otFeatureLabel">ss07</label>
+				<input type="checkbox" name="rtlm" id="rtlm" value="rtlm" class="otFeature" onchange="updateFeatures()"><label for="rtlm" class="otFeatureLabel">rtlm</label>
+				<input type="checkbox" name="hlig" id="hlig" value="hlig" class="otFeature" onchange="updateFeatures()"><label for="hlig" class="otFeatureLabel">hlig</label>
+				<input type="checkbox" name="dlig" id="dlig" value="dlig" class="otFeature" onchange="updateFeatures()"><label for="dlig" class="otFeatureLabel">dlig</label>
+				<input type="checkbox" name="ss17" id="ss17" value="ss17" class="otFeature" onchange="updateFeatures()"><label for="ss17" class="otFeatureLabel">ss17</label>
+
+				<select id='lang' name='languages' onchange='setLanguage(this.value);'>
+					<option value=''>No Language</option>
+					<option value='az'>Azerbaijani (AZE, az)</option>
+					<option value='kk'>Kazakh (KAZ, kk)</option>
+					<option value='tt'>Tatar (TAT, tt)</option>
+					<option value='tr'>Turkish (TRK, tr)</option>
+					<option value='ro'>Romanian (ROM, ro)</option>
+					<option value='mo'>Moldavian (MOL, mo)</option>
+					<option value='en'>English (ENG, en)</option>
+					<option value='ca'>Catalan (CAT, ca)</option>
+					<option value='el'>Greek (ELL, el)</option>
+					<option value='ga'>Irish (IRI, ga)</option>
+					<option value='gd'>Scottish Gaelic (Gaelic) (GAE, gd)</option>
+					<option value='ga'>Irish Traditional (IRT, ga)</option>
+					<option value='fr'>French (FRA, fr)</option>
+					<option value='la'>Latin (LAT, la)</option>
+				</select>
+			</div>
+		</div>
+	
+		<!-- Test Text -->
+		<div contenteditable="true" spellcheck="false" autocomplete="true" id="textarea" class="●">
+		</div>
+	</div>
+	
+	<!-- Disclaimer -->
+	<p id="helptext" onmouseleave="vanish(this);">
+		<strong>Ctrl-period/comma</strong> step through styles <strong>Ctrl-R</strong> reset charset <strong>Ctrl-L</strong> Lat-1 <strong>Ctrl-J</strong> LTR/RTL <strong>Ctrl-C</strong> center <strong>Ctrl-M</strong> toggle menu <strong>Ctrl-X</strong> x-ray <strong>Ctrl +/−</strong> size <strong>Ctrl-1/2</strong> linegap <strong>Shift</strong> high slider precision <em>Not working? Try newer macOS or <a href="https://www.google.com/chrome/">latest Chrome</a>. Hover mouse above this note to make it disappear.</em>
+	</p>
+	</body>
+</html>

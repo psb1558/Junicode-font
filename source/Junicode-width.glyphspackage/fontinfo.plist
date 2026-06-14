@@ -1,5 +1,5 @@
 {
-.appVersion = "3516";
+.appVersion = "3526";
 .formatVersion = 3;
 axes = (
 {
@@ -1305,7 +1305,7 @@ code = "a b c d e f h i k l m n o r s t u v w x z ae eth";
 name = Lowercase_no_descender;
 },
 {
-code = "Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb bcomb ccomb dcomb ecomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb pcomb rcomb rrotundacomb scomb tcomb ucomb tinsularcomb vcomb wcomb xcomb zcomb ccedillacomb ginsularcomb rinsularcomb urabovecomb dotlessicomb jdotlesscomb
+code = "Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocomb avcomb bcomb ccomb dcomb ecomb ethcomb fcomb flattenedopenaabovecomb gcomb hcomb icomb insulardcomb kcomb lcomb longscomb mcomb ncomb ocomb pcomb rcomb rrotundacomb scomb tcomb ucomb tinsularcomb vcomb wcomb xcomb zcomb ccedillacomb ginsularcomb rinsularcomb urabovecomb dotlessicomb jdotlesscomb eogonekcomb oogonekcomb rumrotundacomb oslashcomb oogonekabovecomb orrotcomb aNcomb ancomb aRcomb arcomb orumrotundacomb
 ";
 name = Letterlike_diacritics;
 },
@@ -2173,8 +2173,8 @@ lookup calt_zzalt {
   sub d @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.d ;
   sub [ eth dinsular d.insular ] zigzagabovecomb' by zigzagabovecomb.eth ;
   sub [ eth dinsular d.insular ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.eth ;
-#  sub [ longs f f.alt ] zigzagabovecomb' by zigzagabovecomb.ff ;
-#  sub [ longs f f.alt ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.ff ;
+  sub [ longs f f.alt ] zigzagabovecomb' by zigzagabovecomb.ff ;
+  sub [ longs f f.alt ] @all_combining_nozz zigzagabovecomb' by zigzagabovecomb.ff ;
 } calt_zzalt ;
 
 lookup ss20_lowdiacritic {
@@ -2411,8 +2411,38 @@ lookup ccmp_rhotic {
   sub istroke uni02DE by uni026802DE;
 } ccmp_rhotic;
 
+lookup precomposed_marks {
+  lookupflag UseMarkFilteringSet [ acomb ecomb Ncomb ncomb ocomb Rcomb rcomb ogonekcomb slashlongcomb rrotundacomb ogonekabovecomb ] ; 
+  sub rrotundacomb slashlongcomb by rumrotundacomb ;
+  sub slashlongcomb rrotundacomb by rumrotundacomb ;
+  sub ocomb ogonekcomb by oogonekcomb ;
+  sub ogonekcomb ocomb by oogonekcomb ;
+  sub ecomb ogonekcomb by eogonekcomb ;
+  sub ogonekcomb ecomb by eogonekcomb ;
+  sub ocomb slashlongcomb by oslashcomb ;
+  sub slashlongcomb ocomb by oslashcomb ;
+  sub ocomb ogonekabovecomb by oogonekabovecomb ;
+  sub ogonekabovecomb ocomb by oogonekabovecomb ;
+  sub ocomb rrotundacomb by orrotcomb ;
+  sub rrotundacomb ocomb by orrotcomb ;
+  sub acomb Ncomb by aNcomb ;
+  sub Ncomb acomb by aNcomb ;
+  sub acomb ncomb by ancomb ;
+  sub ncomb acomb by ancomb ;
+  sub acomb Rcomb by aRcomb ;
+  sub Rcomb acomb by aRcomb ;
+  sub acomb rcomb by arcomb ;
+  sub rcomb acomb by arcomb ;
+} precomposed_marks ;
+
+lookup precomposed_marks_triple {
+  lookupflag UseMarkFilteringSet [ oslashcomb rrotundacomb ] ; 
+  sub oslashcomb rrotundacomb by orumrotundacomb ;
+} precomposed_marks_triple ;
+
 lookup narrow_macron {
-  sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;
+  lookupflag UseMarkFilteringSet [ @Letterlike_diacritics macroncomb acutecomb gravecomb tildecomb circumflexcomb dieresiscomb caroncomb dotaccentcomb ] ;
+  sub @Letterlike_diacritics [ macroncomb acutecomb gravecomb tildecomb circumflexcomb dieresiscomb caroncomb dotaccentcomb ]' by [ macroncomb.narrow acutecomb.narrow gravecomb.narrow tildecomb.narrow circumflexcomb.narrow dieresiscomb.narrow caroncomb.narrow dotaccentcomb.narrow ] ;
 } narrow_macron ;
 
 lookup mkmk_subs {
@@ -4773,7 +4803,9 @@ sub dieresiscomb by dieresis ;
 sub dotaccentcomb by dotaccent ;
 sub ringcomb by ring ;
 sub cedillacomb by cedilla ;
-sub ogonekcomb by ogonek ;";
+sub ogonekcomb by ogonek ;
+sub usabovecomb by usmod ;
+";
 labels = (
 {
 language = dflt;

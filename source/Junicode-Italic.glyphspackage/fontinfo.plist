@@ -1,5 +1,5 @@
 {
-.appVersion = "3516";
+.appVersion = "3526";
 .formatVersion = 3;
 axes = (
 {
@@ -2615,6 +2615,34 @@ lookup ccmp_rhotic {
   sub istroke rhotichookmod by uni026802DE;
 } ccmp_rhotic;
 
+lookup precomposed_marks {
+  lookupflag UseMarkFilteringSet [ acomb ecomb Ncomb ncomb ocomb Rcomb rcomb ogonekcomb slashlongcomb rrotundacomb ogonekabovecomb ] ; 
+  sub rrotundacomb slashlongcomb by rumrotundacomb ;
+  sub slashlongcomb rrotundacomb by rumrotundacomb ;
+  sub ocomb ogonekcomb by oogonekcomb ;
+  sub ogonekcomb ocomb by oogonekcomb ;
+  sub ecomb ogonekcomb by eogonekcomb ;
+  sub ogonekcomb ecomb by eogonekcomb ;
+  sub ocomb slashlongcomb by oslashcomb ;
+  sub slashlongcomb ocomb by oslashcomb ;
+  sub ocomb ogonekabovecomb by oogonekabovecomb ;
+  sub ogonekabovecomb ocomb by oogonekabovecomb ;
+  sub ocomb rrotundacomb by orrotcomb ;
+  sub rrotundacomb ocomb by orrotcomb ;
+  sub acomb Ncomb by aNcomb ;
+  sub Ncomb acomb by aNcomb ;
+  sub acomb ncomb by ancomb ;
+  sub ncomb acomb by ancomb ;
+  sub acomb Rcomb by aRcomb ;
+  sub Rcomb acomb by aRcomb ;
+  sub acomb rcomb by arcomb ;
+  sub rcomb acomb by arcomb ;
+} precomposed_marks ;
+
+lookup precomposed_marks_triple {
+  lookupflag UseMarkFilteringSet [ oslashcomb rrotundacomb ] ; 
+  sub oslashcomb rrotundacomb by orumrotundacomb ;
+} precomposed_marks_triple ;
 
 lookup narrow_macron {
   sub @Letterlike_diacritics macroncomb' by macroncomb.narrow ;

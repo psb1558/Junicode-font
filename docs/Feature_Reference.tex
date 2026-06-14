@@ -67,8 +67,8 @@ diacritics. For example, instead of MUFI \unic{U+E498} \textUName{latin small le
 \textex{ẹ́} (when applying combining marks, start with any marks below the character and work
 downwards, then continue with any marks above the character and work upwards. For example, to make
 \textex{ǭ̣́}, place characters in this order: \textex{o},
-\textUName{combining ogonek} \unic{U+0328}, \textUName{combining dot below} \unic{U+0323}, \textUName{combining
-macron} \unic{U+0304}, \textUName{combining acute} \unic{U+0301}). Some MUFI characters have marks in unconventional positions,
+\unic{U+0328} \textUName{combining ogonek}, \unic{U+0323} \textUName{combining dot below}, \unic{U+0304} \textUName{combining
+macron}, \unic{U+0301} \textUName{combining acute}). Some MUFI characters have marks in unconventional positions,
 e.g. \textex{ȯ́} \textUName{latin small letter o with dot above and acute}, where the
 acute appears beside the dot instead of above. This and other characters like it should still be entered as a sequence
 of base character + marks (here \textex{o}, \textUName{combining dot above} \unic{U+0307},
@@ -110,8 +110,8 @@ caps. fghij $\rightarrow $ \textsc{fghij}.
 
 Note: Precomposed characters defined by MUFI in the Private Use Area have no small cap equivalents. Instead, compose
 characters using combining diacritics, as outlined in the introduction. For example, \textSourceText{smcp} applied
-to the sequence \textex{t} + \textUName{combining ogonek} (\unic{U+0328}) + \textUName{combining
-acute} (\unic{U+0301}) will change \textex{t̨́} to \textex{\textsc{t̨́}}.
+to the sequence \textex{t} + \unic{U+0328} \textUName{combining ogonek} + \unic{U+0301} \textUName{combining
+acute} will change \textex{t̨́} to \textex{\textsc{t̨́}}.
 
 \subsection{\textSourceText{c2sc} – Small Capitals from Capitals}
 Use\index{c2sc|textbf} with \textSourceText{smcp} for all-small-cap text. ABCDE $\rightarrow $
@@ -127,7 +127,7 @@ half of Junicode’s small caps have petite cap equivalents. klmno{\th}
 $\rightarrow $ {\addfontfeature{Letters = PetiteCaps}klmno\th}.
 
 \subsection{\textSourceText{c2pc} – Petite Capitals from Capitals}}
-Produces petite capitals from capitals. Use with \textSourceText{pcap} to convert mixed-case texts to petite capitals.
+Produces petite capitals from capitals. Use with \textSourceText{pcap}\index{pcap} to convert mixed-case texts to petite capitals.
 PQRST $\rightarrow $ {\addfontfeature{Letters=UppercasePetiteCaps}PQRST}.
 
 Note: The variants of Ŋ (\unic{U+014A}—see \hyperlink{OtherLatin}{Other Latin Letters}) have no lowercase equivalents. Their petite capital forms can be
@@ -135,10 +135,10 @@ accessed only through this feature.
 
 \subsection{\textSourceText{case} – Case-Sensitive Forms}
 Produces\index{case} combining marks that harmonize with capital letters:
-{\addfontfeature{Letters=Uppercase}\v{R}, X̉}, etc. Use of this feature reduces the
+{\addfontfeature{Letters=Uppercase}\textex{\v{R}}, \textex{X̉}}, etc. Use of this feature reduces the
 likelihood that a combining mark will collide with a glyph in the line above. Some applications turn this
 feature on automatically for runs of capitals, and precomposed characters
-(e.g. \textex{É} \unic{U+00C9}, \textex{Ū} \unic{U+016A})
+(e.g. \unic{U+00C9} (\textex{É}), \unic{U+016A} (\textex{Ū}))
 already use case-appropriate combining marks. This feature also changes oldstyle to
 lining figures, since these harmonize better with uppercase letters. (Some fonts use this feature
 to raise hyphens and dashes between capitals and lining numbers, but Junicode uses contextual
@@ -356,7 +356,7 @@ searchable as i.
 \noindent ** \textSourceText{cv32[2]}\index{cv32} should be on in any edition or extensive
 quotation of the \textit{Ormulum}. The feature produces a p that differs from
 the default only in the way it forms a double-p ligature with \textSourceText{hlig}\index{hlig}:
-\cvd[1]{32}{\hlig{pp}}, not \hlig{pp}.
+\textex{\cvd[1]{32}{\hlig{pp}}}, not \textex{\hlig{pp}}.
 
 When the active script is Greek (set automatically by many apps), 
 a few of these features behave differently,
@@ -456,19 +456,19 @@ cv60\index{cv60|textbf} &
 cv61\index{cv61|textbf} &
 {1=\cvd{61}{\dj}}\\
 %
-{\jCond Ę, ę ... (U+0118, U+0119)} &
+{\jCond Ę, ę ... (\unic{U+0118}, \unic{U+0119})} &
 cv62\index{cv62|textbf} &
 {1=\cvd{62}{Ę, ę ...}; 2=\cvd[1]{62}{Ę, ę ...}}\\
 %
-\bluerow{\jCond Ȝ, ȝ (U+021C, U+021D)} &
+\bluerow{\jCond Ȝ, ȝ (\unic{U+021C}, \unic{U+021D})} &
 cv63\index{cv63|textbf} &
 {1=\cvd{63}{Ȝȝ}, 2=\cvd[1]{63}{Ȝȝ}}\\
 %
-{◌ͥ (U+0365)} &
+{◌ͥ (\unic{U+0365})} &
 cv64\index{cv64|textbf} &
 {1=\cvd{64}{◌ͥ}}\\
 %
-\bluerow Ŋ (U+014A) &
+\bluerow Ŋ (\unic{U+014A}) &
 cv91\index{cv91|textbf} &
 {1=\cvd{91}{Ŋ}, 2=\cvd[1]{91}{Ŋ}}\\
 %
@@ -1210,12 +1210,12 @@ u{\textcompwordmark}u\hfill→\hfill{}uu}
 \end{multicols}
 
 \noindent\addfontfeatures{Ligatures=histoff}
-*\,The \textex{\hlig{aa}} ligature looks like \unic{U+A733} \textex{ꜳ}, but behaves differently.
+*\,The \textex{\hlig{aa}} ligature looks like \unic{U+A733} (\textex{ꜳ}), but behaves differently.
 As in most other ligatures, each element has a set of anchors so that diacritics can be placed 
 over or under the element, e.g. \textex{\hlig{a{\char"34F\char"301}a}},
 \textex{\hlig{aa\char"34F\char"301}}.
 **\,For the ligature \textex{\textsc{\hlig{nſ}}} to
-work properly, \unic{U+017F} \textex{ſ} must be entered directly, not by applying an OpenType feature to
+work properly, \unic{U+017F} (\textex{ſ}) must be entered directly, not by applying an OpenType feature to
 \textex{s}.
 
 An alternative way to generate any of the ligatures listed above is to place
@@ -1249,13 +1249,13 @@ ligatures will require less tagging to turn \textSourceText{hlig} on and off (th
 feature is disruptive when it is on where it is not needed). The ZWJ causes two
 letters to be combined as a ligature.  Use it where you want a digraph to be searchable
 as its elements: for example, \unic{U+A733} \textUName{latin small letter aa} cannot
-ordinarily be searched as \textex{a} or \textex{aa}; if entered as \textSourceText{a
+ordinarily be searched as \textex{a} or \textex{aa}; if entered as \textex{a
 \unic{U+200D} a}, it will be searchable as \textex{aa} (but not as \unic{U+A733}).
 Also, combining marks can be placed over the individual elements of ligatures but not
-over the elements of digraphs: the sequences \textSourceText{a \unic{U+034F U+0301
-U+200D} a}\index{combining grapheme joiner} and \textSourceText{a \unic{U+200D} a \unic{U+034F
+over the elements of digraphs: the sequences \textex{a + \unic{U+034F + U+0301 +
+U+200D} + a}\index{combining grapheme joiner} and \textex{a + \unic{U+200D} + a + \unic{U+034F
 U+0301}}\footnote{\ \hyperlink{cgj}{\unic{U+034F}} \textUName{combining grapheme joiner} is needed to
-prevent the sequence \textSourceText{a \unic{U+0301}} being resolved as \textex{á}
+prevent the sequence \textex{a \unic{U+0301}} being resolved as \textex{á}
 before the font’s OpenType programming can be run, preventing the formation of a
 ligature.} yield \textex{a{\char"034F\char"0301\char"200D}a} and
 \textex{a{\char"200D}a\char"034F\char"0301}, while an accent on \unic{U+A733} is
@@ -1471,74 +1471,117 @@ scales and positions it to match other editorial signs (U+2E00--u+2E0D).
 
 \section{Combining Marks}
 
-Junicode provides more than 350 combining marks, including nearly 150 Unicode-encoded marks, variants of these,
-and unencoded equivalents of MUFI diacritics (which, being PUA-encoded, do not function well as combining marks).
-All of Junicode’s unencoded marks are accessible via OpenType features (listed below) or tags. Most are
-produced by positioning the mark directly after the base character: for example, the combination
-\textex{a\char"035B} is produced by the sequence \textex{a \unic{U+035B}}. Several are “double” marks, marking
-the relationship between two characters. These are produced by placing the double mark \textit{between}
-the two base characters: \unic{U+035C} (\textex{◌͜◌}), \unic{U+035F} (\textex{◌͟◌}),
-\unic{U+0362} (\textex{◌͢◌}), \unic{U+035D} (\textex{◌͝◌}), \unic{U+035E} (\textex{◌͞◌}),
-\unic{U+0360} (\textex{◌͠◌}), \unic{U+0361} (\textex{◌͡◌}), \unic{U+1DCD} (\textex{◌᷍◌}). The height of 
-these double marks is automatically adjusted to clear neighboring letters and combining marks, e.g.
-\textex{l͡o}, \textex{a̍͠o}, \textex{æ\char"1DD3\char"034F\char"1DCDu},\index{combining grapheme joiner} \textex{o\char"033B\char"035Ce}.
-If a double
-diacritic appears too high or too low (e.g. \textex{l\char"035Eo\char"030E}), place \unic{U+200C}\index{zero width non-joiner}
-\textUName{zero-width non-joiner} somewhere between the double diacritic and the combining mark:
-the sequence \textSourceText{l \unic{U+035E} \unic{U+200C} o \unic{U+030E}} produces 
-\textex{l\char"035E\char"200Co\char"030E}.
+Junicode provides more than 350 combining marks, which can be placed on base characters (usually letters)
+by including the character for the combining marks directly after the base in the text stream (some marks
+are for two characters and must be placed between them). For example,
+the sequence \textex{a + \unic{U+035B}} (\textex{◌\char"035B}) produces the letter + mark combination 
+\textex{a\char"035B}, and the sequence \textex{l + \unic{U+0361} (◌\char"0361◌) + o} produces
+\textex{l\char"0361o}. Many of Junicode’s combining marks are standard Unicode (with code points that do not 
+begin with E or F): these can be entered directly in the text via their code points, and they will be positioned correctly 
+relative to the preceding base character. Many more of Junicode's marks are variants of Unicode 
+marks: these variants lack code points but can be entered in the text by applying OpenType features to 
+those Unicode marks or by placing Unicode tags after them. Many of the marks included in the MUFI 
+standard have Unicode code points, and these can be entered in the text stream directly like all of Junicode’s 
+Unicode marks. However, many
+of MUFI's marks have PUA code points (beginning with E or F), and these marks will often be positioned
+incorrectly relative to their base characters. Junicode provides several workarounds for this and other 
+problems posed by PUA-encoded marks. Each of these methods, detailed beginning two sections down from here, 
+has pros and cons: choose the ones that work best for your particular project.
 
-\subsection{\unic{U+034F} \textUName{combining grapheme joiner}}\hypertarget{cgj}{}
+% Many of the marks included in the MUFI standard have PUA 
+% code points (beginning with E or F)
 
-The character at \unic{U+034F}\index{combining grapheme joiner|textbf} is defined by Unicode as a combining mark. It is invisible, having no outlines
+% Other marks are unencoded: these are usually variants of standard 
+% Unicode marks, and they can be produced by 
+% including nearly 150 Unicode-encoded marks, variants of these,
+% and unencoded equivalents of MUFI diacritics (which, because of their PUA encoding, do not function well as combining marks).
+% All of Junicode’s unencoded marks are accessible via OpenType features (listed below) or tags. Most are
+% produced by positioning the mark directly after the base character: for example, the combination
+% \textex{a\char"035B} is produced by the sequence \textex{a \unic{U+035B}}. Several are “double” marks, marking
+% the relationship between two characters. These are produced by placing the double mark \textit{between}
+% the two base characters: \unic{U+035C} (\textex{◌͜◌}), \unic{U+035F} (\textex{◌͟◌}),
+% \unic{U+0362} (\textex{◌͢◌}), \unic{U+035D} (\textex{◌͝◌}), \unic{U+035E} (\textex{◌͞◌}),
+% \unic{U+0360} (\textex{◌͠◌}), \unic{U+0361} (\textex{◌͡◌}), \unic{U+1DCD} (\textex{◌᷍◌}). The height of 
+% these double marks is automatically adjusted to clear neighboring letters and combining marks, e.g.
+% \textex{l͡o}, \textex{a̍͠o}, \textex{æ\char"1DD3\char"034F\char"1DCDu},\index{combining grapheme joiner} \textex{o\char"033B\char"035Ce}.
+
+% Unicode-encoded combining marks (those with code points that do not begin with E or F) can be entered 
+% directly, and they will always be positioned correctly over base characters. Junicode contains all of MUFI’s 
+% PUA-encoded combining marks, and it provides several alternative methods of entering these (since PUA-encoded 
+% combining marks should always be avoided). These methods 
+% have advantages and disadvantages, which will be addressed in the following sections.
+%If a double
+%diacritic appears too high or too low (e.g. \textex{l\char"035Eo\char"030E}), place \unic{U+200C}\index{zero width non-joiner}
+%\textUName{zero-width non-joiner} somewhere between the double diacritic and the combining mark:
+%the sequence \textSourceText{l \unic{U+035E} \unic{U+200C} o \unic{U+030E}} produces 
+%\textex{l\char"035E\char"200Co\char"030E}.
+
+\subsection{Combining Grapheme Joiner and Zero-width Non-joiner}\hypertarget{cgj}{}
+
+Using Junicode’s combining marks is generally straightforward, but when difficulties arise you should 
+know about two special characters: \unic{U+034F} \textUName{combining grapheme joiner} and \unic{U+200C}
+\textUName{zero-width non-joiner}.
+
+The first of these, \unic{U+034F}, is defined by Unicode as a combining mark. It is invisible, having no outlines
 or advance width, and is normally ignored by software; and yet it is extremely useful, and for some
 applications essential. Its name is somewhat misleading: it is more “non-joiner”
 than “joiner,” being used to prevent normalization of sequences of base glyphs and combining marks. Most 
-(perhaps all) rendering engines, when they encounter a sequence like \textSourceText{a \unic{◌̄} (\unic{U+0304})},
+(perhaps all) rendering engines, when they encounter a sequence like \textex{a + \unic{U+0304} (◌̄)},
 normalize it by substituting a precomposed character that combines the two glyphs of the sequence—in this 
-case, \textex{\unic{U+0101} ā}. This substitution happens before the rendering engine begins to execute 
+case, \textex{\unic{U+0101} (ā)}. This substitution happens before the rendering engine begins to execute 
 the font's OpenType code. Since no ligature in Junicode has the character \textex{ā} as an element, the 
 combining mark \textex{◌̄} prevents the formation of a ligature.
 
 But if you place \unic{U+034F} between the base character and the combining mark
-(\textSourceText{a \unic{U+034F U+0304}}), the sequence is not normalized. It looks the same as the precomposed 
-character, but plain \textex{a} remains in the text, and so ligatures can form. This can be useful when you
-want to place a combining mark over one element of a ligature: the sequence \textSourceText{a
-\unic{U+034F U+0301 U+200D n}}\index{zero width joiner}\footnote{\ For \unic{U+200D} and its uses, see the section
-\hyperlink{zwj}{\textUName{zero width joiner}}.} produces a ligature with combining mark: 
+(\textex{a + \unic{U+034F + U+0304} (◌̄)}), the sequence is not normalized. It looks the same as the 
+precomposed character, but plain \textex{a} remains in the text, and so ligatures can form. This can be 
+useful when you want to place a combining mark over one element of a ligature: the sequence \textex{a +
+\unic{U+034F + U+0301 + U+200D n}}\index{zero width joiner}\footnote{\ For \unic{U+200D} and its uses, see 
+the section \hyperlink{zwj}{\textUName{zero width joiner}}.} produces a ligature with combining mark: 
 \textex{a\char"034F\char"0304\char"200Dn}. Without \unic{U+034F} the ligature cannot form:
 \textex{a\char"0304\char"200Dn}.
 
-\subsection{\textSourceText{cv84} – MUFI combining marks (variants of \unic{U+0304})}\hypertarget{cv84}{}\index{cv84|textbf}
-MUFI encodes a number of combining marks in the PUA (with code points between \unic{E000} and \unic{F8FF}), but when these characters
-are entered directly, they can interfere with searching and accessibility, and some important applications fail to
-position them correctly over their base characters. To avoid these problems, enter \unic{U+0304} (◌̄, \textUName{combining
-macron}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character. This
-collection of marks does not include any Unicode-encoded marks (from the “Combining Diacritical Marks” ranges), as
-these can safely be entered directly. It does include three marks (\textSourceText{cv84[30]},
+The second character, \unic{U+200C}, is similar to \unic{U+034F}, but classified as a formatting 
+character rather than a combining mark. It is typically used to separate elements that might be joined
+(chiefly ligatures),
+making it analogous in function to \unic{U+034F}. But because of their different classifications, the 
+two characters are not interchangeable (though there are situations where either will do).
+This manual will tell you where to use \unic{U+034F} and where to use \unic{U+200C}.
+
+
+\subsection{PUA Workaround 1: \textSourceText{cv84} and \unic{U+0304} (◌̄))}\hypertarget{cv84}{}\index{cv84|textbf}
+
+One way to avoid MUFI’s PUA-encoded combining marks is to enter \unic{U+0304} (◌̄, \textUName{combining
+macron}) and apply \textSourceText{cv84}, with the appropriate index, to both mark and base character.
+In addition to PUA-encoded marks, this method can be used to produce three marks (\textSourceText{cv84[30]},
 \textSourceText{[31]} and \textSourceText{[32]}) that lack MUFI code points but are used to form MUFI
 characters, and three more (\textSourceText{[2]}, \textSourceText{[33]},
 and \textSourceText{[34]}) that have no code points in Unicode or MUFI.
 
 This feature may often appear to have no effect. When this happens, try placing
 \hyperlink{cgj}{\unic{U+034F}}\index{combining grapheme joiner} \textUName{combining grapheme joiner} between the base character
-and the combining mark—for example, the sequence \textSourceText{u \unic{U+034F U+0304}} produces
-\textex{\cvd[1]{84}{u͏̄}}.
+and the combining mark—for example, the sequence \textex{u + \unic{U+034F + U+0304}} produces
+\textex{\cvd[1]{84}{u\char"034F\char"0304}}, but without \unic{U+034F} you get \textex{\cvd[1]{84}{u\char"0304}}.
 
-These marks can sometimes be produced by other \textSourceText{cvNN} features, which may be preferable to
-\textSourceText{cv84} as providing more suitable fallbacks for applications that do not support Character Variant
+These marks can sometimes be produced by other \textSourceText{cvNN} features 
+(listed in other sections, below), which may be preferable to
+\textSourceText{cv84} as providing more suitable fallbacks for 
+applications that do not support Character Variant
 (\textSourceText{cvNN}) features.
 
 For some marks with PUA code points, users may find it easier to use 
 \hyperlink{ss10}{entities}\index{ss10} than this feature.
 
-These marks are not affected by most other features. This is to preserve flexibility, given the rule that the feature
+Marks produced by this method are not affected by most other features.
+This is to preserve flexibility, given the rule that the feature
 that produces them must be applied to both the mark and the base character. For example, if you had to
-apply \textSourceText{smcp}\index{smcp} “Small Caps” to \textSourceText{U+1DE8} ◌͏ᷨ to get
-\textSourceText{cv84[11]} \cvd[10]{84}{◌͏̄}, it would be impossible to produce the sequence
+apply \textSourceText{smcp}\index{smcp} “Small Caps” to \textex{\unic{U+1DE8} (◌͏ᷨ)} to get
+\textex{\cvd[10]{84}{◌͏̄}}, it would be impossible to produce the sequence
 \textex{\cvd[10]{84}{na͏{\char"34F\char"304}a}}
 (or the reverse case \textex{\textsc{na{\char"1DE8}a}})
 with the diacritic properly positioned.
+
+These are the indices for this feature (the default is 1):
 
 \begin{multicols}{6}
 \color{BrickRed}1\hfill=\hfill\cvd{84}{◌͏̄}
@@ -1620,37 +1663,14 @@ with the diacritic properly positioned.
 39\hfill=\hfill\cvd[38]{84}{◌͏̄}
 \end{multicols}\index{cv84}
 
-\subsection{\textSourceText{ss11} – Zero-width to spacing mark}\index{ss11|textbf}
-Converts combining marks (including zero-width abbreviations) to their spacing equivalents.
-At present, the conversion most likely to be of interest to medievalists is of \unic{U+035B}
-combining zigzag, ◌͛  to {\addfontfeature{StylisticSet=11}(◌͛)}.
-
-\subsection{\textSourceText{cv67} – Variant of combining r rotunda (U+1DE3)}
-1=\cvd{67}{◌ᷣ}. The spacing zigzag abbreviation that was available via \textSourceText{cv67} is now available 
-via \textSourceText{s11}. The \textit{enim} abbreviation that was formerly available here can be accessed via 
-\textbf{n} + \textSourceText{salt[4]} or N with \textSourceText{salt[3]}.
-
-\subsection{\textSourceText{cv81} – Variants of ◌͛ (\unic{U+035B}, combining
-zigzag above)}\index{cv81|textbf}
-1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
-marks, e.g. \textex{b͛ f͛ d͛}. If \textSourceText{calt}\index{calt} “Contextual Alternates” is enabled (as it is by
-default in most apps), variant forms of \textSourceText{cv81[2]} will be used with several letters, e.g.
-\textex{\cvd[1]{81}{d͛ \ f͛ \ k͛}}. Enable \textSourceText{case}\index{case} for forms that harmonize with capitals
-(\textex{\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}),
-\textSourceText{smcp}\index{smcp} for forms that harmonize with small caps
-(\textex{\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}}).
-
-\subsection{\textSourceText{ss10} – Character Entities for Combining Marks}\hypertarget{ss10}{}\index{ss10|textbf}
+\subsection{PUA Workaround 2: \textSourceText{ss10} and Character Entities}\hypertarget{ss10}{}\index{ss10|textbf}
 Instead of \textSourceText{\hyperlink{cv84}{cv84}} for representing non-Unicode combining marks, some users may
 wish to use XML/HTML-style entities. When \textSourceText{ss10} is turned on (preferably for the entire
-text), these entities appear as combining marks and are correctly positioned over base characters.
+document), these entities appear as combining marks and are correctly positioned over base characters.
 For example, the letter \textex{e} followed by
 \textex{\&{\textcompwordmark}\_eogo;} will yield \textex{e\&\_eogo;}. An advantage of entities is that
-they are (unlike the PUA code points or the indexes of \textSourceText{cv84})\index{cv84} mnemonic and thus easy to use.
-A disadvantage is that
+they are mnemonic and thus easy to use. A disadvantage is that
 searches cannot ignore combining marks entered by this method as they can using the \textSourceText{cv84} method.
-(Every method of entering non-Unicode combining marks has disadvantages: users should weigh these, choose a method,
-and stick with it.)
 
 If you use any of these entities in a work intended for print publication, you should call your publisher’s
 attention to them, since they will likely have their own method of representing them.
@@ -1740,8 +1760,128 @@ attention to them, since they will likely have their own method of representing 
 \&\_{\textcompwordmark}thorn;\hfill→\hfill\textstyleEntityRef{◌\&\_thorn;}
 \end{multicols}
 
-\noindent For another function of Stylistic Set 10,\index{ss10} see
-\hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
+
+\subsection{PUA Workaround 3: Unicode Tags}
+
+In Junicode (not in other fonts), Unicode tags provide a non-modal method for entering characters 
+that would otherwise require that an OpenType feature be turned on. Junicode’s tag system 
+is more fully described in \hyperlink{tagchapter}{Chapter 6, Entering Characters with Tags}.
+Search out the combining mark you are interested in by its code point or its description.
+
+\subsection{PUA Workaround 4: Sequences for complex marks}
+
+This method is the most intuitive of our four workarounds because it echoes the way ligatures 
+are formed and combining marks are added to base characters. In addition, the method has few 
+(if any) disadvantages. Unfortunately, it applies only to a limited number of marks (listed below).
+
+The method is to enter a sequence of combining marks,
+which your application's shaping engine will resolve to a single complex combining mark. For example, the mark
+\textex{◌\char"0363\char"1DE1} has the PUA code point \unic{U+F03A}, but entering it via that code point will cause the mark to be
+badly positioned, e.g. \textex{ı}. If you enter the mark as a sequence of the two Unicode characters it is made from,
+\textex{\unic{U+0364} (\textex{◌\char"0363}) + \unic{U+1DE1} (\textex{◌ᷡ})}, the mark will appear correctly centered on its base:
+\textex{ı\char"0363\char"1DE1}.
+
+This method does not require that any OpenType features be turned on: Junicode’s
+\hyperlink{req}{required features} handle 
+everything in the background. However, complications can occur. For example, if you enter the sequence 
+\textex{e + \unic{U+0364} (◌\char"0364) + \unic{U+0328} (◌\char"0328)}, wanting a combining \textex{e} with ogonek over the base 
+letter \textex{e}, your application’s shaping engine may become confused about whether the ogonek belongs with the 
+base \textex{e} or the combining \textex{e}, in which case the outcome will be incorrect: \textex{e\char"0364\char"0328}. 
+But if you place \unic{U+200C} \textUName{zero-width 
+non-joiner} (for a web page, use entity \textSourceText{\&zwnj;}) immediately after the 
+base character, the ambiguity will be resolved: 
+\textex{e\char"200C\char"0364\char"0328}. For the opposite case, where the shaping engine places the
+ogonek on the combining mark when you want it on the base character, place \unic{U+200C}
+between the two combining marks (signalling that they should not be put together): \textex{v\char"0364\char"200C\char"0328},
+not \textex{v\char"0364\char"0328}.
+
+The following table shows all of Junicode’s complex combining marks that can be produced in this way and 
+the sequences required to produce them:
+
+\begin{center}
+  \tablefirsthead{\hline
+  \bfseries PUA &\
+  \bfseries Char &
+  \centering\arraybslash{\bfseries Character Sequence}\\\hline}
+  \tablehead{\hline
+  \bfseries PUA &
+  \bfseries Char &
+  \centering\arraybslash{\bfseries Character Sequence}\\\hline}
+  \tabletail{\hline}
+  \tablelasttail{\hline}
+  \begin{supertabular}{| c | c | p{2.9212599in} |}
+    %
+    \bluerow\color{black}\unic{F032} & ◌\char"0366\char"0338 &
+    \unic{U+0366} (◌\char"0366) + \unic{U+0338} (◌\char"0338)\\
+    %
+    \color{black}\unic{F036} & ◌\char"0363\char"1DE0 &
+    \unic{U+0363} (◌\char"0363) + \unic{U+1DE0} (◌\char"1DE0)\\
+    %
+    \bluerow\color{black}\unic{F038} & ◌\char"0363\char"036C &
+    \unic{U+0363} (◌\char"0363) + \unic{U+036C} (◌\char"036C)\\
+    %
+    \color{black}\unic{F03A} & ◌\char"0363\char"1DE1 &
+    \unic{U+0363} (◌\char"0363) + \unic{U+1DE1} (◌\char"1DE1)\\
+    %
+    \bluerow\color{black}\unic{F03E} & ◌\char"0366\char"1DE3 &
+    \unic{U+0366} (◌\char"0366) + \unic{U+1DE3} (◌\char"1DE3)\\
+    %
+    \color{black}\unic{F03F} & ◌\char"0366\char"1DE3\char"0338 &
+    \unic{U+0366} (◌\char"0366) + \unic{U+1DE3} (◌\char"1DE3) + \unic{U+0338} (◌\char"0338) \\
+    %
+    \bluerow\color{black}\unic{F040} & \char"25CC\char"1DE3\char"0338 &
+    \unic{U+1DE3} (◌\char"1DE3) + \unic{U+0338} (◌\char"0338)\\
+    %
+    \color{black}\unic{F0C8} & ◌\char"035B\char"0301 &
+    \unic{U+035B} (◌\char"035B) + \unic{U+0301} (◌\char"0301)\\
+    %
+    \bluerow\color{black}\unic{F0C9} & ◌\char"0366\char"1DCE &
+    \unic{U+0366} (◌\char"0366) + \unic{U+1DCE} (◌\char"1DCE)\\
+    %
+    \color{black}\unic{F0CA} & ◌\char"0363\char"0301 &
+    \unic{U+0363} (◌\char"0363) + \unic{U+0301} (◌\char"0301) \\
+    %
+    \bluerow\color{black}\unic{F0CB} & ◌\char"1DD4\char"0301 &
+    \unic{U+1DD4} (◌\char"1DD4) + \unic{U+0301} (◌\char"0301) \\
+    %
+    \color{black}\unic{F0CC} & ◌\char"0363\char"0304 &
+    \unic{U+0363} (◌\char"0363) + \unic{U+0304} (◌\char"0304) \\
+    %
+    \bluerow\color{black}\unic{F0CD} & ◌\char"0364\char"0301 &
+    \unic{U+0364} (◌\char"0364) + \unic{U+0301} (◌\char"0301) \\
+    %
+    \color{black}\unic{F130} & ◌\char"0363\char"1DE2 &
+    \unic{U+0363} (◌\char"0363) + \unic{U+1DE2} (◌\char"1DE2)\\
+    %
+    \bluerow\color{black}\unic{F135} & ◌\char"0364\char"0328 &
+    \unic{U+0364} (◌\char"0364) + \unic{U+0328} (◌\char"0328) \\
+    %
+    \color{black}\unic{F136} & ◌\char"0364\char"0304 &
+    \unic{U+0364} (◌\char"0364) + \unic{U+0304} (◌\char"0304) \\
+    %
+    \bluerow\color{black}\unic{F13E} & ◌\char"0366\char"0328 &
+    \unic{U+0366} (◌\char"0366) + \unic{U+0328} (◌\char"0328)\\
+    %
+    \color{black}\unic{F1C0} & ◌\char"0305\char"0307 &
+    \unic{U+0305} (◌\char"0305) + \unic{U+0307} (◌\char"0307)\\
+    %
+    \bluerow\color{black}\unic{F1C1} & ◌\char"1DD3\char"0304 &
+    \unic{U+1DD3} (◌\char"1DD3) + \unic{U+0304} (◌\char"0304) \\
+    %
+    \color{black}\unic{10012F} & ◌\char"1DE2\char"0307 &
+    \unic{U+1DE2} (◌\char"1DE2) + \unic{U+0307} (◌\char"0307)\\
+  \end{supertabular}
+\end{center}
+
+Other marks can be stacked on top of all of these. Indeed, this is true of combining 
+marks generally, e.g. \textex{e\char"200C\char"0364\char"0328\char"0301}, \textex{o\char"1DE2\char"0307},
+\textex{u\char"200C\char"0363\char"0301}. Some of the more common combining marks automatically become 
+smaller when stacked on top of other marks.
+
+\subsection{\textSourceText{ss11} – Zero-width to spacing mark}\index{ss11|textbf}
+Converts combining marks (including zero-width abbreviations) to their spacing equivalents.
+At present, the conversion most likely to be of interest to medievalists is of \unic{U+035B}
+\textUName{combining zigzag} (◌͛ ) to {\addfontfeature{StylisticSet=11}◌͛}.
 
 \subsection{\textSourceText{ss20} – Low Diacritics}
 The\index{ss20|textbf} MUFI recommendation includes a number of precomposed characters consisting of
@@ -1759,8 +1899,25 @@ that accommodate the combining mark will be substituted for the normal base char
 other base characters). Examples:
 \textex{\addfontfeature{StylisticSet=20}bͦ ꝺᷦ \cvd[14]{84}{h̄} kͤ {\th}ͭ ðᷢ}.
 
+\subsection{\textSourceText{cv67} – Variant of combining r rotunda (U+1DE3)}
+1=\cvd{67}{◌ᷣ}. The spacing zigzag abbreviation that was available via \textSourceText{cv67} is now available 
+via \textSourceText{s11}. The \textit{enim} abbreviation that was formerly available here can be accessed via 
+\textbf{n} + \textSourceText{salt[4]} or N with \textSourceText{salt[3]}.
+
+\subsection{\textSourceText{cv81} – Variants of ◌͛ (\unic{U+035B}, combining
+zigzag above)}\index{cv81|textbf}
+1=\cvd{81}{◌͛}, 2=\cvd[1]{81}{◌͛}, 3=\cvd[2]{81}{◌͛}. Positioning of the zigzag can differ from that of other combining
+marks, e.g. \textex{b͛ f͛ d͛}. If \textSourceText{calt}\index{calt} “Contextual Alternates” is enabled (as it is by
+default in most apps), variant forms of \textSourceText{cv81[2]} will be used with several letters, e.g.
+\textex{\cvd[1]{81}{d͛ \ f͛ \ k͛}}. Enable \textSourceText{case}\index{case} for forms that harmonize with capitals
+(\textex{\addfontfeature{Letters=Uppercase}\cvd[1]{81}{A͛ B͛ C͛ D͛}}),
+\textSourceText{smcp}\index{smcp} for forms that harmonize with small caps
+(\textex{\textsc{\cvd[1]{81}{e͛ f͛ g͛ h͛}}}).
+
 \subsection{\textSourceText{cv85} – Variant of ◌ᷓ (U+1DD3, combining open a)}
-1=\cvd{85}{◌ᷓ}.\index{cv85|textbf}
+1=\cvd{85}{◌ᷓ}.\index{cv85|textbf} This feature is deprecated as of version 2.225; users should instead 
+enter the sequence \textex{◌ᷓ + ◌̄}. In some future version of Junicode, this feature will be used 
+for another purpose.
 
 \subsection{\textSourceText{cv86} – Variant of ◌ᷘ (\unic{U+1DD8}, combining insular
 d)}
@@ -1775,9 +1932,11 @@ d)}
 
 \subsection{\textSourceText{cv89} – Variant of ◌̅ (\unic{U+0305},
 combining overline)}\index{cv89|textbf}
-1=\cvd{89}{◌̅}.
+1=\cvd{89}{◌̅}. This feature is deprecated as of version 2.225; users should instead 
+enter the sequence \textex{\unic{U+0305} (◌\char"0305) + \unic{U+0307} ◌\char"0307}.
+In some future version of Junicode, this feature will be used for another purpose.
 
-\subsection{\textSourceText{cv}\textSourceText{90} – Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}\index{cv90|textbf}
+\subsection{\textSourceText{cv90} – Variants of ◌͞◌ (\unic{U+035E}, combining double macron)}\index{cv90|textbf}
 1=\cvd{90}{◌͞◌}, 2=\cvd[1]{90}{◌͞◌}.
 
 \subsection{\textSourceText{cv92} – Variant of combining breve below (\unic{U+032E})}\index{cv92|textbf}
@@ -1866,7 +2025,7 @@ F2EE, F2EF}, pound signs from various locales.
 
 \section{Ornaments}
 \subsection{\textSourceText{ornm} – Ornaments}\hypertarget{ornm}{}\index{ornm|textbf}
-Produces ornaments (fleurons) in either of two ways: as an indexed variant of the bullet character (\unic{U+2022}) or as
+Produces ornaments (fleurons) in either of two ways: as indexed variants of the bullet character (\unic{U+2022}) or as
 variants of a-z, A-C:
 
 \begin{multicols}{4}
@@ -1952,253 +2111,3 @@ other features, kerning, and more—include \textSourceText{ccmp} (Glyph Composi
 Positioning). In MS Word these features have to be explicitly enabled on the Advanced tab of the Font dialog (Ctrl-D or
 Cmd-D: enable Kerning, Standard Ligatures, and Contextual Alternates, and the others will be enabled automatically),
 but in most other applications they are enabled by default.
-
-
-% \chapter{Non-MUFI Code Points}\hypertarget{nonmufi}{}
-
-% Characters in Junicode that do not have Unicode code points should be accessed via OpenType
-% features whenever possible. MUFI/PUA code points should be used only in applications that do not support OpenType, or
-% that support it only partially (for example, MS Word). For certain characters that lack either Unicode or MUFI code
-% points, code points in the Supplementary Private Use Area-A (plane 15) are available.
-
-% \begin{multicols}{4}
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0000\hfill\cvd{53}{Ą}}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0001\hfill{}󰀁}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0002\hfill{}󰀂}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0003\hfill{}󰀃}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0004\hfill{}󰀄}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0005\hfill{}󰀅}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0006\hfill{}󰀆}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0007\hfill{}󰀇}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0008\hfill{}󰀈}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0009\hfill{}󰀉}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F000A\hfill{}󰀊}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F000B\hfill{}󰀋}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F000C\hfill{}󰀌}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F000D\hfill{}󰀍}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F000E\hfill{}󰀎}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F000F\hfill{}󰀏}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0010\hfill{}󰀐}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0011\hfill{}󰀑}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0012\hfill{}󰀒}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0013\hfill{}󰀓}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0014\hfill{}󰀔}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0015\hfill{}󰀕}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0016\hfill{}󰀖}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0017\hfill{}󰀗}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0018\hfill{}󰀘}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0019\hfill{}󰀙}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F001A\hfill{}󰀚}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F001B\hfill{}󰀛}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F001C\hfill{}󰀜}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F001D\hfill{}󰀝}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F001E\hfill{}󰀞}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F001F\hfill{}󰀟}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0020\hfill\char"0F0020}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0021\hfill\char"0F0021}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0030\hfill\char"0F0030}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0031\hfill\char"0F0031}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0032\hfill\char"0F0032}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0033\hfill\char"0F0033}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0034\hfill\char"0F0034}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0035\hfill\char"0F0035}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0036\hfill\char"0F0036}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0037\hfill\char"0F0037}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0038\hfill\char"0F0038}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0039\hfill\char"0F0039}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F003A\hfill\char"0F003A}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F003B\hfill\char"0F003B}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F003C\hfill\char"0F003C}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F003D\hfill\char"0F003D}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F003E\hfill\char"0F003E}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F003F\hfill\char"0F003F}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0040\hfill\char"0F0040}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0041\hfill\char"0F0041}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0042\hfill\char"0F0042}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0043\hfill\char"0F0043}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0044\hfill\char"0F0044}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0045\hfill\char"0F0045}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0046\hfill\char"0F0046}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0047\hfill\char"0F0047}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0048\hfill\char"0F0048}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0049\hfill\char"0F0049}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F004A\hfill\char"0F004A}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F004B\hfill\char"0F004B}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F004C\hfill\char"0F004C}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F004D\hfill\char"0F004D}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F004E\hfill\char"0F004E}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F004F\hfill\char"0F004F}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0050\hfill\char"0F0050}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0051\hfill\char"0F0051}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0052\hfill\char"0F0052}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0053\hfill\char"0F0053}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0054\hfill\char"0F0054}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0055\hfill\char"0F0055}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0056\hfill\char"0F0056}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0057\hfill\char"0F0057}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0058\hfill\char"0F0058}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F0059\hfill\char"0F0059}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F005A\hfill\char"0F005A}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F005B\hfill\char"0F005B}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F005C\hfill\char"0F005C}
-
-% {\color[rgb]{0.13333334,0.29411766,0.07058824}
-% U+F005D\hfill\char"0F005D}
-% \end{multicols}

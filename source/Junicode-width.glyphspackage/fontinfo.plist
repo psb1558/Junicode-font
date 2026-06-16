@@ -1785,7 +1785,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2026-05-20 14:31:15 +0000";
+date = "2026-06-16 01:35:31 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2412,7 +2412,8 @@ lookup ccmp_rhotic {
 } ccmp_rhotic;
 
 lookup precomposed_marks {
-  lookupflag UseMarkFilteringSet [ acomb ecomb Ncomb ncomb ocomb Rcomb rcomb ogonekcomb slashlongcomb rrotundacomb ogonekabovecomb ] ; 
+  lookupflag UseMarkFilteringSet [ acomb ecomb Ncomb ncomb ocomb Rcomb rcomb ogonekcomb
+    slashlongcomb rrotundacomb ogonekabovecomb ] ; 
   sub rrotundacomb slashlongcomb by rumrotundacomb ;
   sub slashlongcomb rrotundacomb by rumrotundacomb ;
   sub ocomb ogonekcomb by oogonekcomb ;
@@ -2446,16 +2447,19 @@ lookup narrow_macron {
 } narrow_macron ;
 
 lookup mkmk_subs {
+  lookupflag UseMarkFilteringSet [ @combining_above graphemejoinercomb zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
   sub @combining_above graphemejoinercomb [ zigzagabovecomb ogonekabovecomb ]' by [ zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
   sub @combining_above [ zigzagabovecomb ogonekabovecomb ]' by [ zigzagabovecomb.mkmk ogonekabovecomb.mkmk ] ;
 # graphemejoinercomb
 } mkmk_subs ;
 
 lookup UpperCaseDiacritics {
+  lookupflag UseMarkFilteringSet [ @LowercaseMarks @UppercaseMarks ] ;
   sub @UppercaseWithTopAnchor @LowercaseMarks' by @UppercaseMarks ;
 } UpperCaseDiacritics ;
 
 lookup Oddball_ligs {
+  lookupflag UseMarkFilteringSet [ tildeoverlaycomb ] ;
   sub b tildeoverlaycomb b tildeoverlaycomb by b_tildeoverlaycomb_b_tildeoverlaycomb ;
   sub d tildeoverlaycomb d tildeoverlaycomb by d_tildeoverlaycomb_d_tildeoverlaycomb ;
   sub f tildeoverlaycomb f tildeoverlaycomb by f_tildeoverlaycomb_f_tildeoverlaycomb ;
@@ -2463,6 +2467,7 @@ lookup Oddball_ligs {
 } Oddball_ligs ;
 
 lookup viet_mark_combos {
+  lookupflag UseMarkFilteringSet [ brevecomb gravecomb acutecomb hookabovecomb circumflexcomb tildecomb ] ;
   sub brevecomb gravecomb by brevegravecomb ;
   sub brevecomb acutecomb by breveacutecomb ;
   sub brevecomb hookabovecomb by brevehookcomb ;
@@ -2473,11 +2478,13 @@ lookup viet_mark_combos {
 } viet_mark_combos ;
 
 lookup ogonekacute {
+  lookupflag UseMarkFilteringSet [ ogonekabovecomb acutecomb ] ;
   sub oslash ogonekabovecomb acutecomb by u00F81DCE0301 ;
   sub oslashacute ogonekabovecomb by u00F81DCE0301 ;
 } ogonekacute ;
 
 lookup ogonekdot {
+  lookupflag UseMarkFilteringSet [ ogonekcomb dotaccentcomb acutecomb dotaccentcomb.case acutecomb.case ogonekabovecomb ogonekabovecomb.case graphemejoinercomb dotbelowcomb ] ;
 # 4-part
 # eogonek + dotaccent + acute
  sub e ogonekcomb dotaccentcomb acutecomb by eogonekdotacute ;
@@ -2561,12 +2568,14 @@ lookup ogonekdot {
 } ogonekdot ;
 
 lookup underdots {
+  lookupflag UseMarkFilteringSet [ dotbelowcomb ] ;
   sub G dotbelowcomb by G.dotbelow ;
   sub g dotbelowcomb by uni00670323 ;
   sub ezh dotbelowcomb by yoghflatdot ;
 } underdots ;
 
 lookup overlines {
+lookupflag UseMarkFilteringSet [ overlinecomb strokelongcomb ] ;
 sub C overlinecomb by C.highoverline ;
 sub Onehundredreversed-roman overlinecomb by Onehundredreversed-roman.highoverline ;
 sub D overlinecomb by D.highoverline ;
@@ -2601,6 +2610,9 @@ sub thorn.loclENG strokelongcomb by thorn.medhighoverline.loclENG ;
 } overlines ;
 
 lookup diacritics {
+  lookupflag UseMarkFilteringSet [ ogonekcomb tildeoverlaycomb strokeshortcomb slashshortcomb 
+    acutecomb zigzagabovecomb acomb aecomb ecomb Rcomb ocomb macroncomb ogonekabovecomb 
+    ogonekabovecomb.mkmk graphemejoinercomb dotaccentcomb slashlongcomb ] ;
   sub emod ogonekcomb by eogonekmod ;
   sub H tildeoverlaycomb by Htildeoverlay ;
   sub Q strokeshortcomb by Qstrokethroughdescender ;
@@ -2628,46 +2640,6 @@ lookup diacritics {
   sub uni027C strokeshortcomb by r.alt1 ;
   sub uni028F strokeshortcomb by currency.alt03 ;
   sub uni1D05 slashlongcomb by currency.alt04 ;
-#  sub ogonekabovecomb acutecomb by ogonekabovecombacutecomb ;
-# But we don't really want to produce PUA characters here. Use rlig instead?
-# sub b uni0364 by uniF056 ;
-# sub b dotlessicomb by uniF057 ;
-# sub b uni0366 by uniF059 ;
-# sub b uni036C by uniF05A ;
-# sub b uni036E by uniF05D ;
-# sub h uni0363 by uniF065 ;
-# sub h uni0364 by uniF066 ;
-# sub h dotlessicomb by uniF067 ;
-# Forms with muncialcomb require special handling
-# sub h muncialcomb by hmuncial ;
-# sub h uni0366 by uniF069 ;
-# sub h uni036C by uniF06A ;
-# sub h uni036E by uniF06D ;
-# sub h uni036D by uniF06E ;
-# sub k uni0363 by uniF075 ;
-# sub k uni0364 by uniF076 ;
-# sub k dotlessicomb by uniF077 ;
-# sub k uni0366 by uniF079 ;
-# sub k uni036C by uniF07A ;
-# sub k Rcomb by uniF07B ;
-# sub k uni036E by uniF07D ;
-# sub k uni1DE6 by uniF07F ;
-# sub thorn uni0364 by uniF086 ;
-# sub thorn dotlessicomb by uniF087 ;
-# sub thorn uni0366 by uniF089 ;
-# sub thorn uni036C by uniF08A ;
-# sub thorn uni036D by uniF08E ;
-# sub dinsular uni0364 by dinsulare ;
-# sub dinsular dotlessicomb by uniF097 ;
-# sub dinsular uni0366 by dinsularo ;
-# sub dinsular uni036C by dinsularr ;
-# sub dinsular Rcomb by dinsularR ;
-# sub dinsular uni1DE6 by dinsularz ;
-#sub eth dotlessicomb by ethdotlessicomb ;
-# sub eth muncialcomb by ethmuncial ;
-# sub eth uni036C by uniF0AA ;
-# sub eth Rcomb by uniF0AB ;
-# sub eth uni036D by uniF0AE ;
 } diacritics ;
 
 lookup vtagentities {
@@ -2732,6 +2704,8 @@ lookup grek_tonosCap {
 } grek_tonosCap;
 
 lookup grek_ComplexDiacritics {
+  lookupflag UseMarkFilteringSet [ commaabovecomb.loclELL gravecomb.loclELL acutecomb.loclELL
+    perispomenicomb commareversedabovecomb.loclELL dieresiscomb.loclELL ] ;
 # script grek;
   sub commaabovecomb.loclELL gravecomb.loclELL by commaabovecomb_gravecomb ;
   sub commaabovecomb.loclELL acutecomb.loclELL by commaabovecomb_acutecomb.loclELL ;
@@ -2746,6 +2720,11 @@ lookup grek_ComplexDiacritics {
 } grek_ComplexDiacritics ;
 
 lookup grek_Composed {
+  lookupflag UseMarkFilteringSet [ commaabovecomb.loclELL commareversedabovecomb.loclELL
+    commaabovecomb_gravecomb commaabovecomb_acutecomb.loclELL commareversedabovecomb_acutecomb
+    commaabovecomb_perispomenicomb commareversedabovecomb_perispomenicomb
+    commareversedabovecomb_perispomenicomb ypogegrammenicomb macroncomb brevecomb
+    gravecomb.loclELL ] ;
 
 # Alpha:
 
@@ -10640,6 +10619,7 @@ sub lhighstroke zerowidthjoiner lhighstroke by lhighstroke_lhighstroke.alt ;
 sub lhighstroke.alt zerowidthjoiner lhighstroke.alt by lhighstroke_lhighstroke.alt ;
 sub sinsular zerowidthjoiner sinsular by sinsular_sinsular.hlig ;
 sub t.insular zerowidthjoiner t.insular by tinsular_tinsular.hlig ;
+sub tinsular zerowidthjoiner tinsular by tinsular_tinsular.hlig ;
 sub u zerowidthjoiner e by u_e.hlig ;
 sub u zerowidthjoiner u by u_u.hlig ;
 sub b zerowidthjoiner g by b_g.hlig ;
@@ -19995,6 +19975,12 @@ uni02DE = -16;
 "@MMK_R_KO_f" = -1;
 "@MMK_R_j.pcap" = 70;
 };
+"@MMK_L_cen" = {
+"@MMK_R_jeran" = -100;
+"@MMK_R_ossOLong" = -100;
+"@MMK_R_sigel" = -100;
+"@MMK_R_tyr" = -130;
+};
 "@MMK_L_e.alt4" = {
 "@MMK_R_KO_a" = -120;
 "@MMK_R_KO_c" = -150;
@@ -20027,6 +20013,13 @@ uni02DE = -16;
 "@MMK_R_seven.osf" = -10;
 "@MMK_R_three.osf" = -10;
 "@MMK_R_two.osf" = -15;
+};
+"@MMK_L_feoh" = {
+"@MMK_R_cen" = -180;
+"@MMK_R_eoh" = -100;
+"@MMK_R_gyfu" = -60;
+"@MMK_R_ossOLong" = -100;
+"@MMK_R_tyr" = -80;
 };
 "@MMK_L_five.lf" = {
 "@MMK_R_two.lf" = -20;
@@ -20097,6 +20090,9 @@ angleright = 90;
 "@MMK_R_KO_parenright" = 50;
 "@MMK_R_angleright" = 50;
 };
+"@MMK_L_rad" = {
+"@MMK_R_ossOLong" = -50;
+};
 "@MMK_L_seven.lf" = {
 "@MMK_R_KO_endash" = -30;
 "@MMK_R_KO_hyphen" = -70;
@@ -20112,6 +20108,9 @@ angleright = 90;
 "@MMK_R_five.osf" = -20;
 "@MMK_R_four.osf" = -50;
 };
+"@MMK_L_sigel" = {
+"@MMK_R_eolh" = -100;
+};
 "@MMK_L_six.lf" = {
 "@MMK_R_one.lf" = -10;
 "@MMK_R_two.lf" = -20;
@@ -20124,6 +20123,12 @@ angleright = 90;
 "@MMK_R_seven.osf" = -20;
 "@MMK_R_three.osf" = -30;
 "@MMK_R_two.osf" = -20;
+};
+"@MMK_L_thorn-runic" = {
+"@MMK_R_cen" = -100;
+"@MMK_R_ethel" = -30;
+"@MMK_R_gyfu" = -80;
+"@MMK_R_tyr" = -80;
 };
 "@MMK_L_three.lf" = {
 "@MMK_R_six.lf" = 10;
@@ -20150,6 +20155,14 @@ angleright = 90;
 "@MMK_R_seven.osf" = -50;
 "@MMK_R_three.osf" = -20;
 "@MMK_R_zero.osf" = -30;
+};
+"@MMK_L_uruz" = {
+"@MMK_R_jeran" = -100;
+"@MMK_R_madr" = -160;
+"@MMK_R_ossOLong" = -100;
+"@MMK_R_q-runic" = -100;
+"@MMK_R_sigel" = -60;
+"@MMK_R_tyr" = -130;
 };
 "@MMK_L_zero.osf" = {
 "@MMK_R_KO_quoteright" = -1;
@@ -64476,5 +64489,5 @@ type = unicode;
 };
 };
 versionMajor = 2;
-versionMinor = 224;
+versionMinor = 225;
 }

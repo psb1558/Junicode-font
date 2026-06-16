@@ -4600,29 +4600,9 @@ F031:
   entity:
     base: '&_jdotl;'
 F032:
+  base: "\u0366\u0338"
   desc: COMBINING LATIN LETTER SMALL O WITH STROKE
   mntity: oslashsup
-  var:
-    mark:
-      base: "\u034F\u0304"
-      otag:
-        tags:
-        - index: 22
-          name: cv84
-      utag:
-        tags:
-        - name: '2'
-        - name: '2'
-      entity:
-        base: '&_oslash;'
-    other:
-      base: "\u0366"
-      utag:
-        tags:
-        - name: s
-        - name: l
-      entity:
-        base: '&_oslash;'
 F033:
   base: "\u034F\u0304"
   desc: COMBINING LATIN SMALL LETTER Q
@@ -4639,42 +4619,17 @@ F033:
   entity:
     base: '&_q;'
 F036:
-  base: "\u034F\u0304"
+  base: "\u0363\u1DE0"
   desc: COMBINING LATIN SMALL LIGATURE AN
   mntity: anligsup
-  note: I can't find a suitable base character.
-  otag:
-    tags:
-    - index: 7
-      name: cv84
-  entity:
-    base: '&_an;'
 F038:
-  base: "\u034F\u0304"
+  base: "\u0363\u036C"
   desc: COMBINING LATIN SMALL LIGATURE AR
   mntity: arligsup
-  note: I can't find a suitable base character.
-  otag:
-    tags:
-    - index: 9
-      name: cv84
-  entity:
-    base: '&_ar;'
 F03A:
-  base: "\u034F\u0304"
+  base: "\u0363\u1DE1"
   desc: COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL N
   mntity: anscapligsup
-  note: I can't find a suitable base character.
-  otag:
-    tags:
-    - index: 8
-      name: cv84
-  utag:
-    tags:
-    - name: '0'
-    - name: '8'
-  entity:
-    base: '&_ansc;'
 F03D:
   base: "\u034F\u0304"
   desc: COMBINING LATIN SMALL LETTER THORN
@@ -4691,63 +4646,17 @@ F03D:
   entity:
     base: '&_thorn;'
 F03E:
-  base: "\u034F\u0304"
+  base: "\u0366\u1DE3"
   desc: COMBINING LATIN SMALL LETTER O R ROTUNDA
   mntity: orrotsup
-  note: I can't find a suitable base character.
-  otag:
-    tags:
-    - index: 28
-      name: cv84
-  utag:
-    tags:
-    - name: '2'
-    - name: '8'
-  entity:
-    base: '&_orr;'
 F03F:
-  base: "\u034F\u0304"
+  base: "\u0366\u1DE3\u0338"
   desc: COMBINING LATIN SMALL LETTER O RUM
   mntity: orumsup
-  note: I can't find a suitable base character.
-  otag:
-    tags:
-    - index: 29
-      name: cv84
-  utag:
-    tags:
-    - name: '2'
-    - name: '9'
-  entity:
-    base: '&_oru;'
 F040:
+  base: "\u1DE3\u0338"
   desc: COMBINING LATIN SMALL LETTER RUM
   mntity: rumsup
-  var:
-    mark:
-      base: "\u034F\u0304"
-      otag:
-        tags:
-        - index: 24
-          name: cv84
-      utag:
-        tags:
-        - name: '2'
-        - name: '4'
-      entity:
-        base: '&_ru;'
-    other:
-      base: "\u1DE3"
-      index: 1
-      otag:
-        tags:
-        - name: cv67
-      utag:
-        tags:
-        - name: r
-        - name: m
-      entity:
-        base: '&_ru;'
 F053:
   base: "c\u0304"
   desc: LATIN SMALL LETTER C WITH MACRON
@@ -5774,7 +5683,7 @@ F0C8:
   desc: COMBINING ZIGZAG AND ACUTE ABOVE
   mntity: eracute
 F0C9:
-  base: "\u0366\u034F\u1DCE"
+  base: "\u0366\u1DCE"
   desc: COMBINING LATIN SMALL LETTER O WITH CURL
   mntity: ocurlsup
 F0CA:
@@ -6080,44 +5989,13 @@ F128:
   mntity: sclose
   note: Use U+A7D9 instead.
 F130:
-  base: "\u034F\u0304"
+  base: "\0363\u1DE2"
   desc: COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL R
   mntity: arscapligsup
-  note: I can't find a suitable base character.
-  otag:
-    tags:
-    - name: cv84
-      index: 10
-  utag:
-    tags:
-    - name: "1"
-    - name: "0"
-  entity:
-    base: "&_arsc;"
 F135:
+  base: "\u200C\u0364\u0328"
   desc: COMBINING LATIN SMALL LETTER E WITH OGONEK
   mntity: eogonsup
-  var:
-    mark:
-      base: "\u034F\u0304"
-      otag:
-        tags:
-        - index: 14
-          name: cv84
-      utag:
-        tags:
-        - name: '1'
-        - name: '4'
-      entity:
-        base: '&_eogo;'
-    other:
-      base: "\u0364"
-      utag:
-        tags:
-        - name: o
-        - name: g
-      entity:
-        base: '&_eogo;'
 F136:
   desc: COMBINING LATIN SMALL LETTER E WITH MACRON
   mntity: emacrsup
@@ -6155,29 +6033,9 @@ F13A:
     - name: s
     - name: q
 F13E:
+  base: "\u200C\u0366\u0328"
   desc: COMBINING LATIN SMALL LETTER O WITH OGONEK
   mntity: oogonsup
-  var:
-    mark:
-      base: "\u034F\u0304"
-      otag:
-        tags:
-        - index: 21
-          name: cv84
-      utag:
-        tags:
-        - name: '2'
-        - name: '1'
-      entity:
-        base: '&_oogo;'
-    other:
-      base: "\u0366"
-      utag:
-        tags:
-        - name: o
-        - name: g
-      entity:
-        base: '&_oogo;'
 F13F:
   desc: COMBINING LATIN SMALL LETTER O WITH MACRON
   mntity: omacrsup

@@ -8478,17 +8478,32 @@ const PUA_DATA = {
         }
     },
     "F077": {
-        "base": "k̄",
         "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER DOTLESS I ABOVE",
         "mntity": "kinodotsup",
+        "base": "k%^%ͥ%^%",
         "otag": {
             "tags": [
                 {
-                    "index": 15,
-                    "name": "cv84"
+                    "name": "cv64"
                 },
                 {
                     "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "l"
                 }
             ]
         }

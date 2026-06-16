@@ -1485,42 +1485,14 @@ standard have Unicode code points, and these can be entered in the text stream d
 Unicode marks. However, many
 of MUFI's marks have PUA code points (beginning with E or F), and these marks will often be positioned
 incorrectly relative to their base characters. Junicode provides several workarounds for this and other 
-problems posed by PUA-encoded marks. Each of these methods, detailed beginning two sections down from here, 
+problems posed by PUA-encoded marks. Each of these methods, detailed in sections 14.12.2–5,
 has pros and cons: choose the ones that work best for your particular project.
-
-% Many of the marks included in the MUFI standard have PUA 
-% code points (beginning with E or F)
-
-% Other marks are unencoded: these are usually variants of standard 
-% Unicode marks, and they can be produced by 
-% including nearly 150 Unicode-encoded marks, variants of these,
-% and unencoded equivalents of MUFI diacritics (which, because of their PUA encoding, do not function well as combining marks).
-% All of Junicode’s unencoded marks are accessible via OpenType features (listed below) or tags. Most are
-% produced by positioning the mark directly after the base character: for example, the combination
-% \textex{a\char"035B} is produced by the sequence \textex{a \unic{U+035B}}. Several are “double” marks, marking
-% the relationship between two characters. These are produced by placing the double mark \textit{between}
-% the two base characters: \unic{U+035C} (\textex{◌͜◌}), \unic{U+035F} (\textex{◌͟◌}),
-% \unic{U+0362} (\textex{◌͢◌}), \unic{U+035D} (\textex{◌͝◌}), \unic{U+035E} (\textex{◌͞◌}),
-% \unic{U+0360} (\textex{◌͠◌}), \unic{U+0361} (\textex{◌͡◌}), \unic{U+1DCD} (\textex{◌᷍◌}). The height of 
-% these double marks is automatically adjusted to clear neighboring letters and combining marks, e.g.
-% \textex{l͡o}, \textex{a̍͠o}, \textex{æ\char"1DD3\char"034F\char"1DCDu},\index{combining grapheme joiner} \textex{o\char"033B\char"035Ce}.
-
-% Unicode-encoded combining marks (those with code points that do not begin with E or F) can be entered 
-% directly, and they will always be positioned correctly over base characters. Junicode contains all of MUFI’s 
-% PUA-encoded combining marks, and it provides several alternative methods of entering these (since PUA-encoded 
-% combining marks should always be avoided). These methods 
-% have advantages and disadvantages, which will be addressed in the following sections.
-%If a double
-%diacritic appears too high or too low (e.g. \textex{l\char"035Eo\char"030E}), place \unic{U+200C}\index{zero width non-joiner}
-%\textUName{zero-width non-joiner} somewhere between the double diacritic and the combining mark:
-%the sequence \textSourceText{l \unic{U+035E} \unic{U+200C} o \unic{U+030E}} produces 
-%\textex{l\char"035E\char"200Co\char"030E}.
 
 \subsection{Combining Grapheme Joiner and Zero-width Non-joiner}\hypertarget{cgj}{}
 
 Using Junicode’s combining marks is generally straightforward, but when difficulties arise you should 
 know about two special characters: \unic{U+034F} \textUName{combining grapheme joiner} and \unic{U+200C}
-\textUName{zero-width non-joiner}.
+\textUName{zero-width non-joiner}\index{zero width non-joiner}.
 
 The first of these, \unic{U+034F}, is defined by Unicode as a combining mark. It is invisible, having no outlines
 or advance width, and is normally ignored by software; and yet it is extremely useful, and for some
@@ -1541,7 +1513,7 @@ the section \hyperlink{zwj}{\textUName{zero width joiner}}.} produces a ligature
 \textex{a\char"034F\char"0304\char"200Dn}. Without \unic{U+034F} the ligature cannot form:
 \textex{a\char"0304\char"200Dn}.
 
-The second character, \unic{U+200C}, is similar to \unic{U+034F}, but classified as a formatting 
+The second character, \unic{U+200C}\index{zero width non-joiner}, is similar to \unic{U+034F}, but classified as a formatting 
 character rather than a combining mark. It is typically used to separate elements that might be joined
 (chiefly ligatures),
 making it analogous in function to \unic{U+034F}. But because of their different classifications, the 
@@ -1788,7 +1760,7 @@ everything in the background. However, complications can occur. For example, if 
 letter \textex{e}, your application’s shaping engine may become confused about whether the ogonek belongs with the 
 base \textex{e} or the combining \textex{e}, in which case the outcome will be incorrect: \textex{e\char"0364\char"0328}. 
 But if you place \unic{U+200C} \textUName{zero-width 
-non-joiner} (for a web page, use entity \textSourceText{\&zwnj;}) immediately after the 
+non-joiner}\index{zero width non-joiner} (for a web page, use entity \textSourceText{\&zwnj;}) immediately after the 
 base character, the ambiguity will be resolved: 
 \textex{e\char"200C\char"0364\char"0328}. For the opposite case, where the shaping engine places the
 ogonek on the combining mark when you want it on the base character, place \unic{U+200C}
@@ -1876,9 +1848,9 @@ the sequences required to produce them:
 Other marks can be stacked on top of all of these. Indeed, this is true of combining 
 marks generally, e.g. \textex{e\char"200C\char"0364\char"0328\char"0301}, \textex{o\char"1DE2\char"0307},
 \textex{u\char"200C\char"0363\char"0301}. Some of the more common combining marks automatically become 
-smaller when stacked on top of other marks.
+smaller when stacked on top of letterlike marks.
 
-\subsection{\textSourceText{ss11} – Zero-width to spacing mark}\index{ss11|textbf}
+\subsection{\textSourceText{ss11} – Combining mark to spacing mark}\index{ss11|textbf}
 Converts combining marks (including zero-width abbreviations) to their spacing equivalents.
 At present, the conversion most likely to be of interest to medievalists is of \unic{U+035B}
 \textUName{combining zigzag} (◌͛ ) to {\addfontfeature{StylisticSet=11}◌͛}.

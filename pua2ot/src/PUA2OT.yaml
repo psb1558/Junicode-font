@@ -4445,19 +4445,29 @@ F013:
       entity:
         base: "&_bsc;"
 F016:
-  base: "\u034F\u0304"
   desc: COMBINING LATIN LETTER SMALL CAPITAL D
   mntity: dscapsup
-  otag:
-    tags:
-    - name: cv84
-      index: 12
-  utag:
-    tags:
-    - name: "1"
-    - name: "2"
-  entity:
-    base: "&_dsc;"
+  var:
+    mark:
+      base: "\u034F\u0304"
+      otag:
+        tags:
+        - name: cv84
+          index: 12
+      utag:
+        tags:
+        - name: "1"
+        - name: "2"
+      entity:
+        base: "&_dsc;"
+    other:
+      base: "\u0369"
+      utag:
+        tags:
+        - name: s
+        - name: c
+      entity:
+        base: "&_dsc;"
 F01C:
   desc: COMBINING LATIN LETTER SMALL CAPITAL K
   mntity: kscapsup
@@ -4940,7 +4950,7 @@ F06F:
     - name: l
     - name: d
 F074:
-  base: "h%^%\u1DE3%^%"
+  base: "h%^%\u1DD1%^%"
   desc: LATIN SMALL LETTER H WITH UR LEMNISKATE FORM ABOVE
   mntity: hurlemn
   otag:
@@ -5608,7 +5618,7 @@ F0BE:
     - name: l
     - name: d
 F0BF:
-  base: "k%^%\u1DE3%^%"
+  base: "k%^%\u1DD1%^%"
   desc: LATIN SMALL LETTER K WITH UR LEMNISKATE FORM ABOVE
   mntity: kurlemn
   otag:
@@ -5718,6 +5728,7 @@ F0CF:
   mntity: rscapdotsup
 F0D7:
   base: "d%^%\u034F\u0335"
+  desc: LATIN SMALL LETTER D ROTUNDA WITH STROKE
   otag:
     tags:
     - name: cv08
@@ -6018,11 +6029,7 @@ F136:
       entity:
         base: '&_emac;'
     other:
-      base: "\u0364"
-      utag:
-        tags:
-        - name: m
-        - name: a
+      base: "\u200C\u0364\u0304"
       entity:
         base: '&_emac;'
 F13A:
@@ -6058,11 +6065,7 @@ F13F:
       entity:
         base: '&_omac;'
     other:
-      base: "\u0366"
-      utag:
-        tags:
-        - name: m
-        - name: a
+      base: "\u200C\u0366\u0304"
       entity:
         base: '&_omac;'
 F149:

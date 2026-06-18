@@ -3130,7 +3130,7 @@ lookup vtags {
 
 lookup tagligs {
 lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb caroncomb brevecomb tildecomb dieresiscomb hookabovecomb dblgravecomb ogonekabovecomb breveinvertedcomb circumflexcomb macroncomb.sc macroncomb.case doublemacroncomb overlinecomb dieresiscomb brevebelowcomb rrotundacomb insulardcomb flattenedopenaabovecomb zigzagabovecomb eogonekcomb
-    icomb bcomb kcomb tcomb mcomb ocomb ecomb];
+    icomb bcomb kcomb tcomb mcomb ocomb ecomb urabovecomb];
  # Experimental:
  sub j d.tag l.tag e.tag n.tag by jdotless.enlarged ;
  sub i d.tag l.tag e.tag n.tag by dotlessi.enlarged ;
@@ -5309,7 +5309,6 @@ lookup salt_one {
 #  sub doublemacronbelowcomb from [ doublemacronbelowcomb.low ] ;
 #  sub arrowdoublerightbelowcomb from [ arrowdoublerightbelowcomb.low ] ;
 } salt_one ;
-
 
 ";
 tag = salt;
@@ -10941,12 +10940,16 @@ code = "@latincombtopanchor = [ Bcomb Dcomb Gcomb Kcomb Lcomb Mcomb Ncomb Rcomb 
             t.tag three.tag two.tag u.tag v.tag w.tag x.tag y.tag z.tag zero.tag ] ;
 
 
-lookupflag UseMarkFilteringSet [ @latincombtopanchor graphemejoinercomb ] ;
+lookup ss20 {
+  lookupflag UseMarkFilteringSet [ @latincombtopanchor graphemejoinercomb ] ;
+  sub @targetbase' @latincombtopanchor by @resultbase ;
+  sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
+} ss20 ;
 
-	sub @targetbase' @latincombtopanchor by @resultbase ;
-	sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
-
-
+lookup lowmarks {
+  lookupflag UseMarkFilteringSet [ muncialcomb urabovecomb.alt ] ;
+  sub @resultbase [ muncialcomb urabovecomb.alt ]' by [ muncialcomb.low urabovecomb.alt.narrow ] ;
+} lowmarks ;
 ";
 labels = (
 {

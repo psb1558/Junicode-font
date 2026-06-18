@@ -3311,7 +3311,7 @@ lookup tagligs {
 # lookupflag UseMarkFilteringSet [macroncomb macroncomb.sc macroncomb.case doublemacroncomb overlinecomb
 #    dieresiscomb brevebelowcomb rrotundacomb insulardcomb flattenedopenaabovecomb zigzagabovecomb eogonekcomb
 #    icomb bcomb kcomb tcomb mcomb ocomb ecomb];
-lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb caroncomb brevecomb tildecomb dieresiscomb hookabovecomb dblgravecomb ogonekabovecomb breveinvertedcomb circumflexcomb macroncomb.sc macroncomb.case doublemacroncomb overlinecomb dieresiscomb brevebelowcomb rrotundacomb insulardcomb flattenedopenaabovecomb zigzagabovecomb eogonekcomb
+lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb caroncomb brevecomb tildecomb dieresiscomb hookabovecomb dblgravecomb ogonekabovecomb breveinvertedcomb circumflexcomb macroncomb.sc macroncomb.case doublemacroncomb overlinecomb dieresiscomb brevebelowcomb rrotundacomb insulardcomb flattenedopenaabovecomb zigzagabovecomb eogonekcomb urabovecomb
     icomb bcomb kcomb tcomb mcomb ocomb ecomb];
  sub j d.tag l.tag e.tag n.tag by jdotless.enlarged ;
  sub i d.tag l.tag e.tag n.tag by idotless.enlarged ;
@@ -10941,37 +10941,16 @@ code = "@latincombtopanchor = [ Gcomb Lcomb Mcomb Ncomb Rcomb acomb aecomb aocom
 
 @resultbase = [ thorn.lf.lowtop thorn.loclENG.lf.lowtop b.lf.lowtop h.lf.lowtop k.lf.lowtop b.lowtop d.lowtop dinsular.withdiacritic d.insular.withdiacritic h.lowtop hbar.lowtop k.lowtop thorn.lowtop thorndouble.lowtop h.alt.lowtop k.alt1.lowtop h.alt3.lowtop k.alt3.lowtop k.alt4.lowtop b.enlarged.lowtop thorn.loclENG.lowtop eth.withdiacritic.lowtop h.alt.enlarged.lowtop h.alt3.enlarged.lowtop thorn_thorn.hlig.lowtop dinsular.withdiacritic ] ;
 
-lookupflag UseMarkFilteringSet [ @latincombtopanchor graphemejoinercomb ] ;
+lookup ss20 {
+  lookupflag UseMarkFilteringSet [ @latincombtopanchor graphemejoinercomb ] ;
+  sub @targetbase' @latincombtopanchor by @resultbase ;
+  sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
+} ss20 ;
 
-sub @targetbase' @latincombtopanchor by @resultbase ;
-sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
-
-
-#sub thorn.lf by thorn.lf.lowtop ;
-#sub thorn.loclENG.lf by thorn.loclENG.lf.lowtop ;
-#sub b.lf by b.lf.lowtop ;
-#sub h.lf by h.lf.lowtop ;
-#sub k.lf by k.lf.lowtop ;
-#sub b by b.lowtop ;
-#sub d by d.lowtop ;
-#sub dinsular by dinsular.withdiacritic ;
-## sub eth by eth.lowtop ;
-#sub h by h.lowtop ;
-#sub hbar by hbar.lowtop ;
-#sub k by k.lowtop ;
-#sub thorn by thorn.lowtop ;
-#sub thorndouble by thorndouble.lowtop ;
-#sub h.alt by h.alt.lowtop ;
-#sub k.alt1 by k.alt1.lowtop ;
-#sub h.alt3 by h.alt3.lowtop ;
-#sub k.alt3 by k.alt3.lowtop ;
-#sub k.alt4 by k.alt4.lowtop ;
-#sub b.enlarged by b.enlarged.lowtop ;
-#sub thorn.loclENG by thorn.loclENG.lowtop ;
-#sub eth by eth.withdiacritic.lowtop ;
-#sub h.alt.enlarged by h.alt.enlarged.lowtop ;
-#sub h.alt3.enlarged by h.alt3.enlarged.lowtop ;
-#sub thorn_thorn.hlig by thorn_thorn.hlig.lowtop ;
+lookup lowmarks {
+  lookupflag UseMarkFilteringSet [ muncialcomb urabovecomb.alt ] ;
+  sub @resultbase [ muncialcomb urabovecomb.alt ]' by [ muncialcomb.low urabovecomb.alt.narrow ] ;
+} lowmarks ;
 ";
 labels = (
 {

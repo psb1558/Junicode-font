@@ -2020,7 +2020,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2026-06-16 01:35:54 +0000";
+date = "2026-06-17 18:13:56 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2594,17 +2594,17 @@ code = "lookup i_dot {
 
 lookup ccmp_rhotic {
   sub schwa rhotichookmod by schwahook;
-#  sub uni025C rhotichookmod by uni025D;
+  sub eopenreversed rhotichookmod by eopenreversedhook;
   sub a rhotichookmod by uni006102DE;
   sub ramshorn rhotichookmod by uni026402DE;
   sub OEsmall rhotichookmod by uni027602DE;
-#  sub ae rhotichookmod by uni00E602DE;
-#  sub e rhotichookmod by uni006502DE;
+  sub ae rhotichookmod by uni00E602DE;
+  sub e rhotichookmod by uni006502DE;
   sub eopen rhotichookmod by uni025B02DE;
-#  sub oe rhotichookmod by uni015302DE;
+  sub oe rhotichookmod by uni015302DE;
   sub ubar rhotichookmod by uni028902DE;
   sub Ysmall rhotichookmod by uni028F02DE;
-#  sub y rhotichookmod by uni007902DE;
+  sub y rhotichookmod by uni007902DE;
   sub ereversed rhotichookmod by uni025802DE;
   sub obarred rhotichookmod by uni027502DE;
   sub istroke rhotichookmod by uni026802DE;
@@ -2652,6 +2652,7 @@ lookup mkmk_subs {
 } mkmk_subs ;
 
 lookup viet_mark_combos {
+  lookupflag UseMarkFilteringSet [ brevecomb gravecomb acutecomb hookabovecomb circumflexcomb tildecomb ] ;
   sub brevecomb acutecomb by breveacutecomb ;
   sub brevecomb gravecomb by brevegravecomb ;
   sub brevecomb hookabovecomb by brevehook ;
@@ -2900,11 +2901,21 @@ lookup grek_ComplexDiacritics {
 } grek_ComplexDiacritics ;
 
 lookup grek_Composed {
-  lookupflag UseMarkFilteringSet [ commaabovecomb.loclELL commareversedabovecomb.loclELL
-    commaabovecomb_gravecomb commaabovecomb_acutecomb.loclELL commareversedabovecomb_acutecomb
-    commaabovecomb_perispomenicomb commareversedabovecomb_perispomenicomb
-    commareversedabovecomb_perispomenicomb ypogegrammenicomb macroncomb brevecomb
-    gravecomb.loclELL ] ;
+  lookupflag UseMarkFilteringSet [ 
+    commaabovecomb.loclELL 
+    commaabovecomb_gravecomb
+    commaabovecomb_acutecomb.loclELL
+    commaabovecomb_perispomenicomb
+    commareversedabovecomb.loclELL
+    commareversedabovecomb_acutecomb
+    commareversedabovecomb_gravecomb
+    commareversedabovecomb_perispomenicomb
+    commareversedabovecomb_perispomenicomb
+    ypogegrammenicomb
+    macroncomb
+    brevecomb
+    gravecomb.loclELL
+    acutecomb.loclELL ] ;
 
 # Alpha:
 

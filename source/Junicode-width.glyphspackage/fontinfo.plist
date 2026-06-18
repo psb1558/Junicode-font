@@ -1785,7 +1785,7 @@ name = "Propagate Anchors";
 value = 1;
 }
 );
-date = "2026-06-16 01:35:31 +0000";
+date = "2026-06-17 18:13:39 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -2721,11 +2721,21 @@ lookup grek_ComplexDiacritics {
 } grek_ComplexDiacritics ;
 
 lookup grek_Composed {
-  lookupflag UseMarkFilteringSet [ commaabovecomb.loclELL commareversedabovecomb.loclELL
-    commaabovecomb_gravecomb commaabovecomb_acutecomb.loclELL commareversedabovecomb_acutecomb
-    commaabovecomb_perispomenicomb commareversedabovecomb_perispomenicomb
-    commareversedabovecomb_perispomenicomb ypogegrammenicomb macroncomb brevecomb
-    gravecomb.loclELL ] ;
+  lookupflag UseMarkFilteringSet [ 
+    commaabovecomb.loclELL 
+    commaabovecomb_gravecomb
+    commaabovecomb_acutecomb.loclELL
+    commaabovecomb_perispomenicomb
+    commareversedabovecomb.loclELL
+    commareversedabovecomb_acutecomb
+    commareversedabovecomb_gravecomb
+    commareversedabovecomb_perispomenicomb
+    commareversedabovecomb_perispomenicomb
+    ypogegrammenicomb
+    macroncomb
+    brevecomb
+    gravecomb.loclELL
+    acutecomb.loclELL ] ;
 
 # Alpha:
 

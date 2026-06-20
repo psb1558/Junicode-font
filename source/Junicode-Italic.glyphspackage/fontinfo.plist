@@ -2020,7 +2020,7 @@ name = "Feature for Feature Variations";
 value = rclt;
 }
 );
-date = "2026-06-17 18:13:56 +0000";
+date = "2026-06-19 18:19:25 +0000";
 familyName = Junicode;
 featurePrefixes = (
 {
@@ -3308,11 +3308,8 @@ lookup vtags {
 } vtags ;
 
 lookup tagligs {
-# lookupflag UseMarkFilteringSet [macroncomb macroncomb.sc macroncomb.case doublemacroncomb overlinecomb
-#    dieresiscomb brevebelowcomb rrotundacomb insulardcomb flattenedopenaabovecomb zigzagabovecomb eogonekcomb
-#    icomb bcomb kcomb tcomb mcomb ocomb ecomb];
 lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb caroncomb brevecomb tildecomb dieresiscomb hookabovecomb dblgravecomb ogonekabovecomb breveinvertedcomb circumflexcomb macroncomb.sc macroncomb.case doublemacroncomb overlinecomb dieresiscomb brevebelowcomb rrotundacomb insulardcomb flattenedopenaabovecomb zigzagabovecomb eogonekcomb urabovecomb
-    icomb bcomb kcomb tcomb mcomb ocomb ecomb];
+    icomb bcomb kcomb tcomb mcomb ocomb ecomb dcomb];
  sub j d.tag l.tag e.tag n.tag by jdotless.enlarged ;
  sub i d.tag l.tag e.tag n.tag by idotless.enlarged ;
  sub period zero.tag one.tag by periodcentered.alt ;
@@ -3426,6 +3423,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub macroncomb.case three.tag nine.tag by macroncomb.alt5 ;
  sub icomb d.tag l.tag by dotlessicomb ;
  sub bcomb s.tag c.tag by Bcomb ;
+ sub dcomb s.tag c.tag by Dcomb ;
  sub kcomb s.tag c.tag by Kcomb ;
  sub tcomb s.tag c.tag by Tcomb ;
  sub mcomb u.tag n.tag by muncialcomb ;
@@ -3482,6 +3480,7 @@ lookupflag UseMarkFilteringSet [acutecomb gravecomb macroncomb hungarumlautcomb 
  sub d e.tag n.tag by d.enlarged ;
  sub d i.tag s.tag by d.insular.alt3 ;
  sub d o.tag m.tag by d.medhighoverline ;
+ sub eth l.tag d.tag by eth.withdiacritic.lowtop ;
  sub eth.loclENG e.tag a.tag by eth.loclENG.enlarged.alt ;
  sub eth.enlarged.loclENG e.tag a.tag by eth.loclENG.enlarged.alt ;
  sub eth.loclENG.alt e.tag a.tag by eth.loclENG.enlarged.alt ;
@@ -10947,10 +10946,6 @@ lookup ss20 {
   sub @targetbase' graphemejoinercomb @latincombtopanchor by @resultbase ;
 } ss20 ;
 
-lookup lowmarks {
-  lookupflag UseMarkFilteringSet [ muncialcomb urabovecomb.alt ] ;
-  sub @resultbase [ muncialcomb urabovecomb.alt ]' by [ muncialcomb.low urabovecomb.alt.narrow ] ;
-} lowmarks ;
 ";
 labels = (
 {
@@ -10959,6 +10954,14 @@ value = "Low Diacritics";
 }
 );
 tag = ss20;
+},
+{
+code = "lookup lowmarks {
+  lookupflag UseMarkFilteringSet [ muncialcomb urabovecomb.alt ] ;
+  sub @resultbase [ muncialcomb urabovecomb.alt ]' by [ muncialcomb.low urabovecomb.alt.narrow ] ;
+} lowmarks ;
+";
+tag = calt;
 },
 {
 code = "# Three elements
@@ -60242,5 +60245,5 @@ name = "Cap-O-stem";
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 225;
+versionMinor = 226;
 }

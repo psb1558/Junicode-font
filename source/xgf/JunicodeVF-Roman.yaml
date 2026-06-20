@@ -25795,34 +25795,6 @@ glyphs:
           ref2: 31
         macro:
           nm: mid-stem
-  eth.withdiacritic:
-    y:
-      points:
-      - ptid:
-          pt-a: 8
-          pt-b: 15
-        macro:
-          nm: lc-round-stem
-          cv: u-top-a
-          stem-cv: lc-round-stem
-      - ptid:
-          pt-a: 0
-          pt-b: 23
-        macro:
-          nm: lc-round-stem
-          cv: lc-baseline-undershoot
-          stem-cv: lc-round-stem
-      - ptid: 54
-        ref: 8
-        rel: stem
-        round: false
-      - ptid:
-        - 38
-        - 49
-        ref:
-        - 54
-        - 8
-        rel: interpolate
   uni16A7.rtl:
     y:
       points:
@@ -70159,25 +70131,6 @@ glyphs:
           points:
           - ptid: '{170;424}'
             rel: shift
-    props:
-      category: Ll
-  d.insular.withdiacritic:
-    y:
-      points:
-      - ptid: '{247;-11}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{247;21}'
-          rel: stem
-          round: false
-      - ptid: '{246;425}'
-        pos: xheight-overshoot
-        points:
-        - ptid: '{3;633}'
-          rel: shift
-        - ptid: '{248;396}'
-          rel: stem
-          round: false
     props:
       category: Ll
   d.insular.withdiacritic.lowtop:

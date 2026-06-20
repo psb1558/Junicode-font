@@ -7461,29 +7461,49 @@ const PUA_DATA = {
         }
     },
     "F016": {
-        "base": "͏̄",
         "desc": "COMBINING LATIN LETTER SMALL CAPITAL D",
         "mntity": "dscapsup",
-        "otag": {
-            "tags": [
-                {
-                    "name": "cv84",
-                    "index": 12
-                }
-            ]
-        },
-        "utag": {
-            "tags": [
-                {
-                    "name": "1"
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 12
+                        }
+                    ]
                 },
-                {
-                    "name": "2"
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_dsc;"
                 }
-            ]
-        },
-        "entity": {
-            "base": "&_dsc;"
+            },
+            "other": {
+                "base": "ͩ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "s"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_dsc;"
+                }
+            }
         }
     },
     "F01C": {
@@ -8403,7 +8423,7 @@ const PUA_DATA = {
         }
     },
     "F074": {
-        "base": "h%^%ᷣ%^%",
+        "base": "h%^%᷑%^%",
         "desc": "LATIN SMALL LETTER H WITH UR LEMNISKATE FORM ABOVE",
         "mntity": "hurlemn",
         "otag": {
@@ -9775,7 +9795,7 @@ const PUA_DATA = {
         }
     },
     "F0BF": {
-        "base": "k%^%ᷣ%^%",
+        "base": "k%^%᷑%^%",
         "desc": "LATIN SMALL LETTER K WITH UR LEMNISKATE FORM ABOVE",
         "mntity": "kurlemn",
         "otag": {
@@ -9968,6 +9988,7 @@ const PUA_DATA = {
     },
     "F0D7": {
         "base": "d%^%͏̵",
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH STROKE",
         "otag": {
             "tags": [
                 {
@@ -10482,7 +10503,7 @@ const PUA_DATA = {
         "note": "Use U+A7D9 instead."
     },
     "F130": {
-        "base": "\u0000363ᷢ",
+        "base": "ͣᷢ",
         "desc": "COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL R",
         "mntity": "arscapligsup"
     },
@@ -10520,17 +10541,7 @@ const PUA_DATA = {
                 }
             },
             "other": {
-                "base": "ͤ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "m"
-                        },
-                        {
-                            "name": "a"
-                        }
-                    ]
-                },
+                "base": "‌ͤ̄",
                 "entity": {
                     "base": "&_emac;"
                 }
@@ -10594,17 +10605,7 @@ const PUA_DATA = {
                 }
             },
             "other": {
-                "base": "ͦ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "m"
-                        },
-                        {
-                            "name": "a"
-                        }
-                    ]
-                },
+                "base": "‌ͦ̄",
                 "entity": {
                     "base": "&_omac;"
                 }

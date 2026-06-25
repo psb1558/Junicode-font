@@ -7461,29 +7461,49 @@ const PUA_DATA = {
         }
     },
     "F016": {
-        "base": "͏̄",
         "desc": "COMBINING LATIN LETTER SMALL CAPITAL D",
         "mntity": "dscapsup",
-        "otag": {
-            "tags": [
-                {
-                    "name": "cv84",
-                    "index": 12
-                }
-            ]
-        },
-        "utag": {
-            "tags": [
-                {
-                    "name": "1"
+        "var": {
+            "mark": {
+                "base": "͏̄",
+                "otag": {
+                    "tags": [
+                        {
+                            "name": "cv84",
+                            "index": 12
+                        }
+                    ]
                 },
-                {
-                    "name": "2"
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "2"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_dsc;"
                 }
-            ]
-        },
-        "entity": {
-            "base": "&_dsc;"
+            },
+            "other": {
+                "base": "ͩ",
+                "utag": {
+                    "tags": [
+                        {
+                            "name": "s"
+                        },
+                        {
+                            "name": "c"
+                        }
+                    ]
+                },
+                "entity": {
+                    "base": "&_dsc;"
+                }
+            }
         }
     },
     "F01C": {
@@ -7752,50 +7772,9 @@ const PUA_DATA = {
         }
     },
     "F032": {
+        "base": "̸ͦ",
         "desc": "COMBINING LATIN LETTER SMALL O WITH STROKE",
-        "mntity": "oslashsup",
-        "var": {
-            "mark": {
-                "base": "͏̄",
-                "otag": {
-                    "tags": [
-                        {
-                            "index": 22,
-                            "name": "cv84"
-                        }
-                    ]
-                },
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "2"
-                        },
-                        {
-                            "name": "2"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_oslash;"
-                }
-            },
-            "other": {
-                "base": "ͦ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "s"
-                        },
-                        {
-                            "name": "l"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_oslash;"
-                }
-            }
-        }
+        "mntity": "oslashsup"
     },
     "F033": {
         "base": "͏̄",
@@ -7825,65 +7804,19 @@ const PUA_DATA = {
         }
     },
     "F036": {
-        "base": "͏̄",
+        "base": "ͣᷠ",
         "desc": "COMBINING LATIN SMALL LIGATURE AN",
-        "mntity": "anligsup",
-        "note": "I can't find a suitable base character.",
-        "otag": {
-            "tags": [
-                {
-                    "index": 7,
-                    "name": "cv84"
-                }
-            ]
-        },
-        "entity": {
-            "base": "&_an;"
-        }
+        "mntity": "anligsup"
     },
     "F038": {
-        "base": "͏̄",
+        "base": "ͣͬ",
         "desc": "COMBINING LATIN SMALL LIGATURE AR",
-        "mntity": "arligsup",
-        "note": "I can't find a suitable base character.",
-        "otag": {
-            "tags": [
-                {
-                    "index": 9,
-                    "name": "cv84"
-                }
-            ]
-        },
-        "entity": {
-            "base": "&_ar;"
-        }
+        "mntity": "arligsup"
     },
     "F03A": {
-        "base": "͏̄",
+        "base": "ͣᷡ",
         "desc": "COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL N",
-        "mntity": "anscapligsup",
-        "note": "I can't find a suitable base character.",
-        "otag": {
-            "tags": [
-                {
-                    "index": 8,
-                    "name": "cv84"
-                }
-            ]
-        },
-        "utag": {
-            "tags": [
-                {
-                    "name": "0"
-                },
-                {
-                    "name": "8"
-                }
-            ]
-        },
-        "entity": {
-            "base": "&_ansc;"
-        }
+        "mntity": "anscapligsup"
     },
     "F03D": {
         "base": "͏̄",
@@ -7913,112 +7846,19 @@ const PUA_DATA = {
         }
     },
     "F03E": {
-        "base": "͏̄",
+        "base": "ͦᷣ",
         "desc": "COMBINING LATIN SMALL LETTER O R ROTUNDA",
-        "mntity": "orrotsup",
-        "note": "I can't find a suitable base character.",
-        "otag": {
-            "tags": [
-                {
-                    "index": 28,
-                    "name": "cv84"
-                }
-            ]
-        },
-        "utag": {
-            "tags": [
-                {
-                    "name": "2"
-                },
-                {
-                    "name": "8"
-                }
-            ]
-        },
-        "entity": {
-            "base": "&_orr;"
-        }
+        "mntity": "orrotsup"
     },
     "F03F": {
-        "base": "͏̄",
+        "base": "̸ͦᷣ",
         "desc": "COMBINING LATIN SMALL LETTER O RUM",
-        "mntity": "orumsup",
-        "note": "I can't find a suitable base character.",
-        "otag": {
-            "tags": [
-                {
-                    "index": 29,
-                    "name": "cv84"
-                }
-            ]
-        },
-        "utag": {
-            "tags": [
-                {
-                    "name": "2"
-                },
-                {
-                    "name": "9"
-                }
-            ]
-        },
-        "entity": {
-            "base": "&_oru;"
-        }
+        "mntity": "orumsup"
     },
     "F040": {
+        "base": "̸ᷣ",
         "desc": "COMBINING LATIN SMALL LETTER RUM",
-        "mntity": "rumsup",
-        "var": {
-            "mark": {
-                "base": "͏̄",
-                "otag": {
-                    "tags": [
-                        {
-                            "index": 24,
-                            "name": "cv84"
-                        }
-                    ]
-                },
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "2"
-                        },
-                        {
-                            "name": "4"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_ru;"
-                }
-            },
-            "other": {
-                "base": "ᷣ",
-                "index": 1,
-                "otag": {
-                    "tags": [
-                        {
-                            "name": "cv67"
-                        }
-                    ]
-                },
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "r"
-                        },
-                        {
-                            "name": "m"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_ru;"
-                }
-            }
-        }
+        "mntity": "rumsup"
     },
     "F053": {
         "base": "c̄",
@@ -8583,7 +8423,7 @@ const PUA_DATA = {
         }
     },
     "F074": {
-        "base": "h%^%ᷣ%^%",
+        "base": "h%^%᷑%^%",
         "desc": "LATIN SMALL LETTER H WITH UR LEMNISKATE FORM ABOVE",
         "mntity": "hurlemn",
         "otag": {
@@ -8658,17 +8498,32 @@ const PUA_DATA = {
         }
     },
     "F077": {
-        "base": "k̄",
         "desc": "LATIN SMALL LETTER K WITH LATIN SMALL LETTER DOTLESS I ABOVE",
         "mntity": "kinodotsup",
+        "base": "k%^%ͥ%^%",
         "otag": {
             "tags": [
                 {
-                    "index": 15,
-                    "name": "cv84"
+                    "name": "cv64"
                 },
                 {
                     "name": "ss20"
+                }
+            ]
+        },
+        "utag": {
+            "tags": [
+                {
+                    "name": "l"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "d"
+                },
+                {
+                    "name": "l"
                 }
             ]
         }
@@ -9940,7 +9795,7 @@ const PUA_DATA = {
         }
     },
     "F0BF": {
-        "base": "k%^%ᷣ%^%",
+        "base": "k%^%᷑%^%",
         "desc": "LATIN SMALL LETTER K WITH UR LEMNISKATE FORM ABOVE",
         "mntity": "kurlemn",
         "otag": {
@@ -10096,7 +9951,7 @@ const PUA_DATA = {
         "mntity": "eracute"
     },
     "F0C9": {
-        "base": "ͦ͏᷎",
+        "base": "᷎ͦ",
         "desc": "COMBINING LATIN SMALL LETTER O WITH CURL",
         "mntity": "ocurlsup"
     },
@@ -10133,6 +9988,7 @@ const PUA_DATA = {
     },
     "F0D7": {
         "base": "d%^%͏̵",
+        "desc": "LATIN SMALL LETTER D ROTUNDA WITH STROKE",
         "otag": {
             "tags": [
                 {
@@ -10647,77 +10503,14 @@ const PUA_DATA = {
         "note": "Use U+A7D9 instead."
     },
     "F130": {
-        "base": "͏̄",
+        "base": "ͣᷢ",
         "desc": "COMBINING LATIN SMALL LIGATURE A SMALL CAPITAL R",
-        "mntity": "arscapligsup",
-        "note": "I can't find a suitable base character.",
-        "otag": {
-            "tags": [
-                {
-                    "name": "cv84",
-                    "index": 10
-                }
-            ]
-        },
-        "utag": {
-            "tags": [
-                {
-                    "name": "1"
-                },
-                {
-                    "name": "0"
-                }
-            ]
-        },
-        "entity": {
-            "base": "&_arsc;"
-        }
+        "mntity": "arscapligsup"
     },
     "F135": {
+        "base": "‌̨ͤ",
         "desc": "COMBINING LATIN SMALL LETTER E WITH OGONEK",
-        "mntity": "eogonsup",
-        "var": {
-            "mark": {
-                "base": "͏̄",
-                "otag": {
-                    "tags": [
-                        {
-                            "index": 14,
-                            "name": "cv84"
-                        }
-                    ]
-                },
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "1"
-                        },
-                        {
-                            "name": "4"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_eogo;"
-                }
-            },
-            "other": {
-                "base": "ͤ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "o"
-                        },
-                        {
-                            "name": "g"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_eogo;"
-                }
-            }
-        }
+        "mntity": "eogonsup"
     },
     "F136": {
         "desc": "COMBINING LATIN SMALL LETTER E WITH MACRON",
@@ -10748,17 +10541,7 @@ const PUA_DATA = {
                 }
             },
             "other": {
-                "base": "ͤ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "m"
-                        },
-                        {
-                            "name": "a"
-                        }
-                    ]
-                },
+                "base": "‌ͤ̄",
                 "entity": {
                     "base": "&_emac;"
                 }
@@ -10789,50 +10572,9 @@ const PUA_DATA = {
         }
     },
     "F13E": {
+        "base": "‌̨ͦ",
         "desc": "COMBINING LATIN SMALL LETTER O WITH OGONEK",
-        "mntity": "oogonsup",
-        "var": {
-            "mark": {
-                "base": "͏̄",
-                "otag": {
-                    "tags": [
-                        {
-                            "index": 21,
-                            "name": "cv84"
-                        }
-                    ]
-                },
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "2"
-                        },
-                        {
-                            "name": "1"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_oogo;"
-                }
-            },
-            "other": {
-                "base": "ͦ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "o"
-                        },
-                        {
-                            "name": "g"
-                        }
-                    ]
-                },
-                "entity": {
-                    "base": "&_oogo;"
-                }
-            }
-        }
+        "mntity": "oogonsup"
     },
     "F13F": {
         "desc": "COMBINING LATIN SMALL LETTER O WITH MACRON",
@@ -10863,17 +10605,7 @@ const PUA_DATA = {
                 }
             },
             "other": {
-                "base": "ͦ",
-                "utag": {
-                    "tags": [
-                        {
-                            "name": "m"
-                        },
-                        {
-                            "name": "a"
-                        }
-                    ]
-                },
+                "base": "‌ͦ̄",
                 "entity": {
                     "base": "&_omac;"
                 }

@@ -56,7 +56,7 @@ enlargeDict = dict(
 )
 
 format2RomanAxes = [
-    weightDict, widthDict, enlargeDict,
+    widthDict, weightDict, enlargeDict,
     dict(
         tag="ital",
         name="Italic",
@@ -65,7 +65,7 @@ format2RomanAxes = [
 ]
 
 format2ItalicAxes = [
-    weightDict, widthDict, enlargeDict,
+    widthDict, weightDict, enlargeDict,
     dict(
         tag="ital",
         name="Italic",

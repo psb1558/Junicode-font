@@ -30,7 +30,7 @@
     </xsl:template>
 
     <xsl:template match="instance[contains(@stylename,'Enlarged') or
-                                  contains(@stylename,'Cond Bold') or
-                                  contains(@stylename,'Cond SmBold') or
-                                  contains(@stylename,'Exp Light')]"/>
+                                  contains(@stylename,'Condensed Bold') or
+                                  contains(@stylename,'Condensed SemiBold') or
+                                  contains(@stylename,'Expanded Light')]"/>
 </xsl:stylesheet>

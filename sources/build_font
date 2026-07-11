@@ -191,10 +191,12 @@ then
   then
     mkdir hinted
     for f in Jun*.otf; do
-      psautohint -x `cat ${SOURCEDIR}no_hint_list` -o hinted/$f $f
+      cat "hinting "$f
+      # psautohint -x `cat ${SOURCEDIR}no_hint_list` -o hinted/$f $f
+      otfautohint --exclude-glyphs-file ${SOURCEDIR}no_hint_list -o hinted/$f $f
       cffsubr -i hinted/$f
     done
-    mv hinted/Jun*.otf ${DESTDIR}
+    cp hinted/Jun*.otf ${DESTDIR}
   else
     mv Jun*.otf ${DESTDIR}
   fi
